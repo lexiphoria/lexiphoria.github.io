@@ -2068,6 +2068,286 @@ const texts = [
         feedback: "'Or via 24/7 hotlines' — 'or' presents an alternative option. Customers can contact via email OR via hotlines. 'Or' is used to offer a choice between two methods. 'And' would imply both are required; 'or' correctly signals either option is acceptable."
       }
     ]
+  },
+  {
+    title: "System Conversion — Part 1",
+    type: "Notice",
+    icon: "✈️",
+    passage: `Vietnam Airlines announces passenger service system conversion from 01:15 to 13:00 Vietnam time on April 18, 2024 (18:15 April 17 to 06:00 on April 18, 2024 - UTC time). After this period, the system will return to normal ___1___ to serve our customers. This activity is expected to ___2___:\n\n• Booking services, ticket purchases, refunds, changes... on the website, mobile application, as well as at ticket offices and agents of Vietnam Airlines;\n• Online check-in and airport check-in times;\n• Accumulating miles, redeeming miles ___3___ airline rewards (air tickets, service upgrades, baggage, Lotus lounge vouchers), buy/transfer miles, buy membership lucky numbers, as well as the function allowing ticket purchase in combination ___4___ Cash & Miles of the Lotusmiles frequent flyer program.\n\nVietnam Airlines sincerely hopes ___5___ Lotusmiles members' understanding ___6___ any inconvenience arise during this period.`,
+    questions: [
+      {
+        type: "Part of Speech",
+        blank: 1,
+        text: "...the system will return to normal ___1___ to serve our customers.",
+        options: ["A. operate", "B. operation", "C. operator", "D. operational"],
+        answer: 1,
+        feedback: "'Normal operation' — 'operation' is the noun form needed after the adjective 'normal'. It refers to the state of functioning or working. 'Operate' is a verb; 'operational' is an adjective."
+      },
+      {
+        type: "Vocabulary",
+        blank: 2,
+        text: "This activity is expected to ___2___: Booking services, ticket purchases...",
+        options: ["A. affect", "B. effect", "C. impact", "D. result"],
+        answer: 0,
+        feedback: "'Affect' is a verb meaning to influence or cause a change in something. 'Effect' is usually a noun. 'Impact' can be a verb but 'affect' is the standard choice here. 'Result' requires the preposition 'in'."
+      },
+      {
+        type: "Preposition",
+        blank: 3,
+        text: "...redeeming miles ___3___ airline rewards...",
+        options: ["A. for", "B. with", "C. to", "D. on"],
+        answer: 0,
+        feedback: "'Redeem X for Y' is the standard collocation. You exchange (redeem) one thing in order to get (for) another thing, such as miles for airline rewards."
+      },
+      {
+        type: "Preposition",
+        blank: 4,
+        text: "...the function allowing ticket purchase in combination ___4___ Cash & Miles...",
+        options: ["A. with", "B. to", "C. by", "D. for"],
+        answer: 0,
+        feedback: "'In combination with' is a fixed phrase meaning together with or joined with something else."
+      },
+      {
+        type: "Preposition",
+        blank: 5,
+        text: "Vietnam Airlines sincerely hopes ___5___ Lotusmiles members' understanding...",
+        options: ["A. in", "B. on", "C. for", "D. about"],
+        answer: 2,
+        feedback: "'Hope for' is the correct prepositional verb. You hope for something (a noun) to happen or be given. 'Vietnam Airlines hopes for understanding'."
+      },
+      {
+        type: "Conditional / Formal",
+        blank: 6,
+        text: "...understanding ___6___ any inconvenience arise during this period.",
+        options: ["A. if", "B. should", "C. unless", "D. whether"],
+        answer: 1,
+        feedback: "This is an inverted first conditional: 'Should any inconvenience arise' means 'If any inconvenience should arise'. It is highly formal and common in business notices."
+      }
+    ]
+  },
+  {
+    title: "System Conversion — Part 2",
+    type: "Notice",
+    icon: "✈️",
+    passage: `To minimize the impact of this system conversion, Vietnam Airlines recommends Lotusmiles members to consider their plans ___1___ the aforementioned services during the system change on April 18, 2024. If there are any changes, please contact the place of purchase before April 18, 2024 for assistance.\n\nAdditionally, Lotusmiles members should be mindful if they have flights during this period as follows:\n• Stay updated on flight schedule changes announced by the airline via the phone number or email ___2___ for ticket purchase.\n• Limit changes to flight itineraries during the system change period.\n• Provide complete flight tickets, booking codes, identification documents, and Lotusmiles membership cards when ___3___.\n• Follow passenger luggage rules. Checked luggage should have tags with the passenger's name and contact information to prevent loss or being taken by ___4___.\n\nServices will return to normal immediately after Vietnam Airlines ___5___ the system change. For flight information updates and support, please visit the website... Thank you for your companionship and ___6___.`,
+    questions: [
+      {
+        type: "Preposition",
+        blank: 1,
+        text: "...recommends members to consider their plans ___1___ the aforementioned services.",
+        options: ["A. regard", "B. regards", "C. regarding", "D. regarded"],
+        answer: 2,
+        feedback: "'Regarding' is a preposition meaning 'concerning' or 'in relation to'. It connects the plans to the services mentioned earlier."
+      },
+      {
+        type: "Participle",
+        blank: 2,
+        text: "...via the phone number or email ___2___ for ticket purchase.",
+        options: ["A. register", "B. registered", "C. registering", "D. registration"],
+        answer: 1,
+        feedback: "'Registered' is a past participle used in a reduced relative clause: 'the email [that was] registered for ticket purchase'. It describes a passive action done to the email."
+      },
+      {
+        type: "Phrasal Verb / Gerund",
+        blank: 3,
+        text: "Provide complete flight tickets... when ___3___.",
+        options: ["A. checking in", "B. checking out", "C. check in", "D. checked in"],
+        answer: 0,
+        feedback: "After the conjunction 'when', we can use a present participle (reduced adverbial clause) if the subject is the same: 'when checking in' = 'when you are checking in'."
+      },
+      {
+        type: "Collocation",
+        blank: 4,
+        text: "...to prevent loss or being taken by ___4___.",
+        options: ["A. error", "B. accident", "C. fault", "D. mistake"],
+        answer: 3,
+        feedback: "'By mistake' is a fixed prepositional phrase meaning accidentally or incorrectly. We say 'by mistake' or 'by accident', but 'taken by mistake' is the most natural collocation for luggage."
+      },
+      {
+        type: "Tense / Conjunction",
+        blank: 5,
+        text: "Services will return to normal immediately after Vietnam Airlines ___5___ the system change.",
+        options: ["A. complete", "B. completes", "C. completed", "D. is completing"],
+        answer: 1,
+        feedback: "In time clauses referring to the future (after 'when', 'after', 'before'), we use the present simple tense, not the future tense. 'After Vietnam Airlines completes' is correct."
+      },
+      {
+        type: "Part of Speech",
+        blank: 6,
+        text: "Thank you for your companionship and ___6___.",
+        options: ["A. considering", "B. consider", "C. considered", "D. consideration"],
+        answer: 3,
+        feedback: "Parallel structure requires a noun to match 'companionship'. 'Consideration' is the noun form. 'Thank you for your consideration' is a standard formal closing."
+      }
+    ]
+  },
+  {
+    title: "The LotusDay Spring Program",
+    type: "Promotional Email",
+    icon: "🌸",
+    passage: `Dear Ms NGUYEN TRAN ANH THU,\n\nUnlike the chilly weather of northern Vietnam, the early days of the year in the south are ___1___ in warm sunlight.\n\nFollowing the sediment-rich rivers, the journey through the southern Tet leads you to unique festivals that connect the traditions of the past and present. From the Ky Yen Festival honoring the pioneers who cultivated the land, the mystical Lantern Festival, to the simple ___2___ heartwarming Buffalo Festival and Boat Festival.\n\nIf you're looking for a unique destination for this year's spring journey, southern Vietnam is ready to welcome you. Let Heritage Guide be your trusted ___3___ in this heartful trip.\n\nPlan your Spring trips with The LotusDay program, ___4___ offers up to a 20% discount on miles when redeeming reward tickets or ___5___ tickets with Cash and Miles on Vietnam Airlines' domestic and international flights.\n\nTo learn more about these special offers and start planning your next getaway, please click the link below to ___6___ our free travel guide.`,
+    questions: [
+      {
+        type: "Collocation",
+        blank: 1,
+        text: "...the early days of the year in the south are ___1___ in warm sunlight.",
+        options: ["A. bathed", "B. sunk", "C. dipped", "D. covered"],
+        answer: 0,
+        feedback: "'Bathed in sunlight' is a common poetic collocation meaning completely covered by or immersed in sunlight."
+      },
+      {
+        type: "Linking Word",
+        blank: 2,
+        text: "...to the simple ___2___ heartwarming Buffalo Festival...",
+        options: ["A. and", "B. yet", "C. so", "D. or"],
+        answer: 1,
+        feedback: "'Yet' is used here as a conjunction meaning 'but at the same time'. It connects two contrasting but complementary adjectives: 'simple' (basic) and 'heartwarming' (emotionally touching)."
+      },
+      {
+        type: "Vocabulary",
+        blank: 3,
+        text: "Let Heritage Guide be your trusted ___3___ in this heartful trip.",
+        options: ["A. company", "B. companion", "C. partnership", "D. accompaniment"],
+        answer: 1,
+        feedback: "A 'companion' is a person or entity that accompanies you on a journey. 'Trusted companion' is a frequent collocation in travel marketing."
+      },
+      {
+        type: "Relative Clause",
+        blank: 4,
+        text: "Plan your Spring trips with The LotusDay program, ___4___ offers up to a 20% discount...",
+        options: ["A. who", "B. that", "C. which", "D. where"],
+        answer: 2,
+        feedback: "In a non-defining relative clause (after a comma) referring to a thing ('program'), 'which' is the correct relative pronoun. 'That' cannot be used after a comma."
+      },
+      {
+        type: "Parallel Structure",
+        blank: 5,
+        text: "...when redeeming reward tickets or ___5___ tickets with Cash and Miles...",
+        options: ["A. purchase", "B. purchased", "C. to purchase", "D. purchasing"],
+        answer: 3,
+        feedback: "The conjunction 'or' connects two parallel actions. The first is 'redeeming' (gerund), so the second must also be a gerund: 'purchasing'."
+      },
+      {
+        type: "Collocation",
+        blank: 6,
+        text: "...click the link below to ___6___ our free travel guide.",
+        options: ["A. download", "B. upload", "C. install", "D. load"],
+        answer: 0,
+        feedback: "'Download' is the correct verb for transferring a file (like an ebook or travel guide) from the internet to your device."
+      }
+    ]
+  },
+  {
+    title: "Traveloka Travel Platform",
+    type: "Company Overview",
+    icon: "🗺️",
+    passage: `Traveloka is Southeast Asia's leading travel platform, ___1___ consumers to explore, book, and enjoy a wide range of travel products. The platform offers extensive transportation options, including flights, buses, trains, car rentals, and airport transfers. Traveloka's accommodation offerings are equally broad, encompassing hotels, apartments, guest houses, resorts, and villas.\n\n___2___, the platform enhances the travel experience by offering cruise packages and access to various local attractions, such as theme parks, museums, and day tours.\n\n___3___ in Indonesia in 2012, Traveloka has expanded its operations to Thailand, Vietnam, Singapore, Malaysia, Australia, and the Philippines. The company is committed to ___4___ exceptional customer service with 24/7 support available in local languages and acceptance of over 40 payment methods.\n\nWith nearly 140 million app downloads and nearly 50 million monthly active users, Traveloka ___5___ as one of the most popular travel apps in the region. For more information, please ___6___ our website.`,
+    questions: [
+      {
+        type: "Participle",
+        blank: 1,
+        text: "...leading travel platform, ___1___ consumers to explore, book, and enjoy...",
+        options: ["A. empower", "B. to empower", "C. empowering", "D. empowered"],
+        answer: 2,
+        feedback: "'Empowering' is a present participle used to introduce a participial clause that provides additional information about what the platform does. It means 'which empowers'."
+      },
+      {
+        type: "Linking Word",
+        blank: 2,
+        text: "___2___, the platform enhances the travel experience by offering cruise packages...",
+        options: ["A. Additionally", "B. However", "C. Therefore", "D. Nevertheless"],
+        answer: 0,
+        feedback: "'Additionally' is a conjunctive adverb used to introduce a new, supplementary point that adds to the previous information about accommodation and transport."
+      },
+      {
+        type: "Participle",
+        blank: 3,
+        text: "___3___ in Indonesia in 2012, Traveloka has expanded its operations...",
+        options: ["A. Found", "B. Founded", "C. Finding", "D. To find"],
+        answer: 1,
+        feedback: "'Founded' is a past participle used in a reduced passive clause. It means 'Because it was founded in Indonesia in 2012'. The verb 'found' (to establish) has the past participle 'founded'."
+      },
+      {
+        type: "Verb Pattern / Gerund",
+        blank: 4,
+        text: "The company is committed to ___4___ exceptional customer service...",
+        options: ["A. provide", "B. provided", "C. providing", "D. provision"],
+        answer: 2,
+        feedback: "The phrase 'committed to' ends with the preposition 'to', which must be followed by a noun or a gerund (-ing form). Therefore, 'providing' is correct."
+      },
+      {
+        type: "Collocation",
+        blank: 5,
+        text: "Traveloka ___5___ as one of the most popular travel apps in the region.",
+        options: ["A. stays", "B. stands", "C. sits", "D. lies"],
+        answer: 1,
+        feedback: "'Stands as' is a formal phrase meaning to hold a particular position or status. It is frequently used to describe a company's rank or standing in an industry."
+      },
+      {
+        type: "Collocation",
+        blank: 6,
+        text: "For more information, please ___6___ our website.",
+        options: ["A. visit", "B. go", "C. view", "D. look"],
+        answer: 0,
+        feedback: "'Visit a website' is the standard verb-noun collocation for going to a website on the internet."
+      }
+    ]
+  },
+  {
+    title: "Airbnb Privacy Policy Update",
+    type: "Notice",
+    icon: "🔒",
+    passage: `OUR TERMS AND PRIVACY POLICY ARE CHANGING\n\nWe are updating our Terms of Service, Payments Terms of Service, and our Privacy Policy. These updates will support our evolving business and new features, provide additional clarity regarding how personal information is ___1___, and address upcoming laws and regulations.\n\nThe updated Terms and Privacy Policy will generally go into ___2___ for existing users on April 20, 2026. After that date, you will need to agree to the updated Terms and ___3___ the updated Privacy Policy in order to book or manage reservations.\n\nYour use of the Airbnb Platform from that date ___4___ will be subject to the updated Privacy Policy.\n\nIf you disagree ___5___ the updated Terms or Privacy Policy, you may terminate your agreement with Airbnb at any time by deleting your account.\n\nThank you for ___6___ a valued member of our community.`,
+    questions: [
+      {
+        type: "Passive Voice",
+        blank: 1,
+        text: "...clarity regarding how personal information is ___1___...",
+        options: ["A. process", "B. processing", "C. processed", "D. processor"],
+        answer: 2,
+        feedback: "The sentence requires a passive verb form ('is processed') because personal information receives the action of processing. 'Processed' is the past participle."
+      },
+      {
+        type: "Collocation",
+        blank: 2,
+        text: "The updated Terms and Privacy Policy will generally go into ___2___ for existing users...",
+        options: ["A. force", "B. effect", "C. action", "D. practice"],
+        answer: 1,
+        feedback: "'Go into effect' is a standard legal/formal phrase meaning to become operational or start to apply. 'Come into force' is also valid, but 'go into force' is less common."
+      },
+      {
+        type: "Vocabulary",
+        blank: 3,
+        text: "...you will need to agree to the updated Terms and ___3___ the updated Privacy Policy...",
+        options: ["A. acknowledge", "B. deny", "C. ignore", "D. forget"],
+        answer: 0,
+        feedback: "In legal terms, users must 'acknowledge' (accept or recognize the existence of) a privacy policy. It parallels 'agree to' in the context of accepting terms."
+      },
+      {
+        type: "Adverb",
+        blank: 4,
+        text: "Your use of the Airbnb Platform from that date ___4___ will be subject to...",
+        options: ["A. forwards", "B. backward", "C. inward", "D. onward"],
+        answer: 3,
+        feedback: "'From that date onward' (or onwards) is a fixed expression meaning starting from that date and continuing into the future."
+      },
+      {
+        type: "Preposition",
+        blank: 5,
+        text: "If you disagree ___5___ the updated Terms or Privacy Policy...",
+        options: ["A. to", "B. with", "C. on", "D. about"],
+        answer: 1,
+        feedback: "'Disagree with' is the correct preposition to use when indicating opposition to a statement, policy, or person."
+      },
+      {
+        type: "Gerund",
+        blank: 6,
+        text: "Thank you for ___6___ a valued member of our community.",
+        options: ["A. be", "B. being", "C. been", "D. to be"],
+        answer: 1,
+        feedback: "After a preposition like 'for', a verb must take the gerund (-ing) form. 'Being' is the gerund of the verb 'to be'."
+      }
+    ]
   }
 ];
 

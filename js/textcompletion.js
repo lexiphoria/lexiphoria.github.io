@@ -560,6 +560,245 @@ const ALL_EXAMS = [
         tip: "A non-defining relative clause is needed after the comma to describe the platform. 'Which' is the correct relative pronoun. 'That' cannot follow a comma, and 'where' would require a separate subject."
       }
     ]
+  },
+  {
+    id: 'roblox',
+    title: 'Roblox: A Global Gaming Platform',
+    meta: 'Technology & Gaming',
+    html: `
+      <p>Roblox is a free electronic gaming platform that lets people from around the world create, share, and play games. David Baszucki founded Roblox in 2006. He wanted to build an online universe <span class="blank-tag">1</span>.</p>
+      <br>
+      <p>Since Roblox is a global system, games are available in multiple languages. These include English, French, German, Spanish, Korean, and Chinese. The games are generally geared for individuals who are 18 years old and under. <span class="blank-tag">2</span>. These include filters to remove inappropriate language and <span class="blank-tag">3</span>. The system also allows parents to set controls over their children's playing time, games, and extra features.</p>
+      <br>
+      <p><span class="blank-tag">4</span>. Games that include building, such as of a theme park or a dream home, are popular. Other games include murder mysteries, survival scenarios, and competitions, such as race car driving. There are also chat areas, where players can interact socially with other players.</p>
+      <br>
+      <p>Roblox includes tutorials on coding (writing instructions that an electronic platform follows). These activities help individuals explore the creation and building of electronic games. Roblox developers can earn Robux, or virtual money, <span class="blank-tag">5</span>. Players can also buy Robux to use toward game upgrades and accessories if they choose.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Context Meaning Clause",
+        opts: [
+          "where players could connect socially and creatively",
+          "which players could connect socially and creatively",
+          "that players could connect socially and creatively",
+          "when players could connect socially and creatively"
+        ],
+        ans: 0,
+        grammar: "Relative adverb",
+        tip: "The relative adverb 'where' is used to refer back to the 'online universe', indicating the place or environment in which players connect."
+      },
+      {
+        num: 2,
+        type: "Independent Sentence",
+        opts: [
+          "Roblox uses several monitoring systems to help ensure that children are safe while using the product",
+          "Because Roblox uses several monitoring systems to help ensure that children are safe while using the product",
+          "Using several monitoring systems to help ensure that children are safe while using the product",
+          "Roblox using several monitoring systems to help ensure that children are safe while using the product"
+        ],
+        ans: 0,
+        grammar: "Independent sentence structure",
+        tip: "A complete independent sentence is needed here to present a new idea. Option A provides a full sentence with a subject and a verb."
+      },
+      {
+        num: 3,
+        type: "Context Meaning Clause",
+        opts: [
+          "made sure that all avatars (game characters) are fully clothed",
+          "making sure that all avatars (game characters) are fully clothed",
+          "to make sure that all avatars (game characters) are fully clothed",
+          "which making sure that all avatars (game characters) are fully clothed"
+        ],
+        ans: 2,
+        grammar: "Infinitive of purpose",
+        tip: "The infinitive 'to make sure' is used to express purpose, parallel to 'to remove' earlier in the sentence."
+      },
+      {
+        num: 4,
+        type: "Independent Sentence",
+        opts: [
+          "Players can play Roblox games on various platforms, including smartphones, computers, and electronic game consoles such as Xbox One",
+          "While players can play Roblox games on various platforms, including smartphones, computers, and electronic game consoles such as Xbox One",
+          "Playing Roblox games on various platforms, including smartphones, computers, and electronic game consoles such as Xbox One",
+          "Players to play Roblox games on various platforms, including smartphones, computers, and electronic game consoles such as Xbox One"
+        ],
+        ans: 0,
+        grammar: "Independent sentence structure",
+        tip: "This blank requires a complete, independent sentence to start the paragraph. Option A correctly provides a full independent clause."
+      },
+      {
+        num: 5,
+        type: "Context Meaning Clause",
+        opts: [
+          "basing on the quality of their games",
+          "based on the quality of their games",
+          "to base on the quality of their games",
+          "which based on the quality of their games"
+        ],
+        ans: 1,
+        grammar: "Past participle phrase",
+        tip: "A past participle phrase ('based on...') acts as a reduced relative clause, meaning 'which is based on'."
+      }
+    ]
+  },
+  {
+    id: 'arena_valor',
+    title: 'Arena of Valor: A Resounding Victory',
+    meta: 'Sports & Entertainment',
+    html: `
+      <p>On the afternoon of December 19th, Vietnam faced Thailand again in the grand final of the Arena of Valor eSports tournament. The five members of FPT Flash displayed high performance, <span class="blank-tag">1</span>. The home team's fighting spirit ultimately paid off, securing a victory. This win earned Vietnam a valuable gold medal in their flagship eSports discipline, <span class="blank-tag">2</span>.</p>
+      <br>
+      <p><span class="blank-tag">3</span>. Audition also contributed many medals, <span class="blank-tag">4</span>. FC Online, FreeFire, and MLBB all failed to win any championships.</p>
+      <br>
+      <p>Returning to the men's team final of Arena of Valor, this is the third time the two teams have met in the tournament, following the BO3 group stage match and the winners' bracket final on the afternoon of December 18th. Thanks to their 3:2 victory in the previous match, Vietnam had half a day of rest, while Thailand lost another BO7 match against Laos to return to the grand final. <span class="blank-tag">5</span>.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Context Meaning Clause",
+        opts: [
+          "dominated their opponents from the very first game",
+          "to dominate their opponents from the very first game",
+          "dominating their opponents from the very first game",
+          "which dominating their opponents from the very first game"
+        ],
+        ans: 2,
+        grammar: "Present participle phrase",
+        tip: "A present participle phrase ('dominating...') is used after a comma to describe an action happening at the same time as the main clause."
+      },
+      {
+        num: 2,
+        type: "Context Meaning Clause",
+        opts: [
+          "contributed to the overall medal tally",
+          "contributing to the overall medal tally",
+          "to contribute to the overall medal tally",
+          "that contributing to the overall medal tally"
+        ],
+        ans: 1,
+        grammar: "Present participle phrase",
+        tip: "A present participle ('contributing') is used here to indicate the result of the preceding action (winning the gold medal)."
+      },
+      {
+        num: 3,
+        type: "Independent Sentence",
+        opts: [
+          "This was a resounding victory for Arena of Valor, with both the men's and women's teams winning championships",
+          "Because this was a resounding victory for Arena of Valor, with both the men's and women's teams winning championships",
+          "Being a resounding victory for Arena of Valor, with both the men's and women's teams winning championships",
+          "Which was a resounding victory for Arena of Valor, with both the men's and women's teams winning championships"
+        ],
+        ans: 0,
+        grammar: "Independent sentence structure",
+        tip: "This blank requires a complete sentence to start a new paragraph. Option A provides a full independent clause."
+      },
+      {
+        num: 4,
+        type: "Context Meaning Clause",
+        opts: [
+          "but it was classified as an exhibition event and not included in the overall results",
+          "so it was classified as an exhibition event and not included in the overall results",
+          "because it was classified as an exhibition event and not included in the overall results",
+          "although it was classified as an exhibition event and not included in the overall results"
+        ],
+        ans: 0,
+        grammar: "Coordinating conjunction",
+        tip: "The conjunction 'but' is used to connect two contrasting independent clauses. 'Although' would create a dependent clause that requires a main clause, which doesn't fit the structure."
+      },
+      {
+        num: 5,
+        type: "Independent Sentence",
+        opts: [
+          "We possess a physical and psychological advantage going into this rematch against the host team",
+          "Possessing a physical and psychological advantage going into this rematch against the host team",
+          "As we possess a physical and psychological advantage going into this rematch against the host team",
+          "We to possess a physical and psychological advantage going into this rematch against the host team"
+        ],
+        ans: 0,
+        grammar: "Independent sentence structure",
+        tip: "A complete sentence is required here to conclude the paragraph. Option A provides a full sentence with a subject and verb."
+      }
+    ]
+  },
+  {
+    id: 'eu_japan_digital',
+    title: 'EU and Japan Digital Partnership',
+    meta: 'Technology & Global Economy',
+    html: `
+      <p>In Brussels, the two sides have just held the fourth meeting of the digital partnership council, <span class="blank-tag">1</span> for growth and economic security. <span class="blank-tag">2</span>.</p>
+      <br>
+      <p>Following the fourth meeting of the digital partnership council, the European Union and Japan agreed to take their technology cooperation to a new level. The goal is to build a safer, more trusted and better connected digital environment between the two sides. Accordingly, the EU and Japan will coordinate on data policy, promote cross border data flows, and develop digital identities <span class="blank-tag">3</span>. The two sides will also expand research cooperation in key areas such as AI, quantum technology, 6G technology, submarine cables, and semiconductors. More broadly, this is a strategic move. <span class="blank-tag">4</span>, especially in foundational technologies that support connectivity infrastructure and economic security.</p>
+      <br>
+      <p>The move comes as global technology competition is intensifying. The United States still holds an advantage in artificial intelligence, cloud computing, and major technology platforms. <span class="blank-tag">5</span>, the European Union and Japan are seeking to turn the digital partnership into a long-term tool of strategic cooperation. Rather than racing on market side or speed of development, the two sides are focusing on standard trust and supply chain security. In the coming time, this cooperation could save global digital rules, including the Indo-Pacific region.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Context Meaning Clause",
+        opts: [
+          "aimed to promote cooperation in areas that are becoming increasingly important",
+          "to aim to promote cooperation in areas that are becoming increasingly important",
+          "aiming to promote cooperation in areas that are becoming increasingly important",
+          "which aiming to promote cooperation in areas that are becoming increasingly important"
+        ],
+        ans: 2,
+        grammar: "Present participle phrase",
+        tip: "A present participle phrase ('aiming to...') describes the purpose or ongoing goal of the meeting."
+      },
+      {
+        num: 2,
+        type: "Independent Sentence",
+        opts: [
+          "The meeting shows that digital technology is becoming part of the power competition between major economic centers",
+          "Because the meeting shows that digital technology is becoming part of the power competition between major economic centers",
+          "The meeting showing that digital technology is becoming part of the power competition between major economic centers",
+          "That the meeting shows that digital technology is becoming part of the power competition between major economic centers"
+        ],
+        ans: 0,
+        grammar: "Independent sentence structure",
+        tip: "This blank requires an independent sentence to complete the paragraph. Option A provides a full sentence structure."
+      },
+      {
+        num: 3,
+        type: "Context Meaning Clause",
+        opts: [
+          "what can be used across different systems",
+          "that can be used across different systems",
+          "when can be used across different systems",
+          "where can be used across different systems"
+        ],
+        ans: 1,
+        grammar: "Relative clause",
+        tip: "A defining relative clause starting with 'that' modifies 'digital identities'. 'What' cannot be used as a relative pronoun modifying a noun."
+      },
+      {
+        num: 4,
+        type: "Independent Sentence",
+        opts: [
+          "Both the EU and Japan want to reduce dependence on sensitive supply chains",
+          "Both the EU and Japan wanting to reduce dependence on sensitive supply chains",
+          "Although both the EU and Japan want to reduce dependence on sensitive supply chains",
+          "For both the EU and Japan want to reduce dependence on sensitive supply chains"
+        ],
+        ans: 0,
+        grammar: "Independent sentence structure",
+        tip: "A complete independent sentence is needed here. Option A provides a full clause with subject 'Both the EU and Japan' and verb 'want'."
+      },
+      {
+        num: 5,
+        type: "Context Meaning Clause",
+        opts: [
+          "Because China is accelerating its drive for technological self-reliance and expanding its influence in digital infrastructure",
+          "While China is accelerating its drive for technological self-reliance and expanding its influence in digital infrastructure",
+          "Despite China is accelerating its drive for technological self-reliance and expanding its influence in digital infrastructure",
+          "Therefore China is accelerating its drive for technological self-reliance and expanding its influence in digital infrastructure"
+        ],
+        ans: 1,
+        grammar: "Adverbial clause of contrast",
+        tip: "The conjunction 'while' introduces a subordinate clause expressing contrast with the main clause about the EU and Japan's actions."
+      }
+    ]
   }
 ];
 

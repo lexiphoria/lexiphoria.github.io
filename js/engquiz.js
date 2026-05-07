@@ -1788,6 +1788,286 @@ const texts = [
         feedback: "'Essential to national development' is the precise collocation meaning absolutely necessary and fundamental. 'Essential to' is stronger than 'important to' — it implies something cannot function without it. 'Vital' is close but 'essential to' is the most formal and standard collocation in policy writing."
       }
     ]
+  },
+  {
+    title: "UNESCO Honour — Đông Hồ Folk Paintings",
+    type: "News Article",
+    icon: "🎨",
+    passage: `UNESCO HONOUR SHINES SPOTLIGHT ON ĐÔNG HỒ FOLK PAINTINGS\n\nBac Ninh provincial authorities hosted a vibrant ceremony Friday night to accept UNESCO certification. The UN agency inscribed Dong Ho folk painting, a vivid Vietnamese folk art tradition, onto its list of intangible cultural heritage ___1___ urgent safeguarding.\n\nThe event doubled as the kickoff for the return of the Bac Ninh Heritage 2026 festival, ___2___ crowds to celebrate local roots. The milestone spotlights the historical, cultural, and aesthetic legacy ___3___ in Bac Ninh's villages centuries ago.\n\nIt highlights generations of artisans and communities ___4___ modern threats such as urbanization. Bac Ninh is now rolling out bold plans to digitize the art, ramp ___5___ global marketing, and weave the art into sustainable tourism.\n\nThis recognition is expected to bring international attention to a craft that has been passed ___6___ from generation to generation for centuries.`,
+    questions: [
+      {
+        type: "Part of Speech / Participle",
+        blank: 1,
+        text: "...onto its list of intangible cultural heritage ___1___ urgent safeguarding.",
+        options: ["A. need", "B. needing", "C. needed", "D. to need"],
+        answer: 1,
+        feedback: "'Needing urgent safeguarding' is a present participial phrase modifying 'heritage'. It means 'heritage that needs urgent safeguarding'. Active present participle because the heritage itself is in the state of needing — it is the one requiring protection."
+      },
+      {
+        type: "Part of Speech / Participle",
+        blank: 2,
+        text: "...the return of the Bac Ninh Heritage 2026 festival, ___2___ crowds to celebrate local roots.",
+        options: ["A. draw", "B. drew", "C. drawing", "D. drawn"],
+        answer: 2,
+        feedback: "'Drawing crowds' is a present participial clause of result — it describes the consequence of the festival's return. The -ing form after a comma expresses a simultaneous action or result. Active participle because the festival draws the crowds."
+      },
+      {
+        type: "Part of Speech",
+        blank: 3,
+        text: "...the historical, cultural, and aesthetic legacy ___3___ in Bac Ninh's villages centuries ago.",
+        options: ["A. bear", "B. bearing", "C. born", "D. to bear"],
+        answer: 2,
+        feedback: "'Born in Bac Ninh's villages' is a past participial phrase (passive) modifying 'legacy'. The legacy was born (= originated) in the villages. This is a reduced relative clause: 'the legacy that was born in Bac Ninh's villages'. 'Born' is the irregular past participle of 'bear'."
+      },
+      {
+        type: "Part of Speech / Participle",
+        blank: 4,
+        text: "It highlights generations of artisans and communities ___4___ modern threats such as urbanization.",
+        options: ["A. battle", "B. battled", "C. battling", "D. to battle"],
+        answer: 2,
+        feedback: "'Battling modern threats' is a present participial phrase modifying 'artisans and communities'. It means 'who are battling modern threats'. Active present participle because the artisans are actively fighting against threats — they are the doers of the action."
+      },
+      {
+        type: "Phrasal Verb",
+        blank: 5,
+        text: "Bac Ninh is now rolling out bold plans to digitize the art, ramp ___5___ global marketing...",
+        options: ["A. up", "B. out", "C. on", "D. off"],
+        answer: 0,
+        feedback: "'Ramp up' is a phrasal verb meaning to increase or intensify something. 'Ramp up marketing' = to significantly boost marketing efforts. 'Ramp out/on/off' are not standard phrasal verbs in this context."
+      },
+      {
+        type: "Phrasal Verb",
+        blank: 6,
+        text: "...a craft that has been passed ___6___ from generation to generation for centuries.",
+        options: ["A. over", "B. by", "C. down", "D. through"],
+        answer: 2,
+        feedback: "'Passed down' is a phrasal verb meaning to transmit knowledge, traditions, or skills from one generation to the next. 'Pass down from generation to generation' is a fixed expression. 'Pass over' = skip; 'pass through' = go through a place."
+      }
+    ]
+  },
+  {
+    title: "A Mini Tropical Forest in Hồ Chí Minh City",
+    type: "Lifestyle Article",
+    icon: "🌳",
+    passage: `A MINI "TROPICAL FOREST" IN HỒ CHÍ MINH CITY\n\nSummer is here in Vietnam and in Ho Chi Minh City. Prolonged heat is driving a growing ___1___ for cooler spaces and many people are turning to greener environments to escape the heat.\n\nAnd among a list of many options, a space designed like a tropical forest is ___2___ attention. It offers an option for those looking for a change of atmosphere without leaving the city.\n\nThis lush green space covers more than 1,000 square meters with features ___3___ as large trees and dense layers of low-level vegetation. In smaller corners, natural light filters through the layers of greenery. It feels like a mini forest.\n\nNot only young people, this mini forest also attracts families and visitors of all ages. There's greenery, water, and moss underfoot — and no need to leave the city — ___4___ yet still feel close to nature.\n\nThe space has been carefully ___5___ to recreate the feeling of being surrounded by wilderness. It serves as a reminder that urban living does not have to ___6___ a disconnect from the natural world.`,
+    questions: [
+      {
+        type: "Collocation",
+        blank: 1,
+        text: "Prolonged heat is driving a growing ___1___ for cooler spaces...",
+        options: ["A. need", "B. wish", "C. demand", "D. desire"],
+        answer: 2,
+        feedback: "'A growing demand for' is the correct collocation in economic and social contexts. 'Drive a demand' and 'growing demand for' are both fixed collocations. 'Demand' implies a measurable trend; 'wish' and 'desire' are more personal and emotional."
+      },
+      {
+        type: "Collocation / Phrasal Verb",
+        blank: 2,
+        text: "...a space designed like a tropical forest is ___2___ attention.",
+        options: ["A. drawing", "B. gaining", "C. catching", "D. taking"],
+        answer: 1,
+        feedback: "'Gaining attention' is the correct collocation meaning to increasingly receive notice or interest. 'Gain attention' emphasizes a gradual process of becoming noticed, which fits the context. 'Draw attention' is also common but implies active attraction; 'gaining' better matches the passive, organic growth described."
+      },
+      {
+        type: "Linking Word",
+        blank: 3,
+        text: "...more than 1,000 square meters with features ___3___ as large trees and dense layers of low-level vegetation.",
+        options: ["A. like", "B. so", "C. such", "D. similar"],
+        answer: 2,
+        feedback: "'Such as' is the correct linking phrase used to introduce specific examples from a larger category. 'Features such as large trees' = 'features like large trees'. 'Such as' is more formal than 'like' and preferred in written English."
+      },
+      {
+        type: "Linking Word / Concession",
+        blank: 4,
+        text: "...no need to leave the city — ___4___ yet still feel close to nature.",
+        options: ["A. and", "B. so", "C. but", "D. or"],
+        answer: 2,
+        feedback: "'But yet still feel close to nature' — 'but' introduces a contrast: you don't leave the city, BUT you still feel close to nature. The conjunction highlights the unexpected benefit. 'But yet' is an emphatic way to express contrast."
+      },
+      {
+        type: "Part of Speech",
+        blank: 5,
+        text: "The space has been carefully ___5___ to recreate the feeling of being surrounded by wilderness.",
+        options: ["A. design", "B. designing", "C. designed", "D. designer"],
+        answer: 2,
+        feedback: "'Has been carefully designed' uses the present perfect passive: 'has been + past participle'. The space is the recipient of the design action. The adverb 'carefully' modifies the participle 'designed'. This indicates a completed action with present relevance."
+      },
+      {
+        type: "Word Meaning / Collocation",
+        blank: 6,
+        text: "...urban living does not have to ___6___ a disconnect from the natural world.",
+        options: ["A. mean", "B. cause", "C. create", "D. bring"],
+        answer: 0,
+        feedback: "'Does not have to mean a disconnect' — 'mean' here signifies 'imply' or 'result in'. 'X does not have to mean Y' is a fixed expression conveying that X does not necessarily lead to Y. 'Cause' and 'create' are more direct; 'mean' captures the philosophical tone."
+      }
+    ]
+  },
+  {
+    title: "Singapore — City in Nature",
+    type: "Environment Article",
+    icon: "🦋",
+    passage: `How does a densely populated, skyscraper-lined nation like Singapore transform into a lush green oasis ___1___ wildlife thrives alongside humans? The island nation's ambitious vision of becoming a "City in Nature" aims to integrate urban living with biodiversity and requires careful coordination ___2___ government leaders, designers of the urban landscape, and its citizens.\n\nBy carving out wildlife habitats amidst the built environment, the National Parks Board seeks to prioritize biodiversity in urban planning and bring back species previously ___3___ out. An architect helping to drive this change is the butterfly-loving Khew Sin Khoon, ___4___ innovative designs have integrated green habitats into Singapore's airports, institutional buildings, and even hospitals.\n\nAlso at the forefront are passionate youths Tay Jing Xuan and Lumin Ong, a couple hunting down critical data about their beloved dragonflies to spur conservation efforts, and spreading awareness of how to live alongside wildlife, especially when conflicts ___5___ humans occur.\n\nThis synergy between bold policies, community action, and biophilic design makes Singapore a unique example of how nature and humans can ___6___ in harmony.`,
+    questions: [
+      {
+        type: "Relative Clause",
+        blank: 1,
+        text: "...a lush green oasis ___1___ wildlife thrives alongside humans?",
+        options: ["A. which", "B. that", "C. where", "D. when"],
+        answer: 2,
+        feedback: "'Where wildlife thrives' — 'where' is the correct relative adverb referring to a place ('oasis'). In a relative clause modifying a location, 'where' replaces 'in which'. 'Which' and 'that' would need a preposition ('in which') to work here."
+      },
+      {
+        type: "Preposition",
+        blank: 2,
+        text: "...requires careful coordination ___2___ government leaders, designers, and its citizens.",
+        options: ["A. among", "B. between", "C. with", "D. from"],
+        answer: 1,
+        feedback: "'Coordination between X, Y, and Z' is the correct collocation. Although traditional grammar reserves 'between' for two parties and 'among' for three or more, modern usage accepts 'between' when listing distinct, named entities. 'Between' emphasizes mutual relationships among named parties."
+      },
+      {
+        type: "Phrasal Verb",
+        blank: 3,
+        text: "...bring back species previously ___3___ out.",
+        options: ["A. driven", "B. wiped", "C. phased", "D. pushed"],
+        answer: 1,
+        feedback: "'Wiped out' is the phrasal verb meaning completely destroyed or eliminated. 'Species previously wiped out' = species that were completely eliminated from the area. 'Driven out' means forced to leave; 'wiped out' is more definitive — extinction."
+      },
+      {
+        type: "Relative Clause",
+        blank: 4,
+        text: "...the butterfly-loving Khew Sin Khoon, ___4___ innovative designs have integrated green habitats...",
+        options: ["A. who", "B. whom", "C. whose", "D. which"],
+        answer: 2,
+        feedback: "'Whose innovative designs' — 'whose' is the possessive relative pronoun. It modifies 'designs' to show they belong to Khew Sin Khoon. In non-defining relative clauses, 'whose + noun' is the standard possessive structure for people."
+      },
+      {
+        type: "Preposition",
+        blank: 5,
+        text: "...especially when conflicts ___5___ humans occur.",
+        options: ["A. between", "B. among", "C. with", "D. against"],
+        answer: 2,
+        feedback: "'Conflicts with humans' — 'with' is the correct preposition after 'conflicts' when referring to clashes or disagreements involving another party. 'Conflicts with' is the standard collocation. 'Conflicts between' would require two named parties."
+      },
+      {
+        type: "Word Meaning / Collocation",
+        blank: 6,
+        text: "...a unique example of how nature and humans can ___6___ in harmony.",
+        options: ["A. live", "B. exist", "C. coexist", "D. persist"],
+        answer: 2,
+        feedback: "'Coexist in harmony' is the precise collocation meaning to live together peacefully. 'Coexist' specifically implies two or more entities (nature and humans) existing side by side. 'Live in harmony' is possible but 'coexist' is more formal and precise for this ecological context."
+      }
+    ]
+  },
+  {
+    title: "ASEAN Scholarship — Survey Email",
+    type: "Formal Email",
+    icon: "📧",
+    passage: `Dear Applicant,\n\nWe hope this email finds you well. You recently used our online portal to apply for the ASEAN Scholarship, and we would like to ask ___1___ your help to improve it.\n\nWhy we are writing to you:\nWe want to make our application system easier for future students.\n\nHow you can help:\nWe created a short survey about your experience ___2___ our application portal. Your honest feedback will help us make it easier for future applicants.\n\nYour privacy ___3___:\nYour answers will be anonymous, kept private and will only be used to improve our system. Taking this survey will not affect any future applications you ___4___ make.\n\nReady to share your thoughts?\nThe survey takes about 5 minutes to complete. You can access the survey here: go.gov.sg/asappexp\n\nThank you for ___5___ us improve.\n\nWarm regards,\nASEAN Scholarship team\n\nThis is a genuine email and not a phishing attempt. ___6___ you have any concerns, please contact us directly.`,
+    questions: [
+      {
+        type: "Preposition",
+        blank: 1,
+        text: "...we would like to ask ___1___ your help to improve it.",
+        options: ["A. about", "B. for", "C. with", "D. on"],
+        answer: 1,
+        feedback: "'Ask for your help' is the correct verb-preposition collocation meaning to request assistance. 'Ask for' = to request or seek something. 'Ask about' means to inquire about a topic; 'ask with' and 'ask on' are not standard collocations."
+      },
+      {
+        type: "Preposition / Collocation",
+        blank: 2,
+        text: "We created a short survey about your experience ___2___ our application portal.",
+        options: ["A. with", "B. using", "C. on", "D. about"],
+        answer: 1,
+        feedback: "'Your experience using our portal' — 'using' is a present participle/gerund functioning as an adverbial modifier of 'experience'. It specifies the type of experience: the experience of using the portal. 'Experience with' is also common, but 'using' is more precise here."
+      },
+      {
+        type: "Tense / Collocation",
+        blank: 3,
+        text: "Your privacy ___3___:",
+        options: ["A. is important", "B. matters", "C. counts", "D. concerns"],
+        answer: 1,
+        feedback: "'Your privacy matters' — 'matters' is the correct verb meaning 'is important' or 'is significant'. 'X matters' is a concise, emphatic expression commonly used in formal communications to affirm the importance of something. 'Counts' is informal; 'concerns' would need a different structure."
+      },
+      {
+        type: "Tense / Modal",
+        blank: 4,
+        text: "Taking this survey will not affect any future applications you ___4___ make.",
+        options: ["A. would", "B. might", "C. should", "D. will"],
+        answer: 1,
+        feedback: "'Applications you might make' — 'might' expresses possibility/uncertainty about future actions. The applicant may or may not apply again; 'might' captures this uncertainty. 'Will' implies certainty; 'would' implies a conditional; 'should' implies obligation."
+      },
+      {
+        type: "Gerund / Verb Pattern",
+        blank: 5,
+        text: "Thank you for ___5___ us improve.",
+        options: ["A. help", "B. helped", "C. helping", "D. to help"],
+        answer: 2,
+        feedback: "'Thank you for helping' — after 'for' (preposition), the gerund (-ing form) is required. 'Thank you for + gerund' is a fixed pattern in formal correspondence. 'Help someone + bare infinitive' follows: 'helping us improve' (no 'to' after 'help')."
+      },
+      {
+        type: "Conditional / Formal",
+        blank: 6,
+        text: "___6___ you have any concerns, please contact us directly.",
+        options: ["A. Should", "B. Unless", "C. When", "D. Whether"],
+        answer: 0,
+        feedback: "'Should you have any concerns' is a formal inverted conditional: 'Should + subject + base verb' = 'If you have'. This is standard in formal emails and business correspondence. 'Unless' means 'if not'; 'when' implies certainty; 'whether' introduces alternatives."
+      }
+    ]
+  },
+  {
+    title: "Vietnam Airlines — Data Breach Notice",
+    type: "Formal Notice",
+    icon: "✉️",
+    passage: `Dear Valued Customer,\n\nVietnam Airlines would like to inform you of a recent data breach ___1___ a third-party customer service platform operated by a global technology partner. According to the service provider, Vietnam Airlines is among several global companies using its services that have been ___2___ by this incident. A portion of customer data managed on this platform was accessed without authorization.\n\nUpon being alerted, we took appropriate actions to coordinate with relevant authorities, cybersecurity experts, and the third-party partner to investigate the breach, assess potential impact and ___3___ further unauthorized access to its system.\n\nTo help protect your personal data, we recommend changing the passwords of your Lotusmiles and ___4___ email accounts, staying alert to potential phishing attempts, suspicious emails or phone calls impersonating Vietnam Airlines, and avoid sharing information, one-time passcodes (OTPs), or login credentials with unverified sources.\n\nVietnam Airlines sincerely regrets any concern this incident may have caused. We are committed to ___5___ potentially affected customers informed with relevant updates as the investigation continues.\n\nFor any questions or assistance, customers are kindly requested to contact Vietnam Airlines Data Protection Office at dpo@vietnamairlines.com, ___6___ via 24/7 hotlines: 1900 1100\n\nYour sincerely,\nVietnam Airlines`,
+    questions: [
+      {
+        type: "Part of Speech / Participle",
+        blank: 1,
+        text: "...a recent data breach ___1___ a third-party customer service platform...",
+        options: ["A. involve", "B. involved", "C. involving", "D. to involve"],
+        answer: 2,
+        feedback: "'A data breach involving a third-party platform' — 'involving' is a present participial phrase post-modifying 'breach'. It means 'a breach that involves'. Active participle because the breach itself is the one involving the platform — it is the active agent."
+      },
+      {
+        type: "Part of Speech / Tense",
+        blank: 2,
+        text: "...several global companies using its services that have been ___2___ by this incident.",
+        options: ["A. affect", "B. affecting", "C. affected", "D. to affect"],
+        answer: 2,
+        feedback: "'Have been affected by this incident' uses the present perfect passive: 'have been + past participle'. The companies are the recipients of the effect (passive voice). Present perfect indicates the effect started in the past and has relevance to the present."
+      },
+      {
+        type: "Word Meaning / Collocation",
+        blank: 3,
+        text: "...assess potential impact and ___3___ further unauthorized access to its system.",
+        options: ["A. prevent", "B. contain", "C. control", "D. restrict"],
+        answer: 1,
+        feedback: "'Contain further unauthorized access' — 'contain' in cybersecurity means to limit the spread or scope of a breach. 'Contain a breach/incident' is the standard term in data security contexts. 'Prevent' means to stop entirely (the breach already happened); 'contain' means to limit its extent."
+      },
+      {
+        type: "Part of Speech",
+        blank: 4,
+        text: "...changing the passwords of your Lotusmiles and ___4___ email accounts...",
+        options: ["A. associate", "B. associating", "C. associated", "D. association"],
+        answer: 2,
+        feedback: "'Associated email accounts' — 'associated' is a past participial adjective modifying 'email accounts'. It means accounts that are connected or linked to your Lotusmiles account. 'Associated' functions as a pre-modifier adjective in this noun phrase."
+      },
+      {
+        type: "Collocation / Verb Pattern",
+        blank: 5,
+        text: "We are committed to ___5___ potentially affected customers informed...",
+        options: ["A. keep", "B. keeping", "C. kept", "D. be keeping"],
+        answer: 1,
+        feedback: "'Committed to keeping' — after 'committed to' (where 'to' is a preposition, not part of an infinitive), the gerund is required. 'Committed to + gerund' is a fixed structure: 'committed to keeping customers informed'. 'Keep someone informed' is also a fixed pattern."
+      },
+      {
+        type: "Linking Word",
+        blank: 6,
+        text: "...contact Vietnam Airlines Data Protection Office at dpo@vietnamairlines.com, ___6___ via 24/7 hotlines: 1900 1100",
+        options: ["A. and", "B. or", "C. but", "D. so"],
+        answer: 1,
+        feedback: "'Or via 24/7 hotlines' — 'or' presents an alternative option. Customers can contact via email OR via hotlines. 'Or' is used to offer a choice between two methods. 'And' would imply both are required; 'or' correctly signals either option is acceptable."
+      }
+    ]
   }
 ];
 

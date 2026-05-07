@@ -241,7 +241,6 @@ const ALL_EXAMS = [
           "which stays steadfast and unyielding on basic principles but flexible in the ways and means",
           "where it stays steadfast and unyielding on basic principles but flexible in the ways and means"
         ],
-        ],
         ans: 0,
         grammar: "Preposition + relative pronoun",
         tip: "A non-defining relative clause referring to 'bamboo diplomacy'. 'In which' means 'in this diplomacy', allowing the clause 'it stays steadfast...' to be structurally complete. 'That' cannot be used after a comma."
@@ -480,6 +479,85 @@ const ALL_EXAMS = [
         ans: 2,
         grammar: "Adverbial clause of contrast",
         tip: "The conjunction 'while' is used to contrast the better conditions in the Philippines and Thailand with the limited participation in Indonesia and Myanmar."
+      }
+    ]
+  },
+  {
+    id: 'water_puppetry',
+    title: 'A Unique Performance Chamber for Water Puppetry',
+    meta: 'Culture & Arts',
+    html: `
+      <p><span class="blank-tag">1</span>. An inscription from 1121 records performances in the Ly dynasty’s royal court, depicting rippling waves, a golden turtle bearing three mountain peaks, and immortals emerging from a cave’s mouth. With deep roots, water puppetry blends music and literature into shows that portray everything from mythological tales and battles to scenes of riverine daily life. Puppets row boats, plow fields with buffalo, or catch fish – all infused with humor and joy.</p>
+      <br>
+      <p>On performance days, the water pavilion serves as the stage or puppet chamber. A curtain is hung as a backdrop, <span class="blank-tag">2</span>, while allowing them to observe both the puppets and the audience. Water forms an integral part of the show, masking the control system of poles, which are hidden below the surface. The puppets emerge from behind the curtain and move beneath the surface before emerging or being revealed as the curtain is slightly parted.</p>
+      <br>
+      <p>In the heart of the delta, traditional water puppet pavilions display refined Vietnamese craftsmanship. Located by the Duong River dike in the former Kinh Bac region, Giong Temple (Phu Dong) faces a body of water. <span class="blank-tag">3</span>. Layered beams and brackets form its timber frame, <span class="blank-tag">4</span> and Later Le-style chrysanthemum motifs. A bridge extends from the shore to an open platform in front of the pavilion, <span class="blank-tag">5</span> during the annual Giong Festival, held on the ninth day of the fourth lunar month.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Independent Sentence",
+        opts: [
+          "Water pavilions are best known for their link to the art of water puppetry (múa rối nước)",
+          "Being best known for their link to the art of water puppetry (múa rối nước)",
+          "Which are best known for their link to the art of water puppetry (múa rối nước)",
+          "Because water pavilions are best known for their link to the art of water puppetry (múa rối nước)"
+        ],
+        ans: 0,
+        grammar: "Independent sentence structure",
+        tip: "This blank requires a complete, independent sentence to introduce the topic of the paragraph. Option A provides a full sentence with subject and verb, while others are fragments or dependent clauses."
+      },
+      {
+        num: 2,
+        type: "Context Meaning Clause",
+        opts: [
+          "concealed the artisans who stand in the water",
+          "to conceal the artisans who stand in the water",
+          "concealing the artisans who stand in the water",
+          "which concealing the artisans who stand in the water"
+        ],
+        ans: 2,
+        grammar: "Present participle phrase",
+        tip: "A present participle phrase ('concealing...') follows the comma to describe what the curtain does. It expresses an active ongoing function of the curtain."
+      },
+      {
+        num: 3,
+        type: "Independent Sentence",
+        opts: [
+          "A two-tier, eight-roof water pavilion rising at the pond's center",
+          "Rising at the pond's center a two-tier, eight-roof water pavilion",
+          "Because at the pond’s center, a two-tier, eight-roof water pavilion rises",
+          "At the pond’s center, a two-tier, eight-roof water pavilion rises"
+        ],
+        ans: 3,
+        grammar: "Independent sentence structure",
+        tip: "A complete sentence is required here. Option D provides a complete thought with a prepositional phrase followed by a subject and a verb ('pavilion rises')."
+      },
+      {
+        num: 4,
+        type: "Context Meaning Clause",
+        opts: [
+          "adorning with carvings of the four sacred animals",
+          "adorned with carvings of the four sacred animals",
+          "to adorn with carvings of the four sacred animals",
+          "which adorned with carvings of the four sacred animals"
+        ],
+        ans: 1,
+        grammar: "Past participle phrase",
+        tip: "A past participle phrase ('adorned with...') acts as a reduced relative clause with a passive meaning, indicating that the timber frame was decorated with the carvings."
+      },
+      {
+        num: 5,
+        type: "Context Meaning Clause",
+        opts: [
+          "what serves as a venue for folk performances and water puppetry shows",
+          "that serves as a venue for folk performances and water puppetry shows",
+          "which serves as a venue for folk performances and water puppetry shows",
+          "where serves as a venue for folk performances and water puppetry shows"
+        ],
+        ans: 2,
+        grammar: "Non-defining relative clause",
+        tip: "A non-defining relative clause is needed after the comma to describe the platform. 'Which' is the correct relative pronoun. 'That' cannot follow a comma, and 'where' would require a separate subject."
       }
     ]
   }

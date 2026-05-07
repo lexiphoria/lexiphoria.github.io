@@ -1,4 +1,4 @@
-﻿const ALL_EXAMS = [
+const ALL_EXAMS = [
   {
     id: 'biometrics',
     title: 'BIOMETRICS 2.0',
@@ -161,6 +161,89 @@
         ans: 0,
         grammar: "Adverbial clause of reason",
         tip: "Most logical semantic connection following 'unique challenge': Because they are busy with careers and families, this group often overlooks heart care."
+      }
+    ]
+  },
+  {
+    id: 'dienbienphu',
+    title: 'Dien Bien Phu – A Battle to Remember',
+    meta: 'History & Society',
+    html: `
+      <p>Seventy years ago, Vietnam won the Dien Bien Phu battle, <span class="blank-tag">1</span> in July 1954 and marking the end of the French military presence in the whole Indochina.</p>
+      <br>
+      <p>The battle for Dien Bien Phu is still bittersweet for many who wear the victory as a badge of honour, but lament the steep death toll.</p>
+      <br>
+      <p>The 1954 battle killed thousands of soldiers on both sides within less than two months, from March 13 to May 7, as Vietnamese fighters hemmed in French forces - <span class="blank-tag">2</span> - and bombarded them with heavy artillery. The globe-shaking victory was the fruit of <span class="blank-tag">3</span>, military art engineered by General Vo Nguyen Giap, and especially the great national solidarity. During the Dien Bien Phu Campaign, tens of thousands of people engaged in transporting supplies to the front or building the road for moving the artillery serving the battle.</p>
+      <br>
+      <p><span class="blank-tag">4</span>, being a great source of encouragement for the entire nation in the current national construction and development.</p>
+      <br>
+      <p>Vietnam has shone bright as a country of peace, bliss and robust development. It has carved out significant achievements with its bamboo diplomacy, <span class="blank-tag">5</span> to achieve strategic objectives. The country has established diplomatic ties with 190 countries and territories across the five continents, and even strengthened bonds with its formers foes./.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Participle phrase",
+        opts: [
+          "forced the French government to sign the Geneva Agreement",
+          "forcing the French government to sign the Geneva Agreement",
+          "to force the French government to sign the Geneva Agreement",
+          "which forcing the French government to sign the Geneva Agreement"
+        ],
+        ans: 1,
+        grammar: "Present participle of result",
+        tip: "A present participle phrase ('forcing...') is used after a comma to indicate the result of the preceding action ('won the battle'). This structure is parallel with 'marking' later in the sentence."
+      },
+      {
+        num: 2,
+        type: "Relative Clause",
+        opts: [
+          "equipping with superior weapons",
+          "equipped with superior weapons",
+          "which equipped with superior weapons",
+          "to equip with superior weapons"
+        ],
+        ans: 1,
+        grammar: "Past participle phrase",
+        tip: "A past participle phrase acting as a reduced relative clause (forces which were equipped...). Passive meaning is required because the forces received the weapons."
+      },
+      {
+        num: 3,
+        type: "Noun Phrase",
+        opts: [
+          "President Ho Chi Minh clear-sighted leadership",
+          "the clear-sighted leadership by President Ho Chi Minh",
+          "the leadership clear-sighted by President Ho Chi Minh",
+          "President Ho Chi Minh's leadership which is clear-sighted"
+        ],
+        ans: 1,
+        grammar: "Noun phrase",
+        tip: "After 'the fruit of', a noun phrase is required. 'The clear-sighted leadership by President Ho Chi Minh' is a grammatically correct and naturally structured noun phrase that parallels the subsequent items."
+      },
+      {
+        num: 4,
+        type: "Compound sentence",
+        opts: [
+          "Although seven decades passing, the stature, meaning and lessons learnt from the great victory remain valid today",
+          "Because seven decades have passed, the stature, meaning and lessons learnt from the great victory remain valid today",
+          "Seven decades have passed but the stature, meaning and lessons learnt from the great victory remain valid today",
+          "Despite seven decades have passed, the stature, meaning and lessons learnt from the great victory remain valid today"
+        ],
+        ans: 2,
+        grammar: "Coordinating conjunction",
+        tip: "A compound sentence joined by 'but' expresses a contrast. The 3rd option is the only one with correct grammar and structure. 'Despite' cannot be followed by a full clause; 'Because' gives the wrong meaning."
+      },
+      {
+        num: 5,
+        type: "Adjective clause",
+        opts: [
+          "in which it stays steadfast and unyielding on basic principles but flexible in the ways and means",
+          "that it stays steadfast and unyielding on basic principles but flexible in the ways and means",
+          "which stays steadfast and unyielding on basic principles but flexible in the ways and means",
+          "where it stays steadfast and unyielding on basic principles but flexible in the ways and means"
+        ],
+        ans: 0,
+        grammar: "Preposition + relative pronoun",
+        tip: "A non-defining relative clause referring to 'bamboo diplomacy'. 'In which' means 'in this diplomacy', allowing the clause 'it stays steadfast...' to be structurally complete. 'That' cannot be used after a comma."
       }
     ]
   }

@@ -214,6 +214,30 @@
     z-index: 10;
   }
 
+  /* Home link button */
+  .home-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--muted);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 5px 14px;
+    background: transparent;
+    transition: all 0.2s;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .home-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(232,213,183,0.06);
+  }
+
   .back-btn {
     width: 36px; height: 36px;
     border-radius: 50%;
@@ -677,6 +701,19 @@
     transition: all 0.2s;
   }
   .btn-secondary:hover { border-color: var(--accent2); color: var(--accent2); }
+  .home-link {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 13px;
+    font-family: 'Sora', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.2s;
+  }
+  .home-link:hover { background: var(--surface2); color: var(--accent2); }
 </style>
 </head>
 <body>
@@ -685,6 +722,7 @@
 
   <!-- HOME -->
   <div class="screen active" id="home">
+    <a class="home-link" href="index.html" style="position:absolute;top:20px;left:20px;">🏠 Home</a>
     <div class="logo-area">
       <div class="logo-word">ReadMind</div>
       <div class="logo-sub">University Entrance · V-ACT English</div>
@@ -702,14 +740,19 @@
     <div class="stats-row">
       <div class="stat-item"><div class="stat-num" id="stat-texts">25</div><div class="stat-lbl">Texts</div></div>
       <div class="stat-item"><div class="stat-num" id="stat-qs">150</div><div class="stat-lbl">Questions</div></div>
+      <div class="stat-item"><div class="stat-num" id="stat-done">0</div><div class="stat-lbl">Completed</div></div>
       <div class="stat-item"><div class="stat-num" id="stat-score">—</div><div class="stat-lbl">Best Score</div></div>
     </div>
+    <button class="btn-secondary" style="margin-top:20px;font-size:12px;padding:8px 20px;" onclick="resetAllProgress()">🗑 Reset Progress</button>
   </div>
 
   <!-- TEXT SELECT -->
   <div class="screen" id="select-screen">
     <div style="width:100%; max-width:1000px; padding: 40px 24px;">
-      <button class="back-btn" onclick="showScreen('home')" style="margin-bottom:24px">←</button>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
+        <button class="back-btn" onclick="showScreen('home')">←</button>
+        <a class="home-link" href="index.html">🏠 Trang chủ</a>
+      </div>
       <div class="select-title">Choose a Passage</div>
       <div class="select-sub">25 reading cloze texts · 6 questions each</div>
       <div class="texts-grid" id="texts-grid"></div>
@@ -720,6 +763,7 @@
   <div class="screen" id="game">
     <div class="game-header">
       <button class="back-btn" onclick="confirmBack()">←</button>
+      <a class="home-link" href="index.html">🏠</a>
       <div class="header-meta">
         <div class="text-label" id="hdr-label">TEXT 01</div>
         <div class="text-title" id="hdr-title">Loading...</div>
@@ -753,6 +797,7 @@
       <div class="result-stat"><div class="result-stat-num" id="r-pct" style="color:var(--accent)">0%</div><div class="result-stat-lbl">Accuracy</div></div>
     </div>
     <div class="btn-row">
+      <a class="btn-secondary" href="index.html" style="display:inline-flex;align-items:center;text-decoration:none;">🏠 Trang chủ</a>
       <button class="btn-secondary" onclick="showScreen('select-screen')">← All Texts</button>
       <button class="btn-primary" onclick="nextText()">Next Text →</button>
     </div>
@@ -1729,7 +1774,7 @@ const texts = [
         type: "Linking Word",
         blank: 1,
         text: "Travelling abroad can be exciting, ___1___ it also comes with unexpected risks.",
-        options: ["A. so", "B. but", "C. for", "D. yet"],
+        options: ["A. so", "B. as", "C. for", "D. yet"],
         answer: 3,
         feedback: "'Yet' is a coordinating conjunction meaning 'but nevertheless'. Like 'but', it introduces contrast, but 'yet' is slightly more literary and emphatic. Both 'but' and 'yet' work, but 'yet' better emphasizes the unexpected contrast after 'exciting'."
       },
@@ -2225,12 +2270,75 @@ const texts = [
   }
 ];
 
+// ── STORAGE ────────────────────────────────────────────────────────────────
+const STORAGE_KEY = 'readmind_scores';
+const DRAFT_KEY   = 'readmind_draft';
+
+function saveScores() {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(scores)); } catch(e) {}
+}
+
+function loadScores() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) scores = JSON.parse(raw);
+  } catch(e) { scores = {}; }
+}
+
+function saveDraft() {
+  try {
+    localStorage.setItem(DRAFT_KEY, JSON.stringify({
+      textIndex: currentTextIndex,
+      answers: answers
+    }));
+  } catch(e) {}
+}
+
+function loadDraft() {
+  try {
+    const raw = localStorage.getItem(DRAFT_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch(e) { return null; }
+}
+
+function clearDraft() {
+  try { localStorage.removeItem(DRAFT_KEY); } catch(e) {}
+}
+
+function resetAllProgress() {
+  if (!confirm('Xoá toàn bộ tiến trình? Hành động này không thể hoàn tác.')) return;
+  try {
+    localStorage.removeItem(STORAGE_KEY);
+    localStorage.removeItem(DRAFT_KEY);
+  } catch(e) {}
+  scores = {};
+  updateHomeStats();
+  showToast('Đã xoá tiến trình!');
+}
+
+function showToast(msg) {
+  let t = document.getElementById('toast');
+  if (!t) {
+    t = document.createElement('div');
+    t.id = 'toast';
+    t.style.cssText = 'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#231f35;border:1px solid #2e2a45;color:#fffffe;padding:10px 22px;border-radius:50px;font-size:13px;font-family:Sora,sans-serif;z-index:999;opacity:0;transition:opacity 0.3s;pointer-events:none;';
+    document.body.appendChild(t);
+  }
+  t.textContent = msg;
+  t.style.opacity = '1';
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => t.style.opacity = '0', 2500);
+}
+
 // ── STATE ──────────────────────────────────────────────────────────────────
 let currentTextIndex = 0;
 let currentQuestionIndex = 0;
 let answers = [];
 let scores = {}; // textIndex -> score
 let currentTextId = 0;
+
+// Load saved scores on startup
+loadScores();
 
 // ── SCREEN MANAGEMENT ─────────────────────────────────────────────────────
 function showScreen(id) {
@@ -2241,13 +2349,16 @@ function showScreen(id) {
 }
 
 function updateHomeStats() {
-  const completed = Object.keys(scores).length;
+  const completedCount = Object.keys(scores).length;
   document.getElementById('stat-texts').textContent = texts.length;
   document.getElementById('stat-qs').textContent = texts.length * 6;
+  document.getElementById('stat-done').textContent = completedCount;
   const allScores = Object.values(scores);
   if (allScores.length > 0) {
     const best = Math.max(...allScores);
     document.getElementById('stat-score').textContent = `${best}/6`;
+  } else {
+    document.getElementById('stat-score').textContent = '—';
   }
 }
 
@@ -2272,7 +2383,19 @@ function startText(idx) {
   currentTextIndex = idx;
   currentTextId = idx;
   currentQuestionIndex = 0;
-  answers = new Array(6).fill(null);
+
+  // Restore draft if it's for this text
+  const draft = loadDraft();
+  if (draft && draft.textIndex === idx && Array.isArray(draft.answers)) {
+    answers = draft.answers;
+    // Jump to first unanswered question
+    const firstUnanswered = answers.findIndex(a => a === null);
+    currentQuestionIndex = firstUnanswered >= 0 ? firstUnanswered : 5;
+    showToast('Tiếp tục bài làm dở 📖');
+  } else {
+    answers = new Array(6).fill(null);
+  }
+
   renderGame();
   showScreen('game');
 }
@@ -2387,6 +2510,7 @@ function goToQuestion(idx) {
 function selectAnswer(qIdx, optIdx) {
   if (answers[qIdx] !== null) return;
   answers[qIdx] = optIdx;
+  saveDraft();          // auto-save every answer
   renderPassage();
   renderQuestions();
   updateProgress();
@@ -2407,26 +2531,25 @@ function updateProgress() {
 
 function confirmBack() {
   if (answers.some(a => a !== null)) {
-    if (confirm('Leave this text? Your progress will be saved.')) {
-      saveProgress();
-      showScreen('select-screen');
-    }
+    // Draft already saved via selectAnswer; just go back
+    showScreen('select-screen');
+    showToast('Tiến trình đã được lưu ✓');
   } else {
+    clearDraft();
     showScreen('select-screen');
   }
-}
-
-function saveProgress() {
-  const correct = answers.filter((a, i) => a !== null && a === texts[currentTextIndex].questions[i].answer).length;
-  scores[currentTextIndex] = correct;
 }
 
 function finishText() {
   const text = texts[currentTextIndex];
   const correct = answers.filter((a, i) => a === text.questions[i].answer).length;
-  const wrong = answers.filter(a => a !== null).length - correct;
+  const wrong = 6 - correct;
   const pct = Math.round(correct / 6 * 100);
+
+  // Save final score & clear the draft for this text
   scores[currentTextIndex] = correct;
+  saveScores();
+  clearDraft();
 
   const emojis = ['😔', '😐', '🙂', '😊', '😄', '🌟', '🏆'];
   const emojiIdx = Math.floor(correct / 6 * 6);
@@ -2436,7 +2559,7 @@ function finishText() {
   document.getElementById('result-title').textContent = titles[Math.min(correct, 6)];
   document.getElementById('result-score').textContent = `${correct} / 6 correct · ${pct}% accuracy`;
   document.getElementById('r-correct').textContent = correct;
-  document.getElementById('r-wrong').textContent = 6 - correct;
+  document.getElementById('r-wrong').textContent = wrong;
   document.getElementById('r-pct').textContent = pct + '%';
 
   showScreen('results');
@@ -2448,6 +2571,7 @@ function nextText() {
 }
 
 // Init
+updateHomeStats();
 renderTextGrid();
 </script>
 </body>

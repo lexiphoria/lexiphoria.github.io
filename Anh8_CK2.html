@@ -5,10 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English 8 - Semester 2 Final Exam Practice</title>
     <link rel="stylesheet" href="css/anh8_ck2.css">
+    <style>
+      .home-nav {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        color: #888;
+        text-decoration: none;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        padding: 6px 16px;
+        margin-bottom: 16px;
+        transition: all 0.2s;
+      }
+      .home-nav:hover { border-color: #7c6af5; color: #7c6af5; background: rgba(124,106,245,0.06); }
+    </style>
 </head>
 <body>
 
     <div class="container" id="start-screen">
+        <a class="home-nav" href="index.html">🏠 Home</a>
         <div class="emoji-deco">📚✨🎯</div>
         <h1>English 8 - Semester 2 Final Exam</h1>
         <p class="subtitle">100 Comprehensive Questions for Your Practice</p>
@@ -17,9 +34,12 @@
     </div>
 
     <div class="container" id="quiz-screen">
-        <div class="score-board">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+          <a class="home-nav" href="index.html" style="margin-bottom:0;">🏠 Home</a>
+          <div class="score-board" style="margin:0;">
             <span id="question-counter">Question: 1/100</span>
             <span id="score-tracker">Score: 0</span>
+          </div>
         </div>
         <div id="question-container">
             <div class="question-text" id="question-text">Question goes here</div>
@@ -29,6 +49,7 @@
     </div>
 
     <div class="container" id="end-screen" style="display: none;">
+        <a class="home-nav" href="index.html">🏠 Home</a>
         <div class="emoji-deco">🎉🏆🌟</div>
         <h1>Quiz Completed!</h1>
         <p class="question-text" style="text-align: center; background: none; border: none;">Your final score is <strong id="final-score">0</strong> out of <strong id="total-questions">0</strong>.</p>

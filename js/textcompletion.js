@@ -621,7 +621,6 @@ function build() {
         <div class="q-num">${q.num}</div>
         <div>
           <div style="font-size:13px;font-weight:500;color:var(--text)">Question ${q.num}</div>
-          <div class="q-type">${q.type}</div>
         </div>
       </div>
       <div class="q-body">

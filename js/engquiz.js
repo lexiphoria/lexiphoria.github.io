@@ -1,4 +1,4 @@
-﻿// ── YOUTUBE STUDY MUSIC PLAYER ─────────────────────────────────────────────
+// ── YOUTUBE STUDY MUSIC PLAYER ─────────────────────────────────────────────
 // Playlist of lo-fi / study music YouTube video IDs
 const studyTracks = [
   { id: 'jfKfPfyJRdk', name: 'Lo-Fi Chill Beats' },      // Lofi Girl live stream
@@ -1506,6 +1506,286 @@ const texts = [
         options: ["A. still", "B. even", "C. just", "D. yet"],
         answer: 1,
         feedback: "'Even strengthened bonds with its former foes' — 'even' is an intensifying adverb that highlights something surprising or remarkable. Strengthening ties with former enemies is unexpected, making 'even' the perfect word. 'Still' implies continuation, 'just' implies recency, 'yet' implies contrast."
+      }
+    ]
+  },
+  {
+    title: "Australia's Social Media Ban",
+    type: "News Report",
+    icon: "📱",
+    passage: `The Australian Government passed a new law called the Online Safety Amendment (Social Media Minimum Age) Bill 2024 on 28 November 2024. This law introduces a mandatory minimum age of 16 for accounts on certain social media platforms. It came into effect on 10 December 2025, and parents cannot give their consent to let under-16s ___1___ these platforms.\n\nThe Government says the social media ban is needed to protect the mental health and ___2___ of Australian children and teens. They believe the risks of social media, such as cyberbullying, harmful content, and online predators, ___3___ the positives.\n\nCurrently, the platforms the ban applies to are YouTube, X, Facebook, Instagram, TikTok, Snapchat, Reddit, Twitch, Threads and Kick. Tech companies that own these platforms could face fines of up to $50 million if they don't take reasonable steps to stop under-16s ___4___ having accounts.\n\nApps like Messenger Kids, WhatsApp, Kids Helpline, Google Classroom and YouTube Kids are expected to not be part ___5___ the ban.\n\nThis law has sparked global debate about whether governments should ___6___ children's access to social media through legislation.`,
+    questions: [
+      {
+        type: "Infinitive / Verb Pattern",
+        blank: 1,
+        text: "...parents cannot give their consent to let under-16s ___1___ these platforms.",
+        options: ["A. use", "B. to use", "C. using", "D. used"],
+        answer: 0,
+        feedback: "'Let someone + bare infinitive' is the correct causative structure. After 'let', the bare infinitive (without 'to') is required: 'let them use'. This contrasts with 'allow someone to use'. 'Let + object + base verb' is a fixed grammar rule."
+      },
+      {
+        type: "Collocation",
+        blank: 2,
+        text: "...needed to protect the mental health and ___2___ of Australian children and teens.",
+        options: ["A. welfare", "B. wellness", "C. wellbeing", "D. goodness"],
+        answer: 2,
+        feedback: "'Mental health and wellbeing' is a fixed collocation frequently used in public health, education, and government contexts. 'Wellbeing' refers to the state of being comfortable, healthy, and happy. 'Welfare' refers more to social support systems."
+      },
+      {
+        type: "Word Meaning",
+        blank: 3,
+        text: "They believe the risks of social media... ___3___ the positives.",
+        options: ["A. overcome", "B. outweigh", "C. overpower", "D. outnumber"],
+        answer: 1,
+        feedback: "'Outweigh the positives' is the correct collocation meaning the negatives are greater or more significant. 'Outweigh' is used when comparing the relative importance or magnitude of two things. 'Overcome' means to defeat; 'outnumber' refers to quantity."
+      },
+      {
+        type: "Preposition / Gerund",
+        blank: 4,
+        text: "...if they don't take reasonable steps to stop under-16s ___4___ having accounts.",
+        options: ["A. to", "B. for", "C. from", "D. against"],
+        answer: 2,
+        feedback: "'Stop someone from doing something' is the fixed verb pattern. 'From' is the required preposition. 'Stop someone from + gerund' means to prevent someone from doing something. Without 'from', 'stop them having' is informal British English."
+      },
+      {
+        type: "Preposition",
+        blank: 5,
+        text: "...are expected to not be part ___5___ the ban.",
+        options: ["A. from", "B. in", "C. of", "D. with"],
+        answer: 2,
+        feedback: "'Part of' is a fixed prepositional collocation. 'Be part of something' means to be included in or belong to something. 'Part from' and 'part in' are not standard collocations with this meaning."
+      },
+      {
+        type: "Word Meaning / Collocation",
+        blank: 6,
+        text: "...whether governments should ___6___ children's access to social media through legislation.",
+        options: ["A. restrict", "B. prevent", "C. prohibit", "D. limit"],
+        answer: 0,
+        feedback: "'Restrict access' is the most precise collocation in legal/policy contexts. 'Restrict' means to put limitations on something without completely banning it. 'Prohibit' means to completely forbid; 'prevent' means to stop something from happening entirely — both are too absolute here."
+      }
+    ]
+  },
+  {
+    title: "Vietnamese Culture Day",
+    type: "News Article",
+    icon: "🇻🇳",
+    passage: `Mark your calendars: November 24th is now officially Vietnamese Culture Day — a day when the whole country gets a "paid holiday"! This day ___1___ the cultural values of our nation, stretching over 4,000 years of history, and is a moment for every Vietnamese person to reflect, appreciate, preserve, and spread the cultural heritage that has been ___2___ through generations.\n\nIt's a day to be proud of our roots, connect the past with the present, and continue writing the story of Vietnamese culture in today's life.\n\nBigshow The Quintessence of Vietnam at Grand World Phu Quoc is a vivid ___3___ of this spirit — where more than 4,000 years of history, literature, arts, and customs of Vietnam are brought to life through spectacular performances, ___4___ sound, light, and cutting-edge technology.\n\nAt The Quintessence of Vietnam, culture is not just displayed but lived, experienced, and inspired, allowing every visitor ___5___ fully appreciate the true essence of Vietnam from the past to the present.\n\nDon't miss out on this extraordinary cultural journey, ___6___ traditional beauty meets modernity, creating an unmissable space!`,
+    questions: [
+      {
+        type: "Tense",
+        blank: 1,
+        text: "This day ___1___ the cultural values of our nation, stretching over 4,000 years of history.",
+        options: ["A. honored", "B. is honoring", "C. honors", "D. has honored"],
+        answer: 2,
+        feedback: "Present simple 'honors' describes what the day does as a general, permanent fact. When describing the purpose or function of an event/holiday, present simple is used: 'This day honors...' — it's a timeless characteristic."
+      },
+      {
+        type: "Part of Speech",
+        blank: 2,
+        text: "...the cultural heritage that has been ___2___ through generations.",
+        options: ["A. nurture", "B. nurturing", "C. nurtured", "D. to nurture"],
+        answer: 2,
+        feedback: "'Has been nurtured' is the present perfect passive: 'has been + past participle'. The heritage is the recipient of nurturing (passive). Present perfect indicates the action started in the past and continues to the present — the heritage continues to be preserved."
+      },
+      {
+        type: "Word Meaning",
+        blank: 3,
+        text: "...is a vivid ___3___ of this spirit — where more than 4,000 years of history... are brought to life.",
+        options: ["A. expression", "B. manifestation", "C. demonstration", "D. representation"],
+        answer: 1,
+        feedback: "'Vivid manifestation' is the precise collocation meaning a clear, visible embodiment or display. 'Manifestation of a spirit' is the standard phrase in formal/cultural writing. 'Expression' is more about feelings; 'demonstration' implies showing how something works."
+      },
+      {
+        type: "Part of Speech / Gerund",
+        blank: 4,
+        text: "...through spectacular performances, ___4___ sound, light, and cutting-edge technology.",
+        options: ["A. combine", "B. combined", "C. combining", "D. to combine"],
+        answer: 2,
+        feedback: "'Combining sound, light, and technology' is a present participial phrase modifying 'performances'. It describes HOW the performances work — they combine multiple elements. Active participle because the performances themselves are doing the combining."
+      },
+      {
+        type: "Infinitive / Verb Pattern",
+        blank: 5,
+        text: "...allowing every visitor ___5___ fully appreciate the true essence of Vietnam.",
+        options: ["A. to", "B. for", "C. can", "D. that"],
+        answer: 0,
+        feedback: "'Allow someone to do something' is the fixed verb pattern. 'Allow + object + to-infinitive' is required. Unlike 'let' (which takes a bare infinitive), 'allow' always requires 'to': 'allowing every visitor to appreciate'."
+      },
+      {
+        type: "Relative Clause",
+        blank: 6,
+        text: "...this extraordinary cultural journey, ___6___ traditional beauty meets modernity.",
+        options: ["A. which", "B. that", "C. where", "D. when"],
+        answer: 2,
+        feedback: "'Where' is the correct relative adverb referring to a place/context — 'a journey where beauty meets modernity'. Although 'journey' is not a physical location, 'where' is used figuratively for contexts or situations in which something happens. 'In which' would also be acceptable."
+      }
+    ]
+  },
+  {
+    title: "AI in Vietnamese Education",
+    type: "Education Article",
+    icon: "🤖",
+    passage: `AI, once just a classroom assistant, is now becoming a subject in its own right. In December 2025, Việt Nam began piloting the teaching of AI as part of general education, in line ___1___ a national framework issued by the Ministry of Education and Training.\n\nAs the subject is gradually rolled out nationwide, its impact on teaching and learning is becoming ___2___ in classrooms. Under the teacher's guidance, students quickly create a simple apple catching game using Scratch. This is one of the activities in the AI subject curriculum for grade six. What was once something students ___3___ on their own, AI is now taught as a structured subject, helping them understand, apply, and use it effectively and responsibly.\n\nHowever, it still faces certain barriers to ___4___ and more effective implementation. With large class sizes, schools need better investment in teaching equipment and especially digital platforms to support teachers. This is important to develop students' digital ___5___ and keep up with current trends.\n\nTo support effective implementation, teachers need easy-to-use tools suited to the classroom. One example is AI buddy, which ___6___ as an assistant for teachers and a learning companion for students.`,
+    questions: [
+      {
+        type: "Preposition / Collocation",
+        blank: 1,
+        text: "...in line ___1___ a national framework issued by the Ministry of Education and Training.",
+        options: ["A. to", "B. for", "C. with", "D. by"],
+        answer: 2,
+        feedback: "'In line with' is a fixed prepositional phrase meaning 'in accordance with' or 'consistent with'. 'In line with a framework' means following or conforming to the framework. 'In line to' and 'in line for' have completely different meanings."
+      },
+      {
+        type: "Part of Speech",
+        blank: 2,
+        text: "...its impact on teaching and learning is becoming ___2___ in classrooms.",
+        options: ["A. apparently", "B. apparent", "C. appearance", "D. appear"],
+        answer: 1,
+        feedback: "'Becoming apparent' uses 'apparent' as a predicate adjective after the linking verb 'become'. 'Become + adjective' is the standard structure. 'Apparently' is an adverb (can't follow 'become' directly); 'appearance' is a noun."
+      },
+      {
+        type: "Tense",
+        blank: 3,
+        text: "What was once something students ___3___ on their own, AI is now taught as a structured subject.",
+        options: ["A. explore", "B. explored", "C. have explored", "D. were exploring"],
+        answer: 1,
+        feedback: "Past simple 'explored' is correct because the sentence uses 'was once' — indicating a completed past situation that is no longer true. The contrast between 'was once explored' (past) and 'is now taught' (present) requires past simple."
+      },
+      {
+        type: "Part of Speech / Collocation",
+        blank: 4,
+        text: "...it still faces certain barriers to ___4___ and more effective implementation.",
+        options: ["A. broad", "B. broaden", "C. broader", "D. broadly"],
+        answer: 2,
+        feedback: "'Barriers to broader implementation' — 'broader' is a comparative adjective modifying 'implementation'. The parallel structure 'broader and more effective' uses two comparative forms. 'To' here is a preposition followed by a noun phrase, not an infinitive."
+      },
+      {
+        type: "Word Meaning",
+        blank: 5,
+        text: "This is important to develop students' digital ___5___ and keep up with current trends.",
+        options: ["A. competences", "B. abilities", "C. qualifications", "D. skills"],
+        answer: 0,
+        feedback: "'Digital competences' (or 'competencies') is the standard term in education policy meaning the combination of knowledge, skills, and attitudes needed to use digital technology. It is the official EU and UNESCO term, widely adopted in Vietnamese education frameworks."
+      },
+      {
+        type: "Tense / Collocation",
+        blank: 6,
+        text: "...AI buddy, which ___6___ as an assistant for teachers and a learning companion for students.",
+        options: ["A. works", "B. serves", "C. acts", "D. functions"],
+        answer: 1,
+        feedback: "'Serves as' is the precise collocation meaning 'fulfills the role of'. 'Serve as an assistant' is the standard formal phrase. 'Act as' is also acceptable, but 'serve as' is more natural when describing a tool's designated role. 'Work as' implies employment."
+      }
+    ]
+  },
+  {
+    title: "El Niño Climate Forecast 2026",
+    type: "Science Report",
+    icon: "🌡️",
+    passage: `According to the latest update from the climate prediction center, the Pacific is currently in a neutral state, but there's a roughly 61% chance El Niño ___1___ develop between May and July of 2026. Climate models also indicate a clear warming trend in the ocean.\n\nThere's even around 25% chance that El Niño could reach a very strong intensity by the end of the year, ___2___ the scenario remains uncertain. However, scientists caution that it is too early to confirm a super El Niño as forecasts ___3___ during the spring transition period tend to be less reliable.\n\nIf El Niño does emerge, it could disrupt global atmospheric patterns, ___4___ extreme heat, droughts, and heavier rainfall to different parts of the world. At a time when the planet is already experiencing record-breaking temperatures, the return of El Niño could further ___5___ extreme weather events worldwide in the year of 2026.\n\nAnd as El Niño is expected to develop as early as May, raising the risk of extreme heat and global climate disruptions, scientists are closely monitoring its potential impacts ___6___ record high temperatures.`,
+    questions: [
+      {
+        type: "Tense / Modal",
+        blank: 1,
+        text: "...there's a roughly 61% chance El Niño ___1___ develop between May and July of 2026.",
+        options: ["A. would", "B. will", "C. can", "D. should"],
+        answer: 1,
+        feedback: "'Will develop' is the correct modal for expressing future probability/prediction. After 'there's a chance (that)', future simple 'will' is used for predicted events. 'Would' implies a hypothetical/conditional scenario; 'will' expresses a likely future outcome."
+      },
+      {
+        type: "Linking Word / Concession",
+        blank: 2,
+        text: "...El Niño could reach a very strong intensity by the end of the year, ___2___ the scenario remains uncertain.",
+        options: ["A. despite", "B. although", "C. however", "D. whereas"],
+        answer: 1,
+        feedback: "'Although the scenario remains uncertain' is a subordinating conjunction introducing a concessive clause. 'Although' connects two contrasting ideas within one sentence. 'Despite' requires a noun/gerund (not a full clause). 'However' is a conjunctive adverb that needs a new sentence or semicolon."
+      },
+      {
+        type: "Part of Speech",
+        blank: 3,
+        text: "...forecasts ___3___ during the spring transition period tend to be less reliable.",
+        options: ["A. make", "B. making", "C. made", "D. to make"],
+        answer: 2,
+        feedback: "'Forecasts made during the spring' — 'made' is a past participial phrase (passive) post-modifying 'forecasts'. It is a reduced relative clause: 'forecasts that are made during the spring'. The passive participle shows that forecasts are produced (made) by scientists."
+      },
+      {
+        type: "Part of Speech / Participle",
+        blank: 4,
+        text: "...it could disrupt global atmospheric patterns, ___4___ extreme heat, droughts, and heavier rainfall...",
+        options: ["A. bring", "B. brought", "C. bringing", "D. to bring"],
+        answer: 2,
+        feedback: "'Bringing extreme heat' is a present participial clause of result — it describes the consequence of disrupting atmospheric patterns. The -ing form after a comma expresses a simultaneous result. 'Brought' (past participle) would imply a passive meaning."
+      },
+      {
+        type: "Word Meaning",
+        blank: 5,
+        text: "...the return of El Niño could further ___5___ extreme weather events worldwide.",
+        options: ["A. increase", "B. amplify", "C. enlarge", "D. extend"],
+        answer: 1,
+        feedback: "'Amplify extreme weather events' is the precise scientific collocation meaning to intensify or make more severe. 'Amplify' in climate science means to make phenomena stronger or more pronounced. 'Increase' is more general; 'enlarge' refers to physical size."
+      },
+      {
+        type: "Preposition",
+        blank: 6,
+        text: "...scientists are closely monitoring its potential impacts ___6___ record high temperatures.",
+        options: ["A. at", "B. in", "C. amid", "D. with"],
+        answer: 2,
+        feedback: "'Amid record high temperatures' — 'amid' (or 'amidst') is a preposition meaning 'in the middle of' or 'during'. It sets the background context: monitoring is happening against a backdrop of record temperatures. 'At' is too specific; 'in' doesn't convey the surrounding-context meaning."
+      }
+    ]
+  },
+  {
+    title: "Significance of November 24",
+    type: "History Passage",
+    icon: "📜",
+    passage: `November 24 is associated with a special milestone in the nation's cultural life. It marks the opening of the first National Cultural Conference, ___1___ at the Hanoi Opera House on November 24, 1946, just over a year after the birth of the Democratic Republic of Vietnam.\n\nIn the context of a nation ___2___ numerous challenges, the Conference brought together over 200 intellectuals, artists, and prominent cultural figures from across the country to discuss the path to building a new culture for an independent nation.\n\nCulture is not merely a spiritual domain ___3___ a guiding force that directs social behavior, nurtures human character, and plays a decisive role in the nation's destiny.\n\nTherefore, choosing November 24 — the day that ___4___ the inception of revolutionary cultural thinking — as "Vietnam Culture Day" carries profound symbolic meaning, ___5___ the central role of culture in the nation's building and safeguarding endeavors.\n\nThis day serves as a reminder that cultural identity is ___6___ to national development and must be preserved for future generations.`,
+    questions: [
+      {
+        type: "Part of Speech",
+        blank: 1,
+        text: "...the first National Cultural Conference, ___1___ at the Hanoi Opera House on November 24, 1946.",
+        options: ["A. holding", "B. held", "C. to hold", "D. which holding"],
+        answer: 1,
+        feedback: "'Held at the Hanoi Opera House' is a past participial phrase (passive) modifying 'Conference'. The conference WAS held — passive relationship. This is a reduced non-defining relative clause: 'which was held at the Hanoi Opera House'."
+      },
+      {
+        type: "Part of Speech / Participle",
+        blank: 2,
+        text: "In the context of a nation ___2___ numerous challenges...",
+        options: ["A. face", "B. faces", "C. faced", "D. facing"],
+        answer: 3,
+        feedback: "'A nation facing numerous challenges' — present participial phrase modifying 'nation'. It means 'a nation that was facing challenges'. Active present participle because the nation is the one experiencing/confronting the challenges, not receiving them."
+      },
+      {
+        type: "Linking Word",
+        blank: 3,
+        text: "Culture is not merely a spiritual domain ___3___ a guiding force that directs social behavior.",
+        options: ["A. and", "B. or", "C. but", "D. yet"],
+        answer: 2,
+        feedback: "'Not merely X but Y' is a fixed correlative conjunction structure expressing contrast and upgrade. 'Not merely... but' means 'it is more than just X — it is also Y'. 'But' creates the contrast between the limited view and the larger truth."
+      },
+      {
+        type: "Relative Clause / Tense",
+        blank: 4,
+        text: "...the day that ___4___ the inception of revolutionary cultural thinking...",
+        options: ["A. marks", "B. marked", "C. has marked", "D. is marking"],
+        answer: 1,
+        feedback: "'The day that marked the inception' — past simple is used because the event (the conference in 1946) is a specific historical event. 'Marked' describes what happened on that particular date in the past. Present simple 'marks' could work for current significance, but the context refers to the historical event."
+      },
+      {
+        type: "Part of Speech / Participle",
+        blank: 5,
+        text: "...carries profound symbolic meaning, ___5___ the central role of culture in the nation's building...",
+        options: ["A. affirm", "B. affirmed", "C. affirming", "D. to affirm"],
+        answer: 2,
+        feedback: "'Affirming the central role' is a present participial clause of result — it describes what the symbolic meaning achieves. The -ing form after a comma shows a consequence or additional result of the main clause. Active participle because the meaning itself does the affirming."
+      },
+      {
+        type: "Word Meaning / Collocation",
+        blank: 6,
+        text: "...cultural identity is ___6___ to national development and must be preserved for future generations.",
+        options: ["A. essential", "B. necessary", "C. important", "D. vital"],
+        answer: 0,
+        feedback: "'Essential to national development' is the precise collocation meaning absolutely necessary and fundamental. 'Essential to' is stronger than 'important to' — it implies something cannot function without it. 'Vital' is close but 'essential to' is the most formal and standard collocation in policy writing."
       }
     ]
   }

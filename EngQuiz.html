@@ -700,8 +700,8 @@
     </div>
     <button class="btn-primary" onclick="showScreen('select-screen')">▶ &nbsp; Start Practice</button>
     <div class="stats-row">
-      <div class="stat-item"><div class="stat-num" id="stat-texts">21</div><div class="stat-lbl">Texts</div></div>
-      <div class="stat-item"><div class="stat-num" id="stat-qs">120</div><div class="stat-lbl">Questions</div></div>
+      <div class="stat-item"><div class="stat-num" id="stat-texts">25</div><div class="stat-lbl">Texts</div></div>
+      <div class="stat-item"><div class="stat-num" id="stat-qs">150</div><div class="stat-lbl">Questions</div></div>
       <div class="stat-item"><div class="stat-num" id="stat-score">—</div><div class="stat-lbl">Best Score</div></div>
     </div>
   </div>
@@ -711,7 +711,7 @@
     <div style="width:100%; max-width:1000px; padding: 40px 24px;">
       <button class="back-btn" onclick="showScreen('home')" style="margin-bottom:24px">←</button>
       <div class="select-title">Choose a Passage</div>
-      <div class="select-sub">20 reading cloze texts · 6 questions each</div>
+      <div class="select-sub">25 reading cloze texts · 6 questions each</div>
       <div class="texts-grid" id="texts-grid"></div>
     </div>
   </div>
@@ -1996,6 +1996,230 @@ const texts = [
         options: ["A. who", "B. that", "C. which", "D. whom"],
         answer: 0,
         feedback: "'It was Albert Einstein who once said...' — this is an 'it-cleft' structure for emphasis. After naming a person, 'who' (not 'that') is preferred in formal writing. Both 'who' and 'that' are grammatically acceptable, but 'who' is more appropriate for people."
+      }
+    ]
+  },
+  {
+    title: "Hanoi — Encounter Multiple Civilizations",
+    type: "Travel Article",
+    icon: "🏯",
+    passage: `Ô Quan Chưởng Gate is the only gate ___1___ of the wall that once protected the area surrounding Thang Long Citadel. The gate ___2___ you see today was re-constructed in 1817, although originally it was built in 1749. It is named for the rank of a Vietnamese soldier who showed great courage in ___3___ the gate and citadel against a French attack in 1873. Today, it's an important marker and symbol of Vietnamese spirit.\n\nWhile you explore the historic centre, keep a lookout for the many pagodas built by ancient traders. The Old Quarter was partially settled by Chinese immigrants who also chose it as a location to do business. To get a glimpse into the lives of these Chinese merchant families in the past, visit Mã Mây House, ___4___ UNESCO-protected heritage home.\n\nFor a little moment of peace amid the noise, duck ___5___ the alley off Nhà Thờ for a breather in the quiet courtyard of Bà Đá Pagoda. Here you'll find an elaborate Phật Phật statue, ___6___ as one of Hanoi's four treasures.`,
+    questions: [
+      {
+        type: "Part of Speech",
+        blank: 1,
+        text: "Ô Quan Chưởng Gate is the only gate ___1___ of the wall that once protected the area.",
+        options: ["A. leaving", "B. left", "C. to leave", "D. that leaves"],
+        answer: 1,
+        feedback: "'Left' is a past participial adjective (reduced relative clause: 'that is left'). 'The only gate left' = 'the only gate that remains'. Past participle used in a passive, resultant sense — the gate is what was left behind after others were destroyed."
+      },
+      {
+        type: "Relative Clause",
+        blank: 2,
+        text: "The gate ___2___ you see today was re-constructed in 1817.",
+        options: ["A. which", "B. who", "C. whom", "D. whose"],
+        answer: 0,
+        feedback: "'Which' is the correct relative pronoun for things ('the gate'). In defining relative clauses referring to objects, 'which' (or 'that') is used. 'Who' and 'whom' are reserved for people."
+      },
+      {
+        type: "Collocation",
+        blank: 3,
+        text: "...a soldier who showed great courage in ___3___ the gate and citadel against a French attack.",
+        options: ["A. fighting", "B. protecting", "C. defending", "D. guarding"],
+        answer: 2,
+        feedback: "'Defending something against an attack' is the precise military collocation. 'Defend against' is the standard verb-preposition pair in this context. 'Guard' implies watching over; 'protect' is possible but 'defend against an attack' is the fixed phrase."
+      },
+      {
+        type: "Adjective Order / Article",
+        blank: 4,
+        text: "...visit Mã Mây House, ___4___ UNESCO-protected heritage home.",
+        options: ["A. a", "B. an", "C. the", "D. some"],
+        answer: 0,
+        feedback: "'A UNESCO-protected heritage home' — although UNESCO begins with a vowel letter, the acronym is pronounced /juːˈnɛskoʊ/ starting with the consonant sound /j/. Therefore the indefinite article 'a' (not 'an') is correct. This is a classic article-before-acronym question."
+      },
+      {
+        type: "Phrasal Verb",
+        blank: 5,
+        text: "...duck ___5___ the alley off Nhà Thờ for a breather in the quiet courtyard.",
+        options: ["A. through", "B. over", "C. down", "D. across"],
+        answer: 2,
+        feedback: "'Duck down' (into/through a narrow space) is a common phrasal verb in travel writing meaning to go quickly into a small, hidden passage. It implies moving into a lower or narrower space to find something tucked away."
+      },
+      {
+        type: "Verb Form / Passive",
+        blank: 6,
+        text: "...an elaborate Phật Phật statue, ___6___ as one of Hanoi's four treasures.",
+        options: ["A. regard", "B. regarding", "C. regarded", "D. to regard"],
+        answer: 2,
+        feedback: "'Regarded as' is a past participial phrase in the passive voice, functioning as a post-modifier: 'which is regarded as'. 'Regarded as' is the fixed passive collocation meaning 'considered to be'. 'Regarding' would be a preposition, not applicable here."
+      }
+    ]
+  },
+  {
+    title: "Tofu Goes Mainstream",
+    type: "Magazine Article",
+    icon: "🥢",
+    passage: `Why does tofu have such an enduring appeal? It's likely due to its remarkable versatility and practicality. As more people embrace high-protein, plant-based diets, tofu ___1___ a nutritious option that is both budget-friendly and widely accessible. It cooks quickly, ___2___ is convenient, while its neutral flavour allows it to fit seamlessly into meal-prep routines.\n\nContaining all nine essential amino acids ___3___ by the human body, tofu is considered a complete protein and is often used as a meat substitute. It is also a low-carbohydrate food, with ___4___ carbohydrates in a half-cup serving.\n\nAlthough a serving of firm tofu contains about 4 grams of fat, most of it is heart-healthy. In addition, tofu is an excellent source of important minerals, including calcium, manganese, selenium and copper.\n\nPerhaps most importantly, tofu is ___5___ adaptable across cuisines — from stir-fries and curries to grills and salads. This humble soya staple remains one of the most ___6___ ingredients in modern cooking.`,
+    questions: [
+      {
+        type: "Tense",
+        blank: 1,
+        text: "...tofu ___1___ a nutritious option that is both budget-friendly and widely accessible.",
+        options: ["A. offered", "B. is offering", "C. offers", "D. has offered"],
+        answer: 2,
+        feedback: "Present simple 'offers' describes a general, ongoing truth — a fact about tofu's nature. The surrounding context ('as more people embrace') uses present simple for habitual/general facts, so 'offers' matches the tense pattern throughout the passage."
+      },
+      {
+        type: "Linking Word",
+        blank: 2,
+        text: "It cooks quickly, ___2___ is convenient, while its neutral flavour allows it to fit seamlessly into meal-prep routines.",
+        options: ["A. although", "B. which", "C. however", "D. therefore"],
+        answer: 1,
+        feedback: "'Which is convenient' — a non-defining relative clause referring back to the entire preceding idea ('it cooks quickly'). 'Which' is used to introduce a comment on a whole clause. 'However' and 'therefore' are conjunctive adverbs that can't introduce a relative clause."
+      },
+      {
+        type: "Part of Speech",
+        blank: 3,
+        text: "Containing all nine essential amino acids ___3___ by the human body...",
+        options: ["A. requiring", "B. required", "C. that require", "D. require"],
+        answer: 1,
+        feedback: "'Required by the human body' is a past participial phrase (passive) post-modifying 'amino acids'. The acids are required BY the body — passive relationship. This is a reduced relative clause: 'which are required by the human body'."
+      },
+      {
+        type: "Quantifier",
+        blank: 4,
+        text: "It is also a low-carbohydrate food, with ___4___ carbohydrates in a half-cup serving.",
+        options: ["A. little", "B. a little", "C. few", "D. only few"],
+        answer: 2,
+        feedback: "'Few carbohydrates' — 'few' is used with countable nouns (carbohydrates = countable). 'Few' has a negative connotation: not many. 'Little' is used with uncountable nouns. 'A few' would mean 'some', implying a positive amount rather than emphasizing scarcity."
+      },
+      {
+        type: "Adjective Order",
+        blank: 5,
+        text: "...tofu is ___5___ adaptable across cuisines — from stir-fries and curries to grills and salads.",
+        options: ["A. easy", "B. easily", "C. most easy", "D. the most easy"],
+        answer: 1,
+        feedback: "'Easily adaptable' — 'easily' is an adverb modifying the adjective 'adaptable'. An adverb (not an adjective) is needed to modify another adjective. 'Easy adaptable' is incorrect; 'easily adaptable' follows standard adverb + adjective modification order."
+      },
+      {
+        type: "Collocation / Fixed Phrase",
+        blank: 6,
+        text: "This humble soya staple remains one of the most ___6___ ingredients in modern cooking.",
+        options: ["A. adaptable", "B. versatile", "C. flexible", "D. applicable"],
+        answer: 1,
+        feedback: "'Versatile' is the precise word for ingredients that can be used in many different ways. 'Versatile ingredient' is a fixed collocation in cooking/food writing. The passage began with 'versatility', so this word echoes and closes the argument cohesively."
+      }
+    ]
+  },
+  {
+    title: "Batch-Cook Your Budget",
+    type: "Magazine Article",
+    icon: "🍳",
+    passage: `Grocery savings start at checkout, but they ___1___ in the kitchen. Batch-cooking can turn bulk deals into week-long meals, cutting waste by up to 30 percent and keeping your budget on track with simple planning.\n\nIf you ___2___ a deal on chicken or rice in your app, buy extra and freeze portions immediately to prevent spoilage. Building a 'deal pantry' that feeds you for days without extra spending is a smart habit worth ___3___.\n\nDedicate Sunday to big-batch recipes like curry or stew. They reheat beautifully and ___4___ discounted ingredients into multiple meals, so extra vegetables and meats don't go to waste. Leftovers ___5___ into versatile lunches by adding one fresh item daily — like eggs or anchovies. These little tricks make every grocery run go ___6___ and help your savings last until payday.`,
+    questions: [
+      {
+        type: "Tense",
+        blank: 1,
+        text: "Grocery savings start at checkout, but they ___1___ in the kitchen.",
+        options: ["A. multiply", "B. are multiplying", "C. have multiplied", "D. multiplied"],
+        answer: 0,
+        feedback: "Present simple 'multiply' is used to state a general truth or habitual fact. Both clauses are general statements about budgeting habits. 'Start' (present simple) in the first clause sets the pattern; 'multiply' should be parallel in the same tense."
+      },
+      {
+        type: "Conditional",
+        blank: 2,
+        text: "If you ___2___ a deal on chicken or rice in your app, buy extra and freeze portions immediately.",
+        options: ["A. see", "B. will see", "C. saw", "D. had seen"],
+        answer: 0,
+        feedback: "First conditional: 'If + present simple, imperative'. The sentence gives a practical instruction: if you spot a deal, take action. The imperative 'buy extra' confirms this is a first conditional for general instructions. 'Will see' is incorrect in the if-clause."
+      },
+      {
+        type: "Verb Form / Gerund",
+        blank: 3,
+        text: "Building a 'deal pantry' is a smart habit worth ___3___.",
+        options: ["A. develop", "B. to develop", "C. developing", "D. developed"],
+        answer: 2,
+        feedback: "'Worth + gerund' is a fixed structure. 'Worth developing' = 'worth the effort of developing'. After 'worth', the gerund (-ing) form is always required. 'Worth to develop' or 'worth develop' are grammatically incorrect."
+      },
+      {
+        type: "Phrasal Verb",
+        blank: 4,
+        text: "They reheat beautifully and ___4___ discounted ingredients into multiple meals.",
+        options: ["A. change", "B. stretch", "C. expand", "D. convert"],
+        answer: 1,
+        feedback: "'Stretch ingredients into multiple meals' is the specific collocation used in cooking and budgeting contexts, meaning to make limited supplies go further. 'Stretch' implies maximum use of available resources. 'Convert' and 'change' don't collocate naturally with 'ingredients into meals'."
+      },
+      {
+        type: "Reported Speech / Passive",
+        blank: 5,
+        text: "Leftovers ___5___ into versatile lunches by adding one fresh item daily.",
+        options: ["A. turn", "B. can turn", "C. can be turned", "D. are turning"],
+        answer: 2,
+        feedback: "'Can be turned into' — modal passive expressing possibility. Leftovers (the subject) are the recipients of the action (someone turns them). 'Can be turned into' = it is possible to transform them. 'Turn' (active) would require a human subject performing the action."
+      },
+      {
+        type: "Phrasal Verb",
+        blank: 6,
+        text: "These little tricks make every grocery run go ___6___ and help your savings last until payday.",
+        options: ["A. further", "B. farther", "C. more far", "D. more farther"],
+        answer: 0,
+        feedback: "'Go further' is the correct comparative adverb for abstract/figurative distance — how far money or effort 'goes' (= how much it achieves). 'Further' is used for figurative/abstract meanings; 'farther' is for physical distance. 'Make X go further' = make X last longer / achieve more."
+      }
+    ]
+  },
+  {
+    title: "Zoom My Notes — AI Note-Taking",
+    type: "Technology Article",
+    icon: "💻",
+    passage: `Introducing My Notes, Zoom AI Companion's ___1___ note-taking experience that captures, organises, and summarises what matters from your meetings.\n\nWith My Notes, you can focus on the conversation while the AI captures it in the form of transcripts and organises key ___2___ to highlight what matters, ___3___ structured, actionable summaries.\n\nMy Notes allows you to automate notetaking wherever you meet. It can be used ___4___ Zoom and third-party meeting platforms like Microsoft Teams and Google Meet, as well as in-person sessions — helping to ensure that no meeting context ___5___ when you invite AI Companion to the conversation.\n\nAll notes are stored in a centralised hub, ___6___ via Zoom Hub or AI Companion on the web. My Notes is available with limited capacity in your free Zoom Workplace plan.`,
+    questions: [
+      {
+        type: "Adjective Order",
+        blank: 1,
+        text: "...Zoom AI Companion's ___1___ note-taking experience...",
+        options: ["A. intelligently", "B. intelligent", "C. intelligence", "D. intelligible"],
+        answer: 1,
+        feedback: "'Intelligent note-taking experience' — 'intelligent' is an adjective modifying the noun phrase 'note-taking experience'. An adjective (not adverb) is needed before a noun. 'Intelligently' is an adverb and cannot directly precede a noun. 'Intelligible' means 'understandable', a different meaning."
+      },
+      {
+        type: "Collocation / Fixed Phrase",
+        blank: 2,
+        text: "...the AI captures it and organises key ___2___ to highlight what matters.",
+        options: ["A. takings", "B. takeaways", "C. take-offs", "D. take-ins"],
+        answer: 1,
+        feedback: "'Key takeaways' is a fixed phrase in business and technology writing meaning the most important points or conclusions from a meeting or discussion. 'Takeaway' in this context is a standard collocation. 'Takings' refers to money received; 'take-offs' refers to departures."
+      },
+      {
+        type: "Part of Speech / Participle",
+        blank: 3,
+        text: "...organises key takeaways to highlight what matters, ___3___ structured, actionable summaries.",
+        options: ["A. generate", "B. generated", "C. generating", "D. to generate"],
+        answer: 2,
+        feedback: "'Generating structured summaries' is a present participial clause of result — it describes what organising key takeaways leads to. The active participle 'generating' shows the AI produces summaries as a consequence. 'Generated' (passive) would mean summaries were made by something else."
+      },
+      {
+        type: "Preposition",
+        blank: 4,
+        text: "It can be used ___4___ Zoom and third-party meeting platforms like Microsoft Teams and Google Meet.",
+        options: ["A. with", "B. by", "C. across", "D. between"],
+        answer: 2,
+        feedback: "'Used across platforms' — 'across' expresses distribution or coverage over multiple items/areas. 'Used across Zoom and third-party platforms' means it works on all of them. 'With' implies accompaniment; 'between' only two items; 'by' indicates the agent, not the context."
+      },
+      {
+        type: "Subjunctive / Conditional",
+        blank: 5,
+        text: "...helping to ensure that no meeting context ___5___ when you invite AI Companion to the conversation.",
+        options: ["A. loses", "B. is lost", "C. lose", "D. lost"],
+        answer: 1,
+        feedback: "'No meeting context is lost' — passive present simple in the 'ensure that' complement clause. The context is lost (passive), and 'no context' is the subject. Modern English uses indicative ('is lost') after 'ensure that'. The passive is needed because context is the recipient, not the doer."
+      },
+      {
+        type: "Verb Form / Passive",
+        blank: 6,
+        text: "All notes are stored in a centralised hub, ___6___ via Zoom Hub or AI Companion on the web.",
+        options: ["A. accessible", "B. accessing", "C. accessed", "D. to access"],
+        answer: 0,
+        feedback: "'Accessible via Zoom Hub' — 'accessible' is a predicate adjective (complement after the comma) modifying the hub. It means 'able to be accessed'. 'Accessed' (past participle) would need 'being' to form a participial phrase. 'Accessible' is the concise, correct adjective choice."
       }
     ]
   }

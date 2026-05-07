@@ -241,9 +241,245 @@ const ALL_EXAMS = [
           "which stays steadfast and unyielding on basic principles but flexible in the ways and means",
           "where it stays steadfast and unyielding on basic principles but flexible in the ways and means"
         ],
+        ],
         ans: 0,
         grammar: "Preposition + relative pronoun",
         tip: "A non-defining relative clause referring to 'bamboo diplomacy'. 'In which' means 'in this diplomacy', allowing the clause 'it stays steadfast...' to be structurally complete. 'That' cannot be used after a comma."
+      }
+    ]
+  },
+  {
+    id: 'asean_summit',
+    title: '48th ASEAN Summit & Viet Nam\'s Role',
+    meta: 'Politics & International Relations',
+    html: `
+      <p>At the invitation of President of the Republic of the Philippines Ferdinand Romualdez Marcos Jr, ASEAN Chair for 2026, Prime Minister Le Minh Hung will lead a high-level Vietnamese delegation to attend the 48th ASEAN Summit in Cebu, the Philippines, from May 7 to 8.</p>
+      <br>
+      <p>The Prime Minister's participation strongly demonstrates Viet Nam's continued and consistent implementation of its foreign policy of independence, self-reliance, self-strengthening, peace, friendship, cooperation and development, along with the diversification and multilateralisation of external relations. <span class="blank-tag">1</span>. This is also a clear message of Viet Nam's commitment to the ASEAN Community-building process, <span class="blank-tag">2</span> and substantive, effective contributions to the Association's common work.</p>
+      <br>
+      <p><span class="blank-tag">3</span>, and it carries special significance as ASEAN officially enters a new development phase <span class="blank-tag">4</span> during the 2015-2025 period. The year 2026 marks the first year ASEAN implements the ASEAN Community Vision 2045 together with Strategic Plans across the four pillars of Political-Security, Economic, Socio-Cultural and Connectivity cooperation. This is a strategic orientation framework aimed at building a united and resilient ASEAN, <span class="blank-tag">5</span> and addressing regional issues.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Independent Sentence",
+        opts: [
+          "It also reaffirms that ASEAN remains a top strategic priority in Viet Nam's overall foreign policy",
+          "Reaffirming that ASEAN remains a top strategic priority in Viet Nam's overall foreign policy",
+          "It also reaffirms what ASEAN remains a top strategic priority in Viet Nam's overall foreign policy",
+          "That also reaffirms ASEAN remaining a top strategic priority in Viet Nam's overall foreign policy"
+        ],
+        ans: 0,
+        grammar: "Independent sentence structure",
+        tip: "A complete independent sentence is needed here to follow the preceding point. Option A provides a full sentence with subject 'It' and verb 'reaffirms'."
+      },
+      {
+        num: 2,
+        type: "Context Meaning Clause",
+        opts: [
+          "in a spirit of proactiveness, positivity, responsibility",
+          "with a spirit of proactiveness, positivity, responsibility",
+          "for a spirit of proactiveness, positivity, responsibility",
+          "by a spirit of proactiveness, positivity, responsibility"
+        ],
+        ans: 1,
+        grammar: "Prepositional phrase",
+        tip: "The preposition 'with' correctly forms the phrase 'with a spirit of...', indicating the manner in which Viet Nam commits to the process."
+      },
+      {
+        num: 3,
+        type: "Independent Sentence",
+        opts: [
+          "Being the first annual summit in the Philippines' ASEAN Chairmanship Year 2026",
+          "As this is the first annual summit in the Philippines' ASEAN Chairmanship Year 2026",
+          "This is the first annual summit in the Philippines' ASEAN Chairmanship Year 2026",
+          "Which is the first annual summit in the Philippines' ASEAN Chairmanship Year 2026"
+        ],
+        ans: 2,
+        grammar: "Independent sentence structure",
+        tip: "This blank requires an independent clause to form a compound sentence with 'and it carries special significance...'. Only Option C is a complete independent clause."
+      },
+      {
+        num: 4,
+        type: "Context Meaning Clause",
+        opts: [
+          "followed 10 years of ASEAN Community-building",
+          "to follow 10 years of ASEAN Community-building",
+          "that following 10 years of ASEAN Community-building",
+          "following 10 years of ASEAN Community-building"
+        ],
+        ans: 3,
+        grammar: "Participle phrase",
+        tip: "The present participle 'following' is used here as a preposition meaning 'after'. It smoothly connects the new phase with the previous 10-year period."
+      },
+      {
+        num: 5,
+        type: "Context Meaning Clause",
+        opts: [
+          "promoted its central role in advancing cooperation",
+          "to promote its central role in advancing cooperation",
+          "promoting its central role in advancing cooperation",
+          "which promoting its central role in advancing cooperation"
+        ],
+        ans: 2,
+        grammar: "Present participle phrase",
+        tip: "A present participle phrase ('promoting...') is used after a comma to add supplementary information about the framework's aims, parallel to 'addressing'."
+      }
+    ]
+  },
+  {
+    id: 'ocean_literacy',
+    title: 'Ocean Literacy: Education for the Future',
+    meta: 'Environment & Education',
+    html: `
+      <p>The “Ocean Literacy” concept is a direct response to the aforementioned challenges. The origins of this movement can be traced to a collective reflection within some marine science and education communities in the late 20th century. Following the release of the U.S. National Science Education Standards in 1996, some marine scientists noted the absence of ocean-related topics, <span class="blank-tag">1</span> in primary and secondary schools. <span class="blank-tag">2</span>.</p>
+      <br>
+      <p>A 2002 conference titled “Oceans for Life” is considered by some as the formal beginning of the ocean literacy movement, <span class="blank-tag">3</span>. In 2004, an online workshop, sponsored by NOAA, involving over one hundred scientists, educators, and policymakers defined ocean literacy — “an understanding of the ocean's influence on you and your influence on the ocean”—along with “Seven Essential Principles” and “Forty-five Fundamental Concepts.” <span class="blank-tag">4</span>.</p>
+      <br>
+      <p>The introduction of the ocean literacy concept was discussed more widely. Internationally, collaborative networks for ocean education were established, such as the International Pacific Marine Educators Network (IPMEN, 2007), the European Marine Science Educators Association (EMSEA, 2012), and the Asia Marine Educators Association (AMEA, 2016), <span class="blank-tag">5</span>. The European Commission also funded large-scale innovation projects like “Sea Change” through its Horizon 2020 program to enhance ocean literacy among European citizens.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Context Meaning Clause",
+        opts: [
+          "that could lead to a lack of structured and coherent ocean education",
+          "which could lead to a lack of structured and coherent ocean education",
+          "leading to a lack of structured and coherent ocean education",
+          "what could lead to a lack of structured and coherent ocean education"
+        ],
+        ans: 1,
+        grammar: "Non-defining relative clause",
+        tip: "A non-defining relative clause is required after a comma to comment on the preceding clause. 'Which' is the correct relative pronoun; 'that' cannot be used after a comma."
+      },
+      {
+        num: 2,
+        type: "Independent Sentence",
+        opts: [
+          "Recognizing the need to develop a clear knowledge framework to help the public, especially younger generations, understand the importance of the ocean.",
+          "The need to develop a clear knowledge framework to help the public, especially younger generations, understand the importance of the ocean was recognized.",
+          "They recognized the need to develop a clear knowledge framework to help the public, especially younger generations, understand the importance of the ocean.",
+          "Because they recognized the need to develop a clear knowledge framework to help the public, especially younger generations, understand the importance of the ocean."
+        ],
+        ans: 2,
+        grammar: "Independent sentence structure",
+        tip: "This blank requires a complete, independent sentence to conclude the paragraph. Option C provides the most direct and grammatically correct structure with subject 'They'."
+      },
+      {
+        num: 3,
+        type: "Context Meaning Clause",
+        opts: [
+          "paved the way for the development of its core principles",
+          "to pave the way for the development of its core principles",
+          "which paving the way for the development of its core principles",
+          "paving the way for the development of its core principles"
+        ],
+        ans: 3,
+        grammar: "Present participle phrase",
+        tip: "A present participle phrase ('paving...') is used here to express the result or subsequent action of the 2002 conference."
+      },
+      {
+        num: 4,
+        type: "Independent Sentence",
+        opts: [
+          "“Ocean Literacy: The Essential Principles of Ocean Sciences for Learners of All Ages” officially published in 2005.",
+          "In 2005, “Ocean Literacy: The Essential Principles of Ocean Sciences for Learners of All Ages” was officially published.",
+          "Publishing “Ocean Literacy: The Essential Principles of Ocean Sciences for Learners of All Ages” officially in 2005.",
+          "In 2005, officially publishing “Ocean Literacy: The Essential Principles of Ocean Sciences for Learners of All Ages”."
+        ],
+        ans: 1,
+        grammar: "Independent sentence structure",
+        tip: "This blank requires a complete sentence in passive voice. The title is the subject, and 'was officially published' is the correct verb form."
+      },
+      {
+        num: 5,
+        type: "Context Meaning Clause",
+        opts: [
+          "forming a global promotion network",
+          "formed a global promotion network",
+          "to form a global promotion network",
+          "which forming a global promotion network"
+        ],
+        ans: 0,
+        grammar: "Present participle phrase",
+        tip: "A present participle phrase ('forming...') describes the outcome of establishing those international collaborative networks."
+      }
+    ]
+  },
+  {
+    id: 'women_agriculture',
+    title: 'Women in APEC Agriculture',
+    meta: 'Economy & Gender Equality',
+    html: `
+      <p>Agriculture is a major source of livelihoods across APEC economies, <span class="blank-tag">1</span> in developing economies. <span class="blank-tag">2</span>. FAO estimates that closing gender gaps in access to productive resources could increase farm yields and improve food security outcomes. Recent evidence confirms that reducing gender disparities supports productivity, resilience, and nutrition across agri-food systems. Despite these gains, rural women continue to face disproportionate poverty and food insecurity, <span class="blank-tag">3</span>.</p>
+      <br>
+      <p>Evidence from Southeast Asia illustrates how these challenges persist in practice. <span class="blank-tag">4</span>. At the regional level, comparative evidence shows uneven conditions: women in The Republic of the Philippines and Thailand tend to have relatively better access to productive resources and income control, <span class="blank-tag">5</span>. These cross-economy disparities in access to resources and services show that women's participation alone does not ensure equitable outcomes in agriculture.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Context Meaning Clause",
+        opts: [
+          "women accounted for around 43% of the agricultural workforce",
+          "with women accounting for around 43% of the agricultural workforce",
+          "for women accounting for around 43% of the agricultural workforce",
+          "with women to account for around 43% of the agricultural workforce"
+        ],
+        ans: 1,
+        grammar: "Absolute phrase with 'with'",
+        tip: "The structure 'with + noun + V-ing' is used to add supplementary information or context to the main clause."
+      },
+      {
+        num: 2,
+        type: "Independent Sentence",
+        opts: [
+          "However, participation alone does not translate into empowerment or improved food security without targeted policy action.",
+          "Therefore, participation alone does not translate into empowerment or improved food security without targeted policy action.",
+          "Participation alone not translating into empowerment or improved food security without targeted policy action.",
+          "Although participation alone does not translate into empowerment or improved food security without targeted policy action."
+        ],
+        ans: 0,
+        grammar: "Independent sentence / Discourse marker",
+        tip: "The context presents a contrast to the high participation rate, so 'However' is appropriate. A full independent clause is required here."
+      },
+      {
+        num: 3,
+        type: "Context Meaning Clause",
+        opts: [
+          "pointed to persistent gaps in skills, finance, and decision-making power",
+          "to point to persistent gaps in skills, finance, and decision-making power",
+          "which pointing to persistent gaps in skills, finance, and decision-making power",
+          "pointing to persistent gaps in skills, finance, and decision-making power"
+        ],
+        ans: 3,
+        grammar: "Present participle phrase",
+        tip: "A present participle phrase ('pointing to...') follows the comma to describe the implication or result of the preceding situation."
+      },
+      {
+        num: 4,
+        type: "Independent Sentence",
+        opts: [
+          "Structural barriers continuing to limit the economic security of rural women farmers in Thailand, despite their central role in agricultural value chains.",
+          "In Thailand, structural barriers continue to limit the economic security of rural women farmers, despite their central role in agricultural value chains.",
+          "Because in Thailand, structural barriers continue to limit the economic security of rural women farmers, despite their central role in agricultural value chains.",
+          "In Thailand, structural barriers continue to limit the economic security of rural women farmers, although their central role in agricultural value chains."
+        ],
+        ans: 1,
+        grammar: "Independent sentence structure",
+        tip: "A complete sentence is needed. Option B provides a correct subject and verb ('barriers continue'). 'Despite' correctly precedes the noun phrase 'their central role'."
+      },
+      {
+        num: 5,
+        type: "Context Meaning Clause",
+        opts: [
+          "when women in Indonesia and Myanmar face more limited participation and access to extension services",
+          "because women in Indonesia and Myanmar face more limited participation and access to extension services",
+          "while women in Indonesia and Myanmar face more limited participation and access to extension services",
+          "despite women in Indonesia and Myanmar face more limited participation and access to extension services"
+        ],
+        ans: 2,
+        grammar: "Adverbial clause of contrast",
+        tip: "The conjunction 'while' is used to contrast the better conditions in the Philippines and Thailand with the limited participation in Indonesia and Myanmar."
       }
     ]
   }

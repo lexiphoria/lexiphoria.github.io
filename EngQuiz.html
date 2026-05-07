@@ -804,7 +804,7 @@
     <div style="width:100%; max-width:1000px; padding: 40px 24px;">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
         <button class="back-btn" onclick="showScreen('home')">←</button>
-        <a class="home-link" href="index.html">🏠 Trang chủ</a>
+        <a class="home-link" href="index.html">🏠 Home</a>
       </div>
       <div class="select-title">Choose a Passage</div>
       <div class="select-sub">25 reading cloze texts · 6 questions each</div>
@@ -2524,7 +2524,7 @@ function startText(idx) {
     // Jump to first unanswered question
     const firstUnanswered = answers.findIndex(a => a === null);
     currentQuestionIndex = firstUnanswered >= 0 ? firstUnanswered : 5;
-    showToast('Tiếp tục bài làm dở 📖');
+    showToast('Continuing your progress 📖');
   } else {
     answers = new Array(6).fill(null);
   }
@@ -2666,7 +2666,7 @@ function confirmBack() {
   if (answers.some(a => a !== null)) {
     // Draft already saved via selectAnswer; just go back
     showScreen('select-screen');
-    showToast('Tiến trình đã được lưu ✓');
+    showToast('Progress saved ✓');
   } else {
     clearDraft();
     showScreen('select-screen');

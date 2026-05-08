@@ -234,6 +234,68 @@ function renderSign(sign) {
           </div>
         </div>`;
 
+    case 'tip':
+      return `
+        <div class="sign-tip">
+          <div class="tip-badge">TIP</div>
+          <div class="sign-body">${nl(sign.body)}</div>
+        </div>`;
+
+    case 'email':
+      return `
+        <div class="sign-email">
+          <div class="email-header">New message</div>
+          <div class="email-field">From: ${sign.from}</div>
+          <div class="email-field">To: ${sign.to}</div>
+          <div class="email-body">${nl(sign.body)}</div>
+        </div>`;
+
+    case 'poster-blue':
+      return `
+        <div class="sign-poster-blue">
+          <div class="poster-icon">${sign.icon || '📍'}</div>
+          <div class="sign-body">${nl(sign.body)}</div>
+        </div>`;
+
+    case 'notice-yellow':
+      return `
+        <div class="sign-notice-yellow">
+          <div class="sign-body">${nl(sign.body)}</div>
+          <div class="sign-footer">${nl(sign.footer)}</div>
+        </div>`;
+
+    case 'phone':
+      return `
+        <div class="sign-phone">
+          <div class="phone-screen">
+            <div class="sign-body">${nl(sign.body)}</div>
+          </div>
+        </div>`;
+
+    case 'image':
+      return `
+        <div class="sign-image-container">
+          <img src="${sign.url}" alt="Sign">
+        </div>`;
+
+    case 'blue-circle':
+      return `
+        <div class="sign-blue-circle">
+          ${sign.icon || ''}
+        </div>`;
+
+    case 'speed-limit':
+      return `
+        <div class="sign-speed-limit">
+          ${sign.body || '60'}
+        </div>`;
+
+    case 'warning-triangle':
+      return `
+        <div class="sign-warning-triangle">
+          <div class="sign-icon">${sign.icon || '⚠️'}</div>
+        </div>`;
+
     default:
       return `
         <div class="sign-generic">
@@ -292,27 +354,53 @@ function showStartScreen() {
   resultScreen.classList.remove('active');
   document.querySelector('.progress-bar-fill').style.width = '0%';
   progressChip.textContent = `0 / ${questions.length}`;
+
+  const qNum = document.getElementById('total-questions-num');
+  if (qNum) qNum.textContent = questions.length;
 }
 
 // ─── Start game ──────────────────────────────────────────────────────────────
 function startGame() {
-  current = 0; score = 0; answered = false;
+  current = 0; currentQuestionIndex = 0; score = 0; answered = false;
   startScreen.classList.add('hidden');
   gameScreen.classList.add('active');
   resultScreen.classList.remove('active');
+  document.getElementById('question-nav').style.display = 'flex';
+  renderQuestionNav();
   renderQuestion();
+}
+
+function renderQuestionNav() {
+  const navContainer = document.getElementById('question-nav');
+  if (!navContainer) return;
+  navContainer.innerHTML = '';
+  questions.forEach((q, index) => {
+    const btn = document.createElement('button');
+    btn.className = 'question-nav-btn';
+    btn.textContent = index + 1;
+    if (index === currentQuestionIndex) {
+      btn.classList.add('active');
+    }
+    btn.onclick = () => {
+      currentQuestionIndex = index;
+      current = index;
+      renderQuestionNav();
+      renderQuestion();
+    };
+    navContainer.appendChild(btn);
+  });
 }
 
 // ─── Render question ─────────────────────────────────────────────────────────
 function renderQuestion() {
   answered = false;
-  const q = questions[current];
+  const q = questions[currentQuestionIndex];
   const total = questions.length;
 
   // Progress
-  const pct = (current / total) * 100;
+  const pct = (currentQuestionIndex / total) * 100;
   document.querySelector('.progress-bar-fill').style.width = pct + '%';
-  progressChip.textContent = `${current + 1} / ${total}`;
+  progressChip.textContent = `${currentQuestionIndex + 1} / ${total}`;
 
   // Labels
   questionLabel.textContent = `Question ${q.id}`;
@@ -344,7 +432,7 @@ function renderQuestion() {
 function handleAnswer(idx) {
   if (answered) return;
   answered = true;
-  const q = questions[current];
+  const q = questions[currentQuestionIndex];
 
   // Disable all
   optionsGrid.querySelectorAll('.option-btn').forEach(btn => btn.disabled = true);
@@ -370,8 +458,12 @@ function handleAnswer(idx) {
 
 // ─── Next question ───────────────────────────────────────────────────────────
 nextBtn.addEventListener('click', () => {
+  currentQuestionIndex++;
   current++;
-  if (current < questions.length) {
+  // Update Question Navigation
+  renderQuestionNav();
+
+  if (currentQuestionIndex < questions.length) {
     renderQuestion();
   } else {
     showResult();

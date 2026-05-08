@@ -2,7 +2,7 @@ const quizzes = [
   {
     id: "verb-form-1",
     title: "Verb & Word Forms Mastery",
-    description: "12 questions testing tense, verb patterns, and word formation.",
+    description: "17 questions testing tense, verb patterns, and word formation.",
     questions: [
       {
         text: "My sister usually (play) <span class='blank'>___</span> sports in the morning.",
@@ -75,6 +75,36 @@ const quizzes = [
         options: ["look", "looking", "to look", "looked"],
         answer: 2,
         explanation: "<b>to look:</b> Cấu trúc: decide + to V (quyết định làm gì)."
+      },
+      {
+        text: "Tim suggested (run) <span class='blank'>___</span> in the park every morning.",
+        options: ["run", "to run", "running", "ran"],
+        answer: 2,
+        explanation: "<b>running:</b> Cấu trúc: suggest + V-ing (đề nghị làm gì)."
+      },
+      {
+        text: "She said that she (know) <span class='blank'>___</span> three languages.",
+        options: ["knows", "knew", "has known", "was knowing"],
+        answer: 1,
+        explanation: "<b>knew:</b> Câu gián tiếp, động từ ở mệnh đề chính là 'said' (quá khứ) nên động từ mệnh đề sau phải lùi thì về quá khứ đơn 'knew'."
+      },
+      {
+        text: "It (not rain) <span class='blank'>___</span> much in our country in winter.",
+        options: ["doesn't rain", "didn't rain", "isn't raining", "hasn't rained"],
+        answer: 0,
+        explanation: "<b>doesn't rain:</b> 'in winter' chỉ một sự thật hiển nhiên hoặc thói quen ở hiện tại, nên dùng thì hiện tại đơn."
+      },
+      {
+        text: "When we came, the children (do) <span class='blank'>___</span> their homework.",
+        options: ["did", "have done", "were doing", "are doing"],
+        answer: 2,
+        explanation: "<b>were doing:</b> Hành động đang xảy ra trong quá khứ ('were doing') thì có hành động khác xen vào ('came')."
+      },
+      {
+        text: "The house (complete) <span class='blank'>___</span> in 1856 was famous for its huge marble staircase.",
+        options: ["completes", "completed", "was completed", "completing"],
+        answer: 1,
+        explanation: "<b>completed:</b> Rút gọn mệnh đề quan hệ dạng bị động (which was completed -> completed)."
       }
     ]
   }

@@ -145,6 +145,95 @@ function renderSign(sign) {
           <div class="sign-body">${nl(sign.body)}</div>
         </div>`;
 
+    case 'white-border':
+      return `
+        <div class="sign-white-border">
+          <div class="sign-body">${nl(sign.body)}</div>
+        </div>`;
+
+    case 'simple-box':
+      return `
+        <div class="sign-simple-box">
+          <div class="sign-title">${sign.title}</div>
+          <div class="sign-body">${nl(sign.body)}</div>
+        </div>`;
+
+    case 'rounded-box':
+      return `
+        <div class="sign-rounded-box">
+          <div class="sign-body">${nl(sign.body)}</div>
+        </div>`;
+
+    case 'fancy-border':
+      return `
+        <div class="sign-fancy-border">
+          <div class="sign-title">${sign.title}</div>
+          <div class="sign-body">${nl(sign.body)}</div>
+        </div>`;
+
+    case 'grey-box':
+      return `
+        <div class="sign-grey-box">
+          <div class="sign-title">${sign.title}</div>
+          <div class="sign-body">${nl(sign.body)}</div>
+        </div>`;
+
+    case 'octagon-box':
+      return `
+        <div class="sign-octagon-box">
+          <div class="sign-title">${sign.title}</div>
+          <div class="sign-body">${nl(sign.body)}</div>
+        </div>`;
+
+    case 'blue-border':
+      return `
+        <div class="sign-blue-border">
+          <div class="sign-text">
+            <div class="sign-body">${nl(sign.body)}</div>
+          </div>
+          <div class="sign-icon">${sign.icon || '👟'}</div>
+        </div>`;
+
+    case 'not-exit':
+      return `
+        <div class="sign-not-exit">
+          <div class="sign-text">${nl(sign.body)}</div>
+          <div class="sign-icon">🚫</div>
+        </div>`;
+
+    case 'speech-bubble':
+      return `
+        <div class="sign-speech-bubble">
+          <div class="sign-title">${sign.title}</div>
+          <div class="sign-body">${nl(sign.body)}</div>
+        </div>`;
+
+    case 'no-uturn':
+      return `
+        <div class="sign-no-uturn">
+          <div class="sign-text">${nl(sign.body)}</div>
+          <div class="sign-icon">🚷</div> <!-- Or generic prohibit -->
+        </div>`;
+
+    case 'caution-solid':
+      return `
+        <div class="sign-caution-solid">
+          <div class="caution-bar">${sign.header || 'CAUTION'}</div>
+          <div class="sign-content">
+            <div class="sign-body">${nl(sign.body)}</div>
+            <div class="sign-icon">${sign.icon || '🎧'}</div>
+          </div>
+        </div>`;
+
+    case 'slow-steep':
+      return `
+        <div class="sign-slow-steep">
+          <div class="slow-top">${sign.header || 'SLOW'}</div>
+          <div class="steep-bottom">
+            <div class="sign-body">${nl(sign.body)}</div>
+          </div>
+        </div>`;
+
     default:
       return `
         <div class="sign-generic">

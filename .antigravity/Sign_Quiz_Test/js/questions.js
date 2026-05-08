@@ -492,5 +492,210 @@ const questions = [
     ],
     answer: 2,
     explanation: "<b>C is correct.</b> 'OUT OF ORDER' means the elevator is not functioning and cannot be used until it is repaired."
+  },
+
+  // ── BLOCK 7: More Signs & Notices ──
+  {
+    id: 30,
+    prompt: "What does the sign say?",
+    sign: {
+      type: "white-border",
+      body: "CROSS\nONLY\nAT\nCROSS\nWALKS"
+    },
+    options: [
+      "Cross the road anywhere you want.",
+      "Cross the road at the pedestrian crossing.",
+      "Cross the road with an adult.",
+      "Cross the road with your friends."
+    ],
+    answer: 1,
+    explanation: "<b>B is correct.</b> 'Cross only at cross walks' means you must use designated pedestrian crossings to cross the street."
+  },
+  {
+    id: 31,
+    prompt: "What does the notice say?",
+    sign: {
+      type: "simple-box",
+      title: "Book sale",
+      body: "Tuesday after school in the school hall"
+    },
+    options: [
+      "You will be able to buy something here.",
+      "The books are not on sale.",
+      "You should visit this event on Friday.",
+      "The event takes place in the schoolyard."
+    ],
+    answer: 0,
+    explanation: "<b>A is correct.</b> A 'Book sale' is an event where you can buy books."
+  },
+  {
+    id: 32,
+    prompt: "What does the notice say?",
+    sign: {
+      type: "rounded-box",
+      body: "No Art classes today<br>Mrs Smith is ill"
+    },
+    options: [
+      "There is an art lesson today.",
+      "Mrs Smith is at school today.",
+      "The art class will be learning online today.",
+      "This person will not be at school today."
+    ],
+    answer: 3,
+    explanation: "<b>D is correct.</b> 'Mrs Smith is ill' means she is sick and will not be at school, which is why there are no art classes."
+  },
+  {
+    id: 33,
+    prompt: "What does the notice say?",
+    sign: {
+      type: "fancy-border",
+      title: "Tilbury Museum of Music",
+      body: "School groups please use other entrance"
+    },
+    options: [
+      "Nobody can come here today.",
+      "Students use another entrance to enter.",
+      "The museum is closed today.",
+      "School groups are not allowed to come."
+    ],
+    answer: 1,
+    explanation: "<b>B is correct.</b> The notice directs 'School groups' (students) to 'use other entrance'."
+  },
+  {
+    id: 34,
+    prompt: "What does the notice say?",
+    sign: {
+      type: "grey-box",
+      title: "Harlow Music Festival",
+      body: "For tickets call 05784-82377,<br>or visit our website"
+    },
+    options: [
+      "You need to buy the ticket offline.",
+      "You can buy a ticket online.",
+      "The festival is cancelled.",
+      "There is a fair coming to town."
+    ],
+    answer: 1,
+    explanation: "<b>B is correct.</b> 'Visit our website' indicates that you can purchase tickets online."
+  },
+  {
+    id: 35,
+    prompt: "What does the notice say?",
+    sign: {
+      type: "octagon-box",
+      title: "GREEN PARK",
+      body: "CONCERTS HERE SAT AND SUN 2-5 P.M.<br>TICKETS £6.00"
+    },
+    options: [
+      "You can come here on Monday at 2 p.m.",
+      "You can come here on Saturday at 1 p.m.",
+      "You can come here on Wednesday. 4 p.m.",
+      "You can come here on Sunday at 3 p.m."
+    ],
+    answer: 3,
+    explanation: "<b>D is correct.</b> The concerts take place on Saturday and Sunday from 2 to 5 P.M. Sunday at 3 P.M. falls within this schedule."
+  },
+  {
+    id: 36,
+    prompt: "What does the sign say?",
+    sign: {
+      type: "blue-border",
+      icon: "👟",
+      body: "PLEASE<br>PUT OFF<br>YOUR<br>SHOES<br>HERE"
+    },
+    options: [
+      "You can wear shoes in this area.",
+      "You must remove your shoes before entering.",
+      "You must put on your shoes in this area.",
+      "You should clean your shoes in this area."
+    ],
+    answer: 1,
+    explanation: "<b>B is correct.</b> 'Put off your shoes' means to take them off or remove them."
+  },
+
+  // ── BLOCK 8: Final Assorted Signs ──
+  {
+    id: 37,
+    prompt: "What does this sign indicate?",
+    sign: {
+      type: "not-exit",
+      body: "NOT AN\nEXIT"
+    },
+    options: [
+      "This door leads to the exit.",
+      "You must not go through without permission.",
+      "You must not go through this door.",
+      "This is not an exit."
+    ],
+    answer: 3,
+    explanation: "<b>D is correct.</b> The sign clearly states 'NOT AN EXIT', meaning this is not a way out."
+  },
+  {
+    id: 38,
+    prompt: "What does the message mean?",
+    sign: {
+      type: "speech-bubble",
+      title: "FOR SALE",
+      body: "Ski boots size 38<br>Excellent condition<br>Make me an offer!"
+    },
+    options: [
+      "The ski boots are for sale; you can suggest a price.",
+      "The ski boots are free.",
+      "The ski boots are not for sale.",
+      "The ski boots are only for kids."
+    ],
+    answer: 0,
+    explanation: "<b>A is correct.</b> 'Make me an offer!' means the seller is open to price suggestions for the items being sold."
+  },
+  {
+    id: 39,
+    prompt: "What does this sign indicate?",
+    sign: {
+      type: "no-uturn",
+      body: "NO\nU-TURN"
+    },
+    options: [
+      "U-turns are allowed here.",
+      "Only straight-ahead driving is allowed here.",
+      "U-turns are allowed during certain hours.",
+      "U-turns are allowed with caution."
+    ],
+    answer: 1,
+    explanation: "<b>B is correct.</b> (Based on the provided options) This sign prohibits making a U-turn. Among the given choices, prohibiting a U-turn usually means you must continue straight or turn at an intersection instead."
+  },
+  {
+    id: 40,
+    prompt: "What does this sign indicate?",
+    sign: {
+      type: "caution-solid",
+      header: "CAUTION",
+      icon: "🎧",
+      body: "HIGH NOISE<br>AREA"
+    },
+    options: [
+      "This area is quiet.",
+      "Expect high noise levels in this area.",
+      "Noise is prohibited in this area.",
+      "Noise levels are moderate."
+    ],
+    answer: 1,
+    explanation: "<b>B is correct.</b> 'HIGH NOISE AREA' warns you that the environment will be very loud and you should expect high noise levels (and likely wear ear protection)."
+  },
+  {
+    id: 41,
+    prompt: "What does this sign indicate?",
+    sign: {
+      type: "slow-steep",
+      header: "SLOW",
+      body: "STEEP<br>HILL<br>AHEAD"
+    },
+    options: [
+      "No need to be cautious, the hill is not steep.",
+      "Be cautious, the hill is steep.",
+      "The hill is flat.",
+      "The hill is closed to vehicles."
+    ],
+    answer: 1,
+    explanation: "<b>B is correct.</b> The sign warns drivers to go 'SLOW' because there is a 'STEEP HILL AHEAD', meaning they need to be cautious."
   }
 ];

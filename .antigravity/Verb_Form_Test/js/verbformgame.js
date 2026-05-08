@@ -2,7 +2,7 @@ const quizzes = [
   {
     id: "verb-form-1",
     title: "Verb & Word Forms Mastery",
-    description: "57 questions testing tense, verb patterns, and word formation.",
+    description: "113 questions testing tense, verb patterns, and word formation.",
     questions: [
       {
         text: "My sister usually (play) <span class='blank'>___</span> sports in the morning.",
@@ -327,6 +327,342 @@ const quizzes = [
         options: ["stop", "to stop", "stopping", "stopped"],
         answer: 1,
         explanation: "<b>to stop:</b> need + to V (cần làm gì - mang nghĩa chủ động)."
+      },
+      {
+        text: "The number of people learning English (rise) <span class='blank'>___</span> rapidly in recent years.",
+        options: ["rises", "rose", "has risen", "is rising"],
+        answer: 2,
+        explanation: "<b>has risen:</b> 'in recent years' là dấu hiệu của thì hiện tại hoàn thành."
+      },
+      {
+        text: "Sarah (apply) <span class='blank'>___</span> for this teaching position as soon as she got an IELTS certificate.",
+        options: ["applies", "applied", "has applied", "was applying"],
+        answer: 1,
+        explanation: "<b>applied:</b> Hành động xảy ra liên tiếp trong quá khứ ('as soon as she got...'), dùng quá khứ đơn."
+      },
+      {
+        text: "English (use) <span class='blank'>___</span> as a lingua franca among many airline pilots.",
+        options: ["uses", "used", "is used", "was used"],
+        answer: 2,
+        explanation: "<b>is used:</b> Câu bị động ở hiện tại đơn (Tiếng Anh 'được sử dụng' như một ngôn ngữ chung)."
+      },
+      {
+        text: "Alfred hopes that he (teach) <span class='blank'>___</span> English at the University of Wales after graduation.",
+        options: ["teaches", "taught", "will teach", "is teaching"],
+        answer: 2,
+        explanation: "<b>will teach:</b> 'hope' đi với mệnh đề thì tương lai đơn."
+      },
+      {
+        text: "94% of upper-secondary school students in Europe (learn) <span class='blank'>___</span> English at present.",
+        options: ["learn", "learned", "are learning", "have learned"],
+        answer: 2,
+        explanation: "<b>are learning:</b> 'at present' là dấu hiệu của thì hiện tại tiếp diễn."
+      },
+      {
+        text: "Since then, they (translate) <span class='blank'>___</span> Harry Potter into 78 languages.",
+        options: ["translate", "translated", "have translated", "are translating"],
+        answer: 2,
+        explanation: "<b>have translated:</b> 'Since then' là dấu hiệu của thì hiện tại hoàn thành."
+      },
+      {
+        text: "Mathew told me he (do) <span class='blank'>___</span> a course in business English at that moment.",
+        options: ["did", "was doing", "has done", "is doing"],
+        answer: 1,
+        explanation: "<b>was doing:</b> Câu gián tiếp, lùi thì từ hiện tại tiếp diễn ('at the moment') sang quá khứ tiếp diễn ('at that moment')."
+      },
+      {
+        text: "When I joined the discussion, the other students (exchange) <span class='blank'>___</span> interesting facts.",
+        options: ["exchanged", "were exchanging", "have exchanged", "exchange"],
+        answer: 1,
+        explanation: "<b>were exchanging:</b> Hành động đang xảy ra trong quá khứ (were exchanging) thì hành động khác xen vào (joined)."
+      },
+      {
+        text: "Worldwide, people often desire (learn) <span class='blank'>___</span> to speak English.",
+        options: ["learn", "to learn", "learning", "learned"],
+        answer: 1,
+        explanation: "<b>to learn:</b> Cấu trúc: desire + to V (khao khát làm gì)."
+      },
+      {
+        text: "If you want to speak like a native, you should practice (speak) <span class='blank'>___</span> English with a native speaker.",
+        options: ["speak", "to speak", "speaking", "spoke"],
+        answer: 2,
+        explanation: "<b>speaking:</b> Cấu trúc: practice + V-ing (luyện tập làm gì)."
+      },
+      {
+        text: "Son Doong Cave (find) <span class='blank'>___</span> in 1991 by a local man named Ho Khanh.",
+        options: ["finds", "found", "was found", "has found"],
+        answer: 2,
+        explanation: "<b>was found:</b> Câu bị động ở quá khứ đơn vì sự kiện đã xảy ra năm 1991."
+      },
+      {
+        text: "People (enjoy) <span class='blank'>___</span> the journey when suddenly the ship hit an iceberg.",
+        options: ["enjoy", "enjoyed", "were enjoying", "have enjoyed"],
+        answer: 2,
+        explanation: "<b>were enjoying:</b> Hành động đang xảy ra (were enjoying) thì hành động khác xen vào (hit)."
+      },
+      {
+        text: "Johnson usually (watch) <span class='blank'>___</span> short videos about travel destinations on YouTube.",
+        options: ["watch", "watches", "is watching", "watched"],
+        answer: 1,
+        explanation: "<b>watches:</b> 'usually' là dấu hiệu thì hiện tại đơn."
+      },
+      {
+        text: "The tourism industry in Indonesia (expand) <span class='blank'>___</span> rapidly over the past few years.",
+        options: ["expands", "expanded", "has expanded", "is expanding"],
+        answer: 2,
+        explanation: "<b>has expanded:</b> 'over the past few years' là dấu hiệu thì hiện tại hoàn thành."
+      },
+      {
+        text: "In December 2019, she (take) <span class='blank'>___</span> a ten-day trip to Europe with her family.",
+        options: ["takes", "took", "has taken", "was taking"],
+        answer: 1,
+        explanation: "<b>took:</b> 'In December 2019' là mốc thời gian cụ thể trong quá khứ -> Quá khứ đơn."
+      },
+      {
+        text: "Janet together with her friends (go) <span class='blank'>___</span> on a trip to New Zealand this summer.",
+        options: ["go", "are going", "is going", "went"],
+        answer: 2,
+        explanation: "<b>is going:</b> Chủ ngữ chính là 'Janet' (số ít). 'together with...' không làm đổi ngôi -> is going (kế hoạch tương lai)."
+      },
+      {
+        text: "Nick told me that he (not visit) <span class='blank'>___</span> Italy the next summer due to his health.",
+        options: ["doesn't visit", "didn't visit", "won't visit", "wouldn't visit"],
+        answer: 3,
+        explanation: "<b>wouldn't visit:</b> Câu gián tiếp, lùi thì tương lai đơn ('won't') thành quá khứ ('wouldn't')."
+      },
+      {
+        text: "Have you ever dreamed of (visit) <span class='blank'>___</span> Mars and its two moons?",
+        options: ["visit", "to visit", "visiting", "visited"],
+        answer: 2,
+        explanation: "<b>visiting:</b> Sau giới từ 'of' dùng V-ing."
+      },
+      {
+        text: "NASA has said it plans (send) <span class='blank'>___</span> people to Mars in the 2030s.",
+        options: ["send", "to send", "sending", "sent"],
+        answer: 1,
+        explanation: "<b>to send:</b> Cấu trúc: plan + to V (lên kế hoạch làm gì)."
+      },
+      {
+        text: "My friend asked me what I (can) <span class='blank'>___</span> do to keep the campsite clean.",
+        options: ["can", "could", "will", "would"],
+        answer: 1,
+        explanation: "<b>could:</b> Câu gián tiếp, lùi thì từ 'can' thành 'could'."
+      },
+      {
+        text: "The teacher told us that we (travel) <span class='blank'>___</span> to the Mekong River the following month.",
+        options: ["travel", "travelled", "will travel", "would travel"],
+        answer: 3,
+        explanation: "<b>would travel:</b> Câu gián tiếp, lùi thì từ tương lai đơn 'will travel' thành 'would travel' ('the following month')."
+      },
+      {
+        text: "They say that they (never/ be) <span class='blank'>___</span> to Scotland before.",
+        options: ["never were", "are never", "have never been", "had never been"],
+        answer: 2,
+        explanation: "<b>have never been:</b> Động từ tường thuật 'say' ở hiện tại nên không lùi thì. 'before' dùng hiện tại hoàn thành."
+      },
+      {
+        text: "I wondered why Nick (go) <span class='blank'>___</span> to Ba Vi National Park every summer.",
+        options: ["goes", "went", "has gone", "was going"],
+        answer: 1,
+        explanation: "<b>went:</b> Câu gián tiếp, lùi thì hiện tại đơn ('every summer') thành quá khứ đơn."
+      },
+      {
+        text: "My mom said she (be) <span class='blank'>___</span> going to visit a friend of hers in London.",
+        options: ["is", "was", "has been", "would be"],
+        answer: 1,
+        explanation: "<b>was:</b> Câu gián tiếp, lùi thì hiện tại tiếp diễn ('is going to') thành quá khứ tiếp diễn ('was going to')."
+      },
+      {
+        text: "My father prefers (work) <span class='blank'>___</span> as a farmer rather than a blue-collar worker.",
+        options: ["work", "to work", "working", "worked"],
+        answer: 2,
+        explanation: "<b>working:</b> Cấu trúc prefer + V-ing (thích làm gì hơn)."
+      },
+      {
+        text: "I can't help (worry) <span class='blank'>___</span> about her traveling abroad on her own.",
+        options: ["worry", "to worry", "worrying", "worried"],
+        answer: 2,
+        explanation: "<b>worrying:</b> Cấu trúc can't help + V-ing (không thể không làm gì)."
+      },
+      {
+        text: "Rubber sandals (wear) <span class='blank'>___</span> by Vietnamese soldiers during the war.",
+        options: ["wear", "wore", "were worn", "have worn"],
+        answer: 2,
+        explanation: "<b>were worn:</b> Câu bị động ở quá khứ đơn (đôi dép được mang bởi bộ đội)."
+      },
+      {
+        text: "In recent years, Vietnam (experience) <span class='blank'>___</span> many changes under the influence of globalization.",
+        options: ["experiences", "experienced", "has experienced", "is experiencing"],
+        answer: 2,
+        explanation: "<b>has experienced:</b> 'In recent years' là dấu hiệu thì hiện tại hoàn thành."
+      },
+      {
+        text: "How (teaching methods/ change) <span class='blank'>___</span> over the last twenty years?",
+        options: ["did teaching methods change", "have teaching methods changed", "do teaching methods change", "are teaching methods changing"],
+        answer: 1,
+        explanation: "<b>have teaching methods changed:</b> 'over the last twenty years' dùng thì hiện tại hoàn thành."
+      },
+      {
+        text: "We (take) <span class='blank'>___</span> a memorable eco-tour to Cat Tien National Park last year.",
+        options: ["take", "took", "have taken", "were taking"],
+        answer: 1,
+        explanation: "<b>took:</b> 'last year' là mốc thời gian quá khứ đơn."
+      },
+      {
+        text: "It started to rain heavily while the tourists (explore) <span class='blank'>___</span> the ancient ruins.",
+        options: ["explore", "explored", "were exploring", "have explored"],
+        answer: 2,
+        explanation: "<b>were exploring:</b> Hành động đang diễn ra trong quá khứ dùng quá khứ tiếp diễn."
+      },
+      {
+        text: "Kayla has done many community services since she (graduate) <span class='blank'>___</span> from high school.",
+        options: ["graduate", "graduates", "graduated", "has graduated"],
+        answer: 2,
+        explanation: "<b>graduated:</b> Mệnh đề sau 'since' chia thì quá khứ đơn."
+      },
+      {
+        text: "The children enjoy (learn) <span class='blank'>___</span> survival skills at the summer camp.",
+        options: ["learn", "to learn", "learning", "learned"],
+        answer: 2,
+        explanation: "<b>learning:</b> Cấu trúc enjoy + V-ing (thích làm gì)."
+      },
+      {
+        text: "I can't believe she (not book) <span class='blank'>___</span> her flight for the summer vacation yet.",
+        options: ["didn't book", "hasn't booked", "doesn't book", "hadn't booked"],
+        answer: 1,
+        explanation: "<b>hasn't booked:</b> 'yet' là dấu hiệu của thì hiện tại hoàn thành phủ định."
+      },
+      {
+        text: "They (do) <span class='blank'>___</span> community service in their neighbourhood every June.",
+        options: ["do", "did", "have done", "are doing"],
+        answer: 0,
+        explanation: "<b>do:</b> 'every June' chỉ thói quen lặp lại hàng năm -> Hiện tại đơn."
+      },
+      {
+        text: "Mount Everest is the most challenging mountain I (ever, climb) <span class='blank'>___</span>.",
+        options: ["ever climbed", "have ever climbed", "had ever climbed", "ever climb"],
+        answer: 1,
+        explanation: "<b>have ever climbed:</b> Đi với so sánh nhất (the most challenging...) ta dùng thì hiện tại hoàn thành."
+      },
+      {
+        text: "Last year, we (explore) <span class='blank'>___</span> the savanna of Africa on a jeep tour.",
+        options: ["explored", "have explored", "were exploring", "explore"],
+        answer: 0,
+        explanation: "<b>explored:</b> 'Last year' là thời gian xác định trong quá khứ -> Quá khứ đơn."
+      },
+      {
+        text: "How many eco-tours (you, take) <span class='blank'>___</span> for the past three years?",
+        options: ["did you take", "do you take", "have you taken", "were you taking"],
+        answer: 2,
+        explanation: "<b>have you taken:</b> 'for the past three years' chỉ hành động kéo dài từ quá khứ đến hiện tại -> Hiện tại hoàn thành."
+      },
+      {
+        text: "I hope my best friend and I (not argue) <span class='blank'>___</span> during our field trip.",
+        options: ["don't argue", "won't argue", "didn't argue", "haven't argued"],
+        answer: 1,
+        explanation: "<b>won't argue:</b> Động từ 'hope' đi kèm mệnh đề thì tương lai đơn."
+      },
+      {
+        text: "Peter injured his hand while he (attend) <span class='blank'>___</span> an army course.",
+        options: ["attended", "was attending", "has attended", "had attended"],
+        answer: 1,
+        explanation: "<b>was attending:</b> Hành động đang xảy ra (was attending) thì hành động khác xen vào (injured)."
+      },
+      {
+        text: "The tour guide (help) <span class='blank'>___</span> us a lot since we arrived in Paris.",
+        options: ["helped", "is helping", "has helped", "helps"],
+        answer: 2,
+        explanation: "<b>has helped:</b> Cấu trúc: Hiện tại hoàn thành + since + Quá khứ đơn."
+      },
+      {
+        text: "My flight is tomorrow so at present I (pack) <span class='blank'>___</span> my clothes.",
+        options: ["pack", "packed", "am packing", "have packed"],
+        answer: 2,
+        explanation: "<b>am packing:</b> 'at present' là dấu hiệu thì hiện tại tiếp diễn."
+      },
+      {
+        text: "Carla usually visits Australia in the summer, but she (never/ go) <span class='blank'>___</span> snorkelling to see the coral reefs.",
+        options: ["never goes", "has never gone", "never went", "is never going"],
+        answer: 1,
+        explanation: "<b>has never gone:</b> Sự việc chưa từng làm tính đến hiện tại dùng Hiện tại hoàn thành."
+      },
+      {
+        text: "(you/ ever/ be) <span class='blank'>___</span> to Japan? ~ No, I haven't been to Japan yet.",
+        options: ["Did you ever be", "Have you ever been", "Were you ever", "Do you ever be"],
+        answer: 1,
+        explanation: "<b>Have you ever been:</b> Câu hỏi về trải nghiệm tính đến hiện tại dùng Hiện tại hoàn thành."
+      },
+      {
+        text: "How long has Mrs Grey taught in this school? ~ She (start) <span class='blank'>___</span> teaching here two years ago.",
+        options: ["started", "has started", "starts", "was starting"],
+        answer: 0,
+        explanation: "<b>started:</b> 'two years ago' là thời gian xác định ở quá khứ -> Quá khứ đơn."
+      },
+      {
+        text: "She (have) <span class='blank'>___</span> a breakthrough in her research some years ago, and since then she has been very successful.",
+        options: ["has", "has had", "had", "was having"],
+        answer: 2,
+        explanation: "<b>had:</b> 'some years ago' là thời gian xác định ở quá khứ -> Quá khứ đơn."
+      },
+      {
+        text: "If she (want) <span class='blank'>___</span> to follow the traditional recipe, she should not put curry powder in that dish.",
+        options: ["wants", "wanted", "will want", "want"],
+        answer: 0,
+        explanation: "<b>wants:</b> Câu điều kiện loại 1 (If + Hiện tại đơn, Tương lai đơn / Modal verb)."
+      },
+      {
+        text: "If you (not be) <span class='blank'>___</span> in a hurry, you may have a cup of tea now.",
+        options: ["aren't", "weren't", "won't be", "don't be"],
+        answer: 0,
+        explanation: "<b>aren't:</b> Câu điều kiện loại 1 (hiện tại đơn)."
+      },
+      {
+        text: "If you want to get there on time, you should (take) <span class='blank'>___</span> a taxi.",
+        options: ["takes", "took", "take", "taking"],
+        answer: 2,
+        explanation: "<b>take:</b> Động từ sau 'should' luôn ở dạng nguyên mẫu không 'to'."
+      },
+      {
+        text: "If he (get) <span class='blank'>___</span> proper medical care, he might recover from his operation.",
+        options: ["gets", "got", "will get", "has got"],
+        answer: 1,
+        explanation: "<b>got:</b> Câu điều kiện loại 2 giả định trái với hiện tại (If + Quá khứ đơn, S + would/could/might + V)."
+      },
+      {
+        text: "If you (have) <span class='blank'>___</span> a few hours to spare, you may visit the museum.",
+        options: ["have", "had", "will have", "has"],
+        answer: 0,
+        explanation: "<b>have:</b> Câu điều kiện loại 1 (If + Hiện tại đơn, S + may/can/will + V)."
+      },
+      {
+        text: "I <span class='blank'>___</span> never <span class='blank'>___</span> in such an embarrassing situation before.",
+        options: ["had / been", "haven't / gone", "have / been", "hadn't / been"],
+        answer: 2,
+        explanation: "<b>have / been:</b> 'before' chỉ trải nghiệm cho tới thời điểm hiện tại -> Hiện tại hoàn thành."
+      },
+      {
+        text: "The student <span class='blank'>___</span> by rote, so he couldn't answer the question.",
+        options: ["have learnt", "learnt", "learn", "was learning"],
+        answer: 1,
+        explanation: "<b>learnt:</b> Vế sau 'couldn't' chỉ kết quả trong quá khứ -> Vế trước dùng quá khứ đơn."
+      },
+      {
+        text: "Students in our club <span class='blank'>___</span> many community activities, and they are now ready to help people in need.",
+        options: ["experience", "will experience", "have experienced", "experiencing"],
+        answer: 2,
+        explanation: "<b>have experienced:</b> Hành động trong quá khứ để lại kết quả hiện tại ('are now ready...') -> Hiện tại hoàn thành."
+      },
+      {
+        text: "He <span class='blank'>___</span> skydiving last month. It was such an exhilarating experience.",
+        options: ["tried", "has tried", "had tried", "was trying"],
+        answer: 0,
+        explanation: "<b>tried:</b> 'last month' là thời điểm xác định trong quá khứ -> Quá khứ đơn."
+      },
+      {
+        text: "<span class='blank'>___</span> in a photography club? Join us and you will learn how to take wonderful photos.",
+        options: ["Do you ever participate", "Have you ever participated", "Did you participate", "Were you participating"],
+        answer: 1,
+        explanation: "<b>Have you ever participated:</b> Hỏi về một trải nghiệm từ trước đến nay -> Hiện tại hoàn thành."
       }
     ]
   }

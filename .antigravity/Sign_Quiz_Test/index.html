@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading Signs & Notices | English Practice</title>
+  <meta name="description" content="Practice reading English signs and notices. Choose the correct meaning from A, B, C, D.">
+  <link rel="stylesheet" href="css/signquiz.css">
+</head>
+<body>
+
+  <!-- ── STICKY HEADER ── -->
+  <header class="game-header">
+    <a class="home-btn" href="../../index.html">
+      ← Home
+    </a>
+    <span class="header-title">Reading Signs &amp; Notices</span>
+    <span class="progress-chip" id="progress-chip">0 / 29</span>
+  </header>
+
+  <!-- PROGRESS BAR -->
+  <div class="progress-bar-wrap">
+    <div class="progress-bar-fill" id="progress-fill"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       START SCREEN
+  ══════════════════════════════════════ -->
+  <div class="start-screen" id="start-screen">
+    <span class="start-badge">Reading Skills</span>
+    <h1>Reading Signs &amp; Notices</h1>
+    <p class="subtitle">
+      Read each sign or notice carefully, then choose the answer that best describes what it says.
+    </p>
+
+    <div class="start-stats">
+      <div class="stat-item">
+        <div class="num">29</div>
+        <div class="label">Questions</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">A–D</div>
+        <div class="label">Options each</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">💡</div>
+        <div class="label">Explanations</div>
+      </div>
+    </div>
+
+    <button class="start-btn" id="start-btn" onclick="startGame()">
+      Start Quiz →
+    </button>
+
+    <p class="best-score-tag" id="best-tag">No score saved yet.</p>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       GAME SCREEN
+  ══════════════════════════════════════ -->
+  <div class="game-screen" id="game-screen">
+    <p class="question-label" id="question-label">Question 1</p>
+    <p class="question-prompt" id="question-prompt">What does the sign say?</p>
+
+    <!-- Sign display area -->
+    <div class="sign-card">
+      <div id="sign-container"></div>
+    </div>
+
+    <!-- Answer options -->
+    <div class="options-grid" id="options-grid"></div>
+
+    <!-- Explanation (shown after answering) -->
+    <div class="explanation" id="explanation"></div>
+
+    <!-- Next button -->
+    <button class="next-btn" id="next-btn">Next →</button>
+    <div style="clear:both"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       RESULT SCREEN
+  ══════════════════════════════════════ -->
+  <div class="result-screen" id="result-screen">
+    <div class="result-card">
+      <div class="result-emoji" id="result-emoji">🌟</div>
+      <h2 id="result-title">Excellent!</h2>
+      <p id="result-msg">You read signs like a pro!</p>
+
+      <div class="score-big" id="score-big">0 <span>/ 15</span></div>
+
+      <p class="best-score-tag" id="best-tag-result"></p>
+
+      <div class="result-actions">
+        <button class="btn-restart" onclick="startGame()">Try Again</button>
+        <a class="btn-home" href="../../index.html">← Home</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/questions.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>

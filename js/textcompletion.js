@@ -799,6 +799,403 @@ const ALL_EXAMS = [
         tip: "The conjunction 'while' introduces a subordinate clause expressing contrast with the main clause about the EU and Japan's actions."
       }
     ]
+  },
+  {
+    id: 'ai_cybersecurity',
+    title: 'AI and Cybersecurity',
+    meta: 'Technology & Security',
+    html: `
+      <p>Artificial intelligence is transforming the way people access information and handle tasks in the digital environment. However, this convenience also comes with potential risks <span class="blank-tag">1</span>.</p>
+      <br>
+      <p>Experts say AI powered scams are becoming increasingly sophisticated to manipulate victims and gain trust online. How AI has been used as a tool in making them a victim of cyber crime is really a matter of trust. <span class="blank-tag">2</span>, what cyber attackers are doing is essentially to make themselves more trustworthy because deep fakes replicate someone you know. <span class="blank-tag">3</span>.</p>
+      <br>
+      <p>We need to know how and what kind of data we can send to AI. Don't ever boot or send to AI any of your sensitive information or your personal information like identity day of birth or identity ID <span class="blank-tag">4</span>. With the right tool and with just a little technical background, the bad actor can take advantage of that and anybody can become a cyber criminal <span class="blank-tag">5</span>.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Context Meaning Clause",
+        opts: [
+          "in replacing human workers with automated systems",
+          "in downloading files from unverified sources",
+          "in sharing personal memories on public forums",
+          "in relying too heavily on outdated software"
+        ],
+        ans: 1,
+        grammar: "Context Meaning",
+        tip: "Read the context carefully. The passage contrasts the convenience of AI with the specific risk of obtaining unverified files from the internet."
+      },
+      {
+        num: 2,
+        type: "Concessive Clause",
+        opts: [
+          "Due to deep fake or voice cloning or adaptive malware",
+          "Be it deep fake or voice cloning or adaptive malware",
+          "Although it is deep fake or voice cloning or adaptive malware",
+          "Despite deep fake or voice cloning or adaptive malware"
+        ],
+        ans: 1,
+        grammar: "Subjunctive 'be it...'",
+        tip: "'Be it A or B' is a subjunctive expression meaning 'whether it is A or B'."
+      },
+      {
+        num: 3,
+        type: "Independent Sentence",
+        opts: [
+          "It's no longer just famous personalities, politicians, and celebrities who can become the victims of such crimes",
+          "Famous personalities, politicians, and celebrities who can become the victims of such crimes",
+          "They are no longer just famous personalities, politicians, and celebrities who can become the victims of such crimes",
+          "It's no longer just famous personalities, politicians, and celebrities can become the victims of such crimes"
+        ],
+        ans: 0,
+        grammar: "Cleft sentence",
+        tip: "'It is/was... who/that...' emphasizes the subject."
+      },
+      {
+        num: 4,
+        type: "Adverbial Clause of Reason",
+        opts: [
+          "unless you are absolutely sure the platform is secure",
+          "so that hackers can improve their algorithmic models",
+          "because you can never recover that",
+          "to ensure your digital profile remains up to date"
+        ],
+        ans: 2,
+        grammar: "Context Meaning",
+        tip: "The context provides a strong warning ('Don't ever...'). The reason follows: once sensitive data is sent to AI, it cannot be retrieved ('never recover that')."
+      },
+      {
+        num: 5,
+        type: "Prepositional Phrase",
+        opts: [
+          "of the tool of AI doing evil things",
+          "for the tool of AI doing evil things",
+          "with the tool of AI doing evil things",
+          "by the tool of AI doing evil things"
+        ],
+        ans: 2,
+        grammar: "Preposition 'with'",
+        tip: "'With' indicates using something as a tool or instrument."
+      }
+    ]
+  },
+  {
+    id: 'dien_bien_phu_africa',
+    title: 'How Dien Bien Phu victory reshaped Africa',
+    meta: 'History & Global Impact',
+    html: `
+      <p>72 years ago on May the 7th, Vietnam’s victory was achieved ending French colonialism in Vietnam. In 1954, France was the world's second largest colonial power with territories stretching across north, west, and central Africa. The great Dien Bien Phu victory on May the 7th that year changed all of that. Just 178 days after the Dien Bien Phu victory, the Algerian National Liberation <span class="blank-tag">1</span>. And in 1956, Morocco and Tunisia both won their independence from France. A year later, Ghana became the first sub-Saharan African nation to gain independence. And in 1958, Ghana refused to join the French community, choosing immediate independence. <span class="blank-tag">2</span>, Ghana still survived. The message was clear. Independence was possible and irreversible.</p>
+      <br>
+      <p>What followed has since become known as the year of Africa. In 1960 alone, 17 African nations gained their independence, 14 of them former French colonies. <span class="blank-tag">3</span>. In 1962, Algeria, where the wave had begun 8 years earlier, gained full independence. And by 1962, virtually the entire French colonial empire in Africa had dissolved. <span class="blank-tag">4</span>. And now more than seven decades later, historians continue to view Dien Bien Phu <span class="blank-tag">5</span>.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Independent Sentence",
+        opts: [
+          "Front agreed to negotiate a peaceful settlement with the colonial government",
+          "Front launched armed revolts across the country, marking the beginning of Algeria's struggle for independence",
+          "Front decided to pause their military campaigns to seek international diplomatic support",
+          "Front formed a coalition with neighboring countries to strengthen their economic policies"
+        ],
+        ans: 1,
+        grammar: "Context Meaning",
+        tip: "The Dien Bien Phu victory inspired immediate action. The passage mentions 'armed revolts' leading to 'struggle for independence'."
+      },
+      {
+        num: 2,
+        type: "Concessive Phrase",
+        opts: [
+          "Despite cut from all support from France overnight",
+          "Because of being cut from all support from France overnight",
+          "Despite being cut from all support from France overnight",
+          "Although being cut from all support from France overnight"
+        ],
+        ans: 2,
+        grammar: "Preposition + V-ing",
+        tip: "'Despite' must be followed by a noun phrase or V-ing. Passive meaning uses 'being + V3/ed'."
+      },
+      {
+        num: 3,
+        type: "Independent Sentence",
+        opts: [
+          "The number of independent African countries to rise from 9 to 26 in a single year",
+          "The number of independent African countries rising from 9 to 26 in a single year",
+          "A number of independent African countries rose from 9 to 26 in a single year",
+          "The number of independent African countries rose from 9 to 26 in a single year"
+        ],
+        ans: 3,
+        grammar: "Subject + Verb agreement",
+        tip: "'The number of...' takes a singular verb, but here it's past tense ('rose'). A complete sentence is needed."
+      },
+      {
+        num: 4,
+        type: "Prepositional Phrase",
+        opts: [
+          "Economic ties with Europe were permanently severed",
+          "From one battle in Vietnam to the liberation of a continent in less than a decade",
+          "The region then entered a long period of unprecedented economic prosperity",
+          "Military alliances were immediately formed to prevent future conflicts"
+        ],
+        ans: 1,
+        grammar: "Context Meaning",
+        tip: "This is a summarizing sentence. It rhetorically connects the starting point ('one battle in Vietnam') to the final result ('liberation of a continent')."
+      },
+      {
+        num: 5,
+        type: "Prepositional Phrase",
+        opts: [
+          "as a turning point in global decolonization",
+          "like a turning point in global decolonization",
+          "to be a turning point in global decolonization",
+          "for a turning point in global decolonization"
+        ],
+        ans: 0,
+        grammar: "Verb + as",
+        tip: "'View something as something' is a standard fixed structure."
+      }
+    ]
+  },
+  {
+    id: 'rural_lifestyles',
+    title: 'New rural lifestyles',
+    meta: 'Society & Development',
+    html: `
+      <p>The perception of rural areas as poor and backward is a thing of the past. The shift toward a green and sustainable lifestyle has led Vietnamese people <span class="blank-tag">1</span>. This transformation has resulted in prosperous, beautiful, and civilized villages, <span class="blank-tag">2</span>. Across the country, from North to South, skilled and hardworking residents are striving to create a “livable countryside.”</p>
+      <br>
+      <p>For nearly 15 years, Vietnam has been undertaking a well-known national rural development program, widely promoted by the media. The program focuses on building modern rural spaces with essential infrastructure, <span class="blank-tag">3</span>. It emphasizes a quality-driven economy, diversification of industries, and specialization, exemplified by the well-known “One Commune One Product” (OCOP) program. Additionally, protecting ecological spaces, respecting natural landscapes, <span class="blank-tag">4</span>, and conserving historical and cultural relics have become key priorities <span class="blank-tag">5</span>.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Infinitive of Purpose",
+        opts: [
+          "to abandon traditional farming methods entirely",
+          "to migrate to urban centers in search of better jobs",
+          "to recognize the value and potential of their rural roots",
+          "to demand higher wages for agricultural labor"
+        ],
+        ans: 2,
+        grammar: "Context Meaning",
+        tip: "The passage discusses a positive shift regarding rural areas. People are now seeing the 'value and potential' rather than viewing them as poor."
+      },
+      {
+        num: 2,
+        type: "Absolute Phrase",
+        opts: [
+          "with some even surpass urban areas in certain aspects",
+          "with some even surpassing urban areas in certain aspects",
+          "which some even surpassing urban areas in certain aspects",
+          "some even surpassing urban areas in certain aspects"
+        ],
+        ans: 1,
+        grammar: "With + Noun + V-ing",
+        tip: "An absolute phrase starting with 'with' is used to provide accompanying circumstances."
+      },
+      {
+        num: 3,
+        type: "Participle Phrase",
+        opts: [
+          "include transportation, irrigation, clean water, electricity, telecommunications, and social facilities like schools and healthcare centers",
+          "including transportation, irrigation, clean water, electricity, telecommunications, and social facilities like schools and healthcare centers",
+          "included transportation, irrigation, clean water, electricity, telecommunications, and social facilities like schools and healthcare centers",
+          "which including transportation, irrigation, clean water, electricity, telecommunications, and social facilities like schools and healthcare centers"
+        ],
+        ans: 1,
+        grammar: "Prepositional participle",
+        tip: "'Including' acts as a preposition here to introduce examples."
+      },
+      {
+        num: 4,
+        type: "Parallel Structure",
+        opts: [
+          "preserved traditional architecture",
+          "to preserve traditional architecture",
+          "preserving traditional architecture",
+          "preservation traditional architecture"
+        ],
+        ans: 2,
+        grammar: "Gerund phrase parallelism",
+        tip: "Must be parallel with 'protecting', 'respecting', and 'conserving'."
+      },
+      {
+        num: 5,
+        type: "Prepositional Phrase",
+        opts: [
+          "in creating rural areas truly worthy of being called “livable”",
+          "for creating rural areas truly worthy of being called “livable”",
+          "to creating rural areas truly worthy of being called “livable”",
+          "on creating rural areas truly worthy of being called “livable”"
+        ],
+        ans: 0,
+        grammar: "Preposition 'in'",
+        tip: "'Key priorities in doing something' signifies the field or context of the priorities."
+      }
+    ]
+  },
+  {
+    id: 'mekong_delta_nature',
+    title: 'Stunning nature in the fertile delta',
+    meta: 'Environment & Tourism',
+    html: `
+      <p>Tram Chim National Park in Tam Nong, Dong Thap is the world’s 2,000th Ramsar site. Certified as an “important wetland of humanity”, it attracts many tourists to the Mekong Delta. With the park as its highlight, Tam Nong district has had all 11 of its communes recognized as meeting “the new rural standard”, <span class="blank-tag">1</span>. Visitors to Tam Nong can admire vast wetlands characteristic of the delta, with birds in the sky, and scenes of lotus flowers and water lilies. <span class="blank-tag">2</span>, as tourists enjoy rustic dishes, and listen to sweet Vong Co melodies.</p>
+      <br>
+      <p>Building new rural areas is no longer a distant goal but an ongoing process that demands perseverance and has no endpoint. <span class="blank-tag">3</span>.</p>
+      <br>
+      <p>According to the National Coordination Office of the NTP on New Rural Development, <span class="blank-tag">4</span>, and 2,825 communes will meet “advanced” and “model new rural standards”. <span class="blank-tag">5</span>.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Absolute Phrase",
+        opts: [
+          "with four communes achieving the status of “advanced new rural standard”",
+          "with four communes achieved the status of “advanced new rural standard”",
+          "which four communes achieving the status of “advanced new rural standard”",
+          "for four communes achieving the status of “advanced new rural standard”"
+        ],
+        ans: 0,
+        grammar: "With + Noun + V-ing",
+        tip: "'With' is used to show accompanying circumstances with an active meaning (achieving)."
+      },
+      {
+        num: 2,
+        type: "Independent Sentence",
+        opts: [
+          "The local authorities strictly regulate wildlife observation",
+          "The journey includes many chances to experience the unique culture of people in the Mekong Delta",
+          "The park requires visitors to undergo environmental training",
+          "Modern resorts have replaced the traditional villages"
+        ],
+        ans: 1,
+        grammar: "Context Meaning",
+        tip: "The sentence mentions 'rustic dishes' and 'sweet Vong Co melodies', which are cultural experiences, fitting perfectly with 'unique culture'."
+      },
+      {
+        num: 3,
+        type: "Independent Sentence",
+        opts: [
+          "The government has decided to halt all funding for these long-term projects",
+          "Young people are increasingly leaving these areas to avoid the hard work",
+          "Residents of each region are adapting to the lifestyles and resources bestowed by Mother Nature and displaying unique creativity to achieve truly sustainable development",
+          "Modern technology has completely removed the need for human labor in these agricultural regions"
+        ],
+        ans: 2,
+        grammar: "Context Meaning",
+        tip: "The context discusses an 'ongoing process' and 'perseverance'. Adapting to nature and displaying creativity aligns with this sustainable development goal."
+      },
+      {
+        num: 4,
+        type: "Future tense clause",
+        opts: [
+          "by the end of 2024, 78% of communes across the country to meet “new rural standards”",
+          "by the end of 2024, 78% of communes across the country will meet “new rural standards”",
+          "by the end of 2024, 78% of communes across the country meeting “new rural standards”",
+          "by the end of 2024, 78% of communes across the country met “new rural standards”"
+        ],
+        ans: 1,
+        grammar: "Future Prediction",
+        tip: "The clause needs a finite verb for a future prediction ('will meet')."
+      },
+      {
+        num: 5,
+        type: "Independent Sentence",
+        opts: [
+          "These communes having 15,590 OCOP products with 3-star ratings or more",
+          "Which communes have 15,590 OCOP products with 3-star ratings or more",
+          "These communes have 15,590 OCOP products with 3-star ratings or more",
+          "Because these communes have 15,590 OCOP products with 3-star ratings or more"
+        ],
+        ans: 2,
+        grammar: "Independent sentence structure",
+        tip: "A complete sentence concluding the paragraph."
+      }
+    ]
+  },
+  {
+    id: 'hanoi_transformation',
+    title: 'Autumn sky, a new robe (Hanoi’s transformation)',
+    meta: 'Urban Development & Heritage',
+    html: `
+      <p>Hanoi’s transformation in the 21st century reflects long-held dreams of modernization <span class="blank-tag">1</span>. Once imagined in songs and poetry, the capital now presents a dynamic urban landscape shaped by expanding transport systems, modern architecture, and renewed public spaces.</p>
+      <br>
+      <p>The city has developed a clear network of radial highways and concentric ring roads based on historical foundations such as Ring Road No. 1, which once followed the ramparts of Dai La Citadel. <span class="blank-tag">2</span>, Hanoi now connects to the wider northern region through six major arterial routes. New bridges spanning the Red and Duong rivers, including Nhat Tan, Thanh Tri, and Dong Tru, <span class="blank-tag">3</span>.</p>
+      <br>
+      <p>Transport infrastructure has also evolved through elevated railways, multilayered intersections, and major roads that help reduce congestion. Elevated metro lines now form part of everyday urban life, <span class="blank-tag">4</span>.</p>
+      <br>
+      <p>At the same time, Hanoi’s skyline has risen dramatically. The city is home to more than 1,200 high-rise buildings, including Landmark 72, the tallest tower in Hanoi. Modern skyscrapers such as Lotte Center and Techno Park Tower emphasize innovation, energy efficiency, and contemporary architectural design.</p>
+      <br>
+      <p>Large-scale cultural and civic projects—including the National Convention Center, Hanoi Museum, and Vietnam Military History Museum—have created a modern urban hub that complements the historic core. Meanwhile, the coexistence of new structures with heritage sites, especially around Ba Dinh Square and the Thang Long Imperial Citadel, <span class="blank-tag">5</span>.</p>
+      <br>
+      <p>Throughout this transformation, lakes, parks, and green spaces continue to play a central role, preserving Hanoi’s identity while supporting the demands of modern urban life.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Adverbial Clause of Time/Contrast",
+        opts: [
+          "while preserve the spirit of its thousand-year-old heritage",
+          "to preserve the spirit of its thousand-year-old heritage",
+          "while preserving the spirit of its thousand-year-old heritage",
+          "which preserving the spirit of its thousand-year-old heritage"
+        ],
+        ans: 2,
+        grammar: "While + V-ing",
+        tip: "'While' can be followed by a present participle to show two simultaneous actions or a contrast."
+      },
+      {
+        num: 2,
+        type: "Prepositional Phrase",
+        opts: [
+          "Despite facing numerous financial shortages in recent years",
+          "Because the city rejected plans for modern highways",
+          "To preserve the ancient architecture of the inner city",
+          "From having only the Thang Long–Noi Bai Expressway in the 1990s"
+        ],
+        ans: 3,
+        grammar: "Context Meaning",
+        tip: "The passage contrasts the past ('in the 1990s') with the present ('now connects... through six major arterial routes')."
+      },
+      {
+        num: 3,
+        type: "Predicate",
+        opts: [
+          "reshaping the city’s geography and urban outlook",
+          "to reshape the city’s geography and urban outlook",
+          "have reshaped the city’s geography and urban outlook",
+          "which reshaped the city’s geography and urban outlook"
+        ],
+        ans: 2,
+        grammar: "Present perfect tense verb",
+        tip: "The main clause 'New bridges...' needs a main verb 'have reshaped'."
+      },
+      {
+        num: 4,
+        type: "Participle Phrase",
+        opts: [
+          "symbolized a new era of public transport",
+          "symbolizing a new era of public transport",
+          "which symbolizing a new era of public transport",
+          "to symbolize a new era of public transport"
+        ],
+        ans: 1,
+        grammar: "Present participle clause",
+        tip: "A present participle ('symbolizing') follows a comma to describe the result or significance of the main clause."
+      },
+      {
+        num: 5,
+        type: "Predicate",
+        opts: [
+          "proves that old architecture is no longer relevant",
+          "reflects an ongoing dialogue between tradition and modernity",
+          "creates a stark contrast that many residents find unappealing",
+          "forces urban planners to demolish heritage sites"
+        ],
+        ans: 1,
+        grammar: "Context Meaning",
+        tip: "The passage speaks positively about 'coexistence' of new structures with heritage sites, indicating a harmony ('dialogue') rather than conflict or demolition."
+      }
+    ]
   }
 ];
 

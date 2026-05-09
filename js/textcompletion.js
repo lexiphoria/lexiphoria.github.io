@@ -1196,6 +1196,731 @@ const ALL_EXAMS = [
         tip: "The passage speaks positively about 'coexistence' of new structures with heritage sites, indicating a harmony ('dialogue') rather than conflict or demolition."
       }
     ]
+  },
+  {
+    id: 'drone_ai_nav',
+    title: 'Drone Technology Powered by AI',
+    meta: 'Technology & Aviation',
+    html: `
+      <p>One of the most impactful advancements is in autonomous navigation. AI-powered obstacle avoidance systems allow drones to detect and manoeuvre around obstacles in real time, <span class="blank-tag">1</span>. AI also enhances path planning, helping drones determine the most efficient routes based on weather conditions, terrain, and specific mission goals.</p>
+      <br>
+      <p>Another game-changer is computer vision, <span class="blank-tag">2</span>. This is particularly valuable in areas like surveillance, agriculture, and search-and-rescue missions. AI-powered tracking systems also allow drones to follow moving objects accurately, making them useful for applications such as wildlife monitoring, security, and sports filming.</p>
+      <br>
+      <p>AI significantly improves data processing and analysis, allowing drones to generate real-time insights during operations. Whether it’s assessing disaster-stricken areas or inspecting infrastructure, AI-driven analytics provide critical information on the spot. Additionally, <span class="blank-tag">3</span>, helping industries make more informed decisions.</p>
+      <br>
+      <p>Communication between drones has also advanced through swarm intelligence, <span class="blank-tag">4</span>. AI optimises connectivity, ensuring stable and reliable communication between drones and control centres. When it comes to maintenance and performance, AI plays a crucial role in predictive maintenance. Drones can monitor their own health, anticipate potential failures, and schedule maintenance before issues arise, <span class="blank-tag">5</span>. AI also optimises performance parameters to ensure drones operate at peak efficiency.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Participle Phrase",
+        opts: [
+          "make flights safer and more reliable",
+          "to make flights safer and more reliable",
+          "making flights safer and more reliable",
+          "made flights safer and more reliable"
+        ],
+        ans: 2,
+        grammar: "Present Participle",
+        tip: "A present participle phrase ('making...') is used after a comma to describe the result of the previous action."
+      },
+      {
+        num: 2,
+        type: "Context Meaning Clause",
+        opts: [
+          "which restricts drones from operating in densely populated urban areas",
+          "which enables drones to recognise and classify objects with high precision",
+          "which forces operators to manually adjust camera angles during flight",
+          "which consumes a significant amount of battery power"
+        ],
+        ans: 1,
+        grammar: "Context Meaning",
+        tip: "The following sentence mentions 'surveillance, agriculture, and search-and-rescue', which rely heavily on recognizing and classifying objects."
+      },
+      {
+        num: 3,
+        type: "Context Meaning Clause",
+        opts: [
+          "humans must manually sort through the collected footage",
+          "drones are strictly limited to collecting data within short distances",
+          "physical inspections by human workers remain the only reliable method",
+          "AI can integrate and analyse vast amounts of data collected over time"
+        ],
+        ans: 3,
+        grammar: "Context Meaning",
+        tip: "The paragraph is about 'data processing and analysis'. Integrating and analyzing vast amounts of data fits this context perfectly."
+      },
+      {
+        num: 4,
+        type: "Relative Adverb",
+        opts: [
+          "which multiple drones work together efficiently",
+          "where multiple drones work together efficiently",
+          "that multiple drones work together efficiently",
+          "when multiple drones work together efficiently"
+        ],
+        ans: 1,
+        grammar: "Relative Adverb 'where'",
+        tip: "'Where' is used to refer back to 'swarm intelligence' as an abstract space/situation in which drones work together."
+      },
+      {
+        num: 5,
+        type: "Participle Phrase",
+        opts: [
+          "reduce downtime and extend their lifespan",
+          "reducing downtime and extending their lifespan",
+          "to reduce downtime and extend their lifespan",
+          "reduced downtime and extended their lifespan"
+        ],
+        ans: 1,
+        grammar: "Present Participle of Result",
+        tip: "Similar to Question 1, a present participle phrase ('reducing...') expresses the overall result of anticipating failures and scheduling maintenance."
+      }
+    ]
+  },
+  {
+    id: 'drone_frontiers',
+    title: 'Expanding Frontiers for AI-Powered Drones',
+    meta: 'Business & Logistics',
+    html: `
+      <p>Drones are transforming industries by making operations more efficient, cost-effective, and data-driven. In agriculture, AI-powered drones are revolutionising precision farming <span class="blank-tag">1</span>. Automated spraying reduces chemical use while increasing yields, helping farmers cut costs and improve sustainability. <span class="blank-tag">2</span>, leading to higher productivity and better resource management.</p>
+      <br>
+      <p>In logistics, drones are reshaping last-mile delivery by bypassing traffic and reaching remote areas quickly. Companies like Amazon, UPS, and Zipline are already testing drone deliveries for medical supplies and e-commerce, <span class="blank-tag">3</span>. Drones are also improving warehouse management by conducting automated inventory checks, reducing labour costs, and increasing efficiency. However, <span class="blank-tag">4</span>.</p>
+      <br>
+      <p>For infrastructure monitoring, drones provide safer and more efficient inspections of hard-to-reach areas like bridges, wind turbines, and power lines. AI-powered image analysis detects cracks and structural weaknesses early, <span class="blank-tag">5</span>. By eliminating the need for workers to operate in hazardous conditions, drones enhance safety while reducing costs. As technology advances, integration with the Internet of Things (IoT) and digital twin systems will further improve real-time monitoring and predictive maintenance.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Preposition + V-ing",
+        opts: [
+          "to use multispectral imaging to monitor crop health, detect diseases early, and optimise irrigation",
+          "by using multispectral imaging to monitor crop health, detect diseases early, and optimise irrigation",
+          "for using multispectral imaging to monitor crop health, detect diseases early, and optimise irrigation",
+          "in using multispectral imaging to monitor crop health, detect diseases early, and optimise irrigation"
+        ],
+        ans: 1,
+        grammar: "Preposition 'by'",
+        tip: "'By doing something' expresses the method or way something is achieved."
+      },
+      {
+        num: 2,
+        type: "Context Meaning Clause",
+        opts: [
+          "The heavy reliance on traditional machinery prevents modern farming techniques",
+          "The lack of internet connectivity in rural areas hinders communication",
+          "The ability to gather real-time data enables smarter decision-making",
+          "The high cost of drone maintenance discourages small-scale farmers"
+        ],
+        ans: 2,
+        grammar: "Context Meaning",
+        tip: "The paragraph focuses on efficiency and 'data-driven' operations. Gathering real-time data for smarter decision-making logically leads to 'higher productivity'."
+      },
+      {
+        num: 3,
+        type: "Participle Phrase",
+        opts: [
+          "significantly reduced delivery times",
+          "significantly reducing delivery times",
+          "to significantly reduce delivery times",
+          "which significantly reducing delivery times"
+        ],
+        ans: 1,
+        grammar: "Present Participle of Result",
+        tip: "A present participle phrase ('reducing...') follows a comma to express the positive result of using drones for delivery."
+      },
+      {
+        num: 4,
+        type: "Context Meaning Clause",
+        opts: [
+          "companies have completely abandoned the idea due to high operational costs",
+          "regulatory challenges and airspace restrictions remain hurdles to widespread adoption",
+          "consumers still prefer walking to physical stores to purchase their goods",
+          "human delivery drivers are faster and more reliable than automated systems"
+        ],
+        ans: 1,
+        grammar: "Context Meaning",
+        tip: "The conjunction 'However' signals a contrast. Despite the benefits mentioned, there are still obstacles ('hurdles') like regulations."
+      },
+      {
+        num: 5,
+        type: "Participle Phrase",
+        opts: [
+          "prevented costly failures and improved maintenance planning",
+          "preventing costly failures and improving maintenance planning",
+          "to prevent costly failures and improve maintenance planning",
+          "prevent costly failures and improve maintenance planning"
+        ],
+        ans: 1,
+        grammar: "Present Participle of Result",
+        tip: "A present participle phrase ('preventing... and improving...') acts as a result clause after the main action."
+      }
+    ]
+  },
+  {
+    id: 'drone_disaster',
+    title: 'Drones in Disaster Management',
+    meta: 'Society & Emergency Response',
+    html: `
+      <p>Drones are becoming an essential tool in disaster management, offering speed, efficiency, and versatility in emergency response efforts. Their ability to quickly gather real-time data, navigate difficult terrain, and assist in life-saving operations <span class="blank-tag">1</span>. One of the most critical applications of drones is surveillance and damage assessment. In the aftermath of a disaster, drones can rapidly survey affected areas, capturing aerial imagery and providing real-time data. <span class="blank-tag">2</span>, identify hazards, and determine where resources are needed most.</p>
+      <br>
+      <p>Drones are also transforming search and rescue operations. Equipped with thermal imaging cameras, they can detect body heat, <span class="blank-tag">3</span> – especially in conditions where traditional search methods are too dangerous or slow. When access to disaster-stricken areas is limited due to damaged infrastructure, drones can deliver essential supplies such as food, water, medical aid, and communication devices. Their ability to reach remote or hazardous locations ensures <span class="blank-tag">4</span>.</p>
+      <br>
+      <p>Beyond immediate response, drones play a key role in mapping and modelling disaster areas. They can generate detailed 3D maps that help responders understand terrain changes, structural damage, and potential risks, improving planning and coordination efforts. In situations where communication networks have been disrupted, drones can act as temporary communication relays, <span class="blank-tag">5</span>. This is particularly crucial in large-scale disasters where swift coordination can save lives.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Subject-Verb Agreement",
+        opts: [
+          "make them invaluable in crisis situations",
+          "makes them invaluable in crisis situations",
+          "making them invaluable in crisis situations",
+          "to make them invaluable in crisis situations"
+        ],
+        ans: 1,
+        grammar: "Singular Subject",
+        tip: "The core subject is 'Their ability', which is singular, so the verb must be 'makes'."
+      },
+      {
+        num: 2,
+        type: "Context Meaning Clause",
+        opts: [
+          "This forces residents to evacuate the city immediately",
+          "This delays the deployment of ground rescue teams",
+          "This helps emergency teams assess the extent of destruction",
+          "This prevents journalists from reporting the news accurately"
+        ],
+        ans: 2,
+        grammar: "Context Meaning",
+        tip: "The previous sentence mentions providing real-time data. This data 'helps emergency teams assess' the destruction, which fits with 'identify hazards'."
+      },
+      {
+        num: 3,
+        type: "Context Meaning Clause",
+        opts: [
+          "making it easier to locate missing persons in collapsed buildings, dense forests, or flood zones",
+          "confusing rescuers who rely solely on traditional tracking dogs",
+          "creating false alarms that waste valuable time and resources",
+          "requiring specialized training that most local volunteers lack"
+        ],
+        ans: 0,
+        grammar: "Context Meaning",
+        tip: "Detecting body heat is highly beneficial for search and rescue. It 'makes it easier to locate missing persons'."
+      },
+      {
+        num: 4,
+        type: "Noun Clause",
+        opts: [
+          "what critical resources get to those in need without delay",
+          "which critical resources get to those in need without delay",
+          "that critical resources get to those in need without delay",
+          "where critical resources get to those in need without delay"
+        ],
+        ans: 2,
+        grammar: "Noun Clause with 'that'",
+        tip: "The verb 'ensures' is followed by a 'that' clause to state the fact being guaranteed."
+      },
+      {
+        num: 5,
+        type: "Participle Phrase",
+        opts: [
+          "to restore connectivity for emergency teams and affected communities",
+          "restored connectivity for emergency teams and affected communities",
+          "restoring connectivity for emergency teams and affected communities",
+          "which restoring connectivity for emergency teams and affected communities"
+        ],
+        ans: 2,
+        grammar: "Present Participle",
+        tip: "A present participle phrase ('restoring...') describes the result or function of acting as temporary communication relays."
+      }
+    ]
+  },
+  {
+    id: 'drone_industries',
+    title: 'Transforming Multiple Industries',
+    meta: 'Technology & Economy',
+    html: `
+      <p>AI-powered drones are transforming multiple industries by improving efficiency, reducing costs, and enabling data-driven decision-making. In agriculture, drones support precision farming through multispectral imaging that monitors crop health, detects diseases, and optimises irrigation. <span class="blank-tag">1</span>. By collecting real-time data, drones help farmers manage resources more effectively and make smarter decisions.</p>
+      <br>
+      <p>In logistics, drones are reshaping last-mile delivery by avoiding traffic and reaching remote areas quickly. Major companies such as Amazon, UPS, and Zipline are testing drone delivery services for medical supplies and e-commerce products. Drones also improve warehouse management through automated inventory checks, <span class="blank-tag">2</span>. However, regulations and airspace restrictions still limit wider implementation.</p>
+      <br>
+      <p>Drones also play a crucial role in infrastructure monitoring. They inspect difficult and hazardous locations such as bridges, wind turbines, and power lines more safely and efficiently than traditional methods. AI-powered image analysis identifies structural damage and weaknesses early, <span class="blank-tag">3</span>. Future integration with IoT and digital twin technologies is expected to enhance real-time monitoring capabilities further.</p>
+      <br>
+      <p>In disaster management, drones have become essential tools for emergency response. They rapidly gather aerial imagery and real-time data to assess damage, identify hazards, and guide resource allocation after disasters. Equipped with thermal imaging cameras, <span class="blank-tag">4</span>. They can also deliver food, water, medical supplies, and communication devices to isolated communities when infrastructure is damaged.</p>
+      <br>
+      <p>Beyond emergency response, drones generate detailed 3D maps for disaster planning, restore temporary communication networks, monitor environmental threats such as floods and wildfires, and collect important environmental data. <span class="blank-tag">5</span>.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Context Meaning Clause",
+        opts: [
+          "Farmers are entirely replacing human labor with these automated machines",
+          "Automated spraying systems reduce chemical usage while increasing productivity and sustainability",
+          "The high cost of drones makes them inaccessible to most agricultural businesses",
+          "Excessive reliance on drones has led to a decrease in overall crop quality"
+        ],
+        ans: 1,
+        grammar: "Context Meaning",
+        tip: "The paragraph focuses on the positive applications of drones in agriculture, such as optimizing irrigation and reducing chemical usage."
+      },
+      {
+        num: 2,
+        type: "Participle Phrase",
+        opts: [
+          "helped reduce labour costs and increase operational efficiency",
+          "helping reduce labour costs and increase operational efficiency",
+          "to help reduce labour costs and increase operational efficiency",
+          "which helping reduce labour costs and increase operational efficiency"
+        ],
+        ans: 1,
+        grammar: "Present Participle",
+        tip: "A present participle phrase ('helping...') describes the ongoing result of automated inventory checks."
+      },
+      {
+        num: 3,
+        type: "Participle Phrase",
+        opts: [
+          "supported predictive maintenance and prevented costly failures",
+          "to support predictive maintenance and preventing costly failures",
+          "supporting predictive maintenance and preventing costly failures",
+          "support predictive maintenance and prevent costly failures"
+        ],
+        ans: 2,
+        grammar: "Present Participle of Result",
+        tip: "A present participle phrase ('supporting... and preventing...') acts as a result clause after the main action."
+      },
+      {
+        num: 4,
+        type: "Context Meaning Clause",
+        opts: [
+          "the batteries drain much faster in extremely cold environments",
+          "drones improve search and rescue operations by locating missing persons in dangerous or inaccessible areas",
+          "operators struggle to maintain a stable connection with the control center",
+          "they are primarily used to capture high-resolution photos for news outlets"
+        ],
+        ans: 1,
+        grammar: "Context Meaning",
+        tip: "The phrase 'Equipped with thermal imaging cameras' is a modifier that logically points to improving search and rescue operations by locating missing persons."
+      },
+      {
+        num: 5,
+        type: "Passive Voice",
+        opts: [
+          "They also used in disaster preparedness training and simulations",
+          "They are also using in disaster preparedness training and simulations",
+          "They are also used in disaster preparedness training and simulations",
+          "They have also used in disaster preparedness training and simulations"
+        ],
+        ans: 2,
+        grammar: "Passive Voice",
+        tip: "A full sentence using the passive voice ('are used') is needed to show another application of drones."
+      }
+    ]
+  },
+  {
+    id: 'asia_ev',
+    title: 'The Rise of Asia as an EV Powerhouse',
+    meta: 'Economy & Environment',
+    html: `
+      <p>Asia has become the epicentre of electric vehicle (EV) innovation and adoption. Countries like China, Japan, and South Korea have launched aggressive policies to boost EV usage, reduce emissions, and foster local industry growth. Chinese firms, in particular, have made spectacular strides, <span class="blank-tag">1</span>, even surpassing American EV innovator Tesla.</p>
+      <br>
+      <p>Founded by South African-born Elon Musk, Tesla revolutionised perceptions of EVs in the early 2010s. The company’s sleek designs, autonomous driving features, and extensive Supercharger network set the benchmark for electric cars. However, in recent years, Chinese companies like BYD, Geely, SAIC and Changan have begun to challenge Tesla’s dominance, <span class="blank-tag">2</span>.</p>
+      <br>
+      <p>BYD’s strategic focus on affordability and scale distinguishes it from Tesla’s premium positioning. The Chinese company has heavily invested in vertical integration, controlling everything from batteries to vehicle assembly, <span class="blank-tag">3</span>. Their recent models have gained popularity not only domestically but also increasingly in international markets like Europe and Latin America.</p>
+      <br>
+      <p>Significantly, BYD’s adoption of “blade” lithium-ion phosphate (LFP) battery technology is claimed to enhance safety and durability while reducing costs. The innovative battery design allows for more compact and flexible battery packs, <span class="blank-tag">4</span>. BYD’s extensive product lineup and aggressive pricing strategy have made it a formidable competitor, <span class="blank-tag">5</span>.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Absolute Phrase",
+        opts: [
+          "with privately owned BYD emerging as a global leader",
+          "for privately owned BYD emerging as a global leader",
+          "by privately owned BYD emerging as a global leader",
+          "which privately owned BYD emerging as a global leader"
+        ],
+        ans: 0,
+        grammar: "Absolute Phrase with 'with'",
+        tip: "The structure 'with + noun + V-ing' provides additional accompanying context to the main clause."
+      },
+      {
+        num: 2,
+        type: "Context Meaning Clause",
+        opts: [
+          "shifting their focus entirely to the production of luxury sports cars",
+          "leveraging lower costs, integrated battery manufacturing, and mass-market models",
+          "abandoning the electric vehicle market to focus on traditional gasoline engines",
+          "depending heavily on imported technology from European manufacturers"
+        ],
+        ans: 1,
+        grammar: "Context Meaning",
+        tip: "The passage explains how Chinese companies challenge Tesla. They do so by taking advantage of ('leveraging') lower costs and mass-market models."
+      },
+      {
+        num: 3,
+        type: "Relative Clause",
+        opts: [
+          "what enables cost efficiencies and rapid innovation",
+          "that enables cost efficiencies and rapid innovation",
+          "which enables cost efficiencies and rapid innovation",
+          "it enables cost efficiencies and rapid innovation"
+        ],
+        ans: 2,
+        grammar: "Non-defining Relative Clause",
+        tip: "A non-defining relative clause starting with 'which' is used after a comma to comment on the entire preceding clause."
+      },
+      {
+        num: 4,
+        type: "Context Meaning Clause",
+        opts: [
+          "leading to lighter vehicles with longer ranges",
+          "causing the vehicles to become excessively heavy and slow",
+          "making it impossible to install in smaller, urban vehicles",
+          "requiring frequent replacements that frustrate many drivers"
+        ],
+        ans: 0,
+        grammar: "Context Meaning",
+        tip: "The text discusses 'innovative battery design' that is 'compact and flexible'. The logical positive outcome is 'lighter vehicles with longer ranges'."
+      },
+      {
+        num: 5,
+        type: "Prepositional Phrase",
+        opts: [
+          "especially among mass-market consumers",
+          "especially between mass-market consumers",
+          "especially in mass-market consumers",
+          "especially within mass-market consumers"
+        ],
+        ans: 0,
+        grammar: "Preposition 'among'",
+        tip: "'Among' is used to refer to a group or category of people, such as 'consumers'."
+      }
+    ]
+  },
+  {
+    id: 'asia_ev_market',
+    title: 'Asia\'s EV Market',
+    meta: 'Economy & Technology',
+    html: `
+      <p>Asia has emerged as the global centre of electric vehicle (EV) innovation and adoption, led by countries such as China, Japan, and South Korea. Through strong government policies promoting EV usage, emissions reduction, and industrial growth, Asian manufacturers have rapidly advanced in the global market. Among them, <span class="blank-tag">1</span>, even surpassing it in several areas.</p>
+      <br>
+      <p>Tesla, founded by Elon Musk, transformed the EV industry in the early 2010s with stylish vehicles, autonomous driving technology, and an extensive charging network. However, <span class="blank-tag">2</span> by offering lower-cost vehicles, integrated battery production, and models aimed at mass-market consumers.</p>
+      <br>
+      <p>BYD’s success is largely driven by its focus on affordability, large-scale production, and vertical integration, <span class="blank-tag">3</span>. Its innovative “blade” lithium-ion phosphate battery technology improves safety, durability, and efficiency while reducing production costs. As a result, BYD has expanded rapidly both within China and in international markets such as Europe and Latin America. In 2024, <span class="blank-tag">4</span>, compared to Tesla’s 1.79 million vehicle deliveries and USD97.7 billion in revenue. BYD also overtook Volkswagen as China’s leading passenger car seller.</p>
+      <br>
+      <p>Chinese consumers have played a key role in this rise, increasingly favouring domestic brands over foreign automakers. China now controls more than 60 percent of the global EV market, and despite recent US trade tensions, <span class="blank-tag">5</span>.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Subject-Verb Agreement",
+        opts: [
+          "Chinese company BYD have become a major competitor to Tesla",
+          "Chinese company BYD has become a major competitor to Tesla",
+          "Chinese company BYD becoming a major competitor to Tesla",
+          "Chinese company BYD to become a major competitor to Tesla"
+        ],
+        ans: 1,
+        grammar: "Singular Subject",
+        tip: "'Chinese company BYD' is a singular subject, requiring the singular verb 'has become'."
+      },
+      {
+        num: 2,
+        type: "Context Meaning Clause",
+        opts: [
+          "traditional European car manufacturers have successfully reclaimed their market share",
+          "Chinese automakers including BYD, Geely, SAIC, and Changan have increasingly challenged Tesla",
+          "governments worldwide have decided to withdraw subsidies for electric vehicles",
+          "consumers have lost interest in electric vehicles due to safety concerns"
+        ],
+        ans: 1,
+        grammar: "Context Meaning",
+        tip: "The transition word 'However' introduces a contrast to Tesla's dominance, pointing to the challenge from Chinese automakers."
+      },
+      {
+        num: 3,
+        type: "Participle Phrase",
+        opts: [
+          "allowed the company to control battery manufacturing and vehicle assembly",
+          "allows the company to control battery manufacturing and vehicle assembly",
+          "to allow the company to control battery manufacturing and vehicle assembly",
+          "allowing the company to control battery manufacturing and vehicle assembly"
+        ],
+        ans: 3,
+        grammar: "Present Participle of Result",
+        tip: "A present participle ('allowing') is used after a comma to indicate the result of the previous action."
+      },
+      {
+        num: 4,
+        type: "Context Meaning Clause",
+        opts: [
+          "Tesla announced a complete halt on all international production facilities",
+          "BYD significantly outperformed Tesla by delivering 4.27 million vehicles and generating USD107 billion in revenue",
+          "the total number of gasoline cars sold worldwide reached an all-time low",
+          "most electric vehicle companies reported massive financial losses"
+        ],
+        ans: 1,
+        grammar: "Context Meaning",
+        tip: "The text directly compares these figures to 'Tesla’s 1.79 million vehicle deliveries', making BYD's outperformance the logical fit."
+      },
+      {
+        num: 5,
+        type: "Context Meaning Clause",
+        opts: [
+          "Chinese EV companies continue expanding into alternative international markets",
+          "they have decided to focus exclusively on their domestic market",
+          "international investors have pulled their funding from Asian startups",
+          "the transition to renewable energy sources has completely stopped"
+        ],
+        ans: 0,
+        grammar: "Context Meaning",
+        tip: "The use of 'despite' suggests that even with trade tensions, these companies maintain a positive trajectory, expanding into alternative markets."
+      }
+    ]
+  },
+  {
+    id: 'red_panda',
+    title: 'The Red Panda',
+    meta: 'Nature & Wildlife',
+    html: `
+      <p>Mention the word “panda” and the first thing most of us think about are China’s iconic black and white bears. If it was Po that came to mind, the wise-cracking star of the Kung Fu Panda films, <span class="blank-tag">1</span>: the adorable red panda – or Master Shifu in the movies.</p>
+      <br>
+      <p>In fact, while red pandas and giant pandas share a similar name, and both have a weakness for bamboo, that’s where the similarity ends. They aren’t closely related: Modern genetic evidence places red pandas in close affinity with raccoons, weasels, and skunks. Giant pandas, by contrast, are true bears, <span class="blank-tag">2</span>.</p>
+      <br>
+      <p>While it may be overshadowed by its more well-known cousin, the red panda is a symbol of the biodiversity found in the remote, mist-covered forests of the Eastern Himalayas and other mountainous regions of Asia where it lives. This small, tree-dwelling mammal faces numerous challenges in the wild, <span class="blank-tag">3</span>.</p>
+      <br>
+      <p>The red panda is a strikingly beautiful creature, <span class="blank-tag">4</span>, but it belongs to its own unique family Ailuridae. It is often referred to as a “firefox” because of its reddish-brown fur, <span class="blank-tag">5</span>.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Main Clause",
+        opts: [
+          "you will also know the not-so-famous kind",
+          "you will also knowing the not-so-famous kind",
+          "you will also known the not-so-famous kind",
+          "you will also to know the not-so-famous kind"
+        ],
+        ans: 0,
+        grammar: "Modal Verb + Bare Infinitive",
+        tip: "The modal verb 'will' must be followed by a bare infinitive ('know')."
+      },
+      {
+        num: 2,
+        type: "Context Meaning Clause",
+        opts: [
+          "which roam exclusively in the savannas of Africa",
+          "part of the family Ursidae alongside sun bears, moon bears, and polar bears",
+          "belonging to a completely extinct lineage of prehistoric animals",
+          "relying entirely on meat for their daily nutritional needs"
+        ],
+        ans: 1,
+        grammar: "Context Meaning",
+        tip: "The sentence contrasts giant pandas with red pandas by stating that giant pandas are 'true bears', which aligns with 'part of the family Ursidae'."
+      },
+      {
+        num: 3,
+        type: "Context Meaning Clause",
+        opts: [
+          "leading to a rapid and uncontrolled increase in their population",
+          "making it a focal point of global conservation efforts",
+          "causing them to migrate to urban centers in search of food",
+          "proving that they are highly adaptable to changing environments"
+        ],
+        ans: 1,
+        grammar: "Context Meaning",
+        tip: "Because the red panda faces 'numerous challenges in the wild', it logically becomes a 'focal point of global conservation efforts'."
+      },
+      {
+        num: 4,
+        type: "Participle Phrase",
+        opts: [
+          "resembled a cross between a fox, a raccoon, and a domestic cat",
+          "to resemble a cross between a fox, a raccoon, and a domestic cat",
+          "resembling a cross between a fox, a raccoon, and a domestic cat",
+          "which resembling a cross between a fox, a raccoon, and a domestic cat"
+        ],
+        ans: 2,
+        grammar: "Present Participle",
+        tip: "A present participle ('resembling') is used to add descriptive information about the subject 'creature'."
+      },
+      {
+        num: 5,
+        type: "Relative Clause",
+        opts: [
+          "what helps it blend into the mossy tree trunks",
+          "which helps it blend into the mossy tree trunks",
+          "who helps it blend into the mossy tree trunks",
+          "it helps it blend into the mossy tree trunks"
+        ],
+        ans: 1,
+        grammar: "Relative Pronoun",
+        tip: "'Which' is used to refer back to the entire preceding clause or the specific noun 'reddish-brown fur'."
+      }
+    ]
+  },
+  {
+    id: 'qatar_airways',
+    title: 'Qatar Airways',
+    meta: 'Business & Aviation',
+    html: `
+      <p>Qatar Airways, the national carrier of the State of Qatar, is the world’s fastest-growing airline, continuously expanding its network with new and exciting destinations. Operating a modern fleet, <span class="blank-tag">1</span>.</p>
+      <br>
+      <p>A multiple award-winning airline, Qatar Airways was named Airline of the Year by the 2024 World Airline Awards, managed by the prestigious international air transport rating organization Skytrax. In addition to being named the World’s Best Airline 2024, <span class="blank-tag">2</span>, World’s Best Business Class Lounge, and Best Airline in the Middle East.</p>
+      <br>
+      <p>Beyond aviation, Qatar Airways is a proud partner of major global sporting events, <span class="blank-tag">3</span>. As the official airline of the FIFA World Cup Qatar 2022™, the airline played a pivotal role in connecting fans to this historic event. Looking ahead, Qatar Airways continues to reinforce its commitment to sports by becoming a global partner of Formula 1® in 2027, <span class="blank-tag">4</span>.</p>
+      <br>
+      <p>As a member of the oneworld global alliance—the first Gulf carrier to join—Qatar Airways remains dedicated to delivering a seamless travel experience <span class="blank-tag">5</span>.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Context Meaning Clause",
+        opts: [
+          "the company has decided to reduce its number of international flights",
+          "the airline sets the benchmark for excellence in air travel",
+          "passengers frequently complain about the lack of modern amenities",
+          "it relies heavily on outdated aircraft to maintain low ticket prices"
+        ],
+        ans: 1,
+        grammar: "Context Meaning",
+        tip: "The passage speaks highly of the airline, describing it as 'fastest-growing' and 'expanding'. Setting a benchmark for excellence is consistent with this tone."
+      },
+      {
+        num: 2,
+        type: "Present Perfect",
+        opts: [
+          "Qatar Airways has also won awards for World’s Best Business Class",
+          "Qatar Airways had also won awards for World’s Best Business Class",
+          "Qatar Airways have also won awards for World’s Best Business Class",
+          "Qatar Airways also winning awards for World’s Best Business Class"
+        ],
+        ans: 0,
+        grammar: "Present Perfect Tense",
+        tip: "The present perfect 'has won' describes past achievements that are relevant to its current status."
+      },
+      {
+        num: 3,
+        type: "Participle Phrase",
+        opts: [
+          "strengthened its position as an airline of choice",
+          "to strengthen its position as an airline of choice",
+          "strengthening its position as an airline of choice",
+          "which strengthening its position as an airline of choice"
+        ],
+        ans: 2,
+        grammar: "Present Participle of Result",
+        tip: "A present participle ('strengthening') follows the comma to express the positive outcome of its sporting partnerships."
+      },
+      {
+        num: 4,
+        type: "Context Meaning Clause",
+        opts: [
+          "further solidifying its presence on the world stage",
+          "completely withdrawing its sponsorships from international competitions",
+          "acknowledging that sports marketing yields no significant benefits",
+          "shifting its entire focus away from the aviation industry"
+        ],
+        ans: 0,
+        grammar: "Context Meaning",
+        tip: "Becoming a global partner of Formula 1 will logically 'further solidify its presence on the world stage'."
+      },
+      {
+        num: 5,
+        type: "Prepositional Phrase",
+        opts: [
+          "with reliability, trust, and confidence at its core",
+          "for reliability, trust, and confidence at its core",
+          "in reliability, trust, and confidence at its core",
+          "on reliability, trust, and confidence at its core"
+        ],
+        ans: 0,
+        grammar: "Preposition 'with'",
+        tip: "The phrase 'with [something] at its core' is a common idiom meaning having those qualities as a central foundation."
+      }
+    ]
+  },
+  {
+    id: 'asean_relevance',
+    title: 'ASEAN Tests Its Relevance',
+    meta: 'Politics & International Relations',
+    html: `
+      <p>The two-day summit, which runs from May 7th to the 8th, <span class="blank-tag">1</span>. It is one of two annual leaders’ meetings this year. Prime Minister Le Minh Hung is set to deliver remarks outlining Vietnam's foreign policy priorities following the 14th Party Congress <span class="blank-tag">2</span>. As ASEAN leaders gather for the 48th ASEAN summit, Vietnam's Prime Minister's attendance is underscoring the country's continued engagement at the highest level.</p>
+      <br>
+      <p>Vietnam itself took on the ASEAN chairmanship in 2020 at the moment of unprecedented global disruption due to COVID-19. <span class="blank-tag">3</span>, COVID-19. Vietnam led ASEAN through a historic shift, <span class="blank-tag">4</span>. Under his leadership, ASEAN established the COVID-19 response fund and signed the world's largest trade agreement. It was a moment when cohesion met recovery.</p>
+      <br>
+      <p>But 2026 presents a very different test. Today's landscape isn't a pandemic, rather a more fragmented landscape marked by energy insecurity, geopolitical rivalry, and rising tensions in the Middle East. The challenge now is more than simple recovery which will require resilience and strategic positioning. So the question is what does this moment mean for the ASEAN and <span class="blank-tag">5</span>?</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Context Meaning Clause",
+        opts: [
+          "completely restructures the organization's internal funding mechanisms",
+          "brings together leaders of all 10 ASEAN member states and the ASEAN Secretary General",
+          "focuses exclusively on resolving bilateral trade disputes among members",
+          "requires all member nations to adopt a single unified currency"
+        ],
+        ans: 1,
+        grammar: "Context Meaning",
+        tip: "A summit brings leaders together, and the original text explicitly stated this was the purpose of the two-day summit."
+      },
+      {
+        num: 2,
+        type: "Preposition",
+        opts: [
+          "beside practical proposals to strengthen ASEAN's resilience",
+          "alongside practical proposals to strengthen ASEAN's resilience",
+          "outside practical proposals to strengthen ASEAN's resilience",
+          "inside practical proposals to strengthen ASEAN's resilience"
+        ],
+        ans: 1,
+        grammar: "Preposition 'alongside'",
+        tip: "'Alongside' means 'together with' or 'in addition to'."
+      },
+      {
+        num: 3,
+        type: "Past Continuous",
+        opts: [
+          "The region and the world at that time confronted a single defining challenge",
+          "The region and the world at that time are confronting a single defining challenge",
+          "The region and the world at that time were confronting a single defining challenge",
+          "The region and the world at that time have confronted a single defining challenge"
+        ],
+        ans: 2,
+        grammar: "Past Continuous Tense",
+        tip: "The phrase 'at that time' requires the past continuous tense to describe an ongoing situation in the past."
+      },
+      {
+        num: 4,
+        type: "Participle Phrase",
+        opts: [
+          "hosted virtual summits for the first time",
+          "to host virtual summits for the first time",
+          "hosting virtual summits for the first time",
+          "which hosting virtual summits for the first time"
+        ],
+        ans: 2,
+        grammar: "Present Participle",
+        tip: "A present participle ('hosting') explains how Vietnam led the historic shift."
+      },
+      {
+        num: 5,
+        type: "Context Meaning Clause",
+        opts: [
+          "how is Vietnam positioning itself within the ASEAN",
+          "why have so many countries decided to leave the organization",
+          "when will the global pandemic finally come to an end",
+          "where can tourists find the best destinations in Southeast Asia"
+        ],
+        ans: 0,
+        grammar: "Context Meaning",
+        tip: "The text focuses on Vietnam's role and engagement in ASEAN, making this question the logical conclusion to the passage."
+      }
+    ]
   }
 ];
 

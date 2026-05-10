@@ -1,110 +1,62 @@
-// ── YOUTUBE STUDY MUSIC PLAYER ─────────────────────────────────────────────
-// Playlist of lo-fi / study music YouTube video IDs
-const studyTracks = [
-  { id: 'jfKfPfyJRdk', name: 'Lo-Fi Chill Beats' },      // Lofi Girl live stream
-  { id: '5qap5aO4i9A', name: 'Night Study Vibes' },       // Lofi Girl - night
-  { id: 'rPjez8i61mc', name: 'Nature Flow Lofi' },        // nature lofi
-  { id: 'lTRiuFIWV54', name: 'Piano Rain Study' }         // piano study
-];
-
-let ytPlayer = null;
+// ── LOCAL AUDIO PLAYER ──────────────────────────────────────────────────
+const bgAudio = document.getElementById('bg-audio');
 let isPlaying = false;
-let ytReady = false;
-let currentTrackIdx = 0;
-let pendingPlay = false;
+let musicStarted = false;
 
-// Load YouTube IFrame API
-(function loadYTAPI() {
-  const tag = document.createElement('script');
-  tag.src = 'https://www.youtube.com/iframe_api';
-  document.head.appendChild(tag);
-})();
-
-// Called automatically by YouTube API when ready
-function onYouTubeIframeAPIReady() {
-  ytPlayer = new YT.Player('yt-player', {
-    height: '1',
-    width: '1',
-    videoId: studyTracks[currentTrackIdx].id,
-    playerVars: {
-      autoplay: 0,
-      controls: 0,
-      disablekb: 1,
-      fs: 0,
-      loop: 1,
-      modestbranding: 1,
-      playsinline: 1,
-      rel: 0,
-      mute: 0
-    },
-    events: {
-      onReady: function(e) {
-        ytReady = true;
-        e.target.setVolume(100);  // 100% volume
-        if (pendingPlay) { e.target.playVideo(); pendingPlay = false; }
-      },
-      onStateChange: function(e) {
-        const bar = document.getElementById('audio-bar');
-        if (e.data === YT.PlayerState.PLAYING) {
-          document.getElementById('play-btn').textContent = '\u23f8';
-          document.getElementById('vinyl').classList.add('playing');
-          bar.classList.add('playing-glow');
-          isPlaying = true;
-        } else if (e.data === YT.PlayerState.PAUSED || e.data === YT.PlayerState.ENDED) {
-          if (e.data === YT.PlayerState.ENDED) {
-            // Auto-loop: replay same track
-            e.target.playVideo();
-            return;
-          }
-          document.getElementById('play-btn').textContent = '\u25b6';
-          document.getElementById('vinyl').classList.remove('playing');
-          bar.classList.remove('playing-glow');
-          isPlaying = false;
-        }
-      },
-      onError: function() {
-        // If a stream fails, try next track
-        currentTrackIdx = (currentTrackIdx + 1) % studyTracks.length;
-        ytPlayer.loadVideoById(studyTracks[currentTrackIdx].id);
-        updateTrackName();
-      }
-    }
-  });
-}
+// Initialize track info
+document.getElementById('track-name').textContent = 'Playlist 4';
 
 function toggleAudio() {
-  if (!ytReady) {
-    // API not ready yet — mark as pending
-    pendingPlay = true;
-    showToast('🎵 Đang tải nhạc...');
-    return;
-  }
-  if (!isPlaying) {
-    ytPlayer.playVideo();
-    ytPlayer.setVolume(100);
+  if (!bgAudio) return;
+  
+  if (bgAudio.paused) {
+    bgAudio.play().then(() => {
+      musicStarted = true;
+      updateAudioUI(true);
+    }).catch(e => {
+      showToast('🎵 Click anywhere to play music');
+    });
   } else {
-    ytPlayer.pauseVideo();
+    bgAudio.pause();
+    updateAudioUI(false);
   }
 }
 
-function setYTVolume(val) {
-  if (ytReady) ytPlayer.setVolume(parseInt(val));
-}
-
-function switchTrack(idxStr) {
-  currentTrackIdx = parseInt(idxStr);
-  updateTrackName();
-  if (ytReady) {
-    ytPlayer.loadVideoById(studyTracks[currentTrackIdx].id);
-    ytPlayer.setVolume(100);
-    document.getElementById('vol-slider').value = 100;
-    // UI will update via onStateChange
+function updateAudioUI(playing) {
+  const bar = document.getElementById('audio-bar');
+  const vinyl = document.getElementById('vinyl');
+  const playBtn = document.getElementById('play-btn');
+  
+  isPlaying = playing;
+  if (playing) {
+    playBtn.textContent = '⏸';
+    vinyl.classList.add('playing');
+    bar.classList.add('playing-glow');
+  } else {
+    playBtn.textContent = '▶';
+    vinyl.classList.remove('playing');
+    bar.classList.remove('playing-glow');
   }
 }
 
-function updateTrackName() {
-  document.getElementById('track-name').textContent = studyTracks[currentTrackIdx].name;
-  document.getElementById('track-select').value = currentTrackIdx;
+function setVolume(val) {
+  if (bgAudio) bgAudio.volume = parseFloat(val);
+}
+
+// Auto-play on first click (browser policy)
+window.addEventListener('click', () => {
+  if (!musicStarted && bgAudio) {
+    bgAudio.play().then(() => {
+      musicStarted = true;
+      updateAudioUI(true);
+    }).catch(() => {});
+  }
+}, { once: true });
+
+// Listen for audio events to keep UI in sync
+if (bgAudio) {
+  bgAudio.addEventListener('play', () => updateAudioUI(true));
+  bgAudio.addEventListener('pause', () => updateAudioUI(false));
 }
 
 // ── GAME DATA ──────────────────────────────────────────────────────────────

@@ -96,10 +96,8 @@
 
 </div>
 
-<!-- Hidden YouTube player container -->
-<div id="yt-player-wrap" style="position:fixed;bottom:-9999px;left:-9999px;width:1px;height:1px;pointer-events:none;" aria-hidden="true">
-  <div id="yt-player"></div>
-</div>
+<!-- Local Audio Player -->
+<audio id="bg-audio" src="Playlist_4.mp3" loop preload="auto"></audio>
 
 <!-- Audio bar -->
 <div id="audio-bar">
@@ -111,19 +109,9 @@
   </div>
   <div style="display:flex;flex-direction:column;gap:4px;align-items:center;">
     <label style="font-size:9px;color:var(--muted);font-family:'JetBrains Mono',monospace;letter-spacing:1px;">VOL</label>
-    <input type="range" id="vol-slider" min="0" max="100" value="100"
-      oninput="setYTVolume(this.value)"
-      style="width:60px;height:3px;accent-color:var(--accent2);cursor:pointer;">
-  </div>
-  <div style="display:flex;flex-direction:column;gap:4px;align-items:center;">
-    <label style="font-size:9px;color:var(--muted);font-family:'JetBrains Mono',monospace;letter-spacing:1px;">TRACK</label>
-    <select id="track-select" onchange="switchTrack(this.value)"
-      style="background:var(--surface2);border:1px solid var(--border);color:var(--accent);font-size:10px;font-family:'JetBrains Mono',monospace;border-radius:6px;padding:2px 4px;cursor:pointer;">
-      <option value="0">☁️ Chill Beats</option>
-      <option value="1">🌙 Night Study</option>
-      <option value="2">🌿 Nature Flow</option>
-      <option value="3">🎹 Piano Rain</option>
-    </select>
+    <input type="range" id="vol-slider" min="0" max="1" step="0.01" value="1"
+      oninput="setVolume(this.value)"
+      style="width:80px;height:3px;accent-color:var(--accent2);cursor:pointer;">
   </div>
 </div>
 

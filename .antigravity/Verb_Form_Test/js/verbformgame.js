@@ -836,5 +836,5 @@ function endQuiz() {
 
 // Init
 window.onload = () => {
-  renderQuizList();
+  startQuiz(quizzes[0]);
 };

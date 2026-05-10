@@ -8,7 +8,7 @@ document.getElementById('track-name').textContent = 'Playlist 4';
 
 function toggleAudio() {
   if (!bgAudio) return;
-  
+
   if (bgAudio.paused) {
     bgAudio.play().then(() => {
       musicStarted = true;
@@ -26,7 +26,7 @@ function updateAudioUI(playing) {
   const bar = document.getElementById('audio-bar');
   const vinyl = document.getElementById('vinyl');
   const playBtn = document.getElementById('play-btn');
-  
+
   isPlaying = playing;
   if (playing) {
     playBtn.textContent = '⏸';
@@ -49,7 +49,7 @@ window.addEventListener('click', () => {
     bgAudio.play().then(() => {
       musicStarted = true;
       updateAudioUI(true);
-    }).catch(() => {});
+    }).catch(() => { });
   }
 }, { once: true });
 
@@ -3985,17 +3985,17 @@ const texts = [
 
 // ── STORAGE ────────────────────────────────────────────────────────────────
 const STORAGE_KEY = 'readmind_scores';
-const DRAFT_KEY   = 'readmind_draft';
+const DRAFT_KEY = 'readmind_draft';
 
 function saveScores() {
-  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(scores)); } catch(e) {}
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(scores)); } catch (e) { }
 }
 
 function loadScores() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) scores = JSON.parse(raw);
-  } catch(e) { scores = {}; }
+  } catch (e) { scores = {}; }
 }
 
 function saveDraft() {
@@ -4004,18 +4004,18 @@ function saveDraft() {
       textIndex: currentTextIndex,
       answers: answers
     }));
-  } catch(e) {}
+  } catch (e) { }
 }
 
 function loadDraft() {
   try {
     const raw = localStorage.getItem(DRAFT_KEY);
     return raw ? JSON.parse(raw) : null;
-  } catch(e) { return null; }
+  } catch (e) { return null; }
 }
 
 function clearDraft() {
-  try { localStorage.removeItem(DRAFT_KEY); } catch(e) {}
+  try { localStorage.removeItem(DRAFT_KEY); } catch (e) { }
 }
 
 function resetAllProgress() {
@@ -4023,7 +4023,7 @@ function resetAllProgress() {
   try {
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem(DRAFT_KEY);
-  } catch(e) {}
+  } catch (e) { }
   scores = {};
   updateHomeStats();
   showToast('Đã xoá tiến trình!');
@@ -4083,10 +4083,10 @@ function renderTextGrid() {
     const sc = scores[i];
     return `
     <div class="text-card ${completed ? 'completed' : ''}" onclick="startText(${i})">
-      <div class="card-num">TEXT ${String(i+1).padStart(2,'0')}</div>
+      <div class="card-num">TEXT ${String(i + 1).padStart(2, '0')}</div>
       <div class="card-title">${t.icon} ${t.title}</div>
       <div class="card-type"><span class="card-dot"></span>${t.type}</div>
-      ${completed ? `<div class="card-score">Score: ${sc}/6 · ${Math.round(sc/6*100)}%</div>` : ''}
+      ${completed ? `<div class="card-score">Score: ${sc}/6 · ${Math.round(sc / 6 * 100)}%</div>` : ''}
     </div>`;
   }).join('');
 }
@@ -4115,7 +4115,7 @@ function startText(idx) {
 
 function renderGame() {
   const text = texts[currentTextIndex];
-  document.getElementById('hdr-label').textContent = `TEXT ${String(currentTextIndex+1).padStart(2,'0')}`;
+  document.getElementById('hdr-label').textContent = `TEXT ${String(currentTextIndex + 1).padStart(2, '0')}`;
   document.getElementById('hdr-title').textContent = text.title;
   renderPassage();
   renderQuestions();
@@ -4132,13 +4132,13 @@ function renderPassage() {
 
   // Convert blanks
   for (let i = 1; i <= 6; i++) {
-    const ans = answers[i-1];
+    const ans = answers[i - 1];
     let cls = 'blank';
     let display = `(${i})`;
     if (ans !== null) {
-      const correct = ans === text.questions[i-1].answer;
+      const correct = ans === text.questions[i - 1].answer;
       cls += correct ? ' answered-correct' : ' answered-incorrect';
-      const chosen = text.questions[i-1].options[ans].substring(3);
+      const chosen = text.questions[i - 1].options[ans].substring(3);
       display = chosen;
     }
     html = html.replace(`___${i}___`, `<span class="${cls}" id="blank-${i}">${display}</span>`);
@@ -4163,7 +4163,7 @@ function renderQuestions() {
     else if (answers[i] !== null) {
       cls += answers[i] === q.answer ? ' correct' : ' incorrect';
     }
-    return `<div class="${cls}" onclick="goToQuestion(${i})">${i+1}</div>`;
+    return `<div class="${cls}" onclick="goToQuestion(${i})">${i + 1}</div>`;
   }).join('');
 
   // Question cards
@@ -4193,14 +4193,14 @@ function renderQuestions() {
     }
 
     const navHTML = `<div class="nav-btns">
-      <button class="btn-nav" onclick="goToQuestion(${i-1})" ${i === 0 ? 'disabled' : ''}>← Prev</button>
-      ${i < 5 ? `<button class="btn-nav primary" onclick="goToQuestion(${i+1})">Next →</button>` 
-               : `<button class="btn-nav primary" onclick="finishText()">Finish ✓</button>`}
+      <button class="btn-nav" onclick="goToQuestion(${i - 1})" ${i === 0 ? 'disabled' : ''}>← Prev</button>
+      ${i < 5 ? `<button class="btn-nav primary" onclick="goToQuestion(${i + 1})">Next →</button>`
+        : `<button class="btn-nav primary" onclick="finishText()">Finish ✓</button>`}
     </div>`;
 
     return `<div class="question-card ${isActive ? 'active' : ''}" id="q-card-${i}">
       <div class="q-type-tag">${q.type}</div>
-      <div class="q-num">Question ${i+1} of 6 · Blank (${q.blank})</div>
+      <div class="q-num">Question ${i + 1} of 6 · Blank (${q.blank})</div>
       <div class="q-text">${q.text.replace(`___${q.blank}___`, `<span class="q-blank-ref">(${q.blank})</span>`)}</div>
       <div class="options-grid">${optionsHTML}</div>
       ${feedbackHTML}

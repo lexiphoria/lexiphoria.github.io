@@ -1,120 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ReadMind — English Mastery Game</title>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/engquiz.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReadMind — English Mastery Game</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/engquiz.css">
 </head>
+
 <body>
 
-<div id="app">
+  <div id="app">
 
-  <!-- HOME -->
-  <div class="screen active" id="home">
-    <a class="home-link" href="index.html" style="position:absolute;top:20px;left:20px;">🏠 Home</a>
-    <div class="logo-area">
-      <div class="logo-word">ReadMind</div>
-      <div class="logo-sub">University Entrance · V-ACT English</div>
-    </div>
-    <p class="home-desc">Master Reading Cloze texts for the University Entrance Exam and V-ACT. 40 authentic passages covering every grammar and vocabulary skill you need.</p>
-    <div class="badge-row">
-      <span class="badge">PART OF SPEECH</span>
-      <span class="badge">COLLOCATIONS</span>
-      <span class="badge">LINKING WORDS</span>
-      <span class="badge">TENSE & ASPECT</span>
-      <span class="badge">CONDITIONALS</span>
-      <span class="badge">PHRASAL VERBS</span>
-    </div>
-    <button class="btn-primary" onclick="showScreen('select-screen')">▶ &nbsp; Start Practice</button>
-    <div class="stats-row">
-      <div class="stat-item"><div class="stat-num" id="stat-texts">40</div><div class="stat-lbl">Texts</div></div>
-      <div class="stat-item"><div class="stat-num" id="stat-qs">240</div><div class="stat-lbl">Questions</div></div>
-      <div class="stat-item"><div class="stat-num" id="stat-done">0</div><div class="stat-lbl">Completed</div></div>
-      <div class="stat-item"><div class="stat-num" id="stat-score">—</div><div class="stat-lbl">Best Score</div></div>
-    </div>
-    <button class="btn-secondary" style="margin-top:20px;font-size:12px;padding:8px 20px;" onclick="resetAllProgress()">🗑 Reset Progress</button>
-  </div>
-
-  <!-- TEXT SELECT -->
-  <div class="screen" id="select-screen">
-    <div style="width:100%; max-width:1000px; padding: 40px 24px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
-        <button class="back-btn" onclick="showScreen('home')">←</button>
-        <a class="home-link" href="index.html">🏠 Home</a>
+    <!-- HOME -->
+    <div class="screen active" id="home">
+      <a class="home-link" href="index.html" style="position:absolute;top:20px;left:20px;">🏠 Home</a>
+      <div class="logo-area">
+        <div class="logo-word">ReadMind</div>
+        <div class="logo-sub">University Entrance · V-ACT English</div>
       </div>
-      <div class="select-title">Choose a Passage</div>
-      <div class="select-sub">40 reading cloze texts · 6 questions each</div>
-      <div class="texts-grid" id="texts-grid"></div>
-    </div>
-  </div>
-
-  <!-- GAME -->
-  <div class="screen" id="game">
-    <div class="game-header">
-      <button class="back-btn" onclick="confirmBack()">←</button>
-      <a class="home-link" href="index.html">🏠</a>
-      <div class="header-meta">
-        <div class="text-label" id="hdr-label">TEXT 01</div>
-        <div class="text-title" id="hdr-title">Loading...</div>
+      <p class="home-desc">Master Reading Cloze texts for the University Entrance Exam and V-ACT. 40 authentic passages
+        covering every grammar and vocabulary skill you need.</p>
+      <div class="badge-row">
+        <span class="badge">PART OF SPEECH</span>
+        <span class="badge">COLLOCATIONS</span>
+        <span class="badge">LINKING WORDS</span>
+        <span class="badge">TENSE & ASPECT</span>
+        <span class="badge">CONDITIONALS</span>
+        <span class="badge">PHRASAL VERBS</span>
       </div>
-      <div class="header-right">
-        <div class="score-chip" id="score-chip">0 / 6</div>
-        <div class="progress-ring-wrap">
-          <svg class="progress-ring" width="44" height="44">
-            <circle class="ring-bg" cx="22" cy="22" r="18"/>
-            <circle class="ring-fg" id="ring-fg" cx="22" cy="22" r="18" stroke-dasharray="113" stroke-dashoffset="113"/>
-          </svg>
-          <div class="ring-label" id="ring-label">0%</div>
+      <button class="btn-primary" onclick="showScreen('select-screen')">▶ &nbsp; Start Practice</button>
+      <div class="stats-row">
+        <div class="stat-item">
+          <div class="stat-num" id="stat-texts">40</div>
+          <div class="stat-lbl">Texts</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" id="stat-qs">240</div>
+          <div class="stat-lbl">Questions</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" id="stat-done">0</div>
+          <div class="stat-lbl">Completed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" id="stat-score">—</div>
+          <div class="stat-lbl">Best Score</div>
         </div>
       </div>
+      <button class="btn-secondary" style="margin-top:20px;font-size:12px;padding:8px 20px;"
+        onclick="resetAllProgress()">🗑 Reset Progress</button>
     </div>
-    <div class="text-progress-bar"><div class="text-progress-fill" id="progress-fill" style="width:0%"></div></div>
-    <div class="game-body">
-      <div class="text-panel" id="text-panel"></div>
-      <div class="questions-panel" id="questions-panel"></div>
+
+    <!-- TEXT SELECT -->
+    <div class="screen" id="select-screen">
+      <div style="width:100%; max-width:1000px; padding: 40px 24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
+          <button class="back-btn" onclick="showScreen('home')">←</button>
+          <a class="home-link" href="index.html">🏠 Home</a>
+        </div>
+        <div class="select-title">Choose a Passage</div>
+        <div class="select-sub">40 reading cloze texts · 6 questions each</div>
+        <div class="texts-grid" id="texts-grid"></div>
+      </div>
+    </div>
+
+    <!-- GAME -->
+    <div class="screen" id="game">
+      <div class="game-header">
+        <button class="back-btn" onclick="confirmBack()">←</button>
+        <a class="home-link" href="index.html">🏠</a>
+        <div class="header-meta">
+          <div class="text-label" id="hdr-label">TEXT 01</div>
+          <div class="text-title" id="hdr-title">Loading...</div>
+        </div>
+        <div class="header-right">
+          <div class="score-chip" id="score-chip">0 / 6</div>
+          <div class="progress-ring-wrap">
+            <svg class="progress-ring" width="44" height="44">
+              <circle class="ring-bg" cx="22" cy="22" r="18" />
+              <circle class="ring-fg" id="ring-fg" cx="22" cy="22" r="18" stroke-dasharray="113"
+                stroke-dashoffset="113" />
+            </svg>
+            <div class="ring-label" id="ring-label">0%</div>
+          </div>
+        </div>
+      </div>
+      <div class="text-progress-bar">
+        <div class="text-progress-fill" id="progress-fill" style="width:0%"></div>
+      </div>
+      <div class="game-body">
+        <div class="text-panel" id="text-panel"></div>
+        <div class="questions-panel" id="questions-panel"></div>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="screen" id="results">
+      <div id="result-emoji" class="result-emoji">🎉</div>
+      <div class="result-title" id="result-title">Excellent!</div>
+      <div class="result-score" id="result-score"></div>
+      <div class="result-grid">
+        <div class="result-stat">
+          <div class="result-stat-num" id="r-correct" style="color:var(--correct)">0</div>
+          <div class="result-stat-lbl">Correct</div>
+        </div>
+        <div class="result-stat">
+          <div class="result-stat-num" id="r-wrong" style="color:var(--incorrect)">0</div>
+          <div class="result-stat-lbl">Wrong</div>
+        </div>
+        <div class="result-stat">
+          <div class="result-stat-num" id="r-pct" style="color:var(--accent)">0%</div>
+          <div class="result-stat-lbl">Accuracy</div>
+        </div>
+      </div>
+      <div class="btn-row">
+        <a class="btn-secondary" href="index.html"
+          style="display:inline-flex;align-items:center;text-decoration:none;">🏠 Home</a>
+        <button class="btn-secondary" onclick="showScreen('select-screen')">← All Texts</button>
+        <button class="btn-primary" onclick="nextText()">Next Text →</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Local Audio Player -->
+  <audio id="bg-audio" src="Playlist_4.mp3" loop preload="auto"></audio>
+
+  <!-- Audio bar -->
+  <div id="audio-bar">
+    <div class="vinyl-spin" id="vinyl"></div>
+    <button id="play-btn" onclick="toggleAudio()" title="Play / Pause">▶</button>
+    <div style="display:flex;flex-direction:column;gap:2px;min-width:90px;">
+      <div class="audio-label">STUDY MUSIC</div>
+      <div class="audio-info" id="track-name">Lo-Fi Chill</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4px;align-items:center;">
+      <label
+        style="font-size:9px;color:var(--muted);font-family:'JetBrains Mono',monospace;letter-spacing:1px;">VOL</label>
+      <input type="range" id="vol-slider" min="0" max="1" step="0.01" value="1" oninput="setVolume(this.value)"
+        style="width:80px;height:3px;accent-color:var(--accent2);cursor:pointer;">
     </div>
   </div>
 
-  <!-- RESULTS -->
-  <div class="screen" id="results">
-    <div id="result-emoji" class="result-emoji">🎉</div>
-    <div class="result-title" id="result-title">Excellent!</div>
-    <div class="result-score" id="result-score"></div>
-    <div class="result-grid">
-      <div class="result-stat"><div class="result-stat-num" id="r-correct" style="color:var(--correct)">0</div><div class="result-stat-lbl">Correct</div></div>
-      <div class="result-stat"><div class="result-stat-num" id="r-wrong" style="color:var(--incorrect)">0</div><div class="result-stat-lbl">Wrong</div></div>
-      <div class="result-stat"><div class="result-stat-num" id="r-pct" style="color:var(--accent)">0%</div><div class="result-stat-lbl">Accuracy</div></div>
-    </div>
-    <div class="btn-row">
-      <a class="btn-secondary" href="index.html" style="display:inline-flex;align-items:center;text-decoration:none;">🏠 Home</a>
-      <button class="btn-secondary" onclick="showScreen('select-screen')">← All Texts</button>
-      <button class="btn-primary" onclick="nextText()">Next Text →</button>
-    </div>
-  </div>
-
-</div>
-
-<!-- Local Audio Player -->
-<audio id="bg-audio" src="Playlist_4.mp3" loop preload="auto"></audio>
-
-<!-- Audio bar -->
-<div id="audio-bar">
-  <div class="vinyl-spin" id="vinyl"></div>
-  <button id="play-btn" onclick="toggleAudio()" title="Play / Pause">▶</button>
-  <div style="display:flex;flex-direction:column;gap:2px;min-width:90px;">
-    <div class="audio-label">STUDY MUSIC</div>
-    <div class="audio-info" id="track-name">Lo-Fi Chill</div>
-  </div>
-  <div style="display:flex;flex-direction:column;gap:4px;align-items:center;">
-    <label style="font-size:9px;color:var(--muted);font-family:'JetBrains Mono',monospace;letter-spacing:1px;">VOL</label>
-    <input type="range" id="vol-slider" min="0" max="1" step="0.01" value="1"
-      oninput="setVolume(this.value)"
-      style="width:80px;height:3px;accent-color:var(--accent2);cursor:pointer;">
-  </div>
-</div>
-
-<script src="js/engquiz.js"></script>
+  <script src="js/engquiz.js"></script>
 </body>
+
 </html>

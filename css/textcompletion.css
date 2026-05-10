@@ -21,7 +21,8 @@
 
   body {
     font-family: 'Sora', sans-serif;
-    background: var(--grad2);
+    background: url('../Background 4.svg') no-repeat center center fixed;
+    background-size: cover;
     min-height: 100vh;
     color: var(--text);
     overflow-x: hidden;

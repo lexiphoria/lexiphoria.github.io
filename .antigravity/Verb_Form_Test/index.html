@@ -64,6 +64,26 @@
   </div>
 </div>
 
+
+<!-- Local Audio Player -->
+<audio id="bg-audio" src="../../Playlist_3.mp3" loop preload="auto"></audio>
+
+<!-- Audio bar -->
+<div id="audio-bar">
+  <div class="vinyl-spin" id="vinyl"></div>
+  <button id="play-btn" onclick="toggleAudio()" title="Play / Pause">▶</button>
+  <div style="display:flex;flex-direction:column;gap:2px;min-width:90px;">
+    <div class="audio-label">STUDY MUSIC</div>
+    <div class="audio-info" id="track-name">Playlist 3</div>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:4px;align-items:center;">
+    <label style="font-size:9px;color:var(--text-muted);font-family:'JetBrains Mono',monospace;letter-spacing:1px;">VOL</label>
+    <input type="range" id="vol-slider" min="0" max="1" step="0.01" value="1"
+      oninput="setVolume(this.value)"
+      style="width:80px;height:3px;accent-color:var(--accent);cursor:pointer;">
+  </div>
+</div>
+
 <script src="js/verbformgame.js"></script>
 </body>
 </html>

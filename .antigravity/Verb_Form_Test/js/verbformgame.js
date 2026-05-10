@@ -838,3 +838,50 @@ function endQuiz() {
 window.onload = () => {
   startQuiz(quizzes[0]);
 };
+
+// -- LOCAL AUDIO PLAYER --------------------------------------------------
+const bgAudio = document.getElementById("bg-audio");
+let musicStarted = false;
+
+function toggleAudio() {
+  if (!bgAudio) return;
+  if (bgAudio.paused) {
+    bgAudio.play().then(() => {
+      musicStarted = true;
+      updateAudioUI(true);
+    }).catch(() => {
+      alert("?? Click anywhere to play music");
+    });
+  } else {
+    bgAudio.pause();
+    updateAudioUI(false);
+  }
+}
+
+function updateAudioUI(playing) {
+  const bar = document.getElementById("audio-bar");
+  const vinyl = document.getElementById("vinyl");
+  const playBtn = document.getElementById("play-btn");
+  if (playing) {
+    playBtn.textContent = "?";
+    vinyl.classList.add("playing");
+    bar.classList.add("playing-glow");
+  } else {
+    playBtn.textContent = "?";
+    vinyl.classList.remove("playing");
+    bar.classList.remove("playing-glow");
+  }
+}
+
+function setVolume(val) {
+  if (bgAudio) bgAudio.volume = parseFloat(val);
+}
+
+window.addEventListener("click", () => {
+  if (!musicStarted && bgAudio) {
+    bgAudio.play().then(() => {
+      musicStarted = true;
+      updateAudioUI(true);
+    }).catch(() => {});
+  }
+}, { once: true });

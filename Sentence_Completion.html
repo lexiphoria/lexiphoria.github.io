@@ -797,6 +797,7 @@
         let userChoices = [];
         let score = 0;
         let currentIdx = 0;
+        let allUserChoices = [];
 
         // Hàm trộn mảng
         function shuffle(array) {
@@ -820,6 +821,7 @@
                 tests.push(shuffled.slice(i, i + QUESTIONS_PER_TEST));
             }
             
+            allUserChoices = tests.map(test => new Array(test.length).fill(null));
             renderTestGrid();
         }
 
@@ -831,7 +833,26 @@
             tests.forEach((test, index) => {
                 const btn = document.createElement('button');
                 btn.className = 'test-btn';
-                btn.innerHTML = `Test ${index + 1}`;
+                
+                // Calculate correct answers
+                const choices = allUserChoices[index];
+                let correctCount = 0;
+                let answeredCount = 0;
+                if (choices) {
+                    choices.forEach((c, i) => {
+                        if (c !== null) {
+                            answeredCount++;
+                            if (c === test[i].correct) correctCount++;
+                        }
+                    });
+                }
+
+                if (answeredCount > 0) {
+                    btn.innerHTML = `Test ${index + 1} <span>(${correctCount}/${test.length} đúng)</span>`;
+                } else {
+                    btn.innerHTML = `Test ${index + 1}`;
+                }
+
                 btn.onclick = () => loadTest(index);
                 grid.appendChild(btn);
             });
@@ -841,9 +862,17 @@
         function loadTest(index) {
             currentTestIdx = index;
             currentTestData = tests[index];
-            userChoices = new Array(currentTestData.length).fill(null);
+            userChoices = allUserChoices[index];
+            
             score = 0;
-            currentIdx = 0;
+            userChoices.forEach((choice, i) => {
+                if (choice !== null && choice === currentTestData[i].correct) {
+                    score += 10;
+                }
+            });
+            
+            currentIdx = userChoices.indexOf(null);
+            if (currentIdx === -1) currentIdx = 0;
 
             // UI updates
             document.getElementById('test-selector-screen').style.display = 'none';
@@ -870,6 +899,7 @@
             document.getElementById('test-selector-screen').style.display = 'block';
             document.getElementById('quiz-screen').style.display = 'none';
             document.getElementById('main-title').innerText = 'English Quiz: Ultimate Collection';
+            renderTestGrid();
         }
 
         // Render câu hỏi chi tiết

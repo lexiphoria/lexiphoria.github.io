@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Entrance Exam - Full Collection</title>
+    <style>
+        :root {
+            --primary-bg: #1a1a2e; --card-bg: rgba(255, 255, 255, 0.15);
+            --correct-color: #4cd137; --wrong-color: #e84118;
+            --text-color: #ffffff; --accent-color: #fbc531;
+            --nav-bg: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif;
+            background: url('Background.svg') no-repeat center center fixed;
+            background-size: cover; background-color: #0f0c29; color: var(--text-color);
+            display: flex; justify-content: center; min-height: 100vh; padding: 20px 0;
+        }
+        .container {
+            width: 95%; max-width: 1100px; background: var(--card-bg); backdrop-filter: blur(12px);
+            padding: 30px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6); text-align: center;
+        }
+        h1 { font-size: 1.8rem; margin-bottom: 15px; color: var(--accent-color); }
+        
+        /* === TEST SELECTOR === */
+        #test-selector-screen {
+            padding: 10px 0;
+        }
+        .test-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+            gap: 20px; 
+            margin-top: 25px;
+        }
+        .test-btn {
+            background: rgba(0, 0, 0, 0.4); border: 2px solid var(--accent-color);
+            color: var(--text-color); font-size: 1.2rem; font-weight: bold;
+            padding: 25px 15px; border-radius: 15px; cursor: pointer; transition: all 0.3s;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+        }
+        .test-btn:hover { background: var(--accent-color); color: #000; transform: translateY(-5px); box-shadow: 0 5px 15px rgba(251,197,49,0.4);}
+        .test-btn span { font-size: 0.85rem; font-weight: normal; opacity: 0.8; }
+
+        /* === QUIZ SCREEN === */
+        .quiz-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+        .back-btn {
+            background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: white;
+            padding: 10px 20px; border-radius: 10px; cursor: pointer; font-weight: bold; transition: 0.2s; font-size: 1rem;
+        }
+        .back-btn:hover { background: rgba(255,255,255,0.2); }
+        
+        .score-board {
+            font-weight: bold; color: var(--accent-color); margin: 0;
+            background: rgba(0, 0, 0, 0.4); display: inline-block; padding: 10px 25px; border-radius: 20px;
+            font-size: 1.15rem; border: 1px solid rgba(251,197,49,0.3);
+        }
+
+        .layout-wrapper { display: flex; flex-direction: row; align-items: flex-start; gap: 25px; text-align: left; }
+        .sidebar { flex: 0 0 320px; background: var(--nav-bg); padding: 18px; border-radius: 15px; order: -1; }
+        .nav-panel {
+            display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px;
+            max-height: 500px; overflow-y: auto; padding-right: 5px;
+        }
+        .nav-btn {
+            width: 100%; aspect-ratio: 1; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.3);
+            background: transparent; color: var(--text-color); cursor: pointer; font-weight: bold;
+            display: flex; align-items: center; justify-content: center; font-size: 0.9rem;
+        }
+        .nav-btn.active { border: 2px solid var(--accent-color); box-shadow: 0 0 10px var(--accent-color); background: rgba(251,197,49,0.2); }
+        .nav-btn.correct { background: var(--correct-color); border: none; color: #fff;}
+        .nav-btn.wrong { background: var(--wrong-color); border: none; color: #fff;}
+        
+        .main-content { flex: 1; }
+        .question-box {
+            margin-bottom: 20px; font-size: 1.25rem; font-weight: 600; background: rgba(255,255,255,0.05);
+            padding: 22px; border-radius: 15px; min-height: 80px; line-height: 1.6;
+        }
+        .options-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+        .option-btn {
+            background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 16px 20px; color: white; border-radius: 10px; cursor: pointer; text-align: left;
+            font-size: 1.1rem; transition: all 0.2s; line-height: 1.4;
+        }
+        .option-btn:not(:disabled):hover { background: rgba(255,255,255,0.2); transform: translateX(5px); }
+        .option-btn.correct { background: var(--correct-color) !important; color: #fff; font-weight: bold; border-color: transparent;}
+        .option-btn.wrong { background: var(--wrong-color) !important; color: #fff; border-color: transparent;}
+        
+        #explanation {
+            margin-top: 20px; padding: 18px; background: rgba(0,0,0,0.5); border-radius: 10px;
+            border-left: 6px solid var(--accent-color); display: none; font-size: 1.05rem; line-height: 1.6;
+        }
+        #explanation strong { color: #fbc531; font-weight: 700; }
+        #next-btn {
+            margin-top: 20px; padding: 14px 35px; background: var(--accent-color); border: none; color: #000;
+            border-radius: 10px; font-weight: bold; cursor: pointer; display: none; font-size: 1.1rem; transition: 0.2s;
+        }
+        #next-btn:hover { background: #e6b800; transform: scale(1.05); }
+
+        /* === MUSIC PLAYER === */
+        .music-player {
+            margin: 0 auto 25px auto; max-width: 600px;
+            background: rgba(0, 0, 0, 0.45); border: 1px solid rgba(251, 197, 49, 0.35);
+            border-radius: 16px; padding: 12px 20px; display: flex; align-items: center; gap: 14px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.4);
+        }
+        .music-icon { font-size: 1.5rem; animation: spin-note 3s linear infinite; display: inline-block; flex-shrink: 0; }
+        @keyframes spin-note { 0% { transform: rotate(0deg); } 25% { transform: rotate(10deg); } 75% { transform: rotate(-10deg); } 100% { transform: rotate(0deg); } }
+        .music-info { flex: 1; min-width: 0; text-align: left;}
+        .music-title { font-size: 0.85rem; color: var(--accent-color); font-weight: 700; letter-spacing: 0.04em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 6px; }
+        .music-progress-wrap { display: flex; align-items: center; gap: 8px; }
+        .music-time { font-size: 0.72rem; color: rgba(255,255,255,0.55); flex-shrink: 0; width: 38px; text-align: right; }
+        #music-progress { flex: 1; height: 4px; -webkit-appearance: none; appearance: none; background: rgba(255,255,255,0.2); border-radius: 4px; cursor: pointer; outline: none; }
+        #music-progress::-webkit-slider-thumb { -webkit-appearance: none; width: 12px; height: 12px; border-radius: 50%; background: var(--accent-color); cursor: pointer; }
+        .music-controls { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+        .music-btn { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.25); color: #fff; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; font-size: 1rem; display: flex; align-items: center; justify-content: center; transition: background 0.2s, transform 0.15s; flex-shrink: 0; }
+        .music-btn:hover { background: rgba(251,197,49,0.25); transform: scale(1.1); }
+        .music-btn.play-btn { width: 42px; height: 42px; background: var(--accent-color); color: #000; font-size: 1.1rem; border: none; }
+        .music-btn.play-btn:hover { background: #e6b800; }
+        .volume-wrap { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+        .vol-icon { font-size: 0.9rem; color: rgba(255,255,255,0.6); }
+        #music-volume { width: 64px; height: 4px; -webkit-appearance: none; appearance: none; background: rgba(255,255,255,0.2); border-radius: 4px; cursor: pointer; outline: none; }
+        #music-volume::-webkit-slider-thumb { -webkit-appearance: none; width: 11px; height: 11px; border-radius: 50%; background: rgba(255,255,255,0.7); cursor: pointer; }
+        
+        @media (max-width: 850px) { 
+            .layout-wrapper { flex-direction: column; } 
+            .sidebar { flex: none; width: 100%; order: unset; } 
+            .volume-wrap { display: none; } 
+            .quiz-header { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="main-title">English Quiz: Ultimate Collection</h1>
+
+        <div class="music-player">
+            <span class="music-icon" id="music-note">🎵</span>
+            <div class="music-info">
+                <div class="music-title" id="music-title">Playlist_6.mp3</div>
+                <div class="music-progress-wrap">
+                    <span class="music-time" id="music-cur">0:00</span>
+                    <input type="range" id="music-progress" value="0" min="0" step="0.1">
+                    <span class="music-time" id="music-dur" style="text-align:left">0:00</span>
+                </div>
+            </div>
+            <div class="music-controls">
+                <button class="music-btn play-btn" id="play-btn" onclick="togglePlay()" title="Play / Pause">▶</button>
+                <button class="music-btn" onclick="restartTrack()" title="Restart">⟳</button>
+            </div>
+            <div class="volume-wrap">
+                <span class="vol-icon">🔈</span>
+                <input type="range" id="music-volume" min="0" max="1" step="0.01" value="0.6" oninput="setVolume(this.value)">
+                <span class="vol-icon">🔊</span>
+            </div>
+        </div>
+        <audio id="bg-audio" src="Playlist_6.mp3" preload="auto"></audio>
+        
+        <div id="test-selector-screen">
+            <p style="font-size: 1.1rem; opacity: 0.9;">Vui lòng chọn một Test để bắt đầu làm bài. Mỗi Test bao gồm 20 câu hỏi ngẫu nhiên và không lặp lại.</p>
+            <div class="test-grid" id="test-grid">
+                </div>
+        </div>
+
+        <div id="quiz-screen" style="display: none;">
+            <div class="quiz-header">
+                <button class="back-btn" onclick="goHome()">🔙 Quay lại Chọn Test</button>
+                <div class="score-board">Câu: <span id="cur-idx">1</span>/<span id="total-idx">0</span> | Điểm: <span id="score">0</span></div>
+            </div>
+            
+            <div class="layout-wrapper">
+                <div class="sidebar">
+                    <div style="font-size:0.95rem; margin-bottom:12px; color: #fbc531; font-weight:bold;">Bảng câu hỏi:</div>
+                    <div class="nav-panel" id="nav-panel"></div>
+                </div>
+                <div class="main-content">
+                    <div class="question-box" id="question"></div>
+                    <div class="options-grid" id="options"></div>
+                    <div id="explanation"></div>
+                    <button id="next-btn" onclick="handleNext()">TIẾP THEO ▶</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const qData = [
+            // Đã giữ nguyên toàn bộ mảng qData của bạn ở đây (bạn có thể copy dán thêm câu hỏi vào mảng này bao nhiêu tùy thích)
+            { q: "It is _______ to mistakenly take someone else's phone.", options: ["amazing", "helpless", "brilliant", "embarrassing"], correct: 3, ext: "Từ vựng: **embarrassing** (gây lúng túng, xấu hổ). Việc lấy nhầm điện thoại của người khác thật đáng xấu hổ." },
+            { q: "I'm feeling pretty tired. Do you mind ______ me home?", options: ["taking", "took", "take", "to take"], correct: 0, ext: "Ngữ pháp: Cấu trúc **Do you mind + V-ing?** (Bạn có phiền làm gì không?). Take sb home: đưa ai về nhà." },
+            { q: "My sister always goes to school ______ foot.", options: ["by", "in", "with", "on"], correct: 3, ext: "Cụm từ cố định: **on foot** (đi bộ). Các phương tiện khác thường dùng giới từ 'by' (by bus, by car), nhưng đi bộ thì luôn dùng 'on foot'." },
+            { q: "Scientists and engineers have invented devices to remove ______ from industrial wastes.", options: ["polluted", "pollute", "polluting", "pollutants"], correct: 3, ext: "Từ loại: Đứng sau động từ 'remove' (loại bỏ) cần một danh từ. **Pollutants** (Các chất ô nhiễm)." },
+            { q: "To stay healthy, you should take _____ a sport and exercise more often.", options: ["off", "down", "up", "in"], correct: 2, ext: "Phrasal verb: **take up** (bắt đầu một thói quen, sở thích hoặc môn thể thao). Để khỏe mạnh, bạn nên bắt đầu chơi một môn thể thao." },
+            { q: "She hardly ever eats fast food, ______?", options: ["does she", "doesn't she", "is she", "isn't she"], correct: 0, ext: "Ngữ pháp: Câu hỏi đuôi (Tag question). Từ **hardly** mang nghĩa phủ định (hiếm khi), nên phần mệnh đề được tính là phủ định. Do đó phần đuôi phải ở dạng khẳng định là **does she**." },
+            { q: "Nam looks much ______ today than yesterday.", options: ["good", "well", "better", "the best"], correct: 2, ext: "Ngữ pháp: So sánh hơn của từ 'good/well' là **better**. Câu có từ 'than' (hơn) nên dùng so sánh hơn." },
+            { q: "The flora and fauna on Earth create an _____ balance, making life possible for humans.", options: ["ecological", "ecologically", "ecology", "ecologist"], correct: 0, ext: "Từ loại: Chỗ trống nằm trước danh từ 'balance' nên cần một tính từ. **Ecological** (thuộc về sinh thái). Hệ động thực vật tạo ra sự cân bằng sinh thái." },
+            { q: "The Pikes put ______ their trip because of bad weather.", options: ["away", "up", "out", "off"], correct: 3, ext: "Phrasal verb: **put off** (trì hoãn). Gia đình Pike đã hoãn chuyến đi vì thời tiết xấu." },
+            { q: "My brother practises playing ______ guitar every day to join a music festival next month.", options: ["a", "the", "an", "Ø"], correct: 1, ext: "Ngữ pháp: Mạo từ (Article). Dùng mạo từ **the** trước tên các loại nhạc cụ khi nói về việc chơi nhạc cụ đó (play the guitar, play the piano)." },
+            { q: "Kevin and his mother are talking about modern robots at home.\n- Mom: \"Robots can recognize people's voices and do what they say.\"\n- Kevin: \"_____\"", options: ["What a great robot!", "I know. It's a new one.", "How amazing!", "Don't worry! It's easy!"], correct: 2, ext: "Giao tiếp: Phản hồi khi nghe một thông tin ấn tượng. **How amazing!** (Thật kinh ngạc/Tuyệt vời làm sao!)." },
+            { q: "Neither Linh nor her classmates ______ the National Museum so far.", options: ["visit", "visited", "have visited", "has visited"], correct: 2, ext: "Ngữ pháp: Cấu trúc **Neither A nor B + Động từ chia theo B**. B là 'her classmates' (số nhiều) nên dùng số nhiều. Dấu hiệu 'so far' chỉ thì Hiện tại hoàn thành -> **have visited**." },
+            { q: "The traditional family with three or four ______ living under one roof still remains in this region.", options: ["customs", "anniversaries", "generations", "performances"], correct: 2, ext: "Từ vựng: **generations** (thế hệ). 'Three or four generations living under one roof' nghĩa là 3-4 thế hệ cùng chung sống dưới một mái nhà." },
+            { q: "Nga: \"You look nervous! ______\" - Hoa: \"This thunder scares me to death.\"", options: ["How are you?", "Why's that?", "Come on!", "What's wrong?"], correct: 3, ext: "Giao tiếp: Hỏi thăm khi thấy ai đó lo lắng, bồn chồn: **What's wrong?** (Có chuyện gì vậy?)." },
+            { q: "I have just finished my writing about animals in cold regions. _____ I get to school, I will show it to you.", options: ["While", "Until", "Till", "As soon as"], correct: 3, ext: "Liên từ: **As soon as** (Ngay khi). 'Ngay khi tôi đến trường, tôi sẽ cho bạn xem nó'." },
+            { q: "He was homesick and he ______ all his family and friends.", options: ["missed", "wished", "desired", "hoped"], correct: 0, ext: "Từ vựng: **missed** (nhớ). Homesick là bệnh nhớ nhà. Anh ấy nhớ nhà và nhớ tất cả gia đình, bạn bè." },
+            { q: "The teacher made us ______ homework every day.", options: ["do", "did", "doing", "to do"], correct: 0, ext: "Ngữ pháp: Cấu trúc Make. **Make somebody + V(nguyên thể)** (Bắt/Yêu cầu ai đó làm gì). Do đó chọn 'do'." },
+            { q: "I'm very ______ to you for putting in so much hard work.", options: ["thoughtful", "grateful", "considerate", "careful"], correct: 1, ext: "Từ vựng: Cấu trúc **be grateful to sb for sth** (biết ơn ai vì điều gì). Tôi rất biết ơn bạn vì đã làm việc chăm chỉ." },
+            { q: "The police are questioning Tim now. If he _____ the truth earlier, they wouldn't arrest him at the moment.", options: ["tells", "would tell", "told", "had told"], correct: 3, ext: "Ngữ pháp: Câu điều kiện hỗn hợp loại 3-2 (If + S + had PII, S + would/could + V-bare). Giả định một điều trái ngược trong quá khứ dẫn đến kết quả trái ngược ở hiện tại." },
+            { q: "If you come to the theatre late, you have to wait until the ______ to get in.", options: ["break", "refreshment", "interval", "half-time"], correct: 2, ext: "Từ vựng: **interval** (thời gian nghỉ giải lao giữa một vở kịch, bộ phim hoặc buổi hòa nhạc)." },
+            { q: "There is a lack of ______ in the articles she writes. They are all the same.", options: ["creatively", "create", "creativity", "creative"], correct: 2, ext: "Từ loại: Đứng sau giới từ 'of' cần một danh từ. **Creativity** (sự sáng tạo). Bài viết của cô ấy thiếu đi sự sáng tạo, tất cả đều giống nhau." },
+            { q: "I don't believe Mary can do this exercise, ______?", options: ["do I", "don't I", "can she", "can't she"], correct: 2, ext: "Ngữ pháp: Câu hỏi đuôi. Mệnh đề chính bắt đầu bằng 'I don't believe' (mang nghĩa phủ định) nên phần đuôi phải là khẳng định. Chủ ngữ để chia đuôi tính theo mệnh đề phụ 'Mary can' -> **can she**." },
+            { q: "We _____ a video conference when the internet connection suddenly became very slow.", options: ["are having", "had", "have", "were having"], correct: 3, ext: "Ngữ pháp: Thì quá khứ tiếp diễn kết hợp quá khứ đơn (When + S + V-ed, S + was/were V-ing). Một hành động đang xảy ra (đang họp) thì hành động khác xen vào (mạng chậm)." },
+            { q: "People in Ireland dance ______ Easter day to win prize cakes.", options: ["at", "on", "for", "in"], correct: 1, ext: "Giới từ: Dùng giới từ **on** trước các ngày lễ cụ thể có chữ 'day' (on Easter day)." },
+            { q: "With online resources available, it's easier than ever to ______ basic English.", options: ["copy", "pick up", "go over", "look up"], correct: 1, ext: "Phrasal verb: **pick up** (học lỏm, tự học được một kỹ năng hay ngôn ngữ một cách tự nhiên). Nhờ tài nguyên mạng, việc tự học tiếng Anh cơ bản dễ hơn bao giờ hết." },
+            { q: "I don't like to eat out because it isn't easy to find a restaurant ______ has good food and service.", options: ["where", "which", "who", "whom"], correct: 1, ext: "Đại từ quan hệ: Thay thế cho danh từ chỉ vật 'a restaurant' làm chủ ngữ, ta dùng **which** (hoặc that)." },
+            { q: "We are planning a summer trip to _____ Mount Everest and _____ Mekong River in southern Vietnam.", options: ["the / the", "Ø / the", "the / Ø", "Ø / Ø"], correct: 1, ext: "Ngữ pháp: Mạo từ. Không dùng 'the' trước tên một ngọn núi đơn lẻ (Mount Everest). Dùng 'the' trước tên dòng sông (the Mekong River)." },
+            { q: "______ youngest boy has just started going to school.", options: ["The", "An", "A", "X"], correct: 0, ext: "Ngữ pháp: Mạo từ **The** luôn đứng trước tính từ so sánh nhất (youngest)." },
+            { q: "John: \"Have a nice weekend!\" ~ Peter: \"______\"", options: ["You the same.", "So do I.", "Will you?", "The same to you!"], correct: 3, ext: "Giao tiếp: Để đáp lại lời chúc 'Have a nice weekend' (Cuối tuần vui vẻ nhé), ta dùng **The same to you!** (Bạn cũng vậy nhé!)." },
+            { q: "Jane invites Mary to go to the cinema.\nJane: \"Would you like to go to the cinema with me this weekend?\" - Mary: \"______.\"", options: ["Yes, I do", "Yes, I'd love to", "Yes, it is", "I agree with you"], correct: 1, ext: "Giao tiếp: Lời đáp lịch sự khi nhận được lời mời (Would you like to...). **Yes, I'd love to** (Vâng, mình rất thích)." },
+            { q: "The strong tornado _____ some trees and dropped them miles away.", options: ["picked out", "took off", "pulled up", "cut out"], correct: 2, ext: "Phrasal verb: **pull up** (nhổ bật rễ). Trận lốc xoáy mạnh đã nhổ bật rễ một vài cái cây." },
+            { q: "His car is expensive. ______ is cheap.", options: ["My", "Me", "Mine", "I"], correct: 2, ext: "Ngữ pháp: Đại từ sở hữu **Mine** (xe của tôi) thay thế cho cụm 'My car' để tránh lặp từ." },
+            { q: "After receiving the results of the last test, he promised ______ harder for the next exam.", options: ["study", "studied", "studying", "to study"], correct: 3, ext: "Ngữ pháp: **Promise to V** (Hứa sẽ làm gì). Anh ấy hứa sẽ học chăm chỉ hơn." },
+            { q: "Who's going to look ______ your children while you're away.", options: ["at", "up", "over", "after"], correct: 3, ext: "Phrasal verb: **look after** (chăm sóc). Ai sẽ chăm sóc con bạn khi bạn đi vắng?" },
+            { q: "While we _____ Son Dong, we found a river in this biggest cave.", options: ["were exploring", "explore", "was exploring", "explored"], correct: 0, ext: "Ngữ pháp: Quá khứ tiếp diễn đi sau 'While' (Trong khi). Chủ ngữ 'we' số nhiều nên dùng **were exploring** (đang khám phá)." },
+            { q: "I wish my friends ______ more time on outdoor activities instead of playing computer games now.", options: ["spend", "spent", "spending", "to spend"], correct: 1, ext: "Ngữ pháp: Câu ước ở hiện tại (dấu hiệu: now), động từ phải lùi về quá khứ đơn -> **spent**." },
+            { q: "When we ______ along Hai Thinh Beach, we saw many people enjoying the fresh air.", options: ["walked", "are walking", "were walking", "have walked"], correct: 2, ext: "Ngữ pháp: Hành động đang xảy ra trong quá khứ bị hành động khác xen vào. 'Khi chúng tôi đang đi dạo (were walking) thì chúng tôi thấy (saw)...'." },
+            { q: "Mr Smith is having lunch at a restaurant.\nMr Smith: \"Could you bring me some water?\" - Waiter: \"______\"", options: ["No, I don't", "I don't want", "No, thanks", "Certainly sir."], correct: 3, ext: "Giao tiếp: Đáp lại lời yêu cầu lịch sự của khách hàng, nhân viên phục vụ dùng **Certainly sir** (Chắc chắn rồi thưa ngài)." },
+            { q: "He suggested _____ concert tickets in advance so that we could have a good view of the stage.", options: ["booking", "book", "to book", "booked"], correct: 0, ext: "Ngữ pháp: **Suggest + V-ing** (Đề xuất làm việc gì đó). Anh ấy đề nghị đặt vé (booking) trước." },
+            { q: "I think she didn't accept his invitation, ______?", options: ["didn't she", "did she", "do I", "don't I"], correct: 1, ext: "Ngữ pháp: Câu hỏi đuôi. Bắt đầu bằng 'I think', ta tính câu hỏi đuôi theo mệnh đề sau. 'She didn't accept' là mệnh đề phủ định -> phần đuôi khẳng định là **did she**." },
+            { q: "Tam Chuc Pagoda is ______ than many other pagodas in Vietnam.", options: ["beautiful", "the most beautiful", "most beautiful", "more beautiful"], correct: 3, ext: "Ngữ pháp: Câu so sánh hơn (có từ 'than'). 'Beautiful' là tính từ dài nên dùng **more beautiful**." },
+            { q: "Mr John is ______ old customer and an honest man.", options: ["a", "an", "the", "X"], correct: 1, ext: "Ngữ pháp: Mạo từ **an** đứng trước danh từ (hoặc tính từ bổ nghĩa cho danh từ) bắt đầu bằng nguyên âm (o trong từ old)." },
+            { q: "If she learns English well, she _____ in English-speaking countries.", options: ["study", "studies", "will study", "would study"], correct: 2, ext: "Ngữ pháp: Câu điều kiện loại 1 (If + Hiện tại đơn, Tương lai đơn). Chỉ một khả năng có thể xảy ra ở hiện tại hoặc tương lai." },
+            { q: "My car is blue. ______ is white.", options: ["Her", "Hers", "She", "Mine"], correct: 1, ext: "Ngữ pháp: Đại từ sở hữu **Hers** thay thế cho cụm 'Her car'. Xe của tôi màu xanh. Xe của cô ấy màu trắng." },
+            { q: "I wish I _____ how to paint on ceramic pots.", options: ["know", "knew", "knows", "known"], correct: 1, ext: "Ngữ pháp: Câu điều ước ở hiện tại (Wish + S + V-quá khứ). Diễn tả một điều ước không có thật ở hiện tại. Động từ chia quá khứ là **knew**." },
+            { q: "Would you mind ______ the door.", options: ["open", "opened", "opening", "to open"], correct: 2, ext: "Ngữ pháp: Cấu trúc **Would you mind + V-ing?** (Bạn có phiền làm gì đó không?). Đề nghị lịch sự." },
+            { q: "My cousin is not good at communicative English. He wishes he ______ speak English more fluently.", options: ["could", "can", "will", "must"], correct: 0, ext: "Ngữ pháp: Câu ước ở hiện tại. 'Can' lùi thì thành **could** (ước rằng anh ấy có thể nói trôi chảy hơn)." },
+            { q: "People in big cities are afraid ______ traffic jam.", options: ["on", "at", "in", "of"], correct: 3, ext: "Giới từ: Cụm tính từ **be afraid of** (sợ hãi cái gì đó). Người dân thành phố lớn rất sợ tắc đường." },
+            { q: "_____ it rains heavily, we decide to start the match on time.", options: ["Since", "Although", "Despite", "Because"], correct: 1, ext: "Liên từ: **Although + Mệnh đề** (Mặc dù). Mặc dù trời mưa to, chúng tôi vẫn quyết định bắt đầu trận đấu đúng giờ." },
+            { q: "Tet is the most important ______ for Vietnamese people.", options: ["celebration", "decoration", "preparation", "invention"], correct: 0, ext: "Từ vựng: **celebration** (lễ kỷ niệm/ngày lễ). Tết là dịp lễ kỷ niệm quan trọng nhất của người Việt." },
+            { q: "During the interview, the teacher asked me ______.", options: ["where I am studying now", "where I was studying then", "where was I studying then", "where I have studied then"], correct: 1, ext: "Ngữ pháp: Câu tường thuật dạng câu hỏi WH-. Trật tự từ là Chủ ngữ + Động từ (không đảo ngữ) và phải lùi thì. Hiện tại tiếp diễn lùi về quá khứ tiếp diễn -> **where I was studying then**." },
+            { q: "I'll phone you as soon as I ______ to Ho Chi Minh city.", options: ["reach", "arrive", "get", "will get"], correct: 2, ext: "Từ vựng: Cụm từ **get to + địa điểm** (đến nơi nào đó). (Reach không đi với to; Arrive đi với in/at). Sau 'as soon as' ta dùng thì HTĐ mang nghĩa tương lai." },
+            { q: "Today's cities are _____ than cities in the past.", options: ["lots larger", "much larger", "as large", "the largest"], correct: 1, ext: "Ngữ pháp: Nhấn mạnh cấu trúc so sánh hơn. Dùng **much + so sánh hơn** (much larger) để nhấn mạnh sự khác biệt lớn." },
+            { q: "If only my father ______ a doctor.", options: ["is", "be", "were", "has been"], correct: 2, ext: "Ngữ pháp: Câu ước (If only = I wish). Ở hiện tại, động từ to-be lùi về quá khứ và dùng **were** cho tất cả các ngôi." },
+            { q: "Many tourists visit Trang An Landscape every year to ______ its breathtaking natural beauty.", options: ["explore", "exploring", "exploration", "exploratory"], correct: 0, ext: "Ngữ pháp/Từ loại: Sau 'to' chỉ mục đích cần một động từ nguyên thể. **Explore** (Khám phá vẻ đẹp thiên nhiên ngoạn mục)." },
+            { q: "Is this my key, or is it ______?", options: ["your", "yours", "the your", "the yours"], correct: 1, ext: "Ngữ pháp: Đại từ sở hữu **yours** (của bạn) thay thế cho 'your key' để tránh lặp từ." },
+            { q: "This river now is much less _____ than before. People are aware of the environment and they try to keep the river clean.", options: ["polluted", "pollutes", "polluting", "pollution"], correct: 0, ext: "Từ loại: Đứng sau 'much less' cần một tính từ. **Polluted** (bị ô nhiễm). Con sông nay đã bớt ô nhiễm hơn nhiều." },
+            { q: "The man and the dog ______ I had taken a photo of were in the park.", options: ["which", "who", "whose", "that"], correct: 3, ext: "Đại từ quan hệ: Khi cụm danh từ phía trước bao gồm cả 'người và vật' (The man and the dog), ta bắt buộc dùng đại từ **that**." },
+            { q: "This village is famous for its local ______, especially traditional handmade products.", options: ["traditions", "customs", "specialities", "services"], correct: 2, ext: "Từ vựng: **specialities** (đặc sản). Ngôi làng nổi tiếng với các đặc sản địa phương, đặc biệt là đồ thủ công truyền thống." },
+            { q: "She washes her hands before meals, and ______.", options: ["so does he", "he is, too", "neither does he", "he doesn't either"], correct: 0, ext: "Ngữ pháp: Cấu trúc đồng tình khẳng định: **So + trợ động từ + S**. Động từ chính là 'washes' (HTĐ) nên trợ động từ là 'does' -> **so does he**." },
+            { q: "Huy got a bad mark for his English test. He must have been really _____.", options: ["disappointed", "relaxing", "interested", "happy"], correct: 0, ext: "Từ vựng: Huy bị điểm kém nên chắc hẳn anh ấy rất **disappointed** (thất vọng)." },
+            { q: "This bicycle costs ______ the other one.", options: ["twice as much as", "as twice much as", "as much as twice", "twice as much than"], correct: 0, ext: "Ngữ pháp: Cấu trúc so sánh gấp nhiều lần: **Số lần (twice) + as + much/many + as**." },
+            { q: "People who exercise regularly and eat fresh food often have a ______ lifestyle.", options: ["lazy", "careless", "harmful", "healthy"], correct: 3, ext: "Từ vựng: **healthy** (khỏe mạnh). Những người tập thể dục và ăn thức ăn tươi sẽ có một lối sống lành mạnh." },
+            { q: "She was the first woman in India ______ the president.", options: ["be", "is", "to be", "being"], correct: 2, ext: "Ngữ pháp: Rút gọn mệnh đề quan hệ khi đại từ quan hệ đứng sau các từ chỉ số thứ tự (the first, the second, the last...) -> dùng động từ nguyên thể có to (**to be**)." },
+            { q: "Eating _____ food is a popular habit of young people in big cities in Vietnam.", options: ["canteen", "stall", "street", "shop"], correct: 2, ext: "Cụm danh từ: **Street food** (Thức ăn đường phố/Ăn vặt lề đường). Đây là thói quen phổ biến của giới trẻ." },
+            { q: "I'd rather my vacation ______ longer.", options: ["is", "were", "be", "has been"], correct: 1, ext: "Ngữ pháp: Cấu trúc giả định **S1 + would rather + S2 + V(quá khứ)** (mong muốn ai/điều gì đó ở hiện tại). Kì nghỉ lùi về quá khứ dùng **were**." },
+            { q: "Cuc Phuong National Park often ______ a large number of tourists because of its rich wildlife and beautiful natural scenery.", options: ["reduces", "avoids", "attracts", "prevents"], correct: 2, ext: "Từ vựng: **attract** (thu hút). Vườn quốc gia Cúc Phương thu hút lượng lớn khách du lịch nhờ động vật hoang dã phong phú." },
+            { q: "She wanted a bike like ______.", options: ["me", "mine", "I", "the mine"], correct: 1, ext: "Ngữ pháp: Đại từ sở hữu **mine** (của tôi) thay thế cho 'my bike' để tránh lặp từ. Cô ấy muốn một chiếc xe giống chiếc xe của tôi." },
+            { q: "The children in my home village used to go _____, even in winter. Now they all have shoes.", options: ["on foot", "barefoot", "ground foot", "soil foot"], correct: 1, ext: "Từ vựng: **go barefoot** (đi chân trần/chân đất). Trẻ em quê tôi từng phải đi chân đất dù là mùa đông." },
+            { q: "I'm bored ______ doing the same job for a long time.", options: ["of", "to", "with", "about"], correct: 2, ext: "Giới từ: Cụm tính từ **be bored with** (chán nản với việc gì). Tôi chán phải làm một công việc trong thời gian dài." },
+            { q: "By watching English movies and talking to foreigners, students can gradually ______ new vocabulary and pronunciation.", options: ["pick up", "turn down", "look around", "break up"], correct: 0, ext: "Phrasal verb: **pick up** (học hỏi/tiếp thu tự nhiên). Học sinh có thể dần dần tiếp thu từ vựng mới thông qua xem phim." },
+            { q: "I'll phone you as soon as I ______ Ho Chi Minh city.", options: ["reach", "arrive", "get", "will get"], correct: 0, ext: "Ngữ pháp/Từ vựng: Động từ **reach** (đến) đi trực tiếp với tân ngữ, không cần giới từ đi kèm (khác với arrive in/at và get to)." },
+            { q: "The closest potentially _____ planet ever found has been spotted by Australian scientists, and it's just 14 light-years away.", options: ["habitable", "foreseeable", "transferable", "workable"], correct: 0, ext: "Từ vựng: **habitable** (có thể sinh sống được). Hành tinh có khả năng sống được." },
+            { q: "A: \"Would you mind if I sat here?\" - B: \"______.\"", options: ["Yes, that would be fine", "Yes, let's", "No, I don't mind", "Thanks"], correct: 2, ext: "Giao tiếp: Lời đáp cho câu hỏi xin phép lịch sự 'Bạn có phiền không?'. Nếu đồng ý cho họ ngồi, ta nói **No, I don't mind** (Không, tôi không phiền)." },
+            { q: "Many urban areas lack basic public ______ such as parks, libraries and hospitals.", options: ["locations", "amenities", "systems", "utilities"], correct: 1, ext: "Từ vựng: **amenities** (tiện nghi, tiện ích công cộng). Các khu vực đô thị thường thiếu các tiện ích cơ bản như công viên, bệnh viện." },
+            { q: "New pencil case is ______ the old one.", options: ["as half cheap as", "half as cheap as", "half cheaper than", "as cheap as half"], correct: 1, ext: "Ngữ pháp: Cấu trúc so sánh gấp số lần/phân số. **Số lần/phân số (half) + as + adj + as**. Hộp bút mới rẻ bằng một nửa hộp cũ." },
+            { q: "I don't think Fred gets _____ with Daniel. They always argue.", options: ["up", "through", "over", "on well"], correct: 3, ext: "Phrasal verb: **get on well with** (hòa thuận, có mối quan hệ tốt với ai). Họ luôn cãi nhau nên chắc chắn không hòa thuận." },
+            { q: "After Nga's birthday, her mother was the only person ______ the house.", options: ["clean", "cleaned", "cleaning", "to clean"], correct: 3, ext: "Ngữ pháp: Rút gọn mệnh đề quan hệ khi danh từ phía trước có các cụm từ chứa 'the only', 'the first'... Ta dùng động từ nguyên mẫu có to (**to V**)." },
+            { q: "\"Thank you for your birthday gift, I really like it.\" - \"______\"", options: ["I'm happy you like it.", "Of course, it's valuable.", "Not at all.", "It's nice of you."], correct: 0, ext: "Giao tiếp: Đáp lại lời cảm ơn khi nhận quà. **I'm happy you like it** (Mình rất vui vì bạn thích nó) là cách phản hồi lịch sự và tự nhiên nhất." },
+            { q: "They didn't go picnic last weekend, and she didn't ______.", options: ["neither", "either", "too", "so"], correct: 1, ext: "Ngữ pháp: Câu đồng tình phủ định đứng ở cuối câu ta dùng **either** (cô ấy cũng không). (Neither đứng đầu mệnh đề hoặc dùng trong 'neither did she')." },
+            { q: "We are going to have an outdoor activity _____ Sunday afternoon.", options: ["in", "on", "to", "for"], correct: 1, ext: "Ngữ pháp: Giới từ thời gian. Đứng trước các buổi của một ngày cụ thể (Sunday afternoon) ta dùng giới từ **on**." },
+            { q: "Lan wishes she ______ enough money now to buy her mother a bike.", options: ["has", "will have", "had", "has had"], correct: 2, ext: "Ngữ pháp: Câu ước ở hiện tại (now). Động từ phải lùi một thì về quá khứ đơn -> **had**." },
+            { q: "John is very busy. ______, he is always willing to give a hand with the housework.", options: ["In spite", "Therefore", "However", "Because"], correct: 2, ext: "Liên từ: **However** (Tuy nhiên). Liên kết 2 vế có ý nghĩa tương phản. Mặc dù bận rộn nhưng anh ấy vẫn luôn sẵn lòng giúp việc nhà (give a hand)." },
+            { q: "The TV ______ has been repaired looks OK.", options: ["who", "which", "whose", "where"], correct: 1, ext: "Đại từ quan hệ: Thay thế cho danh từ chỉ vật 'The TV' làm chủ ngữ cho vế sau, ta dùng **which**." },
+            { q: "My brother wants to be _____ electrical engineer in the future.", options: ["a", "the", "Ø", "an"], correct: 3, ext: "Ngữ pháp: Mạo từ. Từ 'electrical' bắt đầu bằng một nguyên âm (e) nên dùng mạo từ **an** chỉ nghề nghiệp." },
+            { q: "A popular newspaper with a ______ of over five million daily makes a lot of money.", options: ["column", "circulation", "message", "review"], correct: 1, ext: "Từ vựng: **circulation** (tổng số phát hành/lượng báo phát hành). Tờ báo nổi tiếng với lượng phát hành hơn 5 triệu bản mỗi ngày." },
+            { q: "You have never been to Nha Trang, ______?", options: ["have you", "haven't you", "you have", "you haven't"], correct: 0, ext: "Ngữ pháp: Câu hỏi đuôi. Mệnh đề trước chứa từ phủ định 'never', nên phần đuôi phải là khẳng định **have you**." },
+            { q: "Hello, ______ name is Linda and I am a student from the USA.", options: ["me", "I", "my", "mine"], correct: 2, ext: "Ngữ pháp: Đứng trước danh từ 'name' cần một tính từ sở hữu. **my** (Tên CỦA tôi là Linda)." },
+            { q: "_____ his bad cold, he continued to revise the lessons until late.", options: ["Because of", "Because", "In spite of", "Although"], correct: 2, ext: "Ngữ pháp: 'his bad cold' là một cụm danh từ. Thể hiện sự nhượng bộ (Mặc dù) đi kèm cụm danh từ ta dùng **In spite of** hoặc Despite." },
+            { q: "I was tired, ______ I went to bed early last night.", options: ["however", "although", "because", "so"], correct: 3, ext: "Liên từ: **so** (vì vậy, cho nên) nối hai mệnh đề nguyên nhân - kết quả. Tôi mệt, VÌ VẬY tôi đi ngủ sớm." },
+            { q: "That company is going to ______ a new building on this corner.", options: ["take after", "show off", "put up", "cut down"], correct: 2, ext: "Phrasal verb: **put up** (xây dựng lên, dựng lên). Công ty dự định xây một tòa nhà mới ở góc đường này." },
+            { q: "The children enjoy ______ soccer after school.", options: ["playing", "to play", "play", "played"], correct: 0, ext: "Ngữ pháp: Động từ đi sau cấu trúc **enjoy + V-ing** (thích làm gì đó). Bọn trẻ thích đá bóng." },
+            { q: "Last night the firefighters worked all night to _____ the flames before they spread further.", options: ["take off", "put out", "turn on", "bring up"], correct: 1, ext: "Phrasal verb: **put out** (dập tắt lửa). Lính cứu hỏa đã làm việc cả đêm để dập lửa." },
+            { q: "Nam is a student. He always goes to ______ school at 6.30 in the morning.", options: ["a", "an", "the", "Φ"], correct: 3, ext: "Ngữ pháp: Khi đi đến một địa điểm đúng với mục đích chính của nó (học sinh đến trường để học), ta dùng 'go to school' (không có mạo từ **Φ**)." },
+            { q: "Solar energy doesn't cause ______.", options: ["pollution", "polluted", "pollute", "pollutant"], correct: 0, ext: "Từ loại: Đứng sau động từ 'cause' (gây ra) cần một danh từ. **Pollution** (Sự ô nhiễm). Năng lượng mặt trời không gây ô nhiễm." },
+            { q: "Lan: \"How long does it take you to go to school?\"\n- Hoa: \"______.\"", options: ["by motorbike", "30 minutes", "30 kilometers", "to the West of the city"], correct: 1, ext: "Giao tiếp: Câu hỏi 'How long' dùng để hỏi về độ dài thời gian. Đáp án phù hợp là khoảng thời gian **30 minutes** (30 phút)." },
+            { q: "She _____ a self-portrait using her smartphone's beauty filter to make her skin look more even and radiant.", options: ["took", "got", "made", "had"], correct: 0, ext: "Cụm từ cố định: **take a portrait / take a photo** (chụp ảnh chân dung/chụp ảnh). Cô ấy đã chụp một bức ảnh selfie tự sướng." },
+            { q: "She works as ______ doctor in a small town.", options: ["a", "an", "the", "Ø"], correct: 0, ext: "Ngữ pháp: Mạo từ **a** dùng trước danh từ đếm được số ít chỉ nghề nghiệp, bắt đầu bằng phụ âm (doctor)." },
+            { q: "Tet is a festival ______ occurs in late January or early February.", options: ["whom", "when", "where", "which"], correct: 3, ext: "Đại từ quan hệ: Thay thế cho sự vật 'a festival' làm chủ ngữ cho động từ 'occurs', ta dùng **which** (hoặc that)." },
+            { q: "My family gathered ______ New Year's Day.", options: ["in", "on", "at", "to"], correct: 1, ext: "Giới từ: Giới từ **on** đi trước các ngày lễ cụ thể có từ 'Day' (on New Year's Day)." },
+            { q: "You can use _____ to buy tickets and book accommodation on your own.", options: ["online programmes", "tour guides", "travel agencies", "travel apps"], correct: 3, ext: "Từ vựng: **travel apps** (ứng dụng du lịch). Bạn có thể dùng ứng dụng để tự mua vé và đặt phòng nghỉ." },
+            { q: "There isn't ______ milk in the fridge.", options: ["much", "many", "some", "few"], correct: 0, ext: "Ngữ pháp: 'milk' (sữa) là danh từ không đếm được. Trong câu phủ định ta dùng lượng từ **much** (không có nhiều sữa)." },
+            { q: "It's raining. ______, Mr. Nam has to go to work.", options: ["Although", "So", "Therefore", "However"], correct: 3, ext: "Liên từ: Đứng đầu câu sau dấu chấm và trước dấu phẩy mang nghĩa tương phản (Tuy nhiên) thì chỉ có **However** hợp lý. Trời mưa. Tuy nhiên, ông Nam vẫn phải đi làm." },
+            { q: "She is ______ than her brother.", options: ["tall", "taller", "tallest", "most tall"], correct: 1, ext: "Ngữ pháp: Câu có 'than' nên dùng dạng so sánh hơn của tính từ ngắn 'tall' là **taller**." },
+            { q: "The Sun-world Samson water park we went to yesterday was fantastic, and the entrance _____ was proper.", options: ["fee", "charge", "cost", "fare"], correct: 0, ext: "Cụm từ: **entrance fee** (phí vào cửa, vé vào cổng). Fare thường dùng cho vé tàu xe." },
+            { q: "This is the boy ______ broke the window.", options: ["which", "who", "whom", "whose"], correct: 1, ext: "Đại từ quan hệ: Thay thế cho danh từ chỉ người 'the boy' làm chủ ngữ cho động từ 'broke' phía sau -> dùng **who**." },
+            { q: "If I ______ rich, I ______ around the world.", options: ["will be - travel", "am - will travel", "were - would travel", "would be - traveled"], correct: 2, ext: "Ngữ pháp: Câu điều kiện loại 2 (trái với thực tế hiện tại). If + S + were/V-ed, S + would + V. 'Nếu tôi giàu, tôi sẽ đi du lịch...'." },
+            { q: "Ann: \"Can I help you?\" - Ba: \"______\"", options: ["Yes, please", "No, I don't", "I'm sorry", "Thank you"], correct: 0, ext: "Giao tiếp: Đáp lại lời đề nghị giúp đỡ của người khác. Nếu đồng ý, ta trả lời lịch sự là **Yes, please** (Vâng, xin vui lòng giúp tôi)." },
+            { q: "Peter and Dane are talking about environmental protection.\n- Peter: \"We should limit the use of plastic bags.\"\n- Dane: \"_____. We can use paper bags instead.\"", options: ["I don't quite agree", "It's not true", "I completely agree", "You're wrong"], correct: 2, ext: "Giao tiếp: Dane đồng tình và gợi ý dùng túi giấy thay thế. Do đó đáp án là **I completely agree** (Tôi hoàn toàn đồng ý)." },
+            { q: "We ran out of time and had to ______ the meeting.", options: ["call up", "call off", "call in", "call for"], correct: 1, ext: "Phrasal verb: **call off** (hủy bỏ). Chúng tôi hết thời gian nên đành phải hủy cuộc họp." },
+            { q: "The girl wishes she ______ in Hue for the festival next week.", options: ["had stayed", "was staying", "stay", "could stay"], correct: 3, ext: "Ngữ pháp: Câu ước cho tương lai (dấu hiệu: next week). Cấu trúc: S + wish + S + could/would + V-bare. Cô gái ước mình có thể ở lại Huế." },
+            { q: "The company ______ a new marketing campaign to increase sales.", options: ["launched", "created", "built", "formed"], correct: 0, ext: "Từ vựng: Cụm từ cố định **launch a campaign** (khởi động/tung ra một chiến dịch). Công ty tung ra chiến dịch tiếp thị mới để tăng doanh số." },
+            { q: "If Nga trains harder, she _____ run faster than you and win the race next week.", options: ["could", "must", "can", "would"], correct: 2, ext: "Ngữ pháp: Câu điều kiện loại 1 diễn tả một khả năng ở tương lai. Dùng **can** (có thể) thay cho will để chỉ năng lực thể chất." },
+            { q: "All people who were without homes in the flood were provided with ______ accommodation.", options: ["short", "present", "instant", "temporary"], correct: 3, ext: "Từ vựng: **temporary accommodation** (chỗ ở tạm thời). Người mất nhà trong lũ được cung cấp chỗ ở tạm thời." },
+            { q: "You don't like watching this film, ______?", options: ["don't you", "are you", "do you", "did you"], correct: 2, ext: "Ngữ pháp: Câu hỏi đuôi. Mệnh đề chính là phủ định ở hiện tại đơn (don't like), nên phần đuôi là khẳng định tương ứng: **do you**." },
+            { q: "They went to ______ United States last year for a vacation.", options: ["a", "an", "the", "Ø"], correct: 2, ext: "Ngữ pháp: Mạo từ **the** bắt buộc phải đứng trước tên các quốc gia có dạng số nhiều hoặc liên bang (the United States, the UK, the Philippines)." },
+            { q: "Hoi An is famous _____ its old houses and beautiful lanterns.", options: ["for", "about", "to", "with"], correct: 0, ext: "Giới từ: Cụm tính từ **be famous for** (nổi tiếng về điều gì)." },
+            { q: "She usually wakes up early ______ the morning.", options: ["in", "on", "at", "to"], correct: 0, ext: "Giới từ: Giới từ **in** luôn đi với các buổi lớn trong ngày (in the morning, in the afternoon, in the evening)." },
+            { q: "When he lived in the city, he ______ to the theater twice a week.", options: ["uses to go", "has gone", "used to go", "was going"], correct: 2, ext: "Ngữ pháp: Cấu trúc **used to + V** diễn tả một thói quen trong quá khứ nay không còn nữa. Khi còn sống ở thành phố, anh ấy từng đi nhà hát 2 lần/tuần." },
+            { q: "There are only ______ students in the classroom this afternoon.", options: ["much", "many", "little", "few"], correct: 3, ext: "Lượng từ: 'students' là danh từ đếm được. Cụm từ 'only a few' (chỉ một vài) là phổ biến nhất. Đề bài không có 'a few', ta dùng **few** đi với 'only'." },
+            { q: "Tokyo is one of _____ most expensive cities in the world.", options: ["a", "the", "an", "Ø (no article)"], correct: 1, ext: "Ngữ pháp: Mạo từ trước câu so sánh nhất luôn dùng **the** (the most expensive)." },
+            { q: "The Viet (or Kinh) have the ______ number of people, accounting for about 86% of the population.", options: ["large", "larger", "largest.", "large as"], correct: 2, ext: "Ngữ pháp: So sánh nhất **the largest number** (số lượng lớn nhất). Người Việt có số dân đông nhất, chiếm 86%." },
+            { q: "My house ______ in 1999.", options: ["is built", "was building", "was built", "has been built"], correct: 2, ext: "Ngữ pháp: Câu bị động ở thì quá khứ đơn (có mốc thời gian in 1999). Ngôi nhà được xây nên dùng **was built**." },
+            { q: "People cough______ they breathe in the fume from cars.", options: ["because", "because of", "cause", "so"], correct: 0, ext: "Liên từ: Đứng trước một mệnh đề (S+V) và chỉ nguyên nhân nên ta dùng **because** (bởi vì). Mọi người ho vì họ hít phải khói xe." },
+            { q: "Tony and Mai are discussing their weekend trip.\n- Tony : \"How about going to the Bat Trang pottery village this Sunday?\"\n- Mai : \"_____\"", options: ["That's a good idea!", "You're welcome.", "I'm fine, thanks.", "Congratulations!"], correct: 0, ext: "Giao tiếp: Phản hồi một lời rủ rê, đề xuất (How about + V-ing). **That's a good idea!** (Ý kiến hay đấy!)." },
+            { q: "She is the girl ______ sings beautifully.", options: ["which", "who", "what", "whose"], correct: 1, ext: "Đại từ quan hệ: Thay thế cho danh từ chỉ người 'the girl' làm chủ ngữ cho động từ 'sings' -> dùng **who**." },
+            { q: "The entrance examination will be held ______ June 22nd 2012.", options: ["in", "on", "at", "to"], correct: 1, ext: "Ngữ pháp: Giới từ thời gian. Khi có ngày cụ thể (June 22nd) ta phải dùng giới từ **on**." },
+            { q: "Sally: \"What about collecting used paper every day?\" ~ Jenny: \"______\"", options: ["Yes, you must.", "Well done.", "That's a good idea.", "Thanks, it's nice of you."], correct: 2, ext: "Giao tiếp: Phản hồi lại một lời rủ rê, đề nghị (What about + V-ing). Tán thành ý kiến đó bằng câu **That's a good idea** (Đó là một ý kiến hay)." },
+            { q: "The exercise is quite difficult, so _____ in our class needs further guidance from the teacher.", options: ["anything", "everything", "no one", "everyone"], correct: 3, ext: "Đại từ bất định: Bài tập khá khó, nên **everyone** (mọi người) trong lớp đều cần giáo viên hướng dẫn thêm." },
+            { q: "She decided to ______ her old clothes to charity last week.", options: ["give away", "take out", "put off", "bring back"], correct: 0, ext: "Phrasal verb: **give away** (cho đi, quyên góp). Cô ấy quyết định quyên góp quần áo cũ cho hội từ thiện." },
+            { q: "Hoa: \"I suggest going camping next Sunday.\" - Lan: \"______\"", options: ["That's a fine day", "That's a good idea", "That's a reason", "That's a good trip"], correct: 1, ext: "Giao tiếp: Đáp lại lời gợi ý (I suggest...), ta dùng **That's a good idea** (Đó là một ý hay)." },
+            { q: "The forest fire______ for eight hours and some animals were badly injured or killed.", options: ["collapsed", "struck", "erupted", "raged"], correct: 3, ext: "Từ vựng: Động từ **rage** (cháy dữ dội, hoành hành). Đám cháy rừng bùng lên dữ dội trong 8 giờ." },
+            { q: "When teenagers face school pressure, they often wonder _____ to talk to for help and advice.", options: ["what", "who", "which", "where"], correct: 1, ext: "Từ để hỏi: Bọn trẻ băn khoăn không biết nên nói chuyện với **who** (ai) để xin lời khuyên." },
+            { q: "Her sense of ______ overwhelmed her when she realized she had lost the precious heirloom her grandmother had given her.", options: ["relief", "regret", "anticipation", "elation"], correct: 1, ext: "Từ vựng: **regret** (sự hối tiếc). Cô ấy ngập tràn hối tiếc khi nhận ra đã làm mất món kỷ vật quý giá." },
+            { q: "You will not succeed ______ working hard.", options: ["unless", "without", "if", "although"], correct: 1, ext: "Giới từ: Đằng sau chỗ trống là V-ing (working hard), nên không thể dùng mệnh đề (unless, if, although). Dùng **without** (nếu không có sự chăm chỉ)." },
+            { q: "He wants to be ______ astronaut when he grows up.", options: ["a", "an", "the", "Ø"], correct: 1, ext: "Ngữ pháp: Mạo từ **an** đi trước danh từ chỉ nghề nghiệp bắt đầu bằng nguyên âm (astronaut - phi hành gia)." },
+            { q: "Before choosing a career, you should think about your personal _____ to find the right job.", options: ["appearances", "boundaries", "accessories", "qualities"], correct: 3, ext: "Từ vựng: **personal qualities** (phẩm chất cá nhân). Bạn nên cân nhắc phẩm chất của mình để chọn đúng nghề." },
+            { q: "He spends a lot of time ______ his phone browsing the internet.", options: ["in", "on", "at", "to"], correct: 1, ext: "Giới từ: Dùng thì giờ trên điện thoại, trên internet ta dùng giới từ **on** (on the phone, on the internet)." },
+            { q: "It was raining very ______ so I took my umbrella.", options: ["wet", "badly", "hard", "firmly"], correct: 2, ext: "Từ vựng: Mưa to, mưa nặng hạt dùng trạng từ **hard** (raining hard) hoặc heavily." },
+            { q: "Thong is the ______ in my class.", options: ["clever", "cleverer", "cleverest", "clever than"], correct: 2, ext: "Ngữ pháp: So sánh nhất. Tính từ 'clever' dù có 2 âm tiết nhưng kết thúc bằng -er nên được xem là tính từ ngắn -> **cleverest**." },
+            { q: "The local council decided to _____ the proposal for a new skyscraper to preserve the historical beauty of the city.", options: ["get over", "fill in", "turn down", "pull down"], correct: 2, ext: "Phrasal verb: Hội đồng quyết định **turn down** (bác bỏ, từ chối) lời đề xuất xây tòa nhà chọc trời để bảo tồn cảnh quan." },
+            { q: "David ate a lot of food ______ he wasn't hungry.", options: ["despite", "although", "because of", "because"], correct: 1, ext: "Liên từ: Liên kết mệnh đề mang nghĩa nhượng bộ, trái ngược (David ăn rất nhiều DÙ anh ấy không đói) -> **although**." },
+            { q: "I ______ do that if I were you.", options: ["won't", "shan't", "wouldn't", "don't"], correct: 2, ext: "Ngữ pháp: Câu điều kiện loại 2 (If I were you). Vế chính dùng would/could + V. Dạng phủ định là **wouldn't**." },
+            { q: "The book ______ I borrowed from you was very interesting.", options: ["which", "who", "whom", "whose"], correct: 0, ext: "Đại từ quan hệ: Thay thế cho danh từ chỉ vật 'The book' làm tân ngữ cho vế sau -> dùng **which**." },
+            { q: "The school has organized several campaigns to _____ awareness of environmental protection among students.", options: ["raise", "rise", "lift", "height"], correct: 0, ext: "Cụm từ: **raise awareness** (nâng cao nhận thức). Phân biệt với rise (tự tăng lên, không có tân ngữ đi kèm)." },
+            { q: "- Mike: \"Would you like to have dinner with me?\". Jane: \"______\"", options: ["Yes, I'd love to", "Yes, so do I", "I'm very happy", "Yes, it is"], correct: 0, ext: "Giao tiếp: Lời đáp đồng ý cho câu mời mọc lịch sự (Would you like...) luôn là **Yes, I'd love to** (Vâng, tôi rất thích)." },
+            { q: "You may borrow as many books as you like provided you show them to ______ is at the desk.", options: ["who", "whom", "whoever", "which"], correct: 2, ext: "Đại từ quan hệ: **whoever** (bất cứ ai). Cứ đưa thẻ cho 'bất cứ ai đang ngồi ở bàn đăng ký'." },
+            { q: "Before you leave for the trip, make sure to ______ all the necessary documents and tickets.", options: ["bring up", "check out", "look over", "turn in"], correct: 2, ext: "Phrasal verb: **look over** (kiểm tra lại, xem lướt qua). Hãy đảm bảo kiểm tra lại tất cả giấy tờ." },
+            { q: "With the entrance exam coming up next month, Nam has been _____ every night to ensure he gets into his dream school.", options: ["under the weather", "burning the midnight oil", "pulling someone's leg", "barking up the wrong tree"], correct: 1, ext: "Thành ngữ (Idiom): **burn the midnight oil** (thức khuya học tập/làm việc miệt mài). Nam đang thức khuya học bài để đậu trường mơ ước." },
+            { q: "I'm going for a walk in the park. Would you like to ______ me company?", options: ["follow", "stay", "ward", "keep"], correct: 3, ext: "Cụm từ cố định: **keep someone company** (đi cùng ai đó cho họ đỡ buồn/có bầu có bạn)." },
+            { q: "I wish you ______ stop interrupting me whenever I speak.", options: ["did", "would", "might", "will"], correct: 1, ext: "Ngữ pháp: Câu điều ước phàn nàn về hành động của người khác. Dùng **wish + S + would + V-bare**." },
+            { q: "I am very interested in sarong - a traditional______ of Khmer people.", options: ["custom", "clothing", "clothes", "costume"], correct: 3, ext: "Từ vựng: Cụm từ quen thuộc **traditional costume** (trang phục truyền thống). Tôi rất thích xà rông - trang phục truyền thống của người Khmer." },
+            { q: "She is tall and has _____ blue eyes.", options: ["a", "an", "the", "Ø"], correct: 3, ext: "Ngữ pháp: 'eyes' là danh từ đếm được số nhiều, và ở đây đang tả chung chung nên ta không dùng mạo từ **(Ø)**." },
+            { q: "My brother lives in ______ small apartment in the city.", options: ["a", "an", "the", "Ø"], correct: 0, ext: "Ngữ pháp: Cụm danh từ 'small apartment' đếm được số ít, bắt đầu bằng phụ âm nên dùng mạo từ **a**." },
+            { q: "I wish I ______ more about the logistics of the expedition.", options: ["would know", "knew", "know", "can know"], correct: 1, ext: "Ngữ pháp: Câu ước ở hiện tại (diễn tả sự tiếc nuối hiện tại). Động từ lùi về quá khứ đơn: **knew**." },
+            { q: "He lives ______ New York City.", options: ["in", "on", "at", "to"], correct: 0, ext: "Giới từ: Giới từ **in** được dùng trước tên các thành phố, quốc gia, châu lục." },
+            { q: "She made _____ mistakes on her math test last week.", options: ["much", "a lot", "a little", "a few"], correct: 3, ext: "Ngữ pháp: Lượng từ. 'mistakes' là danh từ đếm được số nhiều. Trong các đáp án, chỉ có **a few** (một vài) đi được với danh từ đếm được." },
+            { q: "How ______ cups of tea do you drink every day?", options: ["much", "many", "little", "few"], correct: 1, ext: "Lượng từ: Từ để hỏi số lượng **How many** đi với danh từ đếm được số nhiều (cups). Bạn uống bao nhiêu tách trà mỗi ngày?" },
+            { q: "The little girl ______ when she fell.", options: ["hurt himself", "hurt herself", "has hurt", "hurt"], correct: 1, ext: "Đại từ phản thân: Chủ ngữ là 'The little girl' (cô bé - giới tính nữ) nên dùng **hurt herself** (tự làm đau chính mình)." },
+            { q: "This movie is not ______ as the previous one we watched.", options: ["more exciting", "as exciting", "the most exciting", "exciting"], correct: 1, ext: "Ngữ pháp: Cấu trúc so sánh bằng ở thể phủ định **not as + adj + as** (không thú vị bằng). Bộ phim này không thú vị bằng bộ trước." },
+            { q: "My smartphone is _____ than the old one I had before.", options: ["good", "better", "the best", "as good"], correct: 1, ext: "Ngữ pháp: Câu so sánh hơn (than). Tính từ bất quy tắc 'good' đổi thành **better**." },
+            { q: "I wanted to go for a walk, ______ it started raining.", options: ["and", "but", "so", "because"], correct: 1, ext: "Liên từ: Liên từ **but** (nhưng) diễn tả sự trái ngược. Tôi muốn đi dạo, NHƯNG trời lại bắt đầu mưa." },
+            { q: "Listen to what I am saying, ______?", options: ["don't you", "do you", "did you", "will you"], correct: 3, ext: "Ngữ pháp: Câu hỏi đuôi cho câu mệnh lệnh (bắt đầu bằng động từ). Đuôi luôn là **will you**." },
+            { q: "I have a friend ______ brother is a famous musician.", options: ["which", "who", "whom", "whose"], correct: 3, ext: "Đại từ quan hệ: Chỉ sự sở hữu. Tôi có một người bạn, người mà anh trai CỦA người bạn đó (whose brother) là nhạc sĩ nổi tiếng." },
+            { q: "I didn't go to the party _____ I was feeling sick.", options: ["so", "because of", "because", "even though"], correct: 2, ext: "Liên từ: Đằng sau là một mệnh đề chỉ nguyên nhân (S + V) nên dùng **because** (bởi vì)." },
+            { q: "-Nam: \"Would you like some more tea?\" ~ John: \"______\"", options: ["Yes, give me some", "Yes, you would", "No, I won't", "No, please"], correct: 3, ext: "Giao tiếp: Lời từ chối lịch sự cho một lời mời ăn uống, thường là 'No, thanks' hoặc **No, please**." },
+            { q: "______ this medicine, and you'll be well again.", options: ["Have", "Drink", "Eat", "Take"], correct: 3, ext: "Từ vựng: Uống thuốc trong tiếng Anh không dùng 'drink' hay 'eat' mà dùng động từ **Take** (Take medicine)." },
+            { q: "You can ______ the new words in the dictionary.", options: ["look for", "look after", "look up", "look at"], correct: 2, ext: "Phrasal verb: **look up** (tra cứu). Bạn có thể tra những từ mới trong từ điển." },
+            { q: "The book _____ you lent me was not only fascinating but also informative.", options: ["which", "who", "whom", "whose"], correct: 0, ext: "Đại từ quan hệ: Thay thế cho danh từ chỉ vật 'The book' làm tân ngữ, ta dùng **which**." },
+            { q: "We took ______ of the fine weather and spent the day on the beach.", options: ["chance", "advantage", "occasion", "effect"], correct: 1, ext: "Cụm từ cố định: **take advantage of** (tận dụng). Tận dụng thời tiết đẹp để dành cả ngày trên bãi biển." },
+            { q: "Yoko feels ______ again after her illness but she still cannot work ______.", options: ["strong/ hardly", "strongly/ hard", "strongly/ hardly", "strong/ hard"], correct: 3, ext: "Ngữ pháp: Sau động từ nối 'feel' cần tính từ (strong). Sau động từ thường 'work' cần trạng từ (hard). Từ 'hardly' có nghĩa là 'hiếm khi' (sai nghĩa). Đáp án: **strong/ hard**." },
+            { q: "\"Would you mind closing the window, please?\" - \"_____\"", options: ["Of course. Are you cold?", "No, not at all. I will close it now.", "Yes, I do. You can close it.", "Yes of course you can do it."], correct: 1, ext: "Giao tiếp: Đáp lại lời yêu cầu 'Would you mind...' (Bạn có phiền...). Để đồng ý giúp, ta trả lời 'Không phiền chút nào': **No, not at all**." },
+            { q: "We used to ______ past the market on the way to school.", options: ["walk", "walked", "walking", "have walked"], correct: 0, ext: "Ngữ pháp: Cấu trúc **used to + V-nguyên thể** (Đã từng làm gì trong quá khứ)." },
+            { q: "This song _____ memories of our field trip to the beach last semester.", options: ["hands down", "watches out", "brings back", "gets around"], correct: 2, ext: "Phrasal verb: **bring back memories** (gợi nhớ lại kỷ niệm). Bài hát này gợi lại ký ức về chuyến đi dã ngoại." },
+            { q: "Remember to turn ______ the light when leaving the office.", options: ["off", "on", "down", "in"], correct: 0, ext: "Phrasal verb: Rời khỏi văn phòng thì hãy nhớ tắt đèn: **turn off**." },
+            { q: "The policemen _____ him to go with them to the police station.", options: ["let", "caused", "made", "forced"], correct: 3, ext: "Ngữ pháp: Đằng sau là 'to go' (to V). Cấu trúc **force sb to V** (ép buộc ai đó làm gì). ('Let' và 'make' dùng V-bare)." },
+            { q: "Ho Chi Minh City is the ______ one in the country.", options: ["larger", "large", "largest", "largely"], correct: 2, ext: "Ngữ pháp: Câu so sánh nhất có mạo từ 'the'. Dùng **largest** (Thành phố lớn nhất trong nước)." },
+            { q: "Mrs Smith _____ her children the task of cleaning out the attic.", options: ["set", "took", "got", "assigned"], correct: 3, ext: "Từ vựng: **assign a task** (giao nhiệm vụ). Bà Smith giao cho các con nhiệm vụ dọn dẹp gác xép." },
+            { q: "Lan is very tired. ______, she has to finish her assignment before going to bed.", options: ["Although", "So", "Therefore", "However"], correct: 3, ext: "Liên từ: Nằm giữa dấu phẩy và dấu chấm, thể hiện sự đối lập. Lan mệt. Tuy nhiên (**However**), cô ấy phải hoàn thành bài tập." },
+            { q: "The pagoda is in a beautiful _____, close to the sea.", options: ["setting", "sight", "scenery", "view"], correct: 0, ext: "Từ vựng: **setting** (khung cảnh, bối cảnh xung quanh). Ngôi chùa nằm trong một khung cảnh tuyệt đẹp gần biển." },
+            { q: "I suggest ______ some money for poor children.", options: ["raise", "to raise", "raised", "raising"], correct: 3, ext: "Ngữ pháp: Sau động từ Suggest là V-ing. Cấu trúc **Suggest + V-ing** (Gợi ý làm gì). Dùng **raising**." },
+            { q: "My brother is _____ as my father, but he's still only sixteen.", options: ["taller than", "the tallest", "taller", "as tall"], correct: 3, ext: "Ngữ pháp: Câu so sánh ngang bằng: **as + adj + as**. Anh trai tôi cao bằng (as tall as) bố tôi." },
+            { q: "Have you ever ______ a letter to the local authorities to complain about the public transport in your town?", options: ["wrote", "writing", "written", "write"], correct: 2, ext: "Ngữ pháp: Thì hiện tại hoàn thành. Cấu trúc: Have/has + S + PII. Phân từ 2 của write là **written**." },
+            { q: "The meeting will begin _____ 9 a.m. in the conference room.", options: ["in", "on", "at", "of"], correct: 2, ext: "Ngữ pháp: Giới từ thời gian. Đứng trước giờ giấc cụ thể (9 a.m.) ta dùng giới từ **at**." },
+            { q: "When are you ______ vacation with your family, Lan?", options: ["on", "by", "with", "to"], correct: 0, ext: "Cụm từ cố định: **be on vacation** (đang đi nghỉ mát). Khi nào bạn đi nghỉ cùng gia đình?" },
+            { q: "Lan is meeting her friend Mai after class.\nLan: Thanks for helping me with my English homework yesterday.\nMai: \"_____\"", options: ["You're welcome!", "Don't worry.", "I agree with you.", "It sounds good!"], correct: 0, ext: "Giao tiếp: Đáp lại lời cảm ơn (Thanks for...). Lịch sự nhất là dùng **You're welcome!** (Không có gì đâu!)." },
+            { q: "If you ______ late, you wouldn't finish your work.", options: ["come", "coming", "to come", "came"], correct: 3, ext: "Ngữ pháp: Câu điều kiện loại 2 (Vế sau có wouldn't finish). Vế If phải chia thì Quá khứ đơn: **came**." },
+            { q: "She can't decide _____ she should go after finishing high school this year.", options: ["which", "what", "where", "how"], correct: 2, ext: "Từ để hỏi: Không thể quyết định việc 'nên đi đâu' (học trường nào/làm gì). Phù hợp nhất là **where** (đi đâu)." },
+            { q: "Huong wishes she ______ free time to visit her close friend in hospital.", options: ["to have", "had", "have", "having"], correct: 1, ext: "Ngữ pháp: Câu ước hiện tại (trái thực tế). Động từ lùi 1 thì về quá khứ đơn: **had**." },
+            { q: "The girl _____ bike was stolen yesterday looks very sad this morning.", options: ["which", "whose", "that", "whom"], correct: 1, ext: "Đại từ quan hệ chỉ sự sở hữu: **whose + Noun** (Chiếc xe đạp CỦA cô gái). Cô gái người mà có chiếc xe bị trộm trông rất buồn." },
+            { q: "I think I've lost my new hat. I've ______ it everywhere but I can't find it.", options: ["looked out", "looked in", "looked on", "looked for"], correct: 3, ext: "Phrasal verb: **look for** (tìm kiếm). Tôi đã tìm nó khắp nơi nhưng không thấy." },
+            { q: "She was late _____ the traffic was terrible on her way to school.", options: ["although", "because", "despite", "because of"], correct: 1, ext: "Liên từ: Vế sau là mệnh đề chỉ nguyên nhân (S + V) nên ta dùng **because** (bởi vì)." },
+            { q: "I can't understand the French visitors. I wish I ______ French.", options: ["knew", "will know", "know", "have known"], correct: 0, ext: "Ngữ pháp: Câu ước hiện tại (thực tế là tôi không hiểu tiếng Pháp). Ước trái với hiện tại dùng thì quá khứ đơn: **knew**." },
+            { q: "This hotel offers modern _____ such as free Wi-Fi, a gym, and a swimming pool.", options: ["transportation", "equipment", "furniture", "amenities"], correct: 3, ext: "Từ vựng: **amenities** (tiện nghi khách sạn). Khách sạn cung cấp các tiện nghi hiện đại như Wi-Fi, phòng gym." },
+            { q: "The church ______ about 100 years ago.", options: ["is built", "was built", "will be built", "has been built"], correct: 1, ext: "Ngữ pháp: Bị động ở thì quá khứ đơn (dấu hiệu: 100 years ago). Nhà thờ 'được xây dựng' -> **was built**." },
+            { q: "_____ loud noises at night can disturb both people and animals nearby.", options: ["an", "a", "the", "Ø (no article)"], correct: 3, ext: "Ngữ pháp: Mạo từ. 'noises' là danh từ đếm được số nhiều, chỉ sự việc nói chung (tiếng ồn lớn ban đêm), nên không dùng mạo từ **(Ø)**." },
+            { q: "People in Israel are going to celebrate their festival ______ is called Passover.", options: ["whose", "who", "which", "where"], correct: 2, ext: "Đại từ quan hệ: Thay thế cho sự vật 'their festival', đóng vai trò chủ ngữ nên ta dùng **which**." },
+            { q: "You should _____ a rest after working on your project for hours.", options: ["do", "take", "set", "go"], correct: 1, ext: "Cụm từ cố định: **take a rest** (nghỉ ngơi)." },
+            { q: "______ I was really tired , I couldn't sleep.", options: ["Even though", "So", "Therefore", "Because of"], correct: 0, ext: "Liên từ: Đi liền với mệnh đề và mang ý nghĩa nhượng bộ (Mặc dù rất mệt, tôi không thể ngủ). Dùng **Even though**." },
+            { q: "My father will _____ my brother from school after finishing his office work.", options: ["pick up", "get on", "pass down", "put on"], correct: 0, ext: "Phrasal verb: **pick up** (đón ai đó). Bố tôi sẽ đi đón em trai tôi sau giờ làm." },
+            { q: "She asked me if I ______ a laptop computer the following day.", options: ["buy", "will buy", "bought", "would buy"], correct: 3, ext: "Ngữ pháp: Câu tường thuật (Reported Speech). Dấu hiệu 'the following day' (ngày hôm sau) -> Gốc là thì tương lai (will buy), lùi thì thành **would buy**." },
+            { q: "The downtown area is still crowded with people and traffic _____ night.", options: ["in", "on", "at", "of"], correct: 2, ext: "Ngữ pháp: Giới từ. 'Vào ban đêm' luôn đi với cụm cố định **at night**." },
+            { q: "I ______ telephone her if I knew her number.", options: ["would", "have to", "will", "shall"], correct: 0, ext: "Ngữ pháp: Câu điều kiện loại 2 (vế If chia quá khứ 'knew'). Vế chính phải dùng **would** + V. 'Tôi sẽ gọi cô ấy nếu tôi biết số'." },
+            { q: "Rainforests are important _____ they help control the Earth's climate.", options: ["although", "because", "despite", "because of"], correct: 1, ext: "Liên từ: Chỉ nguyên nhân và theo sau là mệnh đề. Rừng mưa rất quan trọng **vì** chúng giúp kiểm soát khí hậu." },
+            { q: "Honda motorbikes ______ in Viet Nam.", options: ["produce", "will produce", "are produced", "would be produced"], correct: 2, ext: "Ngữ pháp: Thể bị động ở thì hiện tại đơn (chỉ một sự thật). Xe máy Honda 'được sản xuất' tại VN -> **are produced**." },
+            { q: "The embassy helped the tourist _____ lost their documents in a foreign country.", options: ["which", "whose", "whom", "who"], correct: 3, ext: "Đại từ quan hệ: Thay thế cho danh từ chỉ người 'the tourist', làm chủ ngữ cho động từ 'lost', ta dùng **who**." },
+            { q: "We have learnt English ______ 2001.", options: ["for", "since", "in", "during"], correct: 1, ext: "Ngữ pháp: Hiện tại hoàn thành + mốc thời gian. Ta dùng giới từ **since** (từ năm 2001)." },
+            { q: "Freddy is talking to his teacher in front of the class.\n- Freddy: I am sorry for being late. There was a serious jam.\n- Teacher: \"_____. Just be on time next time.\"", options: ["It's alright.", "Me, too.", "Of course!", "Thank you."], correct: 0, ext: "Giao tiếp: Đáp lại lời xin lỗi. Giáo viên nói **It's alright** (Không sao đâu, lần sau nhớ đi đúng giờ)." },
+            { q: "_____ sure you lock the door before leaving the classroom today.", options: ["Take", "Make", "Get", "Put"], correct: 1, ext: "Cụm từ cố định: **Make sure** (Hãy đảm bảo/chắc chắn rằng). Hãy nhớ khóa cửa trước khi về." },
+            { q: "Milk is one of _____ drinks for growing children.", options: ["as nourishing as", "nourishing than", "more nourishing", "the most nourishing"], correct: 3, ext: "Ngữ pháp: Cấu trúc 'One of + the + so sánh nhất'. Sữa là một trong những thức uống **bổ dưỡng nhất**." },
+            { q: "My uncle works as _____ mechanic in a car repair shop downtown.", options: ["an", "a", "the", "Ø (no article)"], correct: 1, ext: "Ngữ pháp: Mạo từ chỉ nghề nghiệp. Mechanic (thợ máy) bắt đầu bằng phụ âm nên dùng mạo từ **a**." },
+            { q: "She visited a(n) _____ agency to look for part-time job opportunities.", options: ["condition", "standard", "employment", "tradition"], correct: 2, ext: "Từ vựng: Cụm từ **employment agency** (trung tâm giới thiệu việc làm). Cô ấy tới trung tâm để tìm việc làm thêm." },
+            { q: "The room _______ every morning.", options: ["is cleaned", "cleaned", "cleans", "is cleaning"], correct: 0, ext: "Ngữ pháp: Bị động của thì hiện tại đơn (dấu hiệu: every morning). Căn phòng 'được dọn' -> **is cleaned**." },
+            { q: "We guarantee that you _______ with the performance of our new washing machine.", options: ["won't disappoint", "won't be disappointed", "will disappoint", "won't be disappointing"], correct: 1, ext: "Ngữ pháp: Bị động. Cảm xúc con người bị tác động thì dùng tính từ đuôi -ed. Bạn sẽ không bị làm cho thất vọng -> **won't be disappointed**." },
+            { q: "_______ technology has advanced rapidly, people still prefer reading books in print.", options: ["Although", "In spite of", "However", "Despite"], correct: 0, ext: "Liên từ: Đứng trước một mệnh đề và mang nghĩa nhượng bộ (Mặc dù) -> Dùng **Although**." },
+            { q: "Even though we arrived late, we didn't miss the first part of the speech.", options: ["Despite", "Even though", "In spite of", "However"], correct: 1, ext: "Liên từ: Thể hiện ý nghĩa nhượng bộ 'Mặc dù', và đi kèm một mệnh đề (S+V) -> **Even though**." },
+            { q: "_______ her teacher said that she had to study more, she took the SAT (Scholastic Aptitude Test).", options: ["Despite", "Even though", "Therefore", "So that"], correct: 1, ext: "Liên từ: Đi với mệnh đề và mang ý nhượng bộ (Mặc dù cô giáo bảo phải học thêm, cô ấy vẫn quyết đi thi) -> **Even though**." },
+            { q: "_______ hard she worked, Louise never managed to finish her homework on time.", options: ["Moreover", "However", "Although", "Despite"], correct: 2, ext: "Ngữ pháp: Cấu trúc đảo ngữ 'However + adv/adj + S + V' mang nghĩa 'Dù cho'. Dù cô ấy làm việc chăm chỉ đến đâu..." },
+            { q: "He went ahead _______ all warnings about the danger of his mission.", options: ["due to", "in spite of", "instead of", "because of"], correct: 1, ext: "Ngữ pháp: Sau khoảng trống là cụm danh từ 'all warnings'. Để mang nghĩa 'bất chấp/mặc dù', ta dùng **in spite of**." },
+            { q: "If you want to get a good night's sleep, you _______ lower your screen time on smartphones.", options: ["will", "won't", "shouldn't", "should"], correct: 3, ext: "Động từ khuyết thiếu: Đưa ra lời khuyên (bạn nên giảm thời gian nhìn màn hình) -> dùng **should**." },
+            { q: "You _______ smoke here; it's forbidden.", options: ["mustn't", "don't have to", "shouldn't", "can't"], correct: 0, ext: "Động từ khuyết thiếu: Chỉ sự cấm đoán (forbidden). Bạn không được phép hút thuốc ở đây -> **mustn't**." },
+            { q: "My father got _______ a hard job that he had to find another one after working for a few months.", options: ["very", "such", "too", "so"], correct: 1, ext: "Ngữ pháp: Cấu trúc **such + (a/an) + adj + noun + that...** (Đến nỗi mà). Bố tôi nhận một công việc vất vả đến nỗi mà..." },
+            { q: "He is one of the most _______ people I have ever met. He never says anything interesting.", options: ["stressful", "preferable", "amazing", "boring"], correct: 3, ext: "Tính từ đuôi -ing: Miêu tả bản chất của một sự vật/con người gây ra cảm giác. Anh ta là một người nhàm chán -> **boring**." },
+            { q: "How _______ do you have, Mrs. Parker?", options: ["many luggage", "many luggages", "much luggage", "much luggages"], correct: 2, ext: "Ngữ pháp: Danh từ 'luggage' (hành lý) là không đếm được. Do đó không thêm 's' và đi với lượng từ **much**." },
+            { q: "We should use paper and other materials as _______ as we can.", options: ["economy", "economic", "economised", "economically"], correct: 3, ext: "Từ loại: Bổ nghĩa cho động từ 'use' (sử dụng) cần một trạng từ. **economically** (sử dụng một cách tiết kiệm)." },
+            { q: "The Charity Foundation provides financial and _______ help for disabled children.", options: ["practice", "practised", "practical", "practising"], correct: 2, ext: "Từ loại: Nối với tính từ 'financial' bằng từ 'and' nên chỗ trống cũng phải là tính từ. **practical** (thiết thực). Sự giúp đỡ tài chính và thiết thực." },
+            { q: "I'm sorry, but we do not have _______ knowledge about the new transit system of the city.", options: ["much", "many", "few", "little"], correct: 0, ext: "Ngữ pháp: 'knowledge' (kiến thức) là danh từ không đếm được. Trong câu phủ định thường dùng **much** (không có nhiều kiến thức)." },
+            { q: "A lot of attention has been paid to the _______ of Duong Lam Ancient Village in the past decade.", options: ["conservation", "accomplishment", "assignment", "observation"], correct: 0, ext: "Từ vựng: **conservation** (sự bảo tồn). Nhiều sự chú ý đã được hướng đến việc bảo tồn Làng cổ Đường Lâm." },
+            { q: "Drinking _______ of water while working out is important for staying hydrated.", options: ["a few", "a lot", "few", "no"], correct: 1, ext: "Ngữ pháp: Chỉ số lượng nhiều dùng cho danh từ không đếm được (water), và có giới từ 'of' đằng sau -> **a lot (of)**." },
+            { q: "Students have a(n) _______ between learning French or German as a second foreign language.", options: ["choice", "opportunity", "difference", "variety"], correct: 0, ext: "Từ vựng: **have a choice between A and B** (có sự lựa chọn giữa A và B)." },
+            { q: "Some parts of the temple are still _______ very well by local people.", options: ["promoted", "preserved", "celebrated", "observed"], correct: 1, ext: "Từ vựng: **preserve** (bảo tồn, giữ gìn). Một số phần của ngôi đền vẫn được người dân giữ gìn rất tốt." },
+            { q: "Bai Dinh Pagoda includes many _______ built over a long period.", options: ["ingredients", "measures", "patterns", "structures"], correct: 3, ext: "Từ vựng: **structures** (các công trình kiến trúc). Chùa Bái Đính bao gồm nhiều công trình được xây dựng qua thời gian dài." },
+            { q: "A _______ is a large strong building built by kings in the past.", options: ["castle", "temple", "pagoda", "church"], correct: 0, ext: "Từ vựng: **castle** (lâu đài). Lâu đài là một tòa nhà lớn, kiên cố do các vị vua xây dựng trong quá khứ." },
+            { q: "Mount Everest is _______ on the border between China and Nepal.", options: ["founded", "placed", "positioned", "located"], correct: 3, ext: "Từ vựng: **be located** (tọa lạc tại, nằm ở vị trí). Đỉnh Everest nằm ở biên giới Trung Quốc và Nepal." },
+            { q: "Angkor Wat in Cambodia is a World _______ Site.", options: ["Camping", "Construction", "Heritage", "Building"], correct: 2, ext: "Cụm từ cố định: **World Heritage Site** (Di sản thế giới)." },
+            { q: "The landscape there is amazing, but boat is the only way to _______ it.", options: ["get access to", "enter", "admit", "open"], correct: 0, ext: "Từ vựng: **get access to** (tiếp cận, đi vào). Phong cảnh tuyệt vời, nhưng thuyền là cách duy nhất để đi vào đó." },
+            { q: "The Taj Mahal is a _______ of love built by an emperor.", options: ["symbol", "sign", "mark", "token"], correct: 0, ext: "Từ vựng: **symbol of love** (biểu tượng của tình yêu)." },
+            { q: "Ha Long Bay was _______ as a World Heritage Site by UNESCO.", options: ["named", "called", "recognized", "known"], correct: 2, ext: "Từ vựng: **recognized** (được công nhận). Vịnh Hạ Long được UNESCO công nhận là di sản thế giới." },
+            { q: "The old town is a _______ mixture of different architectural styles.", options: ["unique", "single", "only", "alone"], correct: 0, ext: "Từ vựng: **unique** (độc đáo, có một không hai). Phố cổ là một sự pha trộn độc đáo của các phong cách kiến trúc." },
+            { q: "Can you help me translate this phrasal verb _______ Vietnamese?", options: ["over", "in", "into", "up"], correct: 2, ext: "Giới từ: **translate something into...** (dịch cái gì đó sang ngôn ngữ nào)." },
+            { q: "She _______ up the language from other workers while working.", options: ["copied", "picked", "looked", "went"], correct: 1, ext: "Phrasal verb: **pick up** (học lỏm, tiếp thu tự nhiên mà không qua đào tạo). Cô ấy tự học được ngôn ngữ từ các công nhân khác." },
+            { q: "Before an exam, I usually _______ over the grammatical points.", options: ["look", "pick", "go", "copy"], correct: 2, ext: "Phrasal verb: **go over** (ôn tập lại, xem xét lại). Trước kỳ thi, tôi thường ôn lại điểm ngữ pháp." },
+            { q: "My grandparents don't believe in a(n) _______ relationship.", options: ["extended", "democratic", "personal", "interesting"], correct: 1, ext: "Từ vựng: **democratic relationship** (quan hệ dân chủ, bình đẳng). Ông bà tôi không tin vào việc bình đẳng (cha mẹ - con cái) trong gia đình." },
+            { q: "In my grandfather's _______, people travelled mostly by bike.", options: ["age", "generation", "past", "year"], correct: 1, ext: "Từ vựng: **generation** (thế hệ). Ở thế hệ của ông tôi, mọi người chủ yếu đi bằng xe đạp." },
+            { q: "Older people prefer newspapers while younger people get news from the Internet. That's a _______.", options: ["conflict", "attitude", "mass communication", "generation gap"], correct: 3, ext: "Cụm danh từ: **generation gap** (khoảng cách thế hệ, sự khác biệt về tư tưởng giữa các thế hệ)." },
+            { q: "When I started learning English, I had to _______ up words in a dictionary.", options: ["look", "pick", "go", "copy"], correct: 0, ext: "Phrasal verb: **look up** (tra cứu). Tra từ trong từ điển." },
+            { q: "Our beliefs have been _______ orally for thousands of years.", options: ["shown around", "cheered up", "passed down", "taken off"], correct: 2, ext: "Phrasal verb: **pass down** (truyền lại cho thế hệ sau). Tín ngưỡng của chúng tôi được truyền miệng qua hàng ngàn năm." },
+            { q: "He _______ up his mind to become a doctor.", options: ["took", "made", "gave", "set"], correct: 1, ext: "Thành ngữ: **make up one's mind** (đưa ra quyết định). Anh ấy quyết định trở thành bác sĩ." },
+            { q: "Don't _______ up hope; things will get better.", options: ["give", "lose", "put", "take"], correct: 0, ext: "Phrasal verb: **give up** (từ bỏ). Đừng từ bỏ hy vọng." },
+            { q: "I _______ into an old friend at the supermarket yesterday.", options: ["ran", "went", "met", "came"], correct: 0, ext: "Phrasal verb: **run into** (tình cờ gặp ai đó)." },
+            { q: "Her son has died in an accident. It will take her a long time to _______ this shock.", options: ["come down", "turn into", "get over", "get in"], correct: 2, ext: "Phrasal verb: **get over** (vượt qua một nỗi buồn, cú sốc, hoặc bệnh tật)." },
+            { q: "Families used to live in one-room houses and had little _______.", options: ["time", "understanding", "privacy", "opportunity"], correct: 2, ext: "Từ vựng: **privacy** (sự riêng tư). Sống trong những ngôi nhà chỉ có 1 phòng thì có rất ít sự riêng tư." },
+            { q: "Mother Earth _______ us with air to breathe and food to eat.", options: ["keeps", "protects", "provides", "produces"], correct: 2, ext: "Cấu trúc: **provide sb with sth** (cung cấp cho ai cái gì). Mẹ thiên nhiên cung cấp cho chúng ta không khí và thức ăn." },
+            { q: "One way to _______ awareness is to follow the 3Rs.", options: ["rise", "preserve", "protect", "raise"], correct: 3, ext: "Cụm từ: **raise awareness** (nâng cao nhận thức). (Rise là nội động từ, tự tăng lên, không có tân ngữ)." },
+            { q: "Pesticides can affect the whole _______ by entering plants first.", options: ["flora and fauna", "food chain", "habitat", "food tour"], correct: 1, ext: "Từ vựng: **food chain** (chuỗi thức ăn). Thuốc trừ sâu đi vào thực vật và sẽ ảnh hưởng toàn bộ chuỗi thức ăn." },
+            { q: "To keep the ecologies on Earth in _______, protect natural resources.", options: ["reserve", "balance", "good", "protection"], correct: 1, ext: "Cụm từ: **in balance** (ở trạng thái cân bằng). Giữ cho hệ sinh thái được cân bằng." },
+            { q: "Climate change is a _______ threat to our planet.", options: ["global", "world", "local", "regional"], correct: 0, ext: "Từ vựng: **global threat** (mối đe dọa toàn cầu). Biến đổi khí hậu đe dọa toàn bộ hành tinh." },
+            { q: "We should use _______ energy sources like wind and solar.", options: ["reusable", "renewable", "recyclable", "returnable"], correct: 1, ext: "Từ vựng: Cụm từ chuyên ngành **renewable energy** (năng lượng tái tạo) như gió và mặt trời." },
+            { q: "Many ethnic minority groups find it hard to _______ their own languages.", options: ["protect", "maintain", "guard", "defend"], correct: 1, ext: "Từ vựng: **maintain a language** (duy trì ngôn ngữ). Nhiều dân tộc thiểu số gặp khó khăn trong việc duy trì tiếng mẹ đẻ." },
+            { q: "Once _______ environmental damage is done, it takes many years for the system to recover.", options: ["the", "a", "an", "Ø"], correct: 3, ext: "Ngữ pháp: 'environmental damage' đang được nói đến chung chung, không đếm được nên ta không dùng mạo từ **(Ø)**." },
+            { q: "They didn't sell the family-owned workshop; they _______ it to the next generation.", options: ["passed it on", "kept it up", "carried it out", "moved it up"], correct: 0, ext: "Phrasal verb: **pass on to** (truyền lại, để lại cho thế hệ sau)." },
+            { q: "It's difficult to _______ what our lives would be like without the Internet.", options: ["expect", "imagine", "remember", "see"], correct: 1, ext: "Từ vựng: **imagine** (tưởng tượng). Thật khó để tưởng tượng cuộc sống sẽ ra sao nếu không có Internet." },
+            { q: "Tell me _______ to press the button.", options: ["what", "when", "who", "where"], correct: 1, ext: "Từ để hỏi đi với động từ: **When to press** (Hãy nói cho tôi biết 'khi nào' thì phải nhấn nút)." },
+            { q: "I enjoy watching local _______ shows when on holiday.", options: ["culture", "cultured", "cultural", "culturally"], correct: 2, ext: "Từ loại: Đứng trước danh từ 'shows' cần một tính từ bổ nghĩa. **cultural** (thuộc về văn hóa)." },
+            { q: "She is very _______; she always helps everyone.", options: ["kind", "rude", "selfish", "lazy"], correct: 0, ext: "Từ vựng: Cô ấy luôn giúp đỡ mọi người, suy ra cô ấy là người **kind** (tốt bụng)." },
+            { q: "He is _______ for his new job starting next week.", options: ["excited", "exciting", "excite", "excitement"], correct: 0, ext: "Tính từ đuôi -ed: Chỉ cảm xúc con người bị tác động (cảm thấy hào hứng). Dùng **excited**." },
+            { q: "The water in this river is heavily _______.", options: ["pollute", "pollution", "polluted", "pollutant"], correct: 2, ext: "Từ loại: Đứng sau trạng từ 'heavily' cần một tính từ. **polluted** (bị ô nhiễm nặng)." },
+            { q: "This is the most _______ book I have ever read.", options: ["interest", "interesting", "interested", "interestingly"], correct: 1, ext: "Tính từ đuôi -ing: Miêu tả tính chất của một vật (quyển sách thú vị). Dùng **interesting**." },
+            { q: "The film was so _______ that I fell asleep.", options: ["bored", "boring", "bore", "boredom"], correct: 1, ext: "Tính từ đuôi -ing: Tính chất của bộ phim gây ra sự chán nản. Dùng **boring**." },
+            { q: "He _______ a lot of money on clothes.", options: ["spends", "takes", "costs", "pays"], correct: 0, ext: "Cấu trúc: **spend money/time on something** (dành tiền/thời gian vào việc gì)." },
+            { q: "It's a _______ to meet you.", options: ["please", "pleased", "pleasing", "pleasure"], correct: 3, ext: "Từ loại: Đứng sau mạo từ 'a' cần một danh từ. **pleasure** (Rất hân hạnh được gặp bạn)." },
+            { q: "The sun _______ in the East.", options: ["rise", "rises", "rose", "rising"], correct: 1, ext: "Ngữ pháp: Một chân lý, sự thật hiển nhiên (Mặt trời mọc hướng Đông) dùng thì Hiện tại đơn: **rises**." },
+            { q: "He _______ to work every day.", options: ["walk", "walks", "walking", "walked"], correct: 1, ext: "Ngữ pháp: Thói quen ở hiện tại (every day), chủ ngữ ngôi 3 số ít 'He' -> thêm 's': **walks**." },
+            { q: "They have to _______ the rules of the school.", options: ["follow", "keep", "obey", "do"], correct: 2, ext: "Từ vựng: **obey the rules** (tuân thủ luật lệ, nội quy). (Follow the rules cũng chấp nhận được nhưng obey mạnh mẽ và trang trọng hơn trong bối cảnh học đường)." },
+            { q: "Tacos, a kind of Mexican _______, are delicious with seasoned meat and toppings.", options: ["handicraft", "fast food", "traditional dancing", "speciality food"], correct: 3, ext: "Từ vựng: Taco là một loại **speciality food** (món ăn đặc sản truyền thống) của Mexico." },
+            { q: "You can buy dairy _______ in this open-air market.", options: ["producers", "production", "products", "productivity"], correct: 2, ext: "Từ vựng: **dairy products** (các sản phẩm làm từ sữa như bơ, phô mai...)." },
+            { q: "My sister's hobby is _______ old postcards.", options: ["composing", "including", "taking", "collecting"], correct: 3, ext: "Từ vựng: **collecting** (sưu tầm). Sở thích là sưu tầm bưu thiếp cũ." },
+            { q: "David must be out of the _______ of arriving late for meetings.", options: ["habit", "custom", "tradition", "fashion"], correct: 0, ext: "Cụm từ: **out of the habit** (bỏ được thói quen). David chắc hẳn đã bỏ được thói quen đi họp trễ." },
+            { q: "The tickets for the performance are _______ from the box office.", options: ["available", "acceptable", "found", "offered"], correct: 0, ext: "Từ vựng: **available** (có sẵn, có thể mua/lấy được). Vé có sẵn tại quầy vé." },
+            { q: "A museum should aim to _______ as well as educate.", options: ["enjoy", "entertain", "benefit", "please"], correct: 1, ext: "Từ vựng: Đi song song với 'educate' (giáo dục) là **entertain** (giải trí). Bảo tàng nên mang tính giải trí lẫn giáo dục." },
+            { q: "They are considering _______ the house before the prices go up.", options: ["buy", "to buy", "bought", "buying"], correct: 3, ext: "Ngữ pháp: **Consider + V-ing** (Cân nhắc việc làm gì). Họ cân nhắc việc mua nhà." },
+            { q: "To be healthy, try to _______ the amount of fat in your diet.", options: ["rise", "reduce", "reject", "refuse"], correct: 1, ext: "Từ vựng: **reduce** (giảm bớt). Hãy giảm bớt lượng chất béo để khỏe mạnh." },
+            { q: "They say it will be _______ to drive a car through the city in the rush hour because of the traffic jams.", options: ["possible", "impossible", "possibly", "impossibility"], correct: 1, ext: "Từ vựng: Đường tắc nghẽn giờ cao điểm nên việc lái xe qua thành phố là điều 'không thể'. **impossible**." },
+            { q: "When he arrived at the hotel, _______.", options: ["he asked for a room", "a room is waiting for him", "he will have a room to stay", "he was going to ask a room"], correct: 0, ext: "Ngữ pháp: Kể lại chuỗi hành động xảy ra nối tiếp trong quá khứ. Cùng dùng Quá khứ đơn: Khi anh ấy đến, anh ấy đã yêu cầu 1 phòng (**he asked...**)." },
+            { q: "How close parents are to their children _______ a strong influence on the character of the children.", options: ["gets", "has", "emphasizes", "affects"], correct: 1, ext: "Cụm từ: **have an influence on** (có ảnh hưởng tới ai/cái gì). Mức độ gần gũi của cha mẹ có ảnh hưởng lớn tới tính cách con trẻ." },
+            { q: "My brother received an iPhone as a _______ on his birthday.", options: ["present", "money", "reward", "bonus"], correct: 0, ext: "Từ vựng: **present = gift** (món quà). Anh trai nhận iPhone như một món quà sinh nhật." },
+            { q: "If the sun shines, we'll go on _______ outing to the suburb.", options: ["the", "a", "an", "Ø"], correct: 2, ext: "Ngữ pháp: Mạo từ. 'outing' là danh từ đếm được số ít, bắt đầu bằng nguyên âm 'o', dùng mạo từ **an**." },
+            { q: "It is honest of him to return _______.", options: ["a wallet back to its original owner", "to its original owner the wallet", "the wallet to its originally owner", "the wallet to its original owner"], correct: 3, ext: "Ngữ pháp: Trật tự từ. **Return something to somebody** (Trả lại cái gì cho ai đó). Và 'original owner' là cụm danh từ đúng (tính từ + danh từ)." },
+            { q: "None of the servants were _______ when Mr. Smith wanted to send a message.", options: ["available", "attainable", "approachable", "applicable"], correct: 0, ext: "Từ vựng: **available** (rảnh rỗi, có mặt để làm việc). Không người hầu nào có mặt ở đó khi ông Smith gọi." },
+            { q: "The captain wasn't keen _______ having the new player in the team.", options: ["about", "over", "on", "for"], correct: 2, ext: "Giới từ: Cụm tính từ **be keen on** (yêu thích, hứng thú với điều gì)." },
+            { q: "It is our father's birthday and we are going out for a meal to _______.", options: ["organize", "arrange", "observe", "celebrate"], correct: 3, ext: "Từ vựng: **celebrate** (ăn mừng, kỷ niệm). Đi ăn một bữa để ăn mừng sinh nhật bố." },
+            { q: "Our school organized a list of fun activities for the summer camp, including sports, games, and _______.", options: ["museums", "reading", "competitions", "schedules"], correct: 2, ext: "Từ vựng: Các hoạt động vui chơi cắm trại bao gồm thể thao, trò chơi và các cuộc thi **(competitions)**." },
+            { q: "Sara was _______ when she received the award for the best student.", options: ["excited", "surprising", "worthy", "afraid"], correct: 0, ext: "Từ vựng: Nhận giải thưởng học sinh giỏi nên Sara rất vui sướng, phấn khích (**excited**)." },
+            { q: "My grandmother didn't work outside her home _______ she was young. She only did her jobs in the house.", options: ["when", "for the time", "as soon as", "whenever"], correct: 0, ext: "Liên từ: Dùng **when** (khi) để dẫn vào một mệnh đề chỉ thời điểm trong quá khứ (Khi bà còn trẻ)." },
+            { q: "He was told he could join the Volunteer Group when he _______ old enough.", options: ["would be", "should be", "was", "were"], correct: 2, ext: "Ngữ pháp: Mệnh đề chỉ thời gian trong câu tường thuật ở quá khứ (khi cậu ấy đủ tuổi) -> Dùng quá khứ đơn **was**." },
+            { q: "The fire is going to go out. Can you go and get _______ wood?", options: ["any", "some", "a", "much"], correct: 1, ext: "Ngữ pháp: Mặc dù là câu hỏi, nhưng đây mang tính chất yêu cầu/đề nghị (Can you...) nên ta dùng **some** thay vì any." },
+            { q: "When a volcano has been long _______ and its vent seems to be closed, it is said to be extinct.", options: ["acting", "active", "action", "inactive"], correct: 3, ext: "Từ vựng: Một ngọn núi lửa đã ngưng hoạt động (**inactive**) lâu dài thì được xem là đã tắt/chết." },
+            { q: "John: I can show you how to design your poster about public amenities if you want.\nHelen: _______", options: ["Yes, it's fine.", "No problems.", "You're welcome.", "Oh, that's nice of you."], correct: 3, ext: "Giao tiếp: Đáp lại lời đề nghị giúp đỡ nhiệt tình. **Oh, that's nice of you** (Ồ, bạn thật tốt bụng)." },
+            { q: "Tom: Okay, so to start the presentation, you'll need to introduce your topic and state your thesis. Got it?\nJane: _______", options: ["It's nice of you to say so.", "No worries.", "OK. I got what you mean.", "Sorry for the inconvenience."], correct: 2, ext: "Giao tiếp: Đáp lại câu hỏi 'Got it?' (Hiểu chưa?). Jane xác nhận đã hiểu: **OK. I got what you mean** (OK, tôi hiểu ý bạn)." },
+            { q: "Anna: Is it necessary for us to have an English test next week?\nTeacher: _______", options: ["I'm sorry, it is. Remember to revise Unit 4.", "Sure, let's study literature instead of English.", "You don't need to learn the grammar of this unit.", "No, thank you. They can do it by themselves."], correct: 0, ext: "Giao tiếp: Học sinh hỏi bài kiểm tra có bắt buộc không. Giáo viên xác nhận lịch sự việc không mong muốn: **I'm sorry, it is** (Xin lỗi em, là bắt buộc đó)." },
+            { q: "- \"What shall we do this weekend?\" - \"._______ \"", options: ["No problem", "Let's go outing to the zoo", "Oh, that's good", "I'll go out for dinner"], correct: 1, ext: "Giao tiếp: Gợi ý hoạt động cuối tuần. Dùng cấu trúc **Let's + V** (Hãy đi chơi sở thú nhé)." },
+            { q: "- \"Congratulations on your winning!\" – \"_______\"", options: ["You are a good friend", "You are welcome", "Thank you", "I'm very happy"], correct: 2, ext: "Giao tiếp: Đáp lại lời chúc mừng (Congratulations!). Rất đơn giản, hãy nói **Thank you** (Cảm ơn bạn)." },
+            { q: "- \"Do you mind carrying this box upstairs?\" – \"_______\"", options: ["Not at all.", "No way.", "Why not?", "I do."], correct: 0, ext: "Giao tiếp: Đáp lại câu hỏi 'Bạn có phiền...'. Để đồng ý giúp, ta trả lời 'Không phiền chút nào': **Not at all**." },
+            { q: "- Shop keeper: \"_______ do you want?\" - Customer: \"Medium\".", options: ["What colour", "How much", "Which size", "Whose shoes"], correct: 2, ext: "Giao tiếp: Khách hàng trả lời là 'Medium' (Cỡ vừa, cỡ M). Vậy người bán hàng đã hỏi cỡ nào (**Which size**)." },
+            { q: "- \"Would you like me to give you a hand?\" – \"_______\"", options: ["Yes, the work is very hard.", "No. I wouldn't like it.", "Certainly. You're a good man.", "Thank you. That's very kind of you."], correct: 3, ext: "Giao tiếp: Lại là đáp lại lời đề nghị giúp đỡ. Câu lịch sự nhất là **Thank you. That's very kind of you** (Cảm ơn, bạn thật tốt)." },
+            { q: "- Foreigner: \"Can you show me the way to the nearest Internet café?\" - Mai: \"_______\".", options: ["Yes, it's quite near here", "Turn left and then turn right", "Three kilometres from here", "It's very far"], correct: 1, ext: "Giao tiếp: Chỉ đường cho khách du lịch. **Turn left and then turn right** (Rẽ trái rồi rẽ phải)." },
+            { q: "Anna: \"I'm going to visit the zoo this weekend!\" - John: \"_______\"", options: ["Thanks for your advice.", "No worries.", "Sounds fun! Have a great time!", "How boring!"], correct: 2, ext: "Giao tiếp: Khi ai đó hào hứng kể về kế hoạch đi chơi, hãy chúc họ đi vui vẻ: **Sounds fun! Have a great time!**." },
+            { q: "Tom: \"Thank you very much for your lovely gift! I really like it.\" - Maria: \"_______\"", options: ["I'm pleased", "Oh, it's OK", "You're welcome", "It's not good"], correct: 2, ext: "Giao tiếp: Khi ai đó cảm ơn mình vì món quà, câu đáp kinh điển nhất là **You're welcome** (Không có chi)." },
+            { q: "- \"I think our lives are becoming more dependent on computers and smartphones.\" – \"_______\"", options: ["You go too far, it is a lot of fun.", "I can't imagine life without them.", "I agree with you, they affect us much.", "I suggest reading electronic books."], correct: 2, ext: "Giao tiếp: Tán thành một quan điểm (Tôi nghĩ cuộc sống ngày càng phụ thuộc thiết bị thông minh). Phản hồi: **I agree with you...** (Tôi đồng ý với bạn)." },
+            { q: "Our grandmother's illness was ________ than we thought at first.", options: ["serious", "the most serious", "more serious", "the more serious"], correct: 2, ext: "Ngữ pháp: Cấu trúc so sánh hơn với tính từ dài (serious) -> **more serious than**." },
+            { q: "The teacher explained so much stuff in just one lesson that most of the students could ________ only half of it.", options: ["let in", "get in", "take in", "break in"], correct: 2, ext: "Phrasal verb: **take in** (hiểu, tiếp thu kiến thức). Học sinh chỉ có thể tiếp thu một nửa." },
+            { q: "This book is not really ________. It is a waste of money buying it.", options: ["inform", "informative", "informatively", "information"], correct: 1, ext: "Từ loại: Sau to be 'is' và trạng từ 'really' cần một tính từ. **informative** (cung cấp nhiều thông tin hữu ích)." },
+            { q: "- Tom: \"I'm afraid I can't finish the task by today.\"\n- Linda: \"________. Let me know if you need an extra hand.\"", options: ["Don't push yourself too hard", "Take your time; there's no strict deadline", "I can't agree with you more about that", "Don't make a mountain out of a molehill"], correct: 0, ext: "Giao tiếp: Linda khuyên Tom không nên cố quá sức (**Don't push yourself too hard**) và đề nghị giúp đỡ." },
+            { q: "The acupoints are stimulated ________ the healing capability of the body itself.", options: ["enhance", "to enhance", "enhancing", "to enhancing"], correct: 1, ext: "Ngữ pháp: Động từ nguyên thể có 'to' chỉ mục đích. Các huyệt được kích thích **để tăng cường** (to enhance) khả năng tự chữa lành." },
+            { q: "Nylon is ________ man-made fibre, the use of which has helped ________ more people to have cheaper and more colourful clothes to wear.", options: ["a - the", "a - Ø", "an - the", "the - a"], correct: 1, ext: "Ngữ pháp: 'man-made fibre' số ít đếm được, dùng 'a'. 'more people' danh từ số nhiều nói chung, không dùng mạo từ (**Ø**)." },
+            { q: "________, they will have done their homework.", options: ["When you finish cooking", "By the time you finish cooking", "Finishing cooking", "As you finished cooking"], correct: 1, ext: "Ngữ pháp: Cấu trúc sự phối hợp thì với **By the time + Hiện tại đơn, Tương lai hoàn thành** (Vào lúc bạn nấu xong, họ sẽ làm xong bài tập)." },
+            { q: "If you ________ any further delays, we ________ be able to guarantee that the project ________ on schedule.", options: ["experience - won't - will stay", "will experience - will - stays", "experience - wouldn't - stayed", "experienced - won't - stays"], correct: 0, ext: "Ngữ pháp: Câu điều kiện loại 1 diễn tả sự việc có thể xảy ra ở hiện tại hoặc tương lai. Vế If dùng Hiện tại đơn, vế chính dùng Tương lai đơn." },
+            { q: "Every year, heavy rains affect the central-eastern provinces of Vietnam and cause ________.", options: ["floods", "droughts", "earthquakes", "eruptions"], correct: 0, ext: "Từ vựng: **floods** (lũ lụt). Mưa lớn gây ra lũ lụt." },
+            { q: "I saw a beautiful bird while I ________ in the park this morning.", options: ["walked", "have walked", "had walked", "was walking"], correct: 3, ext: "Ngữ pháp: Hành động đang diễn ra trong quá khứ (was walking) thì hành động khác xen vào (saw)." },
+            { q: "During Tet holiday, many Vietnamese families visit pagodas ________ than on other occasions.", options: ["more frequent", "more frequently", "frequenter", "as frequently"], correct: 1, ext: "Ngữ pháp: Động từ thường 'visit' đi với trạng từ, so sánh hơn của trạng từ dài là **more frequently**." },
+            { q: "I wish I ________ you but I'm too busy at the moment.", options: ["have helped", "could help", "can help", "would help"], correct: 1, ext: "Ngữ pháp: Câu ước trái với hiện tại ('at the moment'), động từ lùi về quá khứ ('can' thành **could**)." },
+            { q: "A: Can I borrow your book on the Galapagos Islands?\nB: \"________\"", options: ["Certainly. You can't.", "Yes. Why don't you?", "Never. I forget.", "Sure. Here you are."], correct: 3, ext: "Giao tiếp: Đồng ý cho mượn đồ. **Sure. Here you are** (Chắc chắn rồi. Của bạn đây)." },
+            { q: "Planet Earth, ________ is the third planet from the Sun, is known for its diverse ecosystems and abundant natural resources.", options: ["what", "who", "whose", "which"], correct: 3, ext: "Đại từ quan hệ: Thay thế cho danh từ chỉ vật 'Planet Earth' trong mệnh đề quan hệ không xác định (có dấu phẩy) -> **which**." },
+            { q: "Many of the gases which are produced by factories are ________ to our health.", options: ["harmful", "destructive", "disastrous", "unreliable"], correct: 0, ext: "Từ vựng: **be harmful to** (có hại cho). Nhiều khí thải nhà máy có hại cho sức khỏe." },
+            { q: "Tessa has so ________ homework that she can't go out with us.", options: ["many", "plenty", "little", "much"], correct: 3, ext: "Ngữ pháp: 'homework' là danh từ không đếm được, dùng **much** trong cấu trúc 'so much ... that' (quá nhiều... đến nỗi mà)." },
+            { q: "There's a lack ________ information about the new policy.", options: ["in", "on", "at", "of"], correct: 3, ext: "Giới từ: **a lack of** (sự thiếu hụt cái gì)." },
+            { q: "\"He showed me the park yesterday,\" the girls said.\n- The girls said that he ________ her the park the day before.", options: ["had shown", "show", "were showing", "showed"], correct: 0, ext: "Ngữ pháp: Câu tường thuật (Reported Speech). Thì quá khứ đơn 'showed' lùi một thì thành quá khứ hoàn thành **had shown**." },
+            { q: "The grass on Wimbledon Center courses ________ carefully on a regular basis.", options: ["maintains", "maintained", "are maintained", "is maintained"], correct: 3, ext: "Ngữ pháp: Câu bị động thì hiện tại đơn (on a regular basis). 'Grass' (cỏ) là danh từ không đếm được -> **is maintained**." },
+            { q: "The ________ of penicillin changed modern medicine.", options: ["discovery", "admiration", "competition", "injection"], correct: 0, ext: "Từ vựng: **discovery** (sự khám phá/phát hiện). Việc phát hiện ra penicillin đã thay đổi nền y học." },
+            { q: "A ________ history is a history that is under the surface that people might not think about.", options: ["ridden", "hidden", "driven", "broken"], correct: 1, ext: "Từ vựng: **hidden history** (lịch sử ẩn giấu/bị chôn vùi)." },
+            { q: "They plan to ________ the old theatre to restore its original beauty.", options: ["bury", "renovate", "accommodate", "excavate"], correct: 1, ext: "Từ vựng: **renovate** (cải tạo, trùng tu). Họ lên kế hoạch trùng tu nhà hát cũ." },
+            { q: "________ never goes away if you don't have proper treatments.", options: ["Fear", "Disorder", "Anxiety", "Phobia"], correct: 3, ext: "Từ vựng: **Phobia** (chứng ám ảnh sợ hãi) sẽ không bao giờ biến mất nếu không điều trị đúng cách." },
+            { q: "________ plan to excavate the ancient ruins next month.", options: ["Psychologists", "Archaeologists", "Astronomers", "Economists"], correct: 1, ext: "Từ vựng: **Archaeologists** (Các nhà khảo cổ học) lên kế hoạch khai quật tàn tích cổ." },
+            { q: "\"I am sure it won't rain,\" she told me.", options: ["She said that she was sure it won't rain.", "She says that she was sure it won't rain.", "She said that she was sure it wouldn't rain.", "She said that she is sure it wouldn't rain."], correct: 2, ext: "Ngữ pháp: Câu tường thuật. Lùi thì 'am' -> 'was', 'won't' -> 'wouldn't'. -> **She said that she was sure it wouldn't rain**." },
+            { q: "Jim: \"Has your truck been fixed, or is it still being worked on?\"\nJenny: \"________\"", options: ["It was repaired today.", "Please use the truck instead.", "Her truck had been fixed that night.", "It will be booked up."], correct: 0, ext: "Giao tiếp: Jim hỏi xe tải đã sửa xong chưa. Jenny trả lời: **It was repaired today** (Nó đã được sửa xong hôm nay)." },
+            { q: "This is the first time I ________ such a good movie.", options: ["am seeing", "was seeing", "have seen", "saw"], correct: 2, ext: "Ngữ pháp: Cấu trúc 'This is the first time + S + HTHT' -> **have seen**." },
+            { q: "They haven't decided where ________ for their holiday yet.", options: ["going", "to go", "to going", "go"], correct: 1, ext: "Ngữ pháp: Từ để hỏi (where/what/how...) + **to V** (chưa quyết định sẽ đi đâu)." },
+            { q: "Mathematics is ________ subject that requires a lot of practice.", options: ["a", "the", "an", "Ø (no article)"], correct: 0, ext: "Ngữ pháp: Mạo từ **a** đứng trước cụm danh từ đếm được số ít (một môn học)." },
+            { q: "While we ________ dinner, someone knocked at the door.", options: ["had", "were having", "are having", "have"], correct: 1, ext: "Ngữ pháp: Hành động đang xảy ra (were having) thì có hành động khác xen vào (knocked)." },
+            { q: "That television program is not only ________ but also entertaining.", options: ["convenient", "informative", "necessary", "economical"], correct: 1, ext: "Từ vựng: Cấu trúc 'not only... but also' (không những... mà còn) nối 2 từ cùng tính chất. Chương trình truyền hình không những **informative** (cung cấp nhiều thông tin) mà còn giải trí." },
+            { q: "Despite having a good job, she is not satisfied with her salary and wishes she ________ more money.", options: ["earns", "earned", "will earn", "is earning"], correct: 1, ext: "Ngữ pháp: Câu điều ước ở hiện tại (trái thực tế). Động từ lùi về quá khứ đơn -> **earned**." },
+            { q: "Jack is not at home. He ________ go somewhere with Mary. I'm not sure.", options: ["should", "will", "must", "might"], correct: 3, ext: "Động từ khuyết thiếu: Có cụm 'I'm not sure' (Tôi không chắc) chỉ sự phỏng đoán không chắc chắn -> dùng **might**." },
+            { q: "She suggested ________ a project about preserving natural environment.", options: ["doing", "to do", "should do", "do"], correct: 0, ext: "Ngữ pháp: Cấu trúc **suggest + V-ing** (đề xuất làm việc gì)." },
+            { q: "Wearing uniform encourages students to be proud ________ being students of their school.", options: ["to", "with", "for", "of"], correct: 3, ext: "Giới từ: Cụm tính từ **be proud of** (tự hào về điều gì)." },
+            { q: "If it ________ tomorrow, we will cancel the picnic.", options: ["rains", "rained", "will rain", "is raining"], correct: 0, ext: "Ngữ pháp: Câu điều kiện loại 1 (diễn tả sự việc có thể xảy ra). Mệnh đề If chia thì hiện tại đơn -> **rains**." },
+            { q: "The new appliance both works ________ and saves energy.", options: ["effect", "effective", "effectively", "effectiveness"], correct: 2, ext: "Từ loại: Bổ nghĩa cho động từ 'works' cần một trạng từ -> **effectively** (hoạt động một cách hiệu quả)." },
+            { q: "When visiting a new place, you should take ________ pictures to keep memories of your trip.", options: ["some", "none", "every", "lots"], correct: 0, ext: "Lượng từ: Khuyên nên chụp 'một vài' bức ảnh -> **some pictures**. (Không dùng 'lots' vì thiếu 'of')." },
+            { q: "Don't forget to ________ your jacket before you go out; it's very cold outside.", options: ["put off", "put on", "turn on", "switch off"], correct: 1, ext: "Phrasal verb: Trời lạnh nên đừng quên **put on** (mặc vào) áo khoác." },
+            { q: "Emily shares that she failed the drama club interview, and Phuong responds.\n- Emily: \"I didn't perform well at our school's drama club interview.\"\n- Phuong: \"________\"", options: ["You should try something more challenging.", "Don't give up! You'll have another chance.", "I think I should join something else.", "That club is too hard for them to try."], correct: 1, ext: "Giao tiếp: Lời động viên khi bạn làm bài không tốt. **Don't give up! You'll have another chance** (Đừng bỏ cuộc! Bạn sẽ có cơ hội khác)." },
+            { q: "We should educate the public about wildlife, ________?", options: ["shouldn't we", "should we", "don't we", "do we"], correct: 0, ext: "Ngữ pháp: Câu hỏi đuôi. Mệnh đề chính khẳng định 'We should' -> Đuôi phủ định **shouldn't we**." },
+            { q: "If people shared household chores, the family life ________ happier.", options: ["had been", "would have been", "will be", "would be"], correct: 3, ext: "Ngữ pháp: Câu điều kiện loại 2. Mệnh đề If ở quá khứ đơn (shared) -> Mệnh đề chính dùng **would + V**." },
+            { q: "At 5 o'clock yesterday evening, my elder sister ________ her clothes.", options: ["ironed", "is ironing", "has ironed", "was ironing"], correct: 3, ext: "Ngữ pháp: Có giờ giấc cụ thể trong quá khứ (5 o'clock yesterday evening) -> Dùng thì quá khứ tiếp diễn **was ironing**." },
+            { q: "Our lives ________ since the invention of the Internet.", options: ["have been improved", "be improved", "will be improved", "was improving"], correct: 0, ext: "Ngữ pháp: Có 'since' -> dùng thì hiện tại hoàn thành. Cuộc sống 'được cải thiện' mang ý bị động -> **have been improved**." },
+            { q: "Nam: \"Why don't we prepare for the entrance test together, Quan?\"\n- Quan: \"________\"", options: ["I'm afraid I can't", "No; thanks", "I don't think so", "That's a good idea"], correct: 3, ext: "Giao tiếp: Đáp lại lời rủ rê (Why don't we...). Đồng ý thì dùng **That's a good idea** (Ý kiến hay đó)." },
+            { q: "Television can ________ people with the latest information in an inexpensive and convenient way.", options: ["apply", "interact", "provide", "communicate"], correct: 2, ext: "Từ vựng: Cấu trúc **provide sb with sth** (cung cấp cho ai cái gì). TV cung cấp thông tin mới nhất." },
+            { q: "Is your son ________ French and English?", options: ["master", "bilingual", "keen", "fond"], correct: 1, ext: "Từ vựng: Con trai bạn có **bilingual** (song ngữ / nói được hai thứ tiếng) Pháp và Anh không?" },
+            { q: "The man ________ son is my classmate is a very famous scientist.", options: ["which", "whom", "that", "whose"], correct: 3, ext: "Đại từ quan hệ: Chỉ sự sở hữu của người đàn ông với con trai ông ấy -> dùng **whose**." },
+            { q: "My mother ________ a birthday cake in the kitchen at the moment.", options: ["made", "makes", "is making", "has made"], correct: 2, ext: "Ngữ pháp: Dấu hiệu 'at the moment' (ngay lúc này) -> chia thì hiện tại tiếp diễn **is making**." },
+            { q: "Tom eats a lot of fast food ________ he knows it's bad for him.", options: ["despite", "in spite of", "although", "because of"], correct: 2, ext: "Liên từ: Nối 2 mệnh đề (S + V) và mang ý nhượng bộ (Mặc dù anh ấy biết nó có hại) -> dùng **although**." },
+            { q: "While reading English books or articles online, you may ________ new vocabulary.", options: ["take off", "turn on", "look after", "come across"], correct: 3, ext: "Phrasal verb: **come across** (tình cờ gặp). Bạn có thể tình cờ gặp từ vựng mới." },
+            { q: "Lan enjoys ________ to pop music in her free time.", options: ["listen", "listened", "listening", "to listen"], correct: 2, ext: "Ngữ pháp: Theo sau 'enjoy' là V-ing -> **listening**." },
+            { q: "Smart homes ________ use motion sensors can turn on lights as you enter a room.", options: ["who", "whom", "which", "whose"], correct: 2, ext: "Đại từ quan hệ: Thay thế cho sự vật 'Smart homes' làm chủ ngữ -> dùng **which**." },
+            { q: "Our children played ________ badminton last Sunday afternoon.", options: ["Ø (no article)", "an", "a", "the"], correct: 0, ext: "Ngữ pháp: Không dùng mạo từ trước tên các môn thể thao (play badminton) -> **Ø**." },
+            { q: "Nam usually ________ with his friends in the evening.", options: ["chat", "has chatted", "was chatting", "chats"], correct: 3, ext: "Ngữ pháp: Dấu hiệu 'usually' chỉ thói quen hiện tại. Chủ ngữ 'Nam' số ít -> thêm 's': **chats**." },
+            { q: "The Ban Gioc Waterfalls is a popular ________ wonder of Vietnam.", options: ["native", "natural", "nation", "nature"], correct: 1, ext: "Từ loại: Bổ nghĩa cho danh từ 'wonder' cần tính từ **natural** (kỳ quan thiên nhiên)." },
+            { q: "They promised to ________ care of the children while I was away on business.", options: ["hold", "take", "do", "make"], correct: 1, ext: "Cụm từ cố định: **take care of** (chăm sóc)." },
+            { q: "These students ________ English since they were eight years old.", options: ["have learnt", "will learn", "are learning", "don't learn"], correct: 0, ext: "Ngữ pháp: Dấu hiệu 'since + mốc quá khứ' -> chia thì hiện tại hoàn thành **have learnt**." },
+            { q: "My sister ________ a comic book when I came home from school.", options: ["has read", "reads", "is reading", "was reading"], correct: 3, ext: "Ngữ pháp: Hành động đang diễn ra trong quá khứ (was reading) thì hành động khác (came home) xen vào." },
+            { q: "Hoi An is famous ________ its ancient architecture.", options: ["to", "for", "up", "with"], correct: 1, ext: "Giới từ: Cụm tính từ **be famous for** (nổi tiếng về điều gì)." },
+            { q: "If the weather is nice, I ________ camping with my classmates.", options: ["went", "goes", "would go", "will go"], correct: 3, ext: "Ngữ pháp: Câu điều kiện loại 1 (If + HTĐ, TLĐ) -> dùng **will go**." },
+            { q: "My sister decided to _____ a diary to record all her interesting experiences during the trip.", options: ["keep", "stay", "hold", "save"], correct: 0, ext: "Cụm từ cố định: **keep a diary** (viết nhật ký)." },
+            { q: "Scientists are worried about _____ because it leads to more extreme weather events.", options: ["nature reserves", "climate change", "food chains", "solar system"], correct: 1, ext: "Từ vựng: **climate change** (biến đổi khí hậu)." },
+            { q: "I wish people in the world _____ conflicts and lived in peace.", options: ["haven't had", "don't have", "won't have", "didn't have"], correct: 3, ext: "Ngữ pháp: Câu ước ở hiện tại, động từ lùi về thì quá khứ đơn (**didn't have**)." },
+            { q: "They are planning to buy a _____ dining table for their new house in the suburbs.", options: ["large round wooden", "wooden large round", "round large wooden", "large wooden round"], correct: 0, ext: "Ngữ pháp: Trật tự tính từ (OSASCOMP): Size (large) -> Shape (round) -> Material (wooden) -> **large round wooden**." },
+            { q: "He _____ their invitation to join the English drama club because he was too busy.", options: ["went on with", "looked after", "turned down", "took on"], correct: 2, ext: "Phrasal verb: **turn down** (từ chối). Anh ấy bận nên đã từ chối lời mời." },
+            { q: "The _____ the teacher explains the lesson, the better the students understand the main points.", options: ["clearly", "clearest", "more clearly", "most clearly"], correct: 2, ext: "Ngữ pháp: Cấu trúc so sánh kép 'The + so sánh hơn..., the + so sánh hơn...'. Dùng **more clearly**." },
+            { q: "You're _____ third person to ask me that silly question.", options: ["an", "Ø (Zero article)", "the", "a"], correct: 2, ext: "Ngữ pháp: Luôn dùng mạo từ **the** trước số thứ tự (the first, the second, the third...)." },
+            { q: "They agreed _____ the community service project to help local people in the mountainous areas.", options: ["join", "joining", "to join", "joined"], correct: 2, ext: "Ngữ pháp: Cấu trúc **agree to V** (đồng ý làm gì đó)." },
+            { q: "We sometimes feel lonely and sad; _____, we need parents and friends.", options: ["otherwise", "therefore", "moreover", "nevertheless"], correct: 1, ext: "Liên từ: Đứng giữa hai mệnh đề có quan hệ nguyên nhân - kết quả. Chúng ta thấy cô đơn, **vì vậy** (therefore) chúng ta cần bạn bè và bố mẹ." },
+            { q: "I _____ along the crowded street in the city center when I met my old friend yesterday.", options: ["was walking", "am walking", "walk", "have walked"], correct: 0, ext: "Ngữ pháp: Hành động đang xảy ra trong quá khứ (**was walking**) thì hành động khác xen vào (met)." },
+            { q: "We were lucky to meet artisan Đặng Văn Bảy, _____ products are on display at Ha Noi Museum and the Presidential Palace.", options: ["where", "which", "who", "whose"], correct: 3, ext: "Đại từ quan hệ: Chỉ sự sở hữu (những sản phẩm CỦA ông ấy) -> dùng **whose**." },
+            { q: "Please send the assignment to our teacher via email _____ Thursday afternoon.", options: ["in", "for", "at", "on"], correct: 3, ext: "Giới từ: Đi kèm với các buổi trong một ngày cụ thể (Thursday afternoon) ta dùng giới từ **on**." },
+            { q: "If we don't take _____ action now to stop pollution, the damage to our Earth will be permanent.", options: ["decisive", "rewarding", "repetitive", "well-paid"], correct: 0, ext: "Cụm từ: **decisive action** (hành động mang tính quyết đoán/kiên quyết)." },
+            { q: "I haven't decided _____ to include in my paragraph about traditional handicrafts for homework.", options: ["where", "who", "what", "when"], correct: 2, ext: "Từ để hỏi: Tôi chưa quyết định sẽ đưa **những thông tin gì** (what) vào bài viết." },
+            { q: "If you want to get a high score on the final exam, you _____ revise your lessons carefully every day.", options: ["should", "might", "would", "can"], correct: 0, ext: "Động từ khuyết thiếu: Đưa ra lời khuyên (nếu muốn điểm cao, bạn **nên** ôn bài) -> dùng **should**." },
+            { q: "The school regulations clearly state that students are not permitted _____ mobile phones during lessons.", options: ["use", "to use", "using", "used"], correct: 1, ext: "Ngữ pháp: Cấu trúc bị động **be permitted to V** (được phép làm gì)." },
+            { q: "The small bookstore is located _____ the corner of the street, right next to the bank.", options: ["in", "on", "at", "under"], correct: 2, ext: "Giới từ: Cụm từ chỉ địa điểm chính xác **at the corner of the street** (tại góc phố)." },
+            { q: "The student _____ won the first prize in the competition is from my class.", options: ["which", "who", "whose", "whom"], correct: 1, ext: "Đại từ quan hệ: Thay thế cho danh từ chỉ người 'The student' làm chủ ngữ cho động từ 'won' -> dùng **who**." },
+            { q: "The flight was delayed _____ the bad weather at the airport.", options: ["although", "because", "because of", "despite"], correct: 2, ext: "Liên từ: Theo sau chỗ trống là cụm danh từ (the bad weather) chỉ nguyên nhân -> dùng **because of**." },
+            { q: "- Susan: \"_____?\"\n- Ally: A balanced diet is crucial. Fruits, veggies, whole grains, and lean proteins are great choices. Avoid junk food, like chips and soda.", options: ["What should we eat to be healthy", "How do you live", "What do you earn for a living", "What are you working"], correct: 0, ext: "Giao tiếp: Câu trả lời đề cập đến chế độ ăn uống và các loại thực phẩm lành mạnh, do đó câu hỏi phù hợp nhất là: **Chúng ta nên ăn gì để khỏe mạnh?**" },
+            { q: "He succeeded _____ passing the entrance exam to a prestigious high school.", options: ["in", "on", "at", "for"], correct: 0, ext: "Giới từ: Đi kèm với động từ succeed là giới từ **in** (thành công trong việc gì đó)." },
+            { q: "I can speak _____ words of French, but I can't write them.", options: ["a few", "a little", "few", "little"], correct: 0, ext: "Lượng từ: 'words' là danh từ đếm được, mang nghĩa khẳng định (tôi biết nói một vài từ) -> dùng **a few**." },
+            { q: "Mike and Alice _____ in New York since they got married twenty years ago.", options: ["lived", "have lived", "were living", "live"], correct: 1, ext: "Ngữ pháp: Dấu hiệu 'since + mốc quá khứ', mệnh đề chính chia thì Hiện tại hoàn thành -> **have lived**." },
+            { q: "Your brother doesn't often go online, _____?", options: ["does he", "doesn't he", "did he", "isn't he"], correct: 0, ext: "Ngữ pháp: Câu hỏi đuôi. Mệnh đề chính mang ý phủ định (doesn't) nên phần đuôi phải là khẳng định -> **does he**." },
+            { q: "Mrs. Loan is very busy _____ her housework.", options: ["to", "with", "on", "for"], correct: 1, ext: "Giới từ: Cụm tính từ **be busy with something** (bận rộn với cái gì)." },
+            { q: "They _____ a film at half past eight last night.", options: ["watched", "was watching", "have watched", "were watching"], correct: 3, ext: "Ngữ pháp: Có giờ giấc cụ thể trong quá khứ (half past eight last night) -> Dùng thì Quá khứ tiếp diễn. Chủ ngữ số nhiều dùng **were watching**." },
+            { q: "- Tom: \"Congratulations on winning the match!\"\n- John: \"_____.\"", options: ["You're welcome.", "Never mind.", "That's a good idea.", "Thank you very much."], correct: 3, ext: "Giao tiếp: Đáp lại lời chúc mừng (Congratulations!), câu trả lời lịch sự nhất là **Thank you very much**." },
+            { q: "This is the most interesting novel _____ I have ever read.", options: ["who", "which", "when", "that"], correct: 3, ext: "Đại từ quan hệ: Đứng sau cấu trúc so sánh nhất (the most interesting), ta bắt buộc phải dùng đại từ **that**." },
+            { q: "Ho Chi Minh City is _____ city in Vietnam.", options: ["the largest", "largest", "larger", "the larger"], correct: 0, ext: "Ngữ pháp: Cấu trúc so sánh nhất bắt buộc phải có mạo từ 'the' -> **the largest**." },
+            { q: "Don't open the window, _____?", options: ["do you", "don't you", "shall we", "will you"], correct: 3, ext: "Ngữ pháp: Câu hỏi đuôi. Đối với câu mệnh lệnh (dù khẳng định hay phủ định), phần đuôi luôn là **will you**." },
+            { q: "Air pollution is a _____ problem in many modern cities.", options: ["attractive", "boring", "serious", "inconvenient"], correct: 2, ext: "Từ vựng: Ô nhiễm không khí là một vấn đề vô cùng **nghiêm trọng (serious)** tại các thành phố hiện đại." },
+            { q: "My grandmother can _____ herself very well.", options: ["look up", "look for", "look after", "look at"], correct: 2, ext: "Phrasal verb: **look after** (chăm sóc). Bà tôi có thể tự chăm sóc bản thân rất tốt." },
+            { q: "They are going to _____ cinema to watch a new movie.", options: ["a", "an", "the", "Ø"], correct: 2, ext: "Ngữ pháp: Mạo từ trong cụm từ cố định **go to the cinema** (đi đến rạp chiếu phim)." },
+            { q: "The car is parked _____ front of the building.", options: ["in", "on", "at", "to"], correct: 0, ext: "Giới từ: Cụm giới từ chỉ vị trí **in front of** (ở phía trước)." },
+            { q: "There aren't _____ chairs in the living room for everyone.", options: ["much", "many", "little", "few"], correct: 1, ext: "Lượng từ: 'chairs' là danh từ đếm được số nhiều, trong câu phủ định ta dùng **many** (không có nhiều ghế)." },
+            { q: "Broadly speaking, the new sports centre is _____ than the old one near my house.", options: ["the most convenient", "convenient", "more convenient", "as convenient"], correct: 2, ext: "Ngữ pháp: Câu có 'than' nên dùng dạng so sánh hơn đối với tính từ dài -> **more convenient**." },
+            { q: "People should save energy _____ the shortage of the natural resources.", options: ["because", "because of", "in spite of", "despite"], correct: 1, ext: "Liên từ: Đằng sau chỗ trống là cụm danh từ chỉ nguyên nhân (the shortage...) -> dùng **because of** (bởi vì)." },
+            { q: "The teacher _____ taught us about history is retiring this year.", options: ["which", "who", "why", "whose"], correct: 1, ext: "Đại từ quan hệ: Thay thế cho danh từ chỉ người 'The teacher' làm chủ ngữ cho vế sau -> dùng **who**." },
+            { q: "Mary: \"You look nice today. I like your new dress\"\nDaisy: \"_____\"", options: ["I feel interesting to hear that", "Oh, well done", "It's nice of you to say so", "My pleasure"], correct: 2, ext: "Giao tiếp: Đáp lại lời khen ngợi ngoại hình, ta dùng **It's nice of you to say so** (Bạn thật tốt khi nói vậy)." },
+            { q: "I _____ very well with my sister now, we never have any arguments.", options: ["carry on", "go on", "get on", "put on"], correct: 2, ext: "Phrasal verb: **get on (well) with somebody** (có mối quan hệ tốt đẹp, hòa thuận với ai)." },
+            { q: "We had _____ trip to Thailand last week.", options: ["a four – days", "a four - day", "four – day", "four days"], correct: 1, ext: "Ngữ pháp: Cụm danh từ ghép làm tính từ. Dùng Số đếm + Danh từ số ít (không s). Do 'trip' đếm được số ít nên cần mạo từ 'a' -> **a four-day trip**." },
+            { q: "I have a _____ on a classmate who is very near and dear to me.", options: ["crush", "desire", "flame", "passion"], correct: 0, ext: "Idiom (Thành ngữ): **have a crush on somebody** (cảm nắng, phải lòng ai đó)." },
+            { q: "_____ air is polluted in many cities around the world.", options: ["a", "an", "the", "Ø"], correct: 3, ext: "Ngữ pháp: Mạo từ. 'air' (không khí) là danh từ không đếm được, dùng để chỉ chung chung nên không dùng mạo từ -> **Ø**." },
+            { q: "She enjoys jogging _____ the morning before work.", options: ["in", "on", "at", "to"], correct: 0, ext: "Giới từ thời gian: Đối với các buổi lớn trong một ngày, ta dùng giới từ **in** (in the morning, in the afternoon)." },
+            { q: "There is _____ juice left in the glass; please finish it.", options: ["any", "many", "little", "a few"], correct: 2, ext: "Lượng từ: 'juice' (nước trái cây) là danh từ không đếm được. Câu mang ý nghĩa 'còn một ít, uống nốt đi' thường dùng a little, tuy nhiên trong các đáp án được cho chỉ có **little** là hợp lý nhất về mặt ngữ pháp so với các từ còn lại." },
+            { q: "The weather today is _____ than it was last week.", options: ["warm", "warmer", "the warmest", "as warm"], correct: 1, ext: "Ngữ pháp: Câu có 'than' -> dùng so sánh hơn của tính từ ngắn 'warm' là **warmer**." },
+            { q: "_____ I was tired, I stayed up late to finish the project.", options: ["Although", "Because", "Therefore", "So"], correct: 0, ext: "Liên từ: Liên kết 2 mệnh đề có ý nghĩa trái ngược nhau (Mặc dù mệt mỏi nhưng vẫn thức khuya) -> Dùng **Although**." },
+            { q: "He is the artist _____ paintings are displayed in the gallery.", options: ["which", "who", "what", "whose"], correct: 3, ext: "Đại từ quan hệ: Chỉ sự sở hữu (những bức tranh CỦA họa sĩ ấy) -> dùng **whose**." },
+            { q: "- Peter: \"Do you mind if I use your pencil?\"\n- Katy: \"_____\"", options: ["Sorry. I have no idea.", "Never mind. Help yourself", "Certainly, it's true", "That's a good idea."], correct: 1, ext: "Giao tiếp: Đáp lại lời xin phép 'Bạn có phiền không...'. Trong các đáp án, **Never mind. Help yourself** (Không phiền đâu. Cứ tự nhiên nhé) là phù hợp nhất để đồng ý cho mượn đồ." },
+            { q: "We need to take action to help _____ derelict historical buildings.", options: ["include", "recommend", "astound", "preserve"], correct: 3, ext: "Từ vựng: Chúng ta cần hành động để giúp **bảo tồn (preserve)** các tòa nhà lịch sử đang bị bỏ hoang." },
+            { q: "The mass media are _____ of communication, such as books, newspapers, recordings, radio, movies, television, mobile phones and the Internet.", options: ["models", "means", "parts", "types"], correct: 1, ext: "Cụm từ cố định: **means of communication** (phương tiện giao tiếp/phương tiện truyền thông)." },
+            { q: "There are many flowers _____ the garden.", options: ["in", "on", "at", "to"], correct: 0, ext: "Giới từ chỉ nơi chốn: Nằm trong một không gian (khu vườn) ta dùng giới từ **in**." },
+            { q: "They decided to _____ their vacation plans until the weather improves and becomes more predictable.", options: ["bring up", "put off", "get along", "turn in"], correct: 1, ext: "Phrasal verb: **put off** (trì hoãn). Họ quyết định trì hoãn kế hoạch đi nghỉ mát." },
+            { q: "_____ life in the city can be very busy.", options: ["a", "an", "the", "Ø"], correct: 3, ext: "Ngữ pháp: Mạo từ. Từ 'life' (cuộc sống) đang nói tới ý nghĩa chung chung, khái quát -> không dùng mạo từ **(Ø)**." },
+            { q: "We are planning to visit them _____ Christmas.", options: ["in", "of", "at", "to"], correct: 2, ext: "Giới từ thời gian: Đối với các kỳ nghỉ lễ kéo dài (như dịp Giáng sinh, dịp Phục sinh), ta dùng giới từ **at** (at Christmas)." },
+            { q: "Do you know how _____ information is needed for this project?", options: ["much", "many", "a little", "few"], correct: 0, ext: "Lượng từ: 'information' (thông tin) là danh từ không đếm được -> Dùng từ để hỏi **how much**." },
+            { q: "She is the _____ runner on the team according to last week's results.", options: ["fast", "faster", "the fastest", "as fast"], correct: 2, ext: "Ngữ pháp: Dấu hiệu 'on the team' (trong đội) -> dùng cấu trúc so sánh nhất **the fastest**." },
+            { q: "He went to bed early _____ he had a headache.", options: ["so", "because of", "because", "even though"], correct: 2, ext: "Liên từ: Đằng sau là một mệnh đề (S + V) chỉ nguyên nhân -> Dùng **because** (bởi vì)." },
+            { q: "The child _____ you helped yesterday was very grateful.", options: ["which", "who", "when", "whose"], correct: 1, ext: "Đại từ quan hệ: Thay thế cho danh từ chỉ người 'The child' làm tân ngữ (bạn đã giúp đỡ đứa trẻ) -> dùng **who** (hoặc whom)." },
+            { q: "Antony: \"Give my best regards to your parents.\"\nMessi: \"_____\"", options: ["It's nice of you to say so", "I'm glad to hear that", "Thanks. I will", "Please go ahead"], correct: 2, ext: "Giao tiếp: Khi ai đó nhờ gửi lời hỏi thăm (Give my best regards to...), hãy đáp lại lịch sự: **Thanks. I will** (Cảm ơn, tôi sẽ chuyển lời)." },
+            { q: "We had to _____ our meeting because too many people were unable to attend on the scheduled date.", options: ["take after", "call off", "break down", "look for"], correct: 1, ext: "Phrasal verb: **call off** (hủy bỏ). Chúng tôi phải hủy cuộc họp vì quá nhiều người vắng mặt." },
+            { q: "The government has _____ every effort to improve the quality of education.", options: ["done", "made", "created", "brought"], correct: 1, ext: "Cụm từ cố định: **make an effort** / make every effort (cố gắng, nỗ lực hết sức)." },
+            { q: "I've tried those tablets and they are not _____ in helping me stop coughing.", options: ["successful", "effective", "profitable", "careful"], correct: 1, ext: "Từ vựng: Tôi đã dùng thử thuốc nhưng chúng không **hiệu quả (effective)** trong việc giúp tôi ngừng ho." },
+            { q: "She enjoys watching _____ movies in her free time.", options: ["a", "an", "the", "Ø"], correct: 3, ext: "Ngữ pháp: Mạo từ. 'movies' là danh từ đếm được số nhiều, và đang chỉ chung chung (cô ấy thích xem phim nói chung) -> không dùng mạo từ **(Ø)**." },
+            { q: "_____ autumn, the leaves change color and fall.", options: ["in", "on", "at", "to"], correct: 0, ext: "Giới từ thời gian: Đứng trước các mùa trong năm, ta dùng giới từ **in** (in autumn, in spring...)." },
+            { q: "How _____ money do you spend on food each month?", options: ["much", "many", "a lot of", "few"], correct: 0, ext: "Lượng từ: 'money' (tiền) là danh từ không đếm được -> Dùng từ để hỏi **how much**." },
+            { q: "He arrived _____ than anyone else, so he had to wait more than an hour.", options: ["earlier", "more earlier", "early", "earliest"], correct: 0, ext: "Ngữ pháp: Trạng từ 'early' kết thúc bằng 'y' nên có dạng so sánh hơn giống tính từ ngắn -> **earlier** (sớm hơn)." },
+            { q: "I have to finish my homework _____ I can go out.", options: ["so that", "because", "or", "but"], correct: 0, ext: "Liên từ: Liên kết mệnh đề chỉ mục đích. Tôi phải hoàn thành bài tập **để mà (so that)** tôi có thể đi chơi." },
+            { q: "The river _____ flows through the city is very clean.", options: ["which", "who", "whom", "whose"], correct: 0, ext: "Đại từ quan hệ: Thay thế cho sự vật 'The river' làm chủ ngữ cho vế sau -> dùng **which**." },
+            { q: "Tryndamere: \"What a delicious cake!\"\nMiss Fortune: \"_____\"", options: ["No, I don't think so", "Thanks. I'm glad you like it", "I'm sorry. I did it badly", "Watch out"], correct: 1, ext: "Giao tiếp: Đáp lại lời khen ngợi đồ ăn ngon (What a delicious cake!), người nấu sẽ cảm ơn: **Thanks. I'm glad you like it**." },
+            { q: "She had been depressed all day but she started to _____ after she heard that was promoted.", options: ["turn up", "cheer up", "take up", "break up"], correct: 1, ext: "Phrasal verb: **cheer up** (trở nên vui vẻ, phấn khởi lên). Cô ấy vui lên khi nghe tin được thăng chức." },
+            { q: "Unless we _____ our water resources, there will be a shortage of clean water someday.", options: ["predict", "use", "conserve", "replace"], correct: 2, ext: "Từ vựng: Nếu chúng ta không **bảo tồn (conserve)** nguồn tài nguyên nước, sẽ có ngày thiếu nước sạch." },
+            { q: "Modern technology is widening the _____ gap between parents and their children.", options: ["tradition", "age", "gender", "generation"], correct: 3, ext: "Cụm danh từ: **generation gap** (khoảng cách thế hệ)." },
+            { q: "I have _____ idea for our next project.", options: ["a", "an", "the", "Ø"], correct: 1, ext: "Ngữ pháp: 'idea' là danh từ đếm được số ít, bắt đầu bằng nguyên âm 'i' -> dùng mạo từ **an**." },
+            { q: "He went _____ the hospital to visit his friend.", options: ["in", "on", "at", "to"], correct: 3, ext: "Giới từ: Đi tới một địa điểm ta dùng **go to** (went to the hospital)." },
+            { q: "They didn't have too _____ time to prepare for the presentation.", options: ["much", "many", "lots of", "few"], correct: 0, ext: "Lượng từ: 'time' (thời gian) là danh từ không đếm được. Câu có 'too' mang nghĩa (không dành quá nhiều thời gian) -> dùng **much**." },
+            { q: "His explanation is _____ than the previous one.", options: ["confusing", "more confusing", "the most confusing", "as confusing"], correct: 1, ext: "Ngữ pháp: Câu có 'than' -> dùng so sánh hơn của tính từ dài 'confusing' -> **more confusing**." },
+            { q: "She wanted to stay longer _____ she left because it was late.", options: ["but", "because of", "because", "even though"], correct: 0, ext: "Liên từ: Nối 2 vế có ý nghĩa trái ngược nhau. Cô ấy muốn ở lại lâu hơn, **nhưng (but)** phải rời đi vì muộn." },
+            { q: "The man _____ you are looking for is over there.", options: ["which", "who", "whom", "whose"], correct: 2, ext: "Đại từ quan hệ: Thay thế cho danh từ chỉ người 'The man' đóng vai trò làm tân ngữ (bạn đang tìm anh ta) -> dùng **whom** (hoặc who)." },
+            { q: "Graves: \"How about giving me a hand?\"\nLucian: \"_____\"", options: ["I promise", "No, not yet", "Sure. I'd be glad to help", "You're welcome"], correct: 2, ext: "Giao tiếp: Đáp lại lời nhờ vả (Bạn có thể giúp tôi một tay không?). Rất sẵn lòng giúp đỡ: **Sure. I'd be glad to help**." },
+            { q: "After a long discussion, they finally managed to _____ a compromise that satisfied both parties involved.", options: ["come up with", "take care of", "turn down", "give in"], correct: 0, ext: "Phrasal verb: **come up with** (nghĩ ra, nảy ra, đạt được). Cuối cùng họ cũng đạt được một sự thỏa hiệp." },
+            { q: "Most of the secondary students are _____ about the coming exam.", options: ["worried", "surprised", "bored", "interested"], correct: 0, ext: "Từ vựng: Đi kèm với giới từ 'about' là tính từ **worried** (lo lắng về điều gì đó)." },
+            { q: "People go to a _____ to look at famous works of art.", options: ["fair", "theater", "stadium", "gallery"], correct: 3, ext: "Từ vựng: Mọi người đến **phòng trưng bày nghệ thuật (gallery)** để ngắm các tác phẩm nổi tiếng." },
+            { q: "She's _____ best student in her class.", options: ["a", "an", "the", "Ø"], correct: 2, ext: "Ngữ pháp: Đứng trước tính từ so sánh nhất (best) bắt buộc dùng mạo từ **the**." },
+            { q: "She has a photo album _____ her phone.", options: ["in", "on", "at", "to"], correct: 1, ext: "Giới từ: Để chỉ dữ liệu, ứng dụng nằm trên thiết bị điện tử (điện thoại, máy tính), ta dùng giới từ **on** (on her phone)." },
+            { q: "_____ of his friends could come to his birthday party yesterday.", options: ["Much", "Few", "Little", "Enough"], correct: 1, ext: "Lượng từ: 'friends' là danh từ đếm được số nhiều. Dùng **Few** (có rất ít) đi với danh từ đếm được, mang nghĩa phủ định." },
+            { q: "Nam runs _____ than any boys in his class.", options: ["faster", "more faster", "the fastest", "fastest"], correct: 0, ext: "Ngữ pháp: Câu có 'than' nên phải dùng so sánh hơn. 'fast' là trạng từ ngắn -> thêm đuôi -er thành **faster**." },
+            { q: "_____ I've cleaned and polished my leather jacket, it still doesn't look new.", options: ["Because", "Because of", "In spite of", "Although"], correct: 3, ext: "Liên từ: Liên kết 2 mệnh đề (S+V) mang nghĩa trái ngược. **Mặc dù (Although)** tôi đã làm sạch và đánh bóng áo khoác, nó trông vẫn không mới." },
+            { q: "The car _____ she drives is very expensive and fast.", options: ["which", "what", "whom", "whose"], correct: 0, ext: "Đại từ quan hệ: Thay thế cho danh từ chỉ vật 'The car' -> dùng **which**." },
+            { q: "Penaldo: \"Thank you for a lovely evening.\"\nMbappe: \"_____.\"", options: ["Thank you very much indeed.", "Yeah. I'm really looking forward to it", "You are welcome", "That's very kind of you"], correct: 2, ext: "Giao tiếp: Đáp lại lời cảm ơn sau một buổi đi chơi, ta nói **You are welcome** (Không có chi)." },
+            { q: "Because of the global warming, we should _____ on our energy use.", options: ["look down", "cut down", "turn into", "put off"], correct: 1, ext: "Phrasal verb: Cấu trúc **cut down on something** (cắt giảm, giảm bớt). Chúng ta nên cắt giảm việc sử dụng năng lượng." },
+            { q: "He is good at English. He rarely _____ a mistake in his English test.", options: ["does", "makes", "gets", "has"], correct: 1, ext: "Cụm từ cố định: **make a mistake** (phạm sai lầm)." },
+            { q: "People rumor that he committed the crime under the _____ of drugs.", options: ["connection", "touch", "influence", "attraction"], correct: 2, ext: "Thành ngữ/Cụm từ cố định: **under the influence of** (chịu ảnh hưởng của, đặc biệt là cồn/thuốc phiện). Phạm tội trong tình trạng ngáo đá." },
+            { q: "My mother told me that _____ key to success is hard work and persistence.", options: ["a", "an", "the", "Ø"], correct: 2, ext: "Ngữ pháp: 'key' (chìa khóa) ở đây đã được xác định rõ là chìa khóa dẫn đến đâu (to success) -> cần dùng mạo từ **the**." },
+            { q: "The museum is located _____ the main street of the city.", options: ["in", "on", "at", "to"], correct: 1, ext: "Giới từ chỉ nơi chốn: Nằm **trên** một con đường/tuyến phố, ta dùng giới từ **on** (on the main street)." },
+            { q: "Please give me _____ apples from that basket over there.", options: ["much", "some", "little", "few"], correct: 1, ext: "Lượng từ: Câu yêu cầu, đề nghị (Please give me...) thường dùng **some** thay cho any." },
+            { q: "This exam is not _____ as the one we took last semester.", options: ["harder", "hard", "the hardest", "so hard"], correct: 3, ext: "Ngữ pháp: Cấu trúc so sánh bằng ở thể phủ định: **not as/so + adj + as** (không khó bằng) -> **so hard**." },
+            { q: "Mark and Kate are close friends _____ they have a lot of interests in common.", options: ["despite", "because of", "because", "although"], correct: 2, ext: "Liên từ: Đằng sau là mệnh đề chỉ nguyên nhân (Họ có nhiều sở thích chung). Vì vậy họ là bạn thân -> Dùng **because** (bởi vì)." },
+            { q: "The story _____ she told was very touching and inspiring.", options: ["which", "who", "whom", "whose"], correct: 0, ext: "Đại từ quan hệ: Thay thế cho danh từ chỉ vật 'The story' làm tân ngữ cho vế sau -> dùng **which**." },
+            { q: "Jack 97: - \"Make yourself at home.\"\nSơn Tùng –MTP: - \"_____\"", options: ["Yes, can I help you?", "Not at all. Don't mention it.", "Thanks! Same to you.", "It's very kind of you. Thank you."], correct: 3, ext: "Giao tiếp: Lời đáp cho câu mời khách đến chơi nhà 'Cứ tự nhiên như ở nhà nhé'. Khách lịch sự đáp lại: **It's very kind of you. Thank you** (Bạn thật tốt. Cảm ơn nhé)." },
+            { q: "He is really good at _____ his ideas in a clear and concise manner during presentations.", options: ["putting off", "bringing up", "getting across", "turning in"], correct: 2, ext: "Phrasal verb: **get across** (truyền đạt, làm cho người khác hiểu). Anh ấy rất giỏi truyền đạt ý tưởng rõ ràng." },
+            { q: "My aunt excitedly _____ a compliment on the scarf I knitted for her as a birthday present.", options: ["took", "passed", "paid", "made"], correct: 2, ext: "Cụm từ cố định: **pay a compliment on something** (dành lời khen ngợi cho cái gì). Dì tôi hào hứng khen chiếc khăn." },
+            { q: "For the most households, lighting _____ for 10% to 15% of the electricity bill.", options: ["applies", "accounts", "asks", "prepares"], correct: 1, ext: "Cụm từ cố định: **account for** (chiếm tỷ lệ bao nhiêu). Chiếu sáng chiếm 10% - 15% hóa đơn tiền điện." },
+            { q: "After _____ long day at work, she loves to relax with a good book and a cup of tea.", options: ["a", "an", "the", "Ø"], correct: 0, ext: "Ngữ pháp: Cụm từ cố định thông dụng **After a long day** (Sau một ngày dài)." },
+            { q: "She was born _____ March 3rd.", options: ["in", "on", "at", "to"], correct: 1, ext: "Giới từ thời gian: Đi với một ngày tháng cụ thể (ngày 3 tháng 3) bắt buộc dùng giới từ **on**." },
+            { q: "There was _____ rain yesterday, and everything got wet.", options: ["much", "many", "little", "few"], correct: 0, ext: "Lượng từ: 'rain' (mưa) là danh từ không đếm được. Câu mang ý khẳng định mọi thứ đều ướt sũng -> có nhiều mưa (**much**)." },
+            { q: "The blue car is _____ than the red one you saw.", options: ["expensive", "more expensive", "as expensive", "the most expensive"], correct: 1, ext: "Ngữ pháp: Có 'than' -> dùng so sánh hơn của tính từ dài 'expensive' -> **more expensive**." },
+            { q: "They canceled the match _____ the bad weather.", options: ["despite", "although", "because", "because of"], correct: 3, ext: "Liên từ: Đằng sau là một cụm danh từ (the bad weather) chỉ nguyên nhân -> Dùng **because of** (bởi vì)." },
+            { q: "The dress _____ she wore was designed by a famous designer.", options: ["which", "who", "whom", "whose"], correct: 0, ext: "Đại từ quan hệ: Thay thế cho danh từ chỉ vật 'The dress' làm tân ngữ cho mệnh đề sau -> dùng **which**." },
+            { q: "Oriana: \"Shall we go out for dinner?\". Yone: \"_____\"", options: ["No, I wouldn't. That's boring", "I'd love", "That's a good idea.", "You can say that again."], correct: 2, ext: "Giao tiếp: Đáp lại lời rủ rê (Shall we...). Câu trả lời đồng ý tự nhiên nhất là **That's a good idea** (Đó là một ý kiến hay)." },
+            { q: "The young boy _____ his father, both in appearance and personality.", options: ["picks up", "takes after", "turns out", "makes out"], correct: 1, ext: "Phrasal verb: **take after somebody** (giống ai đó về ngoại hình hoặc tính cách). Cậu bé rất giống cha mình." },
+            { q: "When we tried to _____ a sign directing us right into Greater Bridgewater Street, we found the road was closed.", options: ["follow", "suppose", "provide", "defend"], correct: 0, ext: "Từ vựng: **follow a sign** (đi theo biển báo). Khi chúng tôi cố đi theo biển báo hướng dẫn... thì đường đã bị chặn." },
+            { q: "Millions of _____ watch the Super Bowl on TV every year.", options: ["supporters", "viewers", "observers", "spectators"], correct: 1, ext: "Từ vựng: Người xem qua màn hình truyền hình (TV) được gọi là **viewers**. (Spectators dùng cho người đi xem trực tiếp)." },
+            { q: "_____ youngest child in the family often receives a lot of attention and love.", options: ["a", "an", "the", "Ø"], correct: 2, ext: "Ngữ pháp: Đứng trước tính từ so sánh nhất (youngest) bắt buộc phải dùng mạo từ **the**." },
+            { q: "They moved _____ the city to find better job opportunities.", options: ["in", "on", "at", "to"], correct: 3, ext: "Giới từ: Chuyển đến nơi nào đó dùng động từ move đi với giới từ **to** (move to the city)." },
+            { q: "He didn't spend too _____ time studying for the final exam.", options: ["much", "many", "little", "few"], correct: 0, ext: "Lượng từ: 'time' (thời gian) là danh từ không đếm được. Câu có 'too' mang nghĩa (không dành quá nhiều thời gian) -> dùng **much**." },
+            { q: "This challenge is not as _____ as I thought it would be.", options: ["easy", "easier", "the easiest", "as easy"], correct: 0, ext: "Ngữ pháp: Cấu trúc so sánh bằng phủ định (not as + tính từ nguyên thể + as). Dùng **easy**." },
+            { q: "_____ the storm, the ship couldn't reach its destination on time.", options: ["Because", "In spite of", "Because of", "Although"], correct: 2, ext: "Liên từ: Đằng sau khoảng trống là cụm danh từ 'the storm' (cơn bão) làm nguyên nhân gây trễ tàu -> dùng **Because of**." },
+            { q: "The computer _____ he fixed is working perfectly now.", options: ["which", "who", "whom", "whose"], correct: 0, ext: "Đại từ quan hệ: Thay thế cho danh từ chỉ vật 'The computer' -> dùng **which**." },
+            { q: "Ozawe: \"May I have something to drink, please?\"\nTokude: \"_____\"", options: ["Yes, of course. Help yourself.", "Of course you may.", "Why do you have to ask?", "You must help others too."], correct: 0, ext: "Giao tiếp: Đáp lại lời xin đồ ăn/thức uống. Lịch sự và hiếu khách nhất là nói: **Yes, of course. Help yourself** (Vâng tất nhiên rồi. Cứ tự nhiên nhé)." },
+            { q: "If you want to understand the topic better, you should _____ the material we covered in class.", options: ["look over", "check out", "break down", "run into"], correct: 0, ext: "Phrasal verb: **look over** (xem xét lại, ôn tập, đọc lướt qua). Bạn nên ôn lại tài liệu đã học trên lớp." },
+            { q: "You need to buy _____ pair of shoes for the hiking trip.", options: ["a", "an", "the", "Ø"], correct: 0, ext: "Ngữ pháp: 'pair of shoes' (đôi giày) đếm được, nhắc đến lần đầu và bắt đầu bằng phụ âm -> dùng mạo từ **a**." },
+            { q: "The class starts _____ 8:30 AM every day.", options: ["in", "on", "at", "to"], correct: 2, ext: "Giới từ thời gian: Đối với giờ giấc cụ thể trên đồng hồ (8:30 AM), bắt buộc dùng giới từ **at**." },
+            { q: "Do you have _____ friends living in another country?", options: ["much", "any", "little", "a lot"], correct: 1, ext: "Lượng từ: Trong câu hỏi nghi vấn với danh từ đếm được số nhiều 'friends', ta sử dụng **any** (Bạn có NGƯỜI BẠN NÀO... không?)." },
+            { q: "He is the _____ player on the team this season.", options: ["experienced", "more experienced", "as experienced", "most experienced"], correct: 3, ext: "Ngữ pháp: Cấu trúc có 'the', chỉ một người xuất sắc nhất trong nhóm (on the team) -> dùng so sánh nhất **most experienced**." },
+            { q: "He tried his best in the competition _____ he wanted to win the first prize.", options: ["although", "because of", "in spite of", "because"], correct: 3, ext: "Liên từ: Đằng sau là một mệnh đề (S + V) chỉ nguyên nhân mục đích (Anh ấy cố gắng VÌ anh ấy muốn thắng) -> dùng **because**." },
+            { q: "The man _____ daughter is my friend is very generous.", options: ["which", "who", "whom", "whose"], correct: 3, ext: "Đại từ quan hệ: Chỉ sự sở hữu (Người đàn ông mà CON GÁI CỦA ÔNG ẤY là bạn tôi) -> dùng **whose**." },
+            { q: "Putin: \"I think you've taken my bag by mistake.\"\nClinton: \"_____\"", options: ["What a shame!", "Pardon?", "I'm so sorry.", "Have I?"], correct: 2, ext: "Giao tiếp: Khi nhận ra mình lấy nhầm đồ của người khác, phản ứng lịch sự đầu tiên là xin lỗi: **I'm so sorry**." },
+            { q: "The firefighters arrived at the scene just in time to _____ the fire.", options: ["call back", "stand up", "count on", "put out"], correct: 3, ext: "Phrasal verb: **put out** (dập tắt ngọn lửa)." },
+            { q: "To save money, we should _____ the amount of energy used in our homes.", options: ["reduce", "increase", "stop", "leave"], correct: 0, ext: "Từ vựng: Để tiết kiệm tiền, chúng ta nên **cắt giảm (reduce)** lượng năng lượng tiêu thụ." },
+            { q: "We went to _____ cinema last weekend.", options: ["a", "an", "the", "Ø"], correct: 2, ext: "Ngữ pháp: Đi kèm với cụm từ chỉ hoạt động giải trí phổ biến thường có mạo từ 'the' -> **go to the cinema**." },
+            { q: "They are planning to go skiing _____ winter.", options: ["in", "on", "at", "to"], correct: 0, ext: "Giới từ thời gian: Đứng trước các mùa (xuân, hạ, thu, đông), ta dùng giới từ **in**." },
+            { q: "We have _____ time left, so let's hurry and finish this.", options: ["much", "many", "little", "few"], correct: 2, ext: "Lượng từ: Câu mang ý nghĩa giục giã (hãy nhanh lên) chứng tỏ còn rất RẤT ÍT thời gian. 'time' không đếm được nên dùng **little**." },
+            { q: "Titanic is the _____ film that I have ever seen.", options: ["interesting", "more interesting", "most interesting", "as interesting"], correct: 2, ext: "Ngữ pháp: Cấu trúc so sánh nhất đi cùng 'the' và thì hiện tại hoàn thành (ever seen) -> **most interesting**." },
+            { q: "We decided to keep walking _____ the rain.", options: ["despite", "even though", "because of", "because"], correct: 0, ext: "Liên từ: Đằng sau là một cụm danh từ 'the rain' (cơn mưa). Ý nghĩa nhượng bộ 'Mặc dù trời mưa' -> dùng **despite**." },
+            { q: "The cake _____ she baked was delicious and beautifully decorated.", options: ["which", "who", "whom", "whose"], correct: 0, ext: "Đại từ quan hệ: Thay thế cho danh từ chỉ vật 'The cake' làm tân ngữ cho vế sau -> dùng **which**." },
+            { q: "Dương: \"I think we should use less paper so that we can save trees.\"\nAlex: \"_____\"", options: ["Congratulations", "yes, I'd love to", "That's a good idea", "It's nice of you to say so"], correct: 2, ext: "Giao tiếp: Đáp lại lời một quan điểm mang tính đề xuất, rủ rê (we should use less...). Tán thành ý kiến đó bằng câu **That's a good idea**." },
+            { q: "My big brother always _____ for me when my mom yelled at me.", options: ["stuck up", "blocked up", "hooked up", "stood up"], correct: 3, ext: "Phrasal verb: **stand up for somebody** (hoặc stick up for) (đứng ra bảo vệ/bênh vực ai đó)." },
+            { q: "She also took dance lessons and yoga to maintain her already _____ build.", options: ["strong", "energetic", "dynamic", "athletic"], correct: 3, ext: "Từ vựng: Cụm từ **athletic build** (vóc dáng khỏe khoắn, thể thao)." },
+            { q: "Nam is trying to break the _____ of getting up too late.", options: ["habit", "sound", "option", "race"], correct: 0, ext: "Cụm từ cố định: **break the habit of** (từ bỏ thói quen làm gì đó)." },
+            { q: "She has always dreamed of becoming _____ artist because she loves to paint.", options: ["a", "an", "the", "Ø"], correct: 1, ext: "Ngữ pháp: 'artist' (họa sĩ/nghệ sĩ) là danh từ đếm được chỉ nghề nghiệp, bắt đầu bằng nguyên âm -> dùng mạo từ **an**." },
+            { q: "He is very good _____ math and enjoys solving problems.", options: ["in", "on", "at", "to"], correct: 2, ext: "Giới từ: Cụm tính từ **be good at something** (giỏi về lĩnh vực/môn gì đó)." },
+            { q: "How _____ time do you need to complete your assignment?", options: ["much", "many", "little", "few"], correct: 0, ext: "Lượng từ: 'time' (thời gian) là danh từ không đếm được. Câu hỏi dùng **How much**." },
+            { q: "My sister is _____ as most students in her class.", options: ["more intelligent", "as intelligent", "intelligent", "most intelligent"], correct: 1, ext: "Ngữ pháp: Phía sau có chữ 'as' -> Cấu trúc so sánh bằng: **as + adj + as** (thông minh như...)." },
+            { q: "_____ it was raining, they still went for a walk.", options: ["So", "Because", "Even though", "Therefore"], correct: 2, ext: "Liên từ: Liên kết 2 mệnh đề có ý nghĩa tương phản. **Mặc dù (Even though)** trời mưa, họ vẫn đi dạo." },
+            { q: "The girl _____ you met yesterday is my cousin.", options: ["which", "what", "whom", "whose"], correct: 2, ext: "Đại từ quan hệ: Thay thế cho danh từ chỉ người 'The girl' làm tân ngữ cho vế sau (bạn đã gặp CÔ ẤY) -> dùng **whom** (hoặc who/that)." },
+            { q: "Firefly: \"It's very kind of you to help me.\"\nSky: \"_____\"", options: ["Yes, certainly", "Not really", "Not at all", "Yes, I do"], correct: 2, ext: "Giao tiếp: Đáp lại lời cảm ơn hoặc khen ngợi sự tốt bụng. Câu đáp lịch sự là **Not at all** (Không có gì đâu)." },
+            { q: "This guide will help the learners _____ their difficult exam with flying colours.", options: ["get through", "get along", "get on", "get over"], correct: 0, ext: "Phrasal verb: **get through an exam** (vượt qua kỳ thi). Vượt qua kỳ thi với điểm số cao (flying colours)." },
+            { q: "I'm calling to _____ a reservation for a table of four for my birthday.", options: ["do", "make", "show", "meet"], correct: 1, ext: "Cụm từ cố định: **make a reservation** (đặt bàn/chỗ trước)." },
+            { q: "In my family, everybody has to do their _____ of the housework.", options: ["responsibility", "division", "bit", "share"], correct: 3, ext: "Cụm từ cố định: **do one's share of something** (làm phần việc thuộc về mình/chia sẻ trách nhiệm)." },
+            { q: "My dad is watching a football game on _____ TV.", options: ["a", "an", "the", "Ø"], correct: 3, ext: "Ngữ pháp: Cụm từ nói về việc xem tivi, nghe radio thường không có mạo từ (ví dụ: on TV, watch TV) -> **Ø**." },
+            { q: "They live _____ a small village by the sea.", options: ["in", "on", "at", "to"], correct: 0, ext: "Giới từ: Sống BÊN TRONG không gian của một ngôi làng, ta dùng giới từ **in**." },
+            { q: "The teacher gave _____ homework this weekend for practice.", options: ["much", "many", "any", "few"], correct: 0, ext: "Lượng từ: 'homework' (bài tập về nhà) là danh từ không đếm được. Trong 4 đáp án, chỉ có **much** có thể đứng trước danh từ không đếm được mang nghĩa khẳng định (bài tập)." },
+            { q: "Winter is _____ than autumn in most regions of the country.", options: ["cold", "the coldest", "colder", "as cold"], correct: 2, ext: "Ngữ pháp: Có 'than' -> cấu trúc so sánh hơn. Tính từ ngắn 'cold' -> **colder**." },
+            { q: "We went out for dinner _____ the heavy rain.", options: ["in spite of", "because of", "because", "even though"], correct: 0, ext: "Liên từ: Đằng sau là cụm danh từ 'the heavy rain' mang nghĩa nhượng bộ (Mặc dù mưa to, vẫn đi ăn) -> dùng **in spite of**." },
+            { q: "The doctor _____ treated me was very kind and patient.", options: ["which", "who", "whom", "whose"], correct: 1, ext: "Đại từ quan hệ: Thay thế cho danh từ chỉ người 'The doctor' làm chủ ngữ cho động từ 'treated' -> dùng **who**." },
+            { q: "Rodrygo: \"Thank you very much for your help.\"\nVinicius: \"_____\"", options: ["It's quite OK", "I'd love to", "You're welcome", "Of course"], correct: 2, ext: "Giao tiếp: Để đáp lời khi ai đó cảm ơn mình, ta nói **You're welcome** (Không có chi)." },
+            { q: "They need to _____ their budget for the project to avoid overspending and ensure successful completion.", options: ["add up", "keep track of", "turn in", "take over"], correct: 1, ext: "Cụm từ: **keep track of** (theo dõi, nắm bắt). Họ cần theo dõi sát sao ngân sách để tránh chi tiêu lố." },
+            { q: "If you eat too quickly, you may not _____ attention to whether your hunger is satisfied.", options: ["pay", "take", "keep", "show"], correct: 0, ext: "Cụm từ cố định: **pay attention to** (chú ý đến điều gì đó)." },
+            { q: "They met on board of a luxurious yacht during a _____ in the Caribbean.", options: ["tour", "voyage", "cruise", "trip"], correct: 2, ext: "Từ vựng: Chuyến du ngoạn nghỉ dưỡng trên tàu thủy sang trọng được gọi là **cruise**." },
+            { q: "They had _____ lunch at a new café.", options: ["a", "an", "the", "Ø"], correct: 3, ext: "Ngữ pháp: Không dùng mạo từ trước các bữa ăn thông thường hàng ngày (have breakfast, have lunch, have dinner) -> **Ø**." },
+            { q: "My family loves going _____ the movies on weekends.", options: ["in", "on", "at", "to"], correct: 3, ext: "Giới từ: Đi tới một địa điểm giải trí, ta dùng **go to** (go to the movies)." },
+            { q: "_____ students in our school like to play sports every day.", options: ["Much", "Many", "Little", "Any"], correct: 1, ext: "Lượng từ: 'students' là danh từ đếm được số nhiều -> dùng **Many** (nhiều học sinh)." },
+            { q: "This restaurant serves the _____ food ever.", options: ["more delicious", "so delicious", "delicious", "most delicious"], correct: 3, ext: "Ngữ pháp: Có mạo từ 'the' và từ 'ever' (từ trước tới nay) báo hiệu cấu trúc so sánh nhất -> **most delicious**." },
+            { q: "_____ Lan is very busy with her work, she reads a story to her children every night.", options: ["Despite", "Because of", "Because", "Although"], correct: 3, ext: "Liên từ: Liên kết mệnh đề mang ý nhượng bộ (Mặc dù bận rộn...). Phía sau là một mệnh đề hoàn chỉnh (S+V) -> dùng **Although**." },
+            { q: "The man _____ I saw yesterday is a famous actor.", options: ["which", "who", "whom", "whose"], correct: 2, ext: "Đại từ quan hệ: Thay thế cho danh từ chỉ người 'The man' làm tân ngữ cho vế sau (tôi đã thấy ANH ẤY) -> dùng **whom** (hoặc who)." },
+            { q: "- Yves: \"That's a very nice skirt you're wearing\"\n- Thái Công: \"_____\"", options: ["How a compliment!", "That's all right", "It's nice of you to say so", "I like you said so"], correct: 2, ext: "Giao tiếp: Đáp lại lời khen ngợi ngoại hình, ta nói **It's nice of you to say so** (Bạn thật tốt khi nói vậy)." },
+            { q: "In order to resolve the conflict, both sides must be willing to _____ their differences and work together.", options: ["bring up", "come together", "put aside", "break down"], correct: 2, ext: "Phrasal verb: **put aside** (gạt sang một bên). Gạt bỏ những khác biệt để cùng làm việc." },
+            { q: "TikTok is _____ with young people all over the world.", options: ["suitable", "keen", "popular", "favourite"], correct: 2, ext: "Giới từ đi kèm tính từ: **be popular with** (phổ biến, được yêu thích bởi ai đó)." },
+            { q: "My parents always criticize me for not getting good grades at school. I wish they put themselves in my _____.", options: ["pants", "legs", "hands", "shoes"], correct: 3, ext: "Idiom (Thành ngữ): **put oneself in someone's shoes** (đặt mình vào vị trí của người khác để thấu hiểu)." },
+            { q: "_____ rain started pouring as soon as we left.", options: ["a", "an", "the", "Ø"], correct: 2, ext: "Ngữ pháp: Cơn mưa cụ thể xảy ra lúc chúng tôi rời đi, đã được xác định -> dùng mạo từ **the**." },
+            { q: "She will call you _____ the afternoon after she finishes work.", options: ["in", "on", "at", "to"], correct: 0, ext: "Giới từ thời gian: Đối với các buổi lớn trong ngày, ta dùng giới từ **in** (in the afternoon)." },
+            { q: "Can you buy _____ bread from the store on your way home?", options: ["some", "many", "any", "few"], correct: 0, ext: "Lượng từ: Câu hỏi mang tính chất nhờ vả, nhờ mua hộ một ít bánh mì -> dùng **some**." },
+            { q: "She speaks English _____ than she speaks French.", options: ["fluent", "the most fluent", "more fluently", "as fluent"], correct: 2, ext: "Ngữ pháp: Có 'than' -> cấu trúc so sánh hơn. Động từ thường 'speaks' phải đi kèm với trạng từ 'fluently' -> **more fluently**." },
+            { q: "The flight to Ho Chi Minh city couldn't take off on time _____ the bad weather.", options: ["despite", "because of", "although", "so"], correct: 1, ext: "Liên từ: Đằng sau là cụm danh từ 'the bad weather' chỉ nguyên nhân chuyến bay bị hoãn -> dùng **because of**." },
+            { q: "The company _____ I work for is expanding internationally.", options: ["which", "who", "whom", "when"], correct: 0, ext: "Đại từ quan hệ: Thay thế cho danh từ chỉ vật 'The company' làm tân ngữ cho giới từ 'for' -> dùng **which**." },
+            { q: "Onana: \"I'm afraid I can't come to your house-warming party next Saturday.\"\nMaguire: \"_____\"", options: ["That sounds fun.", "Oh, what a pity", "That's ridiculous.", "Oh, what a relief!"], correct: 1, ext: "Giao tiếp: Đáp lại lời từ chối khéo léo của bạn khi họ không thể tới dự tiệc. Thể hiện sự nuối tiếc: **Oh, what a pity** (Ồ, tiếc quá)." },
+            { q: "If you want to improve your writing skills, you need to _____ your work regularly and seek feedback.", options: ["go over", "pick out", "turn down", "break up"], correct: 0, ext: "Phrasal verb: **go over** (xem xét lại kỹ lưỡng). Bạn cần xem lại bài làm của mình thường xuyên." },
+            { q: "Her parents never _____ her to go out alone at night when they lived in the city.", options: ["made", "let", "agreed", "allowed"], correct: 3, ext: "Ngữ pháp: Có giới từ 'to' ở phía sau (her to go out). Trong các động từ trên, chỉ có cấu trúc **allow sb to V** (cho phép ai làm gì) là phù hợp. ('let' và 'make' dùng với V nguyên thể không to)." },
+            { q: "According to the boss, John is the most _____ for the position of executive secretary because he graduated from a famous university.", options: ["supportive", "caring", "suitable", "comfortable"], correct: 2, ext: "Từ vựng: John là người **phù hợp nhất (suitable)** cho vị trí thư ký điều hành." },
+            { q: "The new community center offers ________ fitness classes and cooking workshops.", options: ["not only", "both", "as well", "either"], correct: 1, ext: "Cấu trúc: **both A and B** (cả A và B). Trung tâm cung cấp cả lớp thể hình và lớp nấu ăn." },
+            { q: "The teacher, ________ students performed well in the exam, was very proud of them.", options: ["whose", "which", "that", "who"], correct: 0, ext: "Đại từ quan hệ: **whose** dùng để chỉ sở hữu (những học sinh CỦA giáo viên đó)." },
+            { q: "The teacher advised students ________ more time practicing speaking English.", options: ["to spend", "should spent", "spending", "spend"], correct: 0, ext: "Cấu trúc: **advise someone to do something** (khuyên ai đó làm gì)." },
+            { q: "The local community center is organizing activities to encourage ________ among residents.", options: ["conversation", "interaction", "transportation", "evaluation"], correct: 1, ext: "Từ vựng: **interaction** (sự tương tác). Các hoạt động nhằm khuyến khích sự tương tác giữa cư dân." },
+            { q: "He was able to ________ her fear of heights by practising on small climbing walls.", options: ["come across", "take up", "get over", "look into"], correct: 2, ext: "Phrasal verb: **get over** (vượt qua). Anh ấy đã vượt qua nỗi sợ độ cao." },
+            { q: "Mother Earth ________ us with air to breathe, water to drink and food to eat.", options: ["protects", "provides", "keeps", "produces"], correct: 1, ext: "Cấu trúc: **provide someone with something** (cung cấp cho ai cái gì)." },
+            { q: "The ________ carefully you consider your strengths, the ________ likely you are to make the right decision.", options: ["more / more", "more / most", "most / more", "less / more"], correct: 0, ext: "Cấu trúc so sánh càng... càng...: **The more... the more...**" },
+            { q: "Mai: 'Hopefully, I will get a well-paid job.' - Teacher: '________.'", options: ["I hope not", "I hope you like it", "Never mind", "I hope so, too"], correct: 3, ext: "Giao tiếp: Đáp lại mong muốn của ai đó bằng sự đồng tình: **I hope so, too** (Tôi cũng hy vọng thế)." },
+            { q: "As many as 49,743 people across Vietnam ________ against COVID-19 in March.", options: ["were vaccinating", "vaccinated", "were vaccinated", "vaccinate"], correct: 2, ext: "Ngữ pháp: Câu bị động ở quá khứ đơn (**were vaccinated** - được tiêm chủng)." },
+            { q: "The boy is really funny, ________?", options: ["isn't he", "was he", "doesn't he", "did he"], correct: 0, ext: "Câu hỏi đuôi: Mệnh đề khẳng định dùng 'is' thì phần đuôi dùng phủ định **isn't he**." },
+            { q: "You shouldn't sit in ________ sun for too long.", options: ["a", "an", "the", "Ø"], correct: 2, ext: "Mạo từ: Dùng **the** trước các vật thể duy nhất như 'the sun'." },
+            { q: "There were lots of black clouds ________ the sky just before the storm.", options: ["above", "at", "in", "on"], correct: 2, ext: "Giới từ: **in the sky** (trên bầu trời)." },
+            { q: "Experts say that another outbreak of flu epidemic is on the ________.", options: ["cards", "boards", "papers", "days"], correct: 0, ext: "Thành ngữ: **on the cards** (có khả năng xảy ra)." },
+            { q: "The leaders will hold a second ________ near the end of next month.", options: ["summit", "climax", "gathering", "appointment"], correct: 0, ext: "Từ vựng: **summit** (hội nghị thượng đỉnh)." },
+            { q: "The team's performance has garnered ________ from around the world.", options: ["attentive", "attention", "attend", "attentively"], correct: 1, ext: "Cụm từ: **garner attention** (thu hút sự chú ý)." },
+            { q: "In today's paper, it ________ that the exam will take place in July.", options: ["expresses", "admits", "says", "proposes"], correct: 2, ext: "Cách dùng từ: **The paper says...** (Báo viết rằng/nói rằng...)." },
+            { q: "Math, Literature and English are ________ subjects in the GCSE examination.", options: ["optional", "main", "core", "academic"], correct: 2, ext: "Từ vựng: **core subjects** (các môn học cốt lõi/bắt buộc)." },
+            { q: "The British and the American are as different as ________.", options: ["cats and dogs", "chalk and cheese", "salt and pepper", "here and there"], correct: 1, ext: "Thành ngữ: **as different as chalk and cheese** (khác nhau một trời một vực)." },
+            { q: "The ________ longest river in the world is the ________ Nile.", options: ["the / the", "a / the", "the / Ø", "Ø / the"], correct: 0, ext: "Mạo từ: Dùng **the** trước so sánh nhất và tên các dòng sông cụ thể." },
+            { q: "They are building a(n) ________ city in Yangzhou.", options: ["ecological-friendly", "friendlyecology", "ecology-friendly", "friend-ecologic"], correct: 2, ext: "Từ vựng: **ecology-friendly** (thân thiện với sinh thái)." },
+            { q: "The drizzle caused poor ________ on the expressway.", options: ["view", "vision", "visibility", "visionary"], correct: 2, ext: "Từ vựng: **visibility** (tầm nhìn, khả năng quan sát)." },
+            { q: "The World Cup is a major sporting ________.", options: ["tournament", "competition", "event", "celebration"], correct: 2, ext: "Từ vựng: **sporting event** (sự kiện thể thao)." },
+            { q: "In Vietnam, each academic year is ________ into two terms.", options: ["separated", "consisted", "divided", "educated"], correct: 2, ext: "Cấu trúc: **divided into** (được chia thành)." },
+            { q: "VinFast ________ their first two models at the 2018 Paris Motor Show.", options: ["announcing", "announced", "being announced", "is announced"], correct: 1, ext: "Thì quá khứ đơn: Diễn tả sự kiện đã xảy ra trong quá khứ." },
+            { q: "The AIDS ________ continues to spread around the world.", options: ["treatment", "epidemic", "tsunami", "damage"], correct: 1, ext: "Từ vựng: **epidemic** (dịch bệnh)." },
+            { q: "Activities are expected to be incorporated in the new school ________.", options: ["curriculum", "handout", "agenda", "schedule"], correct: 0, ext: "Từ vựng: **curriculum** (chương trình học)." },
+            { q: "The government has ________ every effort to stop the spread of virus.", options: ["done", "made", "created", "brought"], correct: 1, ext: "Cụm từ cố định: **make an effort** (nỗ lực)." },
+            { q: "The Giant Panda has been on the ________ of extinction.", options: ["border", "verge", "margin", "rim"], correct: 1, ext: "Thành ngữ: **on the verge of extinction** (trên bờ vực tuyệt chủng)." },
+            { q: "They are going to ________ beach this weekend.", options: ["a", "an", "the", "Ø"], correct: 2, ext: "Mạo từ: **the beach** (đi ra bãi biển)." },
+            { q: "My friends are traveling ________ Europe this summer.", options: ["in", "on", "at", "to"], correct: 3, ext: "Giới từ: **travel to** (đi du lịch đến đâu đó)." },
+            { q: "She doesn't have ________ experience for this job position.", options: ["much", "many", "little", "few"], correct: 0, ext: "Lượng từ: 'experience' là danh từ không đếm được nên dùng **much**." },
+            { q: "Global warming is one of the ________ things that could have happened.", options: ["bad", "worst", "worse", "bad as"], correct: 1, ext: "So sánh nhất: **the worst** (tồi tệ nhất)." },
+            { q: "________ he is intelligent, he can't solve this math problem.", options: ["So", "Because of", "Because", "Even though"], correct: 3, ext: "Liên từ: **Even though** (Mặc dù) chỉ sự nhượng bộ." },
+            { q: "Her dress, ________ she bought in Paris, is absolutely stunning.", options: ["that", "which", "who", "whom"], correct: 1, ext: "Đại từ quan hệ: **which** thay thế cho vật 'her dress' trong mệnh đề quan hệ không xác định." },
+            { q: "A: 'I've passed my driving test.' - B: '________.'", options: ["Congratulations!", "That's a good idea.", "It's nice of you to say so.", "Thanks"], correct: 0, ext: "Giao tiếp: Chúc mừng ai đó thành công bằng **Congratulations!**" },
+            { q: "Let's ________ the details of the project before we start.", options: ["go over", "go through", "go up", "go down"], correct: 0, ext: "Phrasal verb: **go over** (kiểm tra lại, xem qua một lượt)." },
+            { q: "The students ________ their homework assignments in on time.", options: ["handed", "gave", "presented", "delivered"], correct: 0, ext: "Cụm từ: **hand in** (nộp bài)." },
+            { q: "I find it difficult to make a good ________ on this problem.", options: ["want", "thought", "decision", "view"], correct: 2, ext: "Cụm từ: **make a decision** (đưa ra quyết định)." },
+            { q: "I love listening to ________ music.", options: ["a", "an", "the", "Ø"], correct: 3, ext: "Mạo từ: 'music' nói chung không dùng mạo từ." },
+            { q: "He stayed ________ home because it was raining heavily.", options: ["in", "on", "at", "to"], correct: 2, ext: "Giới từ: **at home** (ở nhà)." },
+            { q: "Do you have ________ money to buy that new laptop?", options: ["enough", "many", "little", "few"], correct: 0, ext: "Từ vựng: **enough** (đủ tiền)." },
+            { q: "Learning a new language is ________ than learning a new skill.", options: ["difficult", "most difficult", "more difficult", "difficultly"], correct: 2, ext: "So sánh hơn: **more difficult than**." },
+            { q: "Lisa is selfish, ________ she doesn't have many friends.", options: ["so", "because of", "because", "even though"], correct: 0, ext: "Liên từ: **so** (vì vậy) chỉ kết quả." },
+            { q: "The man ________ lives next door is a professional musician.", options: ["which", "who", "whom", "whose"], correct: 1, ext: "Đại từ quan hệ: **who** thay thế cho người làm chủ ngữ." },
+            { q: "Peter: 'We lost our property in the flood.' - John: '________'", options: ["Oh, I'm sorry to hear that.", "Good luck next time", "I couldn't agree more", "I don't think it's a good idea."], correct: 0, ext: "Giao tiếp: Chia buồn với ai đó bằng **I'm sorry to hear that**." },
+            { q: "The sanitation workers come to ________ the garbage.", options: ["put up", "take out", "look into", "turn up"], correct: 1, ext: "Phrasal verb: **take out the garbage** (đổ rác/mang rác đi)." },
+            { q: "I always ________ my phone on silent during meetings.", options: ["put", "make", "set", "place"], correct: 2, ext: "Cụm từ: **set a phone to silent** (để điện thoại chế độ im lặng)." },
+            { q: "In English, the same word can operate as many parts of speech. That's due to its ________.", options: ["variety", "vocabulary", "flexibility", "openness"], correct: 2, ext: "Từ vựng: **flexibility** (tính linh hoạt)." },
+            { q: "You should ________ professional advice if you want to start a new business.", options: ["seek", "look", "find", "take"], correct: 0, ext: "Cấu trúc: **seek advice** (tìm kiếm lời khuyên từ chuyên gia/người có chuyên môn)." },
+            { q: "The city council is planning to ________ the old stadium and build a modern shopping mall.", options: ["demolish", "destroy", "damage", "erase"], correct: 0, ext: "Từ vựng: **demolish** (phá dỡ một công trình xây dựng để giải phóng mặt bằng)." }
+        ];
+
+        // Biến lưu trữ Test
+        let tests = [];
+        let currentTestIdx = -1;
+        let currentTestData = [];
+        let userChoices = [];
+        let score = 0;
+        let currentIdx = 0;
+
+        // Hàm trộn mảng
+        function shuffle(array) {
+            const arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        // Khởi tạo và chia Test
+        function init() {
+            // Trộn toàn bộ ngân hàng câu hỏi 1 lần duy nhất
+            const shuffled = shuffle(qData);
+            const QUESTIONS_PER_TEST = 20;
+            tests = [];
+            
+            // Chia đều mảng đã trộn thành các block 20 câu
+            for (let i = 0; i < shuffled.length; i += QUESTIONS_PER_TEST) {
+                tests.push(shuffled.slice(i, i + QUESTIONS_PER_TEST));
+            }
+            
+            renderTestGrid();
+        }
+
+        // Render nút chọn Test
+        function renderTestGrid() {
+            const grid = document.getElementById('test-grid');
+            grid.innerHTML = '';
+            
+            tests.forEach((test, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'test-btn';
+                btn.innerHTML = `Test ${index + 1} <span>(${test.length} câu)</span>`;
+                btn.onclick = () => loadTest(index);
+                grid.appendChild(btn);
+            });
+        }
+
+        // Chuyển sang màn hình làm Quiz
+        function loadTest(index) {
+            currentTestIdx = index;
+            currentTestData = tests[index];
+            userChoices = new Array(currentTestData.length).fill(null);
+            score = 0;
+            currentIdx = 0;
+
+            // UI updates
+            document.getElementById('test-selector-screen').style.display = 'none';
+            document.getElementById('quiz-screen').style.display = 'block';
+            document.getElementById('main-title').innerText = `Test ${index + 1}`;
+            document.getElementById('total-idx').innerText = currentTestData.length;
+
+            // Tạo bảng điều hướng câu hỏi cho Test hiện tại
+            const nav = document.getElementById('nav-panel');
+            nav.innerHTML = '';
+            currentTestData.forEach((_, i) => {
+                const btn = document.createElement('button');
+                btn.className = 'nav-btn'; 
+                btn.innerText = i + 1;
+                btn.onclick = () => jumpTo(i);
+                nav.appendChild(btn);
+            });
+
+            loadQuestion();
+        }
+
+        // Trở về danh sách Test
+        function goHome() {
+            document.getElementById('test-selector-screen').style.display = 'block';
+            document.getElementById('quiz-screen').style.display = 'none';
+            document.getElementById('main-title').innerText = 'English Quiz: Ultimate Collection';
+        }
+
+        // Render câu hỏi chi tiết
+        function loadQuestion() {
+            const data = currentTestData[currentIdx];
+            document.getElementById('cur-idx').innerText = currentIdx + 1;
+            document.getElementById('score').innerText = score;
+            
+            const qEl = document.getElementById('question');
+            qEl.innerText = data.q;
+
+            const optionsDiv = document.getElementById('options');
+            optionsDiv.innerHTML = '';
+
+            data.options.forEach((opt, i) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.innerText = `${String.fromCharCode(65 + i)}. ${opt}`;
+                
+                // Nếu người dùng đã chọn đáp án cho câu này
+                if (userChoices[currentIdx] !== null) {
+                    btn.disabled = true;
+                    if (i === data.correct) btn.classList.add('correct');
+                    if (i === userChoices[currentIdx] && i !== data.correct) btn.classList.add('wrong');
+                } else {
+                    btn.onclick = () => selectOption(i);
+                }
+                optionsDiv.appendChild(btn);
+            });
+
+            const exp = document.getElementById('explanation');
+            const nxt = document.getElementById('next-btn');
+            
+            // Xử lý hiện Giải thích & Nút chuyển câu
+            if (userChoices[currentIdx] !== null) {
+                let htmlExt = data.ext.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                exp.innerHTML = "💡 Giải thích: " + htmlExt;
+                exp.style.display = 'block'; 
+                nxt.style.display = 'inline-block';
+            } else {
+                exp.style.display = 'none'; 
+                nxt.style.display = 'none';
+            }
+            
+            updateNav();
+        }
+
+        // Xử lý chọn đáp án
+        function selectOption(i) {
+            if (userChoices[currentIdx] !== null) return;
+            userChoices[currentIdx] = i;
+            if (i === currentTestData[currentIdx].correct) {
+                score += 10;
+            }
+            loadQuestion();
+        }
+
+        // Xử lý nút Tiếp theo
+        function handleNext() {
+            if (currentIdx < currentTestData.length - 1) {
+                currentIdx++; 
+                loadQuestion();
+            } else {
+                alert(`🎉 Chúc mừng! Bạn đã hoàn thành Test ${currentTestIdx + 1}.\nĐiểm của bạn: ${score}/${currentTestData.length * 10}`);
+            }
+        }
+
+        // Nhảy đến câu hỏi bất kỳ
+        function jumpTo(i) { 
+            currentIdx = i; 
+            loadQuestion(); 
+        }
+
+        // Cập nhật trạng thái thanh Nav Menu
+        function updateNav() {
+            const btns = document.getElementById('nav-panel').children;
+            for (let i = 0; i < btns.length; i++) {
+                btns[i].classList.remove('active');
+                if (i === currentIdx) btns[i].classList.add('active');
+                if (userChoices[i] !== null) {
+                    btns[i].classList.add(userChoices[i] === currentTestData[i].correct ? 'correct' : 'wrong');
+                }
+            }
+        }
+
+        // === MUSIC PLAYER LOGIC ===
+        const audio = document.getElementById('bg-audio');
+        const playBtn = document.getElementById('play-btn');
+        const progressBar = document.getElementById('music-progress');
+        const curTime = document.getElementById('music-cur');
+        const durTime = document.getElementById('music-dur');
+        const noteIcon = document.getElementById('music-note');
+
+        function fmtTime(s) {
+            if (isNaN(s)) return "0:00";
+            const m = Math.floor(s / 60);
+            const sec = Math.floor(s % 60);
+            return m + ':' + (sec < 10 ? '0' : '') + sec;
+        }
+
+        audio.addEventListener('loadedmetadata', () => {
+            progressBar.max = audio.duration;
+            durTime.textContent = fmtTime(audio.duration);
+        });
+
+        audio.addEventListener('timeupdate', () => {
+            progressBar.value = audio.currentTime;
+            curTime.textContent = fmtTime(audio.currentTime);
+        });
+
+        audio.addEventListener('play',  () => { playBtn.textContent = '⏸'; noteIcon.style.animationPlayState = 'running'; });
+        audio.addEventListener('pause', () => { playBtn.textContent = '▶'; noteIcon.style.animationPlayState = 'paused'; });
+        audio.addEventListener('ended', () => { playBtn.textContent = '▶'; noteIcon.style.animationPlayState = 'paused'; });
+
+        progressBar.addEventListener('input', () => { audio.currentTime = progressBar.value; });
+
+        function togglePlay() {
+            if (audio.paused) { audio.play(); } else { audio.pause(); }
+        }
+        function restartTrack() {
+            audio.currentTime = 0;
+            audio.play();
+        }
+        function setVolume(v) {
+            audio.volume = v;
+        }
+
+        audio.volume = 0.6;
+        noteIcon.style.animationPlayState = 'paused';
+
+        // Khởi động khi load trang
+        window.onload = init;
+    </script>
+</body>
+</html>

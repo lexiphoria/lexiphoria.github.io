@@ -2006,7 +2006,7 @@ const ALL_EXAMS = [
 ];
 
 let QS = [];
-const L = ['A','B','C','D'];
+const L = ['A', 'B', 'C', 'D'];
 let done = Array(5).fill(false);
 let corr = Array(5).fill(false);
 let cntC = 0, cntW = 0;
@@ -2014,7 +2014,7 @@ let cntC = 0, cntW = 0;
 function initApp() {
   const selectScreen = document.getElementById('select-screen');
   selectScreen.innerHTML = '';
-  
+
   ALL_EXAMS.forEach((exam, idx) => {
     const div = document.createElement('div');
     div.className = 'exam-option';
@@ -2039,15 +2039,15 @@ function showSelectScreen() {
 function startExam(id) {
   const exam = ALL_EXAMS.find(e => e.id === id);
   if (!exam) return;
-  
+
   document.getElementById('select-screen').style.display = 'none';
   document.getElementById('exam-container').style.display = 'block';
   document.getElementById('main-subtitle').textContent = `Text Completion · ${exam.title}`;
-  
+
   document.getElementById('p-title').innerHTML = `${exam.title} <span class="passage-tag">Source text</span>`;
   document.getElementById('p-meta').textContent = exam.meta;
   document.getElementById('p-content').innerHTML = exam.html;
-  
+
   QS = exam.questions;
   resetAll();
 }
@@ -2216,6 +2216,6 @@ window.addEventListener("click", () => {
     bgAudio.play().then(() => {
       musicStarted = true;
       updateAudioUI(true);
-    }).catch(() => {});
+    }).catch(() => { });
   }
 }, { once: true });

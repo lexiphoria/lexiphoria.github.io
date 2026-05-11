@@ -1921,6 +1921,87 @@ const ALL_EXAMS = [
         tip: "The text focuses on Vietnam's role and engagement in ASEAN, making this question the logical conclusion to the passage."
       }
     ]
+  },
+  {
+    id: 'vex_world',
+    title: 'Vietnamese Students at VEX World 2026',
+    meta: 'Education & Technology',
+    html: `
+      <p>Vietnamese students achieved remarkable success at the VEX World 2026, the world’s largest international robotics competition held in the United States. Competing against more than 2,400 teams from over 60 countries and territories, three of Vietnam’s seven teams advanced to the top four, <span class="blank-tag">1</span> and highlighting the country’s growing presence in global technology and STEM education.</p>
+      <br>
+      <p>The students impressed judges and audiences with their technical expertise, strategic thinking, creativity, and teamwork under pressure. Many participants were attending an international competition for the first time and expressed pride in representing Vietnam <span class="blank-tag">2</span>. They emphasized that success in STEM depends heavily on collaboration, support from teammates, and shared passion for innovation.</p>
+      <br>
+      <p>The achievements were made possible through perseverance, strong technical training, and disciplined preparation. School science and STEM clubs have played an important role in nurturing students’ interests, encouraging teamwork, and helping them improve their skills together. <span class="blank-tag">3</span>.</p>
+      <br>
+      <p>A solid foundation in mathematics, science, technology, foreign languages, and presentation skills has been essential to the students’ success. Educators believe students must feel confident using technology and <span class="blank-tag">4</span>. These accomplishments are expected to inspire more young people in Vietnam to pursue science and technology, <span class="blank-tag">5</span>.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Present Participle",
+        opts: [
+          "placing Vietnam among the competition’s strongest performers",
+          "placed Vietnam among the competition’s strongest performers",
+          "which places Vietnam among the competition’s strongest performers",
+          "to place Vietnam among the competition’s strongest performers"
+        ],
+        ans: 0,
+        grammar: "Present participle phrase",
+        tip: "A present participle phrase ('placing...') is used after a comma to describe the result of the preceding action, parallel to 'highlighting' later in the sentence."
+      },
+      {
+        num: 2,
+        type: "Context Meaning Clause",
+        opts: [
+          "despite learning from peers worldwide",
+          "therefore learning from peers worldwide",
+          "while learning from peers worldwide",
+          "because learning from peers worldwide"
+        ],
+        ans: 2,
+        grammar: "Adverbial clause of time/contrast",
+        tip: "The conjunction 'while' connects the two concurrent actions: representing Vietnam and learning from peers."
+      },
+      {
+        num: 3,
+        type: "Independent Sentence",
+        opts: [
+          "Teachers also contribute by guiding and motivating students to become more confident in international competitions.",
+          "Parents are now required to pay higher tuition fees to maintain these modern STEM facilities.",
+          "The competition organizers provided all the necessary robotics equipment for the participating teams.",
+          "Students from other countries also received similar financial support from their local governments."
+        ],
+        ans: 0,
+        grammar: "Independent sentence structure",
+        tip: "This sentence needs to align with the previous sentences which talk about the support system (schools, STEM clubs) that helped students succeed. Option A logically continues the theme of support by mentioning teachers."
+      },
+      {
+        num: 4,
+        type: "Verb Form",
+        opts: [
+          "giving opportunities to experiment, create, and refine their ideas",
+          "to give opportunities to experiment, create, and refine their ideas",
+          "be given opportunities to experiment, create, and refine their ideas",
+          "are given opportunities to experiment, create, and refine their ideas"
+        ],
+        ans: 2,
+        grammar: "Passive voice with modal verb",
+        tip: "The structure is 'must feel... and (must) be given...'. The passive voice 'be given' is required here."
+      },
+      {
+        num: 5,
+        type: "Context Meaning Clause",
+        opts: [
+          "demonstrated the confidence and ambition of Vietnam’s younger generation on the global stage",
+          "which demonstrating the confidence and ambition of Vietnam’s younger generation on the global stage",
+          "demonstrating the confidence and ambition of Vietnam’s younger generation on the global stage",
+          "to demonstrating the confidence and ambition of Vietnam’s younger generation on the global stage"
+        ],
+        ans: 2,
+        grammar: "Present participle phrase",
+        tip: "A present participle phrase ('demonstrating...') is used after a comma to show the result or supplementary information of the preceding clause."
+      }
+    ]
   }
 ];
 

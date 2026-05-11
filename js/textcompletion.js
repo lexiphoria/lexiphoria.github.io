@@ -2555,6 +2555,164 @@ const ALL_EXAMS = [
         tip: "'Which' is used here to refer back to the entire idea of laying the groundwork for a transparent and greener economy."
       }
     ]
+  },
+  {
+    id: 'womens_day_2026',
+    title: 'International Women’s Day 2026: Safety in the Digital Age',
+    meta: 'Society & Gender Equality',
+    html: `
+      <p>For International Women’s Day 2026, the global focus is heavily centered on combating the rising threat of technology-facilitated gender-based violence (TFGBV), <span class="blank-tag">1</span>. This violence includes image-based abuse, doxing, cyberstalking, and online grooming. According to the UN Population Fund (UNFPA), a staggering 85% of women have either experienced or witnessed online harassment.</p>
+      <br>
+      <p><span class="blank-tag">2</span>. Organizations like the Angun House in Tangua Province—one of seven nationwide one-stop service centers supported by the UNFPA—provide comprehensive support to survivors, <span class="blank-tag">3</span>. To bolster these efforts, the UNFPA conducts nationwide training for officials to ensure they can implement effective safety measures and deliver survivor-centered care.</p>
+      <br>
+      <p><span class="blank-tag">4</span>. Vietnam is making notable progress on this front; by leveraging its digitalization agenda and recently hosting the International Cyber Crime Convention in Hanoi, the government is demonstrating a strong commitment <span class="blank-tag">5</span>.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Appositive / Relative Clause",
+        opts: [
+          "an epidemic that creates new frontiers for inequality",
+          "which epidemic that creates new frontiers for inequality",
+          "an epidemic where creates new frontiers for inequality",
+          "an epidemic what creates new frontiers for inequality"
+        ],
+        ans: 0,
+        grammar: "Appositive phrase / Relative clause",
+        tip: "An appositive phrase ('an epidemic...') renames 'TFGBV'. 'That' correctly introduces the defining relative clause."
+      },
+      {
+        num: 2,
+        type: "Independent Sentence",
+        opts: [
+          "Therefore, local authorities have banned women from using social media.",
+          "However, TFGBV is no longer considered a serious issue in modern Asia.",
+          "In response, Vietnam is partnering with the UNFPA to implement vital interventions.",
+          "Consequently, the UN has completely withdrawn its funding from Vietnam."
+        ],
+        ans: 2,
+        grammar: "Independent sentence structure",
+        tip: "This choice provides a logical connection between the problem (TFGBV) and the specific actions being taken in Vietnam with the UNFPA."
+      },
+      {
+        num: 3,
+        type: "Present Participle Phrase",
+        opts: [
+          "which noting that 15% of recent cases involve cyberattacks",
+          "noting that 15% of recent cases involve cyberattacks",
+          "noted that 15% of recent cases involve cyberattacks",
+          "having noted that 15% of recent cases involving cyberattacks"
+        ],
+        ans: 1,
+        grammar: "Present participle phrase",
+        tip: "A present participle phrase ('noting...') follows the comma to add supplementary information or detail about the cases."
+      },
+      {
+        num: 4,
+        type: "Independent Sentence",
+        opts: [
+          "Experts stress that governments require robust regulations to address digital abuse.",
+          "Furthermore, the government encourages completely unregulated internet access.",
+          "Surprisingly, tech platforms have permanently disabled their safety features.",
+          "As a result, cybercrimes have been completely eradicated across the globe."
+        ],
+        ans: 0,
+        grammar: "Independent sentence structure",
+        tip: "This sentence introduces the expert perspective on the necessity of regulation, fitting the context of official response."
+      },
+      {
+        num: 5,
+        type: "Prepositional Phrase / Relative Clause",
+        opts: [
+          "to integrating women's safety into online spaces which are rapidly expanding",
+          "to integrate women's safety into online spaces what are rapidly expanding",
+          "which integrating women's safety into online spaces where are rapidly expanding",
+          "to integrating women's safety into online spaces that rapidly expanding"
+        ],
+        ans: 0,
+        grammar: "Prepositional phrase / Relative clause",
+        tip: "The structure is 'commitment to + V-ing'. 'Which are rapidly expanding' is a non-defining relative clause providing extra info about online spaces."
+      }
+    ]
+  },
+  {
+    id: 'meta_addiction_trial',
+    title: 'Social Media on Trial: The Addiction Debate',
+    meta: 'Technology & Law',
+    html: `
+      <p>Meta CEO Mark Zuckerberg recently testified in a Los Angeles trial regarding allegations that social media platforms are intentionally addictive. The plaintiff, a 20-year-old identified as KGM, claims her social media use worsened her depression and suicidal tendencies. Her lawsuit is the first of nine "bellwether" trials stemming from over 1,600 consolidated cases <span class="blank-tag">1</span>.</p>
+      <br>
+      <p>Legal commentators are widely comparing these proceedings to the pivotal Big Tobacco litigation of the 1990s. <span class="blank-tag">2</span>. In the current cases, plaintiffs' attorneys are employing a highly comparable strategy, <span class="blank-tag">3</span>.</p>
+      <br>
+      <p>Other major lawsuits are simultaneously underway across the country. A New Mexico trial is examining whether companies left minors vulnerable to sexual exploitation, and a federal judge in California will soon hear a consolidated case alleging that social media constitutes a public nuisance. <span class="blank-tag">4</span>. For instance, Meta argues that KGM experienced significant mental health challenges long before she ever used Instagram. Meanwhile, TikTok and Snap, <span class="blank-tag">5</span>, opted to settle just before the trial began.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Non-defining Relative Clause",
+        opts: [
+          ", which will determine if tech giants are liable for creating addictive products",
+          ", that will determine if tech giants are liable for creating addictive products",
+          ", what will determine if tech giants are liable for creating addictive products",
+          ", determining if tech giants which are liable for creating addictive products"
+        ],
+        ans: 0,
+        grammar: "Non-defining relative clause",
+        tip: "'Which' is used after a comma to add extra information about the consolidated cases."
+      },
+      {
+        num: 2,
+        type: "Independent Sentence",
+        opts: [
+          "Ironically, Big Tobacco easily won all of those early lawsuits without paying.",
+          "That historic battle resulted in massive settlements and sweeping industry reforms.",
+          "Social media companies have strongly supported this comparison to tobacco.",
+          "The 1990s saw a massive and uncontrolled increase in teenage smoking rates."
+        ],
+        ans: 1,
+        grammar: "Independent sentence structure",
+        tip: "This sentence provides historical context for the Big Tobacco comparison, highlighting why it is a significant parallel."
+      },
+      {
+        num: 3,
+        type: "Present Participle Phrase",
+        opts: [
+          "argued what tech companies engineered addiction in children's brains",
+          "to argue which tech companies engineered addiction in children's brains",
+          "arguing that tech companies engineered addiction in children's brains",
+          "argued that tech companies engineering addiction in children's brains"
+        ],
+        ans: 2,
+        grammar: "Present participle phrase",
+        tip: "The present participle 'arguing' follows the comma to describe the action performed as part of the 'strategy'."
+      },
+      {
+        num: 4,
+        type: "Independent Sentence",
+        opts: [
+          "Unsurprisingly, tech companies have strongly pushed back against these claims.",
+          "Therefore, tech giants immediately admitted fault to avoid further public trials.",
+          "Furthermore, these platforms recently removed all existing parental controls.",
+          "As a result, the federal judge dismissed all the consolidated cases yesterday."
+        ],
+        ans: 0,
+        grammar: "Independent sentence / Contrast",
+        tip: "This sentence introduces the counter-argument from tech companies, setting the stage for the specific example of Meta's defense."
+      },
+      {
+        num: 5,
+        type: "Relative Clause with Quantifier",
+        opts: [
+          "both of whom were originally named as parties in KGM's lawsuit",
+          "that were both originally named as parties in KGM's lawsuit",
+          "which both originally naming as parties in KGM's lawsuit",
+          "both of which were originally named as parties in KGM's lawsuit"
+        ],
+        ans: 3,
+        grammar: "Relative clause with quantifier",
+        tip: "'Both of which' is the correct relative structure to refer to the two companies (TikTok and Snap)."
+      }
+    ]
   }
 ];
 

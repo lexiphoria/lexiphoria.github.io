@@ -2002,6 +2002,164 @@ const ALL_EXAMS = [
         tip: "A present participle phrase ('demonstrating...') is used after a comma to show the result or supplementary information of the preceding clause."
       }
     ]
+  },
+  {
+    id: 'digital_tech_law',
+    title: 'Digital Technology Industry Law',
+    meta: 'Technology & Law',
+    html: `
+      <p>Since the beginning of the year, the law on the digital technology industry has officially come into effect, <span class="blank-tag">1</span>. The law is designed to establish digital technology as a key economic sector with a major contribution to the national GDP. <span class="blank-tag">2</span>.</p>
+      <br>
+      <p>The new legislation encourages a major shift for Vietnamese enterprises, pushing them to transition from basic processing and assembly to mastering core technologies, design, and manufacturing. <span class="blank-tag">3</span>. Additionally, the law provides investment incentives and local financial support for digital tech startups, <span class="blank-tag">4</span>.</p>
+      <br>
+      <p>By adopting a comprehensive approach that encompasses human resources, materials, infrastructure, finance, and market access, the law addresses the entire production process and creates a clear legal framework for the industry's development. <span class="blank-tag">5</span>, putting science and technology at the forefront and enabling Vietnam's tech workforce to concentrate on crucial areas like AI, semiconductors, and digital transformation.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Present Participle",
+        opts: [
+          "making Vietnam the first country in the world to introduce dedicated legislation",
+          "made Vietnam the first country in the world to introduce dedicated legislation",
+          "to make Vietnam the first country in the world to introduce dedicated legislation",
+          "which making Vietnam the first country in the world to introduce dedicated legislation"
+        ],
+        ans: 0,
+        grammar: "Present participle phrase",
+        tip: "A present participle phrase ('making...') follows a comma to describe the result of the main action."
+      },
+      {
+        num: 2,
+        type: "Independent Sentence",
+        opts: [
+          "Consequently, foreign investors are completely banned from participating in the national artificial intelligence and semiconductor sectors.",
+          "However, the exact definition of digital assets and virtual currencies remains largely unclear under this new framework.",
+          "For the first time, this legal framework formally defines digital technology, artificial intelligence, semiconductors, and digital assets.",
+          "In the meantime, traditional agricultural sectors are receiving the majority of the national GDP contribution."
+        ],
+        ans: 2,
+        grammar: "Independent sentence structure",
+        tip: "This sentence provides specific details about the legal framework's contents, aligning with the introduction of the law."
+      },
+      {
+        num: 3,
+        type: "Independent Sentence",
+        opts: [
+          "Therefore, Vietnamese enterprises are advised to continue focusing solely on basic assembly to maintain their current market share.",
+          "It strongly supports the \"Make in Vietnam\" strategy by prioritizing domestic firms in public procurement and key state-commissioned projects.",
+          "This transition has forced many domestic tech startups to shut down due to a lack of highly skilled international workers.",
+          "Moreover, the legislation discourages the production of core technologies to rely more on imported foreign components."
+        ],
+        ans: 1,
+        grammar: "Independent sentence structure",
+        tip: "This option supports the \"Make in Vietnam\" strategy mentioned in the context of mastering core technologies."
+      },
+      {
+        num: 4,
+        type: "Context Meaning",
+        opts: [
+          "because also offering incentives for high-quality workforce training and the development of a semiconductor ecosystem",
+          "despite offering incentives for high-quality workforce training and the development of a semiconductor ecosystem",
+          "in order to offering incentives for high-quality workforce training and the development of a semiconductor ecosystem",
+          "while also offering incentives for high-quality workforce training and the development of a semiconductor ecosystem"
+        ],
+        ans: 3,
+        grammar: "Adverbial clause with 'while'",
+        tip: "'While' is used here to add additional information about what the law provides alongside financial support."
+      },
+      {
+        num: 5,
+        type: "Independent Sentence",
+        opts: [
+          "This clarity and strong focus are expected to make development significantly easier",
+          "Which clarity and strong focus are expected to make development significantly easier",
+          "Expecting this clarity and strong focus to make development significantly easier",
+          "This clarity and strong focus expecting to make development significantly easier"
+        ],
+        ans: 0,
+        grammar: "Independent sentence structure",
+        tip: "A complete sentence with subject and verb ('are expected') is needed here to conclude the thought."
+      }
+    ]
+  },
+  {
+    id: 'middle_east_env',
+    title: 'Middle East Conflict: Environmental Toll',
+    meta: 'Environment & Conflict',
+    html: `
+      <p>The ongoing Middle East conflict is inflicting severe and long-lasting environmental damage across the region. Between February 28 and March 10, 2026, the Conflict and Environment Observatory recorded over 300 incidents affecting energy and military infrastructure, <span class="blank-tag">1</span>. Attacks on these facilities release toxic pollutants that spread across Iran and the Gulf region. <span class="blank-tag">2</span>.</p>
+      <br>
+      <p>A United Nations Environment Program report highlights the devastating reality in the Gaza Strip, <span class="blank-tag">3</span>. This water crisis has triggered a massive health emergency, causing cases of acute watery diarrhea to increase 36-fold and hepatitis A-linked jaundice to rise 384 times. <span class="blank-tag">4</span>.</p>
+      <br>
+      <p>The ecological toll extends to widespread pollution from damaged oil facilities. In Iran, toxic smoke has mixed with atmospheric moisture <span class="blank-tag">5</span>. Residents in Tehran report dark rainfall and oily residue coating the city, raising grave concerns about public health and air pollution.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Absolute Phrase",
+        opts: [
+          "which 232 posing significant environmental risks",
+          "with 232 posing significant environmental risks",
+          "having 232 posed significant environmental risks",
+          "232 of them to pose significant environmental risks"
+        ],
+        ans: 1,
+        grammar: "Absolute phrase with 'with'",
+        tip: "The structure 'with + noun + V-ing' is used to add supplementary details to the main clause."
+      },
+      {
+        num: 2,
+        type: "Independent Sentence",
+        opts: [
+          "As a result, many international organizations have successfully removed all the pollutants from the Gulf.",
+          "On the contrary, the local governments have decided to build more military bases to protect the wildlife.",
+          "These dangerous substances can persist for years, severely damaging water sources and food supplies.",
+          "Consequently, the affected areas have experienced an unprecedented economic boom in agricultural exports."
+        ],
+        ans: 2,
+        grammar: "Independent sentence structure",
+        tip: "This sentence logically follows the mention of toxic pollutants, explaining their long-term impact on the environment and resources."
+      },
+      {
+        num: 3,
+        type: "Relative Clause",
+        opts: [
+          "which destroyed sewage and water infrastructure has heavily contaminated the local aquifer",
+          "that destroyed sewage and water infrastructure has heavily contaminated the local aquifer",
+          "where destroyed sewage and water infrastructure has heavily contaminated the local aquifer",
+          "in where destroyed sewage and water infrastructure has heavily contaminated the local aquifer"
+        ],
+        ans: 2,
+        grammar: "Relative clause with 'where'",
+        tip: "'Where' refers to the location (Gaza Strip) and introduces a clause describing what has happened there."
+      },
+      {
+        num: 4,
+        type: "Independent Sentence",
+        opts: [
+          "However, local authorities are confident that the water quality will improve within a few weeks.",
+          "Furthermore, Gaza has lost 82% of its annual crops since 2023, leaving over 500,000 people facing famine conditions.",
+          "Therefore, local residents are encouraged to consume more seafood to compensate for the lack of fresh water.",
+          "In the meantime, the region has seen a massive increase in tourism thanks to its unique ecological features."
+        ],
+        ans: 1,
+        grammar: "Independent sentence / Connector",
+        tip: "'Furthermore' is used to add another devastating fact (famine) to the existing health emergency."
+      },
+      {
+        num: 5,
+        type: "Infinitive of Purpose",
+        opts: [
+          "in order that create black, acidic rain",
+          "so as creating black, acidic rain",
+          "to create black, acidic rain",
+          "which created black, acidic rain"
+        ],
+        ans: 2,
+        grammar: "Infinitive of purpose",
+        tip: "The infinitive 'to create' expresses the result or purpose of the smoke mixing with moisture."
+      }
+    ]
   }
 ];
 

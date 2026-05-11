@@ -2160,6 +2160,164 @@ const ALL_EXAMS = [
         tip: "The infinitive 'to create' expresses the result or purpose of the smoke mixing with moisture."
       }
     ]
+  },
+  {
+    id: 'fifa_world_cup_2026',
+    title: 'FIFA World Cup 2026™ Opening Ceremony',
+    meta: 'Sports & Entertainment',
+    html: `
+      <p>The United States will host a spectacular opening ceremony for the FIFA World Cup 2026™ in Los Angeles on Friday, 12 June. <span class="blank-tag">1</span>. Produced in partnership with Balich Wonder Studio, the celebration will use immersive storytelling and large-scale visuals to highlight the culture and spirit of the nation, <span class="blank-tag">2</span>.</p>
+      <br>
+      <p><span class="blank-tag">3</span>. This unprecedented approach aims at uniting Canada, Mexico, and the US in a shared global celebration.</p>
+      <br>
+      <p>The Los Angeles ceremony begins at 16:30 local time, 90 minutes before the opening match in which the United States will face Paraguay. Fans are encouraged to arrive when gates open four hours early <span class="blank-tag">4</span>. This event kicks off a historic summer of football featuring a record 104 matches across 16 Host Cities, <span class="blank-tag">5</span>.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Inversion / Relative Clause",
+        opts: [
+          "Headlining the highly anticipated event is an all-star lineup featuring global superstars whose recent albums have dominated international charts.",
+          "Headlining the highly anticipated event is an all-star lineup that featuring global superstars who has recently dominated international charts.",
+          "A highly anticipated event which features an all-star lineup has been unexpectedly cancelled by global superstars whose recent albums dominated international charts.",
+          "An all-star lineup, whom recent albums have dominated international charts, is headlining the highly anticipated event featuring global superstars."
+        ],
+        ans: 0,
+        grammar: "Inversion / Relative clause",
+        tip: "'Headlining... is...' is an inverted structure. 'Whose' is the correct relative pronoun to show possession."
+      },
+      {
+        num: 2,
+        type: "Relative Clause",
+        opts: [
+          "operating under the central theme of a \"shared heartbeat\" which aim to connect football fans worldwide",
+          "which operates under the central theme of a \"shared heartbeat\" that aims to connect football fans worldwide",
+          "operated under the central theme of a \"shared heartbeat\" that aiming to connect football fans worldwide",
+          "which operates under the central theme of a \"shared heartbeat\" where aims to connect football fans worldwide"
+        ],
+        ans: 1,
+        grammar: "Relative clause",
+        tip: "'Which' introduces a non-defining clause about the celebration, and 'that' introduces a defining clause about the theme."
+      },
+      {
+        num: 3,
+        type: "Present Participle Phrase",
+        opts: [
+          "Making tournament history, there are three separate opening ceremonies what showcase the unique cultural heritage of each host nation unfolding across North America.",
+          "Despite making tournament history, three separate opening ceremonies which showcase the unique cultural heritage of each host nation will be restricted to North America.",
+          "Because tournament history is made, three separate opening ceremonies that showcases the unique cultural heritage of each host nation will unfold across North America.",
+          "Making tournament history, three separate opening ceremonies that showcase the unique cultural heritage of each host nation will unfold across North America."
+        ],
+        ans: 3,
+        grammar: "Present participle phrase",
+        tip: "'Making tournament history' is a participle phrase modifying the subject 'three separate opening ceremonies'. 'Showcase' (plural) matches the plural subject."
+      },
+      {
+        num: 4,
+        type: "Infinitive of Purpose",
+        opts: [
+          "enjoying exclusive entertainment which have been specifically curated for those attending the stadium in person",
+          "to enjoy exclusive entertainment for that has been specifically curated for those attending the stadium in person",
+          "to enjoy exclusive entertainment that has been specifically curated for those attending the stadium in person",
+          "so as enjoying exclusive entertainment what has been specifically curated for those attending the stadium in person"
+        ],
+        ans: 2,
+        grammar: "Infinitive of purpose / Relative clause",
+        tip: "'To enjoy' expresses purpose. 'That has been...' is a defining relative clause modifying 'entertainment'."
+      },
+      {
+        num: 5,
+        type: "Present Participle Phrase",
+        opts: [
+          "culminated in a highly anticipated final that scheduling to take place on July 19 at the New York New Jersey Stadium",
+          "culminating in a highly anticipated final which is scheduled to take place on July 19 at the New York New Jersey Stadium",
+          "which culminating in a highly anticipated final where is scheduled to take place on July 19 at the New York New Jersey Stadium",
+          "to culminate in a highly anticipated final who is scheduled to take place on July 19 at the New York New Jersey Stadium"
+        ],
+        ans: 1,
+        grammar: "Present participle phrase / Relative clause",
+        tip: "'Culminating' is a present participle used to show the result or progression. 'Which is scheduled...' is a defining relative clause."
+      }
+    ]
+  },
+  {
+    id: 'english_second_language',
+    title: 'English as a Second Language in Schools',
+    meta: 'Education & Development',
+    html: `
+      <p>Vietnam is implementing an action program to progressively establish English as a second language in schools nationwide, aiming to align human resources with future national development needs. <span class="blank-tag">1</span>. This is backed by a comprehensive draft project that meticulously maps this linguistic transition through the year 2035.</p>
+      <br>
+      <p>To build a supportive environment, educational experts emphasize integrating English step-by-step into daily school life. <span class="blank-tag">2</span>, the strategy encourages students to use the language naturally in their subjects, projects, and extracurricular activities. Furthermore, evaluating student success will shift away from traditional test scores to assessing practical communication skills, teamwork, and overall confidence, <span class="blank-tag">3</span>.</p>
+      <br>
+      <p>Pioneering schools are already demonstrating this approach through innovative learning activities, such as middle school students presenting technology and literature projects in English. <span class="blank-tag">4</span>. Educators must possess both high English proficiency and specialized teaching methodologies <span class="blank-tag">5</span>.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Independent Sentence / Relative Clause",
+        opts: [
+          "This ambitious initiative supports a broader objective what aims to elevate Vietnamese education to an advanced status in Asia by 2030.",
+          "Despite this ambitious initiative, the broader objective which aims to elevate Vietnamese education has been unexpectedly postponed until 2030.",
+          "This ambitious initiative supports a broader objective that aims to elevate Vietnamese education to an advanced status in Asia by 2030.",
+          "As a result, the Ministry of Education has recently canceled the draft project that mapped this linguistic transition through 2035."
+        ],
+        ans: 2,
+        grammar: "Independent sentence / Relative clause",
+        tip: "'That' is the correct relative pronoun to introduce a defining clause. This sentence logically extends the initial statement."
+      },
+      {
+        num: 2,
+        type: "Conjunction / Subjunctive",
+        opts: [
+          "Instead of demanding that all daily activities which take place within the school premises be entirely conducted in English immediately",
+          "Because of demanding that all daily activities where take place within the school premises be entirely conducted in English immediately",
+          "Rather than demanding that all daily activities which taking place within the school premises entirely conducted in English immediately",
+          "In addition to demanding that all daily activities which take place within the school premises are entirely conducting in English immediately"
+        ],
+        ans: 0,
+        grammar: "Conjunction / Subjunctive mood",
+        tip: "'Instead of' sets up a contrast. The structure 'demand that... (should) be...' is used here for professional tone."
+      },
+      {
+        num: 3,
+        type: "Non-defining Relative Clause",
+        opts: [
+          "what will undoubtedly prepare students for the highly competitive global labor market",
+          "which will undoubtedly prepare students for the highly competitive global labor market",
+          "that will undoubtedly prepare students for the highly competitive global labor market",
+          "to undoubtedly preparing students for the highly competitive global labor market"
+        ],
+        ans: 1,
+        grammar: "Non-defining relative clause",
+        tip: "'Which' is used after a comma to refer to the entire preceding action or idea."
+      },
+      {
+        num: 4,
+        type: "Independent Sentence / Contrast",
+        opts: [
+          "Moreover, establishing English as a second language relies heavily on the comprehensive downgrading of current curriculum standards.",
+          "Therefore, parents are highly required to pay extra tuition fees for the comprehensive upgrading of foreign teacher quality.",
+          "As a result, the successful establishment of English as a second language has completely eliminated the need for upgrading teacher quality.",
+          "However, the successful establishment of English as a second language relies heavily on the comprehensive upgrading of teacher quality."
+        ],
+        ans: 3,
+        grammar: "Independent sentence / Contrast",
+        tip: "This sentence introduces the critical requirement of teacher quality, providing a balanced perspective on the implementation."
+      },
+      {
+        num: 5,
+        type: "Non-defining Relative Clause",
+        opts: [
+          ", such as Content and Language Integrated Learning (CLIL) what enables them to effectively teach their core subjects in English",
+          ", such as Content and Language Integrated Learning (CLIL) where enables them to effectively teach their core subjects in English",
+          ", such as Content and Language Integrated Learning (CLIL) which enabling them to effectively teach their core subjects in English",
+          ", such as Content and Language Integrated Learning (CLIL), which enables them to effectively teach their core subjects in English"
+        ],
+        ans: 3,
+        grammar: "Non-defining relative clause",
+        tip: "'Which' correctly introduces the non-defining clause explaining CLIL. The commas correctly set off the appositive and the relative clause."
+      }
+    ]
   }
 ];
 

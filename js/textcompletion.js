@@ -2397,6 +2397,164 @@ const ALL_EXAMS = [
         tip: "The conjunction 'Because' correctly introduces a clause explaining the reason for the decision to keep the model private."
       }
     ]
+  },
+  {
+    id: 'asean_plus_3_resilience',
+    title: 'ASEAN+3 Economies: Resilience and Risks',
+    meta: 'Economy & Regional Cooperation',
+    html: `
+      <p>Despite their heavy reliance on oil imports and vulnerability to Middle East tensions in the Strait of Hormuz, the ASEAN+3 economies are expected to remain resilient. According to the ASEAN+3 Macroeconomic Research Office (AMRO), regional growth is projected at approximately 4% for both 2026 and 2027. This follows a strong 2025, <span class="blank-tag">1</span>.</p>
+      <br>
+      <p>However, ongoing global energy disruptions and conflicts present significant downside risks. <span class="blank-tag">2</span>. To manage these uncertainties and avoid worst-case scenarios like stagflation, AMRO advises policymakers to maintain fiscal and monetary flexibility, <span class="blank-tag">3</span>.</p>
+      <br>
+      <p><span class="blank-tag">4</span>. Ultimately, fostering deeper regional cooperation and accelerating the green energy transition will be critical for the ASEAN+3 economies <span class="blank-tag">5</span>.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Relative Clause / Participle",
+        opts: [
+          "where the region expanded by 4.3%, which driving by robust domestic demand and a booming AI-driven semiconductor market",
+          "which the region expanding by 4.3%, driven by robust domestic demand and a booming AI-driven semiconductor market",
+          "in which the region expanded by 4.3%, that is driven by robust domestic demand and a booming AI-driven semiconductor market",
+          "where the region expanded by 4.3%, driven by robust domestic demand and a booming AI-driven semiconductor market"
+        ],
+        ans: 3,
+        grammar: "Relative clause / Past participle phrase",
+        tip: "'Where' refers to the year 2025 as a situation/period. 'Driven by...' is a past participle phrase (reduced relative clause) modifying 'the region'."
+      },
+      {
+        num: 2,
+        type: "Independent Sentence",
+        opts: [
+          "Rising energy prices could push inflation up to 1.4% in 2026, which would heavily impact supply chains, food prices, and the tourism sector.",
+          "Fortunately, the rapid decline in energy prices has stabilized the region's supply chains and completely revived the tourism sector.",
+          "Consequently, regional growth is projected to exceed 10% next year, entirely eliminating the need for further economic reforms.",
+          "In response, AMRO has strictly prohibited central banks from intervening, regardless of how much global inflation fluctuates."
+        ],
+        ans: 0,
+        grammar: "Independent sentence structure",
+        tip: "This sentence elaborates on the 'downside risks' by providing a specific scenario of rising energy prices and inflation."
+      },
+      {
+        num: 3,
+        type: "Present Participle Phrase",
+        opts: [
+          "ensuring that central banks are adequately prepared to intervene if inflation surges",
+          "which ensuring that central banks are adequately prepared to intervene if inflation surges",
+          "to ensure that central banks who are adequately prepared to intervene if inflation surges",
+          "ensured that central banks where are adequately prepared to intervene if inflation surges"
+        ],
+        ans: 0,
+        grammar: "Present participle phrase",
+        tip: "A present participle phrase ('ensuring...') follows the comma to describe the result or a key aspect of maintaining flexibility."
+      },
+      {
+        num: 4,
+        type: "Independent Sentence",
+        opts: [
+          "As a result, most ASEAN+3 countries have decided to cut all forms of financial support to accelerate their green energy transition.",
+          "Governments are also urged to provide targeted support for vulnerable groups rather than relying on broad subsidies that could fuel long-term inflation.",
+          "Therefore, relying exclusively on broad subsidies is highly recommended by AMRO to temporarily boost domestic demand.",
+          "On the contrary, vulnerable groups will be heavily taxed to compensate for the significant economic losses caused by global energy disruptions."
+        ],
+        ans: 1,
+        grammar: "Independent sentence structure",
+        tip: "This sentence provides further policy advice (targeted support) which is a logical continuation of the previous paragraph's advice."
+      },
+      {
+        num: 5,
+        type: "Infinitive of Purpose / Relative Clause",
+        opts: [
+          "strengthening their resilience, what will allow them to successfully weather future global shocks",
+          "in order that strengthen their resilience, which allowing them to successfully weather future global shocks",
+          "to strengthen their resilience, which will allow them to successfully weather future global shocks",
+          "so as to strengthen their resilience, where will allow them to successfully weather future global shocks"
+        ],
+        ans: 2,
+        grammar: "Infinitive of purpose / Relative clause",
+        tip: "'To strengthen' expresses purpose. 'Which will allow...' is a non-defining relative clause referring to the action of strengthening resilience."
+      }
+    ]
+  },
+  {
+    id: 'vietnam_carbon_market',
+    title: 'Vietnam\'s Emerging Carbon Credit Market',
+    meta: 'Environment & Economy',
+    html: `
+      <p>Vietnam is preparing to pilot its first domestic carbon credit exchange by late 2026, marking a crucial step toward its net-zero emissions goal. Operating with both emission quotas and carbon credits, <span class="blank-tag">1</span>. The country has already achieved notable milestones, becoming the first East Asia-Pacific nation to receive a $51.5 million payment from the World Bank for emission reductions and ranking ninth globally in carbon credit issuance volume with over 362 projects.</p>
+      <br>
+      <p>A well-designed carbon market will allow Vietnam to attract climate finance, drive technology innovation, and prepare businesses for global carbon pricing measures, including the EU's carbon border adjustment mechanism. <span class="blank-tag">2</span>. For the market's early stages, a hybrid price discovery model is recommended, <span class="blank-tag">3</span>.</p>
+      <br>
+      <p>To help Vietnamese businesses participate confidently, particularly SMEs lacking experience in emission accounting, experts recommend three pillars of support: scalable digital toolkits, free advisory and training programs, and the establishment of internal shadow carbon pricing schemes. <span class="blank-tag">4</span>. With the right investments, cooperation, and regulatory frameworks, Vietnam is successfully laying the groundwork for a transparent and greener economy <span class="blank-tag">5</span>.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Independent Sentence / Relative Clause",
+        opts: [
+          "this initiative will help Vietnam align with global standards, which include the open coalition for carbon market integration proposed at COP 30",
+          "this initiative will help Vietnam align with global standards what include the open coalition for carbon market integration proposing at COP 30",
+          "which initiative will help Vietnam align with global standards that including the open coalition for carbon market integration proposed at COP 30",
+          "this initiative will help Vietnam align with global standards, where include the open coalition for carbon market integration to propose at COP 30"
+        ],
+        ans: 0,
+        grammar: "Independent sentence / Relative clause",
+        tip: "This sentence logically continues the thought of the initiative's benefits. 'Which include...' is a non-defining relative clause correctly used after a comma."
+      },
+      {
+        num: 2,
+        type: "Independent Sentence",
+        opts: [
+          "However, the government has recently announced that data transparency is no longer required for issuing high-quality carbon credits.",
+          "To ensure the market operates effectively and credibly, experts stress that data transparency and reliable MRV data must be the highest priority.",
+          "Therefore, prioritizing rapid economic growth over reliable MRV data will guarantee the immediate success of this domestic market.",
+          "As a result, European countries have completely banned the import of Vietnamese goods due to the lack of a credible carbon market."
+        ],
+        ans: 1,
+        grammar: "Independent sentence structure",
+        tip: "This choice emphasizes the importance of transparency and MRV (Monitoring, Reporting, and Verification), which is crucial for a credible carbon market."
+      },
+      {
+        num: 3,
+        type: "Prepositional Phrase / Noun Clause",
+        opts: [
+          "which initial expectations that Vietnam's carbon credits will be pricing around $5 to $15 per ton",
+          "having initial expectations which Vietnam's carbon credits will be priced around $5 to $15 per ton",
+          "with initial expectations that Vietnam's carbon credits will be priced around $5 to $15 per ton",
+          "with initial expectations what Vietnam's carbon credits will be priced around $5 to $15 per ton"
+        ],
+        ans: 2,
+        grammar: "Prepositional phrase / Noun clause",
+        tip: "The phrase 'with initial expectations that...' provides specific detail about the pricing expectations. 'Priced' (passive) is the correct form."
+      },
+      {
+        num: 4,
+        type: "Independent Sentence / Pronoun Reference",
+        opts: [
+          "On the contrary, these stringent regulations will permanently force small businesses to shut down their manufacturing plants.",
+          "Furthermore, experts advise SMEs to completely ignore emission accounting until the carbon market is fully operational in 2045.",
+          "Consequently, large multinational corporations will be heavily penalized for providing free advisory programs to local startups.",
+          "These supportive measures are specifically designed to ease the financial burden and technical challenges faced by local enterprises."
+        ],
+        ans: 3,
+        grammar: "Independent sentence / Pronoun reference",
+        tip: "This sentence summarizes the purpose of the recommended support pillars mentioned in the previous sentence."
+      },
+      {
+        num: 5,
+        type: "Non-defining Relative Clause",
+        opts: [
+          ", which will ultimately benefit both current and future generations",
+          ", what will ultimately benefit both current and future generations",
+          ", that will ultimately be benefited both current and future generations",
+          ", where will ultimately benefit both current and future generations"
+        ],
+        ans: 0,
+        grammar: "Non-defining relative clause",
+        tip: "'Which' is used here to refer back to the entire idea of laying the groundwork for a transparent and greener economy."
+      }
+    ]
   }
 ];
 

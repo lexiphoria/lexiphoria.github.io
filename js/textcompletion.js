@@ -2318,6 +2318,85 @@ const ALL_EXAMS = [
         tip: "'Which' correctly introduces the non-defining clause explaining CLIL. The commas correctly set off the appositive and the relative clause."
       }
     ]
+  },
+  {
+    id: 'anthropic_mythos',
+    title: 'Anthropic Mythos: The Risks of Autonomous AI',
+    meta: 'Technology & Cybersecurity',
+    html: `
+      <p>Anthropic has decided to withhold its latest AI model, Mythos, from the public due to its extraordinary ability to autonomously find and exploit software vulnerabilities. Unlike previous coding assistants, Mythos can act as an automated hacker with minimal human oversight, <span class="blank-tag">1</span>. This development is particularly alarming because the window between discovering a software vulnerability and its exploitation in a cyberattack has plummeted from 2.3 years in 2018 to just 20 hours today, <span class="blank-tag">2</span>.</p>
+      <br>
+      <p><span class="blank-tag">3</span>, Mythos uncovered a critical flaw in the OpenBSD operating system that had remained hidden for 27 years. By exploiting how the system processed large numbers, a single internet message could trigger a complete system crash, known as a kernel panic. Anthropic practiced responsible disclosure, <span class="blank-tag">4</span>.</p>
+      <br>
+      <p>Interestingly, Mythos was not specifically designed for cybersecurity. Its advanced hacking skills are simply a result of scaling up its predecessor, Opus, with more data and computing power. <span class="blank-tag">5</span>, Anthropic is keeping the model strictly behind closed doors.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Adjective Phrase",
+        opts: [
+          "capable of crashing systems and gaining unauthorized access",
+          "which is capable of crashing systems and gaining unauthorized access",
+          "having been capable of crashing systems and gaining unauthorized access",
+          "to be capable of crashing systems and gaining unauthorized access"
+        ],
+        ans: 0,
+        grammar: "Adjective phrase / Reduced relative clause",
+        tip: "An adjective phrase ('capable of...') acts as a reduced relative clause (..., which is capable of...) to provide more information about 'Mythos'."
+      },
+      {
+        num: 2,
+        type: "Independent Sentence",
+        opts: [
+          "and is projected to reach just one minute by 2028",
+          "and being projected to reach just one minute by 2028",
+          "and is projecting to reach just one minute by 2028",
+          "that is projected to reach just one minute by 2028"
+        ],
+        ans: 0,
+        grammar: "Parallel structure / Passive voice",
+        tip: "This choice creates a parallel structure with the previous verb 'has plummeted', indicating a future trend in passive voice ('is projected to...')."
+      },
+      {
+        num: 3,
+        type: "Present Participle Phrase",
+        opts: [
+          "Demonstrating its capabilities",
+          "To demonstrate its capabilities",
+          "Having demonstrated its capabilities",
+          "Demonstrated its capabilities"
+        ],
+        ans: 0,
+        grammar: "Present participle phrase",
+        tip: "A present participle phrase ('Demonstrating...') is used at the beginning of the sentence to show simultaneous action or background context for the main clause."
+      },
+      {
+        num: 4,
+        type: "Present Participle Phrase",
+        opts: [
+          "allowing developers to patch the bug before it became public",
+          "which allowing developers to patch the bug before it became public",
+          "to allow developers to patch the bug before it became public",
+          "allowed developers to patch the bug before it became public"
+        ],
+        ans: 0,
+        grammar: "Present participle of result",
+        tip: "A present participle ('allowing...') follows a comma to describe the direct consequence or result of the preceding action."
+      },
+      {
+        num: 5,
+        type: "Adverbial Clause of Reason",
+        opts: [
+          "Because this preview version lacks standard safety guardrails and will willingly write malicious exploits if asked",
+          "Although this preview version lacks standard safety guardrails and will willingly write malicious exploits if asked",
+          "Despite this preview version lacks standard safety guardrails and will willingly write malicious exploits if asked",
+          "For this preview version lacking standard safety guardrails and will willingly write malicious exploits if asked"
+        ],
+        ans: 0,
+        grammar: "Adverbial clause of reason",
+        tip: "The conjunction 'Because' correctly introduces a clause explaining the reason for the decision to keep the model private."
+      }
+    ]
   }
 ];
 

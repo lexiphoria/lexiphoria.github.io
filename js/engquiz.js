@@ -3980,6 +3980,286 @@ const texts = [
         feedback: "'Youth protection' refers to laws and policies designed to keep young people safe."
       }
     ]
+  },
+  {
+    title: "Northern Landscapes",
+    type: "Nature Article",
+    icon: "🌾",
+    passage: `WHEN THE HARVEST COMES\n\nSummer gifts the North with nature's most breathtaking sights: golden rice fields waiting for harvest, gardens full ___1___ the vivid colors of ripe fruits, and rivers ___2___ with fish. Northern delicacies with refreshing and sour tastes are great choices to ease the summer heat.\n\nWHERE THE SCENERY GLOWS\n\nWith summer's arrival, the North changes its natural scenery and atmosphere. The clear blue sky and the vast green forest ___3___ endlessly from Lang Son to Lung Cu, extending to the northwest of Mt. Fansipan - "the Roof of Indochina" creates a picturesque landscape. Adding more vibrant details to the scenery are the color of abundant ___4___, the reddish brown of the Red River delta’s alluvium, the light pink of blooming lotus ___5___ with the mossy stones of the ancient pagodas, the bright red royal poinciana and the purple crape-myrtle residing on the side of city streets, as well as the ___6___ islands in the sea.`,
+    questions: [
+      {
+        type: "Adjective + Preposition",
+        blank: 1,
+        text: "Gardens full ___1___ the vivid colors of ripe fruits...",
+        options: ["A. with", "B. of", "C. in", "D. off"],
+        answer: 1,
+        feedback: "'Full of' is the standard adjective-preposition collocation. 'Full with' is sometimes used but 'full of' is the correct choice here."
+      },
+      {
+        type: "Participle",
+        blank: 2,
+        text: "...and rivers ___2___ with fish.",
+        options: ["A. teem", "B. teems", "C. teeming", "D. teemed"],
+        answer: 2,
+        feedback: "'Teeming with' is a present participle used in a reduced relative clause ('rivers that are teeming with'). It describes an active, ongoing state."
+      },
+      {
+        type: "Participle",
+        blank: 3,
+        text: "...and the vast green forest ___3___ endlessly...",
+        options: ["A. stretches", "B. stretching", "C. stretched", "D. which stretching"],
+        answer: 1,
+        feedback: "'Stretching' is a present participle in a reduced relative clause ('forest which stretches'). Active present participle is used for ongoing geographical features."
+      },
+      {
+        type: "Adjective Order",
+        blank: 4,
+        text: "Adding more vibrant details to the scenery are the color of abundant ___4___...",
+        options: ["A. golden rice paddies", "B. rice golden paddies", "C. paddies golden rice", "D. paddies rice golden"],
+        answer: 0,
+        feedback: "In English adjective order, 'golden' (color) comes before the noun 'rice paddies'."
+      },
+      {
+        type: "Participle",
+        blank: 5,
+        text: "...the light pink of blooming lotus ___5___ with the mossy stones...",
+        options: ["A. contrast", "B. to contrast", "C. contrasting", "D. contrasted"],
+        answer: 2,
+        feedback: "'Contrasting' is a present participle used to describe the relationship between the lotus and the stones."
+      },
+      {
+        type: "Adjective Order",
+        blank: 6,
+        text: "...as well as the ___6___ islands in the sea.",
+        options: ["A. rocky ever-windy", "B. ever-windy rocky", "C. windy ever rocky", "D. rocky windy ever"],
+        answer: 1,
+        feedback: "'Ever-windy' functions as an adjective before 'rocky'. The order 'ever-windy rocky islands' is the most natural in this context."
+      }
+    ]
+  },
+  {
+    title: "Pristine Co To",
+    type: "Travel Guide",
+    icon: "🏝️",
+    passage: `The priceless pristine scenery of Co To\n\nWhen tourist sites are over-crowded, Co To is a beautiful getaway with no worries—you are surrounded by peaceful scenery and magnificent landscape.\n\nDAY 1: THANH LAN ISLAND\n\nThanh Lan Island has ___1___ pristine beaches, such as Central Beach, Vung Ba Chau Beach, C76 Beach, and Hai Quan Beach. It also has sedimentary rocks ___2___ are thousands of years old and of many sizes and shapes, ___3___ the island spectacular beauty. What to do: Swimming, check-in on the rocky beach and sandy road in the middle of the sea, camping on the beach, fishing squid, diving to see coral, visiting a jellyfish ___4___ factory... Boat from Co To Lon to Thanh Lan: VND30,000/pax\n\nDAY 2: CO TO CON – CA CHEP – BAY SAO\n\nSightseeing, swimming at South beach and East beach in Co To Con. Check-in fine white sand beaches; ___5___ the tides recede, the whole island looks ___6___ a carp.`,
+    questions: [
+      {
+        type: "Quantifier",
+        blank: 1,
+        text: "Thanh Lan Island has ___1___ pristine beaches...",
+        options: ["A. much", "B. every", "C. many", "D. another"],
+        answer: 2,
+        feedback: "'Many' is used with countable plural nouns ('beaches'). 'Much' is for uncountable, 'every' and 'another' for singular."
+      },
+      {
+        type: "Relative Pronoun",
+        blank: 2,
+        text: "...sedimentary rocks ___2___ are thousands of years old...",
+        options: ["A. who", "B. that", "C. where", "D. what"],
+        answer: 1,
+        feedback: "'That' (or 'which') is the relative pronoun used for objects/things. 'Who' is for people, 'where' for places."
+      },
+      {
+        type: "Participle",
+        blank: 3,
+        text: "...of many sizes and shapes, ___3___ the island spectacular beauty.",
+        options: ["A. give", "B. gives", "C. giving", "D. given"],
+        answer: 2,
+        feedback: "'Giving' is a present participle phrase of result, explaining how the rocks contribute to the island's beauty."
+      },
+      {
+        type: "Vocabulary",
+        blank: 4,
+        text: "...visiting a jellyfish ___4___ factory...",
+        options: ["A. processing", "B. making", "C. doing", "D. working"],
+        answer: 0,
+        feedback: "'Processing factory' is a common collocation for a facility where raw materials (like jellyfish) are prepared for sale."
+      },
+      {
+        type: "Linking Word",
+        blank: 5,
+        text: "___5___ the tides recede, the whole island looks...",
+        options: ["A. While", "B. When", "C. Because", "D. Unless"],
+        answer: 1,
+        feedback: "'When' is used to indicate the time at which an event happens (the receding of the tides)."
+      },
+      {
+        type: "Preposition",
+        blank: 6,
+        text: "...the whole island looks ___6___ a carp.",
+        options: ["A. as", "B. like", "C. alike", "D. similar"],
+        answer: 1,
+        feedback: "'Look like' is the correct prepositional verb used for physical resemblance."
+      }
+    ]
+  },
+  {
+    title: "Let's Tet!!!",
+    type: "Cultural Article",
+    icon: "🧧",
+    passage: `Commonly ___1___ as “Tết”, the Lunar New Year Festival is the most significant and longest holiday in Vietnam, ___2___ an endless party, throughout the country. The main events of Tết occur in the first 3 days of the Lunar New Year ___3___ the festive atmosphere may emerge weeks prior as preparations begin on a ___4___ scale.\n\nThe dates of Tết change according to the Lunar calendar, each year the Vietnamese government issues an official schedule for the Lunar New Year Festival, ___5___ in 2024 is from Feb. 8th to 14th. Traditionally, Tết is celebrated for almost a month, starting from the day of worship for the Kitchen Gods (Dec. 23rd in the Lunar calendar) to the celebration of the first full moon of the new year, ___6___ is also an important date to the Vietnamese.`,
+    questions: [
+      {
+        type: "Passive Voice",
+        blank: 1,
+        text: "Commonly ___1___ as “Tết”...",
+        options: ["A. know", "B. knowing", "C. knew", "D. known"],
+        answer: 3,
+        feedback: "'Known as' is a past participle used in a reduced passive relative clause ('which is commonly known as')."
+      },
+      {
+        type: "Participle",
+        blank: 2,
+        text: "...longest holiday in Vietnam, ___2___ an endless party...",
+        options: ["A. created", "B. creating", "C. creates", "D. to create"],
+        answer: 1,
+        feedback: "'Creating' is a present participle used to describe an accompanying action or result."
+      },
+      {
+        type: "Linking Word",
+        blank: 3,
+        text: "...first 3 days of the Lunar New Year ___3___ the festive atmosphere may emerge weeks prior...",
+        options: ["A. so", "B. but", "C. therefore", "D. despite"],
+        answer: 1,
+        feedback: "'But' is used to introduce a contrast between the 'main events' and the 'festive atmosphere' starting earlier."
+      },
+      {
+        type: "Collocation",
+        blank: 4,
+        text: "...preparations begin on a ___4___ scale.",
+        options: ["A. large", "B. mass", "C. huge", "D. grand"],
+        answer: 1,
+        feedback: "'On a mass scale' is a standard collocation meaning 'involving many people' or 'on a very large scale'."
+      },
+      {
+        type: "Relative Pronoun",
+        blank: 5,
+        text: "...official schedule for the Lunar New Year Festival, ___5___ in 2024 is from Feb. 8th to 14th.",
+        options: ["A. which", "B. that", "C. when", "D. where"],
+        answer: 0,
+        feedback: "'Which' is used for a non-defining relative clause referring to the 'schedule'. 'That' cannot follow a comma."
+      },
+      {
+        type: "Relative Pronoun",
+        blank: 6,
+        text: "...celebration of the first full moon of the new year, ___6___ is also an important date...",
+        options: ["A. who", "B. what", "C. which", "D. that"],
+        answer: 2,
+        feedback: "'Which' is the correct relative pronoun for a non-defining relative clause referring to a time/event (the full moon)."
+      }
+    ]
+  },
+  {
+    title: "Yen Tu Pilgrimage",
+    type: "Cultural Guide",
+    icon: "⛰️",
+    passage: `A pilgrimage: "Hoa Yen Pagoda - Dong Pagoda"\n\nYen Tu holds one of the most significant pilgrimage festivals in the country. With the main route from Giai Oan Stream to the ___1___ pine forests, travelers can reach ___2___ destinations such as Hue Quang Tower Garden, Mot Mai (One-Roof) Pagoda, Hoa Yen Pagoda, An Ky Sinh Stone Statue, and finally, Dong Pagoda on top of the "Floating Cloud Peak".\n\nEntrance fee Adults: VND40,000/person Children: VND20,000/person\n\nAdmiring the Yen Tu mountain and forest scenery in spring from the cable car: You can reach the top on foot or ___3___ the cable car, ___4___ has 2 routes. After ___5___ a distance of 700 metres along the mountain trail, you will gaze ___6___ the breathtaking splendour of Yen Tu mountains and forests from above.\n\nOpening time during Tết holiday: 5am - 8pm From VND180,000/pax Full package price: VND380,000/pax (including ticket, round-trip car and cable fees)`,
+    questions: [
+      {
+        type: "Compound Adjective",
+        blank: 1,
+        text: "...main route from Giai Oan Stream to the ___1___ pine forests...",
+        options: ["A. seven-hundreds-year-old", "B. seven-hundred-years-old", "C. seven-hundred-year-old", "D. seven-hundreds-years-old"],
+        answer: 2,
+        feedback: "In compound adjectives with numbers, the noun ('year') is always singular: 'seven-hundred-year-old'."
+      },
+      {
+        type: "Quantifier",
+        blank: 2,
+        text: "...travelers can reach ___2___ destinations such as...",
+        options: ["A. much", "B. several", "C. another", "D. every"],
+        answer: 1,
+        feedback: "'Several' is used with countable plural nouns ('destinations')."
+      },
+      {
+        type: "Vocabulary",
+        blank: 3,
+        text: "...You can reach the top on foot or ___3___ the cable car...",
+        options: ["A. take", "B. get", "C. catch", "D. go"],
+        answer: 0,
+        feedback: "'Take the cable car' is the standard way to express using a form of transport."
+      },
+      {
+        type: "Relative Pronoun",
+        blank: 4,
+        text: "...the cable car, ___4___ has 2 routes.",
+        options: ["A. who", "B. that", "C. where", "D. which"],
+        answer: 3,
+        feedback: "'Which' is the correct relative pronoun for a non-defining relative clause referring to the 'cable car'."
+      },
+      {
+        type: "Gerund",
+        blank: 5,
+        text: "After ___5___ a distance of 700 metres...",
+        options: ["A. hike", "B. to hike", "C. hiked", "D. hiking"],
+        answer: 3,
+        feedback: "After prepositions like 'after', the gerund form (-ing) is required."
+      },
+      {
+        type: "Prepositional Verb",
+        blank: 6,
+        text: "...you will gaze ___6___ the breathtaking splendour...",
+        options: ["A. upon", "B. into", "C. out", "D. over"],
+        answer: 0,
+        feedback: "'Gaze upon' is a formal phrasal verb meaning to look at something with admiration."
+      }
+    ]
+  },
+  {
+    title: "Copenhagen's Bicycles",
+    type: "Lifestyle Article",
+    icon: "🚲",
+    passage: `In Copenhagen, bicycles outnumber people. Yet ___1___ truly sets the city ___2___ is how locals embrace cycling as a ___3___ of life – a cultural hallmark of this ancient, beautiful Nordic gem.\n\nWhen the light turned green, the flow of people silently glided away, as smooth as water. The typical sights of modern metropolises, such as ostentatious supercars or long lines of taxis, are completely absent here. This creates an interesting paradox: Copenhagen is one of the wealthiest and most expensive cities in the world, ___4___ its residents commute in a profoundly humble way.\n\nIn ___5___ wealthy cities, transportation is a way to display status. The opposite is true in Copenhagen: office workers in suits cycle, bank directors cycle, as do young women in trendy outfits. Here, cycling is not a weekend sports activity or a form of exercise for health, nor is it a trendy “green” choice. It is the very breath of the city, ___6___ naturally without any effort.`,
+    questions: [
+      {
+        type: "Relative Pronoun",
+        blank: 1,
+        text: "Yet ___1___ truly sets the city...",
+        options: ["A. what", "B. that", "C. which", "D. it"],
+        answer: 0,
+        feedback: "'What' is used as a nominal relative pronoun meaning 'the thing that'."
+      },
+      {
+        type: "Phrasal Verb",
+        blank: 2,
+        text: "...sets the city ___2___ is how locals embrace cycling...",
+        options: ["A. out", "B. off", "C. apart", "D. up"],
+        answer: 2,
+        feedback: "'Set apart' is a phrasal verb meaning to make someone or something different or special."
+      },
+      {
+        type: "Collocation",
+        blank: 3,
+        text: "...cycling as a ___3___ of life...",
+        options: ["A. path", "B. way", "C. course", "D. style"],
+        answer: 1,
+        feedback: "'Way of life' is a fixed collocation referring to the typical habits and behavior of a group."
+      },
+      {
+        type: "Linking Word",
+        blank: 4,
+        text: "...most expensive cities in the world, ___4___ its residents commute...",
+        options: ["A. so", "B. yet", "C. otherwise", "D. consequently"],
+        answer: 1,
+        feedback: "'Yet' is used to show contrast between being a wealthy city and having humble commuting habits."
+      },
+      {
+        type: "Quantifier",
+        blank: 5,
+        text: "In ___5___ wealthy cities, transportation is a way to display status.",
+        options: ["A. many", "B. others", "C. another", "D. the other"],
+        answer: 0,
+        feedback: "'Many' is used with countable plural nouns ('cities')."
+      },
+      {
+        type: "Participle",
+        blank: 6,
+        text: "...It is the very breath of the city, ___6___ naturally without any effort.",
+        options: ["A. occurred", "B. occurs", "C. occurring", "D. which occurring"],
+        answer: 2,
+        feedback: "'Occurring' is a present participle used to post-modify 'breath of the city' or describe the situation."
+      }
+    ]
   }
 ];
 

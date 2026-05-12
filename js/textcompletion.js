@@ -2713,6 +2713,164 @@ const ALL_EXAMS = [
         tip: "'Both of which' is the correct relative structure to refer to the two companies (TikTok and Snap)."
       }
     ]
+  },
+  {
+    id: 'hague_apostille_convention',
+    title: 'Vietnam and the Hague Apostille Convention',
+    meta: 'Law & International Integration',
+    html: `
+      <p>Vietnam officially acceded to the Hague Apostille Convention on December 31, 2025, with the agreement scheduled to enter into force on September 11, 2026, <span class="blank-tag">1</span>. This critical institutional reform simplifies cross-border public document authentication among 129 contracting states by replacing complex, multi-stage consular legalizations with a single standardized apostille certificate.</p>
+      <br>
+      <p>This streamlined process is expected to significantly benefit Vietnam's economy as it targets double-digit growth in 2026. <span class="blank-tag">2</span>. By reducing paperwork, lowering compliance costs, and accelerating administrative procedures, the convention will expedite business operations such as company registrations, power of attorney filings, and employment documentation. This enhanced transparency and predictability will reduce legal risks and boost foreign investor confidence, <span class="blank-tag">3</span>. Beyond business, the change will also make overseas studies, employment, and international judicial cooperation much easier for citizens.</p>
+      <br>
+      <p>Legal experts view this accession as a vital step in aligning Vietnam's administrative procedures with international standards. <span class="blank-tag">4</span>. However, to ensure an effective rollout, experts emphasize the need for clear government guidance, thorough training for public officials <span class="blank-tag">5</span>, and robust communication campaigns to educate businesses and citizens on utilizing the new system.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Present Participle Phrase",
+        opts: [
+          "marking a historic milestone in its legal integration",
+          "which marking a historic milestone in its legal integration",
+          "marked a historic milestone in its legal integration",
+          "to mark a historic milestone in its legal integration"
+        ],
+        ans: 0,
+        grammar: "Present participle phrase",
+        tip: "A present participle phrase ('marking...') follows a comma to describe the result or significance of the preceding event."
+      },
+      {
+        num: 2,
+        type: "Independent Sentence",
+        opts: [
+          "The reform directly supports this ambitious economic target.",
+          "However, FDI is expected to decline significantly next year.",
+          "The convention will exclusively benefit local university students.",
+          "This growth target has been completely abandoned by the state."
+        ],
+        ans: 0,
+        grammar: "Independent sentence structure",
+        tip: "This sentence provides a direct logical link between the Apostille Convention and the double-digit growth target mentioned previously."
+      },
+      {
+        num: 3,
+        type: "Present Participle Phrase",
+        opts: [
+          "which further attracting high-quality Foreign Direct Investment",
+          "further attracted high-quality Foreign Direct Investment",
+          "further attracting high-quality Foreign Direct Investment",
+          "to further attracting high-quality Foreign Direct Investment"
+        ],
+        ans: 2,
+        grammar: "Present participle phrase",
+        tip: "The present participle 'attracting' (following 'further') describes the result of boosting foreign investor confidence."
+      },
+      {
+        num: 4,
+        type: "Independent Sentence",
+        opts: [
+          "The convention will severely restrict future international trade.",
+          "Therefore, cross-border authentication will be fully abolished.",
+          "Consequently, domestic administrative delays will rapidly worsen.",
+          "It demonstrates a strong commitment to global economic integration."
+        ],
+        ans: 3,
+        grammar: "Independent sentence structure",
+        tip: "This sentence elaborates on the expert view by highlighting what the accession represents for the nation."
+      },
+      {
+        num: 5,
+        type: "Infinitive of Purpose",
+        opts: [
+          "maintaining administrative consistency across all levels",
+          "to maintain administrative consistency across all levels",
+          "maintained administrative consistency across all levels",
+          "in order that maintain administrative consistency across all levels"
+        ],
+        ans: 1,
+        grammar: "Infinitive of purpose",
+        tip: "The infinitive 'to maintain' expresses the purpose or goal of the training provided to public officials."
+      }
+    ]
+  },
+  {
+    id: 'ai_job_market_transformation',
+    title: 'AI and the Job Market: Challenges and Opportunities',
+    meta: 'Technology & Career',
+    html: `
+      <p>Artificial intelligence is significantly transforming the global job market, prompting widespread career and educational shifts. While a World Economic Forum report projects that AI could displace 92 million jobs by 2030, <span class="blank-tag">1</span>. Currently, routine tasks like data entry, basic reporting, and simple customer service face the highest risk of automation within the next decade.</p>
+      <br>
+      <p>Fearing the vulnerability of white-collar work, some young people in countries like Britain are turning to skilled manual trades. <span class="blank-tag">2</span>. Meanwhile, the transition period may bring short-term unemployment spikes for recent graduates, <span class="blank-tag">3</span>.</p>
+      <br>
+      <p>To navigate this unpredictable future, nations are actively adapting their education systems. In Vietnam, universities are integrating AI into hands-on learning, <span class="blank-tag">4</span>. Educators emphasize connecting AI with specific domains of expertise to prepare highly educated individuals. Looking ahead, HR experts predict that using AI tools like Gemini and ChatGPT will become a standard job requirement. <span class="blank-tag">5</span>.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Independent Clause",
+        opts: [
+          "it may simultaneously create 170 million new roles",
+          "which may simultaneously create 170 million new roles",
+          "that may simultaneously create 170 million new roles",
+          "having simultaneously created 170 million new roles"
+        ],
+        ans: 0,
+        grammar: "Adverbial clause of contrast",
+        tip: "'While' introduces a dependent clause, so an independent clause ('it may...') is needed to complete the sentence."
+      },
+      {
+        num: 2,
+        type: "Independent Sentence",
+        opts: [
+          "Therefore, white-collar jobs will completely disappear within the next few months.",
+          "These hands-on professions are widely viewed as less susceptible to AI disruption.",
+          "However, skilled manual trades are the most vulnerable to robotic automation.",
+          "Consequently, British universities have stopped offering traditional degrees."
+        ],
+        ans: 1,
+        grammar: "Independent sentence structure",
+        tip: "This sentence provides the rationale for the shift mentioned, connecting 'skilled manual trades' to being 'less susceptible to AI'."
+      },
+      {
+        num: 3,
+        type: "Relative Clause",
+        opts: [
+          "who newly acquired skills might temporarily misalign with market demands",
+          "which newly acquired skills might temporarily misalign with market demands",
+          "whose newly acquired skills might temporarily misalign with market demands",
+          "whom newly acquired skills might temporarily misalign with market demands"
+        ],
+        ans: 2,
+        grammar: "Relative clause / Possession",
+        tip: "'Whose' is the correct relative pronoun to indicate that the 'newly acquired skills' belong to the 'recent graduates'."
+      },
+      {
+        num: 4,
+        type: "Present Participle Phrase",
+        opts: [
+          "organized intensive hackathons which students develop AI-driven business solutions",
+          "which organizing intensive hackathons where students develop AI-driven business solutions",
+          "to organizing intensive hackathons that students develop AI-driven business solutions",
+          "organizing intensive hackathons where students develop AI-driven business solutions"
+        ],
+        ans: 3,
+        grammar: "Present participle phrase / Relative clause",
+        tip: "The present participle 'organizing' adds detail to how universities are integrating AI. 'Where' correctly refers to 'hackathons'."
+      },
+      {
+        num: 5,
+        type: "Independent Sentence",
+        opts: [
+          "As a result, companies will strictly ban the use of AI tools to protect corporate data.",
+          "On the contrary, basic software skills like Microsoft Office will soon be irrelevant.",
+          "Furthermore, entirely new specialized roles dedicated to AI integration will emerge.",
+          "Consequently, HR departments will replace all human recruiters with AI bots."
+        ],
+        ans: 2,
+        grammar: "Independent sentence / Addition",
+        tip: "'Furthermore' is used to add another positive or progressive development (new roles) to the standard job requirement prediction."
+      }
+    ]
   }
 ];
 

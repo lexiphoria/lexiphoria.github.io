@@ -2879,6 +2879,7 @@ const L = ['A', 'B', 'C', 'D'];
 let done = Array(5).fill(false);
 let corr = Array(5).fill(false);
 let cntC = 0, cntW = 0;
+let currentExamId = '';
 
 function initApp() {
   const selectScreen = document.getElementById('select-screen');
@@ -2918,7 +2919,20 @@ function startExam(id) {
   document.getElementById('p-content').innerHTML = exam.html;
 
   QS = exam.questions;
+  currentExamId = id;
   resetAll();
+}
+
+function nextExam() {
+  const currentIndex = ALL_EXAMS.findIndex(e => e.id === currentExamId);
+  if (currentIndex !== -1 && currentIndex < ALL_EXAMS.length - 1) {
+    const nextExam = ALL_EXAMS[currentIndex + 1];
+    startExam(nextExam.id);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    showSelectScreen();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
 
 function build() {
@@ -3036,6 +3050,15 @@ function showResult() {
   document.getElementById('result-msg').textContent = msgs[n] || 'Completed!';
   document.getElementById('result-stats').innerHTML =
     '<div>Correct <span>' + n + ' questions</span></div><div>Incorrect <span>' + (5 - n) + ' questions</span></div><div>Score <span>' + (n * 2) + '/10</span></div>';
+  
+  const nextBtn = document.getElementById('next-btn');
+  const currentIndex = ALL_EXAMS.findIndex(e => e.id === currentExamId);
+  if (currentIndex === ALL_EXAMS.length - 1) {
+    nextBtn.textContent = 'Back to Menu';
+  } else {
+    nextBtn.textContent = 'Next Test';
+  }
+
   panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 

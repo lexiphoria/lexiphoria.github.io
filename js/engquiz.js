@@ -4260,7 +4260,6 @@ const texts = [
         feedback: "'Occurring' is a present participle used to post-modify 'breath of the city' or describe the situation."
       }
     ]
-  }
   },
   {
     title: "Heritage Photo Tour Laos",

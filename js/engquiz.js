@@ -4764,6 +4764,174 @@ const texts = [
         feedback: "'Monumental' means great in importance, extent, or size."
       }
     ]
+  },
+  {
+    title: "Claude Haiku 4.5",
+    type: "Tech News",
+    icon: "🤖",
+    passage: `Claude Haiku 4.5 is our fastest, most cost-efficient model, matching Sonnet 4’s performance on coding and agent tasks. Scoring 73.3% on SWE-bench Verified, it firmly establishes itself as one of the world’s best coding models. Users ___1___ rely on AI for real-time, low-latency tasks will appreciate Haiku 4.5’s combination of high intelligence and remarkable speed. Furthermore, users of Claude Code will find that Haiku 4.5 makes the coding experience markedly more ___2___. Claude Haiku 4.5 provides a new option for those desiring near-frontier performance coupled ___3___ much greater cost-efficiency. It also opens up new paradigms of using our models collaboratively. For instance, Sonnet 4.5 can ___4___ down a complex problem into multi-step plans, then ___5___ a team of ___6___ Haiku 4.5s to complete subtasks in parallel.`,
+    questions: [
+      {
+        type: "Relative Pronoun",
+        blank: 1,
+        text: "Users ___1___ rely on AI for real-time...",
+        options: ["A. which", "B. who", "C. whom", "D. whose"],
+        answer: 1,
+        feedback: "'Who' is the relative pronoun used for people (users)."
+      },
+      {
+        type: "Vocabulary",
+        blank: 2,
+        text: "...makes the coding experience markedly more ___2___.",
+        options: ["A. response", "B. respond", "C. responsive", "D. responsively"],
+        answer: 2,
+        feedback: "'Responsive' is the adjective form used to describe a quick and positive reaction."
+      },
+      {
+        type: "Preposition",
+        blank: 3,
+        text: "...near-frontier performance coupled ___3___ much greater cost-efficiency.",
+        options: ["A. to", "B. with", "C. for", "D. in"],
+        answer: 1,
+        feedback: "'Coupled with' is a standard phrase meaning combined with."
+      },
+      {
+        type: "Phrasal Verb",
+        blank: 4,
+        text: "...Sonnet 4.5 can ___4___ down a complex problem...",
+        options: ["A. take", "B. put", "C. cut", "D. break"],
+        answer: 3,
+        feedback: "'Break down' means to divide something into smaller, more manageable parts."
+      },
+      {
+        type: "Vocabulary",
+        blank: 5,
+        text: "...then ___5___ a team of...",
+        options: ["A. orchestrate", "B. fabricate", "C. manipulate", "D. dictate"],
+        answer: 0,
+        feedback: "'Orchestrate' means to coordinate or organize something complex."
+      },
+      {
+        type: "Quantifier",
+        blank: 6,
+        text: "...a team of ___6___ Haiku 4.5s to complete...",
+        options: ["A. multiple", "B. much", "C. a great deal of", "D. every"],
+        answer: 0,
+        feedback: "'Multiple' is used with plural countable nouns (Haiku 4.5s)."
+      }
+    ]
+  },
+  {
+    title: "IRONMAN Da Nang",
+    type: "Sports Event",
+    icon: "🏊",
+    passage: `RACE WHERE ADVENTURE AWAITS\n\nFollowing a Decade of TRiumph, we invite you to begin a bold new chapter of IRONMAN in Da Nang — ranked as one of Asia’s top 8 travel destinations for 2025. ___1___ between pristine beaches and cultural landmarks, Da Nang offers a race setting where modern vibrance meets timeless heritage. Athletes are encouraged to ___2___ themselves in Central Vietnam’s rich traditions, world-famous cuisine, and warm hospitality. ___3___ this is your first IRONMAN or just ___4___ to add to your achievements, Da Nang promises an inspiring race-cation filled with both challenge and celebration. The weekend also brings family fun to the ___5___ — with SUNRISE SPRINT Vietnam for beginners, and IRONKIDS Vietnam for young athletes competing in a ___6___ format.`,
+    questions: [
+      {
+        type: "Participle",
+        blank: 1,
+        text: "___1___ between pristine beaches and cultural landmarks...",
+        options: ["A. Nestling", "B. Nestled", "C. To nestle", "D. Having nestled"],
+        answer: 1,
+        feedback: "'Nestled' is a past participle used to describe the location of Da Nang (meaning 'situated')."
+      },
+      {
+        type: "Vocabulary",
+        blank: 2,
+        text: "Athletes are encouraged to ___2___ themselves...",
+        options: ["A. plunge", "B. absorb", "C. soak", "D. immerse"],
+        answer: 3,
+        feedback: "'Immerse oneself in' means to involve oneself deeply in a particular activity or interest."
+      },
+      {
+        type: "Linking Word",
+        blank: 3,
+        text: "___3___ this is your first IRONMAN or just...",
+        options: ["A. If", "B. Unless", "C. Whether", "D. Provided"],
+        answer: 2,
+        feedback: "'Whether ... or' is used to express a choice between alternatives."
+      },
+      {
+        type: "Quantifier",
+        blank: 4,
+        text: "...or just ___4___ to add to your achievements...",
+        options: ["A. other", "B. others", "C. another", "D. the other"],
+        answer: 2,
+        feedback: "'Another' is used here to mean 'one more' achievement."
+      },
+      {
+        type: "Vocabulary",
+        blank: 5,
+        text: "The weekend also brings family fun to the ___5___...",
+        options: ["A. forefront", "B. background", "C. spotlight", "D. pinnacle"],
+        answer: 0,
+        feedback: "To 'bring to the forefront' means to make something a prominent or important part of something."
+      },
+      {
+        type: "Adjective Order",
+        blank: 6,
+        text: "...competing in a ___6___ format.",
+        options: ["A. thrilling fast-paced", "B. fast-paced thrilling", "C. thrillingly fast-paced", "D. fast-paced thrillingly"],
+        answer: 2,
+        feedback: "'Thrillingly fast-paced' uses an adverb to modify the adjective 'fast-paced'."
+      }
+    ]
+  },
+  {
+    title: "Apple Arcade News",
+    type: "Gaming News",
+    icon: "🎮",
+    passage: `EXCITING NEWS FOR APPLE ARCADE!\n\nExciting News for Apple Arcade! Join Bluey for the ___1___ playdate! Starting May 21, Bluey and her family will be taking over five hit games for a massive ___2___ event. Players can dive into these fun experiences together with absolutely no ads or in-app purchases. Fans can try fun obstacle courses in Crossy Road Castle, match fruits in Suika Game+, or build sticker collections in puffies. ___3___, four new titles ___4___ the catalog on June 4, including Mini Football Legends and Coffee Inc 2+. Subscribers can play all this and more on Apple Arcade for just $6.99 per month. This subscription includes a one-month free trial and unlimited access ___5___ the platform for ___6___ six family members!`,
+    questions: [
+      {
+        type: "Adjective Order",
+        blank: 1,
+        text: "Join Bluey for the ___1___ playdate!",
+        options: ["A. fun-filled ultimate", "B. ultimate fun-filled", "C. ultimately fun-filled", "D. fun-filled ultimately"],
+        answer: 1,
+        feedback: "Opinion adjectives like 'ultimate' usually come before descriptive adjectives like 'fun-filled'."
+      },
+      {
+        type: "Vocabulary",
+        blank: 2,
+        text: "...taking over five hit games for a massive ___2___ event.",
+        options: ["A. crossover", "B. transaction", "C. transition", "D. intersection"],
+        answer: 0,
+        feedback: "A 'crossover' event in gaming involves characters or elements from different games coming together."
+      },
+      {
+        type: "Linking Word",
+        blank: 3,
+        text: "___3___, four new titles...",
+        options: ["A. Therefore", "B. Consequently", "C. Additionally", "D. Nevertheless"],
+        answer: 2,
+        feedback: "'Additionally' is used to add extra information to what has already been said."
+      },
+      {
+        type: "Tense",
+        blank: 4,
+        text: "...four new titles ___4___ the catalog on June 4...",
+        options: ["A. expand", "B. will have expanded", "C. are expanding", "D. expanded"],
+        answer: 2,
+        feedback: "The present continuous ('are expanding') is often used for scheduled future events."
+      },
+      {
+        type: "Preposition",
+        blank: 5,
+        text: "...and unlimited access ___5___ the platform...",
+        options: ["A. for", "B. to", "C. with", "D. on"],
+        answer: 1,
+        feedback: "'Access to' is the standard prepositional phrase."
+      },
+      {
+        type: "Vocabulary",
+        blank: 6,
+        text: "...for ___6___ six family members!",
+        options: ["A. as far as", "B. more than", "C. less than", "D. up to"],
+        answer: 3,
+        feedback: "'Up to' is used to indicate a maximum limit or amount."
+      }
+    ]
   }
 ];
 

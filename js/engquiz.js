@@ -4261,6 +4261,231 @@ const texts = [
       }
     ]
   }
+  },
+  {
+    title: "Heritage Photo Tour Laos",
+    type: "News Report",
+    icon: "🇱🇦",
+    passage: `The Heritage Photo Tour delegation enjoyed a ___1___ journey through southern and central Laos. The Heritage Photo Tour of Laos, ___2___ in the final days of November 2025, was a remarkable journey for every member of the delegation. The tour was part of a ___3___ of activities celebrating the 50th National Day of the Lao People’s Democratic Republic, co-organized by the Vietnamese Consulate General in Pakse, Champasak Province, and Heritage.\n\nThe delegation included nearly 20 travel bloggers and photographers from all three regions of Vietnam – the largest team ever ___4___ for an overseas assignment. Although Heritage organized its first photo tour of Laos in 2018, this year’s trip ___5___ special significance, marking the first time the tour was ___6___ by Vietnam’s diplomatic mission and authorities from Champasak and Khammouane provinces.`,
+    questions: [
+      {
+        type: "Vocabulary",
+        blank: 1,
+        text: "The delegation enjoyed a ___1___ journey...",
+        options: ["A. captivating", "B. capturing", "C. catching", "D. commanding"],
+        answer: 0,
+        feedback: "'Captivating' means attracting and holding interest; charming. It is the perfect adjective to describe an enjoyable journey."
+      },
+      {
+        type: "Participle",
+        blank: 2,
+        text: "The Heritage Photo Tour of Laos, ___2___ in the final days of November 2025...",
+        options: ["A. holding", "B. held", "C. was held", "D. which holding"],
+        answer: 1,
+        feedback: "'Held' is a past participle used in a reduced relative clause ('which was held'). It describes a completed event."
+      },
+      {
+        type: "Collocation",
+        blank: 3,
+        text: "The tour was part of a ___3___ of activities...",
+        options: ["A. chain", "B. string", "C. series", "D. sequence"],
+        answer: 2,
+        feedback: "'A series of activities' is the standard collocation for a number of related events following one another."
+      },
+      {
+        type: "Vocabulary",
+        blank: 4,
+        text: "...the largest team ever ___4___ for an overseas assignment.",
+        options: ["A. gathered", "B. assembled", "C. collected", "D. congregated"],
+        answer: 1,
+        feedback: "'Assembled' is commonly used for a group of people (a team) brought together for a specific purpose."
+      },
+      {
+        type: "Collocation",
+        blank: 5,
+        text: "...this year’s trip ___5___ special significance...",
+        options: ["A. brought", "B. took", "C. delivered", "D. carried"],
+        answer: 3,
+        feedback: "'Carry significance' is a standard collocation meaning to have or possess a particular meaning or importance."
+      },
+      {
+        type: "Prepositional Verb",
+        blank: 6,
+        text: "...marking the first time the tour was ___6___ by Vietnam’s diplomatic mission...",
+        options: ["A. accompanied", "B. associated", "C. allied", "D. acquainted"],
+        answer: 0,
+        feedback: "'Accompanied by' means going along with or being present with someone else."
+      }
+    ]
+  },
+  {
+    title: "Tenerife Health Response",
+    type: "Health Notice",
+    icon: "🚢",
+    passage: `In a direct message to the people of Tenerife, WHO Director-General Dr. Tedros Adhanom Ghebreyesus ___1___ concerns about the MV Hondius, a cruise ship ___2___ with cases of the Andes hantavirus that caused three deaths. He reassures residents that the public health risk is low, stating clearly that this is not ___3___ COVID-19 pandemic. Currently, there are no symptomatic passengers on board. Under a strict safety plan, passengers will be securely transferred through a ___4___ corridor and directly repatriated without coming into contact with the local population. Dr. Tedros praises Spain and Tenerife for fulfilling their moral duty and ___5___ to International Health Regulations by showing ___6___ to the nearly 150 stranded individuals.`,
+    questions: [
+      {
+        type: "Vocabulary",
+        blank: 1,
+        text: "...WHO Director-General ___1___ concerns about the MV Hondius...",
+        options: ["A. addresses", "B. articulates", "C. allocates", "D. annexes"],
+        answer: 0,
+        feedback: "To 'address concerns' means to deal with or speak about particular issues or worries."
+      },
+      {
+        type: "Participle",
+        blank: 2,
+        text: "...a cruise ship ___2___ with cases of the Andes hantavirus...",
+        options: ["A. arrived", "B. arriving", "C. which arriving", "D. arrives"],
+        answer: 1,
+        feedback: "'Arriving' is a present participle used in a reduced relative clause ('which is arriving'). It describes an ongoing or current state."
+      },
+      {
+        type: "Quantifier",
+        blank: 3,
+        text: "...stating clearly that this is not ___3___ COVID-19 pandemic.",
+        options: ["A. other", "B. others", "C. another", "D. the other"],
+        answer: 2,
+        feedback: "'Another' is used with singular countable nouns to mean 'one more' or 'a different one of the same type'."
+      },
+      {
+        type: "Compound Adjective",
+        blank: 4,
+        text: "...transferred through a ___4___ corridor...",
+        options: ["A. cordoning-off", "B. cordoned-off", "C. off-cordoned", "D. off-cordoning"],
+        answer: 1,
+        feedback: "'Cordoned-off' is a compound adjective (past participle) describing a restricted area."
+      },
+      {
+        type: "Prepositional Verb",
+        blank: 5,
+        text: "...fulfilling their moral duty and ___5___ to International Health Regulations...",
+        options: ["A. conforming", "B. complying", "C. adhering", "D. abiding"],
+        answer: 2,
+        feedback: "'Adhering to' is the correct collocation. 'Complying' needs 'with', and 'abiding' needs 'by'."
+      },
+      {
+        type: "Vocabulary",
+        blank: 6,
+        text: "...by showing ___6___ to the nearly 150 stranded individuals.",
+        options: ["A. unanimity", "B. alliance", "C. integration", "D. solidarity"],
+        answer: 3,
+        feedback: "'Solidarity' means unity or agreement of feeling or action, especially among individuals with a common interest."
+      }
+    ]
+  },
+  {
+    title: "Understanding Hantaviruses",
+    type: "Scientific Report",
+    icon: "🦠",
+    passage: `Hantaviruses are a group of viruses ___1___ by rodents that can cause severe disease in humans. People usually get infected through ___2___ with infected rodents or their urine, droppings, or saliva. Infection with hantaviruses can cause a ___3___ of illnesses, including severe disease and death. In the Americas, hantaviruses can cause hantavirus cardiopulmonary syndrome (HCPS), a ___4___, with a case fatality rate of up to 50%. Andes virus, found in South America, is the only currently known hantavirus ___5___ limited human-to-human transmission among close contacts has been extensively ___6___.`,
+    questions: [
+      {
+        type: "Participle",
+        blank: 1,
+        text: "Hantaviruses are a group of viruses ___1___ by rodents...",
+        options: ["A. carrying", "B. to carry", "C. carried", "D. which carry"],
+        answer: 2,
+        feedback: "'Carried' is a past participle used in a reduced passive relative clause ('which are carried by')."
+      },
+      {
+        type: "Vocabulary",
+        blank: 2,
+        text: "People usually get infected through ___2___ with infected rodents...",
+        options: ["A. association", "B. exposure", "C. proximity", "D. contact"],
+        answer: 3,
+        feedback: "'Contact with' is the standard way to describe physical touching or interaction that leads to infection."
+      },
+      {
+        type: "Collocation",
+        blank: 3,
+        text: "Infection with hantaviruses can cause a ___3___ of illnesses...",
+        options: ["A. series", "B. range", "C. chain", "D. sequence"],
+        answer: 1,
+        feedback: "A 'range of illnesses' refers to a variety of different diseases or health problems."
+      },
+      {
+        type: "Adjective Order",
+        blank: 4,
+        text: "...hantavirus cardiopulmonary syndrome (HCPS), a ___4___...",
+        options: ["A. condition rapidly progressive respiratory", "B. rapidly progressive respiratory condition", "C. progressive rapidly respiratory condition", "D. respiratory rapidly progressive condition"],
+        answer: 1,
+        feedback: "Adjectives like 'rapidly progressive' and 'respiratory' must precede the noun 'condition' in the correct descriptive order."
+      },
+      {
+        type: "Relative Clause",
+        blank: 5,
+        text: "...is the only currently known hantavirus ___5___ limited human-to-human transmission...",
+        options: ["A. for which", "B. in that", "C. to whom", "D. about which"],
+        answer: 0,
+        feedback: "'For which' introduces a relative clause where the preposition 'for' relates to the transmission (transmission FOR the virus)."
+      },
+      {
+        type: "Vocabulary",
+        blank: 6,
+        text: "...has been extensively ___6___.",
+        options: ["A. prescribed", "B. registered", "C. documented", "D. formulated"],
+        answer: 2,
+        feedback: "'Documented' means recorded in written, photographic, or other form; here, it refers to recorded cases of transmission."
+      }
+    ]
+  },
+  {
+    title: "Zoonotic Viruses Prevention",
+    type: "Medical Article",
+    icon: "🏥",
+    passage: `Hantaviruses are zoonotic viruses that naturally infect rodents and are occasionally transmitted to humans. Infection in people can ___1___ severe illness and often death, although the diseases ___2___ by type of virus and geographical location. ___3___ there is no specific treatment that cures hantavirus diseases, early supportive medical care is key to ___4___ survival and focuses on close clinical monitoring and management of respiratory, cardiac, and kidney complications. Prevention depends ___5___ on reducing contacts between people and infected rodents. In Europe and Asia, hantaviruses cause haemorrhagic fever with renal syndrome (HFRS), ___6___ primarily affects the kidneys and blood vessels.`,
+    questions: [
+      {
+        type: "Phrasal Verb",
+        blank: 1,
+        text: "Infection in people can ___1___ severe illness...",
+        options: ["A. result in", "B. bring about", "C. lead up", "D. trigger off"],
+        answer: 0,
+        feedback: "'Result in' means to have as an outcome or consequence."
+      },
+      {
+        type: "Vocabulary",
+        blank: 2,
+        text: "...although the diseases ___2___ by type of virus...",
+        options: ["A. differentiate", "B. fluctuate", "C. alter", "D. vary"],
+        answer: 3,
+        feedback: "'Vary' means to differ in size, amount, degree, or nature from something else of the same general class."
+      },
+      {
+        type: "Linking Word",
+        blank: 3,
+        text: "___3___ there is no specific treatment that cures hantavirus diseases...",
+        options: ["A. Given that", "B. In spite of", "C. While", "D. Due to"],
+        answer: 2,
+        feedback: "'While' is used here as a conjunction meaning 'although' or 'despite the fact that'."
+      },
+      {
+        type: "Gerund",
+        blank: 4,
+        text: "...early supportive medical care is key to ___4___ survival...",
+        options: ["A. improve", "B. improving", "C. improvement", "D. improved"],
+        answer: 1,
+        feedback: "After 'key to', a gerund (-ing) or noun is required. 'Key to improving survival' is the correct structure."
+      },
+      {
+        type: "Adverb",
+        blank: 5,
+        text: "Prevention depends ___5___ on reducing contacts...",
+        options: ["A. broadly", "B. vastly", "C. largely", "D. extensively"],
+        answer: 2,
+        feedback: "'Largely' means for the most part; mainly. 'Depends largely on' is a common collocation."
+      },
+      {
+        type: "Relative Pronoun",
+        blank: 6,
+        text: "...renal syndrome (HFRS), ___6___ primarily affects the kidneys...",
+        options: ["A. that", "B. what", "C. which", "D. where"],
+        answer: 2,
+        feedback: "'Which' is used for a non-defining relative clause (after a comma) to add information about HFRS."
+      }
+    ]
+  }
 ];
 
 // ── STORAGE ────────────────────────────────────────────────────────────────

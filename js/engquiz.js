@@ -4484,6 +4484,286 @@ const texts = [
         feedback: "'Which' is used for a non-defining relative clause (after a comma) to add information about HFRS."
       }
     ]
+  },
+  {
+    title: "The Importance of Plants",
+    type: "Scientific Article",
+    icon: "🌱",
+    passage: `DID YOU KNOW?\n\nPlants ___1___ 80 percent of the food we eat and produce 98 percent of the oxygen we breathe. However, plant pests and diseases are responsible for the loss of up to 40 percent of global food crops, resulting in trade losses ___2___ USD 220 billion in agricultural products annually. ___3___, a 1 km2-sized swarm of 40 million Desert Locusts could consume the same amount of food in one day as about 35,000 people. The annual value of trade in agricultural products has grown almost three-fold over the past decade, reaching USD 1.7 trillion. To feed a larger and generally richer population, FAO estimates that agricultural production must rise by a significant ___4___. Climate change threatens to reduce not only the quantity of crops, lowering yields, but also their ___5___ value. Rising temperatures also mean that more plant pests and diseases are appearing earlier and in places they were never seen ___6___.`,
+    questions: [
+      {
+        type: "Phrasal Verb",
+        blank: 1,
+        text: "Plants ___1___ 80 percent of the food we eat...",
+        options: ["A. account for", "B. bring about", "C. set up", "D. put down"],
+        answer: 0,
+        feedback: "'Account for' means to form a particular amount or part of something."
+      },
+      {
+        type: "Participle",
+        blank: 2,
+        text: "...resulting in trade losses ___2___ USD 220 billion...",
+        options: ["A. exceeded", "B. exceeding", "C. to exceed", "D. which exceeding"],
+        answer: 1,
+        feedback: "'Exceeding' is a present participle used in a reduced relative clause ('which exceed')."
+      },
+      {
+        type: "Linking Word",
+        blank: 3,
+        text: "___3___, a 1 km2-sized swarm of 40 million Desert Locusts...",
+        options: ["A. Nevertheless", "B. Furthermore", "C. Otherwise", "D. Therefore"],
+        answer: 1,
+        feedback: "'Furthermore' is used to introduce a fresh consideration in an argument or more information."
+      },
+      {
+        type: "Collocation",
+        blank: 4,
+        text: "...agricultural production must rise by a significant ___4___.",
+        options: ["A. margin", "B. volume", "C. number", "D. dimension"],
+        answer: 0,
+        feedback: "'By a significant margin' is a common expression meaning by a large amount."
+      },
+      {
+        type: "Vocabulary",
+        blank: 5,
+        text: "...but also their ___5___ value.",
+        options: ["A. nutrition", "B. nutritious", "C. nutritional", "D. nutritiously"],
+        answer: 2,
+        feedback: "'Nutritional' is the adjective form used to describe something related to nutrition."
+      },
+      {
+        type: "Vocabulary",
+        blank: 6,
+        text: "...in places they were never seen ___6___.",
+        options: ["A. after", "B. already", "C. then", "D. before"],
+        answer: 3,
+        feedback: "'Never ... before' is a standard construction used to indicate something is happening for the first time."
+      }
+    ]
+  },
+  {
+    title: "APEC Automotive Dialogue",
+    type: "Policy News",
+    icon: "🚗",
+    passage: `The APEC Automotive Dialogue focuses on ___1___ the region’s shift toward cleaner and more competitive mobility. The Automotive Dialogue advances its mandate through three core areas of work. Firstly, Policy Discussions aim at facilitating focused dialogue on trade and regulatory issues to generate actionable recommendations across various domains. Secondly, Capacity Building involves delivering targeted workshops and initiatives ___2___ enhance the ability of government and industry stakeholders to respond to the transition toward new vehicle technologies and evolving mobility systems. Finally, Research and Policy Tools focus on ___3___ analytical studies and developing practical policy tools. These tools are designed to support member economies in designing frameworks for the safe, efficient, and sustainable deployment of ___4___ vehicle technologies and related infrastructure. Ultimately, ___5___ truly sets this dialogue apart is its holistic approach to addressing industry challenges. It is imperative that all stakeholders ___6___ an active role in these initiatives.`,
+    questions: [
+      {
+        type: "Vocabulary",
+        blank: 1,
+        text: "The APEC Automotive Dialogue focuses on ___1___ the region’s shift...",
+        options: ["A. catalysing", "B. manipulating", "C. terminating", "D. fabricating"],
+        answer: 0,
+        feedback: "'Catalysing' means to cause or accelerate a reaction or change."
+      },
+      {
+        type: "Relative Pronoun",
+        blank: 2,
+        text: "...delivering targeted workshops and initiatives ___2___ enhance the ability...",
+        options: ["A. who", "B. which", "C. whom", "D. whose"],
+        answer: 1,
+        feedback: "'Which' is the relative pronoun used for objects or concepts (initiatives)."
+      },
+      {
+        type: "Vocabulary",
+        blank: 3,
+        text: "...focus on ___3___ analytical studies...",
+        options: ["A. committing", "B. commanding", "C. commissioning", "D. commencing"],
+        answer: 2,
+        feedback: "'Commissioning' means to formally request the production of something (like a study or report)."
+      },
+      {
+        type: "Vocabulary",
+        blank: 4,
+        text: "...deployment of ___4___ vehicle technologies...",
+        options: ["A. emerging", "B. submerging", "C. converging", "D. surging"],
+        answer: 0,
+        feedback: "'Emerging' refers to technologies that are currently developing or coming into existence."
+      },
+      {
+        type: "Relative Pronoun",
+        blank: 5,
+        text: "Ultimately, ___5___ truly sets this dialogue apart...",
+        options: ["A. that", "B. which", "C. what", "D. how"],
+        answer: 2,
+        feedback: "'What' acts as a nominal relative pronoun meaning 'the thing that'."
+      },
+      {
+        type: "Collocation",
+        blank: 6,
+        text: "...that all stakeholders ___6___ an active role...",
+        options: ["A. take", "B. make", "C. do", "D. put"],
+        answer: 0,
+        feedback: "'Take an active role' is a standard collocation."
+      }
+    ]
+  },
+  {
+    title: "UNESCO Africa Week 2026",
+    type: "Event Announcement",
+    icon: "🌍",
+    passage: `AFRICA WEEK 2026\n\nThis year, UNESCO Africa Week, in its 2026 edition, ___1___ the critical importance of sustainable action. The event operates under the theme: “Ensuring Sustainable ___2___ of Water and Safe Sanitation Systems to Achieve the Objectives of Agenda 2063.” Held from 19 to 22 May at the UNESCO Headquarters in Paris, ___3___ serves as the central hub for global diplomacy, this edition will feature a highly ___4___ programme. Attendees can expect high-level panels, youth activities, exhibitions, and a gala. Through ___5___ diverse highlights, UNESCO and the Africa Group will bring to the fore pressing issues related ___6___ water security, youth empowerment, and sustainable development on the African continent.`,
+    questions: [
+      {
+        type: "Vocabulary",
+        blank: 1,
+        text: "...this year... ___1___ the critical importance...",
+        options: ["A. accentuates", "B. alleviates", "C. obliterates", "D. diminishes"],
+        answer: 0,
+        feedback: "'Accentuates' means to emphasize or make more noticeable."
+      },
+      {
+        type: "Vocabulary",
+        blank: 2,
+        text: "“Ensuring Sustainable ___2___ of Water...",
+        options: ["A. Avail", "B. Available", "C. Availability", "D. Unavailability"],
+        answer: 2,
+        feedback: "'Availability' is the noun form required here to mean the state of being able to be used."
+      },
+      {
+        type: "Relative Pronoun",
+        blank: 3,
+        text: "...UNESCO Headquarters in Paris, ___3___ serves as the central hub...",
+        options: ["A. that", "B. which", "C. where", "D. what"],
+        answer: 1,
+        feedback: "'Which' is used for a non-defining relative clause adding information about a specific place (Headquarters)."
+      },
+      {
+        type: "Vocabulary",
+        blank: 4,
+        text: "...this edition will feature a highly ___4___ programme.",
+        options: ["A. eclectic diverse", "B. diverse eclectic", "C. diversifying eclectic", "D. eclectic and diverse"],
+        answer: 3,
+        feedback: "'Eclectic and diverse' describes a programme composed of elements drawn from various sources and showing a great deal of variety."
+      },
+      {
+        type: "Quantifier",
+        blank: 5,
+        text: "Through ___5___ diverse highlights...",
+        options: ["A. a multitude of", "B. much of", "C. a little of", "D. a great deal of"],
+        answer: 0,
+        feedback: "'A multitude of' is used with plural countable nouns (highlights)."
+      },
+      {
+        type: "Preposition",
+        blank: 6,
+        text: "...pressing issues related ___6___ water security...",
+        options: ["A. with", "B. to", "C. on", "D. for"],
+        answer: 1,
+        feedback: "'Related to' is the standard prepositional phrase."
+      }
+    ]
+  },
+  {
+    title: "About UNESCO",
+    type: "Organization Profile",
+    icon: "🏛️",
+    passage: `ABOUT UNESCO\n\n___1___ 194 Member States, the United Nations Educational, Scientific and Cultural Organization instrumentally contributes to peace and security by leading ___2___ cooperation on education, science, and culture. Headquartered in Paris, UNESCO has offices in 54 countries and employs ___3___ 2300 people globally. The organization supervises more than 2000 World Heritage sites, Biosphere Reserves, and an extensive network of 13,000 associated schools. Its core philosophy is deeply rooted in its 1945 Constitution, which declares: “Since wars begin in the minds of men, it is in the minds of men ___4___ the defences of peace must be ___5___.” This profound statement continues to resonate, serving as the ultimate ___6___ for the organization's ongoing global endeavors.`,
+    questions: [
+      {
+        type: "Vocabulary",
+        blank: 1,
+        text: "___1___ 194 Member States...",
+        options: ["A. Consisting", "B. Boasting", "C. Accounting", "D. Encompassing"],
+        answer: 1,
+        feedback: "'Boasting' is often used to describe having something impressive (like 194 member states)."
+      },
+      {
+        type: "Vocabulary",
+        blank: 2,
+        text: "...by leading ___2___ cooperation...",
+        options: ["A. unilateral", "B. bilateral", "C. multilateral", "D. collateral"],
+        answer: 2,
+        feedback: "'Multilateral' refers to cooperation involving many countries."
+      },
+      {
+        type: "Vocabulary",
+        blank: 3,
+        text: "...and employs ___3___ 2300 people globally.",
+        options: ["A. in excess of", "B. a great deal of", "C. the bulk of", "D. a large amount of"],
+        answer: 0,
+        feedback: "'In excess of' is a formal way of saying 'more than'."
+      },
+      {
+        type: "Relative Pronoun",
+        blank: 4,
+        text: "...it is in the minds of men ___4___ the defences of peace...",
+        options: ["A. which", "B. where", "C. when", "D. that"],
+        answer: 3,
+        feedback: "This is a cleft sentence (It is ... that ...)."
+      },
+      {
+        type: "Passive Voice",
+        blank: 5,
+        text: "...the defences of peace must be ___5___.",
+        options: ["A. constructing", "B. construct", "C. constructed", "D. to construct"],
+        answer: 2,
+        feedback: "The passive voice 'must be constructed' is required here."
+      },
+      {
+        type: "Vocabulary",
+        blank: 6,
+        text: "...serving as the ultimate ___6___ for the organization's...",
+        options: ["A. detriment", "B. hindrance", "C. rationale", "D. setback"],
+        answer: 2,
+        feedback: "'Rationale' means the fundamental reason or logical basis for something."
+      }
+    ]
+  },
+  {
+    title: "Patient Safety for Newborns",
+    type: "Health Report",
+    icon: "👶",
+    passage: `Patient safety for newborns and children remains a critical global health priority. Children are particularly vulnerable to preventable harm ___1___ developmental factors, dependency on caregivers, and diagnostic uncertainty. Furthermore, their increased ___2___ to health care-associated infections makes the situation even more pressing. Ensuring safe care for every newborn and child is therefore paramount ___3___ improving health outcomes across health systems. The World Patient Safety Day 2025 campaign ___4___ the importance of embedding patient safety principles early in life and across the continuum of maternal and child health services. The campaign identifies five priority goals, ___5___ for coordinated action by governments, health professionals, and civil society. This initiative is a ___6___ step towards a safer healthcare environment.`,
+    questions: [
+      {
+        type: "Prepositional Phrase",
+        blank: 1,
+        text: "...vulnerable to preventable harm ___1___ developmental factors...",
+        options: ["A. in spite of", "B. owing to", "C. as result", "D. because"],
+        answer: 1,
+        feedback: "'Owing to' means 'because of'."
+      },
+      {
+        type: "Vocabulary",
+        blank: 2,
+        text: "...their increased ___2___ to health care-associated infections...",
+        options: ["A. susceptible", "B. susceptibly", "C. susceptibility", "D. susceptiveness"],
+        answer: 2,
+        feedback: "'Susceptibility' is the noun form meaning the state of being likely to be influenced or harmed."
+      },
+      {
+        type: "Preposition",
+        blank: 3,
+        text: "...therefore paramount ___3___ improving health outcomes...",
+        options: ["A. to", "B. for", "C. in", "D. with"],
+        answer: 0,
+        feedback: "'Paramount to' is the correct prepositional phrase."
+      },
+      {
+        type: "Vocabulary",
+        blank: 4,
+        text: "The campaign ___4___ the importance of embedding...",
+        options: ["A. undermines", "B. overlooks", "C. underscores", "D. downplays"],
+        answer: 2,
+        feedback: "'Underscores' means to emphasize or highlight something important."
+      },
+      {
+        type: "Participle",
+        blank: 5,
+        text: "...five priority goals, ___5___ for coordinated action...",
+        options: ["A. called", "B. calling", "C. call", "D. to call"],
+        answer: 1,
+        feedback: "'Calling' is a present participle used in a reduced relative clause ('which call for')."
+      },
+      {
+        type: "Vocabulary",
+        blank: 6,
+        text: "This initiative is a ___6___ step towards...",
+        options: ["A. trivial", "B. monumental", "C. marginal", "D. negligible"],
+        answer: 1,
+        feedback: "'Monumental' means great in importance, extent, or size."
+      }
+    ]
   }
 ];
 

@@ -4932,6 +4932,622 @@ const texts = [
         feedback: "'Up to' is used to indicate a maximum limit or amount."
       }
     ]
+  },
+  {
+    title: "Vietnam National Concerts",
+    type: "Article",
+    icon: "🎼",
+    passage: `VIETNAM NATIONAL CONCERTS\n\nTo celebrate the 80th anniversary of the August Revolution and National Day, Vietnam is hosting large-scale "national concerts," such as the highly anticipated "The Homeland in Our Hearts". These political-artistic programs are (1) ________ traditionally rigid formats by incorporating modern production, cinematic effects, and contemporary perspectives.\n\nBy utilizing music as a universal language, these events create an emotional bridge (2) ________ (3) ________ generations to the nation's history. This innovative approach successfully "softens" political messaging, making it deeply engaging for younger audiences.\n\n(4) ________, these professionally crafted concerts help awaken national pride and a strong (5) ________, proving (6) ________ art remains a powerful tool for uniting the country.`,
+    questions: [
+      {
+        type: "Phrasal Verb",
+        blank: 1,
+        text: "These programs are (1) ________ traditionally rigid formats...",
+        options: ["A. breaking away from", "B. coming up against", "C. falling back on", "D. looking forward to"],
+        answer: 0,
+        feedback: "'Breaking away from' means to stop following a tradition or old format. In this context, the concerts are moving away from 'traditionally rigid formats' to something more modern."
+      },
+      {
+        type: "Participle",
+        blank: 2,
+        text: "...create an emotional bridge (2) ________...",
+        options: ["A. connect", "B. connected", "C. connecting", "D. to connect"],
+        answer: 2,
+        feedback: "'Connecting' is a present participle used to modify 'emotional bridge'. It describes the function of the bridge — to connect generations."
+      },
+      {
+        type: "Determiner",
+        blank: 3,
+        text: "...connecting (3) ________ generations...",
+        options: ["A. much", "B. every", "C. multiple", "D. a little"],
+        answer: 2,
+        feedback: "'Multiple generations' is the correct phrase. 'Much' and 'a little' are used with uncountable nouns, and 'every' is used with singular countable nouns."
+      },
+      {
+        type: "Linking Word",
+        blank: 4,
+        text: "(4) ________, these professionally crafted concerts help...",
+        options: ["A. Ultimately", "B. Initially", "C. Alternately", "D. Paradoxically"],
+        answer: 0,
+        feedback: "'Ultimately' is used to introduce a final point or the final result. Here it summarizes the impact of the concerts."
+      },
+      {
+        type: "Collocation",
+        blank: 5,
+        text: "...awaken national pride and a strong (5) ________...",
+        options: ["A. sense of patriotism", "B. touch of patriotism", "C. state of patriotism", "D. piece of patriotism"],
+        answer: 0,
+        feedback: "'Sense of patriotism' is a fixed collocation meaning the feeling of love and devotion to one's country."
+      },
+      {
+        type: "Conjunction",
+        blank: 6,
+        text: "...proving (6) ________ art remains a powerful tool...",
+        options: ["A. what", "B. which", "C. that", "D. whether"],
+        answer: 2,
+        feedback: "'That' is used as a conjunction to introduce a noun clause after the verb 'proving'. It states what is being proven."
+      }
+    ]
+  },
+  {
+    title: "Google NotebookLM",
+    type: "Tech Guide",
+    icon: "📓",
+    passage: `Google NotebookLM is a personalized research assistant. You can upload various file types to the tool, ask questions about those files, receive answers with cited sources, and produce outputs such as summaries, briefing docs, timelines, FAQs, study guides, and audio overviews.\n\nUses for Google NotebookLM\n\nNYU students, faculty, researchers, and staff (1) ________ the many ways NotebookLM can assist them in their tasks. Just a few examples of (2) ________ you could get from it include:\n\n• Curriculum Development: Upload a mountain of recent research papers and textbook chapters to quickly generate a cohesive syllabus or find gaps in current course materials.\n• Accessible Learning: Use the Audio Overview feature to turn dense lecture notes (3) ________ a conversational, podcast-style summary for students (4) ________ learn better by listening.\n• The "Study Buddy": Upload PDFs, lecture transcripts, and slides; then, ask the AI to "quiz me on the hardest concepts" to find your blind spots.\n• Policy Summarization: Upload lengthy accreditation documents or university bylaws to quickly extract specific requirements or identify where current policies might be (5) ________.\n• Strategic Planning: Compare your mission statements and program offerings against (6) ________ of peer institutions to highlight unique competitive advantages.`,
+    questions: [
+      {
+        type: "Tense",
+        blank: 1,
+        text: "NYU students... (1) ________ the many ways NotebookLM can assist them...",
+        options: ["A. explore", "B. explored", "C. are exploring", "D. have explored"],
+        answer: 2,
+        feedback: "'Are exploring' (present continuous) is appropriate for an ongoing activity or a current trend of users discovering the tool's benefits."
+      },
+      {
+        type: "Relative Pronoun",
+        blank: 2,
+        text: "Just a few examples of (2) ________ you could get from it include...",
+        options: ["A. that", "B. which", "C. what", "D. how"],
+        answer: 2,
+        feedback: "'What' is used to introduce a noun clause acting as the object of the preposition 'of'. It refers to the things/outputs you can get."
+      },
+      {
+        type: "Preposition",
+        blank: 3,
+        text: "...turn dense lecture notes (3) ________ a conversational summary...",
+        options: ["A. up", "B. down", "C. into", "D. over"],
+        answer: 2,
+        feedback: "The phrasal verb 'turn into' means to change or transform something into something else."
+      },
+      {
+        type: "Relative Pronoun",
+        blank: 4,
+        text: "...students (4) ________ learn better by listening.",
+        options: ["A. which", "B. whom", "C. who", "D. whose"],
+        answer: 2,
+        feedback: "'Who' is the relative pronoun used for people (students) as the subject of the relative clause."
+      },
+      {
+        type: "Idiom / Phrase",
+        blank: 5,
+        text: "...identify where current policies might be (5) ________.",
+        options: ["A. in charge of", "B. out of bounds", "C. out of compliance", "D. on the verge of"],
+        answer: 2,
+        feedback: "'Out of compliance' means not following the rules, standards, or laws. This fits the context of policy analysis."
+      },
+      {
+        type: "Pronoun",
+        blank: 6,
+        text: "...compare your mission statements... against (6) ________ of peer institutions.",
+        options: ["A. that", "B. those", "C. this", "D. these"],
+        answer: 1,
+        feedback: "'Those' refers back to 'mission statements and program offerings' (plural) to avoid repetition."
+      }
+    ]
+  },
+  {
+    title: "Google AI Studio",
+    type: "Tech Guide",
+    icon: "💻",
+    passage: `Google AI Studio is a web-based development environment used for rapid prototyping and (1) ________ with Google's generative AI models, primarily the Gemini family. Users can easily refine prompts, adjust settings like (2) ________ "temperature" without writing code, and test multimodal inputs including text, images, audio, and video.\n\n(3) ________, it provides direct access to powerful models like Gemini Pro, Gemini Flash, Imagen, and Veo. After optimizing a configuration, users can instantly export (4) ________ snippets (such as Python or Node.js) to integrate (5) ________ the Gemini API.\n\nAccess is available in two tiers:\n\n• Basic Tier: Free for all community members and (6) ________ initial testing.\n• Advanced (Paid) Tier: Designed for production workloads. It requires an approved Google Cloud Project, offers massively increased API quotas, advanced tools, and ensures data privacy by not using your data for model training.`,
+    questions: [
+      {
+        type: "Noun Form",
+        blank: 1,
+        text: "...used for rapid prototyping and (1) ________...",
+        options: ["A. experiment", "B. experimental", "C. experimentation", "D. experimentally"],
+        answer: 2,
+        feedback: "The noun form 'experimentation' is required after the preposition 'for' and to parallel 'prototyping'."
+      },
+      {
+        type: "Relative Clause",
+        blank: 2,
+        text: "...adjust settings like (2) ________ \"temperature\"...",
+        options: ["A. which is known as", "B. what is known as", "C. that is known as", "D. how is known as"],
+        answer: 1,
+        feedback: "'What is known as' is a common phrase used to introduce a technical term or a specific name."
+      },
+      {
+        type: "Linking Word",
+        blank: 3,
+        text: "(3) ________, it provides direct access...",
+        options: ["A. Consequently", "B. Furthermore", "C. Conversely", "D. Nevertheless"],
+        answer: 1,
+        feedback: "'Furthermore' is used to add more information that supports the previous statement about the features of the tool."
+      },
+      {
+        type: "Adjective Order",
+        blank: 4,
+        text: "...instantly export (4) ________ snippets...",
+        options: ["A. working functional code", "B. functional working code", "C. code working functional", "D. working code functional"],
+        answer: 1,
+        feedback: "'Functional working code' is a natural sounding phrase where 'functional' and 'working' describe the noun 'code'."
+      },
+      {
+        type: "Preposition",
+        blank: 5,
+        text: "...to integrate (5) ________ the Gemini API.",
+        options: ["A. to", "B. via", "C. on", "D. at"],
+        answer: 1,
+        feedback: "'Via' means 'by way of' or 'through'. In technical contexts, we integrate things via an API."
+      },
+      {
+        type: "Collocation",
+        blank: 6,
+        text: "...community members and (6) ________ initial testing.",
+        options: ["A. ideal for", "B. immune to", "C. devoid of", "D. contrary to"],
+        answer: 0,
+        feedback: "'Ideal for' means perfectly suited for a particular purpose, like initial testing in a free tier."
+      }
+    ]
+  },
+  {
+    title: "About SSEAYP",
+    type: "Article",
+    icon: "🚢",
+    passage: `About SSEAYP\n\n(1) ________ together more than 200 youths from Southeast Asia and Japan, the Ship for Southeast Asian and Japanese Youth Programme (SSEAYP) provides youths (2) ________ the unique opportunity to live together on board the ship for over 30 days. SSEAYP is an annual programme sponsored by the Japanese Government and supported by the member states of ASEAN. The National Youth Council (NYC), Singapore's national co-ordinating body for youth affairs, (3) ________ oversees the programme.\n\nSSEAYP began in January 1974 after Joint Statements were issued between Japan and five ASEAN Member States - Indonesia, Malaysia, Philippines, Singapore and Thailand. They were joined by Brunei Darussalam in 1985, followed by Vietnam in 1996. (4) ________ Laos and Myanmar came (5) ________ in 1998, Cambodia in 2020, and Timor-Leste as the latest newcomer in 2024. Apart from broadening youths' international outlook, SSEAYP also (6) ________ friendship and greater understanding among youths from Japan and Southeast Asia.`,
+    questions: [
+      {
+        type: "Participle",
+        blank: 1,
+        text: "(1) ________ together more than 200 youths...",
+        options: ["A. Bring", "B. Brought", "C. Bringing", "D. Having been brought"],
+        answer: 2,
+        feedback: "'Bringing' is a present participle used at the beginning of the sentence to show the action performed by the subject (SSEAYP)."
+      },
+      {
+        type: "Preposition",
+        blank: 2,
+        text: "...provides youths (2) ________ the unique opportunity...",
+        options: ["A. on", "B. for", "C. with", "D. about"],
+        answer: 2,
+        feedback: "The verb 'provide' is used in the pattern 'provide someone with something'."
+      },
+      {
+        type: "Relative Pronoun",
+        blank: 3,
+        text: "...body for youth affairs, (3) ________ oversees the programme.",
+        options: ["A. that", "B. which", "C. who", "D. what"],
+        answer: 1,
+        feedback: "'Which' is used in a non-defining relative clause to provide more information about the NYC."
+      },
+      {
+        type: "Determiner",
+        blank: 4,
+        text: "(4) ________ Laos and Myanmar came...",
+        options: ["A. Both", "B. Every", "C. Neither", "D. Each"],
+        answer: 0,
+        feedback: "'Both' is used to refer to two things/entities (Laos and Myanmar)."
+      },
+      {
+        type: "Phrasal Verb / Idiom",
+        blank: 5,
+        text: "...came (5) ________ in 1998...",
+        options: ["A. on board", "B. in vain", "C. at large", "D. by far"],
+        answer: 0,
+        feedback: "'Come on board' means to join an organization or project. It's particularly fitting here as the program involves a ship."
+      },
+      {
+        type: "Word Meaning",
+        blank: 6,
+        text: "...SSEAYP also (6) ________ friendship...",
+        options: ["A. disrupts", "B. hinders", "C. fosters", "D. abolishes"],
+        answer: 2,
+        feedback: "'Fosters' means to encourage the development or growth of something, like friendship and understanding."
+      }
+    ]
+  },
+  {
+    title: "UNIS Hanoi Summer Programme",
+    type: "Announcement",
+    icon: "🏫",
+    passage: `UNIS HANOI SUMMER PROGRAMME\n\nSummer Programme 2026\n\nThe United Nations International School of Hanoi (UNIS Hanoi) is excited to launch our newly redesigned Summer Programme 2026 for students aged 3-18! Open to both UNIS Hanoi families and the wider Hanoi community, this year's programme offers a purposeful, engaging and high-quality summer learning experience.\n\n(1) ________ around a new Hybrid Model, the programme combines the expertise of UNIS Hanoi faculty for younger learners with world-class specialist academies for older students, (2) ________ delivered on one campus.\n\nStudents will have the opportunity to strengthen core skills, explore new interests and build confidence through (3) ________ pathways in a safe, fully English-speaking environment.\n\n(4) ________, at UNIS Hanoi, summer is (5) ________ a break — it's an opportunity to grow confidence, develop new skills and return to the school year energised and ready to thrive.\n\nIf you have any questions or require further information, please contact our team (6) ________ cocurricular@unishanoi.org.`,
+    questions: [
+      {
+        type: "Participle",
+        blank: 1,
+        text: "(1) ________ around a new Hybrid Model...",
+        options: ["A. Build", "B. Built", "C. Building", "D. To build"],
+        answer: 1,
+        feedback: "'Built' is a past participle used at the beginning of the clause to describe the basis or foundation of the programme (it is built around...)."
+      },
+      {
+        type: "Determiner",
+        blank: 2,
+        text: "...(2) ________ delivered on one campus.",
+        options: ["A. each", "B. every", "C. all", "D. neither"],
+        answer: 2,
+        feedback: "'All' refers to the combination of faculty expertise and specialist academies previously mentioned."
+      },
+      {
+        type: "Adjective Order",
+        blank: 3,
+        text: "...build confidence through (3) ________ pathways...",
+        options: ["A. focused, age-appropriate learning", "B. learning focused, age-appropriate", "C. age-appropriate, learning focused", "D. focused learning, age-appropriate"],
+        answer: 0,
+        feedback: "'Focused, age-appropriate learning' follows the correct order of adjectives and descriptors for the noun 'pathways'."
+      },
+      {
+        type: "Linking Word",
+        blank: 4,
+        text: "(4) ________, at UNIS Hanoi, summer is...",
+        options: ["A. Nonetheless", "B. Furthermore", "C. On the contrary", "D. Despite this"],
+        answer: 1,
+        feedback: "'Furthermore' is used to add another supporting point about the benefits of the summer programme."
+      },
+      {
+        type: "Word Meaning",
+        blank: 5,
+        text: "...summer is (5) ________ a break...",
+        options: ["A. more than", "B. less than", "C. rather than", "D. other than"],
+        answer: 0,
+        feedback: "'More than' is used to show that something has a greater value or function than its basic definition."
+      },
+      {
+        type: "Preposition",
+        blank: 6,
+        text: "...contact our team (6) ________ cocurricular@unishanoi.org.",
+        options: ["A. to", "B. in", "C. at", "D. with"],
+        answer: 2,
+        feedback: "We use the preposition 'at' followed by an email address."
+      }
+    ]
+  },
+  {
+    title: "SUN GROUP Mission & Vision",
+    type: "Corporate Profile",
+    icon: "☀️",
+    passage: `SUN GROUP Mission & Vision\n\nCarrying on the mission of the Opener, Sun Group is (1) ________ in its goals.\n\nMISSION\n\n• Seek out lands with rich potential but have not been properly exploited, change those lands, create and contribute to society with works, products/services of (2) ________ quality and market survive over time.\n• Contributing to raising the country's position, improving the people's quality of life, beautifying and enriching the country and making Vietnam an attractive destination of the world.\n• Contributing to building a new Vietnamese with quality, capacity and health (3) ________ (4) ________ the times.\n\nVISION\n\n• Becoming (5) ________ Vietnam's private economic groups with international scale and class; taking the field of Tourism, Entertainment, Real Estate and Infrastructure Investment as strategic investment fields.\n• Always in the group of leading companies in the field of investment that Sun Group participates in.\n• Pioneering (6) ________ building tourism culture: Civilized, professional and humane in Vietnam.`,
+    questions: [
+      {
+        type: "Vocabulary",
+        blank: 1,
+        text: "Sun Group is (1) ________ in its goals.",
+        options: ["A. steadfast", "B. steadfastly", "C. steadfastness", "D. unsteadfast"],
+        answer: 0,
+        feedback: "'Steadfast' is an adjective meaning resolutely or dutifully firm and unwavering. It correctly describes the subject 'Sun Group'."
+      },
+      {
+        type: "Vocabulary",
+        blank: 2,
+        text: "...products/services of (2) ________ quality...",
+        options: ["A. exceptional", "B. trivial", "C. obsolete", "D. ambiguous"],
+        answer: 0,
+        feedback: "'Exceptional' quality means unusually good or outstanding. This fits the positive corporate context of providing high-value services."
+      },
+      {
+        type: "Relative Pronoun",
+        blank: 3,
+        text: "...quality, capacity and health (3) ________ (4) the times.",
+        options: ["A. who", "B. whom", "C. that", "D. whose"],
+        answer: 2,
+        feedback: "'That' is the relative pronoun used for things (quality, capacity, health) as the subject of the following relative clause."
+      },
+      {
+        type: "Phrasal Verb",
+        blank: 4,
+        text: "...that (4) ________ the times.",
+        options: ["A. keeps up with", "B. runs out of", "C. looks down on", "D. gets away with"],
+        answer: 0,
+        feedback: "'Keeps up with' means to stay at the same level or pace as something (the times). It's a standard idiom for staying modern."
+      },
+      {
+        type: "Determiner",
+        blank: 5,
+        text: "Becoming (5) ________ Vietnam's private economic groups...",
+        options: ["A. almost", "B. one of", "C. every", "D. a great deal of"],
+        answer: 1,
+        feedback: "'One of' is used before plural countable nouns ('groups') to indicate membership in a set."
+      },
+      {
+        type: "Preposition",
+        blank: 6,
+        text: "Pioneering (6) ________ building tourism culture...",
+        options: ["A. to", "B. on", "C. at", "D. in"],
+        answer: 3,
+        feedback: "We use 'pioneering in' a field or activity. 'In' is the correct preposition to specify the area of innovation."
+      }
+    ]
+  },
+  {
+    title: "Samsung Electronics",
+    type: "Sustainability Report",
+    icon: "📱",
+    passage: `Samsung Electronics: Our Environment is Our Future\n\nAt Samsung Electronics, we have established an environmental management strategy with specific mid-to long-term goals and implementation methods that aim to contribute (1) ________ the preservation of our environment.\n\n• Climate Action: We pursue net zero carbon emissions, (2) ________ to transition to 100% renewable energy in our DX Division and (3) ________ overseas sites by 2027.\n• Circular Economy: We (4) ________ resource circularity by expanding the use of recycled materials, extending product lifespans, and operating country-specific e-waste recycling programs.\n• Clean Tech Innovation: We actively research carbon capture and clean air technologies to help tackle (5) ________ challenges.\n• Sustainability in Operations: (6) ________, we ensure responsible manufacturing by minimizing on-site waste, reducing water usage, and strictly managing chemical substances.`,
+    questions: [
+      {
+        type: "Preposition",
+        blank: 1,
+        text: "...aim to contribute (1) ________ the preservation...",
+        options: ["A. against", "B. toward", "C. over", "D. beneath"],
+        answer: 1,
+        feedback: "You contribute 'toward' or 'to' a cause or goal. 'Toward' indicates the direction of the contribution's impact."
+      },
+      {
+        type: "Participle",
+        blank: 2,
+        text: "...carbon emissions, (2) ________ to transition...",
+        options: ["A. aimed", "B. aiming", "C. are aiming", "D. which aiming"],
+        answer: 1,
+        feedback: "'Aiming' is a present participle used to provide more information about the subject's intention in the preceding clause."
+      },
+      {
+        type: "Determiner",
+        blank: 3,
+        text: "...and (3) ________ overseas sites by 2027.",
+        options: ["A. other", "B. others", "C. another", "D. every"],
+        answer: 0,
+        feedback: "'Other' is used with plural nouns ('sites') to refer to remaining or additional things of the same type."
+      },
+      {
+        type: "Vocabulary",
+        blank: 4,
+        text: "We (4) ________ resource circularity...",
+        options: ["A. optimize", "B. downplay", "C. obliterate", "D. scrutinize"],
+        answer: 0,
+        feedback: "'Optimize' means to make the best or most effective use of a situation or resource. This fits the sustainability context."
+      },
+      {
+        type: "Adjective Order",
+        blank: 5,
+        text: "...help tackle (5) ________ challenges.",
+        options: ["A. pressing environmental global", "B. global pressing environmental", "C. pressing global environmental", "D. environmental pressing global"],
+        answer: 2,
+        feedback: "The correct order is quality (pressing) + scope/origin (global) + type/classifier (environmental)."
+      },
+      {
+        type: "Linking Word",
+        blank: 6,
+        text: "(6) ________, we ensure responsible manufacturing...",
+        options: ["A. Nevertheless", "B. In contrast", "C. Moreover", "D. Otherwise"],
+        answer: 2,
+        feedback: "'Moreover' is used to add another supporting point to the list of environmental efforts."
+      }
+    ]
+  },
+  {
+    title: "Xiaomi Smart Ecosystem",
+    type: "Tech Vision",
+    icon: "🏠",
+    passage: `「Human x Car x Home」 All your needs in one smart ecosystem\n\nAt Xiaomi, we believe technology's true power (1) ________ its ability to understand and enhance the human experience. This year, with the upgraded Xiaomi HyperOS 2 and the newly launched Xiaomi HyperAI, we are redefining connection.\n\nOur 「Human x Car x Home」 smart ecosystem has (2) ________ a realm of connected intelligence. Your devices, your home, and your car no longer simply interact — they collaborate and adapt to your needs, (3) ________ themselves to you with an (4) ________.\n\nIt's not just about integration. It's about technology (5) ________ learns from you, (6) ________ your needs, and evolves to create a more intuitive, responsive, and personal experience. This is no longer a vision of tomorrow. It's the reality of a smarter, more interconnected world today.`,
+    questions: [
+      {
+        type: "Phrasal Verb",
+        blank: 1,
+        text: "At Xiaomi... technology's true power (1) ________ its ability...",
+        options: ["A. lies in", "B. brings about", "C. hinges on", "D. derives from"],
+        answer: 0,
+        feedback: "'Lies in' means that something exists or can be found in a particular place or quality."
+      },
+      {
+        type: "Phrasal Verb",
+        blank: 2,
+        text: "...smart ecosystem has (2) ________ a realm...",
+        options: ["A. evolved into", "B. merged with", "C. phased out", "D. backed up"],
+        answer: 0,
+        feedback: "'Evolved into' means to develop gradually into a different or more complex form."
+      },
+      {
+        type: "Participle",
+        blank: 3,
+        text: "...adapt to your needs, (3) ________ themselves to you...",
+        options: ["A. attuning", "B. attuned", "C. which attuning", "D. to attune"],
+        answer: 0,
+        feedback: "'Attuning' is a present participle describing an ongoing action of making the devices more responsive to the user."
+      },
+      {
+        type: "Noun Phrase",
+        blank: 4,
+        text: "...to you with an (4) ________.",
+        options: ["A. level unprecedented of insight", "B. unprecedented level of insight", "C. insight level of unprecedented", "D. unprecedented of insight level"],
+        answer: 1,
+        feedback: "'Unprecedented level of insight' follows the correct adjective-noun-prepositional phrase structure."
+      },
+      {
+        type: "Relative Pronoun",
+        blank: 5,
+        text: "...It's about technology (5) ________ learns from you...",
+        options: ["A. who", "B. whom", "C. that", "D. what"],
+        answer: 2,
+        feedback: "'That' is the correct relative pronoun for things (technology) in a defining relative clause."
+      },
+      {
+        type: "Vocabulary",
+        blank: 6,
+        text: "...(6) ________ your needs, and evolves...",
+        options: ["A. anticipates", "B. manipulates", "C. alleviates", "D. compromises"],
+        answer: 0,
+        feedback: "'Anticipates' means to expect or predict a future need and act before it happens."
+      }
+    ]
+  },
+  {
+    title: "SUN GROUP Mission & Vision",
+    type: "Corporate Profile",
+    icon: "☀️",
+    passage: `SUN GROUP Mission & Vision\n\nCarrying on the mission of the Opener, Sun Group is (1) ________ in its goals.\n\nMISSION\n\n• Seek out lands with rich potential but have not been properly exploited, change those lands, create and contribute to society with works, products/services of (2) ________ quality and market survive over time.\n• Contributing to raising the country's position, improving the people's quality of life, beautifying and enriching the country and making Vietnam an attractive destination of the world.\n• Contributing to building a new Vietnamese with quality, capacity and health (3) ________ (4) ________ the times.\n\nVISION\n\n• Becoming (5) ________ Vietnam's private economic groups with international scale and class; taking the field of Tourism, Entertainment, Real Estate and Infrastructure Investment as strategic investment fields.\n• Always in the group of leading companies in the field of investment that Sun Group participates in.\n• Pioneering (6) ________ building tourism culture: Civilized, professional and humane in Vietnam.`,
+    questions: [
+      {
+        type: "Vocabulary",
+        blank: 1,
+        text: "Sun Group is (1) ________ in its goals.",
+        options: ["A. steadfast", "B. steadfastly", "C. steadfastness", "D. unsteadfast"],
+        answer: 0,
+        feedback: "'Steadfast' is an adjective meaning resolutely or dutifully firm and unwavering. It correctly describes the subject 'Sun Group'."
+      },
+      {
+        type: "Vocabulary",
+        blank: 2,
+        text: "...products/services of (2) ________ quality...",
+        options: ["A. exceptional", "B. trivial", "C. obsolete", "D. ambiguous"],
+        answer: 0,
+        feedback: "'Exceptional' quality means unusually good or outstanding. This fits the positive corporate context of providing high-value services."
+      },
+      {
+        type: "Relative Pronoun",
+        blank: 3,
+        text: "...quality, capacity and health (3) ________ (4) the times.",
+        options: ["A. who", "B. whom", "C. that", "D. whose"],
+        answer: 2,
+        feedback: "'That' is the relative pronoun used for things (quality, capacity, health) as the subject of the following relative clause."
+      },
+      {
+        type: "Phrasal Verb",
+        blank: 4,
+        text: "...that (4) ________ the times.",
+        options: ["A. keeps up with", "B. runs out of", "C. looks down on", "D. gets away with"],
+        answer: 0,
+        feedback: "'Keeps up with' means to stay at the same level or pace as something (the times). It's a standard idiom for staying modern."
+      },
+      {
+        type: "Determiner",
+        blank: 5,
+        text: "Becoming (5) ________ Vietnam's private economic groups...",
+        options: ["A. almost", "B. one of", "C. every", "D. a great deal of"],
+        answer: 1,
+        feedback: "'One of' is used before plural countable nouns ('groups') to indicate membership in a set."
+      },
+      {
+        type: "Preposition",
+        blank: 6,
+        text: "Pioneering (6) ________ building tourism culture...",
+        options: ["A. to", "B. on", "C. at", "D. in"],
+        answer: 3,
+        feedback: "We use 'pioneering in' a field or activity. 'In' is the correct preposition to specify the area of innovation."
+      }
+    ]
+  },
+  {
+    title: "Samsung Electronics",
+    type: "Sustainability Report",
+    icon: "📱",
+    passage: `Samsung Electronics: Our Environment is Our Future\n\nAt Samsung Electronics, we have established an environmental management strategy with specific mid-to long-term goals and implementation methods that aim to contribute (1) ________ the preservation of our environment.\n\n• Climate Action: We pursue net zero carbon emissions, (2) ________ to transition to 100% renewable energy in our DX Division and (3) ________ overseas sites by 2027.\n• Circular Economy: We (4) ________ resource circularity by expanding the use of recycled materials, extending product lifespans, and operating country-specific e-waste recycling programs.\n• Clean Tech Innovation: We actively research carbon capture and clean air technologies to help tackle (5) ________ challenges.\n• Sustainability in Operations: (6) ________, we ensure responsible manufacturing by minimizing on-site waste, reducing water usage, and strictly managing chemical substances.`,
+    questions: [
+      {
+        type: "Preposition",
+        blank: 1,
+        text: "...aim to contribute (1) ________ the preservation...",
+        options: ["A. against", "B. toward", "C. over", "D. beneath"],
+        answer: 1,
+        feedback: "You contribute 'toward' or 'to' a cause or goal. 'Toward' indicates the direction of the contribution's impact."
+      },
+      {
+        type: "Participle",
+        blank: 2,
+        text: "...carbon emissions, (2) ________ to transition...",
+        options: ["A. aimed", "B. aiming", "C. are aiming", "D. which aiming"],
+        answer: 1,
+        feedback: "'Aiming' is a present participle used to provide more information about the subject's intention in the preceding clause."
+      },
+      {
+        type: "Determiner",
+        blank: 3,
+        text: "...and (3) ________ overseas sites by 2027.",
+        options: ["A. other", "B. others", "C. another", "D. every"],
+        answer: 0,
+        feedback: "'Other' is used with plural nouns ('sites') to refer to remaining or additional things of the same type."
+      },
+      {
+        type: "Vocabulary",
+        blank: 4,
+        text: "We (4) ________ resource circularity...",
+        options: ["A. optimize", "B. downplay", "C. obliterate", "D. scrutinize"],
+        answer: 0,
+        feedback: "'Optimize' means to make the best or most effective use of a situation or resource. This fits the sustainability context."
+      },
+      {
+        type: "Adjective Order",
+        blank: 5,
+        text: "...help tackle (5) ________ challenges.",
+        options: ["A. pressing environmental global", "B. global pressing environmental", "C. pressing global environmental", "D. environmental pressing global"],
+        answer: 2,
+        feedback: "The correct order is quality (pressing) + scope/origin (global) + type/classifier (environmental)."
+      },
+      {
+        type: "Linking Word",
+        blank: 6,
+        text: "(6) ________, we ensure responsible manufacturing...",
+        options: ["A. Nevertheless", "B. In contrast", "C. Moreover", "D. Otherwise"],
+        answer: 2,
+        feedback: "'Moreover' is used to add another supporting point to the list of environmental efforts."
+      }
+    ]
+  },
+  {
+    title: "Xiaomi Smart Ecosystem",
+    type: "Tech Vision",
+    icon: "🏠",
+    passage: `「Human x Car x Home」 All your needs in one smart ecosystem\n\nAt Xiaomi, we believe technology's true power (1) ________ its ability to understand and enhance the human experience. This year, with the upgraded Xiaomi HyperOS 2 and the newly launched Xiaomi HyperAI, we are redefining connection.\n\nOur 「Human x Car x Home」 smart ecosystem has (2) ________ a realm of connected intelligence. Your devices, your home, and your car no longer simply interact — they collaborate and adapt to your needs, (3) ________ themselves to you with an (4) ________.\n\nIt's not just about integration. It's about technology (5) ________ learns from you, (6) ________ your needs, and evolves to create a more intuitive, responsive, and personal experience. This is no longer a vision of tomorrow. It's the reality of a smarter, more interconnected world today.`,
+    questions: [
+      {
+        type: "Phrasal Verb",
+        blank: 1,
+        text: "At Xiaomi... technology's true power (1) ________ its ability...",
+        options: ["A. lies in", "B. brings about", "C. hinges on", "D. derives from"],
+        answer: 0,
+        feedback: "'Lies in' means that something exists or can be found in a particular place or quality."
+      },
+      {
+        type: "Phrasal Verb",
+        blank: 2,
+        text: "...smart ecosystem has (2) ________ a realm...",
+        options: ["A. evolved into", "B. merged with", "C. phased out", "D. backed up"],
+        answer: 0,
+        feedback: "'Evolved into' means to develop gradually into a different or more complex form."
+      },
+      {
+        type: "Participle",
+        blank: 3,
+        text: "...adapt to your needs, (3) ________ themselves to you...",
+        options: ["A. attuning", "B. attuned", "C. which attuning", "D. to attune"],
+        answer: 0,
+        feedback: "'Attuning' is a present participle describing an ongoing action of making the devices more responsive to the user."
+      },
+      {
+        type: "Noun Phrase",
+        blank: 4,
+        text: "...to you with an (4) ________.",
+        options: ["A. level unprecedented of insight", "B. unprecedented level of insight", "C. insight level of unprecedented", "D. unprecedented of insight level"],
+        answer: 1,
+        feedback: "'Unprecedented level of insight' follows the correct adjective-noun-prepositional phrase structure."
+      },
+      {
+        type: "Relative Pronoun",
+        blank: 5,
+        text: "...It's about technology (5) ________ learns from you...",
+        options: ["A. who", "B. whom", "C. that", "D. what"],
+        answer: 2,
+        feedback: "'That' is the correct relative pronoun for things (technology) in a defining relative clause."
+      },
+      {
+        type: "Vocabulary",
+        blank: 6,
+        text: "...(6) ________ your needs, and evolves...",
+        options: ["A. anticipates", "B. manipulates", "C. alleviates", "D. compromises"],
+        answer: 0,
+        feedback: "'Anticipates' means to expect or predict a future need and act before it happens."
+      }
+    ]
   }
 ];
 

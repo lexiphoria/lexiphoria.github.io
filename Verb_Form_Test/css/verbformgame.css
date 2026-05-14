@@ -21,7 +21,7 @@
 
 body {
   font-family: 'Outfit', sans-serif;
-  background: url('../Background 3.svg') no-repeat center center fixed;
+  background: url('../../assets/Background 3.svg') no-repeat center center fixed;
   background-size: cover;
   background-color: var(--bg-color);
   color: var(--text-main);

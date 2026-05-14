@@ -2871,6 +2871,326 @@ const ALL_EXAMS = [
         tip: "'Furthermore' is used to add another positive or progressive development (new roles) to the standard job requirement prediction."
       }
     ]
+  },
+  {
+    id: 'fao_gcf',
+    title: 'FAO and the Green Climate Fund',
+    meta: 'Environment & International Policy',
+    html: `
+      <p>FAO works with countries <span class="blank-tag">1</span> in projects that make agri-food systems more sustainable and resilient to climate change. These projects focus on improving the livelihoods of rural people by promoting sustainable land and water management practices, restoring ecosystems and ecosystem services, and enhancing food security.</p>
+      <br>
+      <p>As a GCF Accredited Entity and specialized agency of the United Nations, FAO provides countries with the necessary support to develop funding proposals and implement transformative GCF projects <span class="blank-tag">2</span> and up to USD 250 million in grants and co-financing.</p>
+      <br>
+      <p><span class="blank-tag">3</span>, FAO assists countries seeking grants for projects that strengthen institutional capacity, governance mechanisms, and planning and programming frameworks in accordance with Nationally Determined Contributions (NDCs), National Adaptation Plans (NAPs), and other national climate change strategies.</p>
+      <br>
+      <p>The Green Climate Fund is the world's largest dedicated fund for climate action. <span class="blank-tag">4</span> in 2010, tasked with supporting developing and transition countries as they scale up their efforts to meet the Paris Agreement target <span class="blank-tag">5</span>.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Context Meaning Clause",
+        opts: [
+          "to scale up investments",
+          "scaling up investments",
+          "scaled up investments",
+          "in order for scaling up investments"
+        ],
+        ans: 0,
+        grammar: "Infinitive of purpose",
+        tip: "'To scale up investments' is an infinitive of purpose, indicating the goal of FAO's work with countries. It directly follows a verb phrase and expresses intention, making the infinitive form the only correct choice."
+      },
+      {
+        num: 2,
+        type: "Context Meaning Clause",
+        opts: [
+          "that have low to medium levels of environmental and social risk",
+          "which have low to medium levels of environmental and social risk",
+          "having low to medium levels of environmental and social risk",
+          "whose low to medium levels of environmental and social risk"
+        ],
+        ans: 2,
+        grammar: "Present participle phrase (reduced relative clause)",
+        tip: "A present participle phrase ('having...') acts as a reduced relative clause in active meaning, modifying 'GCF projects'. It concisely describes the nature of the projects without using a full relative clause."
+      },
+      {
+        num: 3,
+        type: "Independent Sentence",
+        opts: [
+          "In its role as a Delivery Partner for the GCF's Readiness and Preparatory Support Programme",
+          "As a Delivery Partner for the GCF's Readiness and Preparatory Support Programme, FAO",
+          "Being a Delivery Partner for the GCF's Readiness and Preparatory Support Programme, FAO",
+          "FAO, in its role as a Delivery Partner for the GCF's Readiness and Preparatory Support Programme"
+        ],
+        ans: 1,
+        grammar: "Independent sentence / Topic sentence",
+        tip: "This blank starts a new paragraph and requires a complete independent clause with a subject and a finite verb. Option B ('FAO assists...') provides the correct subject-verb structure to open the paragraph logically."
+      },
+      {
+        num: 4,
+        type: "Context Meaning Clause",
+        opts: [
+          "It was established as the financing mechanism for the United Nations Framework Convention on Climate Change (UNFCCC)",
+          "Established as the financing mechanism for the United Nations Framework Convention on Climate Change (UNFCCC)",
+          "Establishing as the financing mechanism for the United Nations Framework Convention on Climate Change (UNFCCC)",
+          "Having established as the financing mechanism for the United Nations Framework Convention on Climate Change (UNFCCC)"
+        ],
+        ans: 1,
+        grammar: "Past participle phrase (reduced relative clause)",
+        tip: "A past participle phrase ('Established as...') begins the sentence, describing the origin of the GCF in passive voice. This is a reduced relative clause meaning 'which was established', smoothly connecting to what follows."
+      },
+      {
+        num: 5,
+        type: "Context Meaning Clause",
+        opts: [
+          "to keep the global temperature rise below 2° Celsius",
+          "that keeping the global temperature rise below 2° Celsius",
+          "of keeping the global temperature rise below 2° Celsius",
+          "for keeping the global temperature rise below 2° Celsius"
+        ],
+        ans: 2,
+        grammar: "Prepositional phrase with gerund",
+        tip: "The structure 'target of + V-ing' is a fixed English expression using a gerund after the preposition 'of'. Compare: 'the aim of reducing...', 'the goal of achieving...'. 'To keep' would be wrong because 'target' is a noun, not a verb needing an infinitive complement here."
+      }
+    ]
+  },
+  {
+    id: 'hantavirus',
+    title: 'The Ecological Dynamics of Hantaviruses',
+    meta: 'Science & Public Health',
+    html: `
+      <p>Hantaviruses are a global public health threat, causing Hemorrhagic Fever with Renal Syndrome (HFRS) in Eurasia and Hantavirus Pulmonary Syndrome (HPS) in the Americas. These viruses are primarily transmitted to humans through direct contact with infected rodents or virus-contaminated aerosols. <span class="blank-tag">1</span>, often explained by a "bottom-up trophic cascade". In this process, climatic conditions like temperature and precipitation dictate vegetation growth, which in turn regulates the food supply and population density of rodent hosts.</p>
+      <br>
+      <p>For example, in central China, appropriate rainfall increases the population of the striped field mouse—the main host for the Hantaan virus—while extreme weather, such as heavy floods, <span class="blank-tag">2</span> and temporarily reduce human disease risk. Similarly, in North America, increased precipitation linked to El Niño events has historically favored deer mouse populations, <span class="blank-tag">3</span>.</p>
+      <br>
+      <p><span class="blank-tag">4</span>. Anthropogenic activities such as seasonal agriculture, landscape modifications, urbanization, and biodiversity loss heavily influence human-rodent contact rates. In endemic areas, farming activities routinely increase human exposure during dry seasons. To combat these outbreaks, researchers advocate for combining ecological forecasting with proactive public health interventions, such as targeted vaccination programs, <span class="blank-tag">5</span> and shifted HFRS outbreak dynamics in China.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Independent Sentence",
+        opts: [
+          "Complex ecological dynamics drive the spread of hantavirus",
+          "The spread of hantavirus is driven by complex ecological dynamics",
+          "Driving the spread of hantavirus are complex ecological dynamics",
+          "Complex ecological dynamics are driven by the spread of hantavirus"
+        ],
+        ans: 1,
+        grammar: "Independent sentence / Topic sentence",
+        tip: "This blank requires a complete independent sentence to introduce the topic of the following explanation ('bottom-up trophic cascade'). Option B correctly uses passive voice, placing 'the spread of hantavirus' as the subject—the topic being explained—and logically links to the clause that follows."
+      },
+      {
+        num: 2,
+        type: "Context Meaning Clause",
+        opts: [
+          "can destroy rodent burrows",
+          "destroying rodent burrows",
+          "to destroy rodent burrows",
+          "which destroys rodent burrows"
+        ],
+        ans: 0,
+        grammar: "Parallel verb phrase",
+        tip: "The blank is part of a parallel structure: 'floods can destroy... and [can] temporarily reduce...'. The verb 'can destroy' must match the modal verb pattern already established in the sentence. Participle or infinitive forms break the parallelism."
+      },
+      {
+        num: 3,
+        type: "Context Meaning Clause",
+        opts: [
+          "triggered severe HPS outbreaks",
+          "trigger severe HPS outbreaks",
+          "triggering severe HPS outbreaks",
+          "to trigger severe HPS outbreaks"
+        ],
+        ans: 2,
+        grammar: "Present participle phrase (result)",
+        tip: "A present participle phrase ('triggering...') follows the comma to express the result of the preceding action ('favored deer mouse populations'). It describes what happened as a consequence—an outbreak—in a natural, flowing way."
+      },
+      {
+        num: 4,
+        type: "Independent Sentence",
+        opts: [
+          "Beyond climate, the human-animal interface significantly alters disease transmission",
+          "Despite climate, the human-animal interface does not alter disease transmission",
+          "Because the human-animal interface alters disease transmission, climate plays a role",
+          "The human-animal interface, beyond climate, being altered by disease transmission"
+        ],
+        ans: 0,
+        grammar: "Independent sentence / Topic sentence",
+        tip: "This blank starts a new paragraph and must introduce the topic of 'human-animal interface' and anthropogenic activities. Option A uses 'Beyond climate' to signal a shift in focus while providing a complete, correct independent sentence."
+      },
+      {
+        num: 5,
+        type: "Context Meaning Clause",
+        opts: [
+          "that have successfully reduced human susceptibility",
+          "which have successfully reduced human susceptibility",
+          "successfully reducing human susceptibility",
+          "to have successfully reduced human susceptibility"
+        ],
+        ans: 1,
+        grammar: "Non-defining relative clause",
+        tip: "A non-defining relative clause ('which have successfully reduced...') is required after a comma to add further information about the vaccination programs. 'Which' refers to the programs; 'that' cannot be used after a comma in a non-defining clause."
+      }
+    ]
+  },
+  {
+    id: 'sustainable_mobility',
+    title: 'Green Transportation: Beyond Electric Vehicles',
+    meta: 'Environment & Urban Planning',
+    html: `
+      <p>Global transportation is rapidly transitioning toward sustainability, with electric vehicles (EVs) accounting for approximately 25% of sales in the first half of 2025. <span class="blank-tag">1</span>, emerging economies like Vietnam are seeing some of the fastest growth. Alongside these high-tech shifts, the bicycle is re-emerging as a vital tool to combat pollution, noise, and rising health costs. According to UN Habitat, if just 10% of urban residents replaced one daily car trip with cycling, millions of tons of carbon emissions could be saved annually.</p>
+      <br>
+      <p><span class="blank-tag">2</span>. Copenhagen leads with the highest density of protected cycle tracks, while Amsterdam has innovated with unique infrastructure like underwater bicycle parking. Paris successfully doubled its cycling mode share in just five years by reclaiming road space from cars and <span class="blank-tag">3</span>.</p>
+      <br>
+      <p>In Vietnam, experts suggest that Hanoi needs to rediscover its historical identity as a bicycle-friendly city. A primary challenge is <span class="blank-tag">4</span>, which often resulted in bicycle lanes being used for car parking instead of transit. Researchers argue that for Hanoi to become truly sustainable, urban planners must prioritize cycling infrastructure and consider restrictions on both motorbikes and cars.</p>
+      <br>
+      <p>Ultimately, a mindset shift is required to view the bicycle as a safe, convenient mode of transport rather than an "outdated" option or something used only for exercise. By learning from cities like Tokyo and Taipei and integrating cycling into its broader net-zero ambitions, <span class="blank-tag">5</span>.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Conjunctions",
+        opts: [
+          "Although China dominates the market",
+          "Because China dominates the market",
+          "Due to China's domination of the market",
+          "Despite China dominates the market"
+        ],
+        ans: 0,
+        grammar: "Adverbial clause of concession",
+        tip: "'Although' is followed by a clause (S+V) to express contrast/concession. 'Despite' and 'Due to' are followed by nouns/V-ing."
+      },
+      {
+        num: 2,
+        type: "Topic Sentence",
+        opts: [
+          "Success stories from international cities offer valuable models for this transition.",
+          "Many global capitals are struggling to implement electric vehicle charging stations.",
+          "Developing countries face unique challenges in building cycling infrastructure.",
+          "It is nearly impossible to replicate the cycling cultures of European capitals."
+        ],
+        ans: 0,
+        grammar: "Paragraph cohesion",
+        tip: "The paragraph describes successful examples (Copenhagen, Amsterdam, Paris), so the opening sentence should introduce these 'success stories'."
+      },
+      {
+        num: 3,
+        type: "Parallelism",
+        opts: [
+          "heavily invested in shared bike systems",
+          "invest heavily in shared bike systems",
+          "investing heavily in shared bike systems",
+          "to invest heavily in shared bike systems"
+        ],
+        ans: 2,
+        grammar: "Parallel structure with Gerunds",
+        tip: "The sentence uses 'by' followed by 'reclaiming... and ...'. To maintain parallelism, the second action must also be in the V-ing form: 'investing'."
+      },
+      {
+        num: 4,
+        type: "Noun Clause",
+        opts: [
+          "of lacking prioritization in urban planning from past efforts",
+          "that past efforts lacked prioritization in urban planning",
+          "which past efforts lacked prioritization in urban planning",
+          "what past efforts lacked prioritization in urban planning"
+        ],
+        ans: 1,
+        grammar: "Noun clause as subject complement",
+        tip: "The structure 'A primary challenge is [that + clause]' uses a noun clause to complete the meaning of the subject. 'That' is the correct conjunction for a statement of fact."
+      },
+      {
+        num: 5,
+        type: "Main Clause",
+        opts: [
+          "urban planners can stop investing in traditional public transportation systems altogether.",
+          "bicycles will soon completely replace electric vehicles on the streets of major cities.",
+          "the government might abandon the idea of improving pedestrian walkways in urban areas.",
+          "Vietnam can enhance its environmental image and build more resilient, future-ready urban mobility."
+        ],
+        ans: 3,
+        grammar: "Sentence completion",
+        tip: "The sentence starts with a conditional/instrumental phrase ('By learning... and integrating...'). Option D provides the most logical and positive outcome for Vietnam's transportation goals."
+      }
+    ]
+  },
+  {
+    id: 'mindfulness_meditation',
+    title: 'Mindfulness and Meditation',
+    meta: 'Health & Well-being',
+    html: `
+      <p>Mindfulness and meditation are overlapping techniques proven to ease stress, improve sleep, and enhance concentration. Worrying too often about the past or future is rarely helpful. <span class="blank-tag">1</span>.</p>
+      <br>
+      <p>Practicing mindfulness anchors you in the present moment. This can calm anxiety, improve focus and concentration, and <span class="blank-tag">2</span>. When applied to eating, mindfulness may help with weight loss by encouraging people to slow down to savor meals.</p>
+      <br>
+      <p><span class="blank-tag">3</span>. One exercise that works equally well for adults and younger people is box breathing. <span class="blank-tag">4</span>. The rhythmic pattern of breathing helps regulate the nervous system, reining in anxiety, lowering heart rate, and boosting focus. Ultimately, the true benefit of these practices lies in <span class="blank-tag">5</span>.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Logical Consequence",
+        opts: [
+          "Therefore, the frequent release of stress hormones negatively affects our overall health.",
+          "However, stress hormones are frequently released to protect our heart and brain.",
+          "Moreover, worrying can sometimes be beneficial for solving future problems.",
+          "Because the heart and brain require stress hormones to function properly."
+        ],
+        ans: 0,
+        grammar: "Adverbial connector 'Therefore'",
+        tip: "'Therefore' introduces a logical consequence of the previous statement about constant worrying. Chronic worry leads to the negative health effects of stress hormones."
+      },
+      {
+        num: 2,
+        type: "Parallelism",
+        opts: [
+          "amping up positive feelings",
+          "amp up positive feelings",
+          "to amp up positive feelings",
+          "amped up positive feelings"
+        ],
+        ans: 1,
+        grammar: "Parallel structure with 'can'",
+        tip: "The verb must be in the base form to maintain parallelism with 'calm anxiety' and 'improve focus' after the modal verb 'can'."
+      },
+      {
+        num: 3,
+        type: "Topic Sentence",
+        opts: [
+          "Meditation knits together body and mind by focusing on specific sensations.",
+          "Box breathing is the only effective method for reducing adult anxiety.",
+          "People should stop thinking about images or words when they meditate.",
+          "Physical exercise is a much better alternative to sitting still and breathing."
+        ],
+        ans: 0,
+        grammar: "Paragraph cohesion",
+        tip: "This sentence introduces the theme of connection between mind and body, which is then illustrated by the specific example of box breathing."
+      },
+      {
+        num: 4,
+        type: "Supporting Detail",
+        opts: [
+          "It requires expensive equipment to measure the breathing patterns accurately.",
+          "This is because younger people generally experience more stress than adults.",
+          "By maintaining a steady rhythm, individuals can effectively interrupt panic cycles.",
+          "Most people find it impossible to remember the breathing steps without a guide."
+        ],
+        ans: 2,
+        grammar: "Sentence logical flow",
+        tip: "This option explains *how* the breathing exercise mentioned in the previous sentence works to produce the benefits mentioned in the following sentence."
+      },
+      {
+        num: 5,
+        type: "Noun Clause",
+        opts: [
+          "that they can quickly replace all modern medical treatments",
+          "which helps you to completely forget about your past",
+          "of lacking prioritization in managing daily tasks",
+          "how consistently they are integrated into daily routines"
+        ],
+        ans: 3,
+        grammar: "Noun clause after preposition",
+        tip: "The phrase 'lies in' is followed by an object. 'How consistently...' is a noun clause acting as the object of the preposition 'in'."
+      }
+    ]
   }
 ];
 

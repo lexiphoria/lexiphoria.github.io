@@ -3191,6 +3191,170 @@ const ALL_EXAMS = [
         tip: "The phrase 'lies in' is followed by an object. 'How consistently...' is a noun clause acting as the object of the preposition 'in'."
       }
     ]
+  },
+  {
+    id: 'daily_supplement',
+    title: 'Should you take a daily supplement?',
+    meta: 'Health & Nutrition',
+    html: `
+      <p>Even though supplements are popular, there is limited evidence they offer significant health benefits or help protect against disease. For the average healthy adult, eating a balanced diet with plenty of fruits and vegetables <span class="blank-tag">1</span>.</p>
+      <br>
+      <p><span class="blank-tag">2</span>, such as those diagnosed with a vitamin deficiency that's been confirmed by a blood test, those who have trouble getting certain vitamins from foods, or those who suffer from conditions that require extra vitamins or minerals.</p>
+      <br>
+      <p>For example, strict vegans may not get enough vitamin B12, which is found primarily in animal products. Low levels of vitamins B12 and B6 can stem from digestive disorders such as Crohn's disease, celiac disease, and ulcerative colitis, <span class="blank-tag">3</span>. Adults diagnosed with osteoporosis may require extra vitamin D and calcium beyond what they get from their regular diet. Moreover, people who are lactose intolerant and avoid dairy products may not get enough vitamin D and calcium.</p>
+      <br>
+      <p><span class="blank-tag">4</span>. Some believe they are not necessary. Others take a "might-help-won't-hurt" approach to fill in nutritional gaps in one's diet. And studies have shown that taking dietary supplements as prescribed usually doesn't cause serious issues.</p>
+      <br>
+      <p>If you want to explore taking a supplement, first check with your doctor. He or she can advise whether they are needed and <span class="blank-tag">5</span>. The FDA monitors disease-related claims on dietary supplement labels but does not ensure whether a product contains the ingredients listed on its label.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Verb Phrase",
+        opts: [
+          "providing all the essential vitamins and minerals",
+          "provides all the essential vitamins and minerals",
+          "to provide all the essential vitamins and minerals",
+          "which provides all the essential vitamins and minerals"
+        ],
+        ans: 1,
+        grammar: "Verb phrase as predicate",
+        tip: "The gerund phrase 'eating a balanced diet with plenty of fruits and vegetables' functions as the subject. Therefore, a finite verb ('provides') is required to form the predicate."
+      },
+      {
+        num: 2,
+        type: "Topic Sentence",
+        opts: [
+          "Therefore, taking a daily supplement is highly recommended for everyone",
+          "However, there are situations when people may need a dietary supplement",
+          "Because there are situations when people may need a dietary supplement",
+          "As a result, there are situations when people may need a dietary supplement"
+        ],
+        ans: 1,
+        grammar: "Sentence cohesion",
+        tip: "The previous paragraph states supplements aren't usually necessary, but this paragraph lists exceptions. 'However' effectively introduces this contrast and acts as a clear topic sentence."
+      },
+      {
+        num: 3,
+        type: "Appositive Phrase",
+        opts: [
+          "making it difficult to absorb nutrients conditions",
+          "conditions that make it difficult to absorb nutrients",
+          "which conditions make it difficult to absorb nutrients",
+          "conditions to make it difficult to absorb nutrients"
+        ],
+        ans: 1,
+        grammar: "Noun phrase as appositive",
+        tip: "This is an appositive noun phrase explaining what Crohn's disease, celiac disease, and ulcerative colitis are. It uses a relative clause ('that make it...') to modify 'conditions'."
+      },
+      {
+        num: 4,
+        type: "Paragraph Development",
+        opts: [
+          "Doctors have differing opinions about dietary supplements.",
+          "Patients usually consult their doctors about dietary supplements.",
+          "Doctors unanimously agree on the benefits of dietary supplements.",
+          "It is important to buy dietary supplements from pharmacies."
+        ],
+        ans: 0,
+        grammar: "Logic and Flow",
+        tip: "This sentence introduces the paragraph's main idea, which is then elaborated upon by stating 'Some believe...' and 'Others take...'."
+      },
+      {
+        num: 5,
+        type: "Parallelism",
+        opts: [
+          "helping choose the appropriate over-the-counter brand",
+          "helps choose the appropriate over-the-counter brand",
+          "help choose the appropriate over-the-counter brand",
+          "to help choose the appropriate over-the-counter brand"
+        ],
+        ans: 2,
+        grammar: "Parallel structure with 'and'",
+        tip: "The verb must maintain parallel structure with 'advise' after the modal 'can'. Both 'advise' and 'help' are in their base forms."
+      }
+    ]
+  },
+  {
+    id: 'mental_wellbeing',
+    title: 'Mental well-being amid digital shift addressed',
+    meta: 'Business & Psychology',
+    html: `
+      <p>The 2026 State of the Global Workplace report highlights a decline in global employee engagement to 20%, <span class="blank-tag">1</span>. While North America faces high daily stress and Europe records the lowest engagement, Southeast Asia reports the highest job optimism at 64%, despite rising chronic stress.</p>
+      <br>
+      <p>Vietnam stands out with the lowest levels of stress, loneliness, sadness, and anger globally and regionally, alongside high job optimism. <span class="blank-tag">2</span>, particularly for younger workers who face anxieties regarding job insecurity, high workloads, and constant digital connectivity.</p>
+      <br>
+      <p><span class="blank-tag">3</span>. Experts emphasize that worker mental well-being is vital for long-term productivity and corporate sustainability, especially as Vietnamese businesses integrate into global markets.</p>
+      <br>
+      <p>To mitigate technical stress, the International Labor Organization recommends that companies identify the core sources of worker anxiety, establish clear instructions, and <span class="blank-tag">4</span>. Vietnam is currently well-positioned to address these workplace challenges, <span class="blank-tag">5</span>, strong governmental capacity across health and labor ministries, and robust community-level support systems.</p>
+    `,
+    questions: [
+      {
+        num: 1,
+        type: "Present Participle Phrase",
+        opts: [
+          "cost the world economy approximately $10 trillion in lost productivity",
+          "costing the world economy approximately $10 trillion in lost productivity",
+          "to cost the world economy approximately $10 trillion in lost productivity",
+          "which costing the world economy approximately $10 trillion in lost productivity"
+        ],
+        ans: 1,
+        grammar: "Participle phrase of result",
+        tip: "A present participle phrase ('costing...') is used after a comma to indicate the result or consequence of the preceding clause ('a decline in global employee engagement')."
+      },
+      {
+        num: 2,
+        type: "Logical Linker",
+        opts: [
+          "Because the rapid digital shift and integration of AI are creating new psychological pressures",
+          "Therefore, the rapid digital shift and integration of AI are creating new psychological pressures",
+          "However, the rapid digital shift and integration of AI are creating new psychological pressures",
+          "Although the rapid digital shift and integration of AI are creating new psychological pressures"
+        ],
+        ans: 2,
+        grammar: "Sentence Cohesion",
+        tip: "The previous sentence discusses positive aspects (low stress, high optimism). This sentence introduces negative pressures. The transitional word 'However' correctly signals this contrast."
+      },
+      {
+        num: 3,
+        type: "Topic Sentence",
+        opts: [
+          "Globally, psychosocial risks like excessive workloads and long hours cause over 840,000 deaths annually and cost 1.37% of the global GDP.",
+          "Being psychosocial risks like excessive workloads and long hours cause over 840,000 deaths annually and cost 1.37% of the global GDP.",
+          "Because psychosocial risks like excessive workloads and long hours cause over 840,000 deaths annually and cost 1.37% of the global GDP.",
+          "Which psychosocial risks like excessive workloads and long hours cause over 840,000 deaths annually and cost 1.37% of the global GDP."
+        ],
+        ans: 0,
+        grammar: "Independent sentence",
+        tip: "This blank requires a complete, independent sentence to introduce a new paragraph about global psychosocial risks. Option A is the only grammatically complete sentence."
+      },
+      {
+        num: 4,
+        type: "Parallelism",
+        opts: [
+          "mutually agreeing on job responsibilities",
+          "mutually agreed on job responsibilities",
+          "mutually agree on job responsibilities",
+          "to mutually agree on job responsibilities"
+        ],
+        ans: 2,
+        grammar: "Parallel structure in a list",
+        tip: "The verbs in the list ('identify', 'establish', and 'agree') must all be in the same form. Since 'identify' and 'establish' are base verbs following 'recommends that companies', 'agree' must also be a base verb."
+      },
+      {
+        num: 5,
+        type: "Present Participle Phrase",
+        opts: [
+          "benefited from advanced labor regulations",
+          "benefiting from advanced labor regulations",
+          "to benefit from advanced labor regulations",
+          "having benefited from advanced labor regulations"
+        ],
+        ans: 1,
+        grammar: "Participle phrase for supplementary information",
+        tip: "The present participle phrase ('benefiting from...') adds descriptive information about why Vietnam is well-positioned, running parallel to the other noun phrases in the list."
+      }
+    ]
   }
 ];
 

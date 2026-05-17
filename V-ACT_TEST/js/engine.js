@@ -15,7 +15,30 @@
     renderTest();
     startTimer();
     updateStats();
+    injectAudioWidget();
   });
+
+  // ─── Audio Widget ───
+  function injectAudioWidget() {
+    const audioDiv = document.createElement("div");
+    audioDiv.className = "audio-widget";
+    audioDiv.style.cssText = "position: fixed; bottom: 24px; right: 24px; z-index: 100; background: var(--surface, #1e1e2f); padding: 8px 16px 8px 12px; border-radius: 50px; border: 1px solid var(--border, #333); box-shadow: 0 8px 24px rgba(0,0,0,0.3); display: flex; align-items: center; gap: 12px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);";
+    
+    audioDiv.innerHTML = `
+      <style>
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+        .audio-widget audio::-webkit-media-controls-panel { background-color: transparent; }
+        .audio-widget audio::-webkit-media-controls-current-time-display,
+        .audio-widget audio::-webkit-media-controls-time-remaining-display { color: #fff; }
+      </style>
+      <span style="font-size: 1.4rem; animation: spin 4s linear infinite;">🎵</span>
+      <audio controls loop style="height: 32px; outline: none; border-radius: 16px;">
+        <source src="../assets/Playlist_9.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    `;
+    document.body.appendChild(audioDiv);
+  }
 
   // ─── Timer ───
   function startTimer() {

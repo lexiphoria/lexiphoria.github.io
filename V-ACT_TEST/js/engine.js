@@ -33,7 +33,7 @@
       </style>
       <span style="font-size: 1.4rem; animation: spin 4s linear infinite;">🎵</span>
       <audio controls loop style="height: 32px; outline: none; border-radius: 16px;">
-        <source src="../assets/Playlist_9.mp3" type="audio/mpeg">
+        <source src="../../assets/Playlist_9.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
     `;

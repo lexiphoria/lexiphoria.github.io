@@ -110,6 +110,30 @@
         </div>
         <span class="arrow-icon">→</span>
       </a>
+
+      <a href="test3/index.html" class="test-item">
+        <div class="test-info">
+          <h3>📝 Test 3</h3>
+          <p id="score-test3" style="color: var(--primary); font-weight: 600; margin-top: 4px;">Chưa làm</p>
+        </div>
+        <span class="arrow-icon">→</span>
+      </a>
+
+      <a href="test4/index.html" class="test-item">
+        <div class="test-info">
+          <h3>📝 Test 4</h3>
+          <p id="score-test4" style="color: var(--primary); font-weight: 600; margin-top: 4px;">Chưa làm</p>
+        </div>
+        <span class="arrow-icon">→</span>
+      </a>
+
+      <a href="test5/index.html" class="test-item">
+        <div class="test-info">
+          <h3>📝 Test 5</h3>
+          <p id="score-test5" style="color: var(--primary); font-weight: 600; margin-top: 4px;">Chưa làm</p>
+        </div>
+        <span class="arrow-icon">→</span>
+      </a>
     </div>
   </div>
   
@@ -120,6 +144,15 @@
       
       var s2 = localStorage.getItem('vact_score_V-ACT English Test 2');
       if (s2) document.getElementById('score-test2').textContent = 'Điểm: ' + s2;
+      
+      var s3 = localStorage.getItem('vact_score_V-ACT English Test 3');
+      if (s3) document.getElementById('score-test3').textContent = 'Điểm: ' + s3;
+      
+      var s4 = localStorage.getItem('vact_score_V-ACT English Test 4');
+      if (s4) document.getElementById('score-test4').textContent = 'Điểm: ' + s4;
+      
+      var s5 = localStorage.getItem('vact_score_V-ACT English Test 5');
+      if (s5) document.getElementById('score-test5').textContent = 'Điểm: ' + s5;
     });
   </script>
 </body>

@@ -134,9 +134,64 @@
         </div>
         <span class="arrow-icon">→</span>
       </a>
+
+      <a href="test6/index.html" class="test-item">
+        <div class="test-info">
+          <h3>📝 Test 6</h3>
+          <p id="score-test6" style="color: var(--primary); font-weight: 600; margin-top: 4px;">Chưa làm</p>
+        </div>
+        <span class="arrow-icon">→</span>
+      </a>
+
+      <a href="test7/index.html" class="test-item">
+        <div class="test-info">
+          <h3>📝 Test 7</h3>
+          <p id="score-test7" style="color: var(--primary); font-weight: 600; margin-top: 4px;">Chưa làm</p>
+        </div>
+        <span class="arrow-icon">→</span>
+      </a>
+
+      <a href="test8/index.html" class="test-item">
+        <div class="test-info">
+          <h3>📝 Test 8</h3>
+          <p id="score-test8" style="color: var(--primary); font-weight: 600; margin-top: 4px;">Chưa làm</p>
+        </div>
+        <span class="arrow-icon">→</span>
+      </a>
+
+      <a href="test9/index.html" class="test-item">
+        <div class="test-info">
+          <h3>📝 Test 9</h3>
+          <p id="score-test9" style="color: var(--primary); font-weight: 600; margin-top: 4px;">Chưa làm</p>
+        </div>
+        <span class="arrow-icon">→</span>
+      </a>
+
+      <a href="test10/index.html" class="test-item">
+        <div class="test-info">
+          <h3>📝 Test 10</h3>
+          <p id="score-test10" style="color: var(--primary); font-weight: 600; margin-top: 4px;">Chưa làm</p>
+        </div>
+        <span class="arrow-icon">→</span>
+      </a>
     </div>
   </div>
   
+  <div class="audio-widget" style="position: fixed; bottom: 24px; right: 24px; z-index: 100; background: var(--surface, #1e1e2f); padding: 8px 16px 8px 12px; border-radius: 50px; border: 1px solid var(--border, #333); box-shadow: 0 8px 24px rgba(0,0,0,0.3); display: flex; align-items: center; gap: 12px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
+    <span style="font-size: 1.4rem; animation: spin 4s linear infinite;">🎵</span>
+    <audio controls loop style="height: 32px; outline: none; border-radius: 16px;">
+      <source src="../assets/Playlist_8.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  
+  <style>
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+    audio::-webkit-media-controls-panel { background-color: transparent; }
+    audio::-webkit-media-controls-current-time-display,
+    audio::-webkit-media-controls-time-remaining-display { color: #fff; }
+  </style>
+
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       var s1 = localStorage.getItem('vact_score_V-ACT English Test 1');
@@ -153,6 +208,21 @@
       
       var s5 = localStorage.getItem('vact_score_V-ACT English Test 5');
       if (s5) document.getElementById('score-test5').textContent = 'Điểm: ' + s5;
+      
+      var s6 = localStorage.getItem('vact_score_V-ACT English Test 6');
+      if (s6) document.getElementById('score-test6').textContent = 'Điểm: ' + s6;
+      
+      var s7 = localStorage.getItem('vact_score_V-ACT English Test 7');
+      if (s7) document.getElementById('score-test7').textContent = 'Điểm: ' + s7;
+      
+      var s8 = localStorage.getItem('vact_score_V-ACT English Test 8');
+      if (s8) document.getElementById('score-test8').textContent = 'Điểm: ' + s8;
+      
+      var s9 = localStorage.getItem('vact_score_V-ACT English Test 9');
+      if (s9) document.getElementById('score-test9').textContent = 'Điểm: ' + s9;
+      
+      var s10 = localStorage.getItem('vact_score_V-ACT English Test 10');
+      if (s10) document.getElementById('score-test10').textContent = 'Điểm: ' + s10;
     });
   </script>
 </body>

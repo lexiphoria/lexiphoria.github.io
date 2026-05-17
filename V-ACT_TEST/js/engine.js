@@ -142,6 +142,9 @@
     document.getElementById("result-pct").textContent = pct + "%";
     document.getElementById("result-time").textContent = m + "m " + s + "s";
     document.getElementById("result-overlay").classList.add("show");
+    
+    // Save score to local storage
+    localStorage.setItem('vact_score_' + TEST_DATA.title, correctCount + "/" + totalQ);
 
     // Also reveal all unanswered
     TEST_DATA.parts.forEach((part) => {

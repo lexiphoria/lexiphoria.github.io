@@ -93,31 +93,30 @@
     <div class="test-list">
       <a href="test1/index.html" class="test-item">
         <div class="test-info">
-          <h3>📝 Test 1 — English Proficiency</h3>
-          <p>Multiple Choice · Error ID · Sentence Restatement · Reading Comprehension</p>
-          <div class="test-meta">
-            <span class="meta-tag">📊 30 Questions</span>
-            <span class="meta-tag">⏱️ ~45 min</span>
-            <span class="meta-tag">📈 B1–B2</span>
-          </div>
+          <h3>📝 Test 1</h3>
+          <p id="score-test1" style="color: var(--primary); font-weight: 600; margin-top: 4px;">Chưa làm</p>
         </div>
         <span class="arrow-icon">→</span>
       </a>
       
       <a href="test2/index.html" class="test-item">
         <div class="test-info">
-          <h3>📝 Test 2 — Advanced Grammar & Reading</h3>
-          <p>Collocations · Conditionals · Word Form · AI & Fast Fashion Reading</p>
-          <div class="test-meta">
-            <span class="meta-tag">📊 30 Questions</span>
-            <span class="meta-tag">⏱️ ~45 min</span>
-            <span class="meta-tag">📈 B1–B2</span>
-          </div>
+          <h3>📝 Test 2</h3>
+          <p id="score-test2" style="color: var(--primary); font-weight: 600; margin-top: 4px;">Chưa làm</p>
         </div>
         <span class="arrow-icon">→</span>
       </a>
-      <!-- More tests will be added here -->
     </div>
   </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var s1 = localStorage.getItem('vact_score_V-ACT English Test 1');
+      if (s1) document.getElementById('score-test1').textContent = 'Điểm: ' + s1;
+      
+      var s2 = localStorage.getItem('vact_score_V-ACT English Test 2');
+      if (s2) document.getElementById('score-test2').textContent = 'Điểm: ' + s2;
+    });
+  </script>
 </body>
 </html>

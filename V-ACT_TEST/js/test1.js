@@ -61,8 +61,8 @@ const TEST_DATA = {
         },
         {
           id: 7,
-          text: 'She is one of <span class="underline-error">the most</span> (A) <span class="underline-error">talented</span> (B) singer who <span class="underline-error">has ever</span> (C) performed on this <span class="underline-error">stage</span> (D).',
-          options: ["A. the most","B. talented","C. has ever","D. stage"],
+          text: 'She is one of <span class="underline-error">the most</span> (A) talented (B) <span class="underline-error">singer</span> who <span class="underline-error">has ever</span> (C) performed on this <span class="underline-error">stage</span> (D).',
+          options: ["A. the most","B. singers","C. has ever","D. stage"],
           correct: 1,
           explain: "'One of the most + adj + N số nhiều' → phải là 'singers'. Danh từ sau cấu trúc 'one of the + superlative' luôn ở số nhiều."
         },
@@ -75,8 +75,8 @@ const TEST_DATA = {
         },
         {
           id: 9,
-          text: 'The teacher suggested <span class="underline-error">that</span> (A) we <span class="underline-error">should</span> (B) to review <span class="underline-error">all</span> (C) the chapters before <span class="underline-error">the exam</span> (D).',
-          options: ["A. that","B. should","C. all","D. the exam"],
+          text: 'The teacher suggested <span class="underline-error">that</span> (A) we should <span class="underline-error">to review</span> (B) <span class="underline-error">all</span> (C) the chapters before <span class="underline-error">the exam</span> (D).',
+          options: ["A. that","B. to review","C. all","D. the exam"],
           correct: 1,
           explain: "'Suggest that + S + (should) + V-nguyên thể'. Sau 'should' không dùng 'to V' mà phải là V-nguyên thể → 'should review' (bỏ 'to')."
         },

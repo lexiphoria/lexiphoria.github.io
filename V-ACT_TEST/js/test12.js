@@ -12,36 +12,41 @@ const TEST_DATA = {
         {
           id: 1,
           text: "She had the plumber _______ the leaky tap in the kitchen yesterday.",
-          options: ["repair", "repaired", "to repair", "repairing"],
+          options: ["repair", "repairing", "repaired", "to repair"],
           correct: 0,
           explain: "Cấu trúc nhờ vả (Causative) chủ động với 'have': S + have + O (person) + V (bare) (nhờ ai làm gì)."
         },
         {
           id: 2,
           text: "To prepare for the final examinations, he had to _______.",
-          options: ["burn the midnight oil", "hit the nail on the head", "bite the bullet", "break the ice"],
-          correct: 0,
+          options: [
+            "hit the nail on the head",
+            "break the ice",
+            "burn the midnight oil",
+            "bite the bullet"
+          ],
+          correct: 2,
           explain: "Thành ngữ: 'burn the midnight oil' = thức khuya học bài/làm việc. Các thành ngữ khác: 'hit the nail on the head' = nói trúng tim đen, 'bite the bullet' = cắn răng chịu đựng khó khăn, 'break the ice' = làm quen, phá vỡ sự ngại ngùng."
         },
         {
           id: 3,
           text: "The writer _______ novel won the Pulitzer Prize was invited to speak at the conference.",
-          options: ["who", "whom", "whose", "which"],
-          correct: 2,
+          options: ["who", "whose", "whom", "which"],
+          correct: 1,
           explain: "Đại từ quan hệ: Sử dụng 'whose' đứng trước danh từ 'novel' để chỉ sự sở hữu (novel of the writer)."
         },
         {
           id: 4,
           text: "There is no food left in the refrigerator. They _______ eaten it all.",
-          options: ["must have", "should have", "needn't have", "can't have"],
-          correct: 0,
+          options: ["should have", "can't have", "must have", "needn't have"],
+          correct: 2,
           explain: "Động từ khuyết thiếu chỉ sự suy đoán: 'must have + V3/ed' chỉ một dự đoán gần như chắc chắn xảy ra trong quá khứ (chắc hẳn là đã)."
         },
         {
           id: 5,
           text: "_______ a large sum of money, she decided to start her own business.",
-          options: ["Having inherited", "Inherited", "To inherit", "Inheriting"],
-          correct: 0,
+          options: ["Inheriting", "Inherited", "Having inherited", "To inherit"],
+          correct: 2,
           explain: "Rút gọn mệnh đề trạng ngữ đồng chủ ngữ: Hành động thừa kế xảy ra trước hành động quyết định mở công ty, nên dùng Phân từ hoàn thành 'Having + V3/ed'."
         }
       ]
@@ -54,35 +59,35 @@ const TEST_DATA = {
       questions: [
         {
           id: 6,
-          text: 'Neither the <span class="underline-error">manager</span> (A) nor <span class="underline-error">his employees</span> (B) <span class="underline-error">was</span> (C) satisfied with the new <span class="underline-error">policy</span> (D).',
+          text: "Neither the <span class=\"underline-error\">manager</span> (A) nor <span class=\"underline-error\">his employees</span> (B) <span class=\"underline-error\">was</span> (C) satisfied with the new <span class=\"underline-error\">policy</span> (D).",
           options: ["A. manager", "B. his employees", "C. was", "D. policy"],
           correct: 2,
           explain: "Sự hòa hợp chủ vị: Với cấu trúc 'Neither S1 nor S2', động từ chia theo S2. S2 là 'his employees' (số nhiều) nên động từ phải là 'were'."
         },
         {
           id: 7,
-          text: 'He is <span class="underline-error">enough tall</span> (A) to reach the <span class="underline-error">top shelf</span> (B) without <span class="underline-error">using</span> (C) a <span class="underline-error">ladder</span> (D).',
+          text: "He is <span class=\"underline-error\">enough tall</span> (A) to reach the <span class=\"underline-error\">top shelf</span> (B) without <span class=\"underline-error\">using</span> (C) a <span class=\"underline-error\">ladder</span> (D).",
           options: ["A. enough tall", "B. top shelf", "C. using", "D. ladder"],
           correct: 0,
           explain: "Cấu trúc với enough: 'Adj/Adv + enough + to V'. Sửa 'enough tall' thành 'tall enough'."
         },
         {
           id: 8,
-          text: 'Although the <span class="underline-error">weather</span> (A) was extremely cold, <span class="underline-error">but</span> (B) they <span class="underline-error">went</span> (C) swimming <span class="underline-error">anyway</span> (D).',
+          text: "Although the <span class=\"underline-error\">weather</span> (A) was extremely cold, <span class=\"underline-error\">but</span> (B) they <span class=\"underline-error\">went</span> (C) swimming <span class=\"underline-error\">anyway</span> (D).",
           options: ["A. weather", "B. but", "C. went", "D. anyway"],
           correct: 1,
           explain: "Lỗi liên từ: Không dùng cả 'Although' và 'but' trong cùng một câu ghép. Sửa: bỏ 'but'."
         },
         {
           id: 9,
-          text: 'She <span class="underline-error">speaks</span> (A) English very <span class="underline-error">good</span> (B) because she <span class="underline-error">lived</span> (C) in London for five <span class="underline-error">years</span> (D).',
+          text: "She <span class=\"underline-error\">speaks</span> (A) English very <span class=\"underline-error\">good</span> (B) because she <span class=\"underline-error\">lived</span> (C) in London for five <span class=\"underline-error\">years</span> (D).",
           options: ["A. speaks", "B. good", "C. lived", "D. years"],
           correct: 1,
           explain: "Từ loại: Bổ nghĩa cho động từ thường 'speaks' phải dùng trạng từ 'well', không dùng tính từ 'good'."
         },
         {
           id: 10,
-          text: 'The <span class="underline-error">information</span> (A) which he <span class="underline-error">gave</span> (B) to me <span class="underline-error">were</span> (C) extremely <span class="underline-error">useful</span> (D).',
+          text: "The <span class=\"underline-error\">information</span> (A) which he <span class=\"underline-error\">gave</span> (B) to me <span class=\"underline-error\">were</span> (C) extremely <span class=\"underline-error\">useful</span> (D).",
           options: ["A. information", "B. gave", "C. were", "D. useful"],
           correct: 2,
           explain: "Sự hòa hợp chủ vị: 'Information' là danh từ không đếm được nên động từ chia ở dạng số ít. Sửa 'were' thành 'was'."
@@ -99,24 +104,24 @@ const TEST_DATA = {
           id: 11,
           text: "People say that he is a very kind and generous man.",
           options: [
-            "He is said to be a very kind and generous man.",
-            "He is said that he is a very kind and generous man.",
             "It is said to be a very kind and generous man.",
-            "He says to be a very kind and generous man."
+            "He is said that he is a very kind and generous man.",
+            "He says to be a very kind and generous man.",
+            "He is said to be a very kind and generous man."
           ],
-          correct: 0,
+          correct: 3,
           explain: "Câu bị động kép (cùng thì hiện tại): 'People say that S + V' chuyển thành 'S + is/are said + to V'."
         },
         {
           id: 12,
           text: "I didn't listen to my teacher's advice, and now I regret it.",
           options: [
-            "I wish I listened to my teacher's advice.",
             "I wish I had listened to my teacher's advice.",
-            "If only I hadn't listened to my teacher's advice.",
-            "I regret to listen to my teacher's advice."
+            "I wish I listened to my teacher's advice.",
+            "I regret to listen to my teacher's advice.",
+            "If only I hadn't listened to my teacher's advice."
           ],
-          correct: 1,
+          correct: 0,
           explain: "Diễn tả lời ước trái ngược với quá thực tế ở quá khứ: S + wish + S + had + V3/ed."
         },
         {
@@ -124,11 +129,11 @@ const TEST_DATA = {
           text: "I'm sure she didn't steal the money from the cash register.",
           options: [
             "She must have stolen the money.",
-            "She can't have stolen the money.",
             "She shouldn't have stolen the money.",
-            "She needn't have stolen the money."
+            "She needn't have stolen the money.",
+            "She can't have stolen the money."
           ],
-          correct: 1,
+          correct: 3,
           explain: "Suy đoán phủ định chắc chắn ở quá khứ: 'can't have + V3/ed' (chắc chắn là đã không làm gì)."
         },
         {
@@ -136,9 +141,9 @@ const TEST_DATA = {
           text: "He started working as a teacher five years ago.",
           options: [
             "He has worked as a teacher for five years.",
-            "He has started working as a teacher for five years.",
             "He worked as a teacher for five years.",
-            "He has been starting working as a teacher since five years."
+            "He has been starting working as a teacher since five years.",
+            "He has started working as a teacher for five years."
           ],
           correct: 0,
           explain: "Chuyển đổi thì: 'S + started/began + V-ing + thời gian + ago' tương đương 'S + has/have + V3/ed + for + thời gian' (bỏ start/begin)."
@@ -147,12 +152,12 @@ const TEST_DATA = {
           id: 15,
           text: "We didn't go on a picnic because it rained heavily.",
           options: [
-            "But for the heavy rain, we would have gone on a picnic.",
-            "If it didn't rain heavily, we would go on a picnic.",
             "Because of it rained heavily, we didn't go on a picnic.",
-            "Despite the heavy rain, we went on a picnic."
+            "Despite the heavy rain, we went on a picnic.",
+            "If it didn't rain heavily, we would go on a picnic.",
+            "But for the heavy rain, we would have gone on a picnic."
           ],
-          correct: 0,
+          correct: 3,
           explain: "Cấu trúc 'But for + N/phrase, S + would have + V3/ed' (Nếu không vì... thì đã... - điều kiện loại 3 ngược quá thực tế)."
         }
       ]
@@ -173,25 +178,25 @@ const TEST_DATA = {
           text: "What is the main idea of the passage?",
           options: [
             "The history and development of social media platforms.",
-            "How dopamine regulates human biological clocks.",
             "The addictive nature of social media and its psychological impacts.",
+            "How dopamine regulates human biological clocks.",
             "The advantages of online advertising for businesses."
           ],
-          correct: 2,
+          correct: 1,
           explain: "Bài viết chủ yếu phân tích về cơ chế gây nghiện của mạng xã hội, các tác động tiêu cực đến sức khỏe tinh thần và giải pháp khắc phục."
         },
         {
           id: 17,
           text: "The word \"compulsive\" in paragraph 1 is closest in meaning to _______.",
-          options: ["unwilling", "accidental", "uncontrollable", "occasional"],
-          correct: 2,
+          options: ["uncontrollable", "accidental", "unwilling", "occasional"],
+          correct: 0,
           explain: "'Compulsive' = ép buộc, cưỡng chế, có tính gây nghiện không kiểm soát được (uncontrollable)."
         },
         {
           id: 18,
           text: "According to paragraph 2, what chemical is released in the brain when receiving social media notifications?",
-          options: ["Adrenaline", "Dopamine", "Insulin", "Melatonin"],
-          correct: 1,
+          options: ["Melatonin", "Insulin", "Dopamine", "Adrenaline"],
+          correct: 2,
           explain: "Đoạn 2: 'their brain releases dopamine—a neurotransmitter associated with pleasure and reward'."
         },
         {
@@ -199,30 +204,30 @@ const TEST_DATA = {
           text: "What is FOMO as described in the passage?",
           options: [
             "A physical disease caused by screen radiation.",
-            "A fear of missing out on social experiences, leading to anxiety.",
             "A technical term for low internet speeds.",
-            "A social media platform for sharing photos."
+            "A social media platform for sharing photos.",
+            "A fear of missing out on social experiences, leading to anxiety."
           ],
-          correct: 1,
+          correct: 3,
           explain: "Đoạn 2: 'fear of missing out (FOMO), which can lead to heightened anxiety...'"
         },
         {
           id: 20,
           text: "The word \"combat\" in paragraph 3 is closest in meaning to _______.",
-          options: ["support", "fight against", "agree with", "ignore"],
-          correct: 1,
+          options: ["ignore", "support", "fight against", "agree with"],
+          correct: 2,
           explain: "'Combat' = chiến đấu, chống lại (fight against)."
         },
         {
           id: 21,
           text: "Which of the following is NOT suggested as a way to reduce social media use?",
           options: [
+            "Deleting all social media accounts permanently.",
             "Practicing digital detoxes.",
             "Disabling non-essential notifications.",
-            "Setting daily limits on screen time.",
-            "Deleting all social media accounts permanently."
+            "Setting daily limits on screen time."
           ],
-          correct: 3,
+          correct: 0,
           explain: "Trong các giải pháp ở đoạn 3 không đề cập đến việc xóa vĩnh viễn tất cả tài khoản mạng xã hội."
         },
         {
@@ -254,24 +259,24 @@ const TEST_DATA = {
           id: 23,
           text: "What is the main theme of the passage?",
           options: [
-            "The process of manufacturing cosmetics.",
-            "The origins, environmental impacts, and risks of microplastics in oceans.",
+            "The nutritional benefits of seafood.",
             "How to clean up large plastic waste from beaches.",
-            "The nutritional benefits of seafood."
+            "The process of manufacturing cosmetics.",
+            "The origins, environmental impacts, and risks of microplastics in oceans."
           ],
-          correct: 1,
+          correct: 3,
           explain: "Bài viết bàn về nguồn gốc hạt vi nhựa, tác hại của chúng với sinh vật biển, chuỗi thức ăn con người và hướng giải quyết."
         },
         {
           id: 24,
           text: "What is the size definition of microplastics according to paragraph 1?",
           options: [
-            "Larger than five centimeters.",
             "Smaller than five millimeters.",
-            "Exactly one meter.",
-            "Too small to be seen by microscopes."
+            "Larger than five centimeters.",
+            "Too small to be seen by microscopes.",
+            "Exactly one meter."
           ],
-          correct: 1,
+          correct: 0,
           explain: "Đoạn 1: 'microplastics—tiny plastic particles measuring less than five millimeters in diameter'."
         },
         {
@@ -279,9 +284,9 @@ const TEST_DATA = {
           text: "According to paragraph 1, how do secondary microplastics form?",
           options: [
             "They are manufactured by cosmetic companies.",
-            "They are produced by volcanic activity.",
+            "They are created by marine animals.",
             "They result from the fragmentation of larger plastic waste due to environmental factors.",
-            "They are created by marine animals."
+            "They are produced by volcanic activity."
           ],
           correct: 2,
           explain: "Đoạn 1: 'Secondary microplastics result from the breakdown of larger plastic debris... degraded by sunlight, waves...'."
@@ -289,20 +294,20 @@ const TEST_DATA = {
         {
           id: 26,
           text: "The word \"persist\" in paragraph 2 is closest in meaning to _______.",
-          options: ["disappear quickly", "continue to exist", "change shape", "dissolve in water"],
-          correct: 1,
+          options: ["change shape", "disappear quickly", "dissolve in water", "continue to exist"],
+          correct: 3,
           explain: "'Persist' = kéo dài, tiếp tục tồn tại dai dẳng (continue to exist)."
         },
         {
           id: 27,
           text: "How do microplastics affect marine animals when ingested?",
           options: [
-            "They help the animals swim faster.",
-            "They cause blockages, reduce appetite, and release toxins.",
+            "They provide nutrients for growth.",
             "They make the animals immune to diseases.",
-            "They provide nutrients for growth."
+            "They help the animals swim faster.",
+            "They cause blockages, reduce appetite, and release toxins."
           ],
-          correct: 1,
+          correct: 3,
           explain: "Đoạn 2: 'Once ingested, microplastics can cause physical blockages, reduce appetite, and leach harmful chemicals'."
         },
         {
@@ -311,8 +316,8 @@ const TEST_DATA = {
           options: [
             "Through the air we breathe in forests.",
             "Through the consumption of contaminated seafood via the food chain.",
-            "By using plastic credit cards.",
-            "Through drinking tap water only."
+            "Through drinking tap water only.",
+            "By using plastic credit cards."
           ],
           correct: 1,
           explain: "Đoạn 3: 'microplastics bioaccumulate in larger predators, eventually reaching human dining tables when we consume seafood'."
@@ -320,7 +325,7 @@ const TEST_DATA = {
         {
           id: 29,
           text: "The word \"ingestion\" in paragraph 3 is closest in meaning to _______.",
-          options: ["eating or swallowing", "manufacturing", "cleaning", "excreting"],
+          options: ["eating or swallowing", "manufacturing", "excreting", "cleaning"],
           correct: 0,
           explain: "'Ingestion' = sự ăn, nuốt thức ăn vào cơ thể (eating or swallowing)."
         },
@@ -328,9 +333,9 @@ const TEST_DATA = {
           id: 30,
           text: "What solution is suggested in the final paragraph to tackle the microplastic crisis?",
           options: [
-            "Banning all seafood consumption globally.",
-            "Reducing plastic production and developing biodegradable alternatives.",
             "Building walls to stop plastic from reaching the ocean.",
+            "Reducing plastic production and developing biodegradable alternatives.",
+            "Banning all seafood consumption globally.",
             "Using chemicals to dissolve plastics in the sea."
           ],
           correct: 1,

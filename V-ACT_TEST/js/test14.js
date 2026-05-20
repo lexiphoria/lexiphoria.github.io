@@ -19,29 +19,29 @@ const TEST_DATA = {
         {
           id: 2,
           text: "It took her several weeks to _______ the shock of losing her job.",
-          options: ["get over", "get by", "get off", "get through"],
+          options: ["get over", "get off", "get through", "get by"],
           correct: 0,
           explain: "Phrasal verb: 'get over' = vượt qua (cú sốc, bệnh tật). Các cụm khác: 'get by' = xoay xở sống qua ngày, 'get off' = xuống xe, 'get through' = hoàn thành/kết nối."
         },
         {
           id: 3,
           text: "The _______ you study for the entrance exam, the _______ results you will achieve.",
-          options: ["harder / better", "hardest / best", "more hard / more good", "hard / good"],
-          correct: 0,
+          options: ["hard / good", "hardest / best", "more hard / more good", "harder / better"],
+          correct: 3,
           explain: "Cấu trúc so sánh kép: 'The + comparative + S + V, the + comparative + S + V'."
         },
         {
           id: 4,
           text: "Only when you grow up _______ fully understand your parents' decisions.",
-          options: ["will you", "you will", "do you", "you do"],
-          correct: 0,
+          options: ["you do", "will you", "do you", "you will"],
+          correct: 1,
           explain: "Đảo ngữ với cấu trúc 'Only when + S + V, trợ động từ + S + V'. Ở đây dùng 'will you'."
         },
         {
           id: 5,
           text: "She decided to walk to the office _______ the extremely heavy rain.",
-          options: ["despite", "although", "because of", "even though"],
-          correct: 0,
+          options: ["although", "despite", "even though", "because of"],
+          correct: 1,
           explain: "Giới từ chỉ nhượng bộ: 'despite' đi với cụm danh từ (the extremely heavy rain)."
         }
       ]
@@ -54,35 +54,35 @@ const TEST_DATA = {
       questions: [
         {
           id: 6,
-          text: 'Having <span class="underline-error">lived</span> (A) in New York for ten years, he <span class="underline-error">speaks</span> (B) English <span class="underline-error">as</span> (C) a native <span class="underline-error">speaker</span> (D).',
+          text: "Having <span class=\"underline-error\">lived</span> (A) in New York for ten years, he <span class=\"underline-error\">speaks</span> (B) English <span class=\"underline-error\">as</span> (C) a native <span class=\"underline-error\">speaker</span> (D).",
           options: ["A. lived", "B. speaks", "C. as", "D. speaker"],
           correct: 2,
           explain: "Lỗi dùng từ so sánh: Để so sánh cách thức hành động như ai đó (mang tính chất giống như), ta dùng giới từ 'like', không dùng 'as'. Sửa 'as' thành 'like'."
         },
         {
           id: 7,
-          text: 'The children <span class="underline-error">were</span> (A) playing <span class="underline-error">noise</span> (B) in the garden while <span class="underline-error">their mother</span> (C) was <span class="underline-error">cooking</span> (D).',
+          text: "The children <span class=\"underline-error\">were</span> (A) playing <span class=\"underline-error\">noise</span> (B) in the garden while <span class=\"underline-error\">their mother</span> (C) was <span class=\"underline-error\">cooking</span> (D).",
           options: ["A. were", "B. noise", "C. their mother", "D. cooking"],
           correct: 1,
           explain: "Từ loại: Bổ nghĩa cho động từ thường 'playing' phải dùng trạng từ. Sửa danh từ 'noise' thành trạng từ 'noisily'."
         },
         {
           id: 8,
-          text: 'Although he <span class="underline-error">had worked</span> (A) extremely <span class="underline-error">hard</span> (B), <span class="underline-error">but</span> (C) he failed the final <span class="underline-error">examination</span> (D).',
+          text: "Although he <span class=\"underline-error\">had worked</span> (A) extremely <span class=\"underline-error\">hard</span> (B), <span class=\"underline-error\">but</span> (C) he failed the final <span class=\"underline-error\">examination</span> (D).",
           options: ["A. had worked", "B. hard", "C. but", "D. examination"],
           correct: 2,
           explain: "Liên từ: Không sử dụng cả 'Although' và 'but' trong cùng một câu ghép. Sửa: bỏ 'but'."
         },
         {
           id: 9,
-          text: 'Each of the <span class="underline-error">eligible</span> (A) candidates <span class="underline-error">are</span> (B) required to write <span class="underline-error">an essay</span> (C) on environmental <span class="underline-error">protection</span> (D).',
+          text: "Each of the <span class=\"underline-error\">eligible</span> (A) candidates <span class=\"underline-error\">are</span> (B) required to write <span class=\"underline-error\">an essay</span> (C) on environmental <span class=\"underline-error\">protection</span> (D).",
           options: ["A. eligible", "B. are", "C. an essay", "D. protection"],
           correct: 1,
           explain: "Sự hòa hợp chủ vị: Chủ ngữ 'Each of + N số nhiều' đi với động từ chia số ít. Sửa 'are' thành 'is'."
         },
         {
           id: 10,
-          text: 'I am <span class="underline-error">looking forward</span> (A) to <span class="underline-error">meet</span> (B) my grandparents <span class="underline-error">during</span> (C) the summer <span class="underline-error">holiday</span> (D).',
+          text: "I am <span class=\"underline-error\">looking forward</span> (A) to <span class=\"underline-error\">meet</span> (B) my grandparents <span class=\"underline-error\">during</span> (C) the summer <span class=\"underline-error\">holiday</span> (D).",
           options: ["A. looking forward", "B. meet", "C. during", "D. holiday"],
           correct: 1,
           explain: "Cấu trúc động từ: 'look forward to + V-ing' (trông mong làm gì). Sửa 'meet' thành 'meeting'."
@@ -100,59 +100,59 @@ const TEST_DATA = {
           text: "I didn't have enough money, so I couldn't buy that computer.",
           options: [
             "If I had enough money, I could buy that computer.",
-            "If I had had enough money, I could have bought that computer.",
             "If I had enough money, I could have bought that computer.",
+            "If I had had enough money, I could have bought that computer.",
             "If I didn't have enough money, I couldn't have bought that computer."
           ],
-          correct: 1,
+          correct: 2,
           explain: "Giả định ngược quá khứ dùng câu điều kiện loại 3: 'If + S + had + V3/ed, S + could/would have + V3/ed'."
         },
         {
           id: 12,
           text: "It is possible that she didn't hear the announcement.",
           options: [
-            "She must not have heard the announcement.",
             "She may not have heard the announcement.",
             "She shouldn't have heard the announcement.",
+            "She must not have heard the announcement.",
             "She needn't have heard the announcement."
           ],
-          correct: 1,
+          correct: 0,
           explain: "Dự đoán có khả năng ở quá khứ (không chắc chắn 100%): 'may/might not have + V3/ed'."
         },
         {
           id: 13,
           text: "They are repairing my car at the garage at the moment.",
           options: [
-            "My car is being repaired at the garage at the moment.",
             "My car is repaired at the garage at the moment.",
-            "My car is repairing at the garage at the moment.",
-            "My car has been repaired at the garage at the moment."
+            "My car is being repaired at the garage at the moment.",
+            "My car has been repaired at the garage at the moment.",
+            "My car is repairing at the garage at the moment."
           ],
-          correct: 0,
+          correct: 1,
           explain: "Chuyển sang bị động thì Hiện tại tiếp diễn: 'S + am/is/are + being + V3/ed'."
         },
         {
           id: 14,
           text: "I regret not buying that book when I had the chance.",
           options: [
-            "I wish I bought that book when I had the chance.",
             "I wish I had bought that book when I had the chance.",
-            "I regret to buy that book when I had the chance.",
-            "If only I didn't buy that book when I had the chance."
+            "I wish I bought that book when I had the chance.",
+            "If only I didn't buy that book when I had the chance.",
+            "I regret to buy that book when I had the chance."
           ],
-          correct: 1,
+          correct: 0,
           explain: "Hối tiếc về một việc đã không làm trong quá khứ tương đương với lời ước quá khứ: 'S + regret + not V-ing' = 'S + wish + S + had + V3/ed'."
         },
         {
           id: 15,
           text: "We started learning English six years ago.",
           options: [
-            "We have learned English for six years.",
-            "We learned English for six years.",
             "We have started learning English for six years.",
-            "We didn't learn English six years ago."
+            "We learned English for six years.",
+            "We didn't learn English six years ago.",
+            "We have learned English for six years."
           ],
-          correct: 0,
+          correct: 3,
           explain: "Chuyển đổi thì: 'S + started + V-ing + khoảng thời gian + ago' = 'S + has/have + V3/ed + for + khoảng thời gian' (bỏ start)."
         }
       ]
@@ -172,62 +172,62 @@ const TEST_DATA = {
           id: 16,
           text: "What is the primary focus of the passage?",
           options: [
-            "The history of traditional textile manufacturing.",
             "The fast fashion model and its environmental and social costs.",
             "How to start a clothing line on a budget.",
+            "The history of traditional textile manufacturing.",
             "The fashion preferences of modern teenagers."
           ],
-          correct: 1,
+          correct: 0,
           explain: "Bài đọc tập trung phân tích mô hình thời trang nhanh và các tác động tiêu cực của nó tới môi trường và quyền lợi người lao động."
         },
         {
           id: 17,
           text: "According to paragraph 1, how do fast fashion brands keep up with consumer demand?",
           options: [
-            "By selling vintage clothes from the past.",
+            "By using only organic and sustainable fabrics.",
             "By producing small batches of expensive designer clothing.",
-            "By rapidly copying runway designs and manufacturing them cheaply.",
-            "By using only organic and sustainable fabrics."
+            "By selling vintage clothes from the past.",
+            "By rapidly copying runway designs and manufacturing them cheaply."
           ],
-          correct: 2,
+          correct: 3,
           explain: "Đoạn 1: 'rapidly mimicking the latest runway trends... producing high volumes of clothing at extremely low costs'."
         },
         {
           id: 18,
           text: "The word \"garment\" in paragraph 1 is closest in meaning to _______.",
-          options: ["piece of clothing", "fashion show", "shopping mall", "shipping container"],
-          correct: 0,
+          options: ["shopping mall", "shipping container", "piece of clothing", "fashion show"],
+          correct: 2,
           explain: "'Garment' = quần áo, đồ may mặc (piece of clothing)."
         },
         {
           id: 19,
           text: "According to paragraph 2, what is a major environmental problem caused by fast fashion dyeing processes?",
           options: [
+            "Soil erosion from building factories.",
             "Air pollution from toxic smoke.",
             "Untreated toxic chemical wastewater flowing into rivers.",
-            "High noise levels in manufacturing plants.",
-            "Soil erosion from building factories."
+            "High noise levels in manufacturing plants."
           ],
-          correct: 1,
+          correct: 2,
           explain: "Đoạn 2: 'toxic chemicals are used in the dyeing process, which often flow untreated into local rivers'."
         },
         {
           id: 20,
           text: "Why are synthetic fibers like polyester problematic according to the passage?",
           options: [
-            "They are too expensive to produce.",
             "They do not biodegrade and decompose very slowly in landfills.",
             "They dissolve in water too quickly.",
+            "They are too expensive to produce.",
             "They cannot be dyed in different colors."
           ],
-          correct: 1,
+          correct: 0,
           explain: "Đoạn 2: 'synthetic fibers... do not biodegrade. Instead, they... accumulate in landfills, where they can take hundreds of years to decompose'."
         },
         {
           id: 21,
           text: "The word \"endure\" in paragraph 3 is closest in meaning to _______.",
-          options: ["enjoy", "suffer", "avoid", "change"],
-          correct: 1,
+          options: ["change", "enjoy", "avoid", "suffer"],
+          correct: 3,
           explain: "'Endure' = gánh chịu, chịu đựng gian khổ (suffer)."
         },
         {
@@ -235,11 +235,11 @@ const TEST_DATA = {
           text: "What action does the author recommend for consumers to address fast fashion issues?",
           options: [
             "Buying more clothes to support the economy.",
-            "Switching to sustainable fashion habits like buying fewer, ethical items.",
             "Creating their own clothing brands.",
+            "Switching to sustainable fashion habits like buying fewer, ethical items.",
             "Learning how to sew clothes at home."
           ],
-          correct: 1,
+          correct: 2,
           explain: "Đoạn cuối khuyên người tiêu dùng chuyển sang thời trang bền vững: 'buying fewer, higher-quality garments, supporting ethical brands, and recycling old clothes'."
         }
       ]
@@ -259,10 +259,10 @@ const TEST_DATA = {
           id: 23,
           text: "What is the main idea of the passage?",
           options: [
-            "The dominance of English in global business.",
-            "The threat to linguistic diversity and the efforts to preserve endangered languages.",
             "How computers translate foreign languages.",
-            "The grammar rules of indigenous languages."
+            "The threat to linguistic diversity and the efforts to preserve endangered languages.",
+            "The grammar rules of indigenous languages.",
+            "The dominance of English in global business."
           ],
           correct: 1,
           explain: "Bài viết nói về mối đe dọa đối với sự đa dạng ngôn ngữ thế giới và các nỗ lực nhằm khôi phục, bảo tồn ngôn ngữ bản địa."
@@ -271,12 +271,12 @@ const TEST_DATA = {
           id: 24,
           text: "What does the author mean by calling language a \"repository\" in paragraph 1?",
           options: [
-            "A dangerous place to store things.",
             "A storage place for culture, history, and knowledge.",
-            "A book containing grammar rules.",
-            "A translation website."
+            "A translation website.",
+            "A dangerous place to store things.",
+            "A book containing grammar rules."
           ],
-          correct: 1,
+          correct: 0,
           explain: "Đoạn 1: 'repository of a community's history, culture, and unique way of understanding the world' (kho lưu trữ)."
         },
         {
@@ -284,11 +284,11 @@ const TEST_DATA = {
           text: "According to paragraph 1, how many of the world's languages are endangered?",
           options: [
             "All of them.",
+            "Very few of them.",
             "Nearly half of them.",
-            "Exactly 100 languages.",
-            "Very few of them."
+            "Exactly 100 languages."
           ],
-          correct: 1,
+          correct: 2,
           explain: "Đoạn 1: 'of the roughly 7,000 languages spoken worldwide, nearly half are endangered'."
         },
         {
@@ -296,23 +296,23 @@ const TEST_DATA = {
           text: "According to paragraph 2, what is one major reason why young people abandon their native languages?",
           options: [
             "The grammar is too difficult to learn.",
-            "Major languages offer better economic opportunities.",
+            "Computers cannot type their native alphabets.",
             "They are not interested in talking to their families.",
-            "Computers cannot type their native alphabets."
+            "Major languages offer better economic opportunities."
           ],
-          correct: 1,
+          correct: 3,
           explain: "Đoạn 2: 'abandon their native languages in favor of languages that offer better economic opportunities'."
         },
         {
           id: 27,
           text: "The word \"transmission\" in paragraph 2 refers to _______.",
           options: [
-            "driving a car",
-            "passing language and culture from one generation to the next",
             "sending emails",
-            "broadcasting TV shows"
+            "broadcasting TV shows",
+            "passing language and culture from one generation to the next",
+            "driving a car"
           ],
-          correct: 1,
+          correct: 2,
           explain: "'Transmission' ở đây chỉ sự truyền đạt, truyền dạy ngôn ngữ từ thế hệ này sang thế hệ sau."
         },
         {
@@ -320,20 +320,20 @@ const TEST_DATA = {
           text: "What are \"language nests\" as described in paragraph 3?",
           options: [
             "Nests built by birds in trees.",
-            "Immersion programs where children learn native languages from elders.",
             "Libraries that store ancient books.",
-            "Social media groups for language learners."
+            "Social media groups for language learners.",
+            "Immersion programs where children learn native languages from elders."
           ],
-          correct: 1,
+          correct: 3,
           explain: "Đoạn 3: 'immersion programs, often called 'language nests,' where children are taught entirely in their native tongue by community elders'."
         },
         {
           id: 29,
           text: "How is modern technology helping language activists?",
           options: [
-            "By automatically translating all languages into English.",
-            "By providing tools like apps and online dictionaries to document and share resources.",
             "By replacing human teachers with robots.",
+            "By providing tools like apps and online dictionaries to document and share resources.",
+            "By automatically translating all languages into English.",
             "By making children study online only."
           ],
           correct: 1,
@@ -342,8 +342,8 @@ const TEST_DATA = {
         {
           id: 30,
           text: "The word \"revitalize\" in paragraph 3 is closest in meaning to _______.",
-          options: ["destroy", "strengthen", "study", "forget"],
-          correct: 1,
+          options: ["study", "forget", "destroy", "strengthen"],
+          correct: 3,
           explain: "'Revitalize' = đem lại sức sống mới, tăng cường, hồi sinh (strengthen)."
         }
       ]

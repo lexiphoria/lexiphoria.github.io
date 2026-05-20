@@ -12,36 +12,36 @@ const TEST_DATA = {
         {
           id: 1,
           text: "The student _______ assignment got the highest grade was praised by the teacher.",
-          options: ["who", "whom", "which", "whose"],
-          correct: 3,
+          options: ["whose", "which", "whom", "who"],
+          correct: 0,
           explain: "Đại từ quan hệ chỉ sở hữu: 'whose + Noun' (bài tập của học sinh đó)."
         },
         {
           id: 2,
           text: "By the time the police arrived, the burglar _______.",
-          options: ["escaped", "has escaped", "had escaped", "was escaping"],
-          correct: 2,
+          options: ["was escaping", "has escaped", "escaped", "had escaped"],
+          correct: 3,
           explain: "Hành động xảy ra trước một thời điểm/hành động khác trong quá khứ (arrived) -> dùng Quá khứ hoàn thành (had V3/ed)."
         },
         {
           id: 3,
           text: "It is extremely important that the documents _______ signed immediately.",
-          options: ["are", "be", "were", "to be"],
-          correct: 1,
+          options: ["be", "are", "to be", "were"],
+          correct: 0,
           explain: "Thể giả định (Subjunctive): It is important that S + (should) + V-nguyên thể. Cấu trúc bị động nên V-nguyên thể của tobe là 'be'."
         },
         {
           id: 4,
           text: "The company's new policy will _______ a significant impact on employee morale.",
-          options: ["make", "do", "have", "create"],
-          correct: 2,
+          options: ["have", "do", "make", "create"],
+          correct: 0,
           explain: "Collocation: 'have an impact on' = có tác động đến."
         },
         {
           id: 5,
           text: "He was offered the job despite his _______ of experience in the field.",
-          options: ["lack", "absence", "shortage", "loss"],
-          correct: 0,
+          options: ["shortage", "lack", "loss", "absence"],
+          correct: 1,
           explain: "Cụm từ cố định: 'lack of experience' = thiếu kinh nghiệm."
         }
       ]
@@ -54,35 +54,35 @@ const TEST_DATA = {
       questions: [
         {
           id: 6,
-          text: 'Neither the manager <span class="underline-error">nor</span> (A) his assistants <span class="underline-error">is</span> (B) going <span class="underline-error">to attend</span> (C) the conference <span class="underline-error">tomorrow</span> (D).',
+          text: "Neither the manager <span class=\"underline-error\">nor</span> (A) his assistants <span class=\"underline-error\">is</span> (B) going <span class=\"underline-error\">to attend</span> (C) the conference <span class=\"underline-error\">tomorrow</span> (D).",
           options: ["A. nor", "B. is", "C. to attend", "D. tomorrow"],
           correct: 1,
           explain: "Sự hòa hợp chủ vị: 'Neither S1 nor S2 + V'. Động từ chia theo S2 ('his assistants' - số nhiều) -> 'are'."
         },
         {
           id: 7,
-          text: 'The film was <span class="underline-error">so</span> (A) <span class="underline-error">bored</span> (B) that many people <span class="underline-error">left</span> (C) the cinema <span class="underline-error">early</span> (D).',
+          text: "The film was <span class=\"underline-error\">so</span> (A) <span class=\"underline-error\">bored</span> (B) that many people <span class=\"underline-error\">left</span> (C) the cinema <span class=\"underline-error\">early</span> (D).",
           options: ["A. so", "B. bored", "C. left", "D. early"],
           correct: 1,
           explain: "Tính từ miêu tả tính chất của vật (The film) phải dùng đuôi -ing. Đổi 'bored' thành 'boring'."
         },
         {
           id: 8,
-          text: 'It is <span class="underline-error">believed</span> (A) that <span class="underline-error">global warming</span> (B) is <span class="underline-error">caused</span> (C) by <span class="underline-error">human active</span> (D).',
+          text: "It is <span class=\"underline-error\">believed</span> (A) that <span class=\"underline-error\">global warming</span> (B) is <span class=\"underline-error\">caused</span> (C) by <span class=\"underline-error\">human active</span> (D).",
           options: ["A. believed", "B. global warming", "C. caused", "D. human active"],
           correct: 3,
           explain: "Cấu tạo từ (Word form): Đứng sau tính từ 'human' cần danh từ. Đổi 'active' thành 'activities'."
         },
         {
           id: 9,
-          text: 'She asked me <span class="underline-error">whether</span> (A) <span class="underline-error">did I know</span> (B) the way <span class="underline-error">to</span> (C) the nearest <span class="underline-error">post office</span> (D).',
+          text: "She asked me <span class=\"underline-error\">whether</span> (A) <span class=\"underline-error\">did I know</span> (B) the way <span class=\"underline-error\">to</span> (C) the nearest <span class=\"underline-error\">post office</span> (D).",
           options: ["A. whether", "B. did I know", "C. to", "D. post office"],
           correct: 1,
           explain: "Câu tường thuật không dùng cấu trúc đảo ngữ (không mượn trợ động từ). Đổi 'did I know' thành 'I knew'."
         },
         {
           id: 10,
-          text: 'I <span class="underline-error">am used</span> (A) to <span class="underline-error">get up</span> (B) early <span class="underline-error">in</span> (C) the morning to <span class="underline-error">do exercise</span> (D).',
+          text: "I <span class=\"underline-error\">am used</span> (A) to <span class=\"underline-error\">get up</span> (B) early <span class=\"underline-error\">in</span> (C) the morning to <span class=\"underline-error\">do exercise</span> (D).",
           options: ["A. am used", "B. get up", "C. in", "D. do exercise"],
           correct: 1,
           explain: "Cấu trúc 'be used to + V-ing' (quen với việc gì). Đổi 'get up' thành 'getting up'."
@@ -99,36 +99,36 @@ const TEST_DATA = {
           id: 11,
           text: "Perhaps she missed the train this morning.",
           options: [
-            "She must have missed the train this morning.",
-            "She may have missed the train this morning.",
+            "She can't have missed the train this morning.",
             "She shouldn't have missed the train this morning.",
-            "She can't have missed the train this morning."
+            "She must have missed the train this morning.",
+            "She may have missed the train this morning."
           ],
-          correct: 1,
+          correct: 3,
           explain: "Dự đoán 'Perhaps' (có lẽ) trong quá khứ -> Dùng 'may/might have V3/ed'."
         },
         {
           id: 12,
           text: "\"I will not help you with your homework,\" he said to his sister.",
           options: [
-            "He promised not to help his sister with her homework.",
-            "He denied helping his sister with her homework.",
             "He refused to help his sister with her homework.",
+            "He denied helping his sister with her homework.",
+            "He promised not to help his sister with her homework.",
             "He threatened not to help his sister with her homework."
           ],
-          correct: 2,
+          correct: 0,
           explain: "Tường thuật sự từ chối: 'I will not...' -> S + refused + to V (từ chối làm gì)."
         },
         {
           id: 13,
           text: "I haven't been to the cinema for two months.",
           options: [
+            "I went to the cinema two months ago.",
             "The last time I went to the cinema was two months ago.",
             "I didn't go to the cinema two months ago.",
-            "I went to the cinema two months ago.",
             "It is two months when I went to the cinema."
           ],
-          correct: 0,
+          correct: 1,
           explain: "Cấu trúc: 'S + haven't/hasn't V3/ed + for + khoảng thời gian' = 'The last time + S + V2/ed + was + khoảng thời gian + ago'."
         },
         {
@@ -136,9 +136,9 @@ const TEST_DATA = {
           text: "They are repairing the roof of my house.",
           options: [
             "The roof of my house is being repaired.",
-            "The roof of my house is repairing.",
+            "My house is being repaired the roof.",
             "The roof of my house are being repaired.",
-            "My house is being repaired the roof."
+            "The roof of my house is repairing."
           ],
           correct: 0,
           explain: "Bị động thì hiện tại tiếp diễn: S(O) + am/is/are + being + V3/ed."
@@ -147,12 +147,12 @@ const TEST_DATA = {
           id: 15,
           text: "Because he didn't study hard, he failed the exam.",
           options: [
+            "If he had studied hard, he wouldn't have failed the exam.",
             "If he studied hard, he wouldn't fail the exam.",
-            "If he had studied hard, he wouldn't fail the exam.",
             "Unless he had studied hard, he wouldn't have failed the exam.",
-            "If he had studied hard, he wouldn't have failed the exam."
+            "If he had studied hard, he wouldn't fail the exam."
           ],
-          correct: 3,
+          correct: 0,
           explain: "Sự thật ở quá khứ -> Dùng câu điều kiện loại 3. (Nếu anh ta ĐÃ học chăm, anh ta ĐÃ KHÔNG trượt)."
         }
       ]
@@ -174,30 +174,30 @@ const TEST_DATA = {
           text: "What is the primary topic of the passage?",
           options: [
             "The history of ancient cities.",
-            "The causes, negative consequences, and sustainable solutions of urbanization.",
             "Why rural areas are better places to live than cities.",
+            "The causes, negative consequences, and sustainable solutions of urbanization.",
             "How to build smart public transportation systems."
           ],
-          correct: 1,
+          correct: 2,
           explain: "Bài đọc nêu nguyên nhân đô thị hóa (đoạn 1), hậu quả (đoạn 2, 3), và giải pháp đô thị bền vững (đoạn 4)."
         },
         {
           id: 17,
           text: "According to paragraph 1, why do people migrate to cities?",
           options: [
-            "To escape the noise of the countryside.",
-            "To find cheaper housing options.",
+            "Because governments force them to move.",
             "For better jobs, healthcare, and education.",
-            "Because governments force them to move."
+            "To escape the noise of the countryside.",
+            "To find cheaper housing options."
           ],
-          correct: 2,
+          correct: 1,
           explain: "Đoạn 1: 'promise of better employment opportunities, improved access to healthcare and education...'"
         },
         {
           id: 18,
-          text: 'The word "proliferation" in paragraph 2 is closest in meaning to _______.',
-          options: ["rapid increase", "destruction", "improvement", "hidden danger"],
-          correct: 0,
+          text: "The word \"proliferation\" in paragraph 2 is closest in meaning to _______.",
+          options: ["hidden danger", "improvement", "rapid increase", "destruction"],
+          correct: 2,
           explain: "'Proliferation' = sự sinh sôi, tăng nhanh (rapid increase). Ở đây chỉ sự mọc lên nhanh chóng của các khu ổ chuột."
         },
         {
@@ -205,9 +205,9 @@ const TEST_DATA = {
           text: "What health risk is mentioned in paragraph 2 as a result of poor urban infrastructure?",
           options: [
             "Lack of clean water and sanitation in slums.",
+            "Injuries from collapsing modern buildings.",
             "Overeating due to too many restaurants.",
-            "Mental stress from high-paying jobs.",
-            "Injuries from collapsing modern buildings."
+            "Mental stress from high-paying jobs."
           ],
           correct: 0,
           explain: "Đoạn 2: 'These areas often lack basic services such as clean water, sanitation... posing serious health risks'."
@@ -217,18 +217,18 @@ const TEST_DATA = {
           text: "What does 'urban sprawl' refer to in paragraph 3?",
           options: [
             "The building of very tall skyscrapers.",
-            "The outward expansion of cities into surrounding natural land.",
             "The movement of people from cities back to the countryside.",
+            "The outward expansion of cities into surrounding natural land.",
             "The increase of wild animals living in city parks."
           ],
-          correct: 1,
+          correct: 2,
           explain: "Đoạn 3: 'As cities expand outward—a phenomenon known as urban sprawl—they consume surrounding agricultural land and forests'."
         },
         {
           id: 21,
-          text: 'The word "combat" in paragraph 4 is closest in meaning to _______.',
-          options: ["fight or address", "support", "ignore", "increase"],
-          correct: 0,
+          text: "The word \"combat\" in paragraph 4 is closest in meaning to _______.",
+          options: ["increase", "support", "ignore", "fight or address"],
+          correct: 3,
           explain: "'Combat' = chiến đấu, chống lại, giải quyết (fight against or address a problem)."
         },
         {
@@ -236,11 +236,11 @@ const TEST_DATA = {
           text: "Which of the following is NOT a feature of a 'sustainable city' mentioned in paragraph 4?",
           options: [
             "Efficient public transportation.",
-            "Expanded green spaces and parks.",
             "Using technology to optimize energy consumption.",
-            "Banning all private businesses from the city center."
+            "Banning all private businesses from the city center.",
+            "Expanded green spaces and parks."
           ],
-          correct: 3,
+          correct: 2,
           explain: "Phương án D (cấm kinh doanh tư nhân) không được nhắc đến trong đoạn 4. A, B, C đều có."
         }
       ]
@@ -262,52 +262,52 @@ const TEST_DATA = {
           text: "How did the ancient Maya and Aztecs consume chocolate?",
           options: [
             "As sweet, solid bars mixed with nuts.",
-            "As a bitter, spicy beverage.",
+            "As a powder sprinkled over their food.",
             "As a medicine applied to the skin.",
-            "As a powder sprinkled over their food."
+            "As a bitter, spicy beverage."
           ],
-          correct: 1,
+          correct: 3,
           explain: "Đoạn 1: 'They prepared it as a bitter, frothy beverage, often mixed with spices, chili peppers...'"
         },
         {
           id: 24,
           text: "What did the ancient civilizations use 'xocolatl' for besides drinking?",
           options: [
-            "As a weapon in wars.",
-            "As a form of currency and in religious ceremonies.",
             "To build houses.",
-            "To dye their clothes."
+            "As a weapon in wars.",
+            "To dye their clothes.",
+            "As a form of currency and in religious ceremonies."
           ],
-          correct: 1,
+          correct: 3,
           explain: "Đoạn 1: 'used in religious ceremonies and even served as a form of currency'."
         },
         {
           id: 25,
           text: "According to paragraph 2, why did the Spanish add sugar to chocolate?",
           options: [
+            "Because cacao beans were too spicy.",
             "To make it last longer during ocean voyages.",
-            "To make it cheaper to produce.",
             "To suit European tastes and remove the bitterness.",
-            "Because cacao beans were too spicy."
+            "To make it cheaper to produce."
           ],
           correct: 2,
           explain: "Đoạn 2: 'To suit European palates, the Spanish added cane sugar and honey to the beverage, neutralizing its bitterness'."
         },
         {
           id: 26,
-          text: 'The word "accessible" in paragraph 3 is closest in meaning to _______.',
-          options: ["expensive", "difficult to find", "available to many people", "healthy"],
-          correct: 2,
+          text: "The word \"accessible\" in paragraph 3 is closest in meaning to _______.",
+          options: ["expensive", "healthy", "difficult to find", "available to many people"],
+          correct: 3,
           explain: "'Accessible' = dễ tiếp cận, nhiều người có thể mua được. Sự kiện Cách mạng Công nghiệp biến chocolate từ đồ xa xỉ thành thứ ai cũng mua được."
         },
         {
           id: 27,
           text: "What was the significance of Coenraad Johannes van Houten's invention?",
           options: [
+            "It proved that chocolate had medical benefits.",
             "It allowed farmers to grow cacao in Europe.",
-            "It created the first solid chocolate bar immediately.",
             "It separated cocoa butter from beans, making cocoa powder.",
-            "It proved that chocolate had medical benefits."
+            "It created the first solid chocolate bar immediately."
           ],
           correct: 2,
           explain: "Đoạn 3: 'invented the cocoa press, a machine that could separate the fatty cocoa butter from the roasted cacao beans'."
@@ -317,30 +317,30 @@ const TEST_DATA = {
           text: "Who created the first solid chocolate bar?",
           options: [
             "The Maya",
-            "Spanish conquistadors",
             "Coenraad Johannes van Houten",
-            "J.S. Fry & Sons"
+            "J.S. Fry & Sons",
+            "Spanish conquistadors"
           ],
-          correct: 3,
+          correct: 2,
           explain: "Đoạn 3: 'in 1847, the British company J.S. Fry & Sons... create the world's first solid chocolate bar'."
         },
         {
           id: 29,
-          text: 'The word "rampant" in paragraph 4 is closest in meaning to _______.',
-          options: ["rare", "widespread and uncontrolled", "improving", "legal"],
-          correct: 1,
+          text: "The word \"rampant\" in paragraph 4 is closest in meaning to _______.",
+          options: ["rare", "improving", "legal", "widespread and uncontrolled"],
+          correct: 3,
           explain: "'Rampant' = tràn lan, phổ biến, không kiểm soát được (widespread). Nói về các vấn đề lao động trẻ em, phá rừng."
         },
         {
           id: 30,
           text: "What is the purpose of 'Fair Trade' chocolate mentioned in the final paragraph?",
           options: [
-            "To ensure farmers get fair wages and farming is sustainable.",
-            "To make chocolate taste sweeter without using sugar.",
             "To stop people from eating too much chocolate.",
+            "To make chocolate taste sweeter without using sugar.",
+            "To ensure farmers get fair wages and farming is sustainable.",
             "To move all cacao farming to Europe."
           ],
-          correct: 0,
+          correct: 2,
           explain: "Đoạn 4: 'ensures that farmers receive a living wage and that the product is sourced sustainably'."
         }
       ]

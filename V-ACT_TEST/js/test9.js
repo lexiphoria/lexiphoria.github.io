@@ -12,36 +12,36 @@ const TEST_DATA = {
         {
           id: 1,
           text: "I remember _______ to the zoo when I was a little child.",
-          options: ["to take", "taking", "being taken", "to be taken"],
-          correct: 2,
+          options: ["to be taken", "to take", "taking", "being taken"],
+          correct: 3,
           explain: "Cấu trúc: remember + V-ing (nhớ đã làm gì). Vì được đưa đi nên phải dùng bị động: remember + being V3/ed."
         },
         {
           id: 2,
           text: "The book was so fascinating that I couldn't put it _______.",
-          options: ["on", "down", "off", "up"],
-          correct: 1,
+          options: ["off", "on", "down", "up"],
+          correct: 2,
           explain: "Phrasal verb: 'put down' = đặt xuống. Ý nói sách hay quá không thể bỏ xuống được."
         },
         {
           id: 3,
           text: "Not only _______ the exam, but he also got a scholarship.",
-          options: ["did he pass", "he passed", "passed he", "he did pass"],
+          options: ["did he pass", "he did pass", "he passed", "passed he"],
           correct: 0,
           explain: "Đảo ngữ với Not only: Not only + trợ động từ + S + V, but S also V."
         },
         {
           id: 4,
           text: "If I had known you were coming, I _______ a cake.",
-          options: ["will bake", "would bake", "would have baked", "baked"],
-          correct: 2,
+          options: ["would bake", "would have baked", "will bake", "baked"],
+          correct: 1,
           explain: "Câu điều kiện loại 3: If S had V3/ed, S would have V3/ed."
         },
         {
           id: 5,
           text: "She was very _______ in the story her grandfather was telling.",
-          options: ["interest", "interesting", "interested", "interestingly"],
-          correct: 2,
+          options: ["interesting", "interest", "interestingly", "interested"],
+          correct: 3,
           explain: "Tính từ chỉ cảm xúc của người dùng đuôi -ed: 'interested in' (quan tâm, hứng thú với)."
         }
       ]
@@ -54,35 +54,35 @@ const TEST_DATA = {
       questions: [
         {
           id: 6,
-          text: 'The <span class="underline-error">furniture</span> (A) in the living room <span class="underline-error">are</span> (B) quite old and <span class="underline-error">needs</span> (C) to be <span class="underline-error">replaced</span> (D).',
+          text: "The <span class=\"underline-error\">furniture</span> (A) in the living room <span class=\"underline-error\">are</span> (B) quite old and <span class=\"underline-error\">needs</span> (C) to be <span class=\"underline-error\">replaced</span> (D).",
           options: ["A. furniture", "B. are", "C. needs", "D. replaced"],
           correct: 1,
           explain: "'Furniture' là danh từ không đếm được, động từ phải chia số ít. Đổi 'are' thành 'is'."
         },
         {
           id: 7,
-          text: 'My brother <span class="underline-error">suggested</span> (A) <span class="underline-error">to go</span> (B) for a walk <span class="underline-error">instead of</span> (C) watching <span class="underline-error">TV</span> (D).',
+          text: "My brother <span class=\"underline-error\">suggested</span> (A) <span class=\"underline-error\">to go</span> (B) for a walk <span class=\"underline-error\">instead of</span> (C) watching <span class=\"underline-error\">TV</span> (D).",
           options: ["A. suggested", "B. to go", "C. instead of", "D. TV"],
           correct: 1,
           explain: "Sau động từ 'suggest' dùng V-ing. Đổi 'to go' thành 'going'."
         },
         {
           id: 8,
-          text: 'It <span class="underline-error">was</span> (A) an <span class="underline-error">exhausted</span> (B) day at work, so I went straight <span class="underline-error">to bed</span> (C) when I got <span class="underline-error">home</span> (D).',
+          text: "It <span class=\"underline-error\">was</span> (A) an <span class=\"underline-error\">exhausted</span> (B) day at work, so I went straight <span class=\"underline-error\">to bed</span> (C) when I got <span class=\"underline-error\">home</span> (D).",
           options: ["A. was", "B. exhausted", "C. to bed", "D. home"],
           correct: 1,
           explain: "Tính từ miêu tả tính chất của một sự vật/sự việc (a day) phải dùng đuôi -ing. Đổi 'exhausted' thành 'exhausting'."
         },
         {
           id: 9,
-          text: 'He is <span class="underline-error">the boy</span> (A) <span class="underline-error">who</span> (B) parents work <span class="underline-error">in</span> (C) the same hospital <span class="underline-error">as</span> (D) mine.',
+          text: "He is <span class=\"underline-error\">the boy</span> (A) <span class=\"underline-error\">who</span> (B) parents work <span class=\"underline-error\">in</span> (C) the same hospital <span class=\"underline-error\">as</span> (D) mine.",
           options: ["A. the boy", "B. who", "C. in", "D. as"],
           correct: 1,
           explain: "Cần một đại từ quan hệ chỉ sở hữu cho 'parents' (bố mẹ của cậu bé đó). Đổi 'who' thành 'whose'."
         },
         {
           id: 10,
-          text: 'I <span class="underline-error">will</span> (A) call you <span class="underline-error">as soon as</span> (B) I <span class="underline-error">will arrive</span> (C) at the <span class="underline-error">airport</span> (D).',
+          text: "I <span class=\"underline-error\">will</span> (A) call you <span class=\"underline-error\">as soon as</span> (B) I <span class=\"underline-error\">will arrive</span> (C) at the <span class=\"underline-error\">airport</span> (D).",
           options: ["A. will", "B. as soon as", "C. will arrive", "D. airport"],
           correct: 2,
           explain: "Trong mệnh đề thời gian (bắt đầu bằng as soon as, when, before...), không dùng thì tương lai. Đổi 'will arrive' thành 'arrive'."
@@ -99,33 +99,33 @@ const TEST_DATA = {
           id: 11,
           text: "\"Why don't we go to the beach this weekend?\" said Jane.",
           options: [
-            "Jane suggested going to the beach that weekend.",
-            "Jane asked why we didn't go to the beach this weekend.",
             "Jane forced us to go to the beach that weekend.",
-            "Jane refused to go to the beach that weekend."
+            "Jane suggested going to the beach that weekend.",
+            "Jane refused to go to the beach that weekend.",
+            "Jane asked why we didn't go to the beach this weekend."
           ],
-          correct: 0,
+          correct: 1,
           explain: "Câu đề nghị 'Why don't we...?' -> Tường thuật bằng 'suggest + V-ing'."
         },
         {
           id: 12,
           text: "I'm sure she didn't write this essay herself.",
           options: [
-            "She can't have written this essay herself.",
-            "She must have written this essay herself.",
             "She shouldn't have written this essay herself.",
-            "She might have written this essay herself."
+            "She might have written this essay herself.",
+            "She must have written this essay herself.",
+            "She can't have written this essay herself."
           ],
-          correct: 0,
+          correct: 3,
           explain: "Dự đoán chắc chắn phủ định ở quá khứ: can't have + V3/ed."
         },
         {
           id: 13,
           text: "It's a pity I missed the concert last night.",
           options: [
-            "I wish I didn't miss the concert last night.",
-            "I wish I hadn't missed the concert last night.",
             "If only I missed the concert last night.",
+            "I wish I hadn't missed the concert last night.",
+            "I wish I didn't miss the concert last night.",
             "I regret not to miss the concert last night."
           ],
           correct: 1,
@@ -135,10 +135,10 @@ const TEST_DATA = {
           id: 14,
           text: "They have built a new supermarket near my house.",
           options: [
-            "A new supermarket was built near my house.",
             "A new supermarket have been built near my house.",
+            "A new supermarket is built near my house.",
             "A new supermarket has been built near my house.",
-            "A new supermarket is built near my house."
+            "A new supermarket was built near my house."
           ],
           correct: 2,
           explain: "Câu bị động Hiện tại hoàn thành: S(mới) + have/has been V3. 'A new supermarket' số ít nên dùng 'has been built'."
@@ -148,9 +148,9 @@ const TEST_DATA = {
           text: "As soon as he entered the room, the lights went out.",
           options: [
             "No sooner had he entered the room than the lights went out.",
+            "Not until he entered the room the lights went out.",
             "Hardly he had entered the room when the lights went out.",
-            "Only after the lights went out did he enter the room.",
-            "Not until he entered the room the lights went out."
+            "Only after the lights went out did he enter the room."
           ],
           correct: 0,
           explain: "Cấu trúc 'Vừa mới... thì...': No sooner had S V3 than S V2 (Đảo ngữ)."
@@ -173,12 +173,12 @@ const TEST_DATA = {
           id: 16,
           text: "What is the main problem discussed in the passage?",
           options: [
-            "How to stop people from eating too much fast food.",
             "The challenge of feeding a growing global population sustainably.",
             "Why farmers are abandoning their lands to move to cities.",
+            "How to stop people from eating too much fast food.",
             "The dangers of eating genetically modified organisms (GMOs)."
           ],
-          correct: 1,
+          correct: 0,
           explain: "Đoạn văn thảo luận về thách thức của gia tăng dân số đối với an ninh lương thực (food security) và các giải pháp bền vững."
         },
         {
@@ -186,60 +186,60 @@ const TEST_DATA = {
           text: "According to paragraph 2, why is expanding farmland NOT a viable solution?",
           options: [
             "Because there are no people willing to work on farms anymore.",
+            "Because it costs too much money to buy seeds.",
             "Because it destroys forests, causes biodiversity loss, and worsens climate change.",
-            "Because the new land is always too cold to grow crops.",
-            "Because it costs too much money to buy seeds."
+            "Because the new land is always too cold to grow crops."
           ],
-          correct: 1,
+          correct: 2,
           explain: "Đoạn 2: 'The expansion of farmland usually comes at the expense of vital forests and ecosystems, leading to biodiversity loss and exacerbating climate change'."
         },
         {
           id: 18,
-          text: 'The word "exacerbating" in paragraph 2 is closest in meaning to _______.',
-          options: ["improving", "solving", "making worse", "hiding"],
-          correct: 2,
+          text: "The word \"exacerbating\" in paragraph 2 is closest in meaning to _______.",
+          options: ["making worse", "hiding", "improving", "solving"],
+          correct: 0,
           explain: "'Exacerbate' = làm trầm trọng thêm, làm xấu đi (making worse)."
         },
         {
           id: 19,
           text: "What is 'sustainable intensification' as defined in paragraph 3?",
           options: [
+            "Forcing farmers to work longer hours.",
             "Growing food without using any water at all.",
             "Increasing crop yields without causing more ecological damage.",
-            "Forcing farmers to work longer hours.",
             "Replacing all human farmers with robots."
           ],
-          correct: 1,
+          correct: 2,
           explain: "Đoạn 3: 'increasing agricultural yields without expanding the ecological footprint'."
         },
         {
           id: 20,
           text: "How does precision farming work, according to the passage?",
           options: [
-            "It uses drones and sensors to apply exact amounts of resources.",
-            "It relies heavily on traditional chemical fertilizers.",
+            "It involves growing crops inside office buildings.",
             "It requires clearing large amounts of new land.",
-            "It involves growing crops inside office buildings."
+            "It relies heavily on traditional chemical fertilizers.",
+            "It uses drones and sensors to apply exact amounts of resources."
           ],
-          correct: 0,
+          correct: 3,
           explain: "Đoạn 3: 'precision farming, which uses drones and sensors to apply exact amounts of water and nutrients only where needed'."
         },
         {
           id: 21,
           text: "According to paragraph 4, what causes food waste in developing nations?",
           options: [
-            "Consumers buying too much and throwing it away.",
             "Poor storage and transportation infrastructure after harvesting.",
             "Supermarkets rejecting ugly vegetables.",
-            "People simply forgetting to eat."
+            "People simply forgetting to eat.",
+            "Consumers buying too much and throwing it away."
           ],
-          correct: 1,
+          correct: 0,
           explain: "Đoạn 4: 'In developing nations, this loss often occurs post-harvest due to poor storage and transportation infrastructure'."
         },
         {
           id: 22,
-          text: 'The word "predominantly" in paragraph 4 is closest in meaning to _______.',
-          options: ["rarely", "secretly", "mainly or mostly", "accidentally"],
+          text: "The word \"predominantly\" in paragraph 4 is closest in meaning to _______.",
+          options: ["rarely", "accidentally", "mainly or mostly", "secretly"],
           correct: 2,
           explain: "'Predominantly' = phần lớn, chủ yếu (mainly/mostly)."
         }
@@ -261,31 +261,36 @@ const TEST_DATA = {
           id: 23,
           text: "What is the common misconception about extracurricular activities mentioned in paragraph 1?",
           options: [
-            "They are too expensive for most students.",
             "They are viewed as distractions from real academic learning.",
-            "They are too dangerous and cause injuries.",
-            "They only benefit students who want to become professional athletes."
+            "They only benefit students who want to become professional athletes.",
+            "They are too expensive for most students.",
+            "They are too dangerous and cause injuries."
           ],
-          correct: 1,
+          correct: 0,
           explain: "Đoạn 1: 'frequently viewed by both parents and schools as secondary, or even as distractions from 'real' learning'."
         },
         {
           id: 24,
           text: "According to paragraph 2, what type of skills do students learn from extracurriculars?",
           options: [
-            "Hard scientific facts.",
             "Advanced mathematics.",
+            "How to cheat on standardized tests.",
             "Soft skills like teamwork, leadership, and time management.",
-            "How to cheat on standardized tests."
+            "Hard scientific facts."
           ],
           correct: 2,
           explain: "Đoạn 2: 'develop essential 'soft skills'... teaches teamwork, leadership, and time management'."
         },
         {
           id: 25,
-          text: 'The word "transferable" in paragraph 2 is closest in meaning to _______.',
-          options: ["useless", "able to be used in different situations", "temporary", "difficult to learn"],
-          correct: 1,
+          text: "The word \"transferable\" in paragraph 2 is closest in meaning to _______.",
+          options: [
+            "able to be used in different situations",
+            "difficult to learn",
+            "temporary",
+            "useless"
+          ],
+          correct: 0,
           explain: "'Transferable skills' = kĩ năng có thể chuyển đổi, áp dụng vào nhiều môi trường khác nhau (như workplace)."
         },
         {
@@ -293,8 +298,8 @@ const TEST_DATA = {
           text: "How do extracurricular activities benefit mental health, according to paragraph 3?",
           options: [
             "By providing a healthy outlet for academic stress and building self-worth.",
-            "By forcing students to sleep more.",
             "By completely replacing traditional schooling.",
+            "By forcing students to sleep more.",
             "By giving students prescription medications."
           ],
           correct: 0,
@@ -304,43 +309,38 @@ const TEST_DATA = {
           id: 27,
           text: "What does the author say about the relationship between extracurriculars and academic success?",
           options: [
-            "Extracurriculars always cause students' grades to drop significantly.",
             "There is no connection between the two.",
-            "Research shows a positive correlation, meaning involved students often perform better academically.",
-            "Only students with bad grades do extracurriculars."
+            "Extracurriculars always cause students' grades to drop significantly.",
+            "Only students with bad grades do extracurriculars.",
+            "Research shows a positive correlation, meaning involved students often perform better academically."
           ],
-          correct: 2,
+          correct: 3,
           explain: "Đoạn 4: 'research consistently shows a positive correlation between extracurricular involvement and academic success'."
         },
         {
           id: 28,
-          text: 'The word "indispensable" in the final paragraph is closest in meaning to _______.',
-          options: ["unnecessary", "absolutely necessary", "expensive", "boring"],
-          correct: 1,
+          text: "The word \"indispensable\" in the final paragraph is closest in meaning to _______.",
+          options: ["unnecessary", "boring", "expensive", "absolutely necessary"],
+          correct: 3,
           explain: "'Indispensable' = không thể thiếu, cực kỳ quan trọng (absolutely necessary)."
         },
         {
           id: 29,
           text: "Which of the following is NOT given as an example of an extracurricular activity in the passage?",
-          options: [
-            "Sports team",
-            "Drama club",
-            "Part-time job at a restaurant",
-            "Debate club"
-          ],
-          correct: 2,
+          options: ["Sports team", "Drama club", "Debate club", "Part-time job at a restaurant"],
+          correct: 3,
           explain: "Đoạn 1 nhắc đến 'sports, music, drama, and debate clubs'. Không có công việc làm thêm (part-time job)."
         },
         {
           id: 30,
           text: "What is the author's primary purpose in this passage?",
           options: [
-            "To persuade parents to stop caring about grades.",
-            "To argue that extracurricular activities are essential for a student's overall development.",
+            "To complain about the modern education system.",
             "To prove that playing sports is better than playing music.",
-            "To complain about the modern education system."
+            "To argue that extracurricular activities are essential for a student's overall development.",
+            "To persuade parents to stop caring about grades."
           ],
-          correct: 1,
+          correct: 2,
           explain: "Mục đích chính: Phản bác quan điểm cho rằng HĐNK là thứ yếu, và chứng minh vai trò quan trọng của nó trong sự phát triển toàn diện (holistic development)."
         }
       ]

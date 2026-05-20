@@ -1,7 +1,7 @@
 const TEST_DATA = {
   title: "V-ACT English Test 2",
   totalQuestions: 30,
-  timeLimit: 45, // minutes
+  timeLimit: 45,
   parts: [
     {
       id: "part1",
@@ -12,36 +12,36 @@ const TEST_DATA = {
         {
           id: 1,
           text: "When making a decision, you should take all the relevant factors into _______.",
-          options: ["consideration", "thought", "mind", "accountability"],
-          correct: 0,
+          options: ["thought", "accountability", "mind", "consideration"],
+          correct: 3,
           explain: "Collocation: 'take something into consideration' = xem xét, cân nhắc đến cái gì."
         },
         {
           id: 2,
           text: "The new bridge _______ by the end of next year.",
-          options: ["is built", "will be built", "will have been built", "has been built"],
+          options: ["has been built", "will be built", "will have been built", "is built"],
           correct: 2,
           explain: "Dấu hiệu 'by the end of + thời gian tương lai' (by the end of next year) kết hợp với chủ ngữ chỉ vật (The new bridge) -> Dùng thì Tương lai hoàn thành ở thể bị động: 'will have been V3/ed'."
         },
         {
           id: 3,
           text: "The manager asked me _______ I had finished the financial report.",
-          options: ["that", "if", "what", "which"],
-          correct: 1,
+          options: ["what", "which", "that", "if"],
+          correct: 3,
           explain: "Câu tường thuật dạng Yes/No question: S + asked + O + if/whether + S + V (lùi thì)."
         },
         {
           id: 4,
           text: "The company aims to _______ sustainable practices to reduce its carbon footprint.",
-          options: ["accomplish", "implement", "construct", "fabricate"],
-          correct: 1,
+          options: ["accomplish", "construct", "fabricate", "implement"],
+          correct: 3,
           explain: "Từ vựng học thuật (Academic Vocab): 'implement' = áp dụng, thực thi. 'implement sustainable practices' = áp dụng các biện pháp bền vững."
         },
         {
           id: 5,
           text: "The scientist, _______ research won a Nobel Prize, will give a lecture tomorrow.",
-          options: ["who", "whom", "which", "whose"],
-          correct: 3,
+          options: ["whose", "who", "whom", "which"],
+          correct: 0,
           explain: "Mệnh đề quan hệ chỉ sở hữu: 'whose + Noun' (nghiên cứu của nhà khoa học đó)."
         }
       ]
@@ -54,35 +54,35 @@ const TEST_DATA = {
       questions: [
         {
           id: 6,
-          text: 'The candidate answered all the interview questions very <span class="underline-error">confident</span> (A), which <span class="underline-error">impressed</span> (B) the <span class="underline-error">hiring</span> (C) manager <span class="underline-error">greatly</span> (D).',
+          text: "The candidate answered all the interview questions very <span class=\"underline-error\">confident</span> (A), which <span class=\"underline-error\">impressed</span> (B) the <span class=\"underline-error\">hiring</span> (C) manager <span class=\"underline-error\">greatly</span> (D).",
           options: ["A. confident", "B. impressed", "C. hiring", "D. greatly"],
           correct: 0,
           explain: "Cấu tạo từ (Word Form): Đứng sau động từ thường 'answered' cần một trạng từ -> 'confidently'."
         },
         {
           id: 7,
-          text: 'Not only <span class="underline-error">she is</span> (A) an excellent student, <span class="underline-error">but</span> (B) she is also a <span class="underline-error">talented</span> (C) <span class="underline-error">musician</span> (D).',
+          text: "Not only <span class=\"underline-error\">she is</span> (A) an excellent student, <span class=\"underline-error\">but</span> (B) she is also a <span class=\"underline-error\">talented</span> (C) <span class=\"underline-error\">musician</span> (D).",
           options: ["A. she is", "B. but", "C. talented", "D. musician"],
           correct: 0,
           explain: "Đảo ngữ (Inversion) với Not only: 'Not only + trợ động từ/tobe + S...'. Cần đảo ngữ thành 'is she'."
         },
         {
           id: 8,
-          text: 'It is the <span class="underline-error">local</span> (A) residents who <span class="underline-error">needs</span> (B) to <span class="underline-error">be consulted</span> (C) before the <span class="underline-error">project begins</span> (D).',
+          text: "It is the <span class=\"underline-error\">local</span> (A) residents who <span class=\"underline-error\">needs</span> (B) to <span class=\"underline-error\">be consulted</span> (C) before the <span class=\"underline-error\">project begins</span> (D).",
           options: ["A. local", "B. needs", "C. be consulted", "D. project begins"],
           correct: 1,
           explain: "Câu chẻ (Cleft sentence): 'It is + N + who + V'. Động từ 'need' phải chia theo danh từ 'local residents' (số nhiều) -> 'need' (không có s)."
         },
         {
           id: 9,
-          text: 'You <span class="underline-error">must have</span> (A) <span class="underline-error">called</span> (B) him yesterday to <span class="underline-error">inform</span> (C) him of the <span class="underline-error">schedule change</span> (D).',
+          text: "You <span class=\"underline-error\">must have</span> (A) <span class=\"underline-error\">called</span> (B) him yesterday to <span class=\"underline-error\">inform</span> (C) him of the <span class=\"underline-error\">schedule change</span> (D).",
           options: ["A. must have", "B. called", "C. inform", "D. schedule change"],
           correct: 0,
           explain: "Động từ khuyết thiếu (Modals): 'must have V3' chỉ một suy luận logic ở quá khứ (chắc hẳn là đã). Ở đây nghĩa là 'lẽ ra bạn nên gọi' -> dùng 'should have' thay cho 'must have'."
         },
         {
           id: 10,
-          text: 'Many <span class="underline-error">species</span> (A) of animals are in danger of extinction <span class="underline-error">due of</span> (B) habitat <span class="underline-error">loss</span> (C) and climate <span class="underline-error">change</span> (D).',
+          text: "Many <span class=\"underline-error\">species</span> (A) of animals are in danger of extinction <span class=\"underline-error\">due of</span> (B) habitat <span class=\"underline-error\">loss</span> (C) and climate <span class=\"underline-error\">change</span> (D).",
           options: ["A. species", "B. due of", "C. loss", "D. change"],
           correct: 1,
           explain: "Cụm từ (Collocation): Phải dùng 'due to' (bởi vì), không dùng 'due of'."
@@ -99,58 +99,58 @@ const TEST_DATA = {
           id: 11,
           text: "No one else in the team plays basketball as well as Peter.",
           options: [
-            "Peter is the best basketball player in the team.",
             "Everyone in the team plays basketball better than Peter.",
             "Peter plays basketball as well as other members in the team.",
+            "Peter is the best basketball player in the team.",
             "Peter is not as good at basketball as anyone else in the team."
           ],
-          correct: 0,
+          correct: 2,
           explain: "Cấu trúc so sánh: 'No one ... as + adj/adv + as' = So sánh nhất (The most/best...)."
         },
         {
           id: 12,
           text: "\"I'm sorry I forgot to submit the assignment,\" the student said.",
           options: [
-            "The student denied forgetting to submit the assignment.",
-            "The student promised to submit the assignment.",
+            "The student refused to submit the assignment.",
             "The student apologized for forgetting to submit the assignment.",
-            "The student refused to submit the assignment."
+            "The student denied forgetting to submit the assignment.",
+            "The student promised to submit the assignment."
           ],
-          correct: 2,
+          correct: 1,
           explain: "Câu tường thuật: 'I'm sorry...' -> 'apologize for + V-ing'."
         },
         {
           id: 13,
           text: "If you don't wear a helmet, you will be fined.",
           options: [
-            "Unless you wear a helmet, you won't be fined.",
             "Unless you wear a helmet, you will be fined.",
+            "Unless you don't wear a helmet, you will be fined.",
             "If you wear a helmet, you will be fined.",
-            "Unless you don't wear a helmet, you will be fined."
+            "Unless you wear a helmet, you won't be fined."
           ],
-          correct: 1,
+          correct: 0,
           explain: "Câu điều kiện: 'If... not' = 'Unless'. Nghĩa câu: Trừ khi bạn đội mũ bảo hiểm, (nếu không) bạn sẽ bị phạt."
         },
         {
           id: 14,
           text: "They report that the missing explorer has been found alive.",
           options: [
-            "The missing explorer is reported to have been found alive.",
-            "It is reported that the missing explorer has found alive.",
             "The missing explorer was reported to be found alive.",
-            "It reports that the missing explorer is found alive."
+            "It reports that the missing explorer is found alive.",
+            "The missing explorer is reported to have been found alive.",
+            "It is reported that the missing explorer has found alive."
           ],
-          correct: 0,
+          correct: 2,
           explain: "Câu bị động kép (Passive voice): 'They report that + S2 + V2' -> 'S2 + is/are reported + to have + V3/ed' (do V2 'has been found' xảy ra trước V1 'report')."
         },
         {
           id: 15,
           text: "I didn't bring my umbrella, so I got completely wet.",
           options: [
-            "If I brought my umbrella, I wouldn't get completely wet.",
-            "If I had brought my umbrella, I wouldn't have got completely wet.",
             "I wouldn't get completely wet if I had brought my umbrella.",
-            "If I didn't bring my umbrella, I would get completely wet."
+            "If I had brought my umbrella, I wouldn't have got completely wet.",
+            "If I didn't bring my umbrella, I would get completely wet.",
+            "If I brought my umbrella, I wouldn't get completely wet."
           ],
           correct: 1,
           explain: "Câu điều kiện loại 3 (Conditionals type 3): Giả định trái ngược với quá khứ. 'If + S + had V3/ed, S + would have V3/ed'."
@@ -174,9 +174,9 @@ const TEST_DATA = {
           id: 16,
           text: "What is the primary focus of the passage?",
           options: [
-            "The dangers of using AI in schools",
-            "How AI is personalizing and changing education",
             "Why human teachers will soon be replaced",
+            "How AI is personalizing and changing education",
+            "The dangers of using AI in schools",
             "The technical mechanism of intelligent tutoring systems"
           ],
           correct: 1,
@@ -188,29 +188,29 @@ const TEST_DATA = {
           options: [
             "By replacing their human teachers entirely",
             "By offering generic exercises for the whole class",
-            "By identifying struggles and providing targeted practice",
-            "By doing the students' homework for them"
+            "By doing the students' homework for them",
+            "By identifying struggles and providing targeted practice"
           ],
-          correct: 2,
+          correct: 3,
           explain: "Đoạn 2 nêu rõ: 'the AI tutor can detect this difficulty and automatically generate supplementary exercises... targeted at that exact concept'."
         },
         {
           id: 18,
-          text: 'The word "mimics" in paragraph 2 is closest in meaning to _______.',
-          options: ["rejects", "imitates", "improves", "evaluates"],
-          correct: 1,
+          text: "The word \"mimics\" in paragraph 2 is closest in meaning to _______.",
+          options: ["improves", "rejects", "evaluates", "imitates"],
+          correct: 3,
           explain: "'Mimic' = bắt chước, mô phỏng (imitate). AI tutor mô phỏng lợi ích của việc gia sư 1-kèm-1."
         },
         {
           id: 19,
           text: "According to paragraph 3, what is a benefit of AI evaluating written essays?",
           options: [
+            "It saves teachers time so they can focus on interacting with students.",
             "It forces students to write better essays.",
-            "It gives teachers more free time to rest at home.",
             "It completely eliminates the need for teachers to read essays.",
-            "It saves teachers time so they can focus on interacting with students."
+            "It gives teachers more free time to rest at home."
           ],
-          correct: 3,
+          correct: 0,
           explain: "Đoạn 3: 'This automation frees up valuable time for teachers, allowing them to focus more on lesson planning, mentoring, and interacting with students'."
         },
         {
@@ -227,21 +227,21 @@ const TEST_DATA = {
         },
         {
           id: 21,
-          text: 'The word "diminish" in paragraph 4 is closest in meaning to _______.',
-          options: ["reduce", "increase", "highlight", "replace"],
-          correct: 0,
+          text: "The word \"diminish\" in paragraph 4 is closest in meaning to _______.",
+          options: ["increase", "highlight", "replace", "reduce"],
+          correct: 3,
           explain: "'Diminish' = làm giảm bớt (reduce). Quan ngại rằng việc quá phụ thuộc vào công nghệ sẽ làm giảm đi yếu tố con người."
         },
         {
           id: 22,
           text: "What does the author suggest about the future of teachers in the last paragraph?",
           options: [
-            "They will become obsolete due to advanced AI.",
             "They will collaborate with AI to improve teaching.",
             "They will reject AI technology to preserve traditional methods.",
+            "They will become obsolete due to advanced AI.",
             "They will focus solely on providing emotional support."
           ],
-          correct: 1,
+          correct: 0,
           explain: "Đoạn cuối: 'Educators of the future will likely work alongside AI, using it as a powerful tool...'"
         }
       ]
@@ -263,8 +263,8 @@ const TEST_DATA = {
           id: 23,
           text: "What does the term 'fast fashion' refer to in paragraph 1?",
           options: [
-            "Clothing that is designed for athletes and runners.",
             "The quick delivery of expensive, high-quality garments.",
+            "Clothing that is designed for athletes and runners.",
             "The rapid manufacturing of cheap, trendy clothing.",
             "The process of washing and drying clothes quickly."
           ],
@@ -285,18 +285,18 @@ const TEST_DATA = {
         },
         {
           id: 25,
-          text: 'The word "lax" in paragraph 2 is closest in meaning to _______.',
-          options: ["strict", "loose or not strict", "complicated", "new"],
-          correct: 1,
+          text: "The word \"lax\" in paragraph 2 is closest in meaning to _______.",
+          options: ["strict", "complicated", "new", "loose or not strict"],
+          correct: 3,
           explain: "'Lax' = lỏng lẻo, không nghiêm ngặt (loose or not strict). Ngữ cảnh: luật lệ bảo vệ môi trường ở các nước đang phát triển thường lỏng lẻo."
         },
         {
           id: 26,
           text: "According to paragraph 3, what happens when clothes made of synthetic fabrics are washed?",
           options: [
-            "They shrink and become unwearable.",
-            "They absorb large amounts of polluted water.",
             "They decompose and disappear completely.",
+            "They absorb large amounts of polluted water.",
+            "They shrink and become unwearable.",
             "They release microplastics into the oceans."
           ],
           correct: 3,
@@ -306,18 +306,18 @@ const TEST_DATA = {
           id: 27,
           text: "What is mentioned in paragraph 4 as a way brands keep their prices extremely low?",
           options: [
-            "By using robots instead of human workers.",
+            "By forcing workers to pay for their own sewing machines.",
             "By producing clothes in countries with low wages and poor conditions.",
-            "By selling clothes directly from the factory to consumers.",
-            "By forcing workers to pay for their own sewing machines."
+            "By using robots instead of human workers.",
+            "By selling clothes directly from the factory to consumers."
           ],
           correct: 1,
           explain: "Đoạn 4: 'To keep prices extremely low, production is frequently outsourced to countries with low minimum wages and poor working conditions'."
         },
         {
           id: 28,
-          text: 'The word "momentum" in paragraph 5 is closest in meaning to _______.',
-          options: ["resistance", "criticism", "forward motion or energy", "financial support"],
+          text: "The word \"momentum\" in paragraph 5 is closest in meaning to _______.",
+          options: ["financial support", "resistance", "forward motion or energy", "criticism"],
           correct: 2,
           explain: "'Gain momentum' = đạt được đà phát triển, thu hút sự chú ý và tiến lên phía trước."
         },
@@ -325,21 +325,21 @@ const TEST_DATA = {
           id: 29,
           text: "Which of the following describes a 'circular economy model' in fashion?",
           options: [
-            "Designing clothes that last long and can be recycled.",
             "Selling clothes in a continuous circle of physical stores.",
             "Encouraging consumers to throw away clothes every season.",
+            "Designing clothes that last long and can be recycled.",
             "Producing synthetic fabrics in round factories."
           ],
-          correct: 0,
+          correct: 2,
           explain: "Đoạn 5: 'circular economy models, which focus on designing clothes that are durable, repairable, and recyclable'."
         },
         {
           id: 30,
           text: "What is the author's main purpose in writing this passage?",
           options: [
-            "To advertise new, eco-friendly fashion brands.",
-            "To explain the negative impacts of fast fashion and note a rising sustainable trend.",
             "To advise readers on how to dress fashionably on a low budget.",
+            "To explain the negative impacts of fast fashion and note a rising sustainable trend.",
+            "To advertise new, eco-friendly fashion brands.",
             "To defend the labor practices of global fast fashion companies."
           ],
           correct: 1,

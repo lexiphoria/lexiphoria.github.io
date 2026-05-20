@@ -12,36 +12,36 @@ const TEST_DATA = {
         {
           id: 1,
           text: "The ground is completely wet. It _______ rained heavily last night.",
-          options: ["must have", "should have", "can't have", "needn't have"],
-          correct: 0,
+          options: ["should have", "can't have", "must have", "needn't have"],
+          correct: 2,
           explain: "Động từ khuyết thiếu chỉ sự suy đoán quá khứ: 'must have + V3/ed' chỉ dự đoán chắc chắn dựa trên bằng chứng ở hiện tại (đất ướt hết)."
         },
         {
           id: 2,
           text: "I cannot _______ his rude behavior any longer.",
-          options: ["put up with", "take after", "look forward to", "go back on"],
-          correct: 0,
+          options: ["take after", "go back on", "put up with", "look forward to"],
+          correct: 2,
           explain: "Phrasal verb: 'put up with' = chịu đựng. Các cụm khác: 'take after' = giống ai đó, 'look forward to' = mong đợi, 'go back on' = thất hứa."
         },
         {
           id: 3,
           text: "Not only _______ the national competition, but she also broke the world record.",
-          options: ["did she win", "she won", "won she", "she did win"],
-          correct: 0,
+          options: ["she did win", "did she win", "won she", "she won"],
+          correct: 1,
           explain: "Đảo ngữ với 'Not only' đứng đầu câu: 'Not only + trợ động từ + S + V, but S + also + V'."
         },
         {
           id: 4,
           text: "He is highly successful _______ his career as a software engineer.",
-          options: ["in", "on", "at", "with"],
+          options: ["in", "with", "on", "at"],
           correct: 0,
           explain: "Giới từ đi với tính từ: Cấu trúc 'successful in something' = thành công trong lĩnh vực gì."
         },
         {
           id: 5,
           text: "The audience gave the talented performers a _______ applause.",
-          options: ["thunderous", "thunder", "thunderously", "thundering"],
-          correct: 0,
+          options: ["thundering", "thunderously", "thunderous", "thunder"],
+          correct: 2,
           explain: "Từ loại: Đứng trước danh từ 'applause' cần một tính từ. Cụm từ cố định 'thunderous applause' = tràng pháo tay vang dội như sấm."
         }
       ]
@@ -54,35 +54,35 @@ const TEST_DATA = {
       questions: [
         {
           id: 6,
-          text: 'Neither of the <span class="underline-error">two plans</span> (A) proposed by the team <span class="underline-error">were</span> (B) accepted by the board of <span class="underline-error">directors</span> (C) yesterday <span class="underline-error">morning</span> (D).',
+          text: "Neither of the <span class=\"underline-error\">two plans</span> (A) proposed by the team <span class=\"underline-error\">were</span> (B) accepted by the board of <span class=\"underline-error\">directors</span> (C) yesterday <span class=\"underline-error\">morning</span> (D).",
           options: ["A. two plans", "B. were", "C. directors", "D. morning"],
           correct: 1,
           explain: "Sự hòa hợp chủ vị: Chủ ngữ 'Neither of + N số nhiều' động từ phải chia ở dạng số ít. Sửa 'were' thành 'was'."
         },
         {
           id: 7,
-          text: 'She behaves <span class="underline-error">as if</span> (A) she <span class="underline-error">is</span> (B) the owner of this big company, <span class="underline-error">but</span> (C) she is just a <span class="underline-error">clerk</span> (D).',
+          text: "She behaves <span class=\"underline-error\">as if</span> (A) she <span class=\"underline-error\">is</span> (B) the owner of this big company, <span class=\"underline-error\">but</span> (C) she is just a <span class=\"underline-error\">clerk</span> (D).",
           options: ["A. as if", "B. is", "C. but", "D. clerk"],
           correct: 1,
           explain: "Cấu trúc giả định: 'as if / as though' dùng để diễn tả giả định trái ngược thực tế ở hiện tại, động từ lùi về quá khứ đơn. Sửa 'is' thành 'were' (hoặc was)."
         },
         {
           id: 8,
-          text: 'The film <span class="underline-error">we watched</span> (A) last night was <span class="underline-error">so</span> (B) <span class="underline-error">bored</span> (C) that many people <span class="underline-error">left</span> (D) early.',
+          text: "The film <span class=\"underline-error\">we watched</span> (A) last night was <span class=\"underline-error\">so</span> (B) <span class=\"underline-error\">bored</span> (C) that many people <span class=\"underline-error\">left</span> (D) early.",
           options: ["A. we watched", "B. so", "C. bored", "D. left"],
           correct: 2,
           explain: "Tính từ đuôi -ing vs -ed: Tính từ miêu tả tính chất của một sự vật/sự việc (the film) phải dùng đuôi -ing. Sửa 'bored' thành 'boring'."
         },
         {
           id: 9,
-          text: 'He is <span class="underline-error">really</span> (A) looking forward to <span class="underline-error">visit</span> (B) his family <span class="underline-error">in</span> (C) London next <span class="underline-error">month</span> (D).',
+          text: "He is <span class=\"underline-error\">really</span> (A) looking forward to <span class=\"underline-error\">visit</span> (B) his family <span class=\"underline-error\">in</span> (C) London next <span class=\"underline-error\">month</span> (D).",
           options: ["A. really", "B. visit", "C. in", "D. month"],
           correct: 1,
           explain: "Cấu trúc động từ: 'look forward to + V-ing'. Sửa 'visit' thành 'visiting'."
         },
         {
           id: 10,
-          text: 'If I <span class="underline-error">was</span> (A) you, I <span class="underline-error">would accept</span> (B) their job <span class="underline-error">offer</span> (C) without any <span class="underline-error">hesitation</span> (D).',
+          text: "If I <span class=\"underline-error\">was</span> (A) you, I <span class=\"underline-error\">would accept</span> (B) their job <span class=\"underline-error\">offer</span> (C) without any <span class=\"underline-error\">hesitation</span> (D).",
           options: ["A. was", "B. would accept", "C. offer", "D. hesitation"],
           correct: 0,
           explain: "Câu điều kiện loại 2: Giả định trái ngược thực tế hiện tại, động từ 'to be' chia làm 'were' cho tất cả các ngôi chủ ngữ. Sửa 'was' thành 'were'."
@@ -99,12 +99,12 @@ const TEST_DATA = {
           id: 11,
           text: "Unless you study harder, you will fail the final exam.",
           options: [
-            "If you don't study harder, you will fail the final exam.",
             "If you study harder, you will fail the final exam.",
+            "If you don't study harder, you will fail the final exam.",
             "If you don't study harder, you won't fail the final exam.",
             "Provided that you don't study harder, you will pass the final exam."
           ],
-          correct: 0,
+          correct: 1,
           explain: "Cấu trúc tương đương: 'Unless + S + V' = 'If + S + don't/doesn't + V'."
         },
         {
@@ -123,12 +123,12 @@ const TEST_DATA = {
           id: 13,
           text: "It is not necessary for you to complete this task today.",
           options: [
-            "You must not complete this task today.",
             "You needn't complete this task today.",
+            "You must not complete this task today.",
             "You shouldn't complete this task today.",
             "You may not complete this task today."
           ],
-          correct: 1,
+          correct: 0,
           explain: "'not necessary' = không cần thiết, tương đương động từ khuyết thiếu 'needn't + V (bare)'."
         },
         {
@@ -136,9 +136,9 @@ const TEST_DATA = {
           text: "He hasn't written to his family for three months.",
           options: [
             "The last time he wrote to his family was three months ago.",
-            "He last wrote to his family for three months.",
+            "He didn't write to his family three months ago.",
             "It is three months since he last has written to his family.",
-            "He didn't write to his family three months ago."
+            "He last wrote to his family for three months."
           ],
           correct: 0,
           explain: "Chuyển đổi thì: 'S + hasn't/haven't + V3 + for + khoảng thời gian' tương đương 'The last time + S + V2 + was + khoảng thời gian + ago'."
@@ -147,12 +147,12 @@ const TEST_DATA = {
           id: 15,
           text: "\"I will call you as soon as I arrive at the hotel,\" he said to me.",
           options: [
-            "He told me he would call me as soon as he arrived at the hotel.",
+            "He promised to call me when he will arrive at the hotel.",
             "He told me he will call me as soon as he arrives at the hotel.",
-            "He said that he would call me as soon as he will arrive at the hotel.",
-            "He promised to call me when he will arrive at the hotel."
+            "He told me he would call me as soon as he arrived at the hotel.",
+            "He said that he would call me as soon as he will arrive at the hotel."
           ],
-          correct: 0,
+          correct: 2,
           explain: "Chuyển sang câu gián tiếp: đổi ngôi 'I' -> 'he', 'you' -> 'me', lùi thì 'will' -> 'would' và động từ trong mệnh đề thời gian 'arrive' (hiện tại đơn) -> 'arrived' (quá khứ đơn)."
         }
       ]
@@ -172,12 +172,12 @@ const TEST_DATA = {
           id: 16,
           text: "What is the main idea of the passage?",
           options: [
-            "The history of the Cold War space race.",
-            "The search for exoplanets and the modern era of space exploration.",
             "How to build space telescopes like James Webb.",
-            "The physical conditions required to live on Mars."
+            "The history of the Cold War space race.",
+            "The physical conditions required to live on Mars.",
+            "The search for exoplanets and the modern era of space exploration."
           ],
-          correct: 1,
+          correct: 3,
           explain: "Bài viết chủ yếu thảo luận về việc tìm kiếm các hành tinh ngoài hệ mặt trời (exoplanet) trong kỷ nguyên thám hiểm không gian hiện đại."
         },
         {
@@ -185,23 +185,23 @@ const TEST_DATA = {
           text: "According to paragraph 1, how has space exploration changed since the Cold War?",
           options: [
             "It has become completely banned by international law.",
-            "It is characterized by international collaboration and private space companies.",
             "It is now done entirely by robots without human input.",
-            "It has become much cheaper and accessible to everyone."
+            "It has become much cheaper and accessible to everyone.",
+            "It is characterized by international collaboration and private space companies."
           ],
-          correct: 1,
+          correct: 3,
           explain: "Đoạn 1: 'Today, however, we are witnessing a new era of space exploration characterized by international collaboration and the rapid rise of private spaceflight companies'."
         },
         {
           id: 18,
           text: "What is an exoplanet?",
           options: [
-            "A planet that has exploded.",
             "A planet that orbits a star outside our solar system.",
-            "A planet that has no gravity.",
-            "A moon orbiting Saturn."
+            "A moon orbiting Saturn.",
+            "A planet that has exploded.",
+            "A planet that has no gravity."
           ],
-          correct: 1,
+          correct: 0,
           explain: "Đoạn 1 định nghĩa: 'exoplanets—planets orbiting stars outside our solar system'."
         },
         {
@@ -220,28 +220,28 @@ const TEST_DATA = {
           id: 20,
           text: "How do modern space telescopes detect distant exoplanets according to paragraph 2?",
           options: [
-            "By sending radio signals and waiting for an echo.",
-            "By measuring the tiny dip in a star's brightness as a planet passes in front of it.",
             "By taking high-resolution color photographs of the surface.",
-            "By landing robotic rovers on their moons."
+            "By landing robotic rovers on their moons.",
+            "By sending radio signals and waiting for an echo.",
+            "By measuring the tiny dip in a star's brightness as a planet passes in front of it."
           ],
-          correct: 1,
+          correct: 3,
           explain: "Đoạn 2: 'detect distant planets by measuring the tiny dip in brightness when a planet passes in front of its star'."
         },
         {
           id: 21,
           text: "The word \"dip\" in paragraph 2 is closest in meaning to _______.",
-          options: ["increase", "slight decrease", "bright light", "sudden explosion"],
-          correct: 1,
+          options: ["increase", "bright light", "sudden explosion", "slight decrease"],
+          correct: 3,
           explain: "'Dip' là độ sụt lún, sự sụt giảm nhẹ (slight decrease)."
         },
         {
           id: 22,
           text: "Why is traveling to the nearest exoplanet currently impossible?",
           options: [
-            "Because we don't know where they are.",
-            "Because it would take tens of thousands of years with current technology.",
             "Because there is no oxygen in space.",
+            "Because it would take tens of thousands of years with current technology.",
+            "Because we don't know where they are.",
             "Because space telescopes are too heavy."
           ],
           correct: 1,
@@ -264,86 +264,91 @@ const TEST_DATA = {
           id: 23,
           text: "What is the primary purpose of the passage?",
           options: [
+            "To criticize modern fast-paced lifestyles.",
             "To teach the reader step-by-step how to meditate.",
             "To discuss the scientific benefits of mindfulness and meditation on the brain and mental health.",
-            "To criticize modern fast-paced lifestyles.",
             "To compare different spiritual religions."
           ],
-          correct: 1,
+          correct: 2,
           explain: "Bài viết chứng minh tầm quan trọng và lợi ích khoa học (về cấu trúc não bộ và tinh thần) của thiền định và chánh niệm."
         },
         {
           id: 24,
           text: "What is mindfulness defined as in paragraph 1?",
           options: [
-            "A method to read other people's minds.",
-            "Bringing attention to present experiences without judgment.",
             "Thinking about the past to solve problems.",
-            "A type of physical exercise."
+            "A method to read other people's minds.",
+            "A type of physical exercise.",
+            "Bringing attention to present experiences without judgment."
           ],
-          correct: 1,
+          correct: 3,
           explain: "Đoạn 1: 'Mindfulness is the psychological process of bringing one's attention to the internal and external experiences occurring in the present moment, without judgment'."
         },
         {
           id: 25,
           text: "What is neuroplasticity as mentioned in paragraph 2?",
           options: [
-            "The brain's inability to learn new things.",
             "The brain's ability to physically alter its structure through experience and practice.",
-            "A neurological disease caused by stress.",
-            "A synthetic material used in brain surgery."
+            "The brain's inability to learn new things.",
+            "A synthetic material used in brain surgery.",
+            "A neurological disease caused by stress."
           ],
-          correct: 1,
+          correct: 0,
           explain: "Đoạn 2 giải thích: 'physically alter the structure of the brain, a phenomenon known as neuroplasticity'."
         },
         {
           id: 26,
           text: "According to paragraph 2, how does meditation affect the prefrontal cortex?",
           options: [
-            "It reduces its blood flow.",
-            "It increases its gray matter density, improving self-control.",
+            "It has no effect on it.",
             "It makes it smaller.",
-            "It has no effect on it."
+            "It reduces its blood flow.",
+            "It increases its gray matter density, improving self-control."
           ],
-          correct: 1,
+          correct: 3,
           explain: "Đoạn 2: 'show an increase in gray matter density in the prefrontal cortex—the area responsible for decision-making, emotional regulation, and self-control'."
         },
         {
           id: 27,
           text: "How does meditation affect the amygdala according to the passage?",
           options: [
+            "It shuts it down completely.",
             "It increases its size.",
             "It reduces its size, helping lower stress levels.",
-            "It shuts it down completely.",
             "It makes it release more cortisol."
           ],
-          correct: 1,
+          correct: 2,
           explain: "Đoạn 2: 'reduce the size of the amygdala, the brain's fear and stress center... correlates with lower levels of cortisol'."
         },
         {
           id: 28,
           text: "The word \"rumination\" in paragraph 3 is closest in meaning to _______.",
-          options: ["positive thinking", "repetitive negative thinking", "deep sleep", "creative problem solving"],
+          options: [
+            "creative problem solving",
+            "repetitive negative thinking",
+            "deep sleep",
+            "positive thinking"
+          ],
           correct: 1,
           explain: "Đoạn 3 định nghĩa: 'rumination—the repetitive, negative thinking about past events or future worries'."
         },
         {
           id: 29,
           text: "The word \"incorporating\" in paragraph 3 is closest in meaning to _______.",
-          options: ["removing", "integrating", "ignoring", "postponing"],
-          correct: 1,
+          options: ["removing", "postponing", "ignoring", "integrating"],
+          correct: 3,
           explain: "'Incorporate' = hợp tác, tích hợp, đưa một cái gì đó vào làm một phần (integrating)."
         },
         {
           id: 30,
           text: "What is suggested as a minimum daily duration for mindfulness to see benefits?",
           options: [
-            "At least two hours.",
-            "Ten to fifteen minutes.",
             "Only five seconds.",
-            "Exactly one hour."
+            "Exactly one hour.",
+            "At least two hours.",
+            "Ten to fifteen minutes."
           ],
-          correct: 1,
+          correct: 3,
           explain: "Đoạn cuối: 'Incorporating just ten to fifteen minutes of mindfulness into a daily routine...'"
         }
       ]

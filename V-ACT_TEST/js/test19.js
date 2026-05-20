@@ -12,36 +12,36 @@ const TEST_DATA = {
         {
           id: 1,
           text: "The new tax policy was heavily criticized _______ its negative impact on low-income families.",
-          options: ["because of", "although", "despite", "because"],
-          correct: 0,
+          options: ["although", "because", "despite", "because of"],
+          correct: 3,
           explain: "Giới từ chỉ nguyên nhân: 'because of' + cụm danh từ (its negative impact...)."
         },
         {
           id: 2,
           text: "He spoke English so quickly that I could hardly _______ what he was saying.",
-          options: ["make out", "make up", "make for", "make over"],
+          options: ["make out", "make up", "make over", "make for"],
           correct: 0,
           explain: "Phrasal verb: 'make out' = hiểu/nghe rõ. Các cụm khác: 'make up' = trang điểm/bịa chuyện, 'make for' = đi về phía, 'make over' = cải tạo/chuyển nhượng."
         },
         {
           id: 3,
           text: "By next September, they _______ in this house for exactly twenty years.",
-          options: ["will have lived", "will live", "will be living", "are living"],
-          correct: 0,
+          options: ["are living", "will have lived", "will be living", "will live"],
+          correct: 1,
           explain: "Thì Tương lai hoàn thành: diễn tả hành động sẽ hoàn thành trước một thời điểm xác định trong tương lai ('by next September')."
         },
         {
           id: 4,
           text: "I'd rather you _______ tell anyone what I just told you.",
-          options: ["didn't", "don't", "not", "won't"],
-          correct: 0,
+          options: ["don't", "didn't", "won't", "not"],
+          correct: 1,
           explain: "Cấu trúc giả định 'would rather' cho hiện tại/tương lai: 'S1 + would rather + S2 + V2/ed' (ở thể phủ định dùng 'didn't')."
         },
         {
           id: 5,
           text: "The police _______ investigating the bank robbery that took place last night.",
-          options: ["are", "is", "was", "has been"],
-          correct: 0,
+          options: ["was", "is", "are", "has been"],
+          correct: 2,
           explain: "Sự hòa hợp chủ vị: Danh từ 'police' (cảnh sát) luôn được coi là danh từ tập hợp số nhiều và đi với động từ số nhiều ('are')."
         }
       ]
@@ -54,35 +54,35 @@ const TEST_DATA = {
       questions: [
         {
           id: 6,
-          text: 'Unless we <span class="underline-error">don\'t protect</span> (A) the environment, future generations <span class="underline-error">will suffer</span> (B) from the <span class="underline-error">severe consequences</span> (C) of climate <span class="underline-error">change</span> (D).',
+          text: "Unless we <span class=\"underline-error\">don't protect</span> (A) the environment, future generations <span class=\"underline-error\">will suffer</span> (B) from the <span class=\"underline-error\">severe consequences</span> (C) of climate <span class=\"underline-error\">change</span> (D).",
           options: ["A. don't protect", "B. will suffer", "C. severe consequences", "D. change"],
           correct: 0,
           explain: "Liên từ: 'Unless' đã mang nghĩa phủ định ('nếu không'), nên động từ trong mệnh đề 'Unless' không dùng dạng phủ định 'don't'. Sửa 'don't protect' thành 'protect'."
         },
         {
           id: 7,
-          text: 'The girl <span class="underline-error">about who</span> (A) you were <span class="underline-error">speaking</span> (B) is <span class="underline-error">my classmate</span> (C) in <span class="underline-error">high school</span> (D).',
+          text: "The girl <span class=\"underline-error\">about who</span> (A) you were <span class=\"underline-error\">speaking</span> (B) is <span class=\"underline-error\">my classmate</span> (C) in <span class=\"underline-error\">high school</span> (D).",
           options: ["A. about who", "B. speaking", "C. my classmate", "D. high school"],
           correct: 0,
           explain: "Đại từ quan hệ: Giới từ chỉ đứng trước đại từ quan hệ làm tân ngữ là 'whom' cho người và 'which' cho vật. Không đứng trước 'who'. Sửa 'about who' thành 'about whom'."
         },
         {
           id: 8,
-          text: 'It is <span class="underline-error">highly recommended</span> (A) that a dentist <span class="underline-error">checks</span> (B) your teeth <span class="underline-error">at least</span> (C) twice <span class="underline-error">a year</span> (D).',
+          text: "It is <span class=\"underline-error\">highly recommended</span> (A) that a dentist <span class=\"underline-error\">checks</span> (B) your teeth <span class=\"underline-error\">at least</span> (C) twice <span class=\"underline-error\">a year</span> (D).",
           options: ["A. highly recommended", "B. checks", "C. at least", "D. twice a year"],
           correct: 1,
           explain: "Cấu trúc giả định: 'It is recommended that + S + V(bare)'. Động từ ở mệnh đề sau 'that' phải ở dạng nguyên mẫu. Sửa 'checks' thành 'check'."
         },
         {
           id: 9,
-          text: 'Although <span class="underline-error">he was</span> (A) very tired, <span class="underline-error">but</span> (B) he tried <span class="underline-error">his best</span> (C) to finish the <span class="underline-error">assignment</span> (D).',
+          text: "Although <span class=\"underline-error\">he was</span> (A) very tired, <span class=\"underline-error\">but</span> (B) he tried <span class=\"underline-error\">his best</span> (C) to finish the <span class=\"underline-error\">assignment</span> (D).",
           options: ["A. he was", "B. but", "C. his best", "D. assignment"],
           correct: 1,
           explain: "Liên từ: Không sử dụng song song 'Although' và 'but' trong cùng một câu ghép. Sửa: bỏ 'but'."
         },
         {
           id: 10,
-          text: 'She has <span class="underline-error">too many</span> (A) work <span class="underline-error">to do</span> (B) that she <span class="underline-error">cannot go</span> (C) out with <span class="underline-error">us</span> (D).',
+          text: "She has <span class=\"underline-error\">too many</span> (A) work <span class=\"underline-error\">to do</span> (B) that she <span class=\"underline-error\">cannot go</span> (C) out with <span class=\"underline-error\">us</span> (D).",
           options: ["A. too many", "B. to do", "C. cannot go", "D. us"],
           correct: 0,
           explain: "Danh từ không đếm được 'work' không đi với 'many', đồng thời để tạo cấu trúc 'quá...đến nỗi' ta dùng 'so much'. Sửa 'too many' thành 'so much'."
@@ -99,36 +99,36 @@ const TEST_DATA = {
           id: 11,
           text: "I didn't listen to my teacher, so I failed the test.",
           options: [
-            "If I had listened to my teacher, I wouldn't have failed the test.",
-            "If I listened to my teacher, I wouldn't fail the test.",
             "Had I listened to my teacher, I would fail the test.",
-            "If only I didn't listen to my teacher."
+            "If only I didn't listen to my teacher.",
+            "If I had listened to my teacher, I wouldn't have failed the test.",
+            "If I listened to my teacher, I wouldn't fail the test."
           ],
-          correct: 0,
+          correct: 2,
           explain: "Giả định ngược quá khứ dùng câu điều kiện loại 3: 'If + S + had + V3/ed, S + would have + V3/ed'."
         },
         {
           id: 12,
           text: "It is not necessary for you to clean the room today.",
           options: [
-            "You needn't clean the room today.",
-            "You must not clean the room today.",
             "You shouldn't clean the room today.",
-            "You may not clean the room today."
+            "You may not clean the room today.",
+            "You must not clean the room today.",
+            "You needn't clean the room today."
           ],
-          correct: 0,
+          correct: 3,
           explain: "'not necessary' = không cần thiết, tương đương động từ khuyết thiếu 'needn't + V(bare)'."
         },
         {
           id: 13,
           text: "They are repairing the bridge at the moment.",
           options: [
-            "The bridge is being repaired at the moment.",
-            "The bridge is repaired at the moment.",
             "The bridge is repairing at the moment.",
+            "The bridge is repaired at the moment.",
+            "The bridge is being repaired at the moment.",
             "The bridge has been repaired at the moment."
           ],
-          correct: 0,
+          correct: 2,
           explain: "Chuyển sang bị động thì Hiện tại tiếp diễn: 'S + am/is/are + being + V3/ed'."
         },
         {
@@ -137,8 +137,8 @@ const TEST_DATA = {
           options: [
             "I haven't seen my cousin for three years.",
             "I didn't see my cousin since we were in London.",
-            "The last time I have seen my cousin was three years ago.",
-            "It is three years since I last have seen my cousin."
+            "It is three years since I last have seen my cousin.",
+            "The last time I have seen my cousin was three years ago."
           ],
           correct: 0,
           explain: "Chuyển đổi thì: 'S + last + V2 + when + thời gian + ago' = 'S + hasn't/haven't + V3 + for + khoảng thời gian'."
@@ -147,12 +147,12 @@ const TEST_DATA = {
           id: 15,
           text: "\"I will pay you back tomorrow,\" she said to me.",
           options: [
-            "She promised to pay me back the following day.",
             "She said she will pay me back the following day.",
+            "She promised to pay me back the following day.",
             "She promised she would pay me back tomorrow.",
             "She told me to pay her back the following day."
           ],
-          correct: 0,
+          correct: 1,
           explain: "Câu gián tiếp: Cấu trúc hứa hẹn 'promise to V' hoặc 'promise + would'. Đồng thời trạng từ 'tomorrow' đổi thành 'the following day'."
         }
       ]
@@ -172,12 +172,12 @@ const TEST_DATA = {
           id: 16,
           text: "What is the main idea of the passage?",
           options: [
-            "The history and digital evolution of cryptography, including its future challenges.",
             "How Alan Turing cracked the Enigma code.",
-            "The mathematics behind public-key encryption.",
-            "The threat of quantum computers to traditional banks."
+            "The threat of quantum computers to traditional banks.",
+            "The history and digital evolution of cryptography, including its future challenges.",
+            "The mathematics behind public-key encryption."
           ],
-          correct: 0,
+          correct: 2,
           explain: "Bài đọc tóm quát lịch sử mật mã học, vai trò của nó trong kỷ nguyên số hiện nay, và thách thức lớn trong tương lai từ máy tính lượng tử."
         },
         {
@@ -185,42 +185,42 @@ const TEST_DATA = {
           text: "According to paragraph 1, how did Julius Caesar protect his messages?",
           options: [
             "Using a complex computer program.",
-            "Using a substitution cipher that shifted letters by a set number of positions.",
+            "By sending them through a secret team of codebreakers.",
             "By hiding them in metal containers.",
-            "By sending them through a secret team of codebreakers."
+            "Using a substitution cipher that shifted letters by a set number of positions."
           ],
-          correct: 1,
+          correct: 3,
           explain: "Đoạn 1: 'Julius Caesar used a cipher that shifted letters by a set number of positions to communicate...'"
         },
         {
           id: 18,
           text: "What was the Enigma machine as described in paragraph 1?",
           options: [
-            "A machine used by Allied codebreakers.",
-            "An encryption machine used by Germans during World War II.",
             "The first classical computer built in England.",
-            "A cryptographic formula for public keys."
+            "A cryptographic formula for public keys.",
+            "An encryption machine used by Germans during World War II.",
+            "A machine used by Allied codebreakers."
           ],
-          correct: 1,
+          correct: 2,
           explain: "Đoạn 1: 'The Germans relied on the Enigma machine to encrypt their military messages...'"
         },
         {
           id: 19,
           text: "In paragraph 2, the word \"transitioned\" is closest in meaning to _______.",
-          options: ["stayed the same", "changed", "disappeared", "failed"],
-          correct: 1,
+          options: ["changed", "stayed the same", "failed", "disappeared"],
+          correct: 0,
           explain: "'Transition' = chuyển đổi, chuyển dịch, thay đổi từ dạng này sang dạng khác (changed/shifted)."
         },
         {
           id: 20,
           text: "According to the passage, how does public-key cryptography work?",
           options: [
-            "It uses a single password known to everyone.",
-            "It uses two keys: a public key to encrypt and a private key to decrypt.",
+            "It requires a quantum computer to read.",
             "It sends physical keys through the mail.",
-            "It requires a quantum computer to read."
+            "It uses a single password known to everyone.",
+            "It uses two keys: a public key to encrypt and a private key to decrypt."
           ],
-          correct: 1,
+          correct: 3,
           explain: "Đoạn 2: 'public-key cryptography, uses two different keys: a public key to encrypt the message and a private key to decrypt it'."
         },
         {
@@ -228,18 +228,18 @@ const TEST_DATA = {
           text: "Why does quantum computing pose a threat to modern cryptography?",
           options: [
             "It is too expensive for banks to buy.",
-            "It can solve the mathematical formulas behind current encryption in seconds.",
             "It does not use keys.",
+            "It can solve the mathematical formulas behind current encryption in seconds.",
             "It cannot connect to the internet."
           ],
-          correct: 1,
+          correct: 2,
           explain: "Đoạn 3: 'Quantum computers... will have the power to solve the mathematical problems behind current encryption methods in a matter of seconds'."
         },
         {
           id: 22,
           text: "The word \"resistant\" in paragraph 3 is closest in meaning to _______.",
-          options: ["vulnerable", "unaffected by", "similar", "helpful"],
-          correct: 1,
+          options: ["vulnerable", "similar", "unaffected by", "helpful"],
+          correct: 2,
           explain: "'Resistant to' = chống lại, có khả năng đề kháng, không bị ảnh hưởng (unaffected by)."
         }
       ]
@@ -259,10 +259,10 @@ const TEST_DATA = {
           id: 23,
           text: "What is the main idea of the passage?",
           options: [
-            "The benefits of electric lighting in cities.",
-            "The causes, ecological and human consequences, and solutions of light pollution.",
             "How sea turtles navigate the oceans.",
-            "The chemistry of melatonin production."
+            "The causes, ecological and human consequences, and solutions of light pollution.",
+            "The chemistry of melatonin production.",
+            "The benefits of electric lighting in cities."
           ],
           correct: 1,
           explain: "Bài viết nói về hiện tượng ô nhiễm ánh sáng: nguyên nhân, ảnh hưởng xấu tới động thực vật và con người, và các giải pháp khắc phục."
@@ -271,22 +271,22 @@ const TEST_DATA = {
           id: 24,
           text: "What is light pollution as defined in paragraph 1?",
           options: [
+            "A disease that affects human vision.",
             "Smoke from electric generators.",
-            "The excessive or inappropriate use of artificial outdoor light.",
             "Blue light from computer screens.",
-            "A disease that affects human vision."
+            "The excessive or inappropriate use of artificial outdoor light."
           ],
-          correct: 1,
+          correct: 3,
           explain: "Đoạn 1: 'Light pollution is the excessive or inappropriate use of artificial outdoor light...'"
         },
         {
           id: 25,
           text: "According to paragraph 2, how does light pollution affect sea turtle hatchlings?",
           options: [
-            "It prevents them from laying eggs.",
-            "It disorients them, leading them away from the ocean.",
             "It makes their shells softer.",
-            "It attracts fish that eat them."
+            "It disorients them, leading them away from the ocean.",
+            "It attracts fish that eat them.",
+            "It prevents them from laying eggs."
           ],
           correct: 1,
           explain: "Đoạn 2: 'Artificial lights on developed beaches can heavily disorient the hatchlings, leading them in the wrong direction toward busy roads...'"
@@ -295,22 +295,22 @@ const TEST_DATA = {
           id: 26,
           text: "Why do migratory birds collide with city skyscrapers according to the passage?",
           options: [
-            "Because they fly too fast.",
             "Because artificial lights attract and confuse them.",
-            "Because they cannot see buildings in the dark.",
-            "Because skyscrapers block their food sources."
+            "Because skyscrapers block their food sources.",
+            "Because they fly too fast.",
+            "Because they cannot see buildings in the dark."
           ],
-          correct: 1,
+          correct: 0,
           explain: "Đoạn 2: 'Brightly lit city skyscrapers can attract and confuse the birds, causing them to collide with buildings...'"
         },
         {
           id: 27,
           text: "How does night-time artificial light affect human health?",
           options: [
-            "It increases melatonin production.",
+            "It has no impact on biological clocks.",
             "It suppresses melatonin, leading to sleep disorders and health risks.",
             "It helps cure depression.",
-            "It has no impact on biological clocks."
+            "It increases melatonin production."
           ],
           correct: 1,
           explain: "Đoạn 3: 'Exposure to artificial light at night suppresses the production of melatonin, a hormone that regulates sleep. This suppression can lead to sleep disorders...'"
@@ -318,27 +318,27 @@ const TEST_DATA = {
         {
           id: 28,
           text: "The word \"suppresses\" in paragraph 3 is closest in meaning to _______.",
-          options: ["increases", "reduces", "releases", "improves"],
-          correct: 1,
+          options: ["increases", "improves", "releases", "reduces"],
+          correct: 3,
           explain: "'Suppress' = đè nén, kìm hãm, làm giảm bớt (reduces/stops)."
         },
         {
           id: 29,
           text: "Which of the following is NOT mentioned as a solution to light pollution?",
           options: [
-            "Using shielded light fixtures that direct light downward.",
             "Turning off non-essential lights at night.",
-            "Using bright blue-white LED lights.",
-            "Using warm-colored LED lights."
+            "Using warm-colored LED lights.",
+            "Using shielded light fixtures that direct light downward.",
+            "Using bright blue-white LED lights."
           ],
-          correct: 2,
+          correct: 3,
           explain: "Bài viết khuyên dùng đèn LED màu ấm (warm-colored) thay vì màu xanh trắng (blue-white)."
         },
         {
           id: 30,
           text: "The word \"reclaim\" in paragraph 3 is closest in meaning to _______.",
-          options: ["destroy", "recover", "forget", "study"],
-          correct: 1,
+          options: ["destroy", "study", "forget", "recover"],
+          correct: 3,
           explain: "'Reclaim' = lấy lại, khôi phục lại (recover/take back)."
         }
       ]

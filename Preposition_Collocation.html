@@ -232,13 +232,15 @@
                 totalCorrect += stageCorrect;
 
                 // Update individual stage progress fills & labels
-                const percentage = (count / 20) * 100;
+                const stageLength = quizData[stage].length;
+                const percentage = (count / stageLength) * 100;
                 document.getElementById(`${stage}-progress-fill`).style.width = `${percentage}%`;
-                document.getElementById(`${stage}-score-label`).innerText = `Tiến độ: ${count}/20 (Đúng: ${stageCorrect})`;
+                document.getElementById(`${stage}-score-label`).innerText = `Tiến độ: ${count}/${stageLength} (Đúng: ${stageCorrect})`;
             });
 
             // Update cumulative global stats
-            document.getElementById('global-progress').innerText = `${totalAnswered}/60`;
+            const totalQuestions = quizData.easy.length + quizData.medium.length + quizData.hard.length;
+            document.getElementById('global-progress').innerText = `${totalAnswered}/${totalQuestions}`;
             document.getElementById('global-score').innerText = `${totalCorrect * 10} XP`;
         }
 
@@ -258,7 +260,8 @@
             // Check if there is an unanswered question in the stage, if so start there. Otherwise start at 0.
             const stageAnswers = savedData.answered[stage] || {};
             let targetIndex = 0;
-            for (let i = 0; i < 20; i++) {
+            const stageLength = quizData[stage].length;
+            for (let i = 0; i < stageLength; i++) {
                 if (stageAnswers[i] === undefined) {
                     targetIndex = i;
                     break;
@@ -277,7 +280,6 @@
             document.getElementById('next-btn').style.display = 'none';
             
             // Fetch correct questions sub-list (offset based on stage)
-            // easy: 0-19, medium: 0-19 (represented by 21-40 in JS list, let's map them index by index)
             const questionsPool = quizData[currentStage];
             const q = questionsPool[currentQuestionIndex];
 
@@ -285,16 +287,15 @@
             document.getElementById('question-text').innerHTML = q.question;
             
             // Map the Vietnamese translation or formula name as help text
-            // We can parse the formula/meaning from explanation for translation hint
-            // By extracting the bold or first part of translation
             let hintText = q.explanation.replace(/<\/?[^>]+(>|$)/g, ""); // strip HTML
             document.getElementById('question-translation').innerText = `Gợi ý: ${hintText}`;
 
-            document.getElementById('question-tracker').innerText = `Câu ${currentQuestionIndex + 1} / 20`;
+            const stageLength = questionsPool.length;
+            document.getElementById('question-tracker').innerText = `Câu ${currentQuestionIndex + 1} / ${stageLength}`;
             
             // Update progress bar
             const progressBar = document.getElementById('progress-fill');
-            progressBar.style.width = `${((currentQuestionIndex + 1) / 20) * 100}%`;
+            progressBar.style.width = `${((currentQuestionIndex + 1) / stageLength) * 100}%`;
             progressBar.className = `progress-fill ${currentStage}`;
 
             const optionsGrid = document.getElementById('options-grid');
@@ -371,7 +372,7 @@
         // Next Question
         function nextQuestion() {
             currentQuestionIndex++;
-            if (currentQuestionIndex < 20) {
+            if (currentQuestionIndex < quizData[currentStage].length) {
                 loadQuestion();
             } else {
                 showResults();
@@ -385,8 +386,9 @@
 
             // Calculate stage score
             const stageData = savedData.answered[currentStage];
+            const stageLength = quizData[currentStage].length;
             let correctCount = 0;
-            for (let i = 0; i < 20; i++) {
+            for (let i = 0; i < stageLength; i++) {
                 if (stageData[i] && stageData[i].isCorrect) {
                     correctCount++;
                 }
@@ -395,18 +397,17 @@
             // Display elements
             const emojiEl = document.getElementById('result-emoji');
             const titleEl = document.getElementById('result-title');
-            const scoreEl = document.querySelector('#result-score span');
             
-            scoreEl.innerText = correctCount;
+            document.getElementById('result-score').innerHTML = `Bạn đã trả lời đúng <span>${correctCount}</span>/${stageLength} câu hỏi.`;
 
             // Tailor reward text & emoji
-            if (correctCount === 20) {
+            if (correctCount === stageLength) {
                 emojiEl.innerText = '👑';
                 titleEl.innerText = 'Hoàn hảo! Tuyệt đối 100%';
-            } else if (correctCount >= 16) {
+            } else if (correctCount >= Math.floor(stageLength * 0.8)) {
                 emojiEl.innerText = '🔥';
                 titleEl.innerText = 'Xuất sắc! Quá tuyệt vời!';
-            } else if (correctCount >= 10) {
+            } else if (correctCount >= Math.floor(stageLength * 0.5)) {
                 emojiEl.innerText = '👍';
                 titleEl.innerText = 'Rất tốt! Cố gắng thêm chút nữa nhé!';
             } else {

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preposition & Collocation Mastery - English Practice</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/preposition_collocation.css">
+</head>
+<body>
+
+    <!-- Background Music Audio -->
+    <audio id="bg-audio" loop preload="auto">
+        <source src="assets/Tong_hop.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <!-- Landing / Stage Selection Screen -->
+        <div id="menu-screen" class="glass-panel">
+            <a href="index.html" class="home-link">🏠 Quay lại Trang chủ</a>
+            <h1>Preposition & Collocation Quiz 🎮</h1>
+            <p class="subtitle">Kiểm tra và nâng cao kiến thức giới từ và cụm từ tiếng Anh. Chọn một chặng để bắt đầu!</p>
+
+            <div class="stats-summary">
+                <div class="stat-item">
+                    <span id="global-progress" class="stat-val">0/60</span>
+                    <span class="stat-label">Đã hoàn thành</span>
+                </div>
+                <div class="stat-item">
+                    <span id="global-score" class="stat-val">0 XP</span>
+                    <span class="stat-label">Điểm tích lũy</span>
+                </div>
+            </div>
+
+            <div class="stages-grid">
+                <!-- Easy Stage Card -->
+                <div class="stage-card easy-card" onclick="startStage('easy')">
+                    <span class="stage-icon">🌱</span>
+                    <h3 class="stage-title">Easy Stage</h3>
+                    <p class="stage-desc">Chặng Khởi Động: Ôn luyện những cụm từ và giới từ cơ bản nhất.</p>
+                    <div class="stage-progress">
+                        <div id="easy-progress-fill" class="stage-progress-fill"></div>
+                    </div>
+                    <span id="easy-score-label" class="stage-card-score">Tiến độ: 0/20</span>
+                </div>
+
+                <!-- Medium Stage Card -->
+                <div class="stage-card medium-card" onclick="startStage('medium')">
+                    <span class="stage-icon">⚡</span>
+                    <h3 class="stage-title">Medium Stage</h3>
+                    <p class="stage-desc">Chặng Tăng Tốc: Củng cố các cụm từ phổ biến thường gặp trong đề thi.</p>
+                    <div class="stage-progress">
+                        <div id="medium-progress-fill" class="stage-progress-fill"></div>
+                    </div>
+                    <span id="medium-score-label" class="stage-card-score">Tiến độ: 0/20</span>
+                </div>
+
+                <!-- Hard Stage Card -->
+                <div class="stage-card hard-card" onclick="startStage('hard')">
+                    <span class="stage-icon">🔥</span>
+                    <h3 class="stage-title">Hard Stage</h3>
+                    <p class="stage-desc">Chặng Về Đích: Chinh phục cấu trúc nâng cao và thử thách giới từ phức tạp.</p>
+                    <div class="stage-progress">
+                        <div id="hard-progress-fill" class="stage-progress-fill"></div>
+                    </div>
+                    <span id="hard-score-label" class="stage-card-score">Tiến độ: 0/20</span>
+                </div>
+            </div>
+
+            <div class="reset-wrapper">
+                <button class="reset-btn" onclick="resetAllProgress()">🗑️ Xóa toàn bộ lịch sử làm bài</button>
+            </div>
+        </div>
+
+        <!-- Quiz/Game Screen -->
+        <div id="game-screen" class="glass-panel" style="display: none;">
+            <div class="quiz-header">
+                <button class="back-btn" onclick="exitToMenu()">← MENU</button>
+                <span id="stage-badge" class="badge">EASY</span>
+                <span id="question-tracker" class="tracker">Câu 1 / 20</span>
+            </div>
+            
+            <div class="progress-container">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+
+            <div class="question-box">
+                <div id="question-text" class="question-text">Đang tải câu hỏi...</div>
+                <div id="question-translation" class="question-translation">Dịch nghĩa câu hỏi đang tải...</div>
+            </div>
+
+            <div id="options-grid" class="options-grid">
+                <!-- Option buttons generated dynamically -->
+            </div>
+
+            <div id="explanation-box" class="explanation-box" style="display: none;">
+                <div id="explanation-title" class="explanation-title">Giải thích</div>
+                <div id="explanation-content" class="explanation-content">Giải thích chi tiết...</div>
+            </div>
+
+            <div class="nav-actions">
+                <button id="next-btn" class="action-btn" onclick="nextQuestion()" style="display: none;">TIẾP TỤC ➡️</button>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="glass-panel" style="display: none;">
+            <div class="result-screen">
+                <span id="result-emoji" class="result-emoji">🎉</span>
+                <h2 id="result-title" class="result-title">Hoàn thành Chặng!</h2>
+                <div id="result-score" class="result-score">Bạn đã trả lời đúng <span>0</span>/20 câu hỏi.</div>
+                
+                <div class="result-actions">
+                    <button class="btn-replay" id="replay-btn" onclick="replayStage()">Làm lại 🔄</button>
+                    <button class="btn-next-stage" id="next-stage-btn" onclick="goToNextStage()" style="display: none;">Chặng tiếp theo ➡️</button>
+                    <button class="btn-menu" onclick="exitToMenu()">Chọn Chặng Khác 📋</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Music Widget -->
+    <div id="music-widget">
+        <div class="player-icon"></div>
+        <button class="play-btn" id="play-pause-btn">▶</button>
+        <div class="track-info">
+            <span class="track-title">Playlist</span>
+            <span class="track-name">Tổng Hợp MP3</span>
+        </div>
+        <div class="volume-control">
+            <span class="vol-label">VOL</span>
+            <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
+        </div>
+        <div class="track-badge">🎵 Click to Play</div>
+    </div>
+
+    <!-- Question Data JS -->
+    <script src="js/preposition_collocation.js"></script>
+
+    <!-- Game Logic JS -->
+    <script>
+        let currentStage = 'easy'; // easy, medium, hard
+        let currentQuestionIndex = 0;
+        let hasAnswered = false;
+        let savedData = JSON.parse(localStorage.getItem('prepCollocQuizProgress')) || { answered: { easy: {}, medium: {}, hard: {} } };
+
+        // Ensure default structure
+        if (!savedData.answered) {
+            savedData = { answered: { easy: {}, medium: {}, hard: {} } };
+        }
+        if (!savedData.answered.easy) savedData.answered.easy = {};
+        if (!savedData.answered.medium) savedData.answered.medium = {};
+        if (!savedData.answered.hard) savedData.answered.hard = {};
+
+        // Audio Elements
+        const bgAudio = document.getElementById('bg-audio');
+        const playPauseBtn = document.getElementById('play-pause-btn');
+        const volumeSlider = document.getElementById('volume-slider');
+        const trackBadge = document.querySelector('.track-badge');
+        let musicStarted = false;
+
+        bgAudio.volume = 0.3;
+        volumeSlider.value = 0.3;
+
+        bgAudio.addEventListener('play', () => {
+            playPauseBtn.innerHTML = '⏸';
+            trackBadge.innerHTML = '🎵 Playing...';
+            trackBadge.style.color = '#34d399';
+        });
+
+        bgAudio.addEventListener('pause', () => {
+            playPauseBtn.innerHTML = '▶';
+            trackBadge.innerHTML = '🎵 Paused';
+            trackBadge.style.color = '#9ca3af';
+        });
+
+        bgAudio.addEventListener('error', () => {
+            trackBadge.innerHTML = '❌ Lỗi File MP3';
+            trackBadge.style.color = '#ef4444';
+        });
+
+        function toggleMusic() {
+            if (bgAudio.paused) {
+                bgAudio.play().then(() => {
+                    musicStarted = true;
+                }).catch(e => {
+                    trackBadge.innerHTML = '🔇 Cần click';
+                });
+            } else {
+                bgAudio.pause();
+            }
+        }
+
+        playPauseBtn.addEventListener('click', toggleMusic);
+        volumeSlider.addEventListener('input', (e) => { bgAudio.volume = e.target.value; });
+
+        // Autoplay triggered by user action
+        window.addEventListener('click', () => {
+            if (!musicStarted) {
+                bgAudio.play().then(() => {
+                    musicStarted = true;
+                }).catch(() => {});
+            }
+        }, { once: true });
+
+        // Initialize Menu
+        function initMenu() {
+            document.getElementById('menu-screen').style.display = 'block';
+            document.getElementById('game-screen').style.display = 'none';
+            document.getElementById('result-screen').style.display = 'none';
+
+            // Calculate progress stats
+            let totalAnswered = 0;
+            let totalCorrect = 0;
+            const stages = ['easy', 'medium', 'hard'];
+            
+            stages.forEach(stage => {
+                const stageData = savedData.answered[stage] || {};
+                const answeredKeys = Object.keys(stageData);
+                const count = answeredKeys.length;
+                totalAnswered += count;
+
+                let stageCorrect = 0;
+                answeredKeys.forEach(k => {
+                    if (stageData[k] && stageData[k].isCorrect) {
+                        stageCorrect++;
+                    }
+                });
+                totalCorrect += stageCorrect;
+
+                // Update individual stage progress fills & labels
+                const percentage = (count / 20) * 100;
+                document.getElementById(`${stage}-progress-fill`).style.width = `${percentage}%`;
+                document.getElementById(`${stage}-score-label`).innerText = `Tiến độ: ${count}/20 (Đúng: ${stageCorrect})`;
+            });
+
+            // Update cumulative global stats
+            document.getElementById('global-progress').innerText = `${totalAnswered}/60`;
+            document.getElementById('global-score').innerText = `${totalCorrect * 10} XP`;
+        }
+
+        // Start a Stage
+        function startStage(stage) {
+            currentStage = stage;
+            
+            // Set badge class
+            const badge = document.getElementById('stage-badge');
+            badge.innerText = stage.toUpperCase();
+            badge.className = `badge ${stage}`;
+
+            // Reset classes on action button
+            const nextBtn = document.getElementById('next-btn');
+            nextBtn.className = `action-btn ${stage}`;
+
+            // Check if there is an unanswered question in the stage, if so start there. Otherwise start at 0.
+            const stageAnswers = savedData.answered[stage] || {};
+            let targetIndex = 0;
+            for (let i = 0; i < 20; i++) {
+                if (stageAnswers[i] === undefined) {
+                    targetIndex = i;
+                    break;
+                }
+            }
+
+            currentQuestionIndex = targetIndex;
+            document.getElementById('menu-screen').style.display = 'none';
+            document.getElementById('game-screen').style.display = 'block';
+            loadQuestion();
+        }
+
+        // Load Question
+        function loadQuestion() {
+            document.getElementById('explanation-box').style.display = 'none';
+            document.getElementById('next-btn').style.display = 'none';
+            
+            // Fetch correct questions sub-list (offset based on stage)
+            // easy: 0-19, medium: 0-19 (represented by 21-40 in JS list, let's map them index by index)
+            const questionsPool = quizData[currentStage];
+            const q = questionsPool[currentQuestionIndex];
+
+            // Setup question text & translation
+            document.getElementById('question-text').innerHTML = q.question;
+            
+            // Map the Vietnamese translation or formula name as help text
+            // We can parse the formula/meaning from explanation for translation hint
+            // By extracting the bold or first part of translation
+            let hintText = q.explanation.replace(/<\/?[^>]+(>|$)/g, ""); // strip HTML
+            document.getElementById('question-translation').innerText = `Gợi ý: ${hintText}`;
+
+            document.getElementById('question-tracker').innerText = `Câu ${currentQuestionIndex + 1} / 20`;
+            
+            // Update progress bar
+            const progressBar = document.getElementById('progress-fill');
+            progressBar.style.width = `${((currentQuestionIndex + 1) / 20) * 100}%`;
+            progressBar.className = `progress-fill ${currentStage}`;
+
+            const optionsGrid = document.getElementById('options-grid');
+            optionsGrid.innerHTML = '';
+
+            const previousAnswer = savedData.answered[currentStage][currentQuestionIndex];
+
+            if (previousAnswer !== undefined) {
+                hasAnswered = true;
+                q.options.forEach((optText, index) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'option-btn locked';
+                    btn.innerHTML = optText;
+                    if (index === q.correctIndex) {
+                        btn.classList.add('correct');
+                    } else if (index === previousAnswer.selected) {
+                        btn.classList.add('wrong');
+                    }
+                    optionsGrid.appendChild(btn);
+                });
+                showExplanation(q.explanation);
+                document.getElementById('next-btn').style.display = 'block';
+            } else {
+                hasAnswered = false;
+                q.options.forEach((optText, index) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'option-btn';
+                    btn.innerHTML = optText;
+                    btn.onclick = () => checkAnswer(index, btn);
+                    optionsGrid.appendChild(btn);
+                });
+            }
+        }
+
+        // Check Answer
+        function checkAnswer(selectedIndex, btnElement) {
+            if (hasAnswered) return;
+            hasAnswered = true;
+
+            const questionsPool = quizData[currentStage];
+            const q = questionsPool[currentQuestionIndex];
+            const buttons = document.querySelectorAll('.option-btn');
+            const isCorrect = (selectedIndex === q.correctIndex);
+
+            // Save progress
+            savedData.answered[currentStage][currentQuestionIndex] = { selected: selectedIndex, isCorrect: isCorrect };
+            localStorage.setItem('prepCollocQuizProgress', JSON.stringify(savedData));
+
+            // UI feedback
+            buttons.forEach(btn => btn.classList.add('locked'));
+            if (isCorrect) {
+                btnElement.classList.add('correct');
+            } else {
+                btnElement.classList.add('wrong');
+                buttons[q.correctIndex].classList.add('correct');
+            }
+
+            showExplanation(q.explanation);
+            document.getElementById('next-btn').style.display = 'block';
+        }
+
+        // Show Explanation Box
+        function showExplanation(text) {
+            const expBox = document.getElementById('explanation-box');
+            const expTitle = document.getElementById('explanation-title');
+            const expContent = document.getElementById('explanation-content');
+
+            expBox.className = `explanation-box ${currentStage}`;
+            expTitle.className = `explanation-title ${currentStage}`;
+            expContent.innerHTML = text;
+            expBox.style.display = 'block';
+        }
+
+        // Next Question
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < 20) {
+                loadQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        // Show Results Screen
+        function showResults() {
+            document.getElementById('game-screen').style.display = 'none';
+            document.getElementById('result-screen').style.display = 'block';
+
+            // Calculate stage score
+            const stageData = savedData.answered[currentStage];
+            let correctCount = 0;
+            for (let i = 0; i < 20; i++) {
+                if (stageData[i] && stageData[i].isCorrect) {
+                    correctCount++;
+                }
+            }
+
+            // Display elements
+            const emojiEl = document.getElementById('result-emoji');
+            const titleEl = document.getElementById('result-title');
+            const scoreEl = document.querySelector('#result-score span');
+            
+            scoreEl.innerText = correctCount;
+
+            // Tailor reward text & emoji
+            if (correctCount === 20) {
+                emojiEl.innerText = '👑';
+                titleEl.innerText = 'Hoàn hảo! Tuyệt đối 100%';
+            } else if (correctCount >= 16) {
+                emojiEl.innerText = '🔥';
+                titleEl.innerText = 'Xuất sắc! Quá tuyệt vời!';
+            } else if (correctCount >= 10) {
+                emojiEl.innerText = '👍';
+                titleEl.innerText = 'Rất tốt! Cố gắng thêm chút nữa nhé!';
+            } else {
+                emojiEl.innerText = '📚';
+                titleEl.innerText = 'Luyện tập thêm để cải thiện nhé!';
+            }
+
+            // Setup Next Stage button logic
+            const nextStageBtn = document.getElementById('next-stage-btn');
+            if (currentStage === 'easy') {
+                nextStageBtn.innerText = 'Chơi Chặng Medium ➡️';
+                nextStageBtn.style.display = 'inline-block';
+                nextStageBtn.onclick = () => startStage('medium');
+            } else if (currentStage === 'medium') {
+                nextStageBtn.innerText = 'Chơi Chặng Hard ➡️';
+                nextStageBtn.style.display = 'inline-block';
+                nextStageBtn.onclick = () => startStage('hard');
+            } else {
+                nextStageBtn.style.display = 'none';
+            }
+        }
+
+        // Replay Stage (resets answers for current stage)
+        function replayStage() {
+            if (confirm('Bạn muốn làm lại toàn bộ câu hỏi ở Chặng này?')) {
+                savedData.answered[currentStage] = {};
+                localStorage.setItem('prepCollocQuizProgress', JSON.stringify(savedData));
+                currentQuestionIndex = 0;
+                document.getElementById('result-screen').style.display = 'none';
+                document.getElementById('game-screen').style.display = 'block';
+                loadQuestion();
+            }
+        }
+
+        // Exit back to Stage menu
+        function exitToMenu() {
+            initMenu();
+        }
+
+        // Reset All Progress across all stages
+        function resetAllProgress() {
+            if (confirm('Bạn có chắc chắn muốn xóa toàn bộ lịch sử làm bài của cả 3 Chặng?')) {
+                savedData = { answered: { easy: {}, medium: {}, hard: {} } };
+                localStorage.setItem('prepCollocQuizProgress', JSON.stringify(savedData));
+                initMenu();
+            }
+        }
+
+        window.onload = initMenu;
+    </script>
+</body>
+</html>

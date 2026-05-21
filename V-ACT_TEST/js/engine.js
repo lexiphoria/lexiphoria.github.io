@@ -2,20 +2,158 @@
 (function () {
   "use strict";
 
+  // Parse test number dynamically from URL
+  const match = window.location.pathname.match(/test(\d+)/i) || window.location.href.match(/test(\d+)/i);
+  const testNum = match ? parseInt(match[1], 10) : 1;
+  const localStorageKey = `vact_test_${testNum}_active_data`;
+
+  // Helper to shuffle array in-place
+  function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  // Helper to shuffle options and update correct index
+  function shuffleOptions(q) {
+    const originalCorrectIndex = q.correct;
+    const indexedOptions = q.options.map((opt, index) => ({ opt, index }));
+    shuffle(indexedOptions);
+    
+    q.options = indexedOptions.map(item => item.opt);
+    q.correct = indexedOptions.findIndex(item => item.index === originalCorrectIndex);
+  }
+
+  // Helper to generate the partitioned test data
+  function generateTestData() {
+    if (typeof VACT_QUESTION_POOL === 'undefined') {
+      console.error("VACT_QUESTION_POOL is not defined!");
+      return null;
+    }
+    
+    const startIdx = (testNum - 1) * 5;
+    const endIdx = testNum * 5;
+    
+    const part1Qs = JSON.parse(JSON.stringify(VACT_QUESTION_POOL.part1.slice(startIdx, endIdx)));
+    const part2Qs = JSON.parse(JSON.stringify(VACT_QUESTION_POOL.part2.slice(startIdx, endIdx)));
+    const part3Qs = JSON.parse(JSON.stringify(VACT_QUESTION_POOL.part3.slice(startIdx, endIdx)));
+    
+    const passageStartIdx = (testNum - 1) * 2;
+    const passageEndIdx = testNum * 2;
+    const passages = JSON.parse(JSON.stringify(VACT_QUESTION_POOL.readingPassages.slice(passageStartIdx, passageEndIdx)));
+
+    // Shuffle question order inside parts 1, 2, and 3
+    shuffle(part1Qs);
+    shuffle(part2Qs);
+    shuffle(part3Qs);
+
+    // Shuffle options for all multiple choice questions
+    part1Qs.forEach(shuffleOptions);
+    part2Qs.forEach(shuffleOptions);
+    part3Qs.forEach(shuffleOptions);
+    passages.forEach(p => {
+      p.questions.forEach(shuffleOptions);
+    });
+
+    // Re-index all questions sequentially from 1 to 30
+    let qCount = 1;
+    part1Qs.forEach(q => { q.id = qCount++; });
+    part2Qs.forEach(q => { q.id = qCount++; });
+    part3Qs.forEach(q => { q.id = qCount++; });
+    passages.forEach(p => {
+      p.questions.forEach(q => { q.id = qCount++; });
+    });
+
+    return {
+      title: "V-ACT English Test " + testNum,
+      totalQuestions: 30,
+      timeLimit: 45,
+      parts: [
+        {
+          id: "part1",
+          name: "Part 1: Multiple Choice",
+          instruction: "Choose the best answer (A, B, C, or D) to complete each sentence.",
+          type: "multiple_choice",
+          questions: part1Qs
+        },
+        {
+          id: "part2",
+          name: "Part 2: Error Identification",
+          instruction: "Each sentence has ONE underlined error (A, B, C, or D). Find it.",
+          type: "error_id",
+          questions: part2Qs
+        },
+        {
+          id: "part3",
+          name: "Part 3: Sentence Restatement",
+          instruction: "Choose the sentence (A, B, C, or D) that is closest in meaning to the given sentence.",
+          type: "restatement",
+          questions: part3Qs
+        },
+        {
+          id: "part4a",
+          name: "Part 4: Reading Comprehension — Passage 1",
+          instruction: "Read the passage and choose the best answer (A, B, C, or D) for each question.",
+          type: "reading",
+          passage: passages[0].passage,
+          questions: passages[0].questions
+        },
+        {
+          id: "part4b",
+          name: "Part 4: Reading Comprehension — Passage 2",
+          instruction: "Read the passage and choose the best answer (A, B, C, or D) for each question.",
+          type: "reading",
+          passage: passages[1].passage,
+          questions: passages[1].questions
+        }
+      ]
+    };
+  }
+
+  let TEST_DATA = null;
+  try {
+    const cached = localStorage.getItem(localStorageKey);
+    if (cached) {
+      TEST_DATA = JSON.parse(cached);
+    }
+  } catch (e) {
+    console.error("Error reading cache from localStorage:", e);
+  }
+
+  if (!TEST_DATA) {
+    TEST_DATA = generateTestData();
+    if (TEST_DATA) {
+      try {
+        localStorage.setItem(localStorageKey, JSON.stringify(TEST_DATA));
+      } catch (e) {
+        console.error("Error writing cache to localStorage:", e);
+      }
+    }
+  }
+
   let answered = 0;
   let correctCount = 0;
   let wrongCount = 0;
   let startTime = Date.now();
   let timerInterval = null;
-  const totalQ = TEST_DATA.totalQuestions;
+  const totalQ = TEST_DATA ? TEST_DATA.totalQuestions : 30;
   const answeredSet = new Set();
 
   // ─── Init ───
   document.addEventListener("DOMContentLoaded", () => {
-    renderTest();
-    startTimer();
-    updateStats();
-    injectAudioWidget();
+    if (TEST_DATA) {
+      renderTest();
+      startTimer();
+      updateStats();
+      injectAudioWidget();
+    } else {
+      const container = document.getElementById("test-body");
+      if (container) {
+        container.innerHTML = '<div class="error-msg" style="padding: 40px; text-align: center; color: var(--wrong);">Failed to load test data. Please try again.</div>';
+      }
+    }
   });
 
   // ─── Audio Widget ───
@@ -43,6 +181,7 @@
   // ─── Timer ───
   function startTimer() {
     const el = document.getElementById("timer");
+    if (!el) return;
     timerInterval = setInterval(() => {
       const elapsed = Math.floor((Date.now() - startTime) / 1000);
       const m = String(Math.floor(elapsed / 60)).padStart(2, "0");
@@ -58,6 +197,7 @@
   // ─── Render ───
   function renderTest() {
     const container = document.getElementById("test-body");
+    if (!container || !TEST_DATA) return;
     let html = "";
 
     TEST_DATA.parts.forEach((part) => {
@@ -96,7 +236,7 @@
 
   // ─── Select Option ───
   window.__selectOption = function (qid, idx) {
-    if (answeredSet.has(qid)) return;
+    if (answeredSet.has(qid) || !TEST_DATA) return;
     answeredSet.add(qid);
 
     // Find question data
@@ -110,6 +250,7 @@
     if (!qData) return;
 
     const card = document.getElementById("q-" + qid);
+    if (!card) return;
     const btns = card.querySelectorAll(".option-btn");
     const isCorrect = idx === qData.correct;
 
@@ -129,22 +270,29 @@
     card.classList.add(isCorrect ? "answered-correct" : "answered-wrong");
 
     // Show explanation
-    document.getElementById("exp-" + qid).classList.add("show");
+    const expEl = document.getElementById("exp-" + qid);
+    if (expEl) expEl.classList.add("show");
 
     updateStats();
   };
 
   // ─── Stats ───
   function updateStats() {
-    document.getElementById("stat-answered").textContent = answered + "/" + totalQ;
-    document.getElementById("stat-correct").textContent = correctCount;
-    document.getElementById("stat-wrong").textContent = wrongCount;
+    const elAns = document.getElementById("stat-answered");
+    const elCorr = document.getElementById("stat-correct");
+    const elWr = document.getElementById("stat-wrong");
+    const elBar = document.getElementById("progress-bar");
+    
+    if (elAns) elAns.textContent = answered + "/" + totalQ;
+    if (elCorr) elCorr.textContent = correctCount;
+    if (elWr) elWr.textContent = wrongCount;
     const pct = totalQ > 0 ? Math.round((answered / totalQ) * 100) : 0;
-    document.getElementById("progress-bar").style.width = pct + "%";
+    if (elBar) elBar.style.width = pct + "%";
   }
 
   // ─── Submit ───
   window.__submitTest = function () {
+    if (!TEST_DATA) return;
     stopTimer();
     const elapsed = Math.floor((Date.now() - startTime) / 1000);
     const m = Math.floor(elapsed / 60);
@@ -157,29 +305,45 @@
     else if (pct < 70) { emoji = "💪"; msg = "Good effort!"; }
     else if (pct < 90) { emoji = "🌟"; msg = "Great job!"; }
 
-    document.getElementById("result-emoji").textContent = emoji;
-    document.getElementById("result-msg").textContent = msg;
-    document.getElementById("result-score").innerHTML = correctCount + ' <span class="total">/ ' + totalQ + "</span>";
-    document.getElementById("result-correct").textContent = correctCount;
-    document.getElementById("result-wrong").textContent = wrongCount;
-    document.getElementById("result-pct").textContent = pct + "%";
-    document.getElementById("result-time").textContent = m + "m " + s + "s";
-    document.getElementById("result-overlay").classList.add("show");
+    const elEmoji = document.getElementById("result-emoji");
+    const elMsg = document.getElementById("result-msg");
+    const elScore = document.getElementById("result-score");
+    const elCorr = document.getElementById("result-correct");
+    const elWr = document.getElementById("result-wrong");
+    const elPct = document.getElementById("result-pct");
+    const elTime = document.getElementById("result-time");
+    const elOverlay = document.getElementById("result-overlay");
+
+    if (elEmoji) elEmoji.textContent = emoji;
+    if (elMsg) elMsg.textContent = msg;
+    if (elScore) elScore.innerHTML = correctCount + ' <span class="total">/ ' + totalQ + "</span>";
+    if (elCorr) elCorr.textContent = correctCount;
+    if (elWr) elWr.textContent = wrongCount;
+    if (elPct) elPct.textContent = pct + "%";
+    if (elTime) elTime.textContent = m + "m " + s + "s";
+    if (elOverlay) elOverlay.classList.add("show");
     
     // Save score to local storage
-    localStorage.setItem('vact_score_' + TEST_DATA.title, correctCount + "/" + totalQ);
+    try {
+      localStorage.setItem('vact_score_' + TEST_DATA.title, correctCount + "/" + totalQ);
+    } catch (e) {
+      console.error(e);
+    }
 
     // Also reveal all unanswered
     TEST_DATA.parts.forEach((part) => {
       part.questions.forEach((q) => {
         if (!answeredSet.has(q.id)) {
           const card = document.getElementById("q-" + q.id);
-          const btns = card.querySelectorAll(".option-btn");
-          btns.forEach((btn, i) => {
-            btn.classList.add("disabled");
-            if (i === q.correct) btn.classList.add("correct");
-          });
-          document.getElementById("exp-" + q.id).classList.add("show");
+          if (card) {
+            const btns = card.querySelectorAll(".option-btn");
+            btns.forEach((btn, i) => {
+              btn.classList.add("disabled");
+              if (i === q.correct) btn.classList.add("correct");
+            });
+            const expEl = document.getElementById("exp-" + q.id);
+            if (expEl) expEl.classList.add("show");
+          }
         }
       });
     });
@@ -187,12 +351,29 @@
 
   // ─── Reset ───
   window.__resetTest = function () {
+    // Clear active test cache to force a new shuffle
+    try {
+      localStorage.removeItem(localStorageKey);
+    } catch (e) {
+      console.error(e);
+    }
+    
+    TEST_DATA = generateTestData();
+    if (TEST_DATA) {
+      try {
+        localStorage.setItem(localStorageKey, JSON.stringify(TEST_DATA));
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
     answered = 0;
     correctCount = 0;
     wrongCount = 0;
     startTime = Date.now();
     answeredSet.clear();
-    document.getElementById("result-overlay").classList.remove("show");
+    const elOverlay = document.getElementById("result-overlay");
+    if (elOverlay) elOverlay.classList.remove("show");
     renderTest();
     updateStats();
     clearInterval(timerInterval);
@@ -201,6 +382,7 @@
   };
 
   window.__closeResult = function () {
-    document.getElementById("result-overlay").classList.remove("show");
+    const elOverlay = document.getElementById("result-overlay");
+    if (elOverlay) elOverlay.classList.remove("show");
   };
 })();

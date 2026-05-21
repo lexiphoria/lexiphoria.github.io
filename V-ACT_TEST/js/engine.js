@@ -2,13 +2,35 @@
 (function () {
   "use strict";
 
+  // Global error reporting for easier debugging
+  window.onerror = function (message, source, lineno, colno, error) {
+    console.error("V-ACT Engine Error:", message, source, lineno);
+    try {
+      let errDiv = document.getElementById("vact-error-overlay");
+      if (!errDiv) {
+        errDiv = document.createElement("div");
+        errDiv.id = "vact-error-overlay";
+        errDiv.style.cssText = "position: fixed; top: 0; left: 0; width: 100%; max-height: 50vh; overflow-y: auto; background: #ff4d4d; color: white; padding: 20px; z-index: 999999; font-family: monospace; white-space: pre-wrap; box-sizing: border-box; box-shadow: 0 4px 12px rgba(0,0,0,0.3);";
+        document.body.appendChild(errDiv);
+      }
+      errDiv.innerHTML = `<h3>⚠️ V-ACT Test Error:</h3><p><strong>Message:</strong> ${message}</p><p><strong>Source:</strong> ${source}</p><p><strong>Line:</strong> ${lineno} | <strong>Col:</strong> ${colno}</p><p><strong>Stack:</strong> ${error && error.stack ? error.stack : 'N/A'}</p>`;
+    } catch (e) {
+      alert("Error: " + message + " (Line " + lineno + ")");
+    }
+    return false;
+  };
+
   // Parse test number dynamically from URL
   const match = window.location.pathname.match(/test(\d+)/i) || window.location.href.match(/test(\d+)/i);
-  const testNum = match ? parseInt(match[1], 10) : 1;
+  let testNum = match ? parseInt(match[1], 10) : 1;
+  if (isNaN(testNum) || testNum < 1 || testNum > 20) {
+    testNum = 1;
+  }
   const localStorageKey = `vact_test_${testNum}_active_data`;
 
   // Helper to shuffle array in-place
   function shuffle(array) {
+    if (!Array.isArray(array)) return array;
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
@@ -18,6 +40,7 @@
 
   // Helper to shuffle options and update correct index
   function shuffleOptions(q) {
+    if (!q || !Array.isArray(q.options) || typeof q.correct !== 'number') return;
     const originalCorrectIndex = q.correct;
     const indexedOptions = q.options.map((opt, index) => ({ opt, index }));
     shuffle(indexedOptions);
@@ -54,16 +77,20 @@
     part2Qs.forEach(shuffleOptions);
     part3Qs.forEach(shuffleOptions);
     passages.forEach(p => {
-      p.questions.forEach(shuffleOptions);
+      if (p && p.questions) {
+        p.questions.forEach(shuffleOptions);
+      }
     });
 
     // Re-index all questions sequentially from 1 to 30
     let qCount = 1;
-    part1Qs.forEach(q => { q.id = qCount++; });
-    part2Qs.forEach(q => { q.id = qCount++; });
-    part3Qs.forEach(q => { q.id = qCount++; });
+    part1Qs.forEach(q => { if (q) q.id = qCount++; });
+    part2Qs.forEach(q => { if (q) q.id = qCount++; });
+    part3Qs.forEach(q => { if (q) q.id = qCount++; });
     passages.forEach(p => {
-      p.questions.forEach(q => { q.id = qCount++; });
+      if (p && p.questions) {
+        p.questions.forEach(q => { if (q) q.id = qCount++; });
+      }
     });
 
     return {
@@ -97,26 +124,49 @@
           name: "Part 4: Reading Comprehension — Passage 1",
           instruction: "Read the passage and choose the best answer (A, B, C, or D) for each question.",
           type: "reading",
-          passage: passages[0].passage,
-          questions: passages[0].questions
+          passage: passages[0] ? passages[0].passage : [],
+          questions: passages[0] ? passages[0].questions : []
         },
         {
           id: "part4b",
           name: "Part 4: Reading Comprehension — Passage 2",
           instruction: "Read the passage and choose the best answer (A, B, C, or D) for each question.",
           type: "reading",
-          passage: passages[1].passage,
-          questions: passages[1].questions
+          passage: passages[1] ? passages[1].passage : [],
+          questions: passages[1] ? passages[1].questions : []
         }
       ]
     };
+  }
+
+  // Check if test data conforms to schema
+  function isValidTestData(data) {
+    if (!data || typeof data !== 'object') return false;
+    if (data.title !== "V-ACT English Test " + testNum) return false;
+    if (!Array.isArray(data.parts) || data.parts.length !== 5) return false;
+    
+    const expectedPartTypes = ['multiple_choice', 'error_id', 'restatement', 'reading', 'reading'];
+    for (let i = 0; i < 5; i++) {
+      const part = data.parts[i];
+      if (!part || typeof part !== 'object') return false;
+      if (part.type !== expectedPartTypes[i]) return false;
+      if (!Array.isArray(part.questions)) return false;
+      if (part.type === 'reading' && (!part.passage || !Array.isArray(part.passage))) return false;
+    }
+    return true;
   }
 
   let TEST_DATA = null;
   try {
     const cached = localStorage.getItem(localStorageKey);
     if (cached) {
-      TEST_DATA = JSON.parse(cached);
+      const parsed = JSON.parse(cached);
+      if (isValidTestData(parsed)) {
+        TEST_DATA = parsed;
+      } else {
+        console.warn("Cached V-ACT test data is invalid or legacy, discarding.");
+        localStorage.removeItem(localStorageKey);
+      }
     }
   } catch (e) {
     console.error("Error reading cache from localStorage:", e);
@@ -142,7 +192,7 @@
   const answeredSet = new Set();
 
   // ─── Init ───
-  document.addEventListener("DOMContentLoaded", () => {
+  function init() {
     if (TEST_DATA) {
       renderTest();
       startTimer();
@@ -154,7 +204,13 @@
         container.innerHTML = '<div class="error-msg" style="padding: 40px; text-align: center; color: var(--wrong);">Failed to load test data. Please try again.</div>';
       }
     }
-  });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    setTimeout(init, 0);
+  }
 
   // ─── Audio Widget ───
   function injectAudioWidget() {
@@ -190,10 +246,6 @@
     }, 1000);
   }
 
-  function stopTimer() {
-    clearInterval(timerInterval);
-  }
-
   // ─── Render ───
   function renderTest() {
     const container = document.getElementById("test-body");
@@ -204,7 +256,7 @@
       html += `<div class="part-header"><h2>${part.name}</h2><p>${part.instruction}</p></div>`;
 
       // Reading passage
-      if (part.passage) {
+      if (part.passage && Array.isArray(part.passage)) {
         html += '<div class="reading-passage">';
         part.passage.forEach((p, i) => {
           html += `<p><strong>[${i + 1}]</strong> ${p}</p>`;
@@ -213,22 +265,27 @@
       }
 
       // Questions
-      part.questions.forEach((q) => {
-        html += `<div class="question-card" id="q-${q.id}">`;
-        html += `<div class="question-number">${q.id}</div>`;
-        html += `<div class="question-text">${q.text}</div>`;
-        html += `<div class="options-grid">`;
-        const letters = ["A", "B", "C", "D"];
-        q.options.forEach((opt, i) => {
-          html += `<button class="option-btn" data-qid="${q.id}" data-idx="${i}" onclick="window.__selectOption(${q.id},${i})">`;
-          html += `<span class="option-letter">${letters[i]}</span>`;
-          html += `<span class="option-text">${opt}</span>`;
-          html += `</button>`;
+      if (Array.isArray(part.questions)) {
+        part.questions.forEach((q) => {
+          if (!q) return;
+          html += `<div class="question-card" id="q-${q.id}">`;
+          html += `<div class="question-number">${q.id}</div>`;
+          html += `<div class="question-text">${q.text}</div>`;
+          html += `<div class="options-grid">`;
+          const letters = ["A", "B", "C", "D"];
+          if (Array.isArray(q.options)) {
+            q.options.forEach((opt, i) => {
+              html += `<button class="option-btn" data-qid="${q.id}" data-idx="${i}" onclick="window.__selectOption(${q.id},${i})">`;
+              html += `<span class="option-letter">${letters[i]}</span>`;
+              html += `<span class="option-text">${opt}</span>`;
+              html += `</button>`;
+            });
+          }
+          html += `</div>`;
+          html += `<div class="explanation" id="exp-${q.id}"><strong>💡 Giải thích:</strong> ${q.explain}</div>`;
+          html += `</div>`;
         });
-        html += `</div>`;
-        html += `<div class="explanation" id="exp-${q.id}"><strong>💡 Giải thích:</strong> ${q.explain}</div>`;
-        html += `</div>`;
-      });
+      }
     });
 
     container.innerHTML = html;
@@ -243,7 +300,7 @@
     let qData = null;
     for (const part of TEST_DATA.parts) {
       for (const q of part.questions) {
-        if (q.id === qid) { qData = q; break; }
+        if (q && q.id === qid) { qData = q; break; }
       }
       if (qData) break;
     }
@@ -293,7 +350,7 @@
   // ─── Submit ───
   window.__submitTest = function () {
     if (!TEST_DATA) return;
-    stopTimer();
+    clearInterval(timerInterval);
     const elapsed = Math.floor((Date.now() - startTime) / 1000);
     const m = Math.floor(elapsed / 60);
     const s = elapsed % 60;
@@ -332,20 +389,22 @@
 
     // Also reveal all unanswered
     TEST_DATA.parts.forEach((part) => {
-      part.questions.forEach((q) => {
-        if (!answeredSet.has(q.id)) {
-          const card = document.getElementById("q-" + q.id);
-          if (card) {
-            const btns = card.querySelectorAll(".option-btn");
-            btns.forEach((btn, i) => {
-              btn.classList.add("disabled");
-              if (i === q.correct) btn.classList.add("correct");
-            });
-            const expEl = document.getElementById("exp-" + q.id);
-            if (expEl) expEl.classList.add("show");
+      if (Array.isArray(part.questions)) {
+        part.questions.forEach((q) => {
+          if (q && !answeredSet.has(q.id)) {
+            const card = document.getElementById("q-" + q.id);
+            if (card) {
+              const btns = card.querySelectorAll(".option-btn");
+              btns.forEach((btn, i) => {
+                btn.classList.add("disabled");
+                if (i === q.correct) btn.classList.add("correct");
+              });
+              const expEl = document.getElementById("exp-" + q.id);
+              if (expEl) expEl.classList.add("show");
+            }
           }
-        }
-      });
+        });
+      }
     });
   };
 

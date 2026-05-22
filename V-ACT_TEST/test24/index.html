@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>V-ACT Test 24 — English Proficiency Practice</title>
+  <meta name="description" content="V-ACT English Practice Test 24: 30 multiple-choice questions covering Grammar, Vocabulary, Error Identification, Sentence Restatement, and Reading Comprehension at B1-B2 CEFR level.">
+  <link rel="stylesheet" href="../css/test.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="test-header">
+    <div class="badge">V-ACT English Practice</div>
+    <h1>Test 24 — English Proficiency</h1>
+    <p class="subtitle">30 Questions · B1–B2 Level · 4 Parts · Theme: Our Future (Tương lai của chúng ta)</p>
+  </header>
+
+  <!-- Stats Bar -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <span class="icon">📝</span>
+        <span>Answered: <span class="stat-value" id="stat-answered">0/30</span></span>
+      </div>
+      <div class="stat-item">
+        <span class="icon">✅</span>
+        <span>Correct: <span class="stat-value correct-color" id="stat-correct">0</span></span>
+      </div>
+      <div class="stat-item">
+        <span class="icon">❌</span>
+        <span>Wrong: <span class="stat-value wrong-color" id="stat-wrong">0</span></span>
+      </div>
+      <div class="stat-item">
+        <span class="icon">⏱️</span>
+        <span>Time: <span class="stat-value timer" id="timer">00:00</span></span>
+      </div>
+    </div>
+    <div id="progress-bar-container"><div id="progress-bar"></div></div>
+  </div>
+
+  <!-- Test Body -->
+  <main class="test-container" id="test-body"></main>
+
+  <!-- Actions -->
+  <div class="test-container" style="padding-top:0;">
+    <div class="actions-bar">
+      <button class="btn-action btn-submit" onclick="window.__submitTest()">📊 Submit & View Results</button>
+      <button class="btn-action btn-reset" onclick="window.__resetTest()">🔄 Reset Test</button>
+      <a class="btn-action btn-home" href="../index.html" style="text-decoration:none;">🏠 Back to Menu</a>
+    </div>
+  </div>
+
+  <!-- Result Overlay -->
+  <div class="result-overlay" id="result-overlay">
+    <div class="result-card">
+      <div class="result-emoji" id="result-emoji">🎉</div>
+      <h2 id="result-msg">Great job!</h2>
+      <div class="score-text" id="result-score">0 <span class="total">/ 30</span></div>
+      <div class="result-details">
+        <div class="result-detail-item">
+          <div class="label">Correct</div>
+          <div class="value correct-color" id="result-correct">0</div>
+        </div>
+        <div class="result-detail-item">
+          <div class="label">Wrong</div>
+          <div class="value wrong-color" id="result-wrong">0</div>
+        </div>
+        <div class="result-detail-item">
+          <div class="label">Score</div>
+          <div class="value percent-color" id="result-pct">0%</div>
+        </div>
+      </div>
+      <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:4px;">
+        ⏱️ Time: <strong id="result-time">0m 0s</strong>
+      </p>
+      <button class="btn-action btn-reset" onclick="window.__resetTest()" style="margin-top:16px;">🔄 Try Again</button>
+      <button class="btn-action btn-submit" onclick="window.__closeResult()" style="background:var(--surface-2);color:var(--text);border:1px solid var(--border);box-shadow:none;">📖 Review Answers</button>
+    </div>
+  </div>
+
+  <script src="../js/question_pool.js"></script>
+  <script src="../js/engine.js"></script>
+</body>
+</html>

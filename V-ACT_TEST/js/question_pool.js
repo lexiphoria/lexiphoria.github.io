@@ -1200,6 +1200,306 @@ const VACT_QUESTION_POOL = {
       ],
       "correct": 0,
       "explain": "Sự hòa hợp chủ vị: Chủ ngữ 'The number of + N số nhiều' đi với động từ chia số ít (was). Lưu ý: 'A number of + N số nhiều' mới đi với động từ chia số nhiều."
+    },
+    {
+      "text": "Faced with academic pressure, many teenagers find it difficult to manage their study time and often experience _______.",
+      "options": [
+        "resilience",
+        "burnout",
+        "satisfaction",
+        "well-being"
+      ],
+      "correct": 1,
+      "explain": "Từ vựng (Vocabulary): 'burnout' = kiệt sức, suy nhược do áp lực. Trong ngữ cảnh học sinh đối mặt với áp lực học tập lớn, họ dễ bị kiệt sức.",
+      "id": 1
+    },
+    {
+      "text": "_______ you practice speaking English, _______ confident you will become.",
+      "options": [
+        "The more / the more",
+        "The most / the more",
+        "More / the more",
+        "The more / more"
+      ],
+      "correct": 0,
+      "explain": "Ngữ pháp (So sánh kép): 'The + so sánh hơn + S + V, the + so sánh hơn + S + V' (Càng... càng...).",
+      "id": 2
+    },
+    {
+      "text": "Participating in community service during high school helps students gain _______ skills that cannot be learned from textbooks.",
+      "options": [
+        "impractical",
+        "hands-on",
+        "theoretical",
+        "passive"
+      ],
+      "correct": 1,
+      "explain": "Từ vựng (Vocabulary): 'hands-on skills/experience' = kỹ năng/kinh nghiệm thực tế. Trái nghĩa với 'theoretical' (lý thuyết).",
+      "id": 3
+    },
+    {
+      "text": "It is crucial that every student _______ the registration form before the school term starts.",
+      "options": [
+        "submits",
+        "submit",
+        "submitted",
+        "submitting"
+      ],
+      "correct": 1,
+      "explain": "Ngữ pháp (Thể giả định - Subjunctive): Cấu trúc 'It is crucial that + S + V-nguyên thể' (không chia theo chủ ngữ).",
+      "id": 4
+    },
+    {
+      "text": "Although it was difficult at first, she managed to _______ the fast pace of the advanced class.",
+      "options": [
+        "keep up with",
+        "look down on",
+        "make up for",
+        "run out of"
+      ],
+      "correct": 0,
+      "explain": "Phrasal verb: 'keep up with' = bắt kịp, theo kịp. 'look down on' = khinh thường; 'make up for' = đền bù; 'run out of' = cạn kiệt.",
+      "id": 5
+    },
+    {
+      "text": "Many historic buildings in the city center are being restored in an effort to preserve our cultural _______.",
+      "options": [
+        "heritage",
+        "pollution",
+        "future",
+        "monotony"
+      ],
+      "correct": 0,
+      "explain": "Từ vựng (Vocabulary): 'cultural heritage' = di sản văn hóa. Các tòa nhà cổ được phục dựng để bảo tồn di sản văn hóa.",
+      "id": 1
+    },
+    {
+      "text": "If he had taken the doctor's advice last week, he _______ much better now.",
+      "options": [
+        "would have felt",
+        "will feel",
+        "feels",
+        "would feel"
+      ],
+      "correct": 3,
+      "explain": "Ngữ pháp (Câu điều kiện hỗn hợp - Mixed conditional): If + S + had V3/ed (trái quá khứ), S + would + V(bare) + now (trái hiện tại).",
+      "id": 2
+    },
+    {
+      "text": "Volunteering at the local shelter is a great way to make a positive _______ to society.",
+      "options": [
+        "development",
+        "contribution",
+        "obsolescence",
+        "distraction"
+      ],
+      "correct": 1,
+      "explain": "Từ vựng (Collocation): 'make a positive contribution to' = đóng góp tích cực cho cái gì.",
+      "id": 3
+    },
+    {
+      "text": "Not only _______ the competition, but she also broke the school record.",
+      "options": [
+        "did she win",
+        "she won",
+        "has she won",
+        "she had won"
+      ],
+      "correct": 0,
+      "explain": "Ngữ pháp (Đảo ngữ với Not only): 'Not only + trợ động từ + S + V, but S + also + V'.",
+      "id": 4
+    },
+    {
+      "text": "The meeting was _______ because several key committee members were unable to attend.",
+      "options": [
+        "called off",
+        "kept up with",
+        "taken after",
+        "brought about"
+      ],
+      "correct": 0,
+      "explain": "Phrasal verb: 'call off' = hủy bỏ. 'keep up with' = bắt kịp; 'take after' = giống ai; 'bring about' = gây ra.",
+      "id": 5
+    },
+    {
+      "text": "By adopting a green lifestyle, individuals can significantly reduce their carbon _______ and protect the planet.",
+      "options": [
+        "footprint",
+        "offset",
+        "emission",
+        "capture"
+      ],
+      "correct": 0,
+      "explain": "Từ vựng (Collocation): 'carbon footprint' = dấu chân carbon (lượng phát thải CO2 của một cá nhân hay tổ chức).",
+      "id": 1
+    },
+    {
+      "text": "The manager explained the reason _______ she had rejected the initial project proposal.",
+      "options": [
+        "for which",
+        "at which",
+        "whose",
+        "which"
+      ],
+      "correct": 0,
+      "explain": "Ngữ pháp (Mệnh đề quan hệ): Cụm từ 'reason for which...' = lý do vì sao... (tương đương 'why').",
+      "id": 2
+    },
+    {
+      "text": "Using _______ packaging materials made of bamboo or paper is an effective way to control plastic waste.",
+      "options": [
+        "biodegradable",
+        "hazardous",
+        "durable",
+        "synthetic"
+      ],
+      "correct": 0,
+      "explain": "Từ vựng (Vocabulary): 'biodegradable' = có thể phân hủy sinh học, thân thiện với môi trường.",
+      "id": 3
+    },
+    {
+      "text": "No sooner _______ the new environmental policy than they received positive feedback from the public.",
+      "options": [
+        "had they announced",
+        "they had announced",
+        "did they announce",
+        "they announced"
+      ],
+      "correct": 0,
+      "explain": "Ngữ pháp (Đảo ngữ với No sooner): 'No sooner + had + S + V3/ed + than...'",
+      "id": 4
+    },
+    {
+      "text": "Governments are urging factories to _______ the amount of toxic chemicals they release into rivers.",
+      "options": [
+        "cut down on",
+        "look forward to",
+        "go through with",
+        "make up for"
+      ],
+      "correct": 0,
+      "explain": "Phrasal verb: 'cut down on' = giảm bớt, cắt giảm. Các đáp án khác không phù hợp về nghĩa.",
+      "id": 5
+    },
+    {
+      "text": "In the near future, many routine jobs will be replaced by _______, allowing humans to focus on creative tasks.",
+      "options": [
+        "automation",
+        "agriculture",
+        "monotony",
+        "restoration"
+      ],
+      "correct": 0,
+      "explain": "Từ vựng (Vocabulary): 'automation' = sự tự động hóa. Trong tương lai, các công việc mang tính rập khuôn (routine) sẽ bị thay bởi sự tự động hóa.",
+      "id": 1
+    },
+    {
+      "text": "By the time the new space probe reaches Mars, scientists _______ the data from the previous mission.",
+      "options": [
+        "will have analyzed",
+        "will analyze",
+        "have analyzed",
+        "are analyzing"
+      ],
+      "correct": 0,
+      "explain": "Ngữ pháp (Thì tương lai hoàn thành): Diễn tả hành động hoàn thành trước một thời điểm hoặc hành động khác trong tương lai: 'By the time + hiện tại đơn, tương lai hoàn thành (will have + V3/ed)'.",
+      "id": 2
+    },
+    {
+      "text": "The primary goal of future city planners is to build smart cities that promote _______ living.",
+      "options": [
+        "sustainable",
+        "harmful",
+        "degraded",
+        "impractical"
+      ],
+      "correct": 0,
+      "explain": "Từ vựng (Vocabulary): 'sustainable living' = lối sống bền vững (thân thiện môi trường, tiết kiệm tài nguyên).",
+      "id": 3
+    },
+    {
+      "text": "The report recommended that the city council _______ a new waste recycling system.",
+      "options": [
+        "adopt",
+        "adopts",
+        "adopted",
+        "adopting"
+      ],
+      "correct": 0,
+      "explain": "Ngữ pháp (Thể giả định - Subjunctive mood): Cấu trúc 'recommend that + S + V-nguyên thể' (không chia).",
+      "id": 4
+    },
+    {
+      "text": "She had to _______ a lot of hardships before she finally achieved success in her scientific career.",
+      "options": [
+        "go through",
+        "look up to",
+        "keep up with",
+        "call off"
+      ],
+      "correct": 0,
+      "explain": "Phrasal verb: 'go through' = trải qua (khó khăn, thử thách). Các từ khác: 'look up to' = kính trọng; 'keep up with' = theo kịp; 'call off' = hủy.",
+      "id": 5
+    },
+    {
+      "text": "Working in a multinational corporation requires excellent _______ communication skills to collaborate with colleagues from diverse backgrounds.",
+      "options": [
+        "cross-cultural",
+        "traditional",
+        "intrapersonal",
+        "impractical"
+      ],
+      "correct": 0,
+      "explain": "Từ vựng (Vocabulary): 'cross-cultural communication' = giao tiếp liên văn hóa. Đây là kỹ năng cần thiết khi làm việc trong tập đoàn đa quốc gia.",
+      "id": 1
+    },
+    {
+      "text": "If she had studied harder for the English exam last term, she _______ her current advanced class so easily now.",
+      "options": [
+        "would not struggle in",
+        "will not struggle in",
+        "would not have struggled in",
+        "does not struggle in"
+      ],
+      "correct": 0,
+      "explain": "Ngữ pháp (Câu điều kiện hỗn hợp - Mixed conditional): Diễn tả giả định trái quá khứ (had studied) gây kết quả trái hiện tại (would not struggle + now).",
+      "id": 2
+    },
+    {
+      "text": "High schools should offer more _______ counseling to help students choose the right university major or career path.",
+      "options": [
+        "vocational",
+        "recreational",
+        "theoretical",
+        "accidental"
+      ],
+      "correct": 0,
+      "explain": "Từ vựng (Vocabulary): 'vocational counseling/training' = hướng nghiệp/đào tạo nghề.",
+      "id": 3
+    },
+    {
+      "text": "It was only when the test results were announced _______ he realized how much progress he had made.",
+      "options": [
+        "that",
+        "when",
+        "which",
+        "where"
+      ],
+      "correct": 0,
+      "explain": "Ngữ pháp (Câu chẻ - Cleft sentence): Nhấn mạnh trạng ngữ chỉ thời gian: 'It was + trạng ngữ + that + S + V'.",
+      "id": 4
+    },
+    {
+      "text": "The computer system _______ unexpectedly, causing several employees to lose their unsaved work.",
+      "options": [
+        "broke down",
+        "called off",
+        "went through",
+        "kept up"
+      ],
+      "correct": 0,
+      "explain": "Phrasal verb: 'break down' = hỏng hóc, ngừng hoạt động (đối với hệ thống máy móc, máy tính).",
+      "id": 5
     }
   ],
   "part2": [
@@ -2383,6 +2683,306 @@ const VACT_QUESTION_POOL = {
       ],
       "correct": 0,
       "explain": "Tính từ đuôi -ing vs -ed: Để miêu tả cảm giác, trạng thái của con người (I), dùng tính từ đuôi -ed. Sửa 'extremely interesting' thành 'extremely interested'."
+    },
+    {
+      "text": "Each of the <span class=\"underline-error\">student</span> (A) in the class <span class=\"underline-error\">was</span> (B) given a unique <span class=\"underline-error\">topic</span> (C) to present <span class=\"underline-error\">on</span> (D).",
+      "options": [
+        "student",
+        "was",
+        "topic",
+        "on"
+      ],
+      "correct": 0,
+      "explain": "Ngữ pháp (Từ hạn định): Sau 'Each of the' phải đi với danh từ số nhiều -> sửa 'student' thành 'students'.",
+      "id": 6
+    },
+    {
+      "text": "We didn't have <span class=\"underline-error\">many</span> (A) money left, so we <span class=\"underline-error\">decided</span> (B) to travel <span class=\"underline-error\">by</span> (C) coach instead of <span class=\"underline-error\">taking</span> (D) a flight.",
+      "options": [
+        "many",
+        "decided",
+        "by",
+        "taking"
+      ],
+      "correct": 0,
+      "explain": "Ngữ pháp (Lượng từ): 'money' là danh từ không đếm được, nên phải đi với 'much' chứ không dùng 'many' -> sửa thành 'much'.",
+      "id": 7
+    },
+    {
+      "text": "She is <span class=\"underline-error\">extremely</span> (A) talented and <span class=\"underline-error\">capable</span> (B) <span class=\"underline-error\">to solving</span> (C) complex mathematical equations <span class=\"underline-error\">quickly</span> (D).",
+      "options": [
+        "extremely",
+        "capable",
+        "to solving",
+        "quickly"
+      ],
+      "correct": 2,
+      "explain": "Ngữ pháp (Giới từ): Tính từ 'capable' đi với giới từ 'of' + V-ing -> sửa 'to solving' thành 'of solving'.",
+      "id": 8
+    },
+    {
+      "text": "The school principal <span class=\"underline-error\">invited</span> (A) my family and <span class=\"underline-error\">I</span> (B) to <span class=\"underline-error\">attend</span> (C) the annual graduation <span class=\"underline-error\">ceremony</span> (D).",
+      "options": [
+        "invited",
+        "I",
+        "attend",
+        "ceremony"
+      ],
+      "correct": 1,
+      "explain": "Ngữ pháp (Đại từ): Ở đây làm tân ngữ của động từ 'invited', do đó phải dùng đại từ tân ngữ 'me' chứ không dùng đại từ chủ ngữ 'I' -> sửa thành 'me'.",
+      "id": 9
+    },
+    {
+      "text": "<span class=\"underline-error\">Having lived</span> (A) in the city for ten years, <span class=\"underline-error\">she</span> (B) was <span class=\"underline-error\">accustomed</span> (C) to <span class=\"underline-error\">hear</span> (D) loud traffic noises.",
+      "options": [
+        "Having lived",
+        "she",
+        "accustomed",
+        "hear"
+      ],
+      "correct": 3,
+      "explain": "Ngữ pháp (Dạng động từ): Cấu trúc 'be accustomed to + V-ing' = quen với việc làm gì -> sửa 'hear' thành 'hearing'.",
+      "id": 10
+    },
+    {
+      "text": "The teacher asked us to bring <span class=\"underline-error\">our</span> (A) textbooks to class, but Mary forgot <span class=\"underline-error\">hers</span> (B) because she had left it <span class=\"underline-error\">at</span> (C) <span class=\"underline-error\">him</span> (D) house.",
+      "options": [
+        "our",
+        "hers",
+        "at",
+        "him"
+      ],
+      "correct": 3,
+      "explain": "Ngữ pháp (Đại từ/Tính từ sở hữu): Đứng trước danh từ 'house' cần tính từ sở hữu 'his' chứ không phải đại từ tân ngữ 'him' -> sửa 'him' thành 'his'.",
+      "id": 6
+    },
+    {
+      "text": "Although she spent <span class=\"underline-error\">a few</span> (A) money on <span class=\"underline-error\">advertising</span> (B), the campaign was <span class=\"underline-error\">highly</span> (C) successful in attracting <span class=\"underline-error\">customers</span> (D).",
+      "options": [
+        "a few",
+        "advertising",
+        "highly",
+        "customers"
+      ],
+      "correct": 0,
+      "explain": "Ngữ pháp (Lượng từ): 'money' là danh từ không đếm được, đi với 'a little' chứ không dùng 'a few' -> sửa thành 'a little'.",
+      "id": 7
+    },
+    {
+      "text": "She bought a <span class=\"underline-error\">blue</span> (A) <span class=\"underline-error\">beautiful</span> (B) dress for the <span class=\"underline-error\">upcoming</span> (C) community festival <span class=\"underline-error\">tonight</span> (D).",
+      "options": [
+        "blue",
+        "beautiful",
+        "upcoming",
+        "tonight"
+      ],
+      "correct": 0,
+      "explain": "Ngữ pháp (Trật tự tính từ - OSASCOMP): Tính từ chỉ ý kiến (beautiful) phải đứng trước tính từ chỉ màu sắc (blue) -> sửa thành 'beautiful blue'.",
+      "id": 8
+    },
+    {
+      "text": "The local council is <span class=\"underline-error\">responsible</span> (A) <span class=\"underline-error\">for</span> (B) maintaining the public parks, which are <span class=\"underline-error\">beneficial</span> (C) <span class=\"underline-error\">with</span> (D) the community.",
+      "options": [
+        "responsible",
+        "for",
+        "beneficial",
+        "with"
+      ],
+      "correct": 3,
+      "explain": "Ngữ pháp (Giới từ): Cấu trúc 'beneficial to someone/something' = có lợi cho ai/cái gì -> sửa 'with' thành 'to'.",
+      "id": 9
+    },
+    {
+      "text": "I <span class=\"underline-error\">look forward</span> (A) to <span class=\"underline-error\">meet</span> (B) the representative of the cultural exchange program <span class=\"underline-error\">to discuss</span> (C) our <span class=\"underline-error\">project</span> (D).",
+      "options": [
+        "look forward",
+        "meet",
+        "to discuss",
+        "project"
+      ],
+      "correct": 1,
+      "explain": "Ngữ pháp (Dạng động từ): Cấu trúc 'look forward to + V-ing' -> sửa 'meet' thành 'meeting'.",
+      "id": 10
+    },
+    {
+      "text": "Although she has very <span class=\"underline-error\">little</span> (A) friends in <span class=\"underline-error\">the new</span> (B) school, she <span class=\"underline-error\">feels</span> (C) happy and <span class=\"underline-error\">active</span> (D).",
+      "options": [
+        "little",
+        "the new",
+        "feels",
+        "active"
+      ],
+      "correct": 0,
+      "explain": "Ngữ pháp (Lượng từ): 'friends' là danh từ đếm được số nhiều, nên phải đi với 'few' hoặc 'a few', chứ không dùng 'little' -> sửa 'little' thành 'few' (rất ít).",
+      "id": 6
+    },
+    {
+      "text": "This secret <span class=\"underline-error\">must</span> (A) remain <span class=\"underline-error\">strictly</span> (B) between <span class=\"underline-error\">you</span> (C) and <span class=\"underline-error\">I</span> (D).",
+      "options": [
+        "must",
+        "strictly",
+        "you",
+        "I"
+      ],
+      "correct": 3,
+      "explain": "Ngữ pháp (Đại từ): Sau giới từ 'between' cần các đại từ đóng vai trò tân ngữ -> sửa 'I' thành 'me'.",
+      "id": 7
+    },
+    {
+      "text": "The young man <span class=\"underline-error\">was</span> (A) accused <span class=\"underline-error\">for</span> (B) stealing <span class=\"underline-error\">valuable</span> (C) paintings from the local art <span class=\"underline-error\">gallery</span> (D).",
+      "options": [
+        "was",
+        "for",
+        "valuable",
+        "gallery"
+      ],
+      "correct": 1,
+      "explain": "Ngữ pháp (Giới từ): Cấu trúc bị động 'be accused of doing something' = bị buộc tội vì đã làm gì -> sửa 'for' thành 'of'.",
+      "id": 8
+    },
+    {
+      "text": "The lost <span class=\"underline-error\">dog</span> (A) wagged <span class=\"underline-error\">it's</span> (B) tail happily <span class=\"underline-error\">when</span> (C) it saw its owner <span class=\"underline-error\">again</span> (D).",
+      "options": [
+        "dog",
+        "it's",
+        "when",
+        "again"
+      ],
+      "correct": 1,
+      "explain": "Ngữ pháp (Tính từ sở hữu): 'it's' là viết tắt của 'it is' hoặc 'it has'. Ở đây cần tính từ sở hữu 'its' (của nó) đứng trước danh từ 'tail' -> sửa thành 'its'.",
+      "id": 9
+    },
+    {
+      "text": "She <span class=\"underline-error\">was</span> (A) made <span class=\"underline-error\">clean</span> (B) the entire classroom <span class=\"underline-error\">as</span> (C) a punishment for arriving <span class=\"underline-error\">late</span> (D).",
+      "options": [
+        "was",
+        "clean",
+        "as",
+        "late"
+      ],
+      "correct": 1,
+      "explain": "Ngữ pháp (Dạng động từ): Thể bị động của động từ chỉ ý muốn 'make': 'be made + to V-inf' (bị bắt làm gì) -> sửa 'clean' thành 'to clean'.",
+      "id": 10
+    },
+    {
+      "text": "The children have <span class=\"underline-error\">many</span> (A) homework to <span class=\"underline-error\">complete</span> (B) before <span class=\"underline-error\">going</span> (C) to <span class=\"underline-error\">bed</span> (D).",
+      "options": [
+        "many",
+        "complete",
+        "going",
+        "bed"
+      ],
+      "correct": 0,
+      "explain": "Ngữ pháp (Lượng từ): 'homework' là danh từ không đếm được, đi với 'much' chứ không dùng 'many' -> sửa 'many' thành 'much' hoặc 'a lot of'.",
+      "id": 6
+    },
+    {
+      "text": "After playing <span class=\"underline-error\">in the rain</span> (A), the young <span class=\"underline-error\">children</span> (B) dressed <span class=\"underline-error\">theirselves</span> (C) in dry <span class=\"underline-error\">clothes</span> (D).",
+      "options": [
+        "in the rain",
+        "children",
+        "theirselves",
+        "clothes"
+      ],
+      "correct": 2,
+      "explain": "Ngữ pháp (Đại từ phản thân): Đại từ phản thân của 'they/children' là 'themselves' chứ không tồn tại từ 'theirselves' -> sửa thành 'themselves'.",
+      "id": 7
+    },
+    {
+      "text": "He is <span class=\"underline-error\">highly</span> (A) interested <span class=\"underline-error\">at</span> (B) learning about future <span class=\"underline-error\">space</span> (C) exploration <span class=\"underline-error\">programs</span> (D).",
+      "options": [
+        "highly",
+        "at",
+        "space",
+        "programs"
+      ],
+      "correct": 1,
+      "explain": "Ngữ pháp (Giới từ): Tính từ 'interested' đi với giới từ 'in' = quan tâm, hứng thú với cái gì -> sửa 'at' thành 'in'.",
+      "id": 8
+    },
+    {
+      "text": "The student <span class=\"underline-error\">didn't</span> (A) make <span class=\"underline-error\">some</span> (B) spelling mistakes <span class=\"underline-error\">in</span> (C) his final <span class=\"underline-error\">essay</span> (D).",
+      "options": [
+        "didn't",
+        "some",
+        "in",
+        "essay"
+      ],
+      "correct": 1,
+      "explain": "Ngữ pháp (Từ hạn định): Trong câu phủ định (didn't), ta dùng 'any' chứ không dùng 'some' -> sửa 'some' thành 'any'.",
+      "id": 9
+    },
+    {
+      "text": "The suspect <span class=\"underline-error\">initially</span> (A) denied <span class=\"underline-error\">to have stolen</span> (B) the researcher's laptop, <span class=\"underline-error\">but</span> (C) later confessed <span class=\"underline-error\">everything</span> (D).",
+      "options": [
+        "initially",
+        "to have stolen",
+        "but",
+        "everything"
+      ],
+      "correct": 1,
+      "explain": "Ngữ pháp (Dạng động từ): Động từ 'deny' đi với V-ing (hoặc 'having + V3/ed' để nhấn mạnh hành động đã xảy ra) -> sửa thành 'stealing' hoặc 'having stolen'.",
+      "id": 10
+    },
+    {
+      "text": "<span class=\"underline-error\">Every</span> (A) <span class=\"underline-error\">students</span> (B) must attend the orientation <span class=\"underline-error\">session</span> (C) before the <span class=\"underline-error\">semester</span> (D) begins.",
+      "options": [
+        "Every",
+        "students",
+        "session",
+        "semester"
+      ],
+      "correct": 1,
+      "explain": "Ngữ pháp (Từ hạn định / Lượng từ): Sau 'Every' phải đi kèm với danh từ số ít đếm được -> sửa 'students' thành 'student'.",
+      "id": 6
+    },
+    {
+      "text": "This is the <span class=\"underline-error\">man</span> (A) <span class=\"underline-error\">whom</span> (B) wife won <span class=\"underline-error\">the first</span> (C) prize in the national literature <span class=\"underline-error\">contest</span> (D).",
+      "options": [
+        "man",
+        "whom",
+        "the first",
+        "contest"
+      ],
+      "correct": 1,
+      "explain": "Ngữ pháp (Đại từ quan hệ): Ở đây chỉ sự sở hữu ('vợ của người đàn ông đó') nên phải dùng đại từ quan hệ sở hữu 'whose' đứng trước danh từ 'wife' -> sửa 'whom' thành 'whose'.",
+      "id": 7
+    },
+    {
+      "text": "They <span class=\"underline-error\">arrived</span> (A) <span class=\"underline-error\">to</span> (B) the international airport <span class=\"underline-error\">just</span> (C) in time for <span class=\"underline-error\">their</span> (D) flight.",
+      "options": [
+        "arrived",
+        "to",
+        "just",
+        "their"
+      ],
+      "correct": 1,
+      "explain": "Ngữ pháp (Giới từ): Cấu trúc 'arrive at' (đến một địa điểm nhỏ như sân bay, nhà ga...) -> sửa 'to' thành 'at'.",
+      "id": 8
+    },
+    {
+      "text": "He <span class=\"underline-error\">quickly</span> (A) grabbed <span class=\"underline-error\">he's</span> (B) coat and <span class=\"underline-error\">ran</span> (C) out of the door into the <span class=\"underline-error\">cold</span> (D) night.",
+      "options": [
+        "quickly",
+        "he's",
+        "ran",
+        "cold"
+      ],
+      "correct": 1,
+      "explain": "Ngữ pháp (Tính từ sở hữu): 'he's' là viết tắt của 'he is' hoặc 'he has'. Ở đây cần tính từ sở hữu 'his' (của anh ấy) bổ nghĩa cho danh từ 'coat' -> sửa thành 'his'.",
+      "id": 9
+    },
+    {
+      "text": "The famous <span class=\"underline-error\">singer</span> (A) was heard <span class=\"underline-error\">sing</span> (B) his signature <span class=\"underline-error\">song</span> (C) in the dressing room <span class=\"underline-error\">yesterday</span> (D).",
+      "options": [
+        "singer",
+        "sing",
+        "song",
+        "yesterday"
+      ],
+      "correct": 1,
+      "explain": "Ngữ pháp (Dạng động từ): Thể bị động của động từ giác quan (hear): 'be heard + to V-inf' hoặc 'be heard + V-ing' -> sửa 'sing' thành 'singing' hoặc 'to sing'.",
+      "id": 10
     }
   ],
   "part3": [
@@ -3580,6 +4180,306 @@ const VACT_QUESTION_POOL = {
       ],
       "correct": 1,
       "explain": "Cấu trúc chỉ trích ai đó vì việc họ đã làm trong quá khứ: 'S + criticize + someone + for + V-ing'. 'should not have + V3/ed' chỉ việc không nên làm trong quá khứ nhưng đã làm."
+    },
+    {
+      "text": "\"Don't forget to lock the door before you leave,\" my father said to me.",
+      "options": [
+        "My father told me not lock the door before I left.",
+        "My father reminded me to lock the door before I left.",
+        "My father asked me if I would lock the door when I left.",
+        "My father complained that I forgot to lock the door before leaving."
+      ],
+      "correct": 1,
+      "explain": "Cấu trúc 'remind someone to do something' (nhắc nhở ai đó làm gì). Lưu ý đổi trạng ngữ và thời gian phù hợp: 'before you leave' -> 'before I left'.",
+      "id": 11
+    },
+    {
+      "text": "It is not necessary for you to complete the project today.",
+      "options": [
+        "You mustn't complete the project today.",
+        "You needn't complete the project today.",
+        "You shouldn't complete the project today.",
+        "You cannot complete the project today."
+      ],
+      "correct": 1,
+      "explain": "'It is not necessary' = không cần thiết, tương đương với 'needn't + V-inf'. 'mustn't' biểu thị sự cấm đoán.",
+      "id": 12
+    },
+    {
+      "text": "The last time we went camping in the forest was two years ago.",
+      "options": [
+        "We didn't go camping in the forest for two years.",
+        "We have gone camping in the forest for two years.",
+        "We haven't gone camping in the forest for two years.",
+        "We camped in the forest two years ago and haven't returned."
+      ],
+      "correct": 2,
+      "explain": "Chuyển đổi thì: 'The last time + S + V2/ed + was + time ago' -> 'S + haven't/hasn't + V3/ed + for + time'.",
+      "id": 13
+    },
+    {
+      "text": "My mother decorated the living room for Tet, not my sister.",
+      "options": [
+        "It was my mother that decorated the living room for Tet.",
+        "It was the living room that my mother decorated for Tet.",
+        "It was Tet that my mother decorated the living room for.",
+        "It was my sister who did not decorate the living room for Tet."
+      ],
+      "correct": 0,
+      "explain": "Ngữ pháp (Câu chẻ - Cleft sentence): Nhấn mạnh chủ ngữ chỉ người 'My mother': 'It was + N(người) + who/that + V'.",
+      "id": 14
+    },
+    {
+      "text": "People believe that the new education system will prepare students better for the future.",
+      "options": [
+        "The new education system is believed to prepare students better for the future.",
+        "The new education system will be believed to prepare students better for the future.",
+        "It is believed that the new education system to prepare students better for the future.",
+        "Students are believed to be prepared by the new education system for the future."
+      ],
+      "correct": 0,
+      "explain": "Ngữ pháp (Câu bị động khách quan): 'People believe that + S + will V' -> 'S + is believed + to V' (ở hiện tại/tương lai).",
+      "id": 15
+    },
+    {
+      "text": "I would prefer you not to make so much noise while I am working.",
+      "options": [
+        "I would rather you didn't make so much noise while I am working.",
+        "I would rather you not make so much noise while I am working.",
+        "I would rather you shouldn't make noise while I am working.",
+        "I would rather you to make less noise while I am working."
+      ],
+      "correct": 0,
+      "explain": "Cấu trúc 'S1 + would rather + S2 + V2/ed' diễn tả mong muốn ai đó làm/không làm gì ở hiện tại/tương lai.",
+      "id": 11
+    },
+    {
+      "text": "If you don't volunteer, you won't gain hands-on experience.",
+      "options": [
+        "Unless you don't volunteer, you won't gain hands-on experience.",
+        "Unless you volunteer, you will gain hands-on experience.",
+        "Unless you volunteer, you won't gain hands-on experience.",
+        "Unless you volunteered, you wouldn't gain hands-on experience."
+      ],
+      "correct": 2,
+      "explain": "Cấu trúc 'Unless + khẳng định' tương đương với 'If + phủ định'.",
+      "id": 12
+    },
+    {
+      "text": "As soon as the festival began, it started to rain heavily.",
+      "options": [
+        "No sooner had the festival began than it started to rain heavily.",
+        "Hardly had the festival began when did it start to rain heavily.",
+        "No sooner did the festival begin when it started to rain heavily.",
+        "Scarcely had the festival begun then it started to rain heavily."
+      ],
+      "correct": 0,
+      "explain": "Cấu trúc đảo ngữ: 'No sooner + had + S + V3/ed + than + S + V2/ed'.",
+      "id": 13
+    },
+    {
+      "text": "They are building a new community center in our neighborhood.",
+      "options": [
+        "A new community center is built in our neighborhood.",
+        "A new community center is being built in our neighborhood.",
+        "A new community center has been built in our neighborhood.",
+        "A new community center was being built in our neighborhood."
+      ],
+      "correct": 1,
+      "explain": "Chuyển đổi sang câu bị động ở thì Hiện tại tiếp diễn: S + is/are + being + V3/ed.",
+      "id": 14
+    },
+    {
+      "text": "His grandfather told him all these historical stories.",
+      "options": [
+        "It was his grandfather who was told all these historical stories.",
+        "It was all these historical stories that his grandfather was told.",
+        "It was his grandfather who told him all these historical stories.",
+        "It was him who was told by his grandfather all these historical stories."
+      ],
+      "correct": 2,
+      "explain": "Câu chẻ nhấn mạnh chủ ngữ chỉ người 'his grandfather': 'It was + N(người) + who/that + V'.",
+      "id": 15
+    },
+    {
+      "text": "\"Where are you going for your holiday?\" she asked me.",
+      "options": [
+        "She asked me where was I going for my holiday.",
+        "She asked me where I was going for my holiday.",
+        "She asked me where had I gone for my holiday.",
+        "She wanted to know where I am going for my holiday."
+      ],
+      "correct": 1,
+      "explain": "Câu tường thuật Wh-question: S + asked + O + Wh-word + S + V (lùi thì, đổi ngôi và trật tự câu trở lại dạng trần thuật).",
+      "id": 11
+    },
+    {
+      "text": "I haven't seen him for two years.",
+      "options": [
+        "The last time I saw him was two years ago.",
+        "I saw him last time for two years.",
+        "It is two years since I haven't seen him.",
+        "I didn't see him since two years ago."
+      ],
+      "correct": 0,
+      "explain": "Chuyển đổi thì: 'S + haven't/hasn't + V3/ed + for + time' tương đương với 'The last time + S + V2/ed + was + time + ago'.",
+      "id": 12
+    },
+    {
+      "text": "I regret not going to the environmental protection party.",
+      "options": [
+        "I wish I went to the environmental protection party.",
+        "I wish I didn't go to the environmental protection party.",
+        "I wish I had gone to the environmental protection party.",
+        "I wish I wouldn't have gone to the environmental protection party."
+      ],
+      "correct": 2,
+      "explain": "Hối tiếc về một việc trong quá khứ ('regret not + V-ing') -> ước trái ngược quá khứ dùng câu ước loại 3: 'S + wish + S + had + V3/ed'.",
+      "id": 13
+    },
+    {
+      "text": "She had hardly sat down to study when the power went out.",
+      "options": [
+        "Hardly had she sat down to study when the power went out.",
+        "No sooner had she sat down to study when the power went out.",
+        "Hardly did she sit down to study than the power went out.",
+        "Scarcely had she sat down to study than the power went out."
+      ],
+      "correct": 0,
+      "explain": "Đảo ngữ với Hardly: 'Hardly + had + S + V3/ed + when + S + V2/ed'. 'No sooner' phải đi với 'than'.",
+      "id": 14
+    },
+    {
+      "text": "She has sent the ecological package to the laboratory.",
+      "options": [
+        "The ecological package was sent to the laboratory by her.",
+        "The ecological package has been sent to the laboratory by her.",
+        "The ecological package has sent to the laboratory by her.",
+        "The ecological package is being sent to the laboratory by her."
+      ],
+      "correct": 1,
+      "explain": "Câu bị động ở thì hiện tại hoàn thành: S + has/have + been + V3/ed.",
+      "id": 15
+    },
+    {
+      "text": "Because it rained heavily, we didn't go on the field trip.",
+      "options": [
+        "If it hadn't rained heavily, we would have gone on the field trip.",
+        "If it rained heavily, we would go on the field trip.",
+        "If it didn't rain heavily, we would have gone on the field trip.",
+        "Had it not rained heavily, we wouldn't have gone on the field trip."
+      ],
+      "correct": 0,
+      "explain": "Câu điều kiện loại 3 diễn tả giả định trái ngược với quá khứ: If + S + had V3/ed, S + would have V3/ed.",
+      "id": 11
+    },
+    {
+      "text": "It was wrong of you to yell at your younger brother yesterday.",
+      "options": [
+        "You must have yelled at your younger brother yesterday.",
+        "You shouldn't have yelled at your younger brother yesterday.",
+        "You needn't have yelled at your younger brother yesterday.",
+        "You couldn't have yelled at your younger brother yesterday."
+      ],
+      "correct": 1,
+      "explain": "'shouldn't have + V3/ed' diễn tả sự chỉ trích, nuối tiếc về một việc đáng lẽ không nên làm trong quá khứ nhưng đã làm.",
+      "id": 12
+    },
+    {
+      "text": "I didn't realize who she was until she spoke to me.",
+      "options": [
+        "Not until she spoke to me I realized who she was.",
+        "Not until she spoke to me did I realize who she was.",
+        "Only when did she speak to me I realized who she was.",
+        "Hardly had she spoken to me when did I realize who she was."
+      ],
+      "correct": 1,
+      "explain": "Cấu trúc đảo ngữ với Not until: 'Not until + S + V, trợ động từ + S + V(bare)'.",
+      "id": 13
+    },
+    {
+      "text": "They will hold the international conference in Hanoi next week.",
+      "options": [
+        "The international conference will be held in Hanoi next week.",
+        "The international conference will hold in Hanoi next week.",
+        "The international conference is held in Hanoi next week.",
+        "The international conference is going to hold in Hanoi next week."
+      ],
+      "correct": 0,
+      "explain": "Câu bị động ở thì tương lai đơn: S + will be + V3/ed.",
+      "id": 14
+    },
+    {
+      "text": "\"If I were you, I would take a short break,\" my colleague said.",
+      "options": [
+        "My colleague advised me to take a short break.",
+        "My colleague suggested me taking a short break.",
+        "My colleague forced me to take a short break.",
+        "My colleague offered me taking a short break."
+      ],
+      "correct": 0,
+      "explain": "Cấu trúc lời khuyên 'If I were you, S + would...' chuyển sang gián tiếp sử dụng: 'S + advise + O + to V'.",
+      "id": 15
+    },
+    {
+      "text": "I am sorry I cannot join the volunteer trip next week.",
+      "options": [
+        "I wish I could join the volunteer trip next week.",
+        "I wish I would join the volunteer trip next week.",
+        "I wish I joined the volunteer trip next week.",
+        "I wish I can join the volunteer trip next week."
+      ],
+      "correct": 0,
+      "explain": "Câu ước trái ngược với tương lai/hiện tại: S + wish + S + could + V(bare) hoặc S + V2/ed.",
+      "id": 11
+    },
+    {
+      "text": "Perhaps he is working in the garden.",
+      "options": [
+        "He must be working in the garden.",
+        "He might be working in the garden.",
+        "He should be working in the garden.",
+        "He has to be working in the garden."
+      ],
+      "correct": 1,
+      "explain": "'Perhaps' biểu thị sự không chắc chắn ở hiện tại -> dùng động từ khuyết thiếu 'might' hoặc 'may' (có lẽ, có thể).",
+      "id": 12
+    },
+    {
+      "text": "I have never witnessed such an inspiring community project before.",
+      "options": [
+        "Never I have witnessed such an inspiring community project before.",
+        "Never have I witnessed such an inspiring community project before.",
+        "Only did I witness such an inspiring community project before.",
+        "Hardly have I witnessed such an inspiring community project before."
+      ],
+      "correct": 1,
+      "explain": "Đảo ngữ với Never: 'Never + trợ động từ + S + V(chính)'. Do động từ ở hiện tại hoàn thành (have witnessed) nên đảo 'have' lên trước.",
+      "id": 13
+    },
+    {
+      "text": "Someone is preparing the classroom for the next presentation.",
+      "options": [
+        "The classroom is being prepared for the next presentation.",
+        "The classroom is prepared for the next presentation.",
+        "The classroom was being prepared for the next presentation.",
+        "The classroom has been prepared for the next presentation."
+      ],
+      "correct": 0,
+      "explain": "Câu bị động ở thì hiện tại tiếp diễn: S + is/are + being + V3/ed.",
+      "id": 14
+    },
+    {
+      "text": "The students who are selected for the exchange program will travel to London.",
+      "options": [
+        "The students selecting for the exchange program will travel to London.",
+        "The students selected for the exchange program will travel to London.",
+        "The students are selected for the exchange program will travel to London.",
+        "The students select for the exchange program will travel to London."
+      ],
+      "correct": 1,
+      "explain": "Rút gọn mệnh đề quan hệ dạng bị động: lược bỏ đại từ quan hệ và tobe, chỉ giữ lại quá khứ phân từ V3/ed (selected).",
+      "id": 15
     }
   ],
   "readingPassages": [
@@ -7566,6 +8466,1009 @@ const VACT_QUESTION_POOL = {
           ],
           "correct": 3,
           "explain": "Đoạn 3: 'Preserving these fragile ecosystems is crucial as commercial interest in deep-sea mining for valuable minerals increases, threatening to destroy habitats...'"
+        }
+      ]
+    },
+    {
+      "passage": [
+        "The digital nomad lifestyle has emerged as one of the most prominent trends of the 21st century, enabled by rapid advancements in technology and changes in societal attitudes toward work. Unlike traditional office workers bound to a specific physical location, digital nomads leverage internet connectivity, laptops, and mobile devices to perform their jobs from anywhere in the world. From coffee shops in Bali to co-working spaces in Lisbon, these modern workers have redefined the boundary between work and travel.",
+        "There are several key drivers behind this shift. First, the widespread availability of high-speed internet and cloud computing has made remote collaboration seamless. Second, many companies have realized that allowing employees to work remotely can lead to higher job satisfaction, reduced overhead costs, and access to a global talent pool. For individuals, the lifestyle offers unparalleled freedom: the ability to set one's own schedule, experience diverse cultures, and escape the monotony of a daily commute.",
+        "However, the digital nomad life is not without its challenges. Loneliness and isolation are frequently reported by nomads who constantly move from one place to another, leaving behind established social networks. Managing professional responsibilities while navigating unfamiliar environments, time zone differences, and unstable internet connections can also lead to high stress. Furthermore, legal and administrative hurdles, such as obtaining appropriate visas and paying taxes across multiple jurisdictions, remain complex issues that are yet to be fully resolved.",
+        "Despite these obstacles, the trend shows no signs of slowing down. Several countries have introduced 'digital nomad visas' to attract high-earning remote workers, recognizing the economic benefits they bring to local economies. As technology continues to evolve and work culture shifts further away from traditional office setups, the digital nomad lifestyle is poised to become a permanent fixture of the future global workforce."
+      ],
+      "questions": [
+        {
+          "text": "What is the passage mainly about?",
+          "options": [
+            "The history of remote work in the 20th century",
+            "The benefits and challenges of the digital nomad lifestyle",
+            "The best travel destinations for young professionals",
+            "How to apply for a digital nomad visa"
+          ],
+          "correct": 1,
+          "explain": "Bài đọc tập trung thảo luận cả về các lợi ích (tự do, linh hoạt, tiết kiệm) và thách thức (cô đơn, pháp lý, kỹ thuật) của lối sống digital nomad.",
+          "id": 16
+        },
+        {
+          "text": "According to paragraph 2, remote work benefits employers by _______.",
+          "options": [
+            "eliminating the need to pay taxes entirely",
+            "improving access to a global pool of talent",
+            "reducing employee working hours",
+            "forcing employees to travel constantly"
+          ],
+          "correct": 1,
+          "explain": "Đoạn 2 nêu rõ lợi ích cho nhà tuyển dụng: 'access to a global talent pool' (tiếp cận nguồn nhân lực toàn cầu).",
+          "id": 17
+        },
+        {
+          "text": "The word \"monotony\" in paragraph 2 is closest in meaning to _______.",
+          "options": [
+            "excitement",
+            "freedom",
+            "boredom",
+            "efficiency"
+          ],
+          "correct": 2,
+          "explain": "'Monotony' = sự đơn điệu, tẻ nhạt, trùng khớp với 'boredom' (sự buồn chán).",
+          "id": 18
+        },
+        {
+          "text": "According to paragraph 3, which of the following is NOT mentioned as a challenge for digital nomads?",
+          "options": [
+            "Navigating unstable internet connections",
+            "Experiencing loneliness and isolation",
+            "Dealing with complex visa and tax issues",
+            "Finding affordable accommodation in cities"
+          ],
+          "correct": 3,
+          "explain": "Đoạn 3 đề cập đến mạng internet không ổn định (A), cô đơn (B), thủ tục visa/thuế (C). Vấn đề tìm nhà ở giá rẻ (D) không được nhắc tới.",
+          "id": 19
+        },
+        {
+          "text": "What can be inferred from paragraph 4 about countries offering 'digital nomad visas'?",
+          "options": [
+            "They want to encourage remote workers to boost their local economies.",
+            "They are planning to ban traditional office jobs.",
+            "They only allow digital nomads to stay permanently.",
+            "They charge no fees for visa applications."
+          ],
+          "correct": 0,
+          "explain": "Đoạn 4 nêu: các nước cấp visa này để 'attract high-earning remote workers, recognizing the economic benefits they bring' -> họ muốn thu hút để thúc đẩy kinh tế địa phương.",
+          "id": 20
+        },
+        {
+          "text": "The word \"they\" in paragraph 4 refers to _______.",
+          "options": [
+            "countries",
+            "visas",
+            "remote workers",
+            "economies"
+          ],
+          "correct": 2,
+          "explain": "Từ 'they' thay thế cho danh từ số nhiều đứng trước nó: 'remote workers'.",
+          "id": 21
+        },
+        {
+          "text": "The word \"hurdles\" in paragraph 3 is closest in meaning to _______.",
+          "options": [
+            "opportunities",
+            "solutions",
+            "obstacles",
+            "regulations"
+          ],
+          "correct": 2,
+          "explain": "'Hurdles' = rào cản, chướng ngại vật, đồng nghĩa với 'obstacles'.",
+          "id": 22
+        },
+        {
+          "text": "The author's tone toward the digital nomad lifestyle is best described as _______.",
+          "options": [
+            "extremely critical",
+            "balanced and objective",
+            "highly sarcastic",
+            "indifferent"
+          ],
+          "correct": 1,
+          "explain": "Tác giả trình bày cả mặt tích cực và tiêu cực của lối sống này một cách khách quan, cân bằng.",
+          "id": 23
+        }
+      ]
+    },
+    {
+      "passage": [
+        "Social media has integrated itself into the fabric of daily life for most teenagers, fundamentally altering how they communicate, form relationships, and perceive themselves. With platforms like Instagram, TikTok, and Snapchat, adolescents have constant access to a virtual world that offers endless entertainment and social connection. However, this level of digital engagement raises critical questions regarding its psychological impact on developing minds.",
+        "On the positive side, social media platforms allow teenagers to express their creativity, discover new interests, and find communities of like-minded individuals. For youth who feel isolated in their local schools or neighborhoods, online spaces can provide a sense of belonging and support that is crucial for their emotional well-being. Additionally, these platforms can facilitate collaborative learning and raise awareness about important global issues.",
+        "Conversely, the negative consequences of excessive social media use are becoming increasingly evident. Psychologists warn that constant exposure to idealized images of peers and influencers can foster unrealistic expectations, leading to body image dissatisfaction and low self-esteem. The phenomenon known as 'Fear of Missing Out' (FOMO) often causes anxiety and sleep deprivation, as teens feel pressured to stay online late into the night. Moreover, cyberbullying has emerged as a pervasive threat, with victims experiencing heightened levels of depression and academic decline.",
+        "To mitigate these risks, it is essential for parents, educators, and technology companies to work together. Promoting digital literacy, setting healthy screen-time limits, and encouraging face-to-face interactions are key steps in helping teenagers navigate the digital world safely. While social media cannot be removed from modern life, its negative effects can be managed with active guidance."
+      ],
+      "questions": [
+        {
+          "text": "Which of the following would be the best title for the passage?",
+          "options": [
+            "How Teenagers Can Become Popular Social Media Influencers",
+            "The Dual Impact of Social Media on Teenagers' Well-being",
+            "The History of Social Media Platforms in the 21st Century",
+            "Why Parents Should Completely Ban Social Media for Teens"
+          ],
+          "correct": 1,
+          "explain": "Tiêu đề phù hợp nhất là 'Tác động kép của mạng xã hội lên sức khỏe tinh thần của thanh thiếu niên' (bao gồm cả tích cực ở đoạn 2 và tiêu cực ở đoạn 3).",
+          "id": 24
+        },
+        {
+          "text": "According to paragraph 2, online spaces can be particularly beneficial for teenagers who _______.",
+          "options": [
+            "suffer from chronic physical illnesses",
+            "feel isolated in their physical communities",
+            "want to earn money through advertising",
+            "prefer traditional books over digital media"
+          ],
+          "correct": 1,
+          "explain": "Đoạn 2 chỉ ra: online spaces có ích cho 'youth who feel isolated in their local schools or neighborhoods' (những bạn cảm thấy bị cô lập ở trường hoặc nơi ở).",
+          "id": 25
+        },
+        {
+          "text": "The word \"mitigate\" in paragraph 4 is closest in meaning to _______.",
+          "options": [
+            "increase",
+            "understand",
+            "reduce",
+            "ignore"
+          ],
+          "correct": 2,
+          "explain": "'Mitigate' = làm giảm thiểu, giảm nhẹ. Đồng nghĩa với 'reduce'.",
+          "id": 26
+        },
+        {
+          "text": "According to paragraph 3, all of the following are negative effects of social media EXCEPT _______.",
+          "options": [
+            "unrealistic expectations and low self-esteem",
+            "cyberbullying and academic decline",
+            "the Fear of Missing Out (FOMO)",
+            "difficulty finding online communities"
+          ],
+          "correct": 3,
+          "explain": "Đoạn 3 liệt kê: tự ti (A), bạo lực mạng (B), FOMO (C). Khó tìm kiếm cộng đồng trực tuyến (D) không phải là tác hại được nêu.",
+          "id": 27
+        },
+        {
+          "text": "The word \"pervasive\" in paragraph 3 is closest in meaning to _______.",
+          "options": [
+            "widespread",
+            "rare",
+            "harmless",
+            "temporary"
+          ],
+          "correct": 0,
+          "explain": "'Pervasive' = tràn lan, lan tỏa rộng khắp. Đồng nghĩa với 'widespread'.",
+          "id": 28
+        },
+        {
+          "text": "What can be inferred from the passage about teenager screen time?",
+          "options": [
+            "Managing screen time can help reduce the negative impacts of social media.",
+            "Setting screen-time limits is the sole responsibility of tech companies.",
+            "Teens who use social media never engage in face-to-face interactions.",
+            "Screen time has no correlation with teenagers' sleep quality."
+          ],
+          "correct": 0,
+          "explain": "Đoạn 4 gợi ý việc đặt giới hạn thời gian sử dụng màn hình (setting healthy screen-time limits) giúp thanh thiếu niên định hướng thế giới số an toàn.",
+          "id": 29
+        },
+        {
+          "text": "The word \"their\" in paragraph 2 refers to _______.",
+          "options": [
+            "platforms",
+            "interests",
+            "online spaces",
+            "youth"
+          ],
+          "correct": 3,
+          "explain": "Từ 'their' trong 'their emotional well-being' thay thế cho danh từ 'youth' ở câu trước.",
+          "id": 30
+        }
+      ]
+    },
+    {
+      "passage": [
+        "Cultural heritage is the legacy of physical artifacts and intangible attributes of a group or society that is inherited from past generations. In today's rapidly globalizing world, preserving this heritage has become more critical than ever. Historic buildings, traditional crafts, folklore, and languages are not merely relics of the past; they are essential components of a community's identity and memory. However, the forces of urbanization, climate change, and modernization pose significant threats to their survival.",
+        "Urbanization is perhaps the most immediate threat. As cities expand to accommodate growing populations, historic neighborhoods are often demolished to make way for modern high-rises and infrastructure. In many developing nations, the pressure for economic growth overrides the desire to conserve old structures, leading to the irreversible loss of unique architectural history. To counter this, urban planning must integrate heritage conservation, showing that historic sites can coexist with modern development.",
+        "Climate change is another emerging challenge. Rising sea levels, extreme weather events, and temperature fluctuations are causing physical deterioration of ancient monuments and archaeological sites. For instance, increased humidity and flooding are accelerating the decay of ancient stone temples in Southeast Asia, while wildfires threaten historic wooden structures in Europe. Preserving these sites requires advanced scientific techniques and international cooperation.",
+        "Intangible cultural heritage, such as oral traditions, performing arts, and social practices, is equally vulnerable. As younger generations migrate to urban centers and adopt globalized lifestyles, traditional customs and languages are at risk of being forgotten. Educational programs that integrate local history and traditional arts into school curricula are vital to keeping these practices alive. Furthermore, digital technology now offers new ways to document and archive intangible heritage, ensuring it remains accessible to future generations.",
+        "In conclusion, heritage preservation is not about freezing the past, but about managing change. By conserving our cultural legacy, we maintain a link to our roots, foster social cohesion, and enrich our collective future. It is a shared responsibility that requires the active participation of governments, local communities, and individuals alike."
+      ],
+      "questions": [
+        {
+          "text": "What is the main focus of the passage?",
+          "options": [
+            "The history of urbanization in developing countries",
+            "The preservation of cultural heritage and threats to its survival",
+            "The role of digital technology in recording ancient monuments",
+            "How climate change affects agricultural practices"
+          ],
+          "correct": 1,
+          "explain": "Bài đọc thảo luận về việc bảo tồn di sản văn hóa (vật thể và phi vật thể) và các mối đe dọa từ đô thị hóa, biến đổi khí hậu và hiện đại hóa.",
+          "id": 16
+        },
+        {
+          "text": "The word \"relics\" in paragraph 1 is closest in meaning to _______.",
+          "options": [
+            "remains",
+            "symbols",
+            "benefits",
+            "models"
+          ],
+          "correct": 0,
+          "explain": "'Relics' = di tích, tàn tích, đồng nghĩa với 'remains'.",
+          "id": 17
+        },
+        {
+          "text": "According to paragraph 2, historic neighborhoods are often destroyed because of _______.",
+          "options": [
+            "a lack of interest from tourists",
+            "natural disasters like earthquakes",
+            "the expansion of cities to house more people",
+            "the high cost of repairing old buildings"
+          ],
+          "correct": 2,
+          "explain": "Đoạn 2 nêu đô thị hóa là mối đe dọa ngay trước mắt: 'As cities expand to accommodate growing populations, historic neighborhoods are often demolished...'",
+          "id": 18
+        },
+        {
+          "text": "According to paragraph 3, which of the following is NOT mentioned as a threat caused by climate change?",
+          "options": [
+            "Wildfires in Europe",
+            "Flooding in Southeast Asia",
+            "Rising sea levels globally",
+            "Industrial pollution in cities"
+          ],
+          "correct": 3,
+          "explain": "Đoạn 3 đề cập đến cháy rừng ở châu Âu, lũ lụt ở ĐNA, nước biển dâng. Ô nhiễm công nghiệp không được nhắc tới như là tác nhân biến đổi khí hậu phá hủy di tích trong đoạn này.",
+          "id": 19
+        },
+        {
+          "text": "The word \"deterioration\" in paragraph 3 is closest in meaning to _______.",
+          "options": [
+            "restoration",
+            "decay",
+            "improvement",
+            "expansion"
+          ],
+          "correct": 1,
+          "explain": "'Deterioration' = sự suy thoái, xuống cấp, mục nát, đồng nghĩa với 'decay'.",
+          "id": 20
+        },
+        {
+          "text": "The word \"it\" in paragraph 4 refers to _______.",
+          "options": [
+            "digital technology",
+            "intangible heritage",
+            "local history",
+            "school curricula"
+          ],
+          "correct": 1,
+          "explain": "Từ 'it' thay thế cho cụm danh từ 'intangible heritage' được nói đến trước đó.",
+          "id": 21
+        },
+        {
+          "text": "What can be inferred from paragraph 4 about younger generations?",
+          "options": [
+            "They are completely uninterested in modern digital technology.",
+            "They may lose touch with traditional customs due to urbanization and globalization.",
+            "They prefer living in rural areas rather than migrating to cities.",
+            "They are the ones developing heritage preservation laws."
+          ],
+          "correct": 1,
+          "explain": "Đoạn 4 nêu: khi thế hệ trẻ di cư ra đô thị và đón nhận lối sống toàn cầu hóa, các phong tục truyền thống có nguy cơ bị lãng quên -> họ dễ mất kết nối với truyền thống.",
+          "id": 22
+        },
+        {
+          "text": "Which of the following best describes the author's view on heritage preservation?",
+          "options": [
+            "It is an expensive effort that yields little economic benefit.",
+            "It should be the sole responsibility of national governments.",
+            "It involves managing change and requires community-wide participation.",
+            "It means keeping historical sites exactly as they were without any changes."
+          ],
+          "correct": 2,
+          "explain": "Đoạn cuối kết luận: bảo tồn di sản không phải đóng băng quá khứ mà là quản lý sự thay đổi, và đó là trách nhiệm chung cần sự tham gia của chính phủ, cộng đồng và cá nhân.",
+          "id": 23
+        }
+      ]
+    },
+    {
+      "passage": [
+        "The Great Barrier Reef, stretching over 2,300 kilometers off the coast of Australia, is the world's largest coral reef system and host to an astonishing diversity of marine life. This natural wonder is not only a global ecological treasure but also a vital economic resource, supporting tourism and fishing industries. However, the reef is facing an existential crisis due to rising ocean temperatures driven by global climate change.",
+        "The primary threat to the reef is coral bleaching. Coral reefs rely on a symbiotic relationship with microscopic algae called zooxanthellae, which live inside the coral tissues and provide them with food and vibrant colors. When sea temperatures rise even slightly above normal summer limits, corals become stressed and expel these algae. Without the algae, the corals turn ghostly white and begin to starve. While corals can recover from mild bleaching if temperatures drop, prolonged heatwaves lead to widespread coral mortality.",
+        "The Great Barrier Reef has experienced several mass bleaching events in recent decades, with the most severe occurring in 2016, 2017, and 2020. These events have damaged large sections of the reef, particularly in the northern and central areas. Scientists estimate that nearly half of the reef's coral cover has been lost over the past thirty years. The loss of corals has a cascading effect, disrupting the habitats of thousands of fish species, sea turtles, and other marine organisms that depend on the reef for food and shelter.",
+        "Addressing this crisis requires immediate global action to reduce greenhouse gas emissions and limit global warming. Locally, conservationists are working on strategies to build reef resilience, such as controlling runoff pollution, restoring damaged areas with heat-resistant coral strains, and managing marine sanctuaries. Saving the Great Barrier Reef is a race against time, but preserving this vital ecosystem is essential for the health of our oceans."
+      ],
+      "questions": [
+        {
+          "text": "What is the primary theme of the passage?",
+          "options": [
+            "The economic benefits of tourism in Australia",
+            "The impact of rising sea temperatures on the Great Barrier Reef",
+            "The biology and feeding habits of sea turtles",
+            "Techniques for building artificial coral reefs"
+          ],
+          "correct": 1,
+          "explain": "Bài đọc tập trung thảo luận về việc biến đổi khí hậu khiến nhiệt độ nước biển tăng lên, dẫn đến hiện tượng tẩy trắng san hô và tàn phá rạn san hô Great Barrier Reef.",
+          "id": 24
+        },
+        {
+          "text": "The word \"existential\" in paragraph 1 is closest in meaning to _______.",
+          "options": [
+            "financial",
+            "temporary",
+            "life-threatening",
+            "unimportant"
+          ],
+          "correct": 2,
+          "explain": "'Existential crisis' = khủng hoảng sinh tồn, đe dọa sự sống còn -> đồng nghĩa với 'life-threatening' (đe dọa sự sống).",
+          "id": 25
+        },
+        {
+          "text": "According to paragraph 2, coral bleaching occurs when corals _______.",
+          "options": [
+            "are eaten by microscopic algae",
+            "expel the algae living inside them due to temperature stress",
+            "suffer from a lack of salt in the water",
+            "are blocked from receiving natural sunlight"
+          ],
+          "correct": 1,
+          "explain": "Đoạn 2 chỉ ra: 'When sea temperatures rise... corals become stressed and expel these algae' (san hô bị stress và trục xuất tảo cộng sinh).",
+          "id": 26
+        },
+        {
+          "text": "According to paragraph 3, what has happened to the Great Barrier Reef over the past thirty years?",
+          "options": [
+            "It has expanded its area by nearly half.",
+            "It has lost about 50% of its coral cover.",
+            "It has completely recovered from all bleaching events.",
+            "It has attracted twice as many fish species."
+          ],
+          "correct": 1,
+          "explain": "Đoạn 3 nêu: 'nearly half of the reef's coral cover has been lost over the past thirty years' (gần một nửa lượng san hô đã bị mất).",
+          "id": 27
+        },
+        {
+          "text": "The word \"prolonged\" in paragraph 2 is closest in meaning to _______.",
+          "options": [
+            "extended",
+            "sudden",
+            "unexpected",
+            "brief"
+          ],
+          "correct": 0,
+          "explain": "'Prolonged' = kéo dài, đồng nghĩa với 'extended' (được kéo dài).",
+          "id": 28
+        },
+        {
+          "text": "According to paragraph 4, all of the following are local conservation strategies EXCEPT _______.",
+          "options": [
+            "controlling runoff pollution",
+            "planting heat-resistant coral strains",
+            "moving the entire reef to cooler waters",
+            "managing marine sanctuaries"
+          ],
+          "correct": 2,
+          "explain": "Đoạn 4 nêu các biện pháp cục bộ: kiểm soát ô nhiễm nước chảy tràn (A), trồng san hô chịu nhiệt (B), quản lý khu bảo tồn biển (D). Việc di dời cả rạn san hô (C) không được đề cập.",
+          "id": 29
+        },
+        {
+          "text": "What can be inferred from the passage about the recovery of bleached corals?",
+          "options": [
+            "Corals can recover if the water temperature returns to normal quickly.",
+            "Corals can never recover once bleaching has started.",
+            "Corals recover faster in warmer water than in cold water.",
+            "Algae are permanently harmful to corals after a bleaching event."
+          ],
+          "correct": 0,
+          "explain": "Đoạn 2 viết: 'While corals can recover from mild bleaching if temperatures drop...' -> san hô có thể phục hồi nếu nhiệt độ hạ xuống kịp thời.",
+          "id": 30
+        }
+      ]
+    },
+    {
+      "passage": [
+        "The transition from fossil fuels to renewable energy sources is arguably the most significant environmental movement of our time. For over a century, global industrial growth has relied heavily on coal, oil, and natural gas. However, the burning of these non-renewable resources has released vast amounts of carbon dioxide into the atmosphere, driving global temperatures up and causing severe weather patterns. To avoid catastrophic climate change, the world must rapidly shift toward clean, sustainable energy technologies.",
+        "Renewable energy, derived from natural processes that are constantly replenished, includes solar, wind, hydroelectric, geothermal, and ocean energy. Solar power, captured through photovoltaic panels, is the fastest-growing source of electricity. Similarly, wind energy has advanced significantly, with offshore wind farms generating massive amounts of clean electricity. These technologies emit virtually no greenhouse gases during operation, offering a direct path to reducing global carbon emissions.",
+        "One of the major arguments for renewable energy is its long-term cost-efficiency. While the initial setup costs for wind turbines and solar panels can be high, the operational costs are extremely low because the fuel source—sunlight and wind—is free. Furthermore, advancements in technology have caused the cost of renewable energy systems to plummet over the past decade, making them commercially competitive with, and in some areas cheaper than, traditional fossil fuels.",
+        "Despite these benefits, the transition faces technical and infrastructural hurdles. The primary challenge is intermittency: solar energy is only generated during the day, and wind power depends on weather conditions. This requires the development of efficient energy storage systems, such as large-scale batteries, to ensure a stable and continuous power supply. Additionally, existing electrical grids must be modernized to handle the decentralized nature of renewable energy generation.",
+        "In conclusion, while the shift to green power requires substantial investment and technological innovation, the environmental and economic rewards are immense. By embracing renewable energy, society can protect ecosystems, improve air quality, and secure a sustainable future for subsequent generations."
+      ],
+      "questions": [
+        {
+          "text": "What is the primary topic of the passage?",
+          "options": [
+            "The history of oil and coal exploration",
+            "The transition to renewable energy and its challenges",
+            "How to install solar panels on residential homes",
+            "The engineering design of modern wind turbines"
+          ],
+          "correct": 1,
+          "explain": "Bài đọc trình bày về sự dịch chuyển từ nhiên liệu hóa thạch sang năng lượng tái tạo, những lợi ích đi kèm cũng như những rào cản kỹ thuật cần vượt qua.",
+          "id": 16
+        },
+        {
+          "text": "The word \"replenished\" in paragraph 2 is closest in meaning to _______.",
+          "options": [
+            "consumed",
+            "renewed",
+            "damaged",
+            "wasted"
+          ],
+          "correct": 1,
+          "explain": "'Replenish' = bổ sung, làm đầy lại, đồng nghĩa với 'renewed' (làm mới lại).",
+          "id": 17
+        },
+        {
+          "text": "According to paragraph 2, what makes solar power unique among energy sources?",
+          "options": [
+            "It is the fastest-growing source of electricity.",
+            "It is the only renewable source available.",
+            "It operates without any initial setup cost.",
+            "It relies on burning clean natural gas."
+          ],
+          "correct": 0,
+          "explain": "Đoạn 2 nêu rõ: 'Solar power... is the fastest-growing source of electricity' (năng lượng mặt trời là nguồn điện tăng trưởng nhanh nhất).",
+          "id": 18
+        },
+        {
+          "text": "According to paragraph 3, operational costs of renewable energy are low because _______.",
+          "options": [
+            "governments pay for all maintenance costs",
+            "the fuel source, like wind and sun, is free",
+            "technology companies do not charge taxes",
+            "machines require no maintenance at all"
+          ],
+          "correct": 1,
+          "explain": "Đoạn 3 chỉ ra: 'the operational costs are extremely low because the fuel source—sunlight and wind—is free'.",
+          "id": 19
+        },
+        {
+          "text": "The word \"plummet\" in paragraph 3 is closest in meaning to _______.",
+          "options": [
+            "rise quickly",
+            "stay stable",
+            "fall sharply",
+            "fluctuate"
+          ],
+          "correct": 2,
+          "explain": "'Plummet' = sụt giảm mạnh, giảm nhanh, đồng nghĩa với 'fall sharply'.",
+          "id": 20
+        },
+        {
+          "text": "According to paragraph 4, which of the following is a key challenge for renewable energy?",
+          "options": [
+            "The lack of public interest in green power",
+            "The high cost of sunlight and wind",
+            "The issue of intermittency and storage",
+            "A shortage of land for building solar farms"
+          ],
+          "correct": 2,
+          "explain": "Đoạn 4 nêu rõ khó khăn lớn nhất là tính gián đoạn (intermittency) và nhu cầu lưu trữ (storage).",
+          "id": 21
+        },
+        {
+          "text": "The word \"them\" in paragraph 3 refers to _______.",
+          "options": [
+            "advancements",
+            "renewable energy systems",
+            "operational costs",
+            "fossil fuels"
+          ],
+          "correct": 1,
+          "explain": "Từ 'them' thay thế cho danh từ số nhiều 'renewable energy systems' được đề cập phía trước.",
+          "id": 22
+        },
+        {
+          "text": "What can be inferred about the future of energy from the passage?",
+          "options": [
+            "Fossil fuels will remain cheaper than renewable energy forever.",
+            "Modernizing the electrical grid is unnecessary for green energy.",
+            "Technological innovation in battery storage is crucial for the green transition.",
+            "Solar power will completely replace wind power in a few years."
+          ],
+          "correct": 2,
+          "explain": "Do có thách thức về tính gián đoạn (chỉ hoạt động khi có nắng/gió), cần phát triển hệ thống pin lưu trữ hiệu quả (battery storage) để đảm bảo cấp điện liên tục -> việc cải tiến công nghệ này là cực kỳ quan trọng.",
+          "id": 23
+        }
+      ]
+    },
+    {
+      "passage": [
+        "Coffee is one of the most widely consumed beverages in the world, but its significance extends far beyond being a morning pick-me-up. Coffee culture—the social behaviors and rituals surrounding the consumption of coffee—has shaped societies and economies for centuries. From its origins in the highlands of Ethiopia to the modern cafes of today's global cities, coffee has played a central role in facilitating social interaction and intellectual debate.",
+        "Legend has it that coffee was discovered in the 9th century by an Ethiopian goat herder who noticed his goats became unusually energetic after eating berries from a specific tree. The practice of brewing coffee spread to the Arabian Peninsula in the 15th century, where the first coffeehouses, known as qahveh khaneh, were established. These venues quickly became vibrant social hubs where men gathered to play chess, listen to music, and discuss literature and politics. This marked the birth of coffee as a catalyst for social engagement.",
+        "When coffee reached Europe in the 17th century, it sparked a social revolution. In London, Paris, and Vienna, coffeehouses became known as 'penny universities' because for the price of a cup of coffee, patrons could engage in high-level intellectual conversations. Writers, scientists, politicians, and businessmen frequented these establishments, which served as the birthplace of key ideas during the Age of Enlightenment. Lloyd's of London, the famous insurance market, actually started as a coffeehouse where merchants met to discuss shipping news.",
+        "Today, coffee culture has evolved into a global industry. The 'Third Wave' of coffee emphasizes high-quality, sustainably sourced beans and artisanal brewing techniques, transforming coffee drinking into an experiential art form. At the same time, the modern cafe has become a vital workspace for remote workers and students, bridging the gap between professional productivity and leisure. Although brewing methods have changed, the fundamental role of coffee as a connector of people remains unchanged."
+      ],
+      "questions": [
+        {
+          "text": "What is the passage mainly about?",
+          "options": [
+            "The botanical characteristics of the coffee plant",
+            "The history and social significance of coffee culture",
+            "The economic impact of coffee exports on Ethiopia",
+            "How to brew the perfect cup of coffee at home"
+          ],
+          "correct": 1,
+          "explain": "Bài viết trình bày lịch sử phát triển của cà phê và tầm ảnh hưởng xã hội của văn hóa cà phê qua các thời kỳ.",
+          "id": 24
+        },
+        {
+          "text": "The word \"catalyst\" in paragraph 2 is closest in meaning to _______.",
+          "options": [
+            "barrier",
+            "stimulant",
+            "result",
+            "alternative"
+          ],
+          "correct": 1,
+          "explain": "'Catalyst' = chất xúc tác, nhân tố kích thích, đồng nghĩa với 'stimulant' (chất kích thích, thúc đẩy).",
+          "id": 25
+        },
+        {
+          "text": "According to paragraph 2, the first coffeehouses were established in _______.",
+          "options": [
+            "Ethiopia",
+            "Europe",
+            "the Arabian Peninsula",
+            "London"
+          ],
+          "correct": 2,
+          "explain": "Đoạn 2 nêu: 'The practice... spread to the Arabian Peninsula... where the first coffeehouses... were established'.",
+          "id": 26
+        },
+        {
+          "text": "Why were European coffeehouses called 'penny universities'?",
+          "options": [
+            "Because they charged high tuition fees to patrons",
+            "Because patrons could engage in intellectual debates for the price of a coffee",
+            "Because they only allowed university students to enter",
+            "Because they were owned by local university professors"
+          ],
+          "correct": 1,
+          "explain": "Đoạn 3 viết: 'known as penny universities because for the price of a cup of coffee, patrons could engage in high-level intellectual conversations'.",
+          "id": 27
+        },
+        {
+          "text": "The word \"frequented\" in paragraph 3 is closest in meaning to _______.",
+          "options": [
+            "avoided",
+            "visited regularly",
+            "designed",
+            "shut down"
+          ],
+          "correct": 1,
+          "explain": "'Frequent' (động từ) = thường xuyên lui tới, đồng nghĩa với 'visited regularly'.",
+          "id": 28
+        },
+        {
+          "text": "What does the 'Third Wave' of coffee emphasize according to paragraph 4?",
+          "options": [
+            "Mass production and cheap instant coffee",
+            "High-quality, sustainably sourced beans and artisanal brewing",
+            "Replacing cafes with virtual online workspaces",
+            "Using artificial flavorings to make coffee sweet"
+          ],
+          "correct": 1,
+          "explain": "Đoạn 4 nêu: 'Third Wave of coffee emphasizes high-quality, sustainably sourced beans and artisanal brewing techniques'.",
+          "id": 29
+        },
+        {
+          "text": "What can be inferred about Lloyd's of London from paragraph 3?",
+          "options": [
+            "It was originally a place where academic lectures were held.",
+            "It began as a meeting point for trade and business news inside a coffeehouse.",
+            "It was closed down due to political debates.",
+            "It was the first university established in London."
+          ],
+          "correct": 1,
+          "explain": "Đoạn 3 nêu: 'Lloyd's of London... started as a coffeehouse where merchants met to discuss shipping news' -> nó bắt đầu từ việc các thương nhân gặp gỡ để trao đổi thông tin kinh doanh hàng hải.",
+          "id": 30
+        }
+      ]
+    },
+    {
+      "passage": [
+        "Artificial Intelligence (AI) has transitioned from the realm of science fiction into an indispensable tool in modern society. From autonomous vehicles navigating city streets to algorithms diagnosing medical conditions, AI systems are demonstrating capabilities that match or exceed human performance in specific tasks. However, as AI becomes more deeply integrated into our daily lives, it brings forward urgent ethical questions that developers, policymakers, and society must address.",
+        "The primary ethical concern is bias and fairness. AI systems learn from massive historical datasets, which often reflect human biases and social inequalities. If an algorithm is trained on data that discriminates against certain groups, it will replicate and amplify those biases in its decisions. This has been documented in facial recognition software and automated hiring tools, leading to unfair outcomes. Ensuring algorithmic fairness requires careful curation of training data and constant monitoring of system decisions.",
+        "Another critical issue is accountability. When an AI system makes a mistake, who is responsible? For example, if a self-driving car causes an accident, does the blame lie with the car manufacturer, the software developer, or the passenger? The lack of clear legal frameworks makes determining liability extremely difficult. Additionally, many advanced AI models function as 'black boxes'—meaning their internal decision-making processes are too complex for humans to understand, which hampers transparency.",
+        "Furthermore, the rise of automation threatens to displace millions of workers, particularly in manufacturing, logistics, and administrative support. While proponents argue that AI will create new, higher-value jobs, there is widespread concern that the transition will leave many workers behind, widening the economic divide. Addressing this requires proactive investment in retraining programs and educational reforms.",
+        "In conclusion, the evolution of AI offers immense opportunities but also poses significant societal risks. To ensure that AI benefits all of humanity, we must develop robust ethical guidelines and regulatory frameworks. The future of AI should not be guided by technological capability alone, but by human values and the common good."
+      ],
+      "questions": [
+        {
+          "text": "What is the primary theme of the passage?",
+          "options": [
+            "The history of computer science since the mid-20th century",
+            "The technical instructions for building AI software",
+            "The ethical challenges and societal impacts of AI",
+            "A comparison between human brains and computer processors"
+          ],
+          "correct": 2,
+          "explain": "Bài đọc thảo luận về các vấn đề đạo đức của Trí tuệ Nhân tạo (định kiến dữ liệu, trách nhiệm pháp lý, thất nghiệp do tự động hóa).",
+          "id": 16
+        },
+        {
+          "text": "The word \"indispensable\" in paragraph 1 is closest in meaning to _______.",
+          "options": [
+            "expensive",
+            "essential",
+            "temporary",
+            "unwanted"
+          ],
+          "correct": 1,
+          "explain": "'Indispensable' = không thể thiếu, thiết yếu, đồng nghĩa với 'essential'.",
+          "id": 17
+        },
+        {
+          "text": "According to paragraph 2, AI algorithms can make biased decisions because _______.",
+          "options": [
+            "they are programmed by computers, not humans",
+            "they learn from data that contains existing human biases",
+            "they are designed to intentionally discriminate",
+            "they do not have enough processing power"
+          ],
+          "correct": 1,
+          "explain": "Đoạn 2 chỉ ra: 'AI systems learn from massive historical datasets, which often reflect human biases...'",
+          "id": 18
+        },
+        {
+          "text": "According to paragraph 3, what is a major obstacle in determining liability for AI mistakes?",
+          "options": [
+            "AI systems never make mistakes in public.",
+            "There are no clear legal frameworks for AI liability.",
+            "Developers refuse to work on autonomous vehicles.",
+            "Software errors are always fixed instantly."
+          ],
+          "correct": 1,
+          "explain": "Đoạn 3 nêu: 'The lack of clear legal frameworks makes determining liability extremely difficult'.",
+          "id": 19
+        },
+        {
+          "text": "The word \"hampers\" in paragraph 3 is closest in meaning to _______.",
+          "options": [
+            "supports",
+            "improves",
+            "hinders",
+            "explains"
+          ],
+          "correct": 2,
+          "explain": "'Hamper' = cản trở, gây khó khăn cho, đồng nghĩa với 'hinders'.",
+          "id": 20
+        },
+        {
+          "text": "According to paragraph 4, which of the following sectors is NOT mentioned as vulnerable to job displacement by AI?",
+          "options": [
+            "Manufacturing",
+            "Healthcare and medicine",
+            "Logistics and transport",
+            "Administrative support"
+          ],
+          "correct": 1,
+          "explain": "Đoạn 4 nhắc đến: sản xuất (manufacturing), logistics, hỗ trợ hành chính (administrative support). Y tế (healthcare) không được nhắc đến trong đoạn này như một ngành bị mất việc.",
+          "id": 21
+        },
+        {
+          "text": "What does the term 'black boxes' in paragraph 3 imply about advanced AI models?",
+          "options": [
+            "They are physically stored in black containers.",
+            "Their internal logic is too difficult for humans to inspect and understand.",
+            "They are completely illegal to use in public.",
+            "They only function when the internet is turned off."
+          ],
+          "correct": 1,
+          "explain": "Cụm 'black boxes' có nghĩa là: 'their internal decision-making processes are too complex for humans to understand' (quy trình ra quyết định quá phức tạp để con người hiểu được).",
+          "id": 22
+        },
+        {
+          "text": "What is the author's final recommendation regarding AI development?",
+          "options": [
+            "To halt all AI research until technology improves.",
+            "To let technology develop freely without any government rules.",
+            "To establish ethical guidelines and regulations based on human values.",
+            "To replace all human workers with AI as quickly as possible."
+          ],
+          "correct": 2,
+          "explain": "Đoạn cuối viết: 'we must develop robust ethical guidelines and regulatory frameworks. The future of AI should... be guided by human values'.",
+          "id": 23
+        }
+      ]
+    },
+    {
+      "passage": [
+        "Biodiversity, the variety of life in all its forms, is the biological foundation of healthy forest ecosystems. Forests are not just collections of trees; they are complex communities of plants, animals, fungi, and microorganisms that interact with one another and their environment. This rich biodiversity provides critical ecological services that support human survival and well-being, yet it is under severe threat from human activities.",
+        "Forest biodiversity plays a vital role in regulating the Earth's climate. Trees absorb carbon dioxide during photosynthesis, storing it in their trunks, roots, and soil. Biodiverse forests, which contain a mix of different tree species, are far more efficient at carbon sequestration than monoculture plantations (areas with only one type of tree). Furthermore, diverse forests are more resilient to disturbances such as insect outbreaks, diseases, and extreme weather events, which are becoming more common due to climate change.",
+        "In addition to climate regulation, forest ecosystems provide essential resources. They act as natural water filtration systems, purifying rainfall and regulating water flow in rivers, which prevents soil erosion and flooding. Forests are also home to countless plant species that contain compounds used in modern medicine; in fact, over 25% of all prescription drugs are derived from forest plants. The loss of biodiversity could mean losing potential cures for diseases before they are even discovered.",
+        "Despite these benefits, forest biodiversity is declining rapidly. The primary cause is habitat destruction through deforestation for agriculture, logging, and infrastructure development. Fragmenting large forests into small, isolated patches prevents animal migration and disrupts genetic diversity. To protect these invaluable ecosystems, we must implement sustainable forestry practices, expand protected forest reserves, and support global conservation initiatives. Protecting forest biodiversity is not just an environmental duty, but a necessity for our future."
+      ],
+      "questions": [
+        {
+          "text": "What is the primary theme of the passage?",
+          "options": [
+            "The economic value of timber exports",
+            "The importance of forest biodiversity and the threats it faces",
+            "How to identify different species of forest fungi",
+            "The history of national parks in South America"
+          ],
+          "correct": 1,
+          "explain": "Bài đọc tập trung làm rõ tầm quan trọng của đa dạng sinh học rừng (điều hòa khí hậu, lọc nước, y học) và các mối đe dọa (phá rừng, chia cắt sinh cảnh).",
+          "id": 24
+        },
+        {
+          "text": "According to paragraph 2, biodiverse forests are better than monoculture plantations at _______.",
+          "options": [
+            "growing trees of the exact same size",
+            "carbon sequestration and resisting diseases",
+            "preventing any insects from entering the forest",
+            "producing cheap timber for construction"
+          ],
+          "correct": 1,
+          "explain": "Đoạn 2 chỉ ra: biodiverse forests hiệu quả hơn trong việc cô lập carbon (carbon sequestration) và phục hồi tốt hơn trước sâu bệnh (resilient to insect outbreaks, diseases).",
+          "id": 25
+        },
+        {
+          "text": "The word \"sequestration\" in paragraph 2 is closest in meaning to _______.",
+          "options": [
+            "release",
+            "pollution",
+            "capture and storage",
+            "destruction"
+          ],
+          "correct": 2,
+          "explain": "'Carbon sequestration' = sự cô lập carbon, giữ và tích trữ carbon trong cây/đất -> đồng nghĩa với 'capture and storage'.",
+          "id": 26
+        },
+        {
+          "text": "According to paragraph 3, forest plants are highly valuable to humans because _______.",
+          "options": [
+            "they can be used to make plastic materials",
+            "they provide compounds for over a quarter of prescription drugs",
+            "they absorb all the water from rivers",
+            "they can grow without any sunlight"
+          ],
+          "correct": 1,
+          "explain": "Đoạn 3 viết: 'over 25% of all prescription drugs are derived from forest plants' (hơn 25% thuốc kê đơn bắt nguồn từ thực vật rừng).",
+          "id": 27
+        },
+        {
+          "text": "The word \"fragmenting\" in paragraph 4 is closest in meaning to _______.",
+          "options": [
+            "breaking up into parts",
+            "joining together",
+            "expanding in size",
+            "protecting from harm"
+          ],
+          "correct": 0,
+          "explain": "'Fragmenting' = phân mảnh, chia cắt thành nhiều phần nhỏ -> 'breaking up into parts'.",
+          "id": 28
+        },
+        {
+          "text": "According to paragraph 4, which of the following is NOT mentioned as a way to protect forest biodiversity?",
+          "options": [
+            "Implementing sustainable forestry practices",
+            "Expanding protected forest reserves",
+            "Supporting global conservation initiatives",
+            "Replacing natural forests with monoculture farms"
+          ],
+          "correct": 3,
+          "explain": "Đoạn 4 nêu: lâm nghiệp bền vững (A), mở rộng khu bảo tồn (B), hỗ trợ sáng kiến bảo tồn (C). Việc thay thế rừng tự nhiên bằng đồn điền độc canh (D) là có hại và không được khuyên.",
+          "id": 29
+        },
+        {
+          "text": "The word \"they\" in paragraph 3 refers to _______.",
+          "options": [
+            "forest ecosystems",
+            "prescription drugs",
+            "plant species",
+            "diseases"
+          ],
+          "correct": 3,
+          "explain": "Từ 'they' ở cuối đoạn 3 thay thế cho danh từ 'diseases' (bệnh tật) trong mệnh đề trước đó: 'before they are even discovered'.",
+          "id": 30
+        }
+      ]
+    },
+    {
+      "passage": [
+        "Lifelong learning, the continuous, voluntary, and self-motivated pursuit of knowledge for either personal or professional reasons, has become essential in the modern era. In the past, education was seen as a phase of life that ended with a high school diploma or a university degree. Today, however, the rapid pace of technological change and economic restructuring means that knowledge acquired in youth can quickly become obsolete. To thrive in this dynamic environment, individuals must adopt a mindset of continuous education.",
+        "From a professional standpoint, lifelong learning is key to career resilience. As automation and artificial intelligence reshape the job market, many traditional roles are disappearing while new, highly specialized fields are emerging. Workers who actively seek out retraining opportunities, learn new software, or acquire adjacent skills are far more likely to remain employable. Employers increasingly value adaptability and a growth mindset over static degrees, making continuous learning a critical asset in career advancement.",
+        "Beyond professional benefits, lifelong learning has profound psychological effects. Engaging in new cognitive challenges—such as learning a foreign language, mastering a musical instrument, or studying history—stimulates brain plasticity and strengthens neural connections. Cognitive psychologists have found that active learning in adulthood can delay the onset of cognitive decline and reduce the risk of diseases like Alzheimer's. Learning also fosters a sense of purpose and achievement, which boosts self-confidence and overall life satisfaction.",
+        "Moreover, the rise of the internet and digital platforms has democratized learning, making it more accessible than ever. Online courses, podcasts, educational videos, and digital libraries allow individuals to learn at their own pace and schedule, often for free. However, this abundance of information requires high self-discipline and critical thinking to distinguish credible sources from unreliable ones. Lifelong learning is ultimately a personal commitment, but one that yields lifelong rewards."
+      ],
+      "questions": [
+        {
+          "text": "What is the passage mainly about?",
+          "options": [
+            "The history of university systems in Western countries",
+            "The importance and benefits of lifelong learning",
+            "How to apply for online courses on the internet",
+            "A comparison of child and adult learning capacities"
+          ],
+          "correct": 1,
+          "explain": "Bài viết làm rõ tầm quan trọng và các lợi ích (sự nghiệp, tâm lý, nhận thức) của việc học tập suốt đời (lifelong learning) trong thời đại mới.",
+          "id": 16
+        },
+        {
+          "text": "The word \"obsolete\" in paragraph 1 is closest in meaning to _______.",
+          "options": [
+            "modern",
+            "outdated",
+            "precious",
+            "complex"
+          ],
+          "correct": 1,
+          "explain": "'Obsolete' = lỗi thời, cũ kỹ, không còn dùng nữa, đồng nghĩa với 'outdated'.",
+          "id": 17
+        },
+        {
+          "text": "According to paragraph 2, modern employers highly value _______.",
+          "options": [
+            "employees who never change their working methods",
+            "static university degrees over personal skills",
+            "adaptability and a growth mindset in their workers",
+            "candidates who refuse to learn new software"
+          ],
+          "correct": 2,
+          "explain": "Đoạn 2 nêu rõ: 'Employers increasingly value adaptability and a growth mindset over static degrees...'",
+          "id": 18
+        },
+        {
+          "text": "According to paragraph 3, cognitive challenges like learning a new language can _______.",
+          "options": [
+            "cause temporary memory loss in older adults",
+            "stimulate brain plasticity and delay cognitive decline",
+            "prevent people from focusing on their jobs",
+            "increase the risk of neurological diseases"
+          ],
+          "correct": 1,
+          "explain": "Đoạn 3 chỉ ra: 'learning a foreign language... stimulates brain plasticity and strengthens neural connections... delay the onset of cognitive decline'.",
+          "id": 19
+        },
+        {
+          "text": "The word \"democratized\" in paragraph 4 most likely means _______.",
+          "options": [
+            "made expensive and exclusive",
+            "made accessible to a wider range of people",
+            "limited to political discussion",
+            "controlled by national governments"
+          ],
+          "correct": 1,
+          "explain": "'Democratized' ở đây có nghĩa là bình dân hóa, làm cho công chúng dễ tiếp cận hơn -> 'made accessible to a wider range of people'.",
+          "id": 20
+        },
+        {
+          "text": "According to paragraph 4, which of the following is NOT mentioned as a source of online learning?",
+          "options": [
+            "Online courses and podcasts",
+            "Digital libraries and educational videos",
+            "Traditional physical libraries in schools",
+            "Free internet learning platforms"
+          ],
+          "correct": 2,
+          "explain": "Đoạn 4 nhắc đến: các khóa học online, podcasts, videos, thư viện số. Thư viện vật lý truyền thống không được nhắc đến trong đoạn này.",
+          "id": 21
+        },
+        {
+          "text": "What can be inferred about the digital abundance of information from paragraph 4?",
+          "options": [
+            "It makes learning impossible because there is too much data.",
+            "It requires learners to have self-discipline and evaluate sources carefully.",
+            "It is only useful for people who have university degrees.",
+            "It has completely eliminated the need for human teachers."
+          ],
+          "correct": 1,
+          "explain": "Đoạn 4 nêu: 'this abundance of information requires high self-discipline and critical thinking to distinguish credible sources...' -> đòi hỏi tính tự giác và đánh giá nguồn thông tin cẩn thận.",
+          "id": 22
+        },
+        {
+          "text": "The author's attitude toward lifelong learning is _______.",
+          "options": [
+            "highly supportive and encouraging",
+            "suspicious and doubtful",
+            "completely indifferent",
+            "highly critical"
+          ],
+          "correct": 0,
+          "explain": "Tác giả thể hiện thái độ rất ủng hộ và khuyến khích lối sống này, nhấn mạnh những phần thưởng lâu dài (lifelong rewards) của nó.",
+          "id": 23
+        }
+      ]
+    },
+    {
+      "passage": [
+        "Eco-tourism, a form of tourism directing tourists to pristine, natural environments to support conservation efforts and observe wildlife, has grown rapidly over the last few decades. Unlike traditional mass tourism, which often results in environmental degradation and cultural disruption, eco-tourism aims to minimize the negative impacts of travel. It focuses on environmental education, local community benefits, and the preservation of natural habitats, presenting a sustainable alternative for travelers.",
+        "The primary objective of eco-tourism is environmental conservation. Revenue generated from entrance fees, guided tours, and eco-lodges is directly channeled into protecting endangered species and managing national parks. In countries like Costa Rica and Kenya, eco-tourism has provided a powerful financial incentive for governments and locals to protect wildlife habitats rather than clearing them for agriculture or logging. This creates a mutually beneficial relationship between travelers, locals, and nature.",
+        "Another core principle of eco-tourism is the empowerment of local communities. Traditional tourism often leaves little money in the host community, as international hotel chains and tour operators capture most profits. In contrast, eco-tourism encourages travelers to stay in locally-owned lodges, hire local guides, and purchase handmade crafts. This direct financial contribution helps alleviate poverty, improve local infrastructure, and foster pride in local cultural heritage.",
+        "However, the growth of eco-tourism has led to concerns about 'greenwashing'—where companies falsely market themselves as eco-friendly to attract tourists without practicing true sustainability. Excessive tourist numbers can also put stress on fragile ecosystems, disrupting animal behavior and causing pollution. To address these issues, strict certification programs and visitor management policies are necessary. If managed responsibly, eco-tourism remains a powerful tool for global conservation and sustainable development."
+      ],
+      "questions": [
+        {
+          "text": "What is the primary theme of the passage?",
+          "options": [
+            "The history of international hotel chains",
+            "Eco-tourism as a sustainable alternative and its challenges",
+            "The best ways to book cheap flights online",
+            "A description of agricultural practices in Costa Rica"
+          ],
+          "correct": 1,
+          "explain": "Bài viết thảo luận về du lịch sinh thái (eco-tourism) như một giải pháp thay thế bền vững cho du lịch truyền thống, lợi ích của nó đối với bảo tồn và cộng đồng, cũng như thách thức 'greenwashing'.",
+          "id": 24
+        },
+        {
+          "text": "The word \"degradation\" in paragraph 1 is closest in meaning to _______.",
+          "options": [
+            "improvement",
+            "deterioration",
+            "expansion",
+            "appreciation"
+          ],
+          "correct": 1,
+          "explain": "'Environmental degradation' = sự suy thoái, xuống cấp của môi trường, đồng nghĩa với 'deterioration'.",
+          "id": 25
+        },
+        {
+          "text": "According to paragraph 2, how does eco-tourism support conservation financially?",
+          "options": [
+            "By receiving direct donations from international banks",
+            "By redirecting travel revenue into park management and wildlife protection",
+            "By requiring tourists to perform manual labor in parks",
+            "By replacing local governments with private companies"
+          ],
+          "correct": 1,
+          "explain": "Đoạn 2 nêu: 'Revenue generated from entrance fees... is directly channeled into protecting endangered species and managing national parks'.",
+          "id": 26
+        },
+        {
+          "text": "According to paragraph 3, eco-tourism benefits local communities by _______.",
+          "options": [
+            "providing free education and health insurance to all residents",
+            "encouraging direct spending on locally-owned businesses and guides",
+            "forcing international hotel chains to hire only local staff",
+            "offering free flights to local residents who want to travel"
+          ],
+          "correct": 1,
+          "explain": "Đoạn 3 chỉ ra: 'eco-tourism encourages travelers to stay in locally-owned lodges, hire local guides... direct financial contribution helps alleviate poverty...'.",
+          "id": 27
+        },
+        {
+          "text": "The word \"alleviate\" in paragraph 3 is closest in meaning to _______.",
+          "options": [
+            "increase",
+            "ease",
+            "ignore",
+            "prolong"
+          ],
+          "correct": 1,
+          "explain": "'Alleviate poverty' = làm giảm nhẹ/xóa nghèo, đồng nghĩa với 'ease' (làm dịu đi, giảm bớt).",
+          "id": 28
+        },
+        {
+          "text": "What does the word 'greenwashing' in paragraph 4 suggest about some tourism businesses?",
+          "options": [
+            "They wash all their buildings with green paint.",
+            "They falsely claim to be sustainable for marketing purposes.",
+            "They are run entirely by environmental scientists.",
+            "They refuse to accept money from international tourists."
+          ],
+          "correct": 1,
+          "explain": "Đoạn 4 viết: 'greenwashing—where companies falsely market themselves as eco-friendly to attract tourists without practicing true sustainability' (các công ty tuyên bố giả tạo là thân thiện môi trường để hút khách).",
+          "id": 29
+        },
+        {
+          "text": "What can be inferred about the future success of eco-tourism?",
+          "options": [
+            "It depends on strict regulations, certification, and responsible management.",
+            "It will completely replace traditional mass tourism next year.",
+            "It will fail because ecosystems are too strong to be damaged.",
+            "It is only successful in Costa Rica and Kenya, not other countries."
+          ],
+          "correct": 0,
+          "explain": "Đoạn 4 nêu để giải quyết các vấn đề như greenwashing hay quá tải du khách, cần 'strict certification programs and visitor management policies. If managed responsibly, eco-tourism remains a powerful tool...' -> sự thành công phụ thuộc vào việc quản lý có trách nhiệm và các quy định nghiêm ngặt.",
+          "id": 30
         }
       ]
     }

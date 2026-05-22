@@ -23,7 +23,7 @@
   // Parse test number dynamically from URL
   const match = window.location.pathname.match(/test(\d+)/i) || window.location.href.match(/test(\d+)/i);
   let testNum = match ? parseInt(match[1], 10) : 1;
-  if (isNaN(testNum) || testNum < 1 || testNum > 20) {
+  if (isNaN(testNum) || testNum < 1 || testNum > 25) {
     testNum = 1;
   }
   const localStorageKey = `vact_test_${testNum}_active_data`;

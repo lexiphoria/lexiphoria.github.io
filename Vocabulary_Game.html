@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/vocabulary_game.css?v=1.0.2">
+  <link rel="stylesheet" href="css/vocabulary_game.css?v=1.0.3">
 </head>
 <body>
 
@@ -79,7 +79,18 @@
           <span id="phrasalVerbs-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Tiến độ: 0%</span>
         </div>
 
-        <!-- Topic 4: OUR ENVIRONMENT (Locked) -->
+        <!-- Topic 4: COLLOCATIONS (Active) -->
+        <div class="topic-card" data-topic="collocations" onclick="selectTopic('collocations')">
+          <span class="topic-icon">🧩</span>
+          <h3 class="topic-title">COLLOCATIONS</h3>
+          <p class="topic-meta">100 Câu Collocations trọng tâm ôn luyện thi.</p>
+          <div class="topic-progress-container">
+            <div id="collocations-progress-fill" class="topic-progress-fill"></div>
+          </div>
+          <span id="collocations-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Tiến độ: 0%</span>
+        </div>
+
+        <!-- Topic 5: OUR ENVIRONMENT (Locked) -->
         <div class="topic-card locked" data-topic="ourEnvironment" onclick="showLockedAlert('OUR ENVIRONMENT')">
           <span class="topic-icon">🌳</span>
           <h3 class="topic-title">OUR ENVIRONMENT</h3>
@@ -87,7 +98,7 @@
           <span class="lock-badge">🔒 Sắp ra mắt</span>
         </div>
 
-        <!-- Topic 5: OUR FUTURE (Locked) -->
+        <!-- Topic 6: OUR FUTURE (Locked) -->
         <div class="topic-card locked" data-topic="ourFuture" onclick="showLockedAlert('OUR FUTURE')">
           <span class="topic-icon">🚀</span>
           <h3 class="topic-title">OUR FUTURE</h3>
@@ -323,7 +334,7 @@
   <canvas id="confetti-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1000; display: none;"></canvas>
 
   <!-- Script data file -->
-  <script src="js/vocabulary_data.js?v=1.0.2"></script>
+  <script src="js/vocabulary_data.js?v=1.0.3"></script>
 
   <!-- Main Game logic script -->
   <script>
@@ -471,6 +482,7 @@
         { id: 'ourLife', progressFillId: 'life-progress-fill', progressTextId: 'life-progress-text' },
         { id: 'ourSociety', progressFillId: 'society-progress-fill', progressTextId: 'society-progress-text' },
         { id: 'phrasalVerbs', progressFillId: 'phrasalVerbs-progress-fill', progressTextId: 'phrasalVerbs-progress-text' },
+        { id: 'collocations', progressFillId: 'collocations-progress-fill', progressTextId: 'collocations-progress-text' },
         { id: 'ourEnvironment', progressFillId: 'environment-progress-fill', progressTextId: 'environment-progress-text' },
         { id: 'ourFuture', progressFillId: 'future-progress-fill', progressTextId: 'future-progress-text' }
       ];
@@ -559,7 +571,7 @@
       currentTopic = topic;
       
       // Update header badges
-      const topicNameText = topic === 'ourLife' ? 'OUR LIFE' : (topic === 'ourSociety' ? 'OUR SOCIETY' : (topic === 'phrasalVerbs' ? 'PHRASAL VERBS' : (topic === 'ourEnvironment' ? 'OUR ENVIRONMENT' : 'OUR FUTURE')));
+      const topicNameText = topic === 'ourLife' ? 'OUR LIFE' : (topic === 'ourSociety' ? 'OUR SOCIETY' : (topic === 'phrasalVerbs' ? 'PHRASAL VERBS' : (topic === 'collocations' ? 'COLLOCATIONS' : (topic === 'ourEnvironment' ? 'OUR ENVIRONMENT' : 'OUR FUTURE'))));
       document.getElementById('mode-topic-badge').innerText = topicNameText;
       
       const badge = document.getElementById('mode-topic-badge');
@@ -606,6 +618,7 @@
         ourLife: '#8b5cf6',
         ourSociety: '#3b82f6',
         phrasalVerbs: '#f59e0b',
+        collocations: '#10b981',
         ourEnvironment: '#14b8a6',
         ourFuture: '#ec4899'
       };
@@ -913,7 +926,7 @@
       let options = [];
       let correctOptionText = "";
 
-      if (currentTopic === 'phrasalVerbs' && qWord.blankSentence && qWord.options && qWord.answer) {
+      if ((currentTopic === 'phrasalVerbs' || currentTopic === 'collocations') && qWord.blankSentence && qWord.options && qWord.answer) {
         questionText = `Question ${currentQuestionIndex + 1}: ${qWord.blankSentence}`;
         options = [...qWord.options];
         

@@ -3382,5 +3382,1807 @@ const vocabularyData = {
             ],
             "answer": "A"
         }
-    ]
+    ],
+  collocations: [
+        {
+                "id": "col_1",
+                "question_num": 1,
+                "word": "Make one’s bed",
+                "type": "phrase",
+                "ipa": "/meɪk wʌnz bed/",
+                "meaning": "dọn dẹp giường, sắp xếp mền mùng",
+                "example": "Tyler always makes the bed neatly before leaving for work in the morning.",
+                "exampleTranslation": "Tyler luôn dọn giường gọn gàng trước khi đi làm vào buổi sáng.",
+                "blankSentence": "Tyler always ________ the bed neatly before leaving for work in the morning.",
+                "options": [
+                        "gives",
+                        "does",
+                        "makes",
+                        "sets"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_2",
+                "question_num": 2,
+                "word": "Have a try",
+                "type": "phrase",
+                "ipa": "/hæv ə traɪ/",
+                "meaning": "thử làm gì đó",
+                "example": "Jessica encouraged her little brother to have a try at riding his bicycle without training wheels.",
+                "exampleTranslation": "Jessica khuyến khích em trai mình thử đi xe đạp mà không có bánh phụ.",
+                "blankSentence": "Jessica encouraged her little brother to ________ a try at riding his bicycle without training wheels.",
+                "options": [
+                        "lay",
+                        "have",
+                        "do",
+                        "come"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_3",
+                "question_num": 3,
+                "word": "Something come under attack",
+                "type": "phrase",
+                "ipa": "/ˈsʌmθɪŋ kʌm ˈʌndə əˈtæk/",
+                "meaning": "thứ gì đó bị chỉ trích, bị tấn công",
+                "example": "The controversial article written by Emily came under attack from readers with opposing viewpoints.",
+                "exampleTranslation": "Bài báo gây tranh cãi do Emily viết đã bị những độc giả có quan điểm trái ngược chỉ trích.",
+                "blankSentence": "The controversial article written by Emily ________ under attack from readers with opposing viewpoints.",
+                "options": [
+                        "made",
+                        "gave",
+                        "took",
+                        "came"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_4",
+                "question_num": 4,
+                "word": "Do homework",
+                "type": "phrase",
+                "ipa": "/duː ˈhəʊmwɜːk/",
+                "meaning": "làm bài tập về nhà",
+                "example": "Every evening, Emily sits down at her desk to do homework before dinner with her family.",
+                "exampleTranslation": "Mỗi buổi tối, Emily ngồi vào bàn làm bài tập trước bữa tối cùng gia đình.",
+                "blankSentence": "Every evening, Emily sits down at her desk to ________ homework before dinner with her family.",
+                "options": [
+                        "do",
+                        "give",
+                        "have",
+                        "make"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_5",
+                "question_num": 5,
+                "word": "Get ready",
+                "type": "phrase",
+                "ipa": "/ɡet ˈredi/",
+                "meaning": "chuẩn bị",
+                "example": "Before the party, Sarah needs to get ready by choosing her outfit and styling her hair.",
+                "exampleTranslation": "Trước bữa tiệc, Sarah cần chuẩn bị sẵn sàng bằng cách chọn trang phục và tạo kiểu tóc.",
+                "blankSentence": "Before the party, Sarah needs to ________ ready by choosing her outfit and styling her hair.",
+                "options": [
+                        "do",
+                        "go",
+                        "get",
+                        "make"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_6",
+                "question_num": 6,
+                "word": "Pay attention to something",
+                "type": "phrase",
+                "ipa": "/peɪ əˈtenʃn tuː ˈsʌmθɪŋ/",
+                "meaning": "để ý đến thứ gì đó, dành sự chú ý cho thứ gì đó",
+                "example": "During class, Tim needs to pay attention to the teacher to understand the lesson better",
+                "exampleTranslation": "Trong giờ học, Tim cần chú ý lắng nghe giáo viên để hiểu bài hơn",
+                "blankSentence": "During class, Tim needs to ________ attention to the teacher to understand the lesson better",
+                "options": [
+                        "get",
+                        "pay",
+                        "make",
+                        "give"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_7",
+                "question_num": 7,
+                "word": "Put an end to something",
+                "type": "phrase",
+                "ipa": "/pʊt ən end tuː ˈsʌmθɪŋ/",
+                "meaning": "chấm dứt thứ gì đó, dừng làm gì đó",
+                "example": "The new regulations will put an end to excessive noise and ensure peaceful neighborhood living.",
+                "exampleTranslation": "Các quy định mới sẽ chấm dứt tiếng ồn quá mức và đảm bảo cuộc sống yên bình cho khu dân cư.",
+                "blankSentence": "The new regulations will ________ an end to excessive noise and ensure peaceful neighborhood living.",
+                "options": [
+                        "do",
+                        "give",
+                        "send",
+                        "put"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_8",
+                "question_num": 8,
+                "word": "Get married",
+                "type": "phrase",
+                "ipa": "/ɡet ˈmærid/",
+                "meaning": "cưới",
+                "example": "Emily and John are excited to get married next month after dating for five wonderful years.",
+                "exampleTranslation": "Emily và John rất vui mừng được kết hôn vào tháng tới sau 5 năm hẹn hò tuyệt vời.",
+                "blankSentence": "Emily and John are excited to ________ married next month after dating for five wonderful years.",
+                "options": [
+                        "do",
+                        "give",
+                        "make",
+                        "get"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_9",
+                "question_num": 9,
+                "word": "Tell a lie",
+                "type": "phrase",
+                "ipa": "/tel ə laɪ/",
+                "meaning": "nói dối",
+                "example": "Sarah felt guilty after she told a lie to her friend about forgetting their meeting.",
+                "exampleTranslation": "Sarah cảm thấy tội lỗi sau khi nói dối bạn mình rằng đã quên mất cuộc gặp gỡ của họ.",
+                "blankSentence": "Sarah felt guilty after she ________ a lie to her friend about forgetting their meeting.",
+                "options": [
+                        "made",
+                        "told",
+                        "did",
+                        "said"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_10",
+                "question_num": 10,
+                "word": "Keep track of something",
+                "type": "phrase",
+                "ipa": "/kiːp træk əv ˈsʌmθɪŋ/",
+                "meaning": "giữ dấu thứ gì đó, theo sát thứ gì đó",
+                "example": "Tom should keep track of his expenses to make budgeting easier at the end of the month.",
+                "exampleTranslation": "Tom nên theo dõi các khoản chi tiêu c ủa mình đ ể việc lập ngân sách vào cu ối tháng trở nên dễ dàng hơn.",
+                "blankSentence": "Tom should ________ track of his expenses to make budgeting easier at the end of the month.",
+                "options": [
+                        "lose",
+                        "have",
+                        "keep",
+                        "miss"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_11",
+                "question_num": 11,
+                "word": "Make a profit",
+                "type": "phrase",
+                "ipa": "/meɪk ə ˈprɒfɪt/",
+                "meaning": "kiếm lợi nhuận, sinh lời",
+                "example": "James was able to make a profit by selling his homemade jam at the local farmer’s market.",
+                "exampleTranslation": "James đã có thể kiếm lợi nhuận bằng cách bán mứt tự làm của mình tại chợ nông sản địa phương.",
+                "blankSentence": "James was able to ________ a profit by selling his homemade jam at the local farmer’s market.",
+                "options": [
+                        "do",
+                        "make",
+                        "send",
+                        "pay"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_12",
+                "question_num": 12,
+                "word": "Get lost",
+                "type": "phrase",
+                "ipa": "/ɡet lɒst/",
+                "meaning": "bị lạc",
+                "example": "While hiking in the woods, Jack got lost but found his way back eventually.",
+                "exampleTranslation": "Khi đang đi bộ trong rừng, Jack bị lạc nhưng cuối cùng cũng tìm được đường quay lại.",
+                "blankSentence": "While hiking in the woods, Jack ________ lost but found his way back eventually.",
+                "options": [
+                        "made",
+                        "got",
+                        "had",
+                        "went"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_13",
+                "question_num": 13,
+                "word": "Give a speech",
+                "type": "phrase",
+                "ipa": "/ɡɪv ə spiːtʃ/",
+                "meaning": "có bài phát biểu",
+                "example": "He practiced for hours to give a speech at the school assembly in front of everyone.",
+                "exampleTranslation": "Anh ấy đã luyện tập hàng giờ để có thể phát biểu tại hội trường trước mặt mọi người.",
+                "blankSentence": "He practiced for hours to ________ a speech at the school assembly in front of everyone.",
+                "options": [
+                        "pay",
+                        "hear",
+                        "do",
+                        "give"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_14",
+                "question_num": 14,
+                "word": "Give an example",
+                "type": "phrase",
+                "ipa": "/ɡɪv ən ɪɡˈzɑːmpl/",
+                "meaning": "làm mẫu",
+                "example": "The little boy gave an example of how to use this new software to improve productivity.",
+                "exampleTranslation": "Cậu bé đưa ra ví dụ về cách sử dụng phần mềm mới này để nâng cao năng suất.",
+                "blankSentence": "The little boy ________ an example of how to use this new software to improve productivity.",
+                "options": [
+                        "gave",
+                        "made",
+                        "paid",
+                        "set"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_15",
+                "question_num": 15,
+                "word": "Tell the truth",
+                "type": "phrase",
+                "ipa": "/tel ðə truːθ/",
+                "meaning": "nói sự thật",
+                "example": "My daughter always tells the truth, even when it’s difficult, because honesty is important to her.",
+                "exampleTranslation": "Con gái tôi luôn nói sự thật, ngay cả khi điều đó khó khăn, bởi vì sự trung thực rất quan trọng đối với con bé.",
+                "blankSentence": "My daughter always ________ the truth, even when it’s difficult, because honesty is important to her.",
+                "options": [
+                        "has",
+                        "gives",
+                        "tells",
+                        "goes"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_16",
+                "question_num": 16,
+                "word": "Take a rest",
+                "type": "phrase",
+                "ipa": "/teɪk ə rest/",
+                "meaning": "nghỉ ngơi",
+                "example": "After a long day, I will take a rest and relax on the couch for a bit.",
+                "exampleTranslation": "Sau một ngày dài, tôi sẽ nghỉ ngơi và thư giãn trên ghế dài một chút.",
+                "blankSentence": "After a long day, I will ________ a rest and relax on the couch for a bit.",
+                "options": [
+                        "take",
+                        "run",
+                        "make",
+                        "give"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_17",
+                "question_num": 17,
+                "word": "Do somebody a favor",
+                "type": "phrase",
+                "ipa": "/duː ˈsʌmbədi ə ˈfeɪvə/",
+                "meaning": "giúp đơc ai đó",
+                "example": "Could you please do him a favor and water his plants while he’s on vacation?",
+                "exampleTranslation": "Bạn có thể giúp anh ấy một việc là tưới cây trong khi anh ấy đi nghỉ được không?",
+                "blankSentence": "Could you please ________ him a favor and water his plants while he’s on vacation?",
+                "options": [
+                        "make",
+                        "do",
+                        "ask",
+                        "give"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_18",
+                "question_num": 18,
+                "word": "Take actions",
+                "type": "phrase",
+                "ipa": "/teɪk ˈækʃnz/",
+                "meaning": "hành động, tiến hành gì đó",
+                "example": "The government will take actions to address the environmental issues.",
+                "exampleTranslation": "Chính phủ sẽ có hành động để giải quyết các vấn đề môi trường.",
+                "blankSentence": "The government will ________ actions to address the environmental issues.",
+                "options": [
+                        "give",
+                        "send",
+                        "take",
+                        "make"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_19",
+                "question_num": 19,
+                "word": "Make a noise",
+                "type": "phrase",
+                "ipa": "/meɪk ə nɔɪz/",
+                "meaning": "gây tiếng ồn",
+                "example": "Emily always makes a noise when she plays the piano enthusiastically in the living room.",
+                "exampleTranslation": "Emily luôn gây ồn ào khi chơi piano một cách nhiệt tình trong phòng khách.",
+                "blankSentence": "Emily always ________ a noise when she plays the piano enthusiastically in the living room.",
+                "options": [
+                        "does",
+                        "gives",
+                        "sets",
+                        "makes"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_20",
+                "question_num": 20,
+                "word": "Have a cold",
+                "type": "phrase",
+                "ipa": "/hæv ə kəʊld/",
+                "meaning": "bị cảm lạnh",
+                "example": "Sarah couldn’t go to school yesterday because she had a cold and needed to rest.",
+                "exampleTranslation": "Sarah không thể đến trường ngày hôm qua vì cô ấy bị cảm và cần nghỉ ngơi. 5",
+                "blankSentence": "Sarah couldn’t go to school yesterday because she ________ a cold and needed to rest.",
+                "options": [
+                        "had",
+                        "sent",
+                        "came",
+                        "gave"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_21",
+                "question_num": 21,
+                "word": "Come clean to someone",
+                "type": "phrase",
+                "ipa": "/kʌm kliːn tuː ˈsʌmwʌn/",
+                "meaning": "thành thật với ai đó",
+                "example": "Jessica finally decided to come clean to her parents about breaking the vase.",
+                "exampleTranslation": "Cuối cùng Jessica quyết định thú thật với bố mẹ về việc làm vỡ chiếc bình.",
+                "blankSentence": "Jessica finally decided to ________ clean to her parents about breaking the vase.",
+                "options": [
+                        "make",
+                        "do",
+                        "come",
+                        "get"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_22",
+                "question_num": 22,
+                "word": "Have things (something) in common",
+                "type": "phrase",
+                "ipa": "/hæv θɪŋz ɪn ˈkɒmən/",
+                "meaning": "có điểm chung gì đó",
+                "example": "Tom and Emily have a lot in common, like their love for music and outdoor activities.",
+                "exampleTranslation": "Tom và Emily có nhiều điểm chung, như tình yêu dành cho âm nhạc và các hoạt động ngoài trời.",
+                "blankSentence": "Tom and Emily ________ a lot in common, like their love for music and outdoor activities.",
+                "options": [
+                        "do",
+                        "have",
+                        "get",
+                        "run"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_23",
+                "question_num": 23,
+                "word": "Kick the habit of doing something",
+                "type": "phrase",
+                "ipa": "/kɪk ðə ˈhæbɪt əv ˈduːɪŋ ˈsʌmθɪŋ/",
+                "meaning": "từ bỏ một thói quen xấu",
+                "example": "Jack is determined to kick the habit of biting his nails by using a bitter-tasting polish.",
+                "exampleTranslation": "Jack quyết tâm từ bỏ thói quen cắn móng tay bằng cách sử dụng loại sơn có vị đắng.",
+                "blankSentence": "Jack is determined to ________ the habit of biting his nails by using a bitter-tasting polish.",
+                "options": [
+                        "jump",
+                        "run",
+                        "kick",
+                        "stand"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_24",
+                "question_num": 24,
+                "word": "Catch someone’s eye",
+                "type": "phrase",
+                "ipa": "/kætʃ ˈsʌmwʌnz aɪ/",
+                "meaning": "thu hút ánh nhìn, sự chú ý của ai đó",
+                "example": "The shiny new toy in the store window caught Emily’s eye as she walked by.",
+                "exampleTranslation": "Món đồ chơi mới sáng bóng trong c ửa sổ cửa hàng thu hút s ự chú ý của Emily khi cô đi ngang qua.",
+                "blankSentence": "The shiny new toy in the store window ________ Emily’s eye as she walked by.",
+                "options": [
+                        "took",
+                        "got",
+                        "caught",
+                        "made"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_25",
+                "question_num": 25,
+                "word": "Get dressed",
+                "type": "phrase",
+                "ipa": "/ɡet drest/",
+                "meaning": "mặc đồ, diện đồ",
+                "example": "Every morning, Tim gets dressed quickly before heading out to catch the school bus.",
+                "exampleTranslation": "Mỗi buổi sáng, Tim mặc quần áo thật nhanh trước khi ra ngoài đón xe buýt đến trường.",
+                "blankSentence": "Every morning, Tim ________ dressed quickly before heading out to catch the school bus.",
+                "options": [
+                        "makes",
+                        "comes",
+                        "turns",
+                        "gets"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_26",
+                "question_num": 26,
+                "word": "Come under fire",
+                "type": "phrase",
+                "ipa": "/kʌm ˈʌndə ˈfaɪə/",
+                "meaning": "chịu cơn thịnh nộ của ai đó",
+                "example": "Tom’s decision to skip the meeting unexpectedly came under fire from his boss this morning.",
+                "exampleTranslation": "Quyết định bỏ cuộc họp của Tom bất ngờ vấp phải sự chỉ trích từ sếp sáng nay.",
+                "blankSentence": "Tom’s decision to skip the meeting unexpectedly ________ under fire from his boss this morning.",
+                "options": [
+                        "got",
+                        "came",
+                        "took",
+                        "set 6"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_27",
+                "question_num": 27,
+                "word": "Pay a visit to someone",
+                "type": "phrase",
+                "ipa": "/peɪ ə ˈvɪzɪt tuː ˈsʌmwʌn/",
+                "meaning": "ghé thăm ai đó",
+                "example": "My friend decided to pay a visit to her grandparents during the summer vacation to spend time with them.",
+                "exampleTranslation": "Bạn tôi quyết định đến thăm ông bà của cô ấy trong kỳ nghỉ hè để dành thời gian cho họ.",
+                "blankSentence": "My friend decided to ________ a visit to her grandparents during the summer vacation to spend time with them.",
+                "options": [
+                        "make",
+                        "set",
+                        "pay",
+                        "do"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_28",
+                "question_num": 28,
+                "word": "Get pregnant",
+                "type": "phrase",
+                "ipa": "/ɡet ˈpreɡnənt/",
+                "meaning": "có thai, có con",
+                "example": "After years of trying, Lisa was thrilled to finally get pregnant and start a family.",
+                "exampleTranslation": "Sau nhiều năm cố gắng, Lisa đã rất vui mừng khi cuối cùng cũng có thai và lập gia đình.",
+                "blankSentence": "After years of trying, Lisa was thrilled to finally ________ pregnant and start a family.",
+                "options": [
+                        "get",
+                        "make",
+                        "do",
+                        "set"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_29",
+                "question_num": 29,
+                "word": "Keep one’s promise",
+                "type": "phrase",
+                "ipa": "/kiːp wʌnz ˈprɒmɪs/",
+                "meaning": "giữ lời hứa",
+                "example": "Emily, remember to keep your promise to help me with the fundraiser next Saturday.",
+                "exampleTranslation": "Emily, hãy nhớ giữ lời hứa giúp tôi gây quỹ vào thứ Bảy tới.",
+                "blankSentence": "Emily, remember to ________ your promise to help me with the fundraiser next Saturday.",
+                "options": [
+                        "make",
+                        "keep",
+                        "break",
+                        "give"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_30",
+                "question_num": 30,
+                "word": "Do one’s hair",
+                "type": "phrase",
+                "ipa": "/duː wʌnz heə/",
+                "meaning": "đi làm tóc",
+                "example": "Every morning before school, Lisa takes time to do her hair in different styles.",
+                "exampleTranslation": "Mỗi buổi sáng trước khi đến trường, Lisa đều dành thời gian để làm tóc theo nhiều kiểu khác nhau.",
+                "blankSentence": "Every morning before school, Lisa takes time to ________ her hair in different styles.",
+                "options": [
+                        "set",
+                        "give",
+                        "do",
+                        "make"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_31",
+                "question_num": 31,
+                "word": "Set an example",
+                "type": "phrase",
+                "ipa": "/set ən ɪɡˈzɑːmpl/",
+                "meaning": "đặt một ví dụ/ làm gương,",
+                "example": "When you set an example, others may follow your lead and learn from your actions.",
+                "exampleTranslation": "Khi bạn làm gương, những người khác có thể noi gương bạn và học hỏi từ hành động của bạn.",
+                "blankSentence": "When you ________ an example, others may follow your lead and learn from your actions.",
+                "options": [
+                        "make",
+                        "set",
+                        "give",
+                        "do"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_32",
+                "question_num": 32,
+                "word": "Ask for advices",
+                "type": "phrase",
+                "ipa": "/ɑːsk fə ədˈvaɪsɪz/",
+                "meaning": "xin lời khuyên",
+                "example": "It’s important to ask for financial advice before making big decisions about money matters.",
+                "exampleTranslation": "Điều quan trọng là phải xin lời khuyên tài chính trư ớc khi đưa ra quy ết định lớn về vấn đề tiền bạc.",
+                "blankSentence": "It’s important to ________ for financial advice before making big decisions about money matters.",
+                "options": [
+                        "make",
+                        "ask",
+                        "look",
+                        "give"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_33",
+                "question_num": 33,
+                "word": "Get the sack",
+                "type": "phrase",
+                "ipa": "/ɡet ðə sæk/",
+                "meaning": "bị sa thải",
+                "example": "My mother was devastated when she got the sack from her job at the restaurant last week.",
+                "exampleTranslation": "Mẹ tôi đã rất đau khổ khi bị sa thải ở nhà hàng vào tuần trước.",
+                "blankSentence": "My mother was devastated when she ________ the sack from her job at the restaurant last week.",
+                "options": [
+                        "got",
+                        "hit",
+                        "made",
+                        "took"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_34",
+                "question_num": 34,
+                "word": "Take a chance",
+                "type": "phrase",
+                "ipa": "/teɪk ə tʃɑːns/",
+                "meaning": "chớp lấy cơ hội",
+                "example": "Sarah decided to take a chance and audition for the school play despite her nerves.",
+                "exampleTranslation": "Sarah quyết định chớp lấy cơ hội và thử vai cho vở kịch ở trường bất chấp sự lo lắng của cô.",
+                "blankSentence": "Sarah decided to ________ a chance and audition for the school play despite her nerves.",
+                "options": [
+                        "have",
+                        "make",
+                        "take",
+                        "get"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_35",
+                "question_num": 35,
+                "word": "Catch a train",
+                "type": "phrase",
+                "ipa": "/kætʃ ə treɪn/",
+                "meaning": "bắt chuyến tàu",
+                "example": "Emily rushed to the station to catch a train to the city for her morning meeting.",
+                "exampleTranslation": "Emily vội vã đến ga để bắt chuyến tàu về thành phố cho cuộc họp buổi sáng.",
+                "blankSentence": "Emily rushed to the station to ________ a train to the city for her morning meeting.",
+                "options": [
+                        "make",
+                        "catch",
+                        "give",
+                        "run"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_36",
+                "question_num": 36,
+                "word": "Make sure",
+                "type": "phrase",
+                "ipa": "/meɪk ʃɔː/",
+                "meaning": "chắc chắn rằng",
+                "example": "My mother always makes sure she locks the door and turns off the lights before leaving.",
+                "exampleTranslation": "Mẹ tôi luôn đảm bảo rằng bà khóa cửa và tắt đèn trước khi rời đi.",
+                "blankSentence": "My mother always ________ sure she locks the door and turns off the lights before leaving.",
+                "options": [
+                        "gets",
+                        "does",
+                        "makes",
+                        "sets"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_37",
+                "question_num": 37,
+                "word": "Have a break",
+                "type": "phrase",
+                "ipa": "/hæv ə breɪk/",
+                "meaning": "nghỉ ngơi, giải lao",
+                "example": "Mark decided to have a break from work and enjoy a peaceful walk in the park.",
+                "exampleTranslation": "Mark quyết định nghỉ làm và tận hưởng chuyến đi dạo yên bình trong công viên.",
+                "blankSentence": "Mark decided to ________ a break from work and enjoy a peaceful walk in the park.",
+                "options": [
+                        "make",
+                        "have",
+                        "do",
+                        "give"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_38",
+                "question_num": 38,
+                "word": "Do the cleaning",
+                "type": "phrase",
+                "ipa": "/duː ðə ˈkliːnɪŋ/",
+                "meaning": "làm công việc dọn dẹp",
+                "example": "On Saturdays, Jake helps his mom by doing the cleaning around the house before going out.",
+                "exampleTranslation": "Vào các ngày thứ Bảy, Jake giúp mẹ dọn dẹp nhà cửa trước khi ra ngoài.",
+                "blankSentence": "On Saturdays, Jake helps his mom by ________ the cleaning around the house before going out.",
+                "options": [
+                        "making",
+                        "doing",
+                        "getting",
+                        "taking"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_39",
+                "question_num": 39,
+                "word": "Take part in something",
+                "type": "phrase",
+                "ipa": "/teɪk pɑːt ɪn ˈsʌmθɪŋ/",
+                "meaning": "tham gia vào thứ gì đó",
+                "example": "Michael plans to take part in the charity club to raise funds for the local hospital.",
+                "exampleTranslation": "Michael dự định tham gia câu lạc bộ từ thiện để gây quỹ cho bệnh viện địa phương.",
+                "blankSentence": "Michael plans to ________ part in the charity club to raise funds for the local hospital.",
+                "options": [
+                        "do",
+                        "have",
+                        "take",
+                        "play"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_40",
+                "question_num": 40,
+                "word": "Give a lecture",
+                "type": "phrase",
+                "ipa": "/ɡɪv ə ˈlektʃə/",
+                "meaning": "giảng bài",
+                "example": "The teacher prepared extensively to give a lecture on history to her students at the university.",
+                "exampleTranslation": "Giáo viên đã chuẩn bị kỹ lưỡng để giảng bài về lịch sử cho sinh viên của mình tại trường đại học.",
+                "blankSentence": "The teacher prepared extensively to ________ a lecture on history to her students at the university.",
+                "options": [
+                        "give",
+                        "do",
+                        "make",
+                        "leave"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_41",
+                "question_num": 41,
+                "word": "Make a decision",
+                "type": "phrase",
+                "ipa": "/meɪk ə dɪˈsɪʒn/",
+                "meaning": "quyết định",
+                "example": "You need to make a decision soon about whether to join the trip next week.",
+                "exampleTranslation": "Bạn cần sớm đưa ra quyết định về việc có nên tham gia chuyến đi vào tuần tới hay không.",
+                "blankSentence": "You need to ________ a decision soon about whether to join the trip next week.",
+                "options": [
+                        "pay",
+                        "make",
+                        "give",
+                        "have"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_42",
+                "question_num": 42,
+                "word": "Give advice",
+                "type": "phrase",
+                "ipa": "/ɡɪv ədˈvaɪs/",
+                "meaning": "đưa ra lời khuyên",
+                "example": "It’s important to give advice to friends when they need help making important decisions.",
+                "exampleTranslation": "Điều quan trọng là đưa ra lời khuyên cho bạn bè khi họ cần trợ giúp để đưa ra những quyết định quan trọng.",
+                "blankSentence": "It’s important to ________ advice to friends when they need help making important decisions.",
+                "options": [
+                        "take",
+                        "send",
+                        "make",
+                        "give"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_43",
+                "question_num": 43,
+                "word": "Have problem with something",
+                "type": "phrase",
+                "ipa": "/hæv ˈprɒbləm wɪð ˈsʌmθɪŋ/",
+                "meaning": "có vấn đề với thứ gì đó",
+                "example": "Emily needs to talk to her teacher because she’s been having a problem with math homework.",
+                "exampleTranslation": "Emily cần nói chuyện với giáo viên của mình vì cô ấy đang gặp vấn đề với bài tập toán.",
+                "blankSentence": "Emily needs to talk to her teacher because she’s been ________ a problem with math homework.",
+                "options": [
+                        "having",
+                        "taking",
+                        "going",
+                        "running"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_44",
+                "question_num": 44,
+                "word": "Put something at risk",
+                "type": "phrase",
+                "ipa": "/pʊt ˈsʌmθɪŋ ət rɪsk/",
+                "meaning": "khiến cho thứ gì đó bị nguy hiểm, rủi ro",
+                "example": "Leaving the gate open can put a child’s safety at risk, so always double-check it.",
+                "exampleTranslation": "Để cổng mở có thể gây nguy hiểm cho sự an toàn của trẻ, vì vậy hãy luôn kiểm tra kỹ.",
+                "blankSentence": "Leaving the gate open can ________ a child’s safety at risk, so always double-check it.",
+                "options": [
+                        "lay",
+                        "put",
+                        "set",
+                        "give"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_45",
+                "question_num": 45,
+                "word": "Make a mess",
+                "type": "phrase",
+                "ipa": "/meɪk ə mes/",
+                "meaning": "tạo nên một mớ hỗn độn",
+                "example": "Tom accidentally made a mess in the kitchen while trying to bake cookies for his friends.",
+                "exampleTranslation": "Tom vô tình làm bừa bộn trong bếp khi đang nướng bánh quy cho bạn bè.",
+                "blankSentence": "Tom accidentally ________ a mess in the kitchen while trying to bake cookies for his friends.",
+                "options": [
+                        "gave",
+                        "came",
+                        "made",
+                        "did"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_46",
+                "question_num": 46,
+                "word": "Come into view",
+                "type": "phrase",
+                "ipa": "/kʌm ˈɪntuː vjuː/",
+                "meaning": "thu vào tầm mắt",
+                "example": "As the sun rose, the mountains came into view for the hikers on the trail.",
+                "exampleTranslation": "Khi mặt trời mọc, những ngọn núi hiện ra trước mắt những người đi bộ đường dài.",
+                "blankSentence": "As the sun rose, the mountains ________ into view for the hikers on the trail.",
+                "options": [
+                        "got",
+                        "turned",
+                        "went",
+                        "came"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_47",
+                "question_num": 47,
+                "word": "Break the record",
+                "type": "phrase",
+                "ipa": "/breɪk ðə ˈrekɔːd/",
+                "meaning": "phá kỉ lục, Break a code: phá mật mã",
+                "example": "Tom trained hard and managed to break a record in the school’s long jump competition.",
+                "exampleTranslation": "Tom đã luyện tập chăm chỉ và đã phá được kỷ lục trong cuộc thi nhảy xa của trường.",
+                "blankSentence": "Tom trained hard and managed to ________ a record in the school’s long jump competition.",
+                "options": [
+                        "drop",
+                        "throw",
+                        "break",
+                        "stop"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_48",
+                "question_num": 48,
+                "word": "Pay a fine",
+                "type": "phrase",
+                "ipa": "/peɪ ə faɪ/",
+                "meaning": "trả tiền phạt",
+                "example": "Mark had to pay a fine for parking in the wrong spot downtown last weekend.",
+                "exampleTranslation": "Mark đã phải trả tiền phạt vì đỗ xe sai chỗ ở trung tâm thành phố vào cuối tuần trước.",
+                "blankSentence": "Mark had to ________ a fine for parking in the wrong spot downtown last weekend.",
+                "options": [
+                        "make",
+                        "ask",
+                        "pay",
+                        "set"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_49",
+                "question_num": 49,
+                "word": "Have a shower",
+                "type": "phrase",
+                "ipa": "/hæv ə ˈʃaʊə/",
+                "meaning": "đi tắm",
+                "example": "After playing soccer, Jack likes to have a shower to wash off the sweat and dirt.",
+                "exampleTranslation": "Sau khi chơi bóng đá, Jack thích đi tắm để rửa sạch mồ hôi và bụi bẩn.",
+                "blankSentence": "After playing soccer, Jack likes to ________ a shower to wash off the sweat and dirt.",
+                "options": [
+                        "go",
+                        "have",
+                        "come",
+                        "give"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_50",
+                "question_num": 50,
+                "word": "Take care of someone",
+                "type": "phrase",
+                "ipa": "/teɪk keə əv ˈsʌmwʌn/",
+                "meaning": "chăm sóc cho ai đó",
+                "example": "Daniel promised to take care of his little sister while their parents were out.",
+                "exampleTranslation": "Daniel hứa sẽ chăm sóc em gái mình khi bố mẹ họ đi vắng.",
+                "blankSentence": "Daniel promised to ________ care of his little sister while their parents were out.",
+                "options": [
+                        "take",
+                        "give",
+                        "set",
+                        "run"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_51",
+                "question_num": 51,
+                "word": "Come to a standstill",
+                "type": "phrase",
+                "ipa": "/kʌm tuː ə ˈstændstɪl/",
+                "meaning": "kẹt cứng, đi vào trì trệ",
+                "example": "Traffic in the city came to a standstill when John’s car broke down in the middle lane.",
+                "exampleTranslation": "Giao thông trong thành phố tắc nghẽn khi xe của John bị hỏng ở làn giữa.",
+                "blankSentence": "Traffic in the city ________ to a standstill when John’s car broke down in the middle lane.",
+                "options": [
+                        "took",
+                        "got",
+                        "came",
+                        "went"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_52",
+                "question_num": 52,
+                "word": "Take a course in something",
+                "type": "phrase",
+                "ipa": "/teɪk ə kɔːs ɪn ˈsʌmθɪŋ/",
+                "meaning": "học một khoá học về thứ gì đó",
+                "example": "I want to take a course in photography to improve my skills and learn new techniques.",
+                "exampleTranslation": "Tôi muốn tham gia một khóa học về nhiếp ảnh để nâng cao kỹ năng của mình và học các kỹ thuật mới.",
+                "blankSentence": "I want to ________ a course in photography to improve my skills and learn new techniques.",
+                "options": [
+                        "ask",
+                        "go",
+                        "take",
+                        "give"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_53",
+                "question_num": 53,
+                "word": "Catch fire",
+                "type": "phrase",
+                "ipa": "/kætʃ ˈfaɪə/",
+                "meaning": "bắt lửa",
+                "example": "Mark accidentally left the stove on, causing the kitchen towel to catch fire last night.",
+                "exampleTranslation": "Mark vô tình để bếp bật khiến khăn bếp bốc cháy tối qua.",
+                "blankSentence": "Mark accidentally left the stove on, causing the kitchen towel to ________ fire last night.",
+                "options": [
+                        "make",
+                        "do",
+                        "set",
+                        "catch"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_54",
+                "question_num": 54,
+                "word": "Come cheap",
+                "type": "phrase",
+                "ipa": "/kʌm tʃiːp/",
+                "meaning": "rẻ tiền",
+                "example": "Quality laptops like the one Mark wants don’t come cheap; they require careful saving and planning.",
+                "exampleTranslation": "Những chiếc máy tính xách tay ch ất lượng như chiếc mà Mark mong muốn không hề rẻ; họ yêu cầu tiết kiệm và lập kế hoạch cẩn thận.",
+                "blankSentence": "Quality laptops like the one Mark wants don’t ________ cheap; they require careful saving and planning.",
+                "options": [
+                        "give",
+                        "come",
+                        "make",
+                        "do"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_55",
+                "question_num": 55,
+                "word": "Get stuck",
+                "type": "phrase",
+                "ipa": "/ɡet stʌk/",
+                "meaning": "bị kẹt",
+                "example": "During the storm, Emily’s car got stuck in the mud and needed assistance to be pulled out.",
+                "exampleTranslation": "Trong cơn bão, xe của Emily bị kẹt trong bùn và cần được hỗ trợ để được kéo ra ngoài.",
+                "blankSentence": "During the storm, Emily’s car ________ stuck in the mud and needed assistance to be pulled out.",
+                "options": [
+                        "made",
+                        "went",
+                        "got",
+                        "took"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_56",
+                "question_num": 56,
+                "word": "Take notice of something",
+                "type": "phrase",
+                "ipa": "/teɪk ˈnəʊtɪs əv ˈsʌmθɪŋ/",
+                "meaning": "để ý đến thứ gì đó",
+                "example": "Sarah didn’t take notice of the warning signs and accidentally walked into the wet paint.",
+                "exampleTranslation": "Sarah không để ý đến những biển cảnh báo và vô tình bước vào lớp sơn ướt.",
+                "blankSentence": "Sarah didn’t ________ notice of the warning signs and accidentally walked into the wet paint.",
+                "options": [
+                        "give",
+                        "do",
+                        "make",
+                        "take"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_57",
+                "question_num": 57,
+                "word": "Take notes",
+                "type": "phrase",
+                "ipa": "/teɪk nəʊts/",
+                "meaning": "ghi chép lại ghi chú",
+                "example": "Anna likes to take notes during lectures to help her remember important points for exams.",
+                "exampleTranslation": "Anna thích ghi chép trong các bài giảng để giúp cô ghi nhớ những điểm quan trọng trong kỳ thi.",
+                "blankSentence": "Anna likes to ________ notes during lectures to help her remember important points for exams.",
+                "options": [
+                        "take",
+                        "give",
+                        "send",
+                        "play"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_58",
+                "question_num": 58,
+                "word": "Get a job",
+                "type": "phrase",
+                "ipa": "/ɡet ə dʒɒb/",
+                "meaning": "được nhận vào làm việc, có việc",
+                "example": "Mark was thrilled to finally get a job at the local bookstore after months of searching.",
+                "exampleTranslation": "Mark rất vui mừng khi cuối cùng cũng tìm được việc làm ở hiệu sách địa phương sau nhiều tháng tìm kiếm.",
+                "blankSentence": "Mark was thrilled to finally ________ a job at the local bookstore after months of searching.",
+                "options": [
+                        "run",
+                        "make",
+                        "get",
+                        "pay"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_59",
+                "question_num": 59,
+                "word": "Have an accident",
+                "type": "phrase",
+                "ipa": "/hæv ən ˈæksɪdənt/",
+                "meaning": "gặp tai nạn",
+                "example": "Mike was careful, but he had an accident while riding his bike down the steep hill.",
+                "exampleTranslation": "Mike đã cẩn thận nhưng anh ấy đã gặp tai nạn khi đang đạp xe xuống đồi dốc.",
+                "blankSentence": "Mike was careful, but he ________ an accident while riding his bike down the steep hill.",
+                "options": [
+                        "had",
+                        "did",
+                        "paid",
+                        "ran"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_60",
+                "question_num": 60,
+                "word": "Make use of something",
+                "type": "phrase",
+                "ipa": "/meɪk juːs əv ˈsʌmθɪŋ/",
+                "meaning": "tận dụng thứ gì đó",
+                "example": "Anna decided to make use of her free time by reading books and learning new skills.",
+                "exampleTranslation": "Anna quyết định tận dụng thời gian rảnh của mình bằng cách đọc sách và học những kỹ năng mới.",
+                "blankSentence": "Anna decided to ________ use of her free time by reading books and learning new skills.",
+                "options": [
+                        "give",
+                        "make",
+                        "set",
+                        "do"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_61",
+                "question_num": 61,
+                "word": "Do business with",
+                "type": "phrase",
+                "ipa": "/duː ˈbɪznəs wɪð/",
+                "meaning": "kinh doanh, làm ăn với ai đó",
+                "example": "Mark enjoys doing business with local farmers to supply fresh produce to the community.",
+                "exampleTranslation": "Mark thích hợp tác kinh doanh với nông dân địa phương để cung cấp sản phẩm tươi sống cho cộng đồng.",
+                "blankSentence": "Mark enjoys ________ business with local farmers to supply fresh produce to the community.",
+                "options": [
+                        "having",
+                        "running",
+                        "doing",
+                        "getting"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_62",
+                "question_num": 62,
+                "word": "Have a holiday",
+                "type": "phrase",
+                "ipa": "/hæv ə ˈhɒlədeɪ/",
+                "meaning": "đi du lịch có một kỳ nghỉ",
+                "example": "Jason is excited to have a holiday next week and plans to visit his grandparents.",
+                "exampleTranslation": "Jason rất vui mừng được nghỉ lễ vào tuần tới và dự định đi thăm ông bà nội.",
+                "blankSentence": "Jason is excited to ________ a holiday next week and plans to visit his grandparents.",
+                "options": [
+                        "pay",
+                        "set",
+                        "go",
+                        "have"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_63",
+                "question_num": 63,
+                "word": "Do excercise",
+                "type": "phrase",
+                "ipa": "/duː ˈeksəsaɪz/",
+                "meaning": "tập thể dục",
+                "example": "John likes to do exercise every morning to stay healthy and maintain his energy levels.",
+                "exampleTranslation": "John thích tập thể dục mỗi sáng để giữ sức khỏe và duy trì mức năng lượng của mình.",
+                "blankSentence": "John likes to ________ exercise every morning to stay healthy and maintain his energy levels.",
+                "options": [
+                        "set",
+                        "give",
+                        "do",
+                        "pay"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_64",
+                "question_num": 64,
+                "word": "Catch sight of something",
+                "type": "phrase",
+                "ipa": "/kætʃ saɪt əv ˈsʌmθɪŋ/",
+                "meaning": "nhìn thấy thứ gì đó",
+                "example": "Linh was thrilled to catch sight of her favorite singer Son Tung at the concert last night.",
+                "exampleTranslation": "Linh vui mừng khi nhìn thấy ca sĩ mà cô yêu thích Sơn Tùng tại đêm nhạc tối qua.",
+                "blankSentence": "Linh was thrilled to ________ sight of her favorite singer Son Tung at the concert last night.",
+                "options": [
+                        "catch",
+                        "give",
+                        "set",
+                        "make"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_65",
+                "question_num": 65,
+                "word": "Break a promise",
+                "type": "phrase",
+                "ipa": "/breɪk ə ˈprɒmɪs/",
+                "meaning": "phá vỡ lời hứa",
+                "example": "My sister felt guilty when she had to break a promise to her friend due to unforeseen circumstances.",
+                "exampleTranslation": "Chị tôi cảm thấy có lỗi khi phải thất hứa với bạn mình vì những tình huống bất ngờ.",
+                "blankSentence": "My sister felt guilty when she had to ________ a promise to her friend due to unforeseen circumstances.",
+                "options": [
+                        "keep",
+                        "give",
+                        "make",
+                        "break"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_66",
+                "question_num": 66,
+                "word": "Pay a salary",
+                "type": "phrase",
+                "ipa": "/peɪ ə ˈsæləri/",
+                "meaning": "trả lương",
+                "example": "The company pays a salary to its employees at the end of every month without fail.",
+                "exampleTranslation": "Công ty trả lương cho nhân viên vào cuối mỗi tháng mà không hề thất bại.",
+                "blankSentence": "The company ________ a salary to its employees at the end of every month without fail.",
+                "options": [
+                        "makes",
+                        "pays",
+                        "sets",
+                        "does"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_67",
+                "question_num": 67,
+                "word": "Tell stories to someone",
+                "type": "phrase",
+                "ipa": "/tel ˈstɔːriz tuː ˈsʌmwʌn/",
+                "meaning": "kể chuyện cho ai đó",
+                "example": "Alex loves to tell stories to his younger siblings before bedtime to spark their imagination.",
+                "exampleTranslation": "Alex thích kể chuyện cho các em của mình trước khi đi ngủ để khơi dậy trí tưởng tượng của chúng.",
+                "blankSentence": "Alex loves to ________ stories to his younger siblings before bedtime to spark their imagination.",
+                "options": [
+                        "say",
+                        "hear",
+                        "tell",
+                        "talk"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_68",
+                "question_num": 68,
+                "word": "Make fun of somebody",
+                "type": "phrase",
+                "ipa": "/meɪk fʌn əv ˈsʌmbədi/",
+                "meaning": "chọc quê ai đó, giễu cợt với ai đó",
+                "example": "She should not make fun of others because it hurts their feelings and is unkind behavior.",
+                "exampleTranslation": "Cô ấy không nên gi ễu cợt người khác vì đi ều đó làm t ổn thương c ảm xúc của họ và là hành vi không tử tế.",
+                "blankSentence": "She should not ________ fun of others because it hurts their feelings and is unkind behavior.",
+                "options": [
+                        "do",
+                        "make",
+                        "give",
+                        "pay"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_69",
+                "question_num": 69,
+                "word": "Take an exam",
+                "type": "phrase",
+                "ipa": "/teɪk ən ɪɡˈzæm/",
+                "meaning": "làm bài kiểm tra",
+                "example": "Janet will take an exam next week to test her knowledge in math and science.",
+                "exampleTranslation": "Janet sẽ làm bài kiểm tra vào tuần tới để kiểm tra kiến thức về toán và khoa học.",
+                "blankSentence": "Janet will ________ an exam next week to test her knowledge in math and science.",
+                "options": [
+                        "lay",
+                        "go",
+                        "take",
+                        "give"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_70",
+                "question_num": 70,
+                "word": "Have a party",
+                "type": "phrase",
+                "ipa": "/hæv ə ˈpɑːti/",
+                "meaning": "tổ chức một bữa tiệc",
+                "example": "Lisa decided to have a party at her house to celebrate her birthday with family and friends.",
+                "exampleTranslation": "Lisa quyết định tổ chức một bữa tiệc tại nhà để chúc mừng sinh nhật cùng gia đình và bạn bè.",
+                "blankSentence": "Lisa decided to ________ a party at her house to celebrate her birthday with family and friends.",
+                "options": [
+                        "run",
+                        "take",
+                        "have",
+                        "come"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_71",
+                "question_num": 71,
+                "word": "Keep a diary",
+                "type": "phrase",
+                "ipa": "/kiːp ə ˈdaɪəri/",
+                "meaning": "viết nhật ký, duy trì thói quen giữ nhật ký",
+                "example": "It’s a good idea to keep a diary to remember all your fun adventures.",
+                "exampleTranslation": "Bạn nên ghi nhật ký để ghi nhớ tất cả những cuộc phiêu lưu thú vị của mình.",
+                "blankSentence": "It’s a good idea to ________ a diary to remember all your fun adventures.",
+                "options": [
+                        "make",
+                        "keep",
+                        "come",
+                        "say"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_72",
+                "question_num": 72,
+                "word": "Ask the time",
+                "type": "phrase",
+                "ipa": "/ɑːsk ðə taɪm/",
+                "meaning": "hỏi giờ",
+                "example": "When you’re lost, it’s helpful to ask the time to know if you’re on track.",
+                "exampleTranslation": "Khi bạn lạc lối, sẽ rất hữu ích nếu bạn hỏi thời gian để biết liệu bạn có đang đi đúng hướng hay không.",
+                "blankSentence": "When you’re lost, it’s helpful to ________ the time to know if you’re on track.",
+                "options": [
+                        "ask",
+                        "make",
+                        "tell",
+                        "save"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_73",
+                "question_num": 73,
+                "word": "Keep calm",
+                "type": "phrase",
+                "ipa": "/kiːp kɑːm/",
+                "meaning": "giữ bình tĩnh",
+                "example": "Megan, remember to keep calm during the presentation tomorrow, you’ve prepared well for this.",
+                "exampleTranslation": "Megan, hãy nhớ giữ bình tĩnh trong buổi thuyết trình ngày mai, bạn đã chuẩn bị tốt cho việc này.",
+                "blankSentence": "Megan, remember to ________ calm during the presentation tomorrow, you’ve prepared well for this.",
+                "options": [
+                        "get",
+                        "make",
+                        "go",
+                        "keep"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_74",
+                "question_num": 74,
+                "word": "Do one’s best",
+                "type": "phrase",
+                "ipa": "/duː wʌnz best/",
+                "meaning": "cố gắng hết sức",
+                "example": "Despite feeling tired, Sarah always tries to do her best in everything she tackles.",
+                "exampleTranslation": "Dù cảm thấy mệt mỏi nhưng Sarah luôn cố gắng cố gắng hết sức trong mọi việc mình giải quyết.",
+                "blankSentence": "Despite feeling tired, Sarah always tries to ________ her best in everything she tackles.",
+                "options": [
+                        "give",
+                        "make",
+                        "do",
+                        "pay"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_75",
+                "question_num": 75,
+                "word": "Make a difference",
+                "type": "phrase",
+                "ipa": "/meɪk ə ˈdɪfrəns/",
+                "meaning": "tạo ra sự khác biệt",
+                "example": "Michael hopes to make a difference by volunteering at the animal shelter every weekend.",
+                "exampleTranslation": "Michael hy vọng sẽ tạo ra sự khác biệt bằng cách tham gia tình nguyện tại nơi trú ẩn động vật vào mỗi cuối tuần.",
+                "blankSentence": "Michael hopes to ________ a difference by volunteering at the animal shelter every weekend.",
+                "options": [
+                        "make",
+                        "get",
+                        "save",
+                        "set"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_76",
+                "question_num": 76,
+                "word": "Get divorced",
+                "type": "phrase",
+                "ipa": "/ɡet dɪˈvɔːst/",
+                "meaning": "ly hôn, ly dị",
+                "example": "After years of trying to make it work, Emily and Tom decided to get divorced.",
+                "exampleTranslation": "Sau nhiều năm cố gắng giải quyết, Emily và Tom quyết định ly hôn.",
+                "blankSentence": "After years of trying to make it work, Emily and Tom decided to ________ divorced.",
+                "options": [
+                        "turn",
+                        "get",
+                        "do",
+                        "make"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_77",
+                "question_num": 77,
+                "word": "Have a look",
+                "type": "phrase",
+                "ipa": "/hæv ə lʊk/",
+                "meaning": "nhìn ra thứ gì đó",
+                "example": "Could you please have a look at the new design proposal and give your feedback?",
+                "exampleTranslation": "Bạn có thể vui lòng xem qua đề xuất thiết kế mới và đưa ra phản hồi của mình không?",
+                "blankSentence": "Could you please ________ a look at the new design proposal and give your feedback?",
+                "options": [
+                        "drop",
+                        "send",
+                        "get",
+                        "have"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_78",
+                "question_num": 78,
+                "word": "Take time doing something",
+                "type": "phrase",
+                "ipa": "/teɪk taɪm ˈduːɪŋ ˈsʌmθɪŋ/",
+                "meaning": "dành nhiều thời gian, chậm rãi, cẩn thận",
+                "example": "Lily likes to take her time when painting to ensure every detail is perfect.",
+                "exampleTranslation": "Lily thích dành thời gian khi vẽ để đảm bảo mọi chi tiết đều hoàn hảo.",
+                "blankSentence": "Lily likes to ________ her time when painting to ensure every detail is perfect.",
+                "options": [
+                        "tell",
+                        "give",
+                        "take",
+                        "say"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_79",
+                "question_num": 79,
+                "word": "Make a living",
+                "type": "phrase",
+                "ipa": "/meɪk ə ˈlɪvɪŋ/",
+                "meaning": "kiếm sống, kiếm tiền trang trải cuộc sống",
+                "example": "My sister plans to make a living by teaching music lessons to children.",
+                "exampleTranslation": "Chị tôi dự định kiếm sống bằng nghề dạy nhạc cho trẻ em.",
+                "blankSentence": "My sister plans to ________ a living by teaching music lessons to children.",
+                "options": [
+                        "take",
+                        "do",
+                        "save",
+                        "make"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_80",
+                "question_num": 80,
+                "word": "Get into trouble",
+                "type": "phrase",
+                "ipa": "/ɡet ˈɪntuː ˈtrʌbl/",
+                "meaning": "vướng vào rắc rối",
+                "example": "Tom got into trouble with his parents for coming home late without informing them beforehand.",
+                "exampleTranslation": "Tom gặp rắc rối với bố mẹ vì về nhà muộn mà không báo trước cho họ.",
+                "blankSentence": "Tom ________ into trouble with his parents for coming home late without informing them beforehand.",
+                "options": [
+                        "went",
+                        "came",
+                        "got",
+                        "had"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_81",
+                "question_num": 81,
+                "word": "Do harm to someone",
+                "type": "phrase",
+                "ipa": "/duː hɑːm tuː ˈsʌmwʌn/",
+                "meaning": "gây hại cho ai đó",
+                "example": "Using your phone while driving can do harm to yourself and others on the road.",
+                "exampleTranslation": "Sử dụng điện thoại khi lái xe có thể gây hại cho chính bạn và những người khác trên đường.",
+                "blankSentence": "Using your phone while driving can ________ harm to yourself and others on the road.",
+                "options": [
+                        "make",
+                        "do",
+                        "give",
+                        "lay"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_82",
+                "question_num": 82,
+                "word": "Come to light",
+                "type": "phrase",
+                "ipa": "/kʌm tuː laɪt/",
+                "meaning": "sáng toả, được đưa ra ánh sáng, được làm rõ",
+                "example": "The truth about the missing keys finally came to light during Sarah’s thorough search.",
+                "exampleTranslation": "Sự thật về những chiếc chìa khóa bị mất cuối cùng cũng được sáng tỏ trong quá trình tìm kiếm kỹ lưỡng của Sarah.",
+                "blankSentence": "The truth about the missing keys finally ________ to light during Sarah’s thorough search.",
+                "options": [
+                        "went",
+                        "took",
+                        "came",
+                        "ran"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_83",
+                "question_num": 83,
+                "word": "Pay the bill",
+                "type": "phrase",
+                "ipa": "/peɪ ðə bɪl/",
+                "meaning": "chi trả hoá đơn",
+                "example": "My father always rememberes to pay the electricity bill before the due date to avoid any late fees.",
+                "exampleTranslation": "Bố tôi luôn nhớ thanh toán hóa đơn tiền điện trước thời hạn để tránh những khoản phí trễ hạn.",
+                "blankSentence": "My father always rememberes to ________ the electricity bill before the due date to avoid any late fees.",
+                "options": [
+                        "pay",
+                        "get",
+                        "do",
+                        "take"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_84",
+                "question_num": 84,
+                "word": "Make money",
+                "type": "phrase",
+                "ipa": "/meɪk ˈmʌni/",
+                "meaning": "kiếm tiền, làm ra tiền",
+                "example": "John wants to make money by selling his handmade crafts at the local market on weekends.",
+                "exampleTranslation": "John muốn kiếm tiền bằng cách bán đồ thủ công của mình ở chợ địa phương vào cuối tuần.",
+                "blankSentence": "John wants to ________ money by selling his handmade crafts at the local market on weekends.",
+                "options": [
+                        "cost",
+                        "raise",
+                        "make",
+                        "save"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_85",
+                "question_num": 85,
+                "word": "Put pressure on someone",
+                "type": "phrase",
+                "ipa": "/pʊt ˈpreʃə ɒn ˈsʌmwʌn/",
+                "meaning": "đặt áp lực lên ai đó",
+                "example": "Tyler awlays puts pressure on her brother to help her with the chores around the house.",
+                "exampleTranslation": "Tyler luôn gây áp lực buộc anh trai cô phải giúp cô làm việc nhà.",
+                "blankSentence": "Tyler awlays ________ pressure on her brother to help her with the chores around the house.",
+                "options": [
+                        "does",
+                        "puts",
+                        "gives",
+                        "shares"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_86",
+                "question_num": 86,
+                "word": "Ask the price",
+                "type": "phrase",
+                "ipa": "/ɑːsk ðə praɪs/",
+                "meaning": "hỏi giá, hỏi thử giá cả",
+                "example": "When shopping, it’s always a good idea to ask the price before deciding to buy.",
+                "exampleTranslation": "Khi mua hàng, bạn nên hỏi giá trước khi quyết định mua.",
+                "blankSentence": "When shopping, it’s always a good idea to ________ the price before deciding to buy.",
+                "options": [
+                        "tell",
+                        "make",
+                        "pay",
+                        "ask"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_87",
+                "question_num": 87,
+                "word": "Give permission for somebody",
+                "type": "phrase",
+                "ipa": "/ɡɪv pəˈmɪʃn fə ˈsʌmbədi/",
+                "meaning": "cho ai đó sự cho phép",
+                "example": "Her parents agreed to give permission for her to go on the school trip next week.",
+                "exampleTranslation": "Cha mẹ cô đã đồng ý cho phép cô đi tham quan vào tuần tới.",
+                "blankSentence": "Her parents agreed to ________ permission for her to go on the school trip next week.",
+                "options": [
+                        "get",
+                        "take",
+                        "give",
+                        "pay"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_88",
+                "question_num": 88,
+                "word": "Have a good time",
+                "type": "phrase",
+                "ipa": "/hæv ə ɡʊd taɪm/",
+                "meaning": "có một quãng thời giãn vui ve",
+                "example": "Tom had a good time at the beach with his friends over the weekend.",
+                "exampleTranslation": "Tom đã có khoảng thời gian vui vẻ ở bãi biển cùng bạn bè vào cuối tuần.",
+                "blankSentence": "Tom ________ a good time at the beach with his friends over the weekend.",
+                "options": [
+                        "came",
+                        "had",
+                        "did",
+                        "paid"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_89",
+                "question_num": 89,
+                "word": "Make effort to do something",
+                "type": "phrase",
+                "ipa": "/meɪk ˈefət tuː duː ˈsʌmθɪŋ/",
+                "meaning": "cố gắng làm gì đó",
+                "example": "Tyler needs to make efforts to study harder if she wants to pass her exams.",
+                "exampleTranslation": "Tyler cần phải nỗ lực học tập chăm chỉ hơn nếu muốn vượt qua kỳ thi của mình.",
+                "blankSentence": "Tyler needs to ________ efforts to study harder if she wants to pass her exams.",
+                "options": [
+                        "make",
+                        "do",
+                        "give",
+                        "use"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_90",
+                "question_num": 90,
+                "word": "Give (someone) a call",
+                "type": "phrase",
+                "ipa": "/ɡɪv ˈsʌmwʌn ə kɔːl/",
+                "meaning": "gọi điện cho ai đó",
+                "example": "My mother has just reminded me to give my friend a call to wish him a happy birthday.",
+                "exampleTranslation": "Mẹ tôi vừa nhắc tôi gọi điện cho bạn tôi để chúc mừng sinh nhật anh ấy.",
+                "blankSentence": "My mother has just reminded me to ________ my friend a call to wish him a happy birthday.",
+                "options": [
+                        "come",
+                        "give",
+                        "do",
+                        "set"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_91",
+                "question_num": 91,
+                "word": "Commit a crime",
+                "type": "phrase",
+                "ipa": "/kəˈmɪt ə kraɪm/",
+                "meaning": "phạm tội",
+                "example": "He must face consequences if he chooses to commit a crime against his neighbor.",
+                "exampleTranslation": "Anh ta phải đối mặt với hậu quả nếu quyết định phạm tội chống lại người hàng xóm của mình.",
+                "blankSentence": "He must face consequences if he chooses to ________ a crime against his neighbor.",
+                "options": [
+                        "commit",
+                        "drop",
+                        "throw",
+                        "tell"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_92",
+                "question_num": 92,
+                "word": "Get started on something",
+                "type": "phrase",
+                "ipa": "/ɡet ˈstɑːtɪd ɒn ˈsʌmθɪŋ/",
+                "meaning": "bắt đầu làm một thứ gì đó",
+                "example": "Let’s gather our materials and get started on the project before it gets too late.",
+                "exampleTranslation": "Hãy thu thập tài liệu của chúng tôi và bắt đầu dự án trước khi quá muộn.",
+                "blankSentence": "Let’s gather our materials and ________ started on the project before it gets too late.",
+                "options": [
+                        "make",
+                        "get",
+                        "do",
+                        "come"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_93",
+                "question_num": 93,
+                "word": "Do research",
+                "type": "phrase",
+                "ipa": "/duː rɪˈsɜːtʃ/",
+                "meaning": "làm khảo sát",
+                "example": "Before starting her project, Emily needs to do research to gather information and plan effectively.",
+                "exampleTranslation": "Trước khi bắt đầu dự án của mình, Emily c ần nghiên cứu để thu thập thông tin và l ập kế hoạch một cách hiệu quả.",
+                "blankSentence": "Before starting her project, Emily needs to ________ research to gather information and plan effectively.",
+                "options": [
+                        "do",
+                        "set",
+                        "make",
+                        "have"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_94",
+                "question_num": 94,
+                "word": "Ask a question",
+                "type": "phrase",
+                "ipa": "/ɑːsk ə ˈkwestʃən/",
+                "meaning": "hỏi một câu hỏi",
+                "example": "She should feel comfortable to ask a question when she doesn’t understand something in class.",
+                "exampleTranslation": "Cô ấy nên cảm thấy thoải mái khi đặt câu hỏi khi không hiểu điều gì đó trong lớp.",
+                "blankSentence": "She should feel comfortable to ________ a question when she doesn’t understand something in class.",
+                "options": [
+                        "give",
+                        "rise",
+                        "do",
+                        "ask"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_95",
+                "question_num": 95,
+                "word": "Make mistake",
+                "type": "phrase",
+                "ipa": "/meɪk mɪˈsteɪk/",
+                "meaning": "phạm phải sai lầm",
+                "example": "It’s normal to make mistakes; learn from them and keep trying your best every day.",
+                "exampleTranslation": "Việc mắc sai l ầm là đi ều bình thư ờng; học hỏi từ chúng và ti ếp tục cố gắng hết sức mình m ỗi ngày.",
+                "blankSentence": "It’s normal to ________ mistakes; learn from them and keep trying your best every day.",
+                "options": [
+                        "do",
+                        "have",
+                        "make",
+                        "give"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_96",
+                "question_num": 96,
+                "word": "Get engaged",
+                "type": "phrase",
+                "ipa": "/ɡet ɪnˈɡeɪdʒd/",
+                "meaning": "đính hôn",
+                "example": "Sarah was overjoyed when Mark asked her to get engaged during their romantic beach vacation.",
+                "exampleTranslation": "Sarah vui mừng khôn xiết khi Mark ngỏ lời cầu hôn cô trong kỳ nghỉ lãng mạn ở bãi biển của họ.",
+                "blankSentence": "Sarah was overjoyed when Mark asked her to ________ engaged during their romantic beach vacation.",
+                "options": [
+                        "make",
+                        "get",
+                        "do",
+                        "come"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_97",
+                "question_num": 97,
+                "word": "Have a discussion about something",
+                "type": "phrase",
+                "ipa": "/hæv ə dɪˈskʌʃn əˈbaʊt ˈsʌmθɪŋ/",
+                "meaning": "có một cuộc thảo luận về thứ gì đó",
+                "example": "Emily and her colleagues need to have a discussion about the upcoming project deadline tomorrow.",
+                "exampleTranslation": "Emily và các đồng nghiệp của cô ấy cần thảo luận về thời hạn dự án sắp tới vào ngày mai.",
+                "blankSentence": "Emily and her colleagues need to ________ a discussion about the upcoming project deadline tomorrow.",
+                "options": [
+                        "have",
+                        "send",
+                        "make",
+                        "go"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_98",
+                "question_num": 98,
+                "word": "Give someone a lift",
+                "type": "phrase",
+                "ipa": "/ɡɪv ˈsʌmwʌn ə lɪft/",
+                "meaning": "cho ai đó đi nhờ xe",
+                "example": "He kindly offered to give her a lift home after she missed the last bus.",
+                "exampleTranslation": "Anh ấy vui lòng đề nghị đưa cô về nhà sau khi cô lỡ chuyến xe buýt cuối cùng.",
+                "blankSentence": "He kindly offered to ________ her a lift home after she missed the last bus.",
+                "options": [
+                        "take",
+                        "send",
+                        "give",
+                        "make"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_99",
+                "question_num": 99,
+                "word": "Take measure",
+                "type": "phrase",
+                "ipa": "/teɪk ˈmeʒə/",
+                "meaning": "hành động, tiến hành những biện pháp",
+                "example": "Emily decided to take measures to improve her cybersecurity by setting up strong passwords.",
+                "exampleTranslation": "Emily quyết định thực hiện các biện pháp để cải thiện an ninh mạng của mình bằng cách thiết lập mật khẩu mạnh.",
+                "blankSentence": "Emily decided to ________ measures to improve her cybersecurity by setting up strong passwords.",
+                "options": [
+                        "do",
+                        "take",
+                        "give",
+                        "set"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_100",
+                "question_num": 100,
+                "word": "Take a seat",
+                "type": "phrase",
+                "ipa": "/teɪk ə siːt/",
+                "meaning": "ngồi xuống",
+                "example": "We told John to take a seat and make himself comfortable while we were waiting for the others to arrive.",
+                "exampleTranslation": "Chúng tôi b ảo John ng ồi xuống và t ạo sự thoải mái cho anh ấy trong khi chúng tôi đ ợi những người khác đến. 20",
+                "blankSentence": "We told John to ________ a seat and make himself comfortable while we were waiting for the others to arrive.",
+                "options": [
+                        "give",
+                        "make",
+                        "take",
+                        "come"
+                ],
+                "answer": "C"
+        }
+]
 };

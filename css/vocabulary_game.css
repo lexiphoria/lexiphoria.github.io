@@ -1178,3 +1178,25 @@ h1 {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.2);
 }
+
+/* Instruction banner for sentence completion */
+.instruction-banner {
+  background: rgba(245, 158, 11, 0.08);
+  border-left: 4px solid #f59e0b;
+  color: #fbbf24;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.sentence-question-text {
+  font-size: 1.15rem;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 0;
+}
+

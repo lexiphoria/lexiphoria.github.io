@@ -125,26 +125,17 @@
         <div class="mode-card" onclick="startMode('multipleChoice')">
           <div class="mode-card-icon" style="color: #60a5fa;">📝</div>
           <div class="mode-card-body">
-            <h4 class="mode-card-title">Trắc Nghiệm</h4>
+            <h4 class="mode-card-title">Trắc Nghiệm Nghĩa Từ</h4>
             <p class="mode-card-desc">Rèn luyện phản xạ nhanh bằng cách chọn đúng nghĩa tiếng Việt hoặc từ thích hợp tương ứng.</p>
           </div>
         </div>
 
-        <!-- Card Mode 3: Matching -->
-        <div class="mode-card" onclick="startMode('matchCards')">
-          <div class="mode-card-icon" style="color: #34d399;">🧩</div>
+        <!-- Card Mode 3: Sentence Completion -->
+        <div class="mode-card" onclick="startMode('sentenceCompletion')">
+          <div class="mode-card-icon" style="color: #f59e0b;">✍️</div>
           <div class="mode-card-body">
-            <h4 class="mode-card-title">Ghép Thẻ Từ</h4>
-            <p class="mode-card-desc">Trò chơi lật và ghép cặp từ tiếng Anh với nghĩa tiếng Việt. Thách thức tốc độ ghép thẻ của bạn.</p>
-          </div>
-        </div>
-
-        <!-- Card Mode 4: Spelling -->
-        <div class="mode-card" onclick="startMode('spelling')">
-          <div class="mode-card-icon" style="color: #f472b6;">✍️</div>
-          <div class="mode-card-body">
-            <h4 class="mode-card-title">Luyện Viết Từ</h4>
-            <p class="mode-card-desc">Đọc nghĩa tiếng Việt, gợi ý ngữ cảnh trong câu và viết đúng chính tả từ tiếng Anh để thành thạo.</p>
+            <h4 class="mode-card-title">Hoàn Thành Câu (A, B, C, D)</h4>
+            <p class="mode-card-desc">Chọn đáp án đúng nhất để hoàn thành câu tiếng Anh theo ngữ cảnh đề bài.</p>
           </div>
         </div>
       </div>
@@ -251,73 +242,48 @@
       </div>
     </div>
 
-    <!-- 5. MATCHING SCREEN (MEMORY GAME) -->
-    <div id="matching-screen" class="glass-panel" style="display: none;">
+    <!-- 5. SENTENCE COMPLETION SCREEN -->
+    <div id="sentence-completion-screen" class="glass-panel" style="display: none;">
       <div class="game-play-header">
         <button class="btn-back" onclick="exitToModes()">← Chế Độ</button>
-        <span class="game-title-text">Trò chơi: Ghép Cặp Từ</span>
-        <span class="card-progress-text" id="matching-pairs-left">Còn lại: 5 cặp</span>
-      </div>
-
-      <div class="matching-timer-row">
-        <div class="timer-indicator">
-          ⏱️ Thời gian: <span id="matching-timer-val">0.0</span> giây
-        </div>
-        <div style="color: #6ee7b7;">
-          Lần ghép sai: <span id="matching-errors-count">0</span>
-        </div>
-      </div>
-
-      <!-- Grid of Cards (10 cards: 5 EN, 5 VI) -->
-      <div class="matching-grid" id="matching-grid-cards">
-        <!-- Rendered dynamically -->
-      </div>
-    </div>
-
-    <!-- 6. SPELLING PRACTICE SCREEN -->
-    <div id="spelling-screen" class="glass-panel" style="display: none;">
-      <div class="game-play-header">
-        <button class="btn-back" onclick="exitToModes()">← Chế Độ</button>
-        <span class="game-title-text">Luyện Viết Từ Vựng</span>
-        <div class="card-progress-text" id="spelling-progress-text">Từ 1/10</div>
+        <span class="game-title-text">Hoàn Thành Câu</span>
+        <div class="card-progress-text" id="sentence-progress-text">Câu 1/10</div>
       </div>
 
       <div class="game-progress-bar-container">
-        <div class="game-progress-bar-fill" id="spelling-progress-fill"></div>
+        <div class="game-progress-bar-fill" id="sentence-progress-fill"></div>
       </div>
 
-      <div class="spelling-box">
-        <h3 class="spelling-meaning" id="spelling-meaning">thành tựu</h3>
-        <p class="spelling-ipa" id="spelling-ipa">/ə'tʃi:vmənt/ (n)</p>
-        
-        <div class="spelling-example-fill" id="spelling-example">
-          It was a remarkable <strong>_______</strong> for such a young player.
-        </div>
-
-        <div class="spelling-input-wrapper">
-          <input type="text" class="spelling-input" id="spell-input" placeholder="Nhập từ tiếng Anh..." autocomplete="off" spellcheck="false">
-        </div>
-
-        <div class="spelling-hints-row">
-          <button class="btn-spelling-hint" id="btn-hint-letter" onclick="getSpellingLetterHint()">💡 Gợi ý chữ cái đầu</button>
-          <button class="btn-spelling-hint" onclick="speakCurrentSpellingWord()">🔊 Nghe phát âm</button>
-        </div>
+      <!-- Instruction Banner -->
+      <div class="instruction-banner">
+        "Mark the letter A, B, C, or D on your answer sheet to indicate the correct answer to each of the following questions."
       </div>
 
-      <!-- Explanation box -->
-      <div class="game-explanation" id="spelling-explanation-box" style="display: none;">
-        <div class="game-explanation-title" id="spelling-feedback-title">Chính xác!</div>
-        <div class="game-explanation-content" id="spelling-explanation-content">
-          Dịch nghĩa câu ví dụ: "..."
+      <!-- Question Box -->
+      <div class="quiz-question-box" style="margin-top: 15px;">
+        <p class="sentence-question-text" id="sentence-question-text">Loading question...</p>
+      </div>
+
+      <!-- Option buttons grid -->
+      <div class="quiz-options-grid" id="sentence-options">
+        <!-- JavaScript loads buttons dynamically -->
+      </div>
+
+      <!-- Explanation Box -->
+      <div class="game-explanation" id="sentence-explanation-box" style="display: none;">
+        <div class="game-explanation-title" id="sentence-feedback-title">📝 Giải thích & Dịch nghĩa:</div>
+        <div class="game-explanation-content" id="sentence-explanation-content">
+          Loading explanation...
         </div>
       </div>
 
       <div class="game-footer-actions">
-        <button class="btn-game-next" id="btn-spelling-next" onclick="nextSpellingQuestion()" style="display: none;">
+        <button class="btn-game-next" id="btn-sentence-next" onclick="nextSentenceQuestion()" style="display: none;">
           Tiếp tục ➔
         </button>
       </div>
     </div>
+
 
     <!-- 7. GAME RESULTS SCREEN -->
     <div id="results-screen" class="glass-panel" style="display: none;">
@@ -613,12 +579,12 @@
 
     function exitToModes() {
       playSound('click');
-      stopTimer();
       // Hide all game screens
       document.getElementById('flashcard-screen').style.display = 'none';
       document.getElementById('quiz-screen').style.display = 'none';
-      document.getElementById('matching-screen').style.display = 'none';
-      document.getElementById('spelling-screen').style.display = 'none';
+      if (document.getElementById('sentence-completion-screen')) {
+        document.getElementById('sentence-completion-screen').style.display = 'none';
+      }
       document.getElementById('results-screen').style.display = 'none';
       document.getElementById('mode-screen').style.display = 'block';
     }
@@ -650,8 +616,8 @@
       const quizFill = document.getElementById('quiz-progress-fill');
       if (quizFill) quizFill.style.backgroundColor = color;
       
-      const spellingFill = document.getElementById('spelling-progress-fill');
-      if (spellingFill) spellingFill.style.backgroundColor = color;
+      const sentenceFill = document.getElementById('sentence-progress-fill');
+      if (sentenceFill) sentenceFill.style.backgroundColor = color;
 
       if (mode === 'flashcard') {
         cardFilter = 'all';
@@ -660,12 +626,9 @@
       } else if (mode === 'multipleChoice') {
         setupQuizMode();
         document.getElementById('quiz-screen').style.display = 'block';
-      } else if (mode === 'matchCards') {
-        setupMatchingMode();
-        document.getElementById('matching-screen').style.display = 'block';
-      } else if (mode === 'spelling') {
-        setupSpellingMode();
-        document.getElementById('spelling-screen').style.display = 'block';
+      } else if (mode === 'sentenceCompletion') {
+        setupSentenceCompletionMode();
+        document.getElementById('sentence-completion-screen').style.display = 'block';
       }
     }
 
@@ -921,298 +884,134 @@
       }
     }
 
-    // --- Mode 3: Memory Word Matching Game ---
-    function setupMatchingMode() {
-      stopTimer();
-      matchingErrorsCount = 0;
-      selectedMatchingCard = null;
-      document.getElementById('matching-errors-count').innerText = 0;
-      
-      const fullList = vocabularyData[currentTopic];
-      // Pick 5 random words
-      const shuffled = [...fullList].sort(() => 0.5 - Math.random());
-      const selected = shuffled.slice(0, Math.min(5, shuffled.length));
-      matchPairsLeftCount = selected.length;
-      document.getElementById('matching-pairs-left').innerText = `Còn lại: ${matchPairsLeftCount} cặp`;
-
-      // Build cards (5 English, 5 Vietnamese)
-      matchingCards = [];
-      selected.forEach((item, index) => {
-        matchingCards.push({
-          id: `en_${index}`,
-          pairId: index,
-          lang: 'en',
-          text: item.word
-        });
-        matchingCards.push({
-          id: `vi_${index}`,
-          pairId: index,
-          lang: 'vi',
-          text: item.meaning
-        });
-      });
-
-      // Shuffle matching cards
-      matchingCards.sort(() => 0.5 - Math.random());
-
-      // Render cards
-      const grid = document.getElementById('matching-grid-cards');
-      grid.innerHTML = '';
-      
-      matchingCards.forEach(card => {
-        const cardEl = document.createElement('div');
-        cardEl.className = 'matching-card';
-        cardEl.innerText = card.text;
-        cardEl.dataset.id = card.id;
-        cardEl.onclick = () => selectMatchingCardEl(card, cardEl);
-        grid.appendChild(cardEl);
-      });
-
-      // Start timer
-      matchingStartTime = performance.now();
-      document.getElementById('matching-timer-val').innerText = '0.0';
-      matchingTimerInterval = setInterval(() => {
-        const elapsed = (performance.now() - matchingStartTime) / 1000;
-        document.getElementById('matching-timer-val').innerText = elapsed.toFixed(1);
-      }, 100);
-    }
-
-    function selectMatchingCardEl(card, el) {
-      if (el.classList.contains('matched') || el.classList.contains('selected')) return;
-      playSound('click');
-
-      if (!selectedMatchingCard) {
-        // First card selected
-        selectedMatchingCard = { card, el };
-        el.classList.add('selected');
-      } else {
-        // Second card selected
-        const prev = selectedMatchingCard;
-        
-        // Prevent clicking the same card
-        if (prev.card.id === card.id) return;
-
-        el.classList.add('selected');
-
-        if (prev.card.pairId === card.pairId && prev.card.lang !== card.lang) {
-          // Correct pair!
-          setTimeout(() => {
-            prev.el.className = 'matching-card matched';
-            el.className = 'matching-card matched';
-            playSound('match');
-            
-            matchPairsLeftCount--;
-            document.getElementById('matching-pairs-left').innerText = `Còn lại: ${matchPairsLeftCount} cặp`;
-
-            if (matchPairsLeftCount === 0) {
-              completeMatchingGame();
-            }
-          }, 300);
-          
-          selectedMatchingCard = null;
-        } else {
-          // Wrong pair!
-          matchingErrorsCount++;
-          document.getElementById('matching-errors-count').innerText = matchingErrorsCount;
-
-          prev.el.classList.add('mismatch');
-          el.classList.add('mismatch');
-
-          setTimeout(() => {
-            prev.el.className = 'matching-card';
-            el.className = 'matching-card';
-            playSound('wrong');
-          }, 500);
-
-          selectedMatchingCard = null;
-        }
-      }
-    }
-
-    function completeMatchingGame() {
-      stopTimer();
-      playSound('win');
-      
-      const elapsed = parseFloat(document.getElementById('matching-timer-val').innerText);
-      
-      // Reward calculation
-      let xpEarned = 30; // base reward
-      if (matchingErrorsCount === 0) xpEarned += 20; // zero mistakes bonus
-      if (elapsed < 15) xpEarned += 10; // speed bonus
-
-      progress.xp += xpEarned;
-      saveProgress();
-
-      // Transition to results screen
-      setTimeout(() => {
-        showMatchingResults(elapsed, xpEarned);
-      }, 500);
-    }
-
-    function showMatchingResults(elapsed, xpEarned) {
-      document.getElementById('matching-screen').style.display = 'none';
-      document.getElementById('results-screen').style.display = 'block';
-
-      document.getElementById('results-emoji').innerText = '⚡';
-      document.getElementById('results-title').innerText = 'Ghép Cặp Hoàn Tất!';
-      document.getElementById('results-subtitle').innerText = `Hoàn thành trong ${elapsed.toFixed(1)} giây với ${matchingErrorsCount} lỗi ghép sai.`;
-      
-      document.getElementById('res-score-correct').innerText = `${5 - matchingErrorsCount >= 0 ? 5 - matchingErrorsCount : 0}/5`;
-      document.getElementById('res-score-xp').innerText = `+${xpEarned}`;
-
-      triggerConfetti();
-    }
-
-    function stopTimer() {
-      if (matchingTimerInterval) {
-        clearInterval(matchingTimerInterval);
-        matchingTimerInterval = null;
-      }
-    }
-
-    // --- Mode 4: Spelling game logic ---
-    function setupSpellingMode() {
+    // --- Mode 3: Sentence Completion Quiz logic ---
+    function setupSentenceCompletionMode() {
       const fullList = vocabularyData[currentTopic];
       
-      // Shuffle & pick 10 words (or all if less than 10)
+      // Shuffle & pick 10 questions (or all if less than 10)
       const shuffled = [...fullList].sort(() => 0.5 - Math.random());
       quizQuestionList = shuffled.slice(0, Math.min(10, shuffled.length));
-
+      
       currentQuestionIndex = 0;
       quizAnswersState = [];
 
-      loadSpellingQuestion();
+      loadSentenceCompletionQuestion();
     }
 
-    function loadSpellingQuestion() {
-      document.getElementById('spelling-explanation-box').style.display = 'none';
-      document.getElementById('btn-spelling-next').style.display = 'none';
-      
-      spellingHintUsed = false;
-      spellingLetterHintIndex = 0;
-      document.getElementById('btn-hint-letter').disabled = false;
+    function loadSentenceCompletionQuestion() {
+      document.getElementById('sentence-explanation-box').style.display = 'none';
+      document.getElementById('btn-sentence-next').style.display = 'none';
 
       const qTotal = quizQuestionList.length;
-      document.getElementById('spelling-progress-text').innerText = `Câu ${currentQuestionIndex + 1}/${qTotal}`;
-      document.getElementById('spelling-progress-fill').style.width = `${((currentQuestionIndex + 1) / qTotal) * 100}%`;
+      document.getElementById('sentence-progress-text').innerText = `Câu ${currentQuestionIndex + 1}/${qTotal}`;
+      document.getElementById('sentence-progress-fill').style.width = `${((currentQuestionIndex + 1) / qTotal) * 100}%`;
 
       const qWord = quizQuestionList[currentQuestionIndex];
-      document.getElementById('spelling-meaning').innerText = qWord.meaning;
-      document.getElementById('spelling-ipa').innerText = `${qWord.ipa} (${qWord.type})`;
+      
+      // If it's the phrasalVerbs topic, it has pre-defined options and blankSentence
+      let questionText = "";
+      let options = [];
+      let correctOptionText = "";
 
-      // Example sentence with hidden word
-      // Regex replace word case-insensitive
-      const wordToHide = qWord.word.split('/')[0].trim(); // handle synonyms if needed
-      
-      // Create fill blank e.g. "_________" matching length of word
-      const blanks = "_".repeat(wordToHide.length);
-      
-      // Substitute the hidden word in sentence
-      const regex = new RegExp(`\\b${wordToHide}\\b`, 'gi');
-      let sentences = qWord.example.replace(regex, `<strong>${blanks}</strong>`);
-      
-      // Fallback if regex matching failed (e.g. verb conjugated)
-      if (sentences === qWord.example) {
-        // Find adjacent characters or split the word and obscure it
-        const firstWordSegment = wordToHide.substring(0, Math.min(4, wordToHide.length - 1));
-        const partialRegex = new RegExp(`\\b${firstWordSegment}[a-zA-Z]*\\b`, 'gi');
-        sentences = qWord.example.replace(partialRegex, `<strong>${blanks}</strong>`);
-      }
-      
-      document.getElementById('spelling-example').innerHTML = sentences;
-
-      // Setup Input
-      const input = document.getElementById('spell-input');
-      input.value = '';
-      input.className = 'spelling-input';
-      input.disabled = false;
-      input.focus();
-
-      // Trigger spelling enter key verification
-      input.onkeydown = (e) => {
-        if (e.key === 'Enter') {
-          verifySpelling();
+      if (currentTopic === 'phrasalVerbs' && qWord.blankSentence && qWord.options && qWord.answer) {
+        questionText = `Question ${currentQuestionIndex + 1}: ${qWord.blankSentence}`;
+        options = [...qWord.options];
+        
+        // Find which option corresponds to the answer letter (A, B, C, or D)
+        const ansIndex = qWord.answer.charCodeAt(0) - 65; // 'A' -> 0, 'B' -> 1...
+        correctOptionText = qWord.options[ansIndex];
+      } else {
+        // Fallback for other topics (ourLife, ourSociety, etc.) where options are generated dynamically
+        // Hide the word in the example sentence with blanks
+        const wordToHide = qWord.word.split('/')[0].trim();
+        const blanks = "_".repeat(Math.max(6, wordToHide.length));
+        const regex = new RegExp(`\\b${wordToHide}\\b`, 'gi');
+        let blanked = qWord.example.replace(regex, `_________`);
+        
+        if (blanked === qWord.example) {
+          // Fallback regex for conjugation
+          const firstWordSegment = wordToHide.substring(0, Math.min(4, wordToHide.length - 1));
+          const partialRegex = new RegExp(`\\b${firstWordSegment}[a-zA-Z]*\\b`, 'gi');
+          blanked = qWord.example.replace(partialRegex, `_________`);
         }
-      };
+        
+        questionText = `Question ${currentQuestionIndex + 1}: ${blanked}`;
+        correctOptionText = qWord.word;
+
+        // distractor words
+        const distractors = vocabularyData[currentTopic]
+          .filter(w => w.word !== qWord.word)
+          .map(w => w.word);
+        
+        const shuffledDistractors = distractors.sort(() => 0.5 - Math.random());
+        const selectedDistractors = shuffledDistractors.slice(0, Math.min(3, shuffledDistractors.length));
+        
+        options = [qWord.word, ...selectedDistractors].sort(() => 0.5 - Math.random());
+      }
+
+      document.getElementById('sentence-question-text').innerText = questionText;
+
+      const optionsGrid = document.getElementById('sentence-options');
+      optionsGrid.innerHTML = '';
+
+      // Label mappings for options: A. B. C. D.
+      const labels = ['A', 'B', 'C', 'D'];
+
+      options.forEach((optText, index) => {
+        const btn = document.createElement('button');
+        btn.className = 'quiz-option-btn';
+        btn.innerHTML = `<span class="option-label" style="font-weight: 800; color: #fbbf24; margin-right: 10px;">${labels[index]}.</span>${optText}`;
+        btn.onclick = () => checkSentenceAnswer(optText, correctOptionText, btn);
+        optionsGrid.appendChild(btn);
+      });
     }
 
-    function verifySpelling() {
-      const input = document.getElementById('spell-input');
-      if (input.disabled) return;
-
-      const userText = input.value.trim().toLowerCase();
-      if (!userText) return;
-
+    function checkSentenceAnswer(selectedOption, correctOption, selectedBtn) {
       const qWord = quizQuestionList[currentQuestionIndex];
+      const buttons = document.querySelectorAll('#sentence-options .quiz-option-btn');
       
-      // Accept synonym inputs or target word matches
-      const targetWords = qWord.word.toLowerCase().split('/').map(w => w.trim());
-      const isCorrect = targetWords.some(w => userText === w);
-
-      input.disabled = true;
+      buttons.forEach(btn => btn.classList.add('locked'));
+      
+      const isCorrect = (selectedOption === correctOption);
       quizAnswersState.push(isCorrect);
 
-      const feedbackTitle = document.getElementById('spelling-feedback-title');
-      const feedbackContent = document.getElementById('spelling-explanation-content');
-
       if (isCorrect) {
-        input.className = 'spelling-input correct';
+        selectedBtn.classList.add('correct');
         playSound('correct');
-        
-        let xpReward = 15; // base spelling reward
-        if (spellingHintUsed) xpReward = 5; // reduced reward if hint used
-        progress.xp += xpReward;
+        progress.xp += 15; // 15 XP reward for sentence completion
         saveProgress();
-
-        feedbackTitle.innerText = "✨ Chính xác!";
-        feedbackTitle.style.color = "var(--correct)";
       } else {
-        input.className = 'spelling-input wrong';
+        selectedBtn.classList.add('wrong');
         playSound('wrong');
-
-        // Correct word reveals
-        feedbackTitle.innerText = `❌ Sai rồi! Đáp án: ${qWord.word}`;
-        feedbackTitle.style.color = "var(--wrong)";
-      }
-
-      // Display example sentence meaning translation
-      feedbackContent.innerHTML = `<strong>Câu gốc:</strong> ${qWord.example}<br><em>Dịch nghĩa: ${qWord.exampleTranslation}</em>`;
-      document.getElementById('spelling-explanation-box').style.display = 'block';
-      document.getElementById('btn-hint-letter').disabled = true;
-
-      document.getElementById('btn-spelling-next').style.display = 'inline-flex';
-    }
-
-    function getSpellingLetterHint() {
-      const qWord = quizQuestionList[currentQuestionIndex];
-      const targetWord = qWord.word.split('/')[0].trim().toLowerCase();
-      
-      spellingHintUsed = true;
-      playSound('click');
-
-      const input = document.getElementById('spell-input');
-      
-      if (spellingLetterHintIndex < targetWord.length) {
-        input.value = targetWord.substring(0, spellingLetterHintIndex + 1);
-        spellingLetterHintIndex++;
-        input.focus();
         
-        if (spellingLetterHintIndex >= targetWord.length) {
-          document.getElementById('btn-hint-letter').disabled = true;
-        }
+        // Highlight correct button
+        buttons.forEach(btn => {
+          // Extract text without the label
+          const btnText = btn.innerText.substring(3).trim();
+          if (btnText.toLowerCase() === correctOption.trim().toLowerCase()) {
+            btn.classList.add('correct');
+          }
+        });
       }
+
+      // Display Explanation
+      const expContent = document.getElementById('sentence-explanation-content');
+      let explanationHtml = `<strong>Đáp án đúng:</strong> ${correctOption}<br>`;
+      if (qWord.meaning) {
+        explanationHtml += `<strong>Ý nghĩa từ vựng:</strong> ${qWord.meaning}<br>`;
+      }
+      explanationHtml += `<strong>Dịch nghĩa câu:</strong> ${qWord.exampleTranslation}`;
+      
+      expContent.innerHTML = explanationHtml;
+      document.getElementById('sentence-explanation-box').style.display = 'block';
+      document.getElementById('btn-sentence-next').style.display = 'inline-flex';
     }
 
-    function speakCurrentSpellingWord() {
-      const qWord = quizQuestionList[currentQuestionIndex];
-      speakWord(qWord.word);
-    }
-
-    function nextSpellingQuestion() {
+    function nextSentenceQuestion() {
       currentQuestionIndex++;
       if (currentQuestionIndex < quizQuestionList.length) {
         playSound('click');
-        loadSpellingQuestion();
+        loadSentenceCompletionQuestion();
       } else {
         showModeResults();
       }
@@ -1222,7 +1021,7 @@
     function showModeResults() {
       // Hide active screens
       document.getElementById('quiz-screen').style.display = 'none';
-      document.getElementById('spelling-screen').style.display = 'none';
+      document.getElementById('sentence-completion-screen').style.display = 'none';
       document.getElementById('results-screen').style.display = 'block';
 
       // Calculate score
@@ -1232,8 +1031,7 @@
       let xpEarned = 0;
       if (currentMode === 'multipleChoice') {
         xpEarned = correctCount * 10;
-      } else if (currentMode === 'spelling') {
-        // spelling awards 15 XP normally
+      } else if (currentMode === 'sentenceCompletion') {
         xpEarned = correctCount * 15;
       }
 

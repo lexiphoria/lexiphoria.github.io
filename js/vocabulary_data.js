@@ -1788,7 +1788,15 @@ const vocabularyData = {
             "ipa": "/breɪk daʊn/",
             "meaning": "chia nhỏ, phân tích thành các phần nhỏ để dễ hiểu hơn",
             "example": "To assemble the furniture, he had to break down the instructions into smaller steps, ensuring each part was correctly assembled.",
-            "exampleTranslation": "Để lắp ráp đồ nội thất, anh ấy phải chia nhỏ hướng dẫn thành các bước nhỏ hơn, đảm bảo mỗi phần được lắp ráp đúng cách."
+            "exampleTranslation": "Để lắp ráp đồ nội thất, anh ấy phải chia nhỏ hướng dẫn thành các bước nhỏ hơn, đảm bảo mỗi phần được lắp ráp đúng cách.",
+            "blankSentence": "To assemble the furniture, he had to ________ the instructions into smaller steps, ensuring each part was correctly assembled.",
+            "options": [
+                "go into",
+                "turn over",
+                "break down",
+                "make out"
+            ],
+            "answer": "C"
         },
         {
             "word": "set up",
@@ -1796,7 +1804,15 @@ const vocabularyData = {
             "ipa": "/set ʌp/",
             "meaning": "dựng lên, thiết lập (quầy hàng, hệ thống, công ty, v.v.)",
             "example": "Emily set up a lemonade stand in her driveway to raise money for a local animal shelter.",
-            "exampleTranslation": "Emily đã dựng lên một quầy nước chanh ở lối vào nhà để gây quỹ cho trại động vật địa phương."
+            "exampleTranslation": "Emily đã dựng lên một quầy nước chanh ở lối vào nhà để gây quỹ cho trại động vật địa phương.",
+            "blankSentence": "Emily ________ a lemonade stand in her driveway to raise money for a local animal shelter.",
+            "options": [
+                "got up",
+                "turned up",
+                "looked up",
+                "set up"
+            ],
+            "answer": "D"
         },
         {
             "word": "take out",
@@ -1804,7 +1820,15 @@ const vocabularyData = {
             "ipa": "/teɪk aʊt/",
             "meaning": "lấy ra, nhổ ra (răng, vật)",
             "example": "Tom had to go to the dentist to take out his decayed tooth, which had been causing him pain.",
-            "exampleTranslation": "Tom phải đến nha sĩ để nhổ chiếc răng sâu, cái đã khiến anh ấy đau đớn."
+            "exampleTranslation": "Tom phải đến nha sĩ để nhổ chiếc răng sâu, cái đã khiến anh ấy đau đớn.",
+            "blankSentence": "Tom had to go to the dentist to ________ his decayed tooth, which had been causing him pain.",
+            "options": [
+                "take on",
+                "take out",
+                "take in",
+                "take over"
+            ],
+            "answer": "B"
         },
         {
             "word": "cut in",
@@ -1812,7 +1836,15 @@ const vocabularyData = {
             "ipa": "/kʌt ɪn/",
             "meaning": "chen ngang, ngắt lời ai khi họ đang nói",
             "example": "It was tactless of John to cut in while Mary was speaking about her achievement.",
-            "exampleTranslation": "John thật thiếu tế nhị khi chen ngang lúc Mary đang nói về thành tích của cô ấy."
+            "exampleTranslation": "John thật thiếu tế nhị khi chen ngang lúc Mary đang nói về thành tích của cô ấy.",
+            "blankSentence": "It was tactless of John to ________ while Mary was speaking about her achievement.",
+            "options": [
+                "get on",
+                "cut in",
+                "show off",
+                "put away"
+            ],
+            "answer": "B"
         },
         {
             "word": "put on",
@@ -1820,7 +1852,15 @@ const vocabularyData = {
             "ipa": "/pʊt ɒn/",
             "meaning": "đeo vào, mặc vào (kính, quần áo)",
             "example": "Tyler put on her glasses to see better while reading her favorite book before bedtime.",
-            "exampleTranslation": "Tyler đã đeo vào kính của cô để nhìn rõ hơn khi đọc cuốn sách yêu thích trước khi đi ngủ."
+            "exampleTranslation": "Tyler đã đeo vào kính của cô để nhìn rõ hơn khi đọc cuốn sách yêu thích trước khi đi ngủ.",
+            "blankSentence": "Tyler ________ her glasses to see better while reading her favorite book before bedtime.",
+            "options": [
+                "gave away",
+                "put on",
+                "took off",
+                "got back"
+            ],
+            "answer": "B"
         },
         {
             "word": "look down on",
@@ -1828,7 +1868,15 @@ const vocabularyData = {
             "ipa": "/lʊk daʊn ɒn/",
             "meaning": "coi thường, khinh thường",
             "example": "Sarah felt hurt when her classmates started to look down on her after she failed the exam.",
-            "exampleTranslation": "Sarah cảm thấy tổn thương khi bạn cùng lớp bắt đầu coi thường cô sau khi cô trượt kỳ thi."
+            "exampleTranslation": "Sarah cảm thấy tổn thương khi bạn cùng lớp bắt đầu coi thường cô sau khi cô trượt kỳ thi.",
+            "blankSentence": "Sarah felt hurt when her classmates started to ________ her after she failed the exam.",
+            "options": [
+                "look up to",
+                "look out for",
+                "look forward to",
+                "look down on"
+            ],
+            "answer": "D"
         },
         {
             "word": "cut down",
@@ -1836,7 +1884,15 @@ const vocabularyData = {
             "ipa": "/kʌt daʊn/",
             "meaning": "chặt, đốn (cây); cắt giảm",
             "example": "To make space for the new playground, the workers had to cut down trees, but they promised to plant more later.",
-            "exampleTranslation": "Để có chỗ cho sân chơi mới, công nhân phải chặt một số cây, nhưng họ hứa sẽ trồng thêm sau đó."
+            "exampleTranslation": "Để có chỗ cho sân chơi mới, công nhân phải chặt một số cây, nhưng họ hứa sẽ trồng thêm sau đó.",
+            "blankSentence": "To make space for the new playground, the workers had to ________ trees, but they promised to plant more later.",
+            "options": [
+                "part with",
+                "cut down",
+                "take up",
+                "put off"
+            ],
+            "answer": "B"
         },
         {
             "word": "broke in",
@@ -1844,7 +1900,15 @@ const vocabularyData = {
             "ipa": "/broʊk ɪn/",
             "meaning": "đột nhập (bất hợp pháp)",
             "example": "The burglars broke in through the window, stealing valuables and leaving a mess behind, causing distress to the homeowners.",
-            "exampleTranslation": "Những tên trộm đã đột nhập qua cửa sổ, lấy đồ quý giá và để lại một mớ hỗn độn khiến chủ nhà hoảng sợ."
+            "exampleTranslation": "Những tên trộm đã đột nhập qua cửa sổ, lấy đồ quý giá và để lại một mớ hỗn độn khiến chủ nhà hoảng sợ.",
+            "blankSentence": "The burglars ________ through the window, stealing valuables and leaving a mess behind, causing distress to the homeowners.",
+            "options": [
+                "showed up",
+                "broke in",
+                "made off",
+                "headed for"
+            ],
+            "answer": "B"
         },
         {
             "word": "fill in",
@@ -1852,7 +1916,15 @@ const vocabularyData = {
             "ipa": "/fɪl ɪn/",
             "meaning": "làm thay ai đó, điền vào",
             "example": "David will fill in for his colleague Peter at the meeting tomorrow to discuss the project updates.",
-            "exampleTranslation": "David sẽ làm thay cho đồng nghiệp Peter trong cuộc họp ngày mai để trình bày cập nhật dự án."
+            "exampleTranslation": "David sẽ làm thay cho đồng nghiệp Peter trong cuộc họp ngày mai để trình bày cập nhật dự án.",
+            "blankSentence": "David will ________ for his colleague Peter at the meeting tomorrow to discuss the project updates.",
+            "options": [
+                "hand in",
+                "give in",
+                "fill in",
+                "take in"
+            ],
+            "answer": "C"
         },
         {
             "word": "bring forward",
@@ -1860,7 +1932,15 @@ const vocabularyData = {
             "ipa": "/brɪŋ ˈfɔːwəd/",
             "meaning": "đẩy lịch sớm lên",
             "example": "The president decided to bring forward the meeting to discuss urgent matters facing the nation.",
-            "exampleTranslation": "Tổng thống quyết định đẩy sớm cuộc họp để thảo luận các vấn đề cấp bách của đất nước."
+            "exampleTranslation": "Tổng thống quyết định đẩy sớm cuộc họp để thảo luận các vấn đề cấp bách của đất nước.",
+            "blankSentence": "The president decided to ________ the meeting to discuss urgent matters facing the nation.",
+            "options": [
+                "bring up",
+                "bring down",
+                "bring in",
+                "bring forward"
+            ],
+            "answer": "D"
         },
         {
             "word": "carried away",
@@ -1868,7 +1948,15 @@ const vocabularyData = {
             "ipa": "/ˈkærid əˈweɪ/",
             "meaning": "bị cuốn theo, quá phấn khích/quá đà đến mức mất kiểm soát",
             "example": "During the game, he got carried away with excitement and accidentally knocked over the board.",
-            "exampleTranslation": "Trong lúc chơi, anh ấy đã bị cuốn theo vì phấn khích và vô tình làm đổ bàn cờ."
+            "exampleTranslation": "Trong lúc chơi, anh ấy đã bị cuốn theo vì phấn khích và vô tình làm đổ bàn cờ.",
+            "blankSentence": "During the game, he got ________ with excitement and accidentally knocked over the board.",
+            "options": [
+                "put off",
+                "taken in",
+                "left behind",
+                "carried away"
+            ],
+            "answer": "D"
         },
         {
             "word": "hand out",
@@ -1876,7 +1964,15 @@ const vocabularyData = {
             "ipa": "/hænd aʊt/",
             "meaning": "phát ra, phân phát",
             "example": "The teacher will hand out worksheets for the students to complete during class today.",
-            "exampleTranslation": "Giáo viên sẽ phát các phiếu bài tập để học sinh làm trong giờ học hôm nay."
+            "exampleTranslation": "Giáo viên sẽ phát các phiếu bài tập để học sinh làm trong giờ học hôm nay.",
+            "blankSentence": "The teacher will ________ worksheets for the students to complete during class today.",
+            "options": [
+                "give out",
+                "hand out",
+                "work out",
+                "make out"
+            ],
+            "answer": "B"
         },
         {
             "word": "came forward",
@@ -1884,7 +1980,15 @@ const vocabularyData = {
             "ipa": "/keɪm ˈfɔːwəd/",
             "meaning": "ra mặt, trình diện (để cung cấp thông tin)",
             "example": "The witness came forward with new evidence, helping the police solve the case more quickly and efficiently.",
-            "exampleTranslation": "Nhân chứng đã ra mặt với bằng chứng mới, giúp cảnh sát giải quyết vụ án nhanh chóng và hiệu quả hơn."
+            "exampleTranslation": "Nhân chứng đã ra mặt với bằng chứng mới, giúp cảnh sát giải quyết vụ án nhanh chóng và hiệu quả hơn.",
+            "blankSentence": "The witness ________ with new evidence, helping the police solve the case more quickly and efficiently.",
+            "options": [
+                "got ahead",
+                "showed off",
+                "gave up",
+                "came forward"
+            ],
+            "answer": "D"
         },
         {
             "word": "stand out",
@@ -1892,7 +1996,15 @@ const vocabularyData = {
             "ipa": "/stænd aʊt/",
             "meaning": "nổi bật, dễ nhận thấy",
             "example": "His bright yellow shirt made him stand out in the crowd of people wearing neutral colors.",
-            "exampleTranslation": "Chiếc áo vàng sáng khiến anh ấy nổi bật giữa đám đông mặc đồ màu trung tính."
+            "exampleTranslation": "Chiếc áo vàng sáng khiến anh ấy nổi bật giữa đám đông mặc đồ màu trung tính.",
+            "blankSentence": "His bright yellow shirt made him ________ in the crowd of people wearing neutral colors.",
+            "options": [
+                "stand out",
+                "show up",
+                "go off",
+                "set aside"
+            ],
+            "answer": "A"
         },
         {
             "word": "let off",
@@ -1900,7 +2012,15 @@ const vocabularyData = {
             "ipa": "/let ɒf/",
             "meaning": "tha, không phạt nặng",
             "example": "The police officer decided to let off the driver with a warning instead of giving a ticket.",
-            "exampleTranslation": "Cảnh sát quyết định tha cho tài xế bằng lời cảnh báo thay vì phạt vé."
+            "exampleTranslation": "Cảnh sát quyết định tha cho tài xế bằng lời cảnh báo thay vì phạt vé.",
+            "blankSentence": "The police officer decided to ________ the driver with a warning instead of giving a ticket.",
+            "options": [
+                "hold up",
+                "put off",
+                "let off",
+                "do in"
+            ],
+            "answer": "C"
         },
         {
             "word": "came into",
@@ -1908,7 +2028,15 @@ const vocabularyData = {
             "ipa": "/keɪm ˈɪntuː/",
             "meaning": "thừa kế (tài sản, tiền bạc)",
             "example": "She was surprised when she came into a large inheritance from her long-lost relative.",
-            "exampleTranslation": "Cô rất bất ngờ khi thừa kế một khoản tài sản lớn từ người họ hàng xa."
+            "exampleTranslation": "Cô rất bất ngờ khi thừa kế một khoản tài sản lớn từ người họ hàng xa.",
+            "blankSentence": "She was surprised when she ________ a large inheritance from her long-lost relative.",
+            "options": [
+                "came up",
+                "came out",
+                "came over",
+                "came into"
+            ],
+            "answer": "D"
         },
         {
             "word": "cheer up",
@@ -1916,7 +2044,15 @@ const vocabularyData = {
             "ipa": "/tʃɪə(r) ʌp/",
             "meaning": "làm phấn chấn, cổ vũ",
             "example": "Giving positive encouragement can cheer up the football team and boost their confidence during the game.",
-            "exampleTranslation": "Việc khuyến khích tích cực có thể cổ vũ tinh thần đội bóng và tăng sự tự tin trong trận đấu."
+            "exampleTranslation": "Việc khuyến khích tích cực có thể cổ vũ tinh thần đội bóng và tăng sự tự tin trong trận đấu.",
+            "blankSentence": "Giving positive encouragement can ________ the football team and boost their confidence during the game.",
+            "options": [
+                "break down",
+                "cheer up",
+                "give in",
+                "let down"
+            ],
+            "answer": "B"
         },
         {
             "word": "ran into",
@@ -1924,7 +2060,15 @@ const vocabularyData = {
             "ipa": "/ræn ˈɪntuː/",
             "meaning": "tình cờ gặp",
             "example": "While shopping at the mall, I accidentally ran into my old friend from high school.",
-            "exampleTranslation": "Trong lúc mua sắm ở trung tâm thương mại, tôi tình cờ gặp lại người bạn cũ thời cấp 3."
+            "exampleTranslation": "Trong lúc mua sắm ở trung tâm thương mại, tôi tình cờ gặp lại người bạn cũ thời cấp 3.",
+            "blankSentence": "While shopping at the mall, I accidentally ________ my old friend from high school.",
+            "options": [
+                "hit off",
+                "fell for",
+                "ran into",
+                "set up"
+            ],
+            "answer": "C"
         },
         {
             "word": "turned up",
@@ -1932,7 +2076,15 @@ const vocabularyData = {
             "ipa": "/tɜːnd ʌp/",
             "meaning": "đến, xuất hiện",
             "example": "Mike turned up late to the meeting, apologizing profusely for getting caught in traffic on the way.",
-            "exampleTranslation": "Mike đến trễ buổi họp và xin lỗi rối rít vì bị kẹt xe."
+            "exampleTranslation": "Mike đến trễ buổi họp và xin lỗi rối rít vì bị kẹt xe.",
+            "blankSentence": "Mike ________ late to the meeting, apologizing profusely for getting caught in traffic on the way.",
+            "options": [
+                "turned off",
+                "turned out",
+                "turned in",
+                "turned up"
+            ],
+            "answer": "D"
         },
         {
             "word": "chip in",
@@ -1940,7 +2092,15 @@ const vocabularyData = {
             "ipa": "/tʃɪp ɪn/",
             "meaning": "góp tiền/một phần vào việc gì",
             "example": "Everyone agreed to chip in a few dollars to buy a gift for their coworker’s birthday.",
-            "exampleTranslation": "Mọi người đồng ý góp tiền để mua quà sinh nhật"
+            "exampleTranslation": "Mọi người đồng ý góp tiền để mua quà sinh nhật",
+            "blankSentence": "Everyone agreed to ________ a few dollars to buy a gift for their coworker’s birthday.",
+            "options": [
+                "chip in",
+                "go in",
+                "hand in",
+                "fill in"
+            ],
+            "answer": "A"
         },
         {
             "word": "add up",
@@ -1948,7 +2108,15 @@ const vocabularyData = {
             "ipa": "/æd ʌp/",
             "meaning": "cộng lại đúng, hợp lý (về mặt logic hay số học)",
             "example": "She checked her math homework multiple times to make sure all the numbers would add up correctly.",
-            "exampleTranslation": "Cô ấy kiểm tra bài toán nhiều lần để đảm bảo các con số cộng lại đúng."
+            "exampleTranslation": "Cô ấy kiểm tra bài toán nhiều lần để đảm bảo các con số cộng lại đúng.",
+            "blankSentence": "She checked her math homework multiple times to make sure all the numbers would ________ correctly.",
+            "options": [
+                "get out",
+                "add up",
+                "turn out",
+                "turn off"
+            ],
+            "answer": "B"
         },
         {
             "word": "back down",
@@ -1956,7 +2124,15 @@ const vocabularyData = {
             "ipa": "/bæk daʊn/",
             "meaning": "rút lui, nhượng bộ",
             "example": "Despite the argument, she refused to back down from her position, standing firm in her beliefs.",
-            "exampleTranslation": "Dù có tranh cãi, cô ấy vẫn từ chối nhượng bộ, kiên định với quan điểm của mình."
+            "exampleTranslation": "Dù có tranh cãi, cô ấy vẫn từ chối nhượng bộ, kiên định với quan điểm của mình.",
+            "blankSentence": "Despite the argument, she refused to ________ from her position, standing firm in her beliefs.",
+            "options": [
+                "make off",
+                "throw in",
+                "get away",
+                "back down"
+            ],
+            "answer": "D"
         },
         {
             "word": "work out",
@@ -1964,7 +2140,15 @@ const vocabularyData = {
             "ipa": "/wɜːk aʊt/",
             "meaning": "tìm ra, giải quyết được (vấn đề, bài toán)",
             "example": "After hours of brainstorming, they finally managed to work out the solution to the challenging puzzle.",
-            "exampleTranslation": "Sau hàng giờ động não, họ cuối cùng cũng tìm ra lời giải cho câu đố hóc búa."
+            "exampleTranslation": "Sau hàng giờ động não, họ cuối cùng cũng tìm ra lời giải cho câu đố hóc búa.",
+            "blankSentence": "After hours of brainstorming, they finally managed to ________ the solution to the challenging puzzle.",
+            "options": [
+                "turn down",
+                "give away",
+                "work out",
+                "mull over"
+            ],
+            "answer": "C"
         },
         {
             "word": "taken in",
@@ -1972,7 +2156,15 @@ const vocabularyData = {
             "ipa": "/ˈteɪkən ɪn/",
             "meaning": "bị lừa, bị dụ dỗ (bởi vẻ bề ngoài/lời nói)",
             "example": "She was taken in by the salesman’s smooth talk and ended up buying something she didn’t need.",
-            "exampleTranslation": "Cô ấy đã bị lừa bởi lời nói ngọt ngào của người bán hàng và cuối cùng mua món không cần thiết."
+            "exampleTranslation": "Cô ấy đã bị lừa bởi lời nói ngọt ngào của người bán hàng và cuối cùng mua món không cần thiết.",
+            "blankSentence": "She was ________ by the salesman’s smooth talk and ended up buying something she didn’t need.",
+            "options": [
+                "put off",
+                "taken in",
+                "left behind",
+                "carried away"
+            ],
+            "answer": "B"
         },
         {
             "word": "bring in",
@@ -1980,7 +2172,15 @@ const vocabularyData = {
             "ipa": "/brɪŋ ɪn/",
             "meaning": "ban hành, giới thiệu (luật lệ, chính sách)",
             "example": "The government plans to bring in new laws to improve road safety and reduce accidents.",
-            "exampleTranslation": "Chính phủ dự định ban hành các luật mới để cải thiện an toàn giao thông và giảm tai nạn."
+            "exampleTranslation": "Chính phủ dự định ban hành các luật mới để cải thiện an toàn giao thông và giảm tai nạn.",
+            "blankSentence": "The government plans to ________ new laws to improve road safety and reduce accidents.",
+            "options": [
+                "bring in",
+                "do away",
+                "take over",
+                "catch up"
+            ],
+            "answer": "A"
         },
         {
             "word": "look up",
@@ -1988,7 +2188,15 @@ const vocabularyData = {
             "ipa": "/lʊk ʌp/",
             "meaning": "tra cứu (trong sách, danh bạ, Internet...)",
             "example": "Tom needed to look up his friend’s phone number in the directory before he could call and invite him over.",
-            "exampleTranslation": "Tom cần tra cứu số điện thoại của bạn trong danh bạ trước khi gọi mời bạn tới nhà."
+            "exampleTranslation": "Tom cần tra cứu số điện thoại của bạn trong danh bạ trước khi gọi mời bạn tới nhà.",
+            "blankSentence": "Tom needed to ________ his friend’s phone number in the directory before he could call and invite him over.",
+            "options": [
+                "look for",
+                "look into",
+                "look at",
+                "look up"
+            ],
+            "answer": "D"
         },
         {
             "word": "switch on",
@@ -1996,7 +2204,15 @@ const vocabularyData = {
             "ipa": "/swɪtʃ ɒn/",
             "meaning": "bật (đèn, thiết bị)",
             "example": "Olivia forgot to switch on the lights before entering the room, causing her to stumble in the darkness.",
-            "exampleTranslation": "Olivia quên bật đèn trước khi vào phòng, khiến cô vấp ngã trong bóng tối."
+            "exampleTranslation": "Olivia quên bật đèn trước khi vào phòng, khiến cô vấp ngã trong bóng tối.",
+            "blankSentence": "Olivia forgot to ________ the lights before entering the room, causing her to stumble in the darkness.",
+            "options": [
+                "get up",
+                "turn off",
+                "switch on",
+                "make for"
+            ],
+            "answer": "C"
         },
         {
             "word": "call off",
@@ -2004,7 +2220,15 @@ const vocabularyData = {
             "ipa": "/kɔːl ɒf/",
             "meaning": "hủy bỏ (sự kiện)",
             "example": "John had to call off the picnic due to the sudden rainstorm, disappointing everyone who was looking forward to it.",
-            "exampleTranslation": "John phải hủy buổi picnic vì cơn mưa bất ngờ, khiến mọi người thất vọng."
+            "exampleTranslation": "John phải hủy buổi picnic vì cơn mưa bất ngờ, khiến mọi người thất vọng.",
+            "blankSentence": "John had to ________ the picnic due to the sudden rainstorm, disappointing everyone who was looking forward to it.",
+            "options": [
+                "go on",
+                "call off",
+                "get ahead",
+                "turn down"
+            ],
+            "answer": "B"
         },
         {
             "word": "gave away",
@@ -2012,7 +2236,15 @@ const vocabularyData = {
             "ipa": "/ɡeɪv əˈweɪ/",
             "meaning": "tiết lộ (bí mật, thông tin)",
             "example": "Emily accidentally gave away information about the surprise party while chatting with Tom, spoiling the surprise for him.",
-            "exampleTranslation": "Emily vô tình tiết lộ thông tin về bữa tiệc bất ngờ khi nói chuyện với Tom, làm hỏng bất ngờ."
+            "exampleTranslation": "Emily vô tình tiết lộ thông tin về bữa tiệc bất ngờ khi nói chuyện với Tom, làm hỏng bất ngờ.",
+            "blankSentence": "Emily accidentally ________ information about the surprise party while chatting with Tom, spoiling the surprise for him.",
+            "options": [
+                "gave in",
+                "gave off",
+                "gave up",
+                "gave away"
+            ],
+            "answer": "D"
         },
         {
             "word": "come down with",
@@ -2020,7 +2252,15 @@ const vocabularyData = {
             "ipa": "/kʌm daʊn wɪð/",
             "meaning": "mắc (bệnh)",
             "example": "My sister started to come down with a cold after being exposed to the chilly weather, so she decided to rest at home.",
-            "exampleTranslation": "Chị tôi bắt đầu bị cảm sau khi tiếp xúc với thời tiết lạnh, nên cô ấy quyết định nghỉ ở nhà."
+            "exampleTranslation": "Chị tôi bắt đầu bị cảm sau khi tiếp xúc với thời tiết lạnh, nên cô ấy quyết định nghỉ ở nhà.",
+            "blankSentence": "My sister started to ________ a cold after being exposed to the chilly weather, so she decided to rest at home.",
+            "options": [
+                "come up with",
+                "come out with",
+                "come down with",
+                "come off with"
+            ],
+            "answer": "C"
         },
         {
             "word": "knock out",
@@ -2028,7 +2268,15 @@ const vocabularyData = {
             "ipa": "/nɒk aʊt/",
             "meaning": "hạ gục (khiến đối thủ bất tỉnh trong trận đấu)",
             "example": "During the match, Jack delivered a powerful punch that caused his opponent to knock out and win the fight.",
-            "exampleTranslation": "Trong trận đấu, Jack tung cú đấm mạnh khiến đối thủ bị hạ gục, và giành chiến thắng."
+            "exampleTranslation": "Trong trận đấu, Jack tung cú đấm mạnh khiến đối thủ bị hạ gục, và giành chiến thắng.",
+            "blankSentence": "During the match, Jack delivered a powerful punch that caused his opponent to ________ and win the fight.",
+            "options": [
+                "put off",
+                "knock out",
+                "go ahead",
+                "calm down"
+            ],
+            "answer": "B"
         },
         {
             "word": "show off",
@@ -2036,7 +2284,15 @@ const vocabularyData = {
             "ipa": "/ʃoʊ ɒf/",
             "meaning": "khoe khoang, phô trương để gây ấn tượng",
             "example": "Lily’s brother likes to show off his new skateboard tricks to impress his friends at the skate park.",
-            "exampleTranslation": "Anh trai của Lily thích khoe những cú trượt ván mới để gây ấn tượng với bạn bè ở công viên trượt ván."
+            "exampleTranslation": "Anh trai của Lily thích khoe những cú trượt ván mới để gây ấn tượng với bạn bè ở công viên trượt ván.",
+            "blankSentence": "Lily’s brother likes to ________ his new skateboard tricks to impress his friends at the skate park.",
+            "options": [
+                "take on",
+                "look up",
+                "bring in",
+                "show off"
+            ],
+            "answer": "D"
         },
         {
             "word": "make out",
@@ -2044,7 +2300,15 @@ const vocabularyData = {
             "ipa": "/meɪk aʊt/",
             "meaning": "hiểu ra, nhìn rõ, nhận ra điều gì đó",
             "example": "Amelia and Ethan struggled to understand the complex math problem but finally managed to make out the solution together.",
-            "exampleTranslation": "Amelia và Ethan gặp khó khăn trong việc hiểu bài toán khó, nhưng cuối cùng cũng hiểu ra được lời giải cùng nhau."
+            "exampleTranslation": "Amelia và Ethan gặp khó khăn trong việc hiểu bài toán khó, nhưng cuối cùng cũng hiểu ra được lời giải cùng nhau.",
+            "blankSentence": "Amelia and Ethan struggled to understand the complex math problem but finally managed to ________ the solution together.",
+            "options": [
+                "make up",
+                "make over",
+                "make out",
+                "make off"
+            ],
+            "answer": "C"
         },
         {
             "word": "made up",
@@ -2052,7 +2316,15 @@ const vocabularyData = {
             "ipa": "/meɪd ʌp/",
             "meaning": "làm hòa sau khi cãi nhau",
             "example": "Tom and Sarah had a quarrel over a misunderstanding but quickly made up, realizing their friendship was more important than any disagreement.",
-            "exampleTranslation": "Tom và Sarah cãi nhau vì hiểu lầm nhưng nhanh chóng làm hòa, nhận ra tình bạn quan trọng hơn mọi mâu thuẫn."
+            "exampleTranslation": "Tom và Sarah cãi nhau vì hiểu lầm nhưng nhanh chóng làm hòa, nhận ra tình bạn quan trọng hơn mọi mâu thuẫn.",
+            "blankSentence": "Tom and Sarah had a quarrel over a misunderstanding but quickly ________, realizing their friendship was more important than any disagreement.",
+            "options": [
+                "hit off",
+                "made up",
+                "fell out",
+                "broke down"
+            ],
+            "answer": "B"
         },
         {
             "word": "cut down on",
@@ -2060,7 +2332,15 @@ const vocabularyData = {
             "ipa": "/kʌt daʊn ɒn/",
             "meaning": "cắt giảm, giảm bớt (việc gì có hại)",
             "example": "To improve his health, Minh decided to cut down on sugary snacks and instead eat more fruits and vegetables every day.",
-            "exampleTranslation": "Để cải thiện sức khỏe, Minh quyết định giảm đồ ăn vặt nhiều đường và ăn nhiều trái cây, rau củ hơn mỗi ngày."
+            "exampleTranslation": "Để cải thiện sức khỏe, Minh quyết định giảm đồ ăn vặt nhiều đường và ăn nhiều trái cây, rau củ hơn mỗi ngày.",
+            "blankSentence": "To improve his health, Minh decided to ________ sugary snacks and instead eat more fruits and vegetables every day.",
+            "options": [
+                "go in for",
+                "fall back on",
+                "come up with",
+                "cut down on"
+            ],
+            "answer": "D"
         },
         {
             "word": "caught on",
@@ -2068,7 +2348,15 @@ const vocabularyData = {
             "ipa": "/kɔːt ɒn/",
             "meaning": "trở nên phổ biến, được ưa chuộng",
             "example": "My sister-in-law introduced a new game to her friends, and it quickly caught on, becoming their favorite pastime during gatherings.",
-            "exampleTranslation": "Chị dâu tôi giới thiệu một trò chơi mới cho bạn bè, và nó nhanh chóng trở nên phổ biến, trở thành trò yêu thích trong mỗi buổi gặp mặt."
+            "exampleTranslation": "Chị dâu tôi giới thiệu một trò chơi mới cho bạn bè, và nó nhanh chóng trở nên phổ biến, trở thành trò yêu thích trong mỗi buổi gặp mặt.",
+            "blankSentence": "My sister-in-law introduced a new game to her friends, and it quickly ________, becoming their favorite pastime during gatherings.",
+            "options": [
+                "went up",
+                "turned off",
+                "caught on",
+                "fell through"
+            ],
+            "answer": "C"
         },
         {
             "word": "account for",
@@ -2076,7 +2364,15 @@ const vocabularyData = {
             "ipa": "/əˈkaʊnt fɔː(r)/",
             "meaning": "tính toán, giải thích số tiền đã tiêu",
             "example": "Tom had to account for all the money he spent during the trip to make sure he didn’t exceed his budget.",
-            "exampleTranslation": "Tom phải tính toán toàn bộ số tiền đã tiêu trong chuyến đi để đảm bảo không vượt ngân sách."
+            "exampleTranslation": "Tom phải tính toán toàn bộ số tiền đã tiêu trong chuyến đi để đảm bảo không vượt ngân sách.",
+            "blankSentence": "Tom had to ________ all the money he spent during the trip to make sure he didn’t exceed his budget.",
+            "options": [
+                "account for",
+                "look into",
+                "back up",
+                "pay back"
+            ],
+            "answer": "A"
         },
         {
             "word": "broke out",
@@ -2084,7 +2380,15 @@ const vocabularyData = {
             "ipa": "/broʊk aʊt/",
             "meaning": "bật khóc, bùng phát cảm xúc (trong ngữ cảnh này là nước mắt)",
             "example": "After hearing the sad news, Emily broke out in tears, overwhelmed by emotions and unable to contain her grief.",
-            "exampleTranslation": "Sau khi nghe tin buồn, Emily bật khóc, bị cảm xúc lấn át và không thể kìm nén nỗi đau."
+            "exampleTranslation": "Sau khi nghe tin buồn, Emily bật khóc, bị cảm xúc lấn át và không thể kìm nén nỗi đau.",
+            "blankSentence": "After hearing the sad news, Emily ________ in tears, overwhelmed by emotions and unable to contain her grief.",
+            "options": [
+                "looked away",
+                "turned down",
+                "broke out",
+                "carried on"
+            ],
+            "answer": "C"
         },
         {
             "word": "watch out",
@@ -2092,7 +2396,15 @@ const vocabularyData = {
             "ipa": "/wɒtʃ aʊt/",
             "meaning": "coi chừng, cẩn thận (thường dùng để cảnh báo nguy hiểm)",
             "example": "John warned his friend to watch out for the slippery path ahead to avoid any accidents while hiking in the mountains.",
-            "exampleTranslation": "John cảnh báo bạn mình cẩn thận với con đường trơn phía trước để tránh tai nạn khi leo núi."
+            "exampleTranslation": "John cảnh báo bạn mình cẩn thận với con đường trơn phía trước để tránh tai nạn khi leo núi.",
+            "blankSentence": "John warned his friend to ________ for the slippery path ahead to avoid any accidents while hiking in the mountains.",
+            "options": [
+                "turn out",
+                "come in",
+                "take down",
+                "watch out"
+            ],
+            "answer": "D"
         },
         {
             "word": "look into",
@@ -2100,7 +2412,15 @@ const vocabularyData = {
             "ipa": "/lʊk ˈɪntuː/",
             "meaning": "điều tra, xem xét (một vấn đề)",
             "example": "After receiving complaints, the manager promised to look into the issue and find a solution to address the customer concerns.",
-            "exampleTranslation": "Sau khi nhận được phản ánh, quản lý hứa sẽ xem xét vấn đề và tìm giải pháp để giải quyết mối lo ngại của khách hàng."
+            "exampleTranslation": "Sau khi nhận được phản ánh, quản lý hứa sẽ xem xét vấn đề và tìm giải pháp để giải quyết mối lo ngại của khách hàng.",
+            "blankSentence": "After receiving complaints, the manager promised to ________ the issue and find a solution to address the customer concerns.",
+            "options": [
+                "look for",
+                "look into",
+                "look over",
+                "look up"
+            ],
+            "answer": "B"
         },
         {
             "word": "go in for",
@@ -2108,7 +2428,15 @@ const vocabularyData = {
             "ipa": "/ɡoʊ ɪn fɔː(r)/",
             "meaning": "tham gia, đăng ký thi/hoạt động vì yêu thích",
             "example": "Tom decided to go in for basketball tryouts because he loves playing the sport and wants to join the school team.",
-            "exampleTranslation": "Tom quyết định tham gia buổi tuyển chọn bóng rổ vì cậu ấy yêu thích môn thể thao này và muốn gia nhập đội trường."
+            "exampleTranslation": "Tom quyết định tham gia buổi tuyển chọn bóng rổ vì cậu ấy yêu thích môn thể thao này và muốn gia nhập đội trường.",
+            "blankSentence": "Tom decided to ________ basketball tryouts because he loves playing the sport and wants to join the school team.",
+            "options": [
+                "go out of",
+                "go back on",
+                "go down with",
+                "go in for"
+            ],
+            "answer": "D"
         },
         {
             "word": "fall behind",
@@ -2116,7 +2444,15 @@ const vocabularyData = {
             "ipa": "/fɔːl bɪˈhaɪnd/",
             "meaning": "tụt lại phía sau (về tiến độ, trình độ...)",
             "example": "During the project, Thao struggled to stay updated with the latest information, causing her to fall behind her colleagues in progress.",
-            "exampleTranslation": "Trong dự án, Thảo gặp khó khăn trong việc cập nhật thông tin mới, khiến cô ấy tụt lại phía sau đồng nghiệp về tiến độ."
+            "exampleTranslation": "Trong dự án, Thảo gặp khó khăn trong việc cập nhật thông tin mới, khiến cô ấy tụt lại phía sau đồng nghiệp về tiến độ.",
+            "blankSentence": "During the project, Thao struggled to stay updated with the latest information, causing her to ________ her colleagues in progress.",
+            "options": [
+                "catch up",
+                "make out",
+                "fall behind",
+                "get ahead"
+            ],
+            "answer": "C"
         },
         {
             "word": "pull over",
@@ -2124,7 +2460,15 @@ const vocabularyData = {
             "ipa": "/pʊl ˈoʊvə(r)/",
             "meaning": "tấp xe vào lề, dừng xe bên đường",
             "example": "While driving, John noticed a strange noise from his car, so he decided to pull over and check the engine.",
-            "exampleTranslation": "Khi đang lái xe, John nghe thấy tiếng động lạ từ xe nên quyết định tấp vào lề để kiểm tra động cơ."
+            "exampleTranslation": "Khi đang lái xe, John nghe thấy tiếng động lạ từ xe nên quyết định tấp vào lề để kiểm tra động cơ.",
+            "blankSentence": "While driving, John noticed a strange noise from his car, so he decided to ________ and check the engine.",
+            "options": [
+                "call off",
+                "pull over",
+                "check out",
+                "hand in"
+            ],
+            "answer": "B"
         },
         {
             "word": "went off",
@@ -2132,7 +2476,15 @@ const vocabularyData = {
             "ipa": "/went ɒf/",
             "meaning": "không còn thích nữa (đặc biệt là về thức ăn)",
             "example": "When Jessica realized the food she loved made her sick, she went off it and find new favorites.",
-            "exampleTranslation": "Khi nhận ra món ăn yêu thích khiến cô bị ốm, Jessica không còn thích nữa và tìm món mới để thay thế."
+            "exampleTranslation": "Khi nhận ra món ăn yêu thích khiến cô bị ốm, Jessica không còn thích nữa và tìm món mới để thay thế.",
+            "blankSentence": "When Jessica realized the food she loved made her sick, she ________ it and find new favorites.",
+            "options": [
+                "kept on",
+                "went off",
+                "looked into",
+                "cut down"
+            ],
+            "answer": "B"
         },
         {
             "word": "count on",
@@ -2140,7 +2492,15 @@ const vocabularyData = {
             "ipa": "/kaʊnt ɒn/",
             "meaning": "tin cậy, dựa vào ai đó",
             "example": "Tyler knew she could count on her best friend to support her through tough times, as they always had each other’s back.",
-            "exampleTranslation": "Tyler biết cô có thể tin tưởng người bạn thân nhất sẽ ủng hộ mình trong lúc khó khăn."
+            "exampleTranslation": "Tyler biết cô có thể tin tưởng người bạn thân nhất sẽ ủng hộ mình trong lúc khó khăn.",
+            "blankSentence": "Tyler knew she could ________ her best friend to support her through tough times, as they always had each other’s back.",
+            "options": [
+                "take over",
+                "fill in",
+                "count on",
+                "show up"
+            ],
+            "answer": "C"
         },
         {
             "word": "take off",
@@ -2148,7 +2508,15 @@ const vocabularyData = {
             "ipa": "/teɪk ɒf/",
             "meaning": "cất cánh, phát triển nhanh chóng (công việc, doanh nghiệp)",
             "example": "After months of hard work, Ava’s business finally started to take off, attracting more customers and generating higher profits.",
-            "exampleTranslation": "Sau nhiều tháng làm việc chăm chỉ, công việc kinh doanh của Ava cuối cùng cũng phát triển mạnh, thu hút nhiều khách hàng và tăng lợi nhuận."
+            "exampleTranslation": "Sau nhiều tháng làm việc chăm chỉ, công việc kinh doanh của Ava cuối cùng cũng phát triển mạnh, thu hút nhiều khách hàng và tăng lợi nhuận.",
+            "blankSentence": "After months of hard work, Ava’s business finally started to ________, attracting more customers and generating higher profits.",
+            "options": [
+                "take out",
+                "take off",
+                "take away",
+                "take in"
+            ],
+            "answer": "B"
         },
         {
             "word": "takes after",
@@ -2156,7 +2524,15 @@ const vocabularyData = {
             "ipa": "/teɪks ˈɑːftə(r)/",
             "meaning": "giống ai (về tính cách, ngoại hình), đặc biệt là người thân",
             "example": "Tim takes after his father, sharing the same love for sports and the same easygoing personality that everyone admires.",
-            "exampleTranslation": "Tim giống cha mình, cùng yêu thể thao và có tính cách thân thiện khiến ai cũng quý mến."
+            "exampleTranslation": "Tim giống cha mình, cùng yêu thể thao và có tính cách thân thiện khiến ai cũng quý mến.",
+            "blankSentence": "Tim ________ his father, sharing the same love for sports and the same easygoing personality that everyone admires.",
+            "options": [
+                "watches out",
+                "fills in",
+                "steps aside",
+                "takes after"
+            ],
+            "answer": "D"
         },
         {
             "word": "hand in",
@@ -2164,7 +2540,15 @@ const vocabularyData = {
             "ipa": "/hænd ɪn/",
             "meaning": "nộp (bài, đơn từ)",
             "example": "David remembered to hand in his homework before the deadline, ensuring that he wouldn’t lose points for submitting it late.",
-            "exampleTranslation": "David nhớ nộp bài tập trước hạn, đảm bảo không bị mất điểm vì nộp muộn."
+            "exampleTranslation": "David nhớ nộp bài tập trước hạn, đảm bảo không bị mất điểm vì nộp muộn.",
+            "blankSentence": "David remembered to ________ his homework before the deadline, ensuring that he wouldn’t lose points for submitting it late.",
+            "options": [
+                "hand in",
+                "write down",
+                "pay back",
+                "put off"
+            ],
+            "answer": "A"
         },
         {
             "word": "fall back on",
@@ -2172,7 +2556,15 @@ const vocabularyData = {
             "ipa": "/fɔːl bæk ɒn/",
             "meaning": "dùng đến, trông cậy vào (khi kế hoạch chính thất bại)",
             "example": "When her original plan failed, Emily had to fall back on her backup savings to cover unexpected expenses.",
-            "exampleTranslation": "Khi kế hoạch ban đầu thất bại, Emily phải dùng đến khoản tiết kiệm dự phòng để chi trả chi phí bất ngờ."
+            "exampleTranslation": "Khi kế hoạch ban đầu thất bại, Emily phải dùng đến khoản tiết kiệm dự phòng để chi trả chi phí bất ngờ.",
+            "blankSentence": "When her original plan failed, Emily had to ________ her backup savings to cover unexpected expenses.",
+            "options": [
+                "come out of",
+                "fall back on",
+                "go in for",
+                "come up with"
+            ],
+            "answer": "B"
         },
         {
             "word": "brought in",
@@ -2180,7 +2572,15 @@ const vocabularyData = {
             "ipa": "/brɔːt ɪn/",
             "meaning": "đưa ai vào (đội/nhóm) để giúp đỡ",
             "example": "John brought in his friend to help with the project, knowing that he had valuable skills that could contribute to its success.",
-            "exampleTranslation": "John đã mời bạn mình tham gia dự án, vì biết người đó có kỹ năng hữu ích để góp phần vào thành công của dự án."
+            "exampleTranslation": "John đã mời bạn mình tham gia dự án, vì biết người đó có kỹ năng hữu ích để góp phần vào thành công của dự án.",
+            "blankSentence": "John ________ his friend to help with the project, knowing that he had valuable skills that could contribute to its success.",
+            "options": [
+                "took over",
+                "asked after",
+                "brought in",
+                "put off"
+            ],
+            "answer": "C"
         },
         {
             "word": "break down",
@@ -2188,7 +2588,15 @@ const vocabularyData = {
             "ipa": "/breɪk daʊn/",
             "meaning": "phân tích, chia nhỏ (vấn đề, khái niệm phức tạp) để dễ hiểu",
             "example": "Our experienced tutors will break down complex concepts into simple, digestible lessons for easier understanding.",
-            "exampleTranslation": "Các gia sư giàu kinh nghiệm của chúng tôi sẽ phân tích các khái niệm phức tạp thành bài học đơn giản, dễ hiểu hơn."
+            "exampleTranslation": "Các gia sư giàu kinh nghiệm của chúng tôi sẽ phân tích các khái niệm phức tạp thành bài học đơn giản, dễ hiểu hơn.",
+            "blankSentence": "Our experienced tutors will ________ complex concepts into simple, digestible lessons for easier understanding.",
+            "options": [
+                "cut off",
+                "break down",
+                "carry out",
+                "set up"
+            ],
+            "answer": "B"
         },
         {
             "word": "point out",
@@ -2196,7 +2604,15 @@ const vocabularyData = {
             "ipa": "/pɔɪnt aʊt/",
             "meaning": "chỉ ra, làm rõ (lỗi, vấn đề)",
             "example": "Our program will point out common mistakes students make and teach you how to avoid them.",
-            "exampleTranslation": "Chương trình của chúng tôi sẽ chỉ ra những lỗi sai phổ biến mà học sinh thường mắc phải và hướng dẫn bạn cách tránh chúng."
+            "exampleTranslation": "Chương trình của chúng tôi sẽ chỉ ra những lỗi sai phổ biến mà học sinh thường mắc phải và hướng dẫn bạn cách tránh chúng.",
+            "blankSentence": "Our program will ________ common mistakes students make and teach you how to avoid them.",
+            "options": [
+                "point out",
+                "take up",
+                "run into",
+                "turn in"
+            ],
+            "answer": "A"
         },
         {
             "word": "put off",
@@ -2204,7 +2620,15 @@ const vocabularyData = {
             "ipa": "/pʊt ɒf/",
             "meaning": "trì hoãn, để sau",
             "example": "Don’t put off your health concerns any longer - schedule a consultation today.",
-            "exampleTranslation": "Đừng trì hoãn mối quan tâm về sức khỏe của bạn nữa – hãy đặt lịch tư vấn ngay hôm nay."
+            "exampleTranslation": "Đừng trì hoãn mối quan tâm về sức khỏe của bạn nữa – hãy đặt lịch tư vấn ngay hôm nay.",
+            "blankSentence": "Don’t ________ your health concerns any longer - schedule a consultation today.",
+            "options": [
+                "bring in",
+                "keep on",
+                "turn down",
+                "put off"
+            ],
+            "answer": "D"
         },
         {
             "word": "Check in",
@@ -2212,7 +2636,15 @@ const vocabularyData = {
             "ipa": "/tʃek ɪn/",
             "meaning": "đăng ký, làm thủ tục (khi đến nơi nào đó)",
             "example": "Check in with our receptionists to book your appointment at a time that suits you best.",
-            "exampleTranslation": "Hãy làm thủ tục với lễ tân để đặt lịch hẹn vào thời gian phù hợp nhất với bạn."
+            "exampleTranslation": "Hãy làm thủ tục với lễ tân để đặt lịch hẹn vào thời gian phù hợp nhất với bạn.",
+            "blankSentence": "________ with our receptionists to book your appointment at a time that suits you best.",
+            "options": [
+                "Set off",
+                "Run into",
+                "Turn out",
+                "Check in"
+            ],
+            "answer": "D"
         },
         {
             "word": "carry out",
@@ -2220,7 +2652,15 @@ const vocabularyData = {
             "ipa": "/ˈkæri aʊt/",
             "meaning": "thực hiện (một cuộc kiểm tra, đánh giá, nhiệm vụ)",
             "example": "Our doctors will carry out a detailed assessment before recommending a personalized treatment plan.",
-            "exampleTranslation": "Các bác sĩ của chúng tôi sẽ thực hiện đánh giá chi tiết trước khi đề xuất phác đồ điều trị cá nhân hóa."
+            "exampleTranslation": "Các bác sĩ của chúng tôi sẽ thực hiện đánh giá chi tiết trước khi đề xuất phác đồ điều trị cá nhân hóa.",
+            "blankSentence": "Our doctors will ________ a detailed assessment before recommending a personalized treatment plan.",
+            "options": [
+                "back down",
+                "carry out",
+                "bring up",
+                "cut off"
+            ],
+            "answer": "B"
         },
         {
             "word": "Find out",
@@ -2228,7 +2668,15 @@ const vocabularyData = {
             "ipa": "/faɪnd aʊt/",
             "meaning": "tìm hiểu, khám phá ra",
             "example": "Find out more about our services by visiting our website or calling our support team.",
-            "exampleTranslation": "Hãy tìm hiểu thêm về dịch vụ của chúng tôi bằng cách truy cập trang web hoặc gọi đội ngũ hỗ trợ."
+            "exampleTranslation": "Hãy tìm hiểu thêm về dịch vụ của chúng tôi bằng cách truy cập trang web hoặc gọi đội ngũ hỗ trợ.",
+            "blankSentence": "________ more about our services by visiting our website or calling our support team.",
+            "options": [
+                "Drop by",
+                "Turn over",
+                "Find out",
+                "Put off"
+            ],
+            "answer": "C"
         },
         {
             "word": "leave out",
@@ -2236,7 +2684,15 @@ const vocabularyData = {
             "ipa": "/liːv aʊt/",
             "meaning": "bỏ qua, không bao gồm",
             "example": "Our products are crafted with natural ingredients that leave out any harmful chemicals or additives.",
-            "exampleTranslation": "Sản phẩm của chúng tôi được làm từ nguyên liệu tự nhiên và không chứa bất kỳ hóa chất độc hại hay phụ gia nào."
+            "exampleTranslation": "Sản phẩm của chúng tôi được làm từ nguyên liệu tự nhiên và không chứa bất kỳ hóa chất độc hại hay phụ gia nào.",
+            "blankSentence": "Our products are crafted with natural ingredients that ________ any harmful chemicals or additives.",
+            "options": [
+                "bring in",
+                "leave out",
+                "turn over",
+                "save up"
+            ],
+            "answer": "B"
         },
         {
             "word": "run through",
@@ -2244,7 +2700,15 @@ const vocabularyData = {
             "ipa": "/rʌn θruː/",
             "meaning": "xem lướt qua, điểm nhanh",
             "example": "You can easily run through the menu online before you visit, so you know what to order ahead of time.",
-            "exampleTranslation": "Bạn có thể dễ dàng xem lướt qua thực đơn trực tuyến trước khi đến, để biết trước mình sẽ gọi món gì."
+            "exampleTranslation": "Bạn có thể dễ dàng xem lướt qua thực đơn trực tuyến trước khi đến, để biết trước mình sẽ gọi món gì.",
+            "blankSentence": "You can easily ________ the menu online before you visit, so you know what to order ahead of time.",
+            "options": [
+                "log on",
+                "check in",
+                "fall into",
+                "run through"
+            ],
+            "answer": "D"
         },
         {
             "word": "take over",
@@ -2252,7 +2716,15 @@ const vocabularyData = {
             "ipa": "/teɪk ˈoʊvə(r)/",
             "meaning": "đảm nhận, tiếp quản (trách nhiệm, nhiệm vụ)",
             "example": "If you’re interested in joining our club, don’t hesitate to take over the organizing efforts for our next meet-up.",
-            "exampleTranslation": "Nếu bạn quan tâm đến việc gia nhập câu lạc bộ, đừng ngần ngại đảm nhận công việc tổ chức cho buổi gặp mặt tiếp theo."
+            "exampleTranslation": "Nếu bạn quan tâm đến việc gia nhập câu lạc bộ, đừng ngần ngại đảm nhận công việc tổ chức cho buổi gặp mặt tiếp theo.",
+            "blankSentence": "If you’re interested in joining our club, don’t hesitate to ________ the organizing efforts for our next meet-up.",
+            "options": [
+                "make out",
+                "give up",
+                "take over",
+                "hand in"
+            ],
+            "answer": "C"
         },
         {
             "word": "fill out",
@@ -2260,7 +2732,15 @@ const vocabularyData = {
             "ipa": "/fɪl aʊt/",
             "meaning": "điền đầy đủ vào mẫu đơn",
             "example": "Please remember to fill out the registration form with all your details so we can provide you with the best possible support during your exam prep.",
-            "exampleTranslation": "Vui lòng nhớ điền vào mẫu đăng ký đầy đủ thông tin để chúng tôi có thể hỗ trợ bạn tốt nhất trong quá trình ôn thi."
+            "exampleTranslation": "Vui lòng nhớ điền vào mẫu đăng ký đầy đủ thông tin để chúng tôi có thể hỗ trợ bạn tốt nhất trong quá trình ôn thi.",
+            "blankSentence": "Please remember to ________ the registration form with all your details so we can provide you with the best possible support during your exam prep.",
+            "options": [
+                "give off",
+                "hand out",
+                "fill out",
+                "turn down"
+            ],
+            "answer": "C"
         },
         {
             "word": "catch up",
@@ -2268,7 +2748,15 @@ const vocabularyData = {
             "ipa": "/kætʃ ʌp/",
             "meaning": "bắt kịp (bài học, tiến độ)",
             "example": "If you’ve missed any classes, you can easily catch up by watching our recorded lessons online, which are available anytime.",
-            "exampleTranslation": "Nếu bạn bỏ lỡ buổi học nào, bạn có thể dễ dàng bắt kịp bằng cách xem lại các bài giảng được ghi hình."
+            "exampleTranslation": "Nếu bạn bỏ lỡ buổi học nào, bạn có thể dễ dàng bắt kịp bằng cách xem lại các bài giảng được ghi hình.",
+            "blankSentence": "If you’ve missed any classes, you can easily ________ by watching our recorded lessons online, which are available anytime.",
+            "options": [
+                "catch up",
+                "fall behind",
+                "kick off",
+                "call back"
+            ],
+            "answer": "A"
         },
         {
             "word": "set up",
@@ -2276,7 +2764,15 @@ const vocabularyData = {
             "ipa": "/set ʌp/",
             "meaning": "lên lịch, thiết lập cuộc hẹn",
             "example": "You should set up an appointment with one of our expert advisers who can help create a customized study plan that suits your goals.",
-            "exampleTranslation": "Bạn nên lên lịch hẹn với một chuyên gia tư vấn để được xây dựng kế hoạch học tập phù hợp với mục tiêu của mình."
+            "exampleTranslation": "Bạn nên lên lịch hẹn với một chuyên gia tư vấn để được xây dựng kế hoạch học tập phù hợp với mục tiêu của mình.",
+            "blankSentence": "You should ________ an appointment with one of our expert advisers who can help create a customized study plan that suits your goals.",
+            "options": [
+                "put up",
+                "make out",
+                "fall out",
+                "set up"
+            ],
+            "answer": "D"
         },
         {
             "word": "Brush up",
@@ -2284,7 +2780,15 @@ const vocabularyData = {
             "ipa": "/brʌʃ ʌp/",
             "meaning": "ôn tập lại, cải thiện kỹ năng",
             "example": "Brush up on your grammar and vocabulary through our intensive refresher classes designed for exam success.",
-            "exampleTranslation": "Ôn tập lại ngữ pháp và từ vựng qua các lớp học cấp tốc của chúng tôi nhằm giúp bạn thi hiệu quả."
+            "exampleTranslation": "Ôn tập lại ngữ pháp và từ vựng qua các lớp học cấp tốc của chúng tôi nhằm giúp bạn thi hiệu quả.",
+            "blankSentence": "________ on your grammar and vocabulary through our intensive refresher classes designed for exam success.",
+            "options": [
+                "Turn out",
+                "Bring in",
+                "Brush up",
+                "Take down"
+            ],
+            "answer": "C"
         },
         {
             "word": "turn up",
@@ -2292,7 +2796,15 @@ const vocabularyData = {
             "ipa": "/tɜːn ʌp/",
             "meaning": "xuất hiện, đến nơi (không báo trước hoặc theo kế hoạch)",
             "example": "Don’t forget to turn up at our special promotion event this Saturday for exclusive giveaways.",
-            "exampleTranslation": "Đừng quên ghé đến sự kiện khuyến mãi đặc biệt vào thứ Bảy này để nhận những phần quà độc quyền."
+            "exampleTranslation": "Đừng quên ghé đến sự kiện khuyến mãi đặc biệt vào thứ Bảy này để nhận những phần quà độc quyền.",
+            "blankSentence": "Don’t forget to ________ at our special promotion event this Saturday for exclusive giveaways.",
+            "options": [
+                "get off",
+                "turn up",
+                "show off",
+                "make out"
+            ],
+            "answer": "B"
         },
         {
             "word": "work out",
@@ -2300,7 +2812,15 @@ const vocabularyData = {
             "ipa": "/wɜːk aʊt/",
             "meaning": "tính toán, xây dựng, tìm ra (kế hoạch, giải pháp)",
             "example": "We’ll work out a customized travel plan that matches your preferences and schedule.",
-            "exampleTranslation": "Chúng tôi sẽ lên kế hoạch du lịch cá nhân hóa theo sở thích và lịch trình của bạn."
+            "exampleTranslation": "Chúng tôi sẽ lên kế hoạch du lịch cá nhân hóa theo sở thích và lịch trình của bạn.",
+            "blankSentence": "We’ll ________ a customized travel plan that matches your preferences and schedule.",
+            "options": [
+                "bring out",
+                "carry out",
+                "turn out",
+                "work out"
+            ],
+            "answer": "D"
         },
         {
             "word": "cut down on",
@@ -2308,7 +2828,15 @@ const vocabularyData = {
             "ipa": "/kʌt daʊn ɒn/",
             "meaning": "giảm bớt (việc gì có hại)",
             "example": "Our eco-friendly packaging is designed to cut down on your environmental footprint and reduce waste.",
-            "exampleTranslation": "Bao bì thân thiện môi trường của chúng tôi được thiết kế để giảm tác động sinh thái và rác thải."
+            "exampleTranslation": "Bao bì thân thiện môi trường của chúng tôi được thiết kế để giảm tác động sinh thái và rác thải.",
+            "blankSentence": "Our eco-friendly packaging is designed to ________ your environmental footprint and reduce waste.",
+            "options": [
+                "cut down on",
+                "go back on",
+                "come up with",
+                "get down with"
+            ],
+            "answer": "A"
         },
         {
             "word": "pick up",
@@ -2316,7 +2844,15 @@ const vocabularyData = {
             "ipa": "/pɪk ʌp/",
             "meaning": "lấy (vật gì), đón ai",
             "example": "You can simply pick up your free study kit at any of our participating locations to get started on your journey toward exam success.",
-            "exampleTranslation": "Bạn có thể dễ dàng nhận bộ tài liệu học miễn phí tại bất kỳ điểm phân phối nào để bắt đầu hành trình luyện thi."
+            "exampleTranslation": "Bạn có thể dễ dàng nhận bộ tài liệu học miễn phí tại bất kỳ điểm phân phối nào để bắt đầu hành trình luyện thi.",
+            "blankSentence": "You can simply ________ your free study kit at any of our participating locations to get started on your journey toward exam success.",
+            "options": [
+                "turn down",
+                "make over",
+                "leave out",
+                "pick up"
+            ],
+            "answer": "D"
         },
         {
             "word": "sort out",
@@ -2324,7 +2860,15 @@ const vocabularyData = {
             "ipa": "/sɔːt aʊt/",
             "meaning": "giải quyết, xử lý",
             "example": "If you’re planning to travel abroad, sort out your visa requirements with our trusted partners.",
-            "exampleTranslation": "Nếu bạn dự định đi du lịch nước ngoài, hãy giải quyết các yêu cầu visa với đối tác đáng tin cậy của chúng tôi."
+            "exampleTranslation": "Nếu bạn dự định đi du lịch nước ngoài, hãy giải quyết các yêu cầu visa với đối tác đáng tin cậy của chúng tôi.",
+            "blankSentence": "If you’re planning to travel abroad, ________ your visa requirements with our trusted partners.",
+            "options": [
+                "carry out",
+                "bring out",
+                "sort out",
+                "give out"
+            ],
+            "answer": "C"
         },
         {
             "word": "bring up",
@@ -2332,7 +2876,15 @@ const vocabularyData = {
             "ipa": "/brɪŋ ʌp/",
             "meaning": "nêu ra, đề cập đến",
             "example": "If you have any questions, feel free to bring up any concerns with our customer service team.",
-            "exampleTranslation": "Nếu bạn có bất kỳ câu hỏi nào, đừng ngần ngại nêu ra những mối quan tâm với đội ngũ chăm sóc khách hàng."
+            "exampleTranslation": "Nếu bạn có bất kỳ câu hỏi nào, đừng ngần ngại nêu ra những mối quan tâm với đội ngũ chăm sóc khách hàng.",
+            "blankSentence": "If you have any questions, feel free to ________ any concerns with our customer service team.",
+            "options": [
+                "respond to",
+                "bring up",
+                "make over",
+                "let down"
+            ],
+            "answer": "B"
         },
         {
             "word": "look into",
@@ -2340,7 +2892,15 @@ const vocabularyData = {
             "ipa": "/lʊk ˈɪntuː/",
             "meaning": "tìm hiểu, điều tra",
             "example": "Make sure to look into the environmentally friendly ways to dispose of our packaging once you’re done using it.",
-            "exampleTranslation": "Hãy chắc chắn tìm hiểu cách xử lý bao bì thân thiện môi trường sau khi bạn đã sử dụng xong."
+            "exampleTranslation": "Hãy chắc chắn tìm hiểu cách xử lý bao bì thân thiện môi trường sau khi bạn đã sử dụng xong.",
+            "blankSentence": "Make sure to ________ the environmentally friendly ways to dispose of our packaging once you’re done using it.",
+            "options": [
+                "bring in",
+                "look into",
+                "turn over",
+                "put away"
+            ],
+            "answer": "B"
         },
         {
             "word": "hand in",
@@ -2348,7 +2908,15 @@ const vocabularyData = {
             "ipa": "/hænd ɪn/",
             "meaning": "nộp, giao nộp",
             "example": "We encourage all customers to hand in their old products so that we can recycle or reuse them.",
-            "exampleTranslation": "Chúng tôi khuyến khích khách hàng nộp lại các sản phẩm cũ để chúng tôi có thể tái chế hoặc tái sử dụng."
+            "exampleTranslation": "Chúng tôi khuyến khích khách hàng nộp lại các sản phẩm cũ để chúng tôi có thể tái chế hoặc tái sử dụng.",
+            "blankSentence": "We encourage all customers to ________ their old products so that we can recycle or reuse them.",
+            "options": [
+                "take over",
+                "check off",
+                "break off",
+                "hand in"
+            ],
+            "answer": "D"
         },
         {
             "word": "give away",
@@ -2356,7 +2924,15 @@ const vocabularyData = {
             "ipa": "/ɡɪv əˈweɪ/",
             "meaning": "cho đi, tặng miễn phí",
             "example": "You can give away some of your old clothes to charity to make space for the new items you’ve purchased.",
-            "exampleTranslation": "Bạn có thể cho đi một số quần áo cũ cho từ thiện để dọn chỗ cho các món đồ mới."
+            "exampleTranslation": "Bạn có thể cho đi một số quần áo cũ cho từ thiện để dọn chỗ cho các món đồ mới.",
+            "blankSentence": "You can ________ some of your old clothes to charity to make space for the new items you’ve purchased.",
+            "options": [
+                "throw away",
+                "put away",
+                "take away",
+                "give away"
+            ],
+            "answer": "D"
         },
         {
             "word": "hold up",
@@ -2364,7 +2940,15 @@ const vocabularyData = {
             "ipa": "/hoʊld ʌp/",
             "meaning": "làm trì hoãn, cản trở",
             "example": "Don’t let passport issues hold up your travel plans—our experts can assist with paperwork.",
-            "exampleTranslation": "Đừng để vấn đề hộ chiếu làm trì hoãn kế hoạch du lịch của bạn – chuyên gia của chúng tôi có thể giúp xử lý giấy tờ."
+            "exampleTranslation": "Đừng để vấn đề hộ chiếu làm trì hoãn kế hoạch du lịch của bạn – chuyên gia của chúng tôi có thể giúp xử lý giấy tờ.",
+            "blankSentence": "Don’t let passport issues ________ your travel plans—our experts can assist with paperwork.",
+            "options": [
+                "give up",
+                "hold up",
+                "carry on",
+                "turn down"
+            ],
+            "answer": "B"
         },
         {
             "word": "put off",
@@ -2372,7 +2956,15 @@ const vocabularyData = {
             "ipa": "/pʊt ɒf/",
             "meaning": "trì hoãn",
             "example": "Don’t put off shopping for the holidays; start early to avoid the rush and get the best deals.",
-            "exampleTranslation": "Đừng trì hoãn việc mua sắm dịp lễ – hãy bắt đầu sớm để tránh đông đúc và mua được giá tốt."
+            "exampleTranslation": "Đừng trì hoãn việc mua sắm dịp lễ – hãy bắt đầu sớm để tránh đông đúc và mua được giá tốt.",
+            "blankSentence": "Don’t ________ shopping for the holidays; start early to avoid the rush and get the best deals.",
+            "options": [
+                "carry on",
+                "put off",
+                "give in",
+                "turn down"
+            ],
+            "answer": "B"
         },
         {
             "word": "look forward to",
@@ -2380,7 +2972,15 @@ const vocabularyData = {
             "ipa": "/lʊk ˈfɔːwəd tuː/",
             "meaning": "mong đợi điều gì",
             "example": "We hope you look forward to the exciting new study tools and resources we’ve just launched, designed to enhance your learning experience.",
-            "exampleTranslation": "Chúng tôi hy vọng bạn sẽ mong đợi các công cụ học tập mới thú vị mà chúng tôi vừa ra mắt, nhằm nâng cao trải nghiệm học tập của bạn."
+            "exampleTranslation": "Chúng tôi hy vọng bạn sẽ mong đợi các công cụ học tập mới thú vị mà chúng tôi vừa ra mắt, nhằm nâng cao trải nghiệm học tập của bạn.",
+            "blankSentence": "We hope you ________ the exciting new study tools and resources we’ve just launched, designed to enhance your learning experience.",
+            "options": [
+                "hold back",
+                "come up with",
+                "respond to",
+                "look forward to"
+            ],
+            "answer": "D"
         },
         {
             "word": "check out",
@@ -2388,7 +2988,15 @@ const vocabularyData = {
             "ipa": "/tʃek aʊt/",
             "meaning": "xem qua, kiểm tra (thường dùng cho tài liệu, website, sản phẩm mới)",
             "example": "Be sure to check out our newly updated course materials, designed to give you a competitive edge as you prepare for the upcoming exam.",
-            "exampleTranslation": "Nhớ xem qua tài liệu khóa học đã cập nhật mới nhất, được thiết kế để giúp bạn có lợi thế trong kỳ thi sắp tới."
+            "exampleTranslation": "Nhớ xem qua tài liệu khóa học đã cập nhật mới nhất, được thiết kế để giúp bạn có lợi thế trong kỳ thi sắp tới.",
+            "blankSentence": "Be sure to ________ our newly updated course materials, designed to give you a competitive edge as you prepare for the upcoming exam.",
+            "options": [
+                "pay back",
+                "check out",
+                "turn off",
+                "make up"
+            ],
+            "answer": "B"
         },
         {
             "word": "look after",
@@ -2396,7 +3004,15 @@ const vocabularyData = {
             "ipa": "/lʊk ˈɑːftə(r)/",
             "meaning": "chăm sóc",
             "example": "look after your plants by giving them the right amount of sunlight and water each day.",
-            "exampleTranslation": "Chăm sóc cây của bạn bằng cách cho chúng lượng ánh sáng và nước phù hợp mỗi ngày."
+            "exampleTranslation": "Chăm sóc cây của bạn bằng cách cho chúng lượng ánh sáng và nước phù hợp mỗi ngày.",
+            "blankSentence": "________ your plants by giving them the right amount of sunlight and water each day.",
+            "options": [
+                "Make up",
+                "Put away",
+                "Look after",
+                "Take back"
+            ],
+            "answer": "C"
         },
         {
             "word": "go over",
@@ -2404,15 +3020,31 @@ const vocabularyData = {
             "ipa": "/ɡoʊ ˈoʊvə(r)/",
             "meaning": "xem lại, kiểm tra kỹ lưỡng",
             "example": "We’ll go over every detail of your medical history to provide the best possible care.",
-            "exampleTranslation": "Chúng tôi sẽ xem lại kỹ từng chi tiết trong hồ sơ y tế của bạn để cung cấp dịch vụ chăm sóc tốt nhất."
+            "exampleTranslation": "Chúng tôi sẽ xem lại kỹ từng chi tiết trong hồ sơ y tế của bạn để cung cấp dịch vụ chăm sóc tốt nhất.",
+            "blankSentence": "We’ll ________ every detail of your medical history to provide the best possible care.",
+            "options": [
+                "go over",
+                "bring out",
+                "run into",
+                "take off"
+            ],
+            "answer": "A"
         },
         {
             "word": "check over",
             "type": "phrase",
-            "ipa": "/tʃek ˈoʊvə(r)//",
+            "ipa": "/tʃek ˈoʊvə(r)/",
             "meaning": "kiểm tra kỹ lưỡng",
             "example": "Remember to check over your paperwork before signing it to ensure everything is accurate.",
-            "exampleTranslation": "Hãy nhớ kiểm tra kỹ giấy tờ trước khi ký để đảm bảo mọi thứ chính xác."
+            "exampleTranslation": "Hãy nhớ kiểm tra kỹ giấy tờ trước khi ký để đảm bảo mọi thứ chính xác.",
+            "blankSentence": "Remember to ________ your paperwork before signing it to ensure everything is accurate.",
+            "options": [
+                "look at",
+                "fill in",
+                "give up",
+                "check over"
+            ],
+            "answer": "D"
         },
         {
             "word": "count on",
@@ -2420,7 +3052,15 @@ const vocabularyData = {
             "ipa": "/kaʊnt ɒn/",
             "meaning": "tin tưởng, dựa vào",
             "example": "You can always count on our professional staff to assist you with finding the right insurance plan.",
-            "exampleTranslation": "Bạn luôn có thể tin tưởng đội ngũ chuyên nghiệp của chúng tôi giúp tìm ra gói bảo hiểm phù hợp."
+            "exampleTranslation": "Bạn luôn có thể tin tưởng đội ngũ chuyên nghiệp của chúng tôi giúp tìm ra gói bảo hiểm phù hợp.",
+            "blankSentence": "You can always ________ our professional staff to assist you with finding the right insurance plan.",
+            "options": [
+                "break in",
+                "count on",
+                "fall out",
+                "kick off"
+            ],
+            "answer": "B"
         },
         {
             "word": "Run into",
@@ -2428,7 +3068,15 @@ const vocabularyData = {
             "ipa": "/rʌn ˈɪntuː/",
             "meaning": "gặp phải (vấn đề, rắc rối)",
             "example": "Run into a problem with your order? Contact our support team for immediate assistance.",
-            "exampleTranslation": "Gặp phải vấn đề với đơn hàng của bạn? Hãy liên hệ đội hỗ trợ ngay để được giúp đỡ."
+            "exampleTranslation": "Gặp phải vấn đề với đơn hàng của bạn? Hãy liên hệ đội hỗ trợ ngay để được giúp đỡ.",
+            "blankSentence": "________ a problem with your order? Contact our support team for immediate assistance.",
+            "options": [
+                "Run into",
+                "Get over",
+                "Figure out",
+                "Make up"
+            ],
+            "answer": "A"
         },
         {
             "word": "Go over",
@@ -2436,7 +3084,15 @@ const vocabularyData = {
             "ipa": "/ɡoʊ ˈoʊvə(r)/",
             "meaning": "kiểm tra lại, xem xét kỹ lưỡng",
             "example": "Go over the final checklist before you start your road trip to ensure everything is in order.",
-            "exampleTranslation": "Kiểm tra lại danh sách cuối cùng trước khi bắt đầu chuyến đi để đảm bảo mọi thứ đã sẵn sàng."
+            "exampleTranslation": "Kiểm tra lại danh sách cuối cùng trước khi bắt đầu chuyến đi để đảm bảo mọi thứ đã sẵn sàng.",
+            "blankSentence": "________ the final checklist before you start your road trip to ensure everything is in order.",
+            "options": [
+                "Put up",
+                "Look out",
+                "Go over",
+                "Take into"
+            ],
+            "answer": "C"
         },
         {
             "word": "call off",
@@ -2444,7 +3100,15 @@ const vocabularyData = {
             "ipa": "/kɔːl ɒf/",
             "meaning": "hủy bỏ (sự kiện, kế hoạch)",
             "example": "Please call off the event if you think the weather will cause too many disruptions.",
-            "exampleTranslation": "Vui lòng hủy sự kiện nếu bạn nghĩ thời tiết sẽ gây ra quá nhiều gián đoạn."
+            "exampleTranslation": "Vui lòng hủy sự kiện nếu bạn nghĩ thời tiết sẽ gây ra quá nhiều gián đoạn.",
+            "blankSentence": "Please ________ the event if you think the weather will cause too many disruptions.",
+            "options": [
+                "get ahead",
+                "put away",
+                "turn up",
+                "call off"
+            ],
+            "answer": "D"
         },
         {
             "word": "stick to",
@@ -2452,7 +3116,15 @@ const vocabularyData = {
             "ipa": "/stɪk tuː/",
             "meaning": "bám sát, kiên trì thực hiện",
             "example": "Be sure to stick to your workout routine, as consistency is key to seeing results.",
-            "exampleTranslation": "Hãy nhớ duy trì lịch trình tập luyện vì sự kiên trì là yếu tố quyết định kết quả."
+            "exampleTranslation": "Hãy nhớ duy trì lịch trình tập luyện vì sự kiên trì là yếu tố quyết định kết quả.",
+            "blankSentence": "Be sure to ________ your workout routine, as consistency is key to seeing results.",
+            "options": [
+                "give up",
+                "carry out",
+                "account for",
+                "stick to"
+            ],
+            "answer": "D"
         },
         {
             "word": "bring up",
@@ -2460,7 +3132,15 @@ const vocabularyData = {
             "ipa": "/brɪŋ ʌp/",
             "meaning": "nêu ra, đề cập đến (một vấn đề)",
             "example": "Be sure to bring up any issues you experience with our products so we can address them promptly.",
-            "exampleTranslation": "Hãy nhớ nêu ra bất kỳ vấn đề nào bạn gặp phải để chúng tôi xử lý kịp thời."
+            "exampleTranslation": "Hãy nhớ nêu ra bất kỳ vấn đề nào bạn gặp phải để chúng tôi xử lý kịp thời.",
+            "blankSentence": "Be sure to ________ any issues you experience with our products so we can address them promptly.",
+            "options": [
+                "take in",
+                "pay off",
+                "bring up",
+                "make out"
+            ],
+            "answer": "C"
         },
         {
             "word": "take off",
@@ -2468,7 +3148,15 @@ const vocabularyData = {
             "ipa": "/teɪk ɒf/",
             "meaning": "cất cánh (máy bay)",
             "example": "The plane is scheduled to ______ at 3 PM, so we need to arrive at the airport by 1:30 PM to check in.",
-            "exampleTranslation": "Máy bay dự kiến cất cánh lúc 3 giờ chiều, vì vậy chúng ta cần đến sân bay lúc 1 giờ 30 để làm thủ tục."
+            "exampleTranslation": "Máy bay dự kiến cất cánh lúc 3 giờ chiều, vì vậy chúng ta cần đến sân bay lúc 1 giờ 30 để làm thủ tục.",
+            "blankSentence": "The plane is scheduled to ______ at 3 PM, so we need to arrive at the airport by 1:30 PM to check in.",
+            "options": [
+                "take up",
+                "take off",
+                "take in",
+                "take out"
+            ],
+            "answer": "B"
         },
         {
             "word": "make up",
@@ -2476,7 +3164,15 @@ const vocabularyData = {
             "ipa": "/meɪk ʌp/",
             "meaning": "làm hòa (sau tranh cãi)",
             "example": "After their argument, Sarah and Tom decided to ______ over coffee, agreeing that their friendship was more important than their disagreement.",
-            "exampleTranslation": "Sau cuộc cãi vã, Sarah và Tom quyết định làm hòa khi uống cà phê, đồng ý rằng tình bạn quan trọng hơn."
+            "exampleTranslation": "Sau cuộc cãi vã, Sarah và Tom quyết định làm hòa khi uống cà phê, đồng ý rằng tình bạn quan trọng hơn.",
+            "blankSentence": "After their argument, Sarah and Tom decided to ______ over coffee, agreeing that their friendship was more important than their disagreement.",
+            "options": [
+                "give in",
+                "make up",
+                "run into",
+                "get along"
+            ],
+            "answer": "B"
         },
         {
             "word": "bring back",
@@ -2484,7 +3180,15 @@ const vocabularyData = {
             "ipa": "/brɪŋ bæk/",
             "meaning": "khôi phục, mang trở lại (thói quen, truyền thống)",
             "example": "The new policy was introduced to ______ some of the old traditions that had been lost over the years in the community.",
-            "exampleTranslation": "Chính sách mới được đưa ra nhằm khôi phục một số truyền thống xưa đã mai một trong cộng đồng."
+            "exampleTranslation": "Chính sách mới được đưa ra nhằm khôi phục một số truyền thống xưa đã mai một trong cộng đồng.",
+            "blankSentence": "The new policy was introduced to ______ some of the old traditions that had been lost over the years in the community.",
+            "options": [
+                "do away",
+                "bring back",
+                "take down",
+                "take aback"
+            ],
+            "answer": "B"
         },
         {
             "word": "back out",
@@ -2492,7 +3196,15 @@ const vocabularyData = {
             "ipa": "/bæk aʊt/",
             "meaning": "rút lui, không tham gia (sau khi đã đồng ý)",
             "example": "At the last minute, she decided to ______ of the competition because she didn’t feel prepared enough to participate.",
-            "exampleTranslation": "Vào phút cuối, cô ấy quyết định rút lui khỏi cuộc thi vì cảm thấy chưa đủ sẵn sàng để tham gia."
+            "exampleTranslation": "Vào phút cuối, cô ấy quyết định rút lui khỏi cuộc thi vì cảm thấy chưa đủ sẵn sàng để tham gia.",
+            "blankSentence": "At the last minute, she decided to ______ of the competition because she didn’t feel prepared enough to participate.",
+            "options": [
+                "break up",
+                "get away",
+                "back out",
+                "fall behind"
+            ],
+            "answer": "C"
         },
         {
             "word": "get along",
@@ -2500,7 +3212,15 @@ const vocabularyData = {
             "ipa": "/ɡet əˈlɒŋ/",
             "meaning": "hòa hợp, có quan hệ tốt",
             "example": "Tom and Jerry have been best friends for years because they always ______ well, despite their different personalities and interests.",
-            "exampleTranslation": "Tom và Jerry là bạn thân nhiều năm vì họ luôn hòa hợp tốt, dù tính cách và sở thích khác nhau."
+            "exampleTranslation": "Tom và Jerry là bạn thân nhiều năm vì họ luôn hòa hợp tốt, dù tính cách và sở thích khác nhau.",
+            "blankSentence": "Tom and Jerry have been best friends for years because they always ______ well, despite their different personalities and interests.",
+            "options": [
+                "come in for",
+                "look after",
+                "get along",
+                "put up with"
+            ],
+            "answer": "C"
         },
         {
             "word": "look into",
@@ -2508,7 +3228,15 @@ const vocabularyData = {
             "ipa": "/lʊk ˈɪntuː/",
             "meaning": "điều tra, xem xét",
             "example": "Maria will ______ the issue of delayed shipments and find a solution to ensure customers receive their orders on time.",
-            "exampleTranslation": "Maria sẽ xem xét vấn đề giao hàng trễ và tìm giải pháp để đảm bảo khách nhận hàng đúng hạn."
+            "exampleTranslation": "Maria sẽ xem xét vấn đề giao hàng trễ và tìm giải pháp để đảm bảo khách nhận hàng đúng hạn.",
+            "blankSentence": "Maria will ______ the issue of delayed shipments and find a solution to ensure customers receive their orders on time.",
+            "options": [
+                "look into",
+                "check out",
+                "look for",
+                "come across"
+            ],
+            "answer": "A"
         },
         {
             "word": "broke down",
@@ -2516,7 +3244,15 @@ const vocabularyData = {
             "ipa": "/broʊk daʊn/",
             "meaning": "bị hỏng (xe, máy móc)",
             "example": "When the car ______ on the highway during their road trip, Jason quickly called for roadside assistance to get help.",
-            "exampleTranslation": "Khi xe bị hỏng trên đường cao tốc, Jason đã nhanh chóng gọi cứu hộ để được giúp đỡ."
+            "exampleTranslation": "Khi xe bị hỏng trên đường cao tốc, Jason đã nhanh chóng gọi cứu hộ để được giúp đỡ.",
+            "blankSentence": "When the car ______ on the highway during their road trip, Jason quickly called for roadside assistance to get help.",
+            "options": [
+                "gave up",
+                "ran out",
+                "took off",
+                "broke down"
+            ],
+            "answer": "D"
         },
         {
             "word": "give up",
@@ -2524,7 +3260,15 @@ const vocabularyData = {
             "ipa": "/ɡɪv ʌp/",
             "meaning": "từ bỏ",
             "example": "Even though the exam was challenging, Lily refused to ______ and studied hard every night to prepare for the next one.",
-            "exampleTranslation": "Dù kỳ thi rất khó, Lily không từ bỏ mà vẫn chăm chỉ học mỗi tối để chuẩn bị cho lần thi tới."
+            "exampleTranslation": "Dù kỳ thi rất khó, Lily không từ bỏ mà vẫn chăm chỉ học mỗi tối để chuẩn bị cho lần thi tới.",
+            "blankSentence": "Even though the exam was challenging, Lily refused to ______ and studied hard every night to prepare for the next one.",
+            "options": [
+                "carry on",
+                "put off",
+                "give up",
+                "turn down"
+            ],
+            "answer": "C"
         },
         {
             "word": "turn up",
@@ -2532,7 +3276,15 @@ const vocabularyData = {
             "ipa": "/tɜːn ʌp/",
             "meaning": "đến, xuất hiện",
             "example": "Even though the party officially started at 7 PM, many guests began to ______ around 8 PM, bringing their own snacks.",
-            "exampleTranslation": "Dù bữa tiệc chính thức bắt đầu lúc 7 giờ tối, nhiều khách bắt đầu xuất hiện lúc 8 giờ, mang theo đồ ăn nhẹ."
+            "exampleTranslation": "Dù bữa tiệc chính thức bắt đầu lúc 7 giờ tối, nhiều khách bắt đầu xuất hiện lúc 8 giờ, mang theo đồ ăn nhẹ.",
+            "blankSentence": "Even though the party officially started at 7 PM, many guests began to ______ around 8 PM, bringing their own snacks.",
+            "options": [
+                "take up",
+                "turn up",
+                "hold up",
+                "work up"
+            ],
+            "answer": "B"
         },
         {
             "word": "get away",
@@ -2540,7 +3292,15 @@ const vocabularyData = {
             "ipa": "/ɡet əˈweɪ/",
             "meaning": "đi nghỉ, trốn khỏi cuộc sống thường nhật",
             "example": "My parents decided to ______ for the weekend to relax and recharge at a cozy cabin by the lake.",
-            "exampleTranslation": "Bố mẹ tôi quyết định đi nghỉ cuối tuần để thư giãn tại căn cabin ấm cúng bên hồ."
+            "exampleTranslation": "Bố mẹ tôi quyết định đi nghỉ cuối tuần để thư giãn tại căn cabin ấm cúng bên hồ.",
+            "blankSentence": "My parents decided to ______ for the weekend to relax and recharge at a cozy cabin by the lake.",
+            "options": [
+                "get across",
+                "get over",
+                "get away",
+                "get through"
+            ],
+            "answer": "C"
         },
         {
             "word": "throw away",
@@ -2548,7 +3308,15 @@ const vocabularyData = {
             "ipa": "/θroʊ əˈweɪ/",
             "meaning": "vứt bỏ",
             "example": "It’s important to ______ any expired food items in the fridge to keep everything fresh and safe to eat.",
-            "exampleTranslation": "Việc vứt bỏ thực phẩm hết hạn trong tủ lạnh rất quan trọng để giữ mọi thứ tươi ngon và an toàn."
+            "exampleTranslation": "Việc vứt bỏ thực phẩm hết hạn trong tủ lạnh rất quan trọng để giữ mọi thứ tươi ngon và an toàn.",
+            "blankSentence": "It’s important to ______ any expired food items in the fridge to keep everything fresh and safe to eat.",
+            "options": [
+                "go off",
+                "break out",
+                "put aside",
+                "throw away"
+            ],
+            "answer": "D"
         },
         {
             "word": "count on",
@@ -2556,7 +3324,15 @@ const vocabularyData = {
             "ipa": "/kaʊnt ɒn/",
             "meaning": "tin tưởng, dựa vào",
             "example": "Minh can always ______ his sister to help him out when he is in need, as she’s incredibly supportive and reliable.",
-            "exampleTranslation": "Minh luôn có thể tin tưởng chị gái sẽ giúp đỡ khi cần vì cô ấy rất đáng tin và hay hỗ trợ."
+            "exampleTranslation": "Minh luôn có thể tin tưởng chị gái sẽ giúp đỡ khi cần vì cô ấy rất đáng tin và hay hỗ trợ.",
+            "blankSentence": "Minh can always ______ his sister to help him out when he is in need, as she’s incredibly supportive and reliable.",
+            "options": [
+                "figure out",
+                "run into",
+                "count on",
+                "turn over"
+            ],
+            "answer": "C"
         },
         {
             "word": "showed up",
@@ -2564,7 +3340,15 @@ const vocabularyData = {
             "ipa": "/ʃoʊd ʌp/",
             "meaning": "xuất hiện, có mặt",
             "example": "Lucy was nervous about the job interview, but she ______ early at the company to calm her nerves and feel more prepared.",
-            "exampleTranslation": "Lucy lo lắng về buổi phỏng vấn nhưng đã đến sớm tại công ty để trấn tĩnh và chuẩn bị tốt hơn."
+            "exampleTranslation": "Lucy lo lắng về buổi phỏng vấn nhưng đã đến sớm tại công ty để trấn tĩnh và chuẩn bị tốt hơn.",
+            "blankSentence": "Lucy was nervous about the job interview, but she ______ early at the company to calm her nerves and feel more prepared.",
+            "options": [
+                "came out",
+                "turned in",
+                "showed up",
+                "dropped off"
+            ],
+            "answer": "C"
         },
         {
             "word": "take over",
@@ -2572,7 +3356,15 @@ const vocabularyData = {
             "ipa": "/teɪk ˈoʊvə(r)/",
             "meaning": "tiếp quản (công việc, trách nhiệm)",
             "example": "When the manager left the company, Angela was promoted to ______ his responsibilities and lead the team with great enthusiasm.",
-            "exampleTranslation": "Khi quản lý rời công ty, Angela được thăng chức để tiếp quản trách nhiệm và dẫn dắt nhóm một cách nhiệt tình."
+            "exampleTranslation": "Khi quản lý rời công ty, Angela được thăng chức để tiếp quản trách nhiệm và dẫn dắt nhóm một cách nhiệt tình.",
+            "blankSentence": "When the manager left the company, Angela was promoted to ______ his responsibilities and lead the team with great enthusiasm.",
+            "options": [
+                "take over",
+                "take on",
+                "take in",
+                "take up"
+            ],
+            "answer": "A"
         },
         {
             "word": "looks after",
@@ -2580,7 +3372,15 @@ const vocabularyData = {
             "ipa": "/lʊks ˈɑːftə(r)/",
             "meaning": "chăm sóc",
             "example": "Grandma always ______ her grandchildren while their parents are at work, keeping them entertained with fun games and stories.",
-            "exampleTranslation": "Bà luôn chăm sóc các cháu khi bố mẹ đi làm, giúp các bé giải trí bằng trò chơi và kể chuyện thú vị."
+            "exampleTranslation": "Bà luôn chăm sóc các cháu khi bố mẹ đi làm, giúp các bé giải trí bằng trò chơi và kể chuyện thú vị.",
+            "blankSentence": "Grandma always ______ her grandchildren while their parents are at work, keeping them entertained with fun games and stories.",
+            "options": [
+                "looks after",
+                "breaks out",
+                "lets down",
+                "carries on"
+            ],
+            "answer": "A"
         }
     ]
 };

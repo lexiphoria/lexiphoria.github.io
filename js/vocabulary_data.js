@@ -295,6 +295,302 @@ const vocabularyData = {
       meaning: "bạo dạn, không sợ hãi, táo bạo",
       example: "She was fearless in the face of danger. He made a bold decision to leave his job. Her daring escape from prison became a legendary story.",
       exampleTranslation: "Cô ấy không sợ hãi khi đối mặt với nguy hiểm. Anh ấy quyết định táo bạo bỏ việc. Cuộc trốn thoát táo bạo khỏi tù trở thành huyền thoại."
+    },
+    {
+      word: "fellow",
+      type: "adj",
+      ipa: "/'feləʊ/",
+      meaning: "đồng cấp",
+      example: "She was admired by her fellow students for her strength.",
+      exampleTranslation: "Cô ấy được các bạn cùng lớp ngưỡng mộ vì sự mạnh mẽ của mình."
+    },
+    {
+      word: "field hospital",
+      type: "n",
+      ipa: "/'fi:ld ˌhɒspɪtl/",
+      meaning: "bệnh viện dã chiến",
+      example: "They built a field hospital.",
+      exampleTranslation: "Họ đã xây dựng một bệnh viện dã chiến."
+    },
+    {
+      word: "frustrated",
+      type: "adj",
+      ipa: "/frʌ'streɪtɪd/",
+      meaning: "bực mình, thất vọng",
+      example: "She felt frustrated when her work wasn't understood.",
+      exampleTranslation: "Cô ấy cảm thấy thất vọng khi công việc của mình không được hiểu."
+    },
+    {
+      word: "genius",
+      type: "n",
+      ipa: "/'dʒi:niəs/",
+      meaning: "thiên tài",
+      example: "You're an absolute genius!",
+      exampleTranslation: "Anh quả là thiên tài."
+    },
+    {
+      word: "glory",
+      type: "n",
+      ipa: "/'ɡlɔ:ri/",
+      meaning: "vinh quang",
+      example: "He returned home in glory after winning the battle.",
+      exampleTranslation: "Anh ấy trở về trong vinh quang sau khi chiến thắng trận chiến."
+    },
+    {
+      word: "grateful",
+      type: "adj",
+      ipa: "/'ɡreɪtfl/",
+      meaning: "biết ơn",
+      example: "We are very grateful to all those who contributed.",
+      exampleTranslation: "Chúng tôi rất biết ơn tất cả những người đã đóng góp."
+    },
+    {
+      word: "hero",
+      type: "n",
+      ipa: "/'hɪərəʊ/",
+      meaning: "anh hùng",
+      example: "He was a hero of the First World War.",
+      exampleTranslation: "Anh là một anh hùng trong thế chiến thứ nhất."
+    },
+    {
+      word: "impress",
+      type: "v",
+      ipa: "/ɪm'pres/",
+      meaning: "gây ấn tượng, tạo ấn tượng",
+      example: "This game is his big chance to impress.",
+      exampleTranslation: "Trận đấu này là cơ hội lớn để anh ấy gây ấn tượng."
+    },
+    {
+      word: "impressive",
+      type: "adj",
+      ipa: "/ɪm'presɪv/",
+      meaning: "đầy ấn tượng",
+      example: "She was very impressive in the interview.",
+      exampleTranslation: "Cô thể hiện rất ấn tượng trong buổi phỏng vấn."
+    },
+    {
+      word: "incredible",
+      type: "adj",
+      ipa: "/ɪn'kredəbl/",
+      meaning: "đáng kinh ngạc",
+      example: "He finished the race at an incredible speed.",
+      exampleTranslation: "Anh ấy đã hoàn thành cuộc đua với tốc độ đáng kinh ngạc."
+    },
+    {
+      word: "indolent",
+      type: "adj",
+      ipa: "/'ɪndələnt/",
+      meaning: "lười biếng",
+      example: "He was too indolent to work hard.",
+      exampleTranslation: "Anh ấy quá lười biếng để làm việc chăm chỉ."
+    },
+    {
+      word: "inspiring",
+      type: "adj",
+      ipa: "/ɪn'spaɪərɪŋ/",
+      meaning: "có tính truyền cảm hứng",
+      example: "Her speech was really inspiring.",
+      exampleTranslation: "Bài phát biểu của cô ấy thực sự rất truyền cảm hứng."
+    },
+    {
+      word: "intellectual",
+      type: "adj",
+      ipa: "/ˌɪntə'lektʃuəl/",
+      meaning: "có học thức, tri thức",
+      example: "She is an intellectual woman who enjoys reading philosophy and discussing ideas.",
+      exampleTranslation: "Cô ấy là một người phụ nữ có học thức, thích đọc triết học và thảo luận về các ý tưởng."
+    },
+    {
+      word: "investigative",
+      type: "adj",
+      ipa: "/ɪn'vestɪɡətɪv/",
+      meaning: "liên quan tới điều tra",
+      example: "There is a special investigative police unit for domestic violence cases.",
+      exampleTranslation: "Có một đội cảnh sát điều tra đặc biệt về các vụ bạo lực gia đình."
+    },
+    {
+      word: "journalist",
+      type: "n",
+      ipa: "/'dʒɜ:nəlɪst/",
+      meaning: "nhà báo",
+      example: "The minister told journalists he was not going to resign.",
+      exampleTranslation: "Bộ trưởng nói với cánh báo chí là ông sẽ không từ chức."
+    },
+    {
+      word: "marriage",
+      type: "n",
+      ipa: "/'mærɪdʒ/",
+      meaning: "cuộc hôn nhân",
+      example: "This is his second marriage.",
+      exampleTranslation: "Đây là cuộc hôn nhân thứ hai của anh."
+    },
+    {
+      word: "military",
+      type: "n",
+      ipa: "/'mɪlətri/",
+      meaning: "quân đội",
+      example: "He served in the military.",
+      exampleTranslation: "Anh phục vụ trong quân ngũ."
+    },
+    {
+      word: "obstacle",
+      type: "n",
+      ipa: "/'obstəkl/",
+      meaning: "trở ngại, chướng ngại",
+      example: "She faced many obstacles on her way to success.",
+      exampleTranslation: "Cô ấy đã đối mặt với nhiều trở ngại trên đường đến thành công."
+    },
+    {
+      word: "overcome",
+      type: "v",
+      ipa: "/ˌəʊvə'kʌm/",
+      meaning: "vượt qua",
+      example: "He overcame many difficulties to become a great leader.",
+      exampleTranslation: "Anh ấy đã vượt qua nhiều khó khăn để trở thành một nhà lãnh đạo vĩ đại."
+    },
+    {
+      word: "passion",
+      type: "n",
+      ipa: "/'pæʃn/",
+      meaning: "đam mê",
+      example: "She followed her passion for music.",
+      exampleTranslation: "Cô ấy theo đuổi niềm đam mê âm nhạc của mình."
+    },
+    {
+      word: "patient",
+      type: "adj",
+      ipa: "/'peɪʃnt/",
+      meaning: "kiên nhẫn",
+      example: "He was patient and never gave up on his dream.",
+      exampleTranslation: "Anh ấy kiên nhẫn và không bao giờ từ bỏ ước mơ."
+    },
+    {
+      word: "personality",
+      type: "n",
+      ipa: "/ˌp3:sə'næləti/",
+      meaning: "tính cách",
+      example: "Her friendly personality made everyone like her.",
+      exampleTranslation: "Tính cách thân thiện của cô ấy khiến mọi người yêu mến."
+    },
+    {
+      word: "poetic",
+      type: "adj",
+      ipa: "/pəʊ'etɪk/",
+      meaning: "liên quan tới thơ ca, thơ mộng",
+      example: "His writing style was simple but very poetic.",
+      exampleTranslation: "Phong cách viết của anh ấy đơn giản nhưng rất thơ mộng."
+    },
+    {
+      word: "react",
+      type: "v",
+      ipa: "/ri'ækt/",
+      meaning: "phản ứng",
+      example: "You never know how he is going to react.",
+      exampleTranslation: "Bạn sẽ không biết anh ta sẽ phản ứng thế nào đâu."
+    },
+    {
+      word: "reject",
+      type: "v",
+      ipa: "/rɪ'dʒekt/",
+      meaning: "từ chối",
+      example: "He applied for the job, but his application was rejected.",
+      exampleTranslation: "Anh ấy đã nộp đơn xin việc, nhưng hồ sơ của anh ấy bị từ chối."
+    },
+    {
+      word: "relieved",
+      type: "adj",
+      ipa: "/rɪ'li:vd/",
+      meaning: "nhẹ nhõm",
+      example: "We were greatly relieved at the news of their safe return.",
+      exampleTranslation: "Chúng tôi vô cùng nhẹ nhõm khi biết tin họ đã bình an trở về."
+    },
+    {
+      word: "renowned",
+      type: "adj",
+      ipa: "/rɪ'naʊnd/",
+      meaning: "nổi tiếng",
+      example: "He became a renowned artist in his country.",
+      exampleTranslation: "Anh ấy trở thành một nghệ sĩ nổi tiếng ở đất nước mình."
+    },
+    {
+      word: "resistance war",
+      type: "n",
+      ipa: "/rɪ'zɪstəns wɔ:(r)/",
+      meaning: "cuộc kháng chiến",
+      example: "My uncle fought in the resistance war against France.",
+      exampleTranslation: "Chú tôi chiến đấu trong cuộc kháng chiến chống Pháp."
+    },
+    {
+      word: "reveal",
+      type: "v",
+      ipa: "/rɪ'vi:l/",
+      meaning: "hé lộ",
+      example: "She revealed the truth about her difficult childhood.",
+      exampleTranslation: "Cô ấy tiết lộ sự thật về tuổi thơ khó khăn của mình."
+    },
+    {
+      word: "rule",
+      type: "v/n",
+      ipa: "/ru:l/",
+      meaning: "trị vì, cai trị",
+      example: "At that time, King John ruled England.",
+      exampleTranslation: "Vào thời điểm đó, vua John trị vì Anh quốc."
+    },
+    {
+      word: "scholarship",
+      type: "n",
+      ipa: "/'skɒləʃɪp/",
+      meaning: "học bổng",
+      example: "She won a scholarship to study in France.",
+      exampleTranslation: "Cô ấy đã giành được học bổng để du học tại Pháp."
+    },
+    {
+      word: "struggle",
+      type: "v",
+      ipa: "/'strʌɡl/",
+      meaning: "vật lộn",
+      example: "He struggled to survive during the famine.",
+      exampleTranslation: "Anh ấy đã vật lộn để sống sót trong nạn đói."
+    },
+    {
+      word: "surgeon",
+      type: "n",
+      ipa: "/'s3:dʒən/",
+      meaning: "bác sĩ phẫu thuật",
+      example: "Surgeons performed two operations on him yesterday.",
+      exampleTranslation: "Các bác sĩ đã tiến hành hai cuộc phẫu thuật cho anh ngày hôm qua."
+    },
+    {
+      word: "trailblazer",
+      type: "n",
+      ipa: "/'treɪlˌbleɪzə(r)/",
+      meaning: "người tiên phong",
+      example: "He was a trailblazer in the fight for civil rights.",
+      exampleTranslation: "Anh ấy là người tiên phong trong cuộc đấu tranh vì quyền công dân."
+    },
+    {
+      word: "trust",
+      type: "v",
+      ipa: "/trʌst/",
+      meaning: "tin tưởng",
+      example: "People trusted him because he was honest.",
+      exampleTranslation: "Mọi người tin tưởng anh ấy vì anh ấy trung thực."
+    },
+    {
+      word: "visionary",
+      type: "adj",
+      ipa: "/'vɪʒənri/",
+      meaning: "có tầm nhìn",
+      example: "He's a visionary leader.",
+      exampleTranslation: "Ông ấy là một nhà lãnh đạo có tầm nhìn."
+    },
+    {
+      word: "wealthy",
+      type: "adj",
+      ipa: "/'welθi/",
+      meaning: "giàu có",
+      example: "He came from a wealthy family but chose a simple life.",
+      exampleTranslation: "Anh ấy xuất thân từ một gia đình giàu có nhưng chọn cuộc sống giản dị."
     }
   ],
   ourSociety: [],

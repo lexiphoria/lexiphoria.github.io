@@ -1217,7 +1217,296 @@ const vocabularyData = {
       exampleTranslation: "Chiếc xe dừng lại trước cổng khách sạn."
     }
   ],
-  ourSociety: [],
+  ourSociety: [
+    {
+      word: "admire",
+      type: "v",
+      ipa: "/əd'maɪə(r)/",
+      meaning: "ngắm nhìn, chiêm ngưỡng",
+      example: "Let's just sit and admire the view.",
+      exampleTranslation: "Hãy ngồi xuống và ngắm nhìn phong cảnh."
+    },
+    {
+      word: "anniversary",
+      type: "n",
+      ipa: "/ˌænɪ'v3:səri/",
+      meaning: "lễ kỉ niệm",
+      example: "They celebrated their 10th wedding anniversary.",
+      exampleTranslation: "Họ kỷ niệm 10 năm ngày cưới."
+    },
+    {
+      word: "anxiety",
+      type: "n",
+      ipa: "/æŋ'zaɪəti/",
+      meaning: "sự lo lắng",
+      example: "Some students feel anxiety when adapting to a new cultural environment.",
+      exampleTranslation: "Một số học sinh cảm thấy lo lắng khi thích nghi với môi trường văn hoá mới."
+    },
+    {
+      word: "appreciate",
+      type: "v",
+      ipa: "/ə'pri:ʃieɪt/",
+      meaning: "thưởng thức, trân trọng",
+      example: "Many young people appreciate traditional festivals because they connect them with their cultural roots.",
+      exampleTranslation: "Nhiều bạn trẻ trân trọng các lễ hội truyền thống vì chúng gắn kết họ với cội nguồn văn hoá."
+    },
+    {
+      word: "artefact",
+      type: "n",
+      ipa: "/'ɑ:tɪfækt/",
+      meaning: "hiện vật",
+      example: "The museum has many ancient artefacts.",
+      exampleTranslation: "Bảo tàng có nhiều cổ vật."
+    },
+    {
+      word: "assimilation",
+      type: "n",
+      ipa: "/əˌsɪmə'leɪʃn/",
+      meaning: "sự đồng hoá, hoà nhập",
+      example: "Immigrants often face challenges of cultural assimilation in a new country.",
+      exampleTranslation: "Người nhập cư thường đối mặt với những thách thức của việc hoà nhập văn hoá ở một đất nước mới."
+    },
+    {
+      word: "autograph",
+      type: "n",
+      ipa: "/'ɔ:təɡrɑ:f/",
+      meaning: "chữ ký của người nổi tiếng",
+      example: "He signed his autograph for the little girl.",
+      exampleTranslation: "Anh ấy ký tặng cho cô gái bé nhỏ."
+    },
+    {
+      word: "background",
+      type: "n",
+      ipa: "/'bækɡraʊnd/",
+      meaning: "nền tảng, xuất thân",
+      example: "We come from different cultural backgrounds.",
+      exampleTranslation: "Chúng tôi đến từ các nền văn hóa khác nhau."
+    },
+    {
+      word: "bamboo dancing",
+      type: "n",
+      ipa: "/ˌbæm'bu: 'dɑ:nsɪŋ/",
+      meaning: "nhảy sạp",
+      example: "Bamboo dancing is very popular in the mountainous villages in Vietnam.",
+      exampleTranslation: "Nhảy sạp rất phổ biến ở những ngôi làng miền núi Việt Nam."
+    },
+    {
+      word: "blend",
+      type: "v",
+      ipa: "/blend/",
+      meaning: "pha trộn",
+      example: "Their music blends traditional and modern styles.",
+      exampleTranslation: "Âm nhạc của họ pha trộn phong cách truyền thống và hiện đại."
+    },
+    {
+      word: "blessing",
+      type: "n",
+      ipa: "/'blesɪŋ/",
+      meaning: "phước lành, lời chúc phúc",
+      example: "Newlyweds often receive a blessing from their families during the wedding ceremony.",
+      exampleTranslation: "Các cặp đôi mới cưới thường nhận được lời chúc phúc từ gia đình trong lễ cưới."
+    },
+    {
+      word: "bow",
+      type: "v",
+      ipa: "/baʊ/",
+      meaning: "cúi chào",
+      example: "In Japan, people often bow to show respect.",
+      exampleTranslation: "Ở Nhật Bản, người ta thường cúi chào để thể hiện sự tôn trọng."
+    },
+    {
+      word: "captivate",
+      type: "v",
+      ipa: "/'kæptɪveɪt/",
+      meaning: "thu hút, lôi cuốn",
+      example: "The children were captivated by her stories.",
+      exampleTranslation: "Lũ trẻ say mê những câu chuyện của cô."
+    },
+    {
+      word: "celebrate",
+      type: "v",
+      ipa: "/'selɪbreɪt/",
+      meaning: "tổ chức, ăn mừng, đón chào",
+      example: "How do people celebrate New Year in your country?",
+      exampleTranslation: "Mọi người ở quốc gia bạn đón chào năm mới như thế nào?"
+    },
+    {
+      word: "ceremony",
+      type: "n",
+      ipa: "/'serəməni/",
+      meaning: "buổi lễ",
+      example: "The wedding ceremony was very traditional.",
+      exampleTranslation: "Tiệc cưới được tổ chức theo kiểu truyền thống."
+    },
+    {
+      word: "coming-of-age",
+      type: "n",
+      ipa: "/ˌkʌmɪŋ əv 'eɪdʒ/",
+      meaning: "tuổi trưởng thành",
+      example: "The coming-of-age ceremony marks the transition from childhood to adulthood in many cultures.",
+      exampleTranslation: "Lễ trưởng thành đánh dấu sự chuyển tiếp từ tuổi thơ sang tuổi trưởng thành trong nhiều nền văn hoá."
+    },
+    {
+      word: "comprehensive",
+      type: "adj",
+      ipa: "/ˌkɒmprɪ'hensɪv/",
+      meaning: "bao hàm, toàn diện",
+      example: "This is a comprehensive study of cultural practices.",
+      exampleTranslation: "Đây là một nghiên cứu toàn diện về tập quán văn hóa."
+    },
+    {
+      word: "confusion",
+      type: "n",
+      ipa: "/kən'fju:zn/",
+      meaning: "sự bối rối",
+      example: "Different greeting styles often lead to confusion.",
+      exampleTranslation: "Những cách chào hỏi khác nhau thường gây bối rối."
+    },
+    {
+      word: "connected",
+      type: "adj",
+      ipa: "/kə'nektɪd/",
+      meaning: "kết nối",
+      example: "We live in a connected world.",
+      exampleTranslation: "Chúng ta sống trong một thế giới kết nối."
+    },
+    {
+      word: "costume",
+      type: "n",
+      ipa: "/'kostju:m/",
+      meaning: "trang phục",
+      example: "She wore a traditional costume on her wedding.",
+      exampleTranslation: "Cô mặc trang phục truyền thống vào ngày cưới."
+    },
+    {
+      word: "cross-cultural",
+      type: "adj",
+      ipa: "/ˌkrɒs 'kʌltʃərəl/",
+      meaning: "xuyên văn hoá, liên văn hoá",
+      example: "Cross-cultural communication is important in today's globalised world.",
+      exampleTranslation: "Giao tiếp xuyên văn hoá rất quan trọng trong thế giới toàn cầu hóa ngày nay."
+    },
+    {
+      word: "cuisine",
+      type: "n",
+      ipa: "/kwi'zi:n/",
+      meaning: "ẩm thực",
+      example: "London offers a diverse range of international cuisines.",
+      exampleTranslation: "Luân Đôn có nhiều loại ẩm thực quốc tế đa dạng."
+    },
+    {
+      word: "cultural diversity",
+      type: "np",
+      ipa: "/'kʌltʃərəl daɪ'v3:səti/",
+      meaning: "đa dạng văn hoá",
+      example: "Does television adequately reflect the cultural diversity of the country?",
+      exampleTranslation: "Liệu truyền hình phản ánh đầy đủ sự đa dạng văn hoá của quốc gia chưa?"
+    },
+    {
+      word: "culture shock",
+      type: "n",
+      ipa: "/'kʌltʃə ʃɒk/",
+      meaning: "sốc văn hoá",
+      example: "She experienced great culture shock when she first came to Europe.",
+      exampleTranslation: "Cô đã trải qua một cú sốc văn hoá lớn khi lần đầu tới châu Âu."
+    },
+    {
+      word: "custom",
+      type: "n",
+      ipa: "/'kʌstəm/",
+      meaning: "phong tục",
+      example: "It's a local custom.",
+      exampleTranslation: "Đó là một phong tục địa phương."
+    },
+    {
+      word: "delicious = tasty",
+      type: "adj",
+      ipa: "/dɪ'lɪʃəs/ /'teɪsti/",
+      meaning: "ngon miệng",
+      example: "This curry is delicious/tasty.",
+      exampleTranslation: "Món cà-ri này ngon quá."
+    },
+    {
+      word: "discrimination",
+      type: "n",
+      ipa: "/dɪˌskrɪmɪ'neɪʃn/",
+      meaning: "sự phân biệt đối xử",
+      example: "We must fight against all forms of discrimination.",
+      exampleTranslation: "Chúng ta phải chống lại mọi hình thức phân biệt đối xử."
+    },
+    {
+      word: "disgusting",
+      type: "adj",
+      ipa: "/dɪs'ɡʌstɪŋ/",
+      meaning: "kinh tởm",
+      example: "Some people find eating insects disgusting, while in other cultures it is normal.",
+      exampleTranslation: "Một số người thấy việc ăn côn trùng là ghê tởm, trong khi ở các nền văn hoá khác đó là chuyện bình thường."
+    },
+    {
+      word: "dish",
+      type: "n",
+      ipa: "/dɪʃ/",
+      meaning: "món ăn",
+      example: "I decided to cook his favourite dish.",
+      exampleTranslation: "Tôi quyết định nấu món anh ấy thích."
+    },
+    {
+      word: "disrespectful",
+      type: "adj",
+      ipa: "/ˌdɪsrɪ'spektfl/",
+      meaning: "thiếu tôn trọng",
+      example: "Talking loudly in temples is disrespectful.",
+      exampleTranslation: "Nói lớn trong đền chùa là thiếu tôn trọng."
+    },
+    {
+      word: "dynamic",
+      type: "adj",
+      ipa: "/daɪ'næmɪk/",
+      meaning: "năng nổ, luôn thay đổi và tiến bộ",
+      example: "Culture is dynamic and always changing.",
+      exampleTranslation: "Văn hóa luôn phát triển và thay đổi."
+    },
+    {
+      word: "embrace",
+      type: "v",
+      ipa: "/im'breɪs/",
+      meaning: "đón nhận",
+      example: "Many young people embrace modern values while still respecting traditional culture.",
+      exampleTranslation: "Nhiều bạn trẻ đón nhận những giá trị hiện đại nhưng vẫn tôn trọng văn hoá truyền thống."
+    },
+    {
+      word: "ethnic",
+      type: "adj",
+      ipa: "/'eθnɪk/",
+      meaning: "thuộc dân tộc, thuộc tộc người",
+      example: "Vietnam has many ethnic groups.",
+      exampleTranslation: "Việt Nam có nhiều dân tộc."
+    },
+    {
+      word: "ethnocentric",
+      type: "adj",
+      ipa: "/ˌeθnəʊ'sentrɪk/",
+      meaning: "vị chủng, cho dân tộc mình là hơn cả",
+      example: "Being ethnocentric makes it hard to accept other cultures.",
+      exampleTranslation: "Suy nghĩ vị chủng khiến người ta khó chấp nhận văn hóa khác."
+    },
+    {
+      word: "etiquette",
+      type: "n",
+      ipa: "/'etɪkət/ /'etɪket/",
+      meaning: "quy tắc ứng xử, nghi thức",
+      example: "Table etiquette is an important part of Japanese culture.",
+      exampleTranslation: "Quy tắc ứng xử trên bàn ăn là một phần quan trọng của văn hoá Nhật Bản."
+    },
+    {
+      word: "expect",
+      type: "v",
+      ipa: "/ɪk'spekt/",
+      meaning: "mong chờ, mong đợi",
+      example: "In many cultures, people expect guests to remove their shoes before entering the house.",
+      exampleTranslation: "Trong nhiều nền văn hoá, người ta mong đợi khách cởi giày trước khi vào nhà."
+    }
+  ],
   ourEnvironment: [],
   ourFuture: []
 };

@@ -57,12 +57,15 @@
           <span id="life-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Tiến độ: 0%</span>
         </div>
 
-        <!-- Topic 2: OUR SOCIETY (Locked) -->
-        <div class="topic-card locked" data-topic="ourSociety" onclick="showLockedAlert('OUR SOCIETY')">
+        <!-- Topic 2: OUR SOCIETY (Active) -->
+        <div class="topic-card" data-topic="ourSociety" onclick="selectTopic('ourSociety')">
           <span class="topic-icon">👥</span>
           <h3 class="topic-title">OUR SOCIETY</h3>
-          <p class="topic-meta">Các chủ đề về cộng đồng, xã hội và văn hóa xã hội.</p>
-          <span class="lock-badge">🔒 Sắp ra mắt</span>
+          <p class="topic-meta">36 Từ vựng về cộng đồng, xã hội và văn hóa xã hội.</p>
+          <div class="topic-progress-container">
+            <div id="society-progress-fill" class="topic-progress-fill"></div>
+          </div>
+          <span id="society-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Tiến độ: 0%</span>
         </div>
 
         <!-- Topic 3: OUR ENVIRONMENT (Locked) -->
@@ -483,21 +486,49 @@
       // XP
       document.getElementById('global-xp').innerText = `${progress.xp} XP`;
       
-      // Learned count
-      const totalWords = vocabularyData.ourLife.length;
-      let learnedCount = 0;
-      vocabularyData.ourLife.forEach(w => {
-        if (progress.learned[`ourLife_${w.word}`]) {
-          learnedCount++;
+      let totalWords = 0;
+      let totalLearnedCount = 0;
+      
+      // Topics to process dynamically
+      const topics = [
+        { id: 'ourLife', progressFillId: 'life-progress-fill', progressTextId: 'life-progress-text' },
+        { id: 'ourSociety', progressFillId: 'society-progress-fill', progressTextId: 'society-progress-text' },
+        { id: 'ourEnvironment', progressFillId: 'environment-progress-fill', progressTextId: 'environment-progress-text' },
+        { id: 'ourFuture', progressFillId: 'future-progress-fill', progressTextId: 'future-progress-text' }
+      ];
+      
+      topics.forEach(topic => {
+        const words = vocabularyData[topic.id] || [];
+        const count = words.length;
+        
+        if (count > 0) {
+          let learnedCount = 0;
+          words.forEach(w => {
+            if (progress.learned[`${topic.id}_${w.word}`]) {
+              learnedCount++;
+            }
+          });
+          
+          totalWords += count;
+          totalLearnedCount += learnedCount;
+          
+          // Update topic-specific progress bar if exists in DOM
+          const fillEl = document.getElementById(topic.progressFillId);
+          const textEl = document.getElementById(topic.progressTextId);
+          
+          if (fillEl && textEl) {
+            const pct = Math.round((learnedCount / count) * 100);
+            fillEl.style.width = `${pct}%`;
+            textEl.innerText = `Tiến độ: ${pct}% (${learnedCount}/${count})`;
+          }
         }
       });
-      document.getElementById('global-learned-count').innerText = `${learnedCount}/${totalWords}`;
+      
+      // If we don't have any words yet (shouldn't happen for ourLife)
+      if (totalWords === 0) totalWords = vocabularyData.ourLife.length;
+      
+      document.getElementById('global-learned-count').innerText = `${totalLearnedCount}/${totalWords}`;
       document.getElementById('global-streak').innerText = `${progress.streak}`;
-
-      // Progress bar for Topic OUR LIFE
-      const pct = totalWords > 0 ? Math.round((learnedCount / totalWords) * 100) : 0;
-      document.getElementById('life-progress-fill').style.width = `${pct}%`;
-      document.getElementById('life-progress-text').innerText = `Tiến độ: ${pct}% (${learnedCount}/${totalWords})`;
     }
 
     function checkStreak() {
@@ -550,8 +581,11 @@
       currentTopic = topic;
       
       // Update header badges
-      const topicNameText = topic === 'ourLife' ? 'OUR LIFE' : topic;
+      const topicNameText = topic === 'ourLife' ? 'OUR LIFE' : (topic === 'ourSociety' ? 'OUR SOCIETY' : (topic === 'ourEnvironment' ? 'OUR ENVIRONMENT' : 'OUR FUTURE'));
       document.getElementById('mode-topic-badge').innerText = topicNameText;
+      
+      const badge = document.getElementById('mode-topic-badge');
+      badge.className = `current-topic-badge badge-${topic}`;
 
       document.getElementById('dashboard-screen').style.display = 'none';
       document.getElementById('mode-screen').style.display = 'block';
@@ -588,6 +622,23 @@
         goToDashboard();
         return;
       }
+
+      // Dynamic theme colors for progress fills
+      const themeColors = {
+        ourLife: '#8b5cf6',
+        ourSociety: '#3b82f6',
+        ourEnvironment: '#14b8a6',
+        ourFuture: '#ec4899'
+      };
+      
+      const color = themeColors[currentTopic] || '#8b5cf6';
+      
+      // Apply color to progress fills
+      const quizFill = document.getElementById('quiz-progress-fill');
+      if (quizFill) quizFill.style.backgroundColor = color;
+      
+      const spellingFill = document.getElementById('spelling-progress-fill');
+      if (spellingFill) spellingFill.style.backgroundColor = color;
 
       if (mode === 'flashcard') {
         cardFilter = 'all';

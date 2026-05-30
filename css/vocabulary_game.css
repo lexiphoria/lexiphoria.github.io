@@ -306,6 +306,24 @@ h1 {
   border: 1px solid rgba(139, 92, 246, 0.4);
 }
 
+.badge-ourSociety {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+.badge-ourEnvironment {
+  background: rgba(20, 184, 166, 0.15);
+  color: #2dd4bf;
+  border: 1px solid rgba(20, 184, 166, 0.4);
+}
+
+.badge-ourFuture {
+  background: rgba(236, 72, 153, 0.15);
+  color: #f472b6;
+  border: 1px solid rgba(236, 72, 153, 0.4);
+}
+
 .modes-grid {
   display: grid;
   grid-template-columns: 1fr;

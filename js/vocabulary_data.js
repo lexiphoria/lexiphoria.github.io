@@ -895,6 +895,326 @@ const vocabularyData = {
       meaning: "khắc nghiệt",
       example: "The desert had harsh weather during our tour.",
       exampleTranslation: "Thời tiết ở sa mạc rất khắc nghiệt trong chuyến đi của chúng tôi."
+    },
+    {
+      word: "hilarious",
+      type: "adj",
+      ipa: "/hɪˈleəriəs/",
+      meaning: "vui nhộn, buồn cười",
+      example: "The travel guide told a hilarious story.",
+      exampleTranslation: "Hướng dẫn viên du lịch kể một câu chuyện vui nhộn."
+    },
+    {
+      word: "house swap",
+      type: "n",
+      ipa: "/haʊs swɒp/",
+      meaning: "sự hoán đổi nhà tạm thời",
+      example: "We did a house swap with a family in Italy.",
+      exampleTranslation: "Chúng tôi đã hoán đổi nhà với một gia đình ở Ý."
+    },
+    {
+      word: "humid",
+      type: "adj",
+      ipa: "/ˈhjuːmɪd/",
+      meaning: "ẩm",
+      example: "It was hot and humid at the beach.",
+      exampleTranslation: "Trời nóng và ẩm ở bãi biển."
+    },
+    {
+      word: "inaccessible",
+      type: "adj",
+      ipa: "/ˌɪnækˈsesəbl/",
+      meaning: "không thể đến gần, tiếp cận được",
+      example: "That beach is inaccessible without a boat.",
+      exampleTranslation: "Bãi biển đó không thể tiếp cận nếu không có thuyền."
+    },
+    {
+      word: "inconvenience",
+      type: "v",
+      ipa: "/ˌɪnkənˈviːniəns/",
+      meaning: "gây ra sự phiền toái cho ai",
+      example: "We were inconvenienced by the flight delay.",
+      exampleTranslation: "Chúng tôi bị bất tiện vì chuyến bay bị hoãn."
+    },
+    {
+      word: "insurance",
+      type: "n",
+      ipa: "/inˈʃʊərəns/",
+      meaning: "bảo hiểm",
+      example: "We bought travel insurance before the holiday.",
+      exampleTranslation: "Chúng tôi đã mua bảo hiểm du lịch trước kỳ nghỉ."
+    },
+    {
+      word: "iron",
+      type: "n",
+      ipa: "/ˈaɪən/",
+      meaning: "bàn ủi",
+      example: "There's an iron in the hotel room.",
+      exampleTranslation: "Có một bàn là trong phòng khách sạn."
+    },
+    {
+      word: "operate",
+      type: "v",
+      ipa: "/ˈɒpəreɪt/",
+      meaning: "điều khiển, vận hành",
+      example: "He knows how to operate the camera.",
+      exampleTranslation: "Anh ấy biết cách sử dụng máy ảnh."
+    },
+    {
+      word: "overjoyed",
+      type: "adj",
+      ipa: "/ˌəʊvəˈdʒɔɪd/",
+      meaning: "vui mừng khôn xiết",
+      example: "We were overjoyed to see the beach.",
+      exampleTranslation: "Chúng tôi rất vui sướng khi nhìn thấy bãi biển."
+    },
+    {
+      word: "package holiday",
+      type: "n",
+      ipa: "/ˈpækɪdʒ ˌhɒlədeɪ/",
+      meaning: "kỳ nghỉ trọn gói",
+      example: "They booked a package holiday to Thailand.",
+      exampleTranslation: "Họ đã đặt một kỳ nghỉ trọn gói tới Thái Lan."
+    },
+    {
+      word: "pamper",
+      type: "v",
+      ipa: "/ˈpæmpə(r)/",
+      meaning: "chiều chuộng, nuông chiều",
+      example: "She went to a spa to pamper herself.",
+      exampleTranslation: "Cô ấy đến spa để nuông chiều bản thân."
+    },
+    {
+      word: "remote",
+      type: "adj",
+      ipa: "/rɪˈməʊt/",
+      meaning: "xa xôi, hẻo lánh",
+      example: "They visited a remote village in the mountains.",
+      exampleTranslation: "Họ đến thăm một ngôi làng hẻo lánh trên núi."
+    },
+    {
+      word: "reserve",
+      type: "v",
+      ipa: "/rɪˈzɜːv/",
+      meaning: "đặt chỗ trước",
+      example: "I want to reserve a room for two nights.",
+      exampleTranslation: "Tôi muốn đặt trước một phòng cho hai đêm."
+    },
+    {
+      word: "room service",
+      type: "n",
+      ipa: "/ˈruːm ˌsɜːvɪs/",
+      meaning: "dịch vụ phòng",
+      example: "We ordered lunch through room service.",
+      exampleTranslation: "Chúng tôi đã gọi bữa trưa qua dịch vụ phòng."
+    },
+    {
+      word: "safe",
+      type: "n",
+      ipa: "/seɪf/",
+      meaning: "két sắt",
+      example: "Put your passport in the hotel safe.",
+      exampleTranslation: "Hãy để hộ chiếu trong két sắt của khách sạn."
+    },
+    {
+      word: "self-catering apartment",
+      type: "n",
+      ipa: "/ˌself ˈkeɪtərɪŋ əˈpɑːtmənt/",
+      meaning: "căn hộ tự phục vụ",
+      example: "We rented a self-catering apartment by the beach.",
+      exampleTranslation: "Chúng tôi thuê một căn hộ tự phục vụ gần biển."
+    },
+    {
+      word: "snatch",
+      type: "v",
+      ipa: "/snætʃ/",
+      meaning: "giật lấy",
+      example: "A man tried to snatch her bag at the market.",
+      exampleTranslation: "Một người đàn ông đã cố giật túi cô ấy ở chợ."
+    },
+    {
+      word: "spot",
+      type: "n",
+      ipa: "/spɒt/",
+      meaning: "chỗ, địa điểm",
+      example: "This is a great spot for camping.",
+      exampleTranslation: "Đây là một địa điểm tuyệt vời để cắm trại."
+    },
+    {
+      word: "stunning",
+      type: "adj",
+      ipa: "/ˈstʌnɪŋ/",
+      meaning: "đẹp đẽ",
+      example: "The beach had stunning views of the sunset.",
+      exampleTranslation: "Bãi biển có khung cảnh hoàng hôn tuyệt đẹp."
+    },
+    {
+      word: "swipe",
+      type: "v",
+      ipa: "/swaɪp/",
+      meaning: "quẹt (thẻ)",
+      example: "Swipe your card to enter the room.",
+      exampleTranslation: "Quẹt thẻ để vào phòng."
+    },
+    {
+      word: "terrified",
+      type: "adj",
+      ipa: "/ˈterɪfaɪd/",
+      meaning: "khiếp sợ",
+      example: "She was terrified during the storm at sea.",
+      exampleTranslation: "Cô ấy rất sợ trong cơn bão ngoài biển."
+    },
+    {
+      word: "time-share apartment",
+      type: "n",
+      ipa: "/ˈtaɪm ʃeə(r) əˈpɑːtmənt/",
+      meaning: "căn hộ nghỉ dưỡng chia sẻ thời gian thuê",
+      example: "They own a time-share apartment in Spain.",
+      exampleTranslation: "Họ sở hữu một căn hộ nghỉ dưỡng theo thời gian ở Tây Ban Nha."
+    },
+    {
+      word: "travel sickness",
+      type: "n",
+      ipa: "/ˈtrævl ˌsɪknəs/",
+      meaning: "say xe",
+      example: "She felt travel sickness on the long bus ride.",
+      exampleTranslation: "Cô ấy bị say xe trong chuyến đi xe buýt dài."
+    },
+    {
+      word: "tread",
+      type: "v",
+      ipa: "/tred/",
+      meaning: "đặt chân, đi",
+      example: "Be careful where you tread on the mountain trail.",
+      exampleTranslation: "Hãy cẩn thận chỗ bạn bước đi trên đường mòn núi."
+    },
+    {
+      word: "uninhabited",
+      type: "adj",
+      ipa: "/ˌʌnɪnˈhæbɪtɪd/",
+      meaning: "không có người ở",
+      example: "We visited an uninhabited island during the boat tour.",
+      exampleTranslation: "Chúng tôi đã tham quan một hòn đảo hoang trong chuyến đi thuyền."
+    },
+    {
+      word: "unspoilt",
+      type: "adj",
+      ipa: "/ˌʌnˈspɔɪlt/",
+      meaning: "vẫn còn nguyên sơ",
+      example: "We loved the unspoilt nature of the island.",
+      exampleTranslation: "Chúng tôi rất thích vẻ thiên nhiên hoang sơ của hòn đảo."
+    },
+    {
+      word: "valuables",
+      type: "n",
+      ipa: "/ˈvæljuəblz/",
+      meaning: "những đồ có giá trị",
+      example: "Keep your valuables in the hotel safe.",
+      exampleTranslation: "Hãy giữ đồ quý giá trong két sắt khách sạn."
+    },
+    {
+      word: "youth hostel",
+      type: "n",
+      ipa: "/ˈjuːθ ˌhɒstl/",
+      meaning: "nhà nghỉ giá rẻ thường dành cho người trẻ đi du lịch",
+      example: "We stayed at a youth hostel to save money.",
+      exampleTranslation: "Chúng tôi ở nhà trọ dành cho thanh niên để tiết kiệm tiền."
+    },
+    {
+      word: "gem",
+      type: "n",
+      ipa: "/dʒem/",
+      meaning: "viên ngọc, nơi đẹp và đặc biệt",
+      example: "This small village is a hidden gem that few tourists know about.",
+      exampleTranslation: "Ngôi làng nhỏ này là một viên ngọc ẩn mà ít du khách biết đến."
+    },
+    {
+      word: "paradise",
+      type: "n",
+      ipa: "/ˈpærədaɪs/",
+      meaning: "thiên đường",
+      example: "The island was like a paradise with clear water and white sand.",
+      exampleTranslation: "Hòn đảo giống như thiên đường với nước trong và cát trắng."
+    },
+    {
+      word: "getaway",
+      type: "n",
+      ipa: "/ˈɡetəweɪ/",
+      meaning: "chuyến đi chơi ngắn",
+      example: "We planned a weekend getaway to the mountains.",
+      exampleTranslation: "Chúng tôi đã lên kế hoạch cho một chuyến đi nghỉ cuối tuần ở vùng núi."
+    },
+    {
+      word: "authentic",
+      type: "adj",
+      ipa: "/ɔːˈθentɪk/",
+      meaning: "chân thực, nguyên bản",
+      example: "We ate authentic Italian food at a small restaurant in Rome.",
+      exampleTranslation: "Chúng tôi đã ăn món Ý đúng chất tại một nhà hàng nhỏ ở Rome."
+    },
+    {
+      word: "broaden one's horizons",
+      type: "phrase",
+      ipa: "/ˈbrɔːdn wʌnz həˈraɪznz/",
+      meaning: "mở mang tầm mắt",
+      example: "Travelling abroad really broadened my horizons.",
+      exampleTranslation: "Du lịch nước ngoài thực sự đã mở mang tầm mắt của tôi."
+    },
+    {
+      word: "come across",
+      type: "phrase",
+      ipa: "/kʌm əˈkrɒs/",
+      meaning: "tình cờ bắt gặp",
+      example: "I came across a lovely café by the river.",
+      exampleTranslation: "Tôi tình cờ bắt gặp một quán cà phê dễ thương bên sông."
+    },
+    {
+      word: "get around",
+      type: "phrase",
+      ipa: "/ɡet əˈraʊnd/",
+      meaning: "di chuyển, đi lại",
+      example: "It's easy to get around the city by bus.",
+      exampleTranslation: "Di chuyển trong thành phố bằng xe buýt rất dễ dàng."
+    },
+    {
+      word: "get away from it all",
+      type: "phrase",
+      ipa: "/ɡet əˈweɪ frəm ɪt ɔːl/",
+      meaning: "nghĩa ngơi thư giãn",
+      example: "We booked a cabin in the forest to get away from it all.",
+      exampleTranslation: "Chúng tôi đã đặt một căn nhà gỗ trong rừng để nghỉ ngơi thư giãn."
+    },
+    {
+      word: "go sightseeing",
+      type: "phrase",
+      ipa: "/ɡəʊ ˈsaɪtˌsiːɪŋ/",
+      meaning: "đi ngắm cảnh",
+      example: "We went sightseeing around the old city.",
+      exampleTranslation: "Chúng tôi đã đi ngắm cảnh quanh khu phố cổ."
+    },
+    {
+      word: "off the beaten track",
+      type: "phrase",
+      ipa: "/ɒf ðə ˈbiːtn træk/",
+      meaning: "ở nơi hẻo lánh, ít người qua lại",
+      example: "They love staying in places off the beaten track.",
+      exampleTranslation: "Họ thích ở những nơi hẻo lánh, ít người biết đến."
+    },
+    {
+      word: "pick up",
+      type: "phrase",
+      ipa: "/pɪk ʌp/",
+      meaning: "học (ngôn ngữ hoặc kỹ năng)",
+      example: "I picked up some Spanish during my trip to Mexico.",
+      exampleTranslation: "Tôi đã học được một chút tiếng Tây Ban Nha trong chuyến đi tới Mexico."
+    },
+    {
+      word: "pull up",
+      type: "phrase",
+      ipa: "/pʊl ʌp/",
+      meaning: "dừng lại",
+      example: "The car pulled up at the hotel entrance.",
+      exampleTranslation: "Chiếc xe dừng lại trước cổng khách sạn."
     }
   ],
   ourSociety: [],

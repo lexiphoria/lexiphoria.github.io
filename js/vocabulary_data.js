@@ -1505,6 +1505,278 @@ const vocabularyData = {
       meaning: "mong chờ, mong đợi",
       example: "In many cultures, people expect guests to remove their shoes before entering the house.",
       exampleTranslation: "Trong nhiều nền văn hoá, người ta mong đợi khách cởi giày trước khi vào nhà."
+    },
+    {
+      word: "exploitative",
+      type: "adj",
+      ipa: "/ɪkˈsplɔɪtətɪv/",
+      meaning: "bóc lột",
+      example: "Some critics say that turning sacred rituals into tourist shows is exploitative.",
+      exampleTranslation: "Một số nhà phê bình cho rằng việc biến các nghi lễ linh thiêng thành các buổi biểu diễn du lịch là mang tính bóc lột."
+    },
+    {
+      word: "exposure",
+      type: "n",
+      ipa: "/ɪkˈspəʊʒə(r)/",
+      meaning: "sự tiếp xúc",
+      example: "Travel increases your exposure to new cultures.",
+      exampleTranslation: "Du lịch giúp bạn tiếp xúc với các nền văn hóa mới."
+    },
+    {
+      word: "extracurricular",
+      type: "adj",
+      ipa: "/ˌekstrəkəˈrɪkjələ(r)/",
+      meaning: "ngoại khóa",
+      example: "Students are encouraged to take part in extracurricular activities.",
+      exampleTranslation: "Học sinh được khuyến khích tham gia các hoạt động ngoại khoá."
+    },
+    {
+      word: "fascinating",
+      type: "adj",
+      ipa: "/ˈfæsɪneɪtɪŋ/",
+      meaning: "hấp dẫn, thú vị",
+      example: "Japanese tea ceremonies are fascinating cultural traditions.",
+      exampleTranslation: "Nhiều người coi nghi lễ trà đạo của Nhật Bản là một nét truyền thống văn hoá hấp dẫn."
+    },
+    {
+      word: "feast",
+      type: "n",
+      ipa: "/fiːst/",
+      meaning: "bữa tiệc lớn, đặc biệt",
+      example: "The cooks were busy preparing the wedding feast.",
+      exampleTranslation: "Các đầu bếp đang bận rộn chuẩn bị tiệc cưới."
+    },
+    {
+      word: "festivity",
+      type: "n",
+      ipa: "/fe'stɪvəti/",
+      meaning: "ngày hội",
+      example: "A number of celebrities will be flying in to take part in the festivities.",
+      exampleTranslation: "Nhiều người nổi tiếng sẽ bay tới để tham gia vào các hoạt động trong ngày hội."
+    },
+    {
+      word: "figure",
+      type: "n",
+      ipa: "/ˈfɪɡə(r)/",
+      meaning: "nhân vật",
+      example: "Saint Giong is a legendary figure in Vietnamese culture, symbolising the spirit of fighting against invaders.",
+      exampleTranslation: "Thánh Gióng là một nhân vật huyền thoại trong văn hoá Việt Nam, tượng trưng cho tinh thần chống giặc ngoại xâm."
+    },
+    {
+      word: "folk",
+      type: "adj",
+      ipa: "/fəʊk/",
+      meaning: "thuộc dân gian",
+      example: "They sang a popular folk song.",
+      exampleTranslation: "Họ hát một bài dân ca phổ biến."
+    },
+    {
+      word: "foster",
+      type: "v",
+      ipa: "/ˈfɒstə(r)/",
+      meaning: "thúc đẩy, nuôi dưỡng",
+      example: "Teachers should foster respect for different cultures.",
+      exampleTranslation: "Giáo viên cần nuôi dưỡng sự tôn trọng các nền văn hóa khác nhau."
+    },
+    {
+      word: "globalisation",
+      type: "n",
+      ipa: "/ˌɡləʊbəlaɪˈzeɪʃn/",
+      meaning: "toàn cầu hoá",
+      example: "Optimists say globalisation means more cultural choices for everyone.",
+      exampleTranslation: "Những người theo chủ nghĩa tích cực cho rằng toàn cầu hoá mang lại nhiều lựa chọn về văn hoá hơn cho mọi người."
+    },
+    {
+      word: "gratitude",
+      type: "n",
+      ipa: "/ˈɡrætɪtjuːd/",
+      meaning: "lòng biết ơn",
+      example: "He showed gratitude by helping others.",
+      exampleTranslation: "Anh ấy thể hiện lòng biết ơn bằng cách giúp đỡ người khác."
+    },
+    {
+      word: "honour",
+      type: "v",
+      ipa: "/ˈɒnə(r)/",
+      meaning: "tôn vinh",
+      example: "People wear traditional clothes to honour their cultural heritage.",
+      exampleTranslation: "Mọi người mặc trang phục truyền thống để tôn vinh di sản văn hoá của mình."
+    },
+    {
+      word: "identity",
+      type: "n",
+      ipa: "/aɪˈdentəti/",
+      meaning: "bản sắc, đặc điểm nhận dạng",
+      example: "The people have a strong sense of national identity.",
+      exampleTranslation: "Người dân có tinh thần bản sắc dân tộc mạnh mẽ."
+    },
+    {
+      word: "inclusive",
+      type: "adj",
+      ipa: "/ɪnˈkluːsɪv/",
+      meaning: "bao trùm, không loại trừ",
+      example: "Festivals should be inclusive so that people from all cultures feel welcome.",
+      exampleTranslation: "Các lễ hội nên mang tính bao trùm, để mọi người từ mọi nền văn hoá đều cảm thấy được chào đón."
+    },
+    {
+      word: "ingredient",
+      type: "n",
+      ipa: "/ɪnˈɡriːdiənt/",
+      meaning: "nguyên liệu, thành phần",
+      example: "Mix all the ingredients in a bowl.",
+      exampleTranslation: "Hãy trộn tất cả các nguyên liệu vào trong một cái bát."
+    },
+    {
+      word: "insult",
+      type: "v/n",
+      ipa: "/ɪnˈsʌlt/ /ˈɪn.sʌlt/",
+      meaning: "lăng mạ; lời lăng mạ",
+      example: "He insulted her by laughing at her accent. He took it as a personal insult.",
+      exampleTranslation: "Anh ta xúc phạm cô ấy bằng cách cười nhạo giọng nói. Anh ấy xem đó là một sự xúc phạm cá nhân."
+    },
+    {
+      word: "insulting",
+      type: "adj",
+      ipa: "/ɪnˈsʌltɪŋ/",
+      meaning: "xúc phạm",
+      example: "Her tone was deliberately insulting.",
+      exampleTranslation: "Giọng cô ấy cố tình xúc phạm."
+    },
+    {
+      word: "job-hop",
+      type: "v",
+      ipa: "/ˈdʒɒb.hɒp/",
+      meaning: "nhảy việc",
+      example: "Young people often job-hop to find better opportunities.",
+      exampleTranslation: "Người trẻ thường nhảy việc để tìm cơ hội tốt hơn."
+    },
+    {
+      word: "language barrier",
+      type: "n",
+      ipa: "/ˈlæŋɡwɪdʒ ˌbæriə(r)/",
+      meaning: "rào cản ngôn ngữ",
+      example: "The language barrier didn't prevent them from having a romantic relationship.",
+      exampleTranslation: "Rào cản ngôn ngữ không ngăn họ có được một mối quan hệ tình cảm."
+    },
+    {
+      word: "lifestyle",
+      type: "n",
+      ipa: "/ˈlaɪfstaɪl/",
+      meaning: "lối sống",
+      example: "Many people are trying to adopt a healthy lifestyle these days.",
+      exampleTranslation: "Nhiều người ngày nay đang cố gắng theo đuổi những thói quen sống lành mạnh."
+    },
+    {
+      word: "longevity celebration",
+      type: "n",
+      ipa: "/lɒnˈdʒevəti ˌselɪˈbreɪʃn/",
+      meaning: "lễ mừng thọ",
+      example: "They held a longevity celebration for their grandfather.",
+      exampleTranslation: "Họ tổ chức lễ mừng thọ cho ông."
+    },
+    {
+      word: "manners",
+      type: "n",
+      ipa: "/ˈmænəz/",
+      meaning: "cách xử sự lịch thiệp",
+      example: "It is bad manners to talk with your mouth full.",
+      exampleTranslation: "Việc nói chuyện khi trong miệng vẫn còn thức ăn bị coi là bất lịch sự."
+    },
+    {
+      word: "mark",
+      type: "v",
+      ipa: "/mɑːk/",
+      meaning: "đánh dấu",
+      example: "This day marks the end of the festival.",
+      exampleTranslation: "Ngày này đánh dấu sự kết thúc của lễ hội."
+    },
+    {
+      word: "melting pot",
+      type: "n",
+      ipa: "/ˈmeltɪŋ pɒt/",
+      meaning: "nơi đa dạng văn hoá",
+      example: "New York is a melting pot of cultures.",
+      exampleTranslation: "New York là nơi giao thoa của nhiều nền văn hóa."
+    },
+    {
+      word: "mistreatment",
+      type: "n",
+      ipa: "/ˌmɪsˈtriːtmənt/",
+      meaning: "sự ngược đãi",
+      example: "Mistreatment of any group should not be allowed.",
+      exampleTranslation: "Đối xử tệ với bất kỳ nhóm nào cũng không nên được chấp nhận."
+    },
+    {
+      word: "multicultural",
+      type: "adj",
+      ipa: "/ˌmʌltiˈkʌltʃərəl/",
+      meaning: "đa văn hoá",
+      example: "We live in a multicultural society.",
+      exampleTranslation: "Chúng tôi sống trong một xã hội đa văn hoá."
+    },
+    {
+      word: "mystery",
+      type: "n",
+      ipa: "/ˈmɪstri/",
+      meaning: "điều bí ẩn",
+      example: "It remains a mystery as to where he was buried.",
+      exampleTranslation: "Việc ông được chôn cất ở đâu vẫn còn là điều bí ẩn."
+    },
+    {
+      word: "name-calling",
+      type: "n",
+      ipa: "/ˈneɪm ˌkɔːlɪŋ/",
+      meaning: "bôi nhọ",
+      example: "Name-calling can hurt people's feelings.",
+      exampleTranslation: "Bôi nhọ có thể làm tổn thương người khác."
+    },
+    {
+      word: "norm",
+      type: "n",
+      ipa: "/nɔːm/",
+      meaning: "chuẩn mực",
+      example: "Shaking hands is a social norm in many cultures.",
+      exampleTranslation: "Bắt tay là một chuẩn mực xã hội trong nhiều nền văn hoá."
+    },
+    {
+      word: "noticeable",
+      type: "adj",
+      ipa: "/ˈnəʊtɪsəbl/",
+      meaning: "dễ thấy",
+      example: "There's a noticeable difference between the two customs.",
+      exampleTranslation: "Có một sự khác biệt rõ ràng giữa hai phong tục."
+    },
+    {
+      word: "occasion",
+      type: "n",
+      ipa: "/əˈkeɪʒn/",
+      meaning: "dịp",
+      example: "I only wear my silk dress on special occasions.",
+      exampleTranslation: "Tôi chỉ mặc chiếc váy lụa vào những dịp đặc biệt."
+    },
+    {
+      word: "offering",
+      type: "n",
+      ipa: "/ˈɒfərɪŋ/",
+      meaning: "vật phẩm, lễ phẩm",
+      example: "They brought fruit as an offering.",
+      exampleTranslation: "Họ mang trái cây làm lễ vật."
+    },
+    {
+      word: "origin",
+      type: "n",
+      ipa: "/ˈɒrɪdʒɪn/",
+      meaning: "nguồn gốc",
+      example: "This particular custom has its origins in Wales.",
+      exampleTranslation: "Phong tục đặc trưng này có nguồn gốc ở Wales."
+    },
+    {
+      word: "overcome",
+      type: "v",
+      ipa: "/ˌəʊvəˈkʌm/",
+      meaning: "vượt qua",
+      example: "He finally managed to overcome his fear of flying.",
+      exampleTranslation: "Anh ấy cuối cùng cũng vượt qua được nỗi sợ bay."
     }
   ],
   ourEnvironment: [],

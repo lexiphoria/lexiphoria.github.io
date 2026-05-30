@@ -1780,5 +1780,807 @@ const vocabularyData = {
     }
   ],
   ourEnvironment: [],
-  ourFuture: []
+  ourFuture: [],
+  phrasalVerbs: [
+        {
+            "word": "break down",
+            "type": "phrase",
+            "ipa": "/breɪk daʊn/",
+            "meaning": "chia nhỏ, phân tích thành các phần nhỏ để dễ hiểu hơn",
+            "example": "To assemble the furniture, he had to break down the instructions into smaller steps, ensuring each part was correctly assembled.",
+            "exampleTranslation": "Để lắp ráp đồ nội thất, anh ấy phải chia nhỏ hướng dẫn thành các bước nhỏ hơn, đảm bảo mỗi phần được lắp ráp đúng cách."
+        },
+        {
+            "word": "set up",
+            "type": "phrase",
+            "ipa": "/set ʌp/",
+            "meaning": "dựng lên, thiết lập (quầy hàng, hệ thống, công ty, v.v.)",
+            "example": "Emily set up a lemonade stand in her driveway to raise money for a local animal shelter.",
+            "exampleTranslation": "Emily đã dựng lên một quầy nước chanh ở lối vào nhà để gây quỹ cho trại động vật địa phương."
+        },
+        {
+            "word": "take out",
+            "type": "phrase",
+            "ipa": "/teɪk aʊt/",
+            "meaning": "lấy ra, nhổ ra (răng, vật)",
+            "example": "Tom had to go to the dentist to take out his decayed tooth, which had been causing him pain.",
+            "exampleTranslation": "Tom phải đến nha sĩ để nhổ chiếc răng sâu, cái đã khiến anh ấy đau đớn."
+        },
+        {
+            "word": "cut in",
+            "type": "phrase",
+            "ipa": "/kʌt ɪn/",
+            "meaning": "chen ngang, ngắt lời ai khi họ đang nói",
+            "example": "It was tactless of John to cut in while Mary was speaking about her achievement.",
+            "exampleTranslation": "John thật thiếu tế nhị khi chen ngang lúc Mary đang nói về thành tích của cô ấy."
+        },
+        {
+            "word": "put on",
+            "type": "phrase",
+            "ipa": "/pʊt ɒn/",
+            "meaning": "đeo vào, mặc vào (kính, quần áo)",
+            "example": "Tyler put on her glasses to see better while reading her favorite book before bedtime.",
+            "exampleTranslation": "Tyler đã đeo vào kính của cô để nhìn rõ hơn khi đọc cuốn sách yêu thích trước khi đi ngủ."
+        },
+        {
+            "word": "look down on",
+            "type": "phrase",
+            "ipa": "/lʊk daʊn ɒn/",
+            "meaning": "coi thường, khinh thường",
+            "example": "Sarah felt hurt when her classmates started to look down on her after she failed the exam.",
+            "exampleTranslation": "Sarah cảm thấy tổn thương khi bạn cùng lớp bắt đầu coi thường cô sau khi cô trượt kỳ thi."
+        },
+        {
+            "word": "cut down",
+            "type": "phrase",
+            "ipa": "/kʌt daʊn/",
+            "meaning": "chặt, đốn (cây); cắt giảm",
+            "example": "To make space for the new playground, the workers had to cut down trees, but they promised to plant more later.",
+            "exampleTranslation": "Để có chỗ cho sân chơi mới, công nhân phải chặt một số cây, nhưng họ hứa sẽ trồng thêm sau đó."
+        },
+        {
+            "word": "broke in",
+            "type": "phrase",
+            "ipa": "/broʊk ɪn/",
+            "meaning": "đột nhập (bất hợp pháp)",
+            "example": "The burglars broke in through the window, stealing valuables and leaving a mess behind, causing distress to the homeowners.",
+            "exampleTranslation": "Những tên trộm đã đột nhập qua cửa sổ, lấy đồ quý giá và để lại một mớ hỗn độn khiến chủ nhà hoảng sợ."
+        },
+        {
+            "word": "fill in",
+            "type": "phrase",
+            "ipa": "/fɪl ɪn/",
+            "meaning": "làm thay ai đó, điền vào",
+            "example": "David will fill in for his colleague Peter at the meeting tomorrow to discuss the project updates.",
+            "exampleTranslation": "David sẽ làm thay cho đồng nghiệp Peter trong cuộc họp ngày mai để trình bày cập nhật dự án."
+        },
+        {
+            "word": "bring forward",
+            "type": "phrase",
+            "ipa": "/brɪŋ ˈfɔːwəd/",
+            "meaning": "đẩy lịch sớm lên",
+            "example": "The president decided to bring forward the meeting to discuss urgent matters facing the nation.",
+            "exampleTranslation": "Tổng thống quyết định đẩy sớm cuộc họp để thảo luận các vấn đề cấp bách của đất nước."
+        },
+        {
+            "word": "carried away",
+            "type": "phrase",
+            "ipa": "/ˈkærid əˈweɪ/",
+            "meaning": "bị cuốn theo, quá phấn khích/quá đà đến mức mất kiểm soát",
+            "example": "During the game, he got carried away with excitement and accidentally knocked over the board.",
+            "exampleTranslation": "Trong lúc chơi, anh ấy đã bị cuốn theo vì phấn khích và vô tình làm đổ bàn cờ."
+        },
+        {
+            "word": "hand out",
+            "type": "phrase",
+            "ipa": "/hænd aʊt/",
+            "meaning": "phát ra, phân phát",
+            "example": "The teacher will hand out worksheets for the students to complete during class today.",
+            "exampleTranslation": "Giáo viên sẽ phát các phiếu bài tập để học sinh làm trong giờ học hôm nay."
+        },
+        {
+            "word": "came forward",
+            "type": "phrase",
+            "ipa": "/keɪm ˈfɔːwəd/",
+            "meaning": "ra mặt, trình diện (để cung cấp thông tin)",
+            "example": "The witness came forward with new evidence, helping the police solve the case more quickly and efficiently.",
+            "exampleTranslation": "Nhân chứng đã ra mặt với bằng chứng mới, giúp cảnh sát giải quyết vụ án nhanh chóng và hiệu quả hơn."
+        },
+        {
+            "word": "stand out",
+            "type": "phrase",
+            "ipa": "/stænd aʊt/",
+            "meaning": "nổi bật, dễ nhận thấy",
+            "example": "His bright yellow shirt made him stand out in the crowd of people wearing neutral colors.",
+            "exampleTranslation": "Chiếc áo vàng sáng khiến anh ấy nổi bật giữa đám đông mặc đồ màu trung tính."
+        },
+        {
+            "word": "let off",
+            "type": "phrase",
+            "ipa": "/let ɒf/",
+            "meaning": "tha, không phạt nặng",
+            "example": "The police officer decided to let off the driver with a warning instead of giving a ticket.",
+            "exampleTranslation": "Cảnh sát quyết định tha cho tài xế bằng lời cảnh báo thay vì phạt vé."
+        },
+        {
+            "word": "came into",
+            "type": "phrase",
+            "ipa": "/keɪm ˈɪntuː/",
+            "meaning": "thừa kế (tài sản, tiền bạc)",
+            "example": "She was surprised when she came into a large inheritance from her long-lost relative.",
+            "exampleTranslation": "Cô rất bất ngờ khi thừa kế một khoản tài sản lớn từ người họ hàng xa."
+        },
+        {
+            "word": "cheer up",
+            "type": "phrase",
+            "ipa": "/tʃɪə(r) ʌp/",
+            "meaning": "làm phấn chấn, cổ vũ",
+            "example": "Giving positive encouragement can cheer up the football team and boost their confidence during the game.",
+            "exampleTranslation": "Việc khuyến khích tích cực có thể cổ vũ tinh thần đội bóng và tăng sự tự tin trong trận đấu."
+        },
+        {
+            "word": "ran into",
+            "type": "phrase",
+            "ipa": "/ræn ˈɪntuː/",
+            "meaning": "tình cờ gặp",
+            "example": "While shopping at the mall, I accidentally ran into my old friend from high school.",
+            "exampleTranslation": "Trong lúc mua sắm ở trung tâm thương mại, tôi tình cờ gặp lại người bạn cũ thời cấp 3."
+        },
+        {
+            "word": "turned up",
+            "type": "phrase",
+            "ipa": "/tɜːnd ʌp/",
+            "meaning": "đến, xuất hiện",
+            "example": "Mike turned up late to the meeting, apologizing profusely for getting caught in traffic on the way.",
+            "exampleTranslation": "Mike đến trễ buổi họp và xin lỗi rối rít vì bị kẹt xe."
+        },
+        {
+            "word": "chip in",
+            "type": "phrase",
+            "ipa": "/tʃɪp ɪn/",
+            "meaning": "góp tiền/một phần vào việc gì",
+            "example": "Everyone agreed to chip in a few dollars to buy a gift for their coworker’s birthday.",
+            "exampleTranslation": "Mọi người đồng ý góp tiền để mua quà sinh nhật"
+        },
+        {
+            "word": "add up",
+            "type": "phrase",
+            "ipa": "/æd ʌp/",
+            "meaning": "cộng lại đúng, hợp lý (về mặt logic hay số học)",
+            "example": "She checked her math homework multiple times to make sure all the numbers would add up correctly.",
+            "exampleTranslation": "Cô ấy kiểm tra bài toán nhiều lần để đảm bảo các con số cộng lại đúng."
+        },
+        {
+            "word": "back down",
+            "type": "phrase",
+            "ipa": "/bæk daʊn/",
+            "meaning": "rút lui, nhượng bộ",
+            "example": "Despite the argument, she refused to back down from her position, standing firm in her beliefs.",
+            "exampleTranslation": "Dù có tranh cãi, cô ấy vẫn từ chối nhượng bộ, kiên định với quan điểm của mình."
+        },
+        {
+            "word": "work out",
+            "type": "phrase",
+            "ipa": "/wɜːk aʊt/",
+            "meaning": "tìm ra, giải quyết được (vấn đề, bài toán)",
+            "example": "After hours of brainstorming, they finally managed to work out the solution to the challenging puzzle.",
+            "exampleTranslation": "Sau hàng giờ động não, họ cuối cùng cũng tìm ra lời giải cho câu đố hóc búa."
+        },
+        {
+            "word": "taken in",
+            "type": "phrase",
+            "ipa": "/ˈteɪkən ɪn/",
+            "meaning": "bị lừa, bị dụ dỗ (bởi vẻ bề ngoài/lời nói)",
+            "example": "She was taken in by the salesman’s smooth talk and ended up buying something she didn’t need.",
+            "exampleTranslation": "Cô ấy đã bị lừa bởi lời nói ngọt ngào của người bán hàng và cuối cùng mua món không cần thiết."
+        },
+        {
+            "word": "bring in",
+            "type": "phrase",
+            "ipa": "/brɪŋ ɪn/",
+            "meaning": "ban hành, giới thiệu (luật lệ, chính sách)",
+            "example": "The government plans to bring in new laws to improve road safety and reduce accidents.",
+            "exampleTranslation": "Chính phủ dự định ban hành các luật mới để cải thiện an toàn giao thông và giảm tai nạn."
+        },
+        {
+            "word": "look up",
+            "type": "phrase",
+            "ipa": "/lʊk ʌp/",
+            "meaning": "tra cứu (trong sách, danh bạ, Internet...)",
+            "example": "Tom needed to look up his friend’s phone number in the directory before he could call and invite him over.",
+            "exampleTranslation": "Tom cần tra cứu số điện thoại của bạn trong danh bạ trước khi gọi mời bạn tới nhà."
+        },
+        {
+            "word": "switch on",
+            "type": "phrase",
+            "ipa": "/swɪtʃ ɒn/",
+            "meaning": "bật (đèn, thiết bị)",
+            "example": "Olivia forgot to switch on the lights before entering the room, causing her to stumble in the darkness.",
+            "exampleTranslation": "Olivia quên bật đèn trước khi vào phòng, khiến cô vấp ngã trong bóng tối."
+        },
+        {
+            "word": "call off",
+            "type": "phrase",
+            "ipa": "/kɔːl ɒf/",
+            "meaning": "hủy bỏ (sự kiện)",
+            "example": "John had to call off the picnic due to the sudden rainstorm, disappointing everyone who was looking forward to it.",
+            "exampleTranslation": "John phải hủy buổi picnic vì cơn mưa bất ngờ, khiến mọi người thất vọng."
+        },
+        {
+            "word": "gave away",
+            "type": "phrase",
+            "ipa": "/ɡeɪv əˈweɪ/",
+            "meaning": "tiết lộ (bí mật, thông tin)",
+            "example": "Emily accidentally gave away information about the surprise party while chatting with Tom, spoiling the surprise for him.",
+            "exampleTranslation": "Emily vô tình tiết lộ thông tin về bữa tiệc bất ngờ khi nói chuyện với Tom, làm hỏng bất ngờ."
+        },
+        {
+            "word": "come down with",
+            "type": "phrase",
+            "ipa": "/kʌm daʊn wɪð/",
+            "meaning": "mắc (bệnh)",
+            "example": "My sister started to come down with a cold after being exposed to the chilly weather, so she decided to rest at home.",
+            "exampleTranslation": "Chị tôi bắt đầu bị cảm sau khi tiếp xúc với thời tiết lạnh, nên cô ấy quyết định nghỉ ở nhà."
+        },
+        {
+            "word": "knock out",
+            "type": "phrase",
+            "ipa": "/nɒk aʊt/",
+            "meaning": "hạ gục (khiến đối thủ bất tỉnh trong trận đấu)",
+            "example": "During the match, Jack delivered a powerful punch that caused his opponent to knock out and win the fight.",
+            "exampleTranslation": "Trong trận đấu, Jack tung cú đấm mạnh khiến đối thủ bị hạ gục, và giành chiến thắng."
+        },
+        {
+            "word": "show off",
+            "type": "phrase",
+            "ipa": "/ʃoʊ ɒf/",
+            "meaning": "khoe khoang, phô trương để gây ấn tượng",
+            "example": "Lily’s brother likes to show off his new skateboard tricks to impress his friends at the skate park.",
+            "exampleTranslation": "Anh trai của Lily thích khoe những cú trượt ván mới để gây ấn tượng với bạn bè ở công viên trượt ván."
+        },
+        {
+            "word": "make out",
+            "type": "phrase",
+            "ipa": "/meɪk aʊt/",
+            "meaning": "hiểu ra, nhìn rõ, nhận ra điều gì đó",
+            "example": "Amelia and Ethan struggled to understand the complex math problem but finally managed to make out the solution together.",
+            "exampleTranslation": "Amelia và Ethan gặp khó khăn trong việc hiểu bài toán khó, nhưng cuối cùng cũng hiểu ra được lời giải cùng nhau."
+        },
+        {
+            "word": "made up",
+            "type": "phrase",
+            "ipa": "/meɪd ʌp/",
+            "meaning": "làm hòa sau khi cãi nhau",
+            "example": "Tom and Sarah had a quarrel over a misunderstanding but quickly made up, realizing their friendship was more important than any disagreement.",
+            "exampleTranslation": "Tom và Sarah cãi nhau vì hiểu lầm nhưng nhanh chóng làm hòa, nhận ra tình bạn quan trọng hơn mọi mâu thuẫn."
+        },
+        {
+            "word": "cut down on",
+            "type": "phrase",
+            "ipa": "/kʌt daʊn ɒn/",
+            "meaning": "cắt giảm, giảm bớt (việc gì có hại)",
+            "example": "To improve his health, Minh decided to cut down on sugary snacks and instead eat more fruits and vegetables every day.",
+            "exampleTranslation": "Để cải thiện sức khỏe, Minh quyết định giảm đồ ăn vặt nhiều đường và ăn nhiều trái cây, rau củ hơn mỗi ngày."
+        },
+        {
+            "word": "caught on",
+            "type": "phrase",
+            "ipa": "/kɔːt ɒn/",
+            "meaning": "trở nên phổ biến, được ưa chuộng",
+            "example": "My sister-in-law introduced a new game to her friends, and it quickly caught on, becoming their favorite pastime during gatherings.",
+            "exampleTranslation": "Chị dâu tôi giới thiệu một trò chơi mới cho bạn bè, và nó nhanh chóng trở nên phổ biến, trở thành trò yêu thích trong mỗi buổi gặp mặt."
+        },
+        {
+            "word": "account for",
+            "type": "phrase",
+            "ipa": "/əˈkaʊnt fɔː(r)/",
+            "meaning": "tính toán, giải thích số tiền đã tiêu",
+            "example": "Tom had to account for all the money he spent during the trip to make sure he didn’t exceed his budget.",
+            "exampleTranslation": "Tom phải tính toán toàn bộ số tiền đã tiêu trong chuyến đi để đảm bảo không vượt ngân sách."
+        },
+        {
+            "word": "broke out",
+            "type": "phrase",
+            "ipa": "/broʊk aʊt/",
+            "meaning": "bật khóc, bùng phát cảm xúc (trong ngữ cảnh này là nước mắt)",
+            "example": "After hearing the sad news, Emily broke out in tears, overwhelmed by emotions and unable to contain her grief.",
+            "exampleTranslation": "Sau khi nghe tin buồn, Emily bật khóc, bị cảm xúc lấn át và không thể kìm nén nỗi đau."
+        },
+        {
+            "word": "watch out",
+            "type": "phrase",
+            "ipa": "/wɒtʃ aʊt/",
+            "meaning": "coi chừng, cẩn thận (thường dùng để cảnh báo nguy hiểm)",
+            "example": "John warned his friend to watch out for the slippery path ahead to avoid any accidents while hiking in the mountains.",
+            "exampleTranslation": "John cảnh báo bạn mình cẩn thận với con đường trơn phía trước để tránh tai nạn khi leo núi."
+        },
+        {
+            "word": "look into",
+            "type": "phrase",
+            "ipa": "/lʊk ˈɪntuː/",
+            "meaning": "điều tra, xem xét (một vấn đề)",
+            "example": "After receiving complaints, the manager promised to look into the issue and find a solution to address the customer concerns.",
+            "exampleTranslation": "Sau khi nhận được phản ánh, quản lý hứa sẽ xem xét vấn đề và tìm giải pháp để giải quyết mối lo ngại của khách hàng."
+        },
+        {
+            "word": "go in for",
+            "type": "phrase",
+            "ipa": "/ɡoʊ ɪn fɔː(r)/",
+            "meaning": "tham gia, đăng ký thi/hoạt động vì yêu thích",
+            "example": "Tom decided to go in for basketball tryouts because he loves playing the sport and wants to join the school team.",
+            "exampleTranslation": "Tom quyết định tham gia buổi tuyển chọn bóng rổ vì cậu ấy yêu thích môn thể thao này và muốn gia nhập đội trường."
+        },
+        {
+            "word": "fall behind",
+            "type": "phrase",
+            "ipa": "/fɔːl bɪˈhaɪnd/",
+            "meaning": "tụt lại phía sau (về tiến độ, trình độ...)",
+            "example": "During the project, Thao struggled to stay updated with the latest information, causing her to fall behind her colleagues in progress.",
+            "exampleTranslation": "Trong dự án, Thảo gặp khó khăn trong việc cập nhật thông tin mới, khiến cô ấy tụt lại phía sau đồng nghiệp về tiến độ."
+        },
+        {
+            "word": "pull over",
+            "type": "phrase",
+            "ipa": "/pʊl ˈoʊvə(r)/",
+            "meaning": "tấp xe vào lề, dừng xe bên đường",
+            "example": "While driving, John noticed a strange noise from his car, so he decided to pull over and check the engine.",
+            "exampleTranslation": "Khi đang lái xe, John nghe thấy tiếng động lạ từ xe nên quyết định tấp vào lề để kiểm tra động cơ."
+        },
+        {
+            "word": "went off",
+            "type": "phrase",
+            "ipa": "/went ɒf/",
+            "meaning": "không còn thích nữa (đặc biệt là về thức ăn)",
+            "example": "When Jessica realized the food she loved made her sick, she went off it and find new favorites.",
+            "exampleTranslation": "Khi nhận ra món ăn yêu thích khiến cô bị ốm, Jessica không còn thích nữa và tìm món mới để thay thế."
+        },
+        {
+            "word": "count on",
+            "type": "phrase",
+            "ipa": "/kaʊnt ɒn/",
+            "meaning": "tin cậy, dựa vào ai đó",
+            "example": "Tyler knew she could count on her best friend to support her through tough times, as they always had each other’s back.",
+            "exampleTranslation": "Tyler biết cô có thể tin tưởng người bạn thân nhất sẽ ủng hộ mình trong lúc khó khăn."
+        },
+        {
+            "word": "take off",
+            "type": "phrase",
+            "ipa": "/teɪk ɒf/",
+            "meaning": "cất cánh, phát triển nhanh chóng (công việc, doanh nghiệp)",
+            "example": "After months of hard work, Ava’s business finally started to take off, attracting more customers and generating higher profits.",
+            "exampleTranslation": "Sau nhiều tháng làm việc chăm chỉ, công việc kinh doanh của Ava cuối cùng cũng phát triển mạnh, thu hút nhiều khách hàng và tăng lợi nhuận."
+        },
+        {
+            "word": "takes after",
+            "type": "phrase",
+            "ipa": "/teɪks ˈɑːftə(r)/",
+            "meaning": "giống ai (về tính cách, ngoại hình), đặc biệt là người thân",
+            "example": "Tim takes after his father, sharing the same love for sports and the same easygoing personality that everyone admires.",
+            "exampleTranslation": "Tim giống cha mình, cùng yêu thể thao và có tính cách thân thiện khiến ai cũng quý mến."
+        },
+        {
+            "word": "hand in",
+            "type": "phrase",
+            "ipa": "/hænd ɪn/",
+            "meaning": "nộp (bài, đơn từ)",
+            "example": "David remembered to hand in his homework before the deadline, ensuring that he wouldn’t lose points for submitting it late.",
+            "exampleTranslation": "David nhớ nộp bài tập trước hạn, đảm bảo không bị mất điểm vì nộp muộn."
+        },
+        {
+            "word": "fall back on",
+            "type": "phrase",
+            "ipa": "/fɔːl bæk ɒn/",
+            "meaning": "dùng đến, trông cậy vào (khi kế hoạch chính thất bại)",
+            "example": "When her original plan failed, Emily had to fall back on her backup savings to cover unexpected expenses.",
+            "exampleTranslation": "Khi kế hoạch ban đầu thất bại, Emily phải dùng đến khoản tiết kiệm dự phòng để chi trả chi phí bất ngờ."
+        },
+        {
+            "word": "brought in",
+            "type": "phrase",
+            "ipa": "/brɔːt ɪn/",
+            "meaning": "đưa ai vào (đội/nhóm) để giúp đỡ",
+            "example": "John brought in his friend to help with the project, knowing that he had valuable skills that could contribute to its success.",
+            "exampleTranslation": "John đã mời bạn mình tham gia dự án, vì biết người đó có kỹ năng hữu ích để góp phần vào thành công của dự án."
+        },
+        {
+            "word": "break down",
+            "type": "phrase",
+            "ipa": "/breɪk daʊn/",
+            "meaning": "phân tích, chia nhỏ (vấn đề, khái niệm phức tạp) để dễ hiểu",
+            "example": "Our experienced tutors will break down complex concepts into simple, digestible lessons for easier understanding.",
+            "exampleTranslation": "Các gia sư giàu kinh nghiệm của chúng tôi sẽ phân tích các khái niệm phức tạp thành bài học đơn giản, dễ hiểu hơn."
+        },
+        {
+            "word": "point out",
+            "type": "phrase",
+            "ipa": "/pɔɪnt aʊt/",
+            "meaning": "chỉ ra, làm rõ (lỗi, vấn đề)",
+            "example": "Our program will point out common mistakes students make and teach you how to avoid them.",
+            "exampleTranslation": "Chương trình của chúng tôi sẽ chỉ ra những lỗi sai phổ biến mà học sinh thường mắc phải và hướng dẫn bạn cách tránh chúng."
+        },
+        {
+            "word": "put off",
+            "type": "phrase",
+            "ipa": "/pʊt ɒf/",
+            "meaning": "trì hoãn, để sau",
+            "example": "Don’t put off your health concerns any longer - schedule a consultation today.",
+            "exampleTranslation": "Đừng trì hoãn mối quan tâm về sức khỏe của bạn nữa – hãy đặt lịch tư vấn ngay hôm nay."
+        },
+        {
+            "word": "Check in",
+            "type": "phrase",
+            "ipa": "/tʃek ɪn/",
+            "meaning": "đăng ký, làm thủ tục (khi đến nơi nào đó)",
+            "example": "Check in with our receptionists to book your appointment at a time that suits you best.",
+            "exampleTranslation": "Hãy làm thủ tục với lễ tân để đặt lịch hẹn vào thời gian phù hợp nhất với bạn."
+        },
+        {
+            "word": "carry out",
+            "type": "phrase",
+            "ipa": "/ˈkæri aʊt/",
+            "meaning": "thực hiện (một cuộc kiểm tra, đánh giá, nhiệm vụ)",
+            "example": "Our doctors will carry out a detailed assessment before recommending a personalized treatment plan.",
+            "exampleTranslation": "Các bác sĩ của chúng tôi sẽ thực hiện đánh giá chi tiết trước khi đề xuất phác đồ điều trị cá nhân hóa."
+        },
+        {
+            "word": "Find out",
+            "type": "phrase",
+            "ipa": "/faɪnd aʊt/",
+            "meaning": "tìm hiểu, khám phá ra",
+            "example": "Find out more about our services by visiting our website or calling our support team.",
+            "exampleTranslation": "Hãy tìm hiểu thêm về dịch vụ của chúng tôi bằng cách truy cập trang web hoặc gọi đội ngũ hỗ trợ."
+        },
+        {
+            "word": "leave out",
+            "type": "phrase",
+            "ipa": "/liːv aʊt/",
+            "meaning": "bỏ qua, không bao gồm",
+            "example": "Our products are crafted with natural ingredients that leave out any harmful chemicals or additives.",
+            "exampleTranslation": "Sản phẩm của chúng tôi được làm từ nguyên liệu tự nhiên và không chứa bất kỳ hóa chất độc hại hay phụ gia nào."
+        },
+        {
+            "word": "run through",
+            "type": "phrase",
+            "ipa": "/rʌn θruː/",
+            "meaning": "xem lướt qua, điểm nhanh",
+            "example": "You can easily run through the menu online before you visit, so you know what to order ahead of time.",
+            "exampleTranslation": "Bạn có thể dễ dàng xem lướt qua thực đơn trực tuyến trước khi đến, để biết trước mình sẽ gọi món gì."
+        },
+        {
+            "word": "take over",
+            "type": "phrase",
+            "ipa": "/teɪk ˈoʊvə(r)/",
+            "meaning": "đảm nhận, tiếp quản (trách nhiệm, nhiệm vụ)",
+            "example": "If you’re interested in joining our club, don’t hesitate to take over the organizing efforts for our next meet-up.",
+            "exampleTranslation": "Nếu bạn quan tâm đến việc gia nhập câu lạc bộ, đừng ngần ngại đảm nhận công việc tổ chức cho buổi gặp mặt tiếp theo."
+        },
+        {
+            "word": "fill out",
+            "type": "phrase",
+            "ipa": "/fɪl aʊt/",
+            "meaning": "điền đầy đủ vào mẫu đơn",
+            "example": "Please remember to fill out the registration form with all your details so we can provide you with the best possible support during your exam prep.",
+            "exampleTranslation": "Vui lòng nhớ điền vào mẫu đăng ký đầy đủ thông tin để chúng tôi có thể hỗ trợ bạn tốt nhất trong quá trình ôn thi."
+        },
+        {
+            "word": "catch up",
+            "type": "phrase",
+            "ipa": "/kætʃ ʌp/",
+            "meaning": "bắt kịp (bài học, tiến độ)",
+            "example": "If you’ve missed any classes, you can easily catch up by watching our recorded lessons online, which are available anytime.",
+            "exampleTranslation": "Nếu bạn bỏ lỡ buổi học nào, bạn có thể dễ dàng bắt kịp bằng cách xem lại các bài giảng được ghi hình."
+        },
+        {
+            "word": "set up",
+            "type": "phrase",
+            "ipa": "/set ʌp/",
+            "meaning": "lên lịch, thiết lập cuộc hẹn",
+            "example": "You should set up an appointment with one of our expert advisers who can help create a customized study plan that suits your goals.",
+            "exampleTranslation": "Bạn nên lên lịch hẹn với một chuyên gia tư vấn để được xây dựng kế hoạch học tập phù hợp với mục tiêu của mình."
+        },
+        {
+            "word": "Brush up",
+            "type": "phrase",
+            "ipa": "/brʌʃ ʌp/",
+            "meaning": "ôn tập lại, cải thiện kỹ năng",
+            "example": "Brush up on your grammar and vocabulary through our intensive refresher classes designed for exam success.",
+            "exampleTranslation": "Ôn tập lại ngữ pháp và từ vựng qua các lớp học cấp tốc của chúng tôi nhằm giúp bạn thi hiệu quả."
+        },
+        {
+            "word": "turn up",
+            "type": "phrase",
+            "ipa": "/tɜːn ʌp/",
+            "meaning": "xuất hiện, đến nơi (không báo trước hoặc theo kế hoạch)",
+            "example": "Don’t forget to turn up at our special promotion event this Saturday for exclusive giveaways.",
+            "exampleTranslation": "Đừng quên ghé đến sự kiện khuyến mãi đặc biệt vào thứ Bảy này để nhận những phần quà độc quyền."
+        },
+        {
+            "word": "work out",
+            "type": "phrase",
+            "ipa": "/wɜːk aʊt/",
+            "meaning": "tính toán, xây dựng, tìm ra (kế hoạch, giải pháp)",
+            "example": "We’ll work out a customized travel plan that matches your preferences and schedule.",
+            "exampleTranslation": "Chúng tôi sẽ lên kế hoạch du lịch cá nhân hóa theo sở thích và lịch trình của bạn."
+        },
+        {
+            "word": "cut down on",
+            "type": "phrase",
+            "ipa": "/kʌt daʊn ɒn/",
+            "meaning": "giảm bớt (việc gì có hại)",
+            "example": "Our eco-friendly packaging is designed to cut down on your environmental footprint and reduce waste.",
+            "exampleTranslation": "Bao bì thân thiện môi trường của chúng tôi được thiết kế để giảm tác động sinh thái và rác thải."
+        },
+        {
+            "word": "pick up",
+            "type": "phrase",
+            "ipa": "/pɪk ʌp/",
+            "meaning": "lấy (vật gì), đón ai",
+            "example": "You can simply pick up your free study kit at any of our participating locations to get started on your journey toward exam success.",
+            "exampleTranslation": "Bạn có thể dễ dàng nhận bộ tài liệu học miễn phí tại bất kỳ điểm phân phối nào để bắt đầu hành trình luyện thi."
+        },
+        {
+            "word": "sort out",
+            "type": "phrase",
+            "ipa": "/sɔːt aʊt/",
+            "meaning": "giải quyết, xử lý",
+            "example": "If you’re planning to travel abroad, sort out your visa requirements with our trusted partners.",
+            "exampleTranslation": "Nếu bạn dự định đi du lịch nước ngoài, hãy giải quyết các yêu cầu visa với đối tác đáng tin cậy của chúng tôi."
+        },
+        {
+            "word": "bring up",
+            "type": "phrase",
+            "ipa": "/brɪŋ ʌp/",
+            "meaning": "nêu ra, đề cập đến",
+            "example": "If you have any questions, feel free to bring up any concerns with our customer service team.",
+            "exampleTranslation": "Nếu bạn có bất kỳ câu hỏi nào, đừng ngần ngại nêu ra những mối quan tâm với đội ngũ chăm sóc khách hàng."
+        },
+        {
+            "word": "look into",
+            "type": "phrase",
+            "ipa": "/lʊk ˈɪntuː/",
+            "meaning": "tìm hiểu, điều tra",
+            "example": "Make sure to look into the environmentally friendly ways to dispose of our packaging once you’re done using it.",
+            "exampleTranslation": "Hãy chắc chắn tìm hiểu cách xử lý bao bì thân thiện môi trường sau khi bạn đã sử dụng xong."
+        },
+        {
+            "word": "hand in",
+            "type": "phrase",
+            "ipa": "/hænd ɪn/",
+            "meaning": "nộp, giao nộp",
+            "example": "We encourage all customers to hand in their old products so that we can recycle or reuse them.",
+            "exampleTranslation": "Chúng tôi khuyến khích khách hàng nộp lại các sản phẩm cũ để chúng tôi có thể tái chế hoặc tái sử dụng."
+        },
+        {
+            "word": "give away",
+            "type": "phrase",
+            "ipa": "/ɡɪv əˈweɪ/",
+            "meaning": "cho đi, tặng miễn phí",
+            "example": "You can give away some of your old clothes to charity to make space for the new items you’ve purchased.",
+            "exampleTranslation": "Bạn có thể cho đi một số quần áo cũ cho từ thiện để dọn chỗ cho các món đồ mới."
+        },
+        {
+            "word": "hold up",
+            "type": "phrase",
+            "ipa": "/hoʊld ʌp/",
+            "meaning": "làm trì hoãn, cản trở",
+            "example": "Don’t let passport issues hold up your travel plans—our experts can assist with paperwork.",
+            "exampleTranslation": "Đừng để vấn đề hộ chiếu làm trì hoãn kế hoạch du lịch của bạn – chuyên gia của chúng tôi có thể giúp xử lý giấy tờ."
+        },
+        {
+            "word": "put off",
+            "type": "phrase",
+            "ipa": "/pʊt ɒf/",
+            "meaning": "trì hoãn",
+            "example": "Don’t put off shopping for the holidays; start early to avoid the rush and get the best deals.",
+            "exampleTranslation": "Đừng trì hoãn việc mua sắm dịp lễ – hãy bắt đầu sớm để tránh đông đúc và mua được giá tốt."
+        },
+        {
+            "word": "look forward to",
+            "type": "phrase",
+            "ipa": "/lʊk ˈfɔːwəd tuː/",
+            "meaning": "mong đợi điều gì",
+            "example": "We hope you look forward to the exciting new study tools and resources we’ve just launched, designed to enhance your learning experience.",
+            "exampleTranslation": "Chúng tôi hy vọng bạn sẽ mong đợi các công cụ học tập mới thú vị mà chúng tôi vừa ra mắt, nhằm nâng cao trải nghiệm học tập của bạn."
+        },
+        {
+            "word": "check out",
+            "type": "phrase",
+            "ipa": "/tʃek aʊt/",
+            "meaning": "xem qua, kiểm tra (thường dùng cho tài liệu, website, sản phẩm mới)",
+            "example": "Be sure to check out our newly updated course materials, designed to give you a competitive edge as you prepare for the upcoming exam.",
+            "exampleTranslation": "Nhớ xem qua tài liệu khóa học đã cập nhật mới nhất, được thiết kế để giúp bạn có lợi thế trong kỳ thi sắp tới."
+        },
+        {
+            "word": "look after",
+            "type": "phrase",
+            "ipa": "/lʊk ˈɑːftə(r)/",
+            "meaning": "chăm sóc",
+            "example": "look after your plants by giving them the right amount of sunlight and water each day.",
+            "exampleTranslation": "Chăm sóc cây của bạn bằng cách cho chúng lượng ánh sáng và nước phù hợp mỗi ngày."
+        },
+        {
+            "word": "go over",
+            "type": "phrase",
+            "ipa": "/ɡoʊ ˈoʊvə(r)/",
+            "meaning": "xem lại, kiểm tra kỹ lưỡng",
+            "example": "We’ll go over every detail of your medical history to provide the best possible care.",
+            "exampleTranslation": "Chúng tôi sẽ xem lại kỹ từng chi tiết trong hồ sơ y tế của bạn để cung cấp dịch vụ chăm sóc tốt nhất."
+        },
+        {
+            "word": "check over",
+            "type": "phrase",
+            "ipa": "/tʃek ˈoʊvə(r)//",
+            "meaning": "kiểm tra kỹ lưỡng",
+            "example": "Remember to check over your paperwork before signing it to ensure everything is accurate.",
+            "exampleTranslation": "Hãy nhớ kiểm tra kỹ giấy tờ trước khi ký để đảm bảo mọi thứ chính xác."
+        },
+        {
+            "word": "count on",
+            "type": "phrase",
+            "ipa": "/kaʊnt ɒn/",
+            "meaning": "tin tưởng, dựa vào",
+            "example": "You can always count on our professional staff to assist you with finding the right insurance plan.",
+            "exampleTranslation": "Bạn luôn có thể tin tưởng đội ngũ chuyên nghiệp của chúng tôi giúp tìm ra gói bảo hiểm phù hợp."
+        },
+        {
+            "word": "Run into",
+            "type": "phrase",
+            "ipa": "/rʌn ˈɪntuː/",
+            "meaning": "gặp phải (vấn đề, rắc rối)",
+            "example": "Run into a problem with your order? Contact our support team for immediate assistance.",
+            "exampleTranslation": "Gặp phải vấn đề với đơn hàng của bạn? Hãy liên hệ đội hỗ trợ ngay để được giúp đỡ."
+        },
+        {
+            "word": "Go over",
+            "type": "phrase",
+            "ipa": "/ɡoʊ ˈoʊvə(r)/",
+            "meaning": "kiểm tra lại, xem xét kỹ lưỡng",
+            "example": "Go over the final checklist before you start your road trip to ensure everything is in order.",
+            "exampleTranslation": "Kiểm tra lại danh sách cuối cùng trước khi bắt đầu chuyến đi để đảm bảo mọi thứ đã sẵn sàng."
+        },
+        {
+            "word": "call off",
+            "type": "phrase",
+            "ipa": "/kɔːl ɒf/",
+            "meaning": "hủy bỏ (sự kiện, kế hoạch)",
+            "example": "Please call off the event if you think the weather will cause too many disruptions.",
+            "exampleTranslation": "Vui lòng hủy sự kiện nếu bạn nghĩ thời tiết sẽ gây ra quá nhiều gián đoạn."
+        },
+        {
+            "word": "stick to",
+            "type": "phrase",
+            "ipa": "/stɪk tuː/",
+            "meaning": "bám sát, kiên trì thực hiện",
+            "example": "Be sure to stick to your workout routine, as consistency is key to seeing results.",
+            "exampleTranslation": "Hãy nhớ duy trì lịch trình tập luyện vì sự kiên trì là yếu tố quyết định kết quả."
+        },
+        {
+            "word": "bring up",
+            "type": "phrase",
+            "ipa": "/brɪŋ ʌp/",
+            "meaning": "nêu ra, đề cập đến (một vấn đề)",
+            "example": "Be sure to bring up any issues you experience with our products so we can address them promptly.",
+            "exampleTranslation": "Hãy nhớ nêu ra bất kỳ vấn đề nào bạn gặp phải để chúng tôi xử lý kịp thời."
+        },
+        {
+            "word": "take off",
+            "type": "phrase",
+            "ipa": "/teɪk ɒf/",
+            "meaning": "cất cánh (máy bay)",
+            "example": "The plane is scheduled to ______ at 3 PM, so we need to arrive at the airport by 1:30 PM to check in.",
+            "exampleTranslation": "Máy bay dự kiến cất cánh lúc 3 giờ chiều, vì vậy chúng ta cần đến sân bay lúc 1 giờ 30 để làm thủ tục."
+        },
+        {
+            "word": "make up",
+            "type": "phrase",
+            "ipa": "/meɪk ʌp/",
+            "meaning": "làm hòa (sau tranh cãi)",
+            "example": "After their argument, Sarah and Tom decided to ______ over coffee, agreeing that their friendship was more important than their disagreement.",
+            "exampleTranslation": "Sau cuộc cãi vã, Sarah và Tom quyết định làm hòa khi uống cà phê, đồng ý rằng tình bạn quan trọng hơn."
+        },
+        {
+            "word": "bring back",
+            "type": "phrase",
+            "ipa": "/brɪŋ bæk/",
+            "meaning": "khôi phục, mang trở lại (thói quen, truyền thống)",
+            "example": "The new policy was introduced to ______ some of the old traditions that had been lost over the years in the community.",
+            "exampleTranslation": "Chính sách mới được đưa ra nhằm khôi phục một số truyền thống xưa đã mai một trong cộng đồng."
+        },
+        {
+            "word": "back out",
+            "type": "phrase",
+            "ipa": "/bæk aʊt/",
+            "meaning": "rút lui, không tham gia (sau khi đã đồng ý)",
+            "example": "At the last minute, she decided to ______ of the competition because she didn’t feel prepared enough to participate.",
+            "exampleTranslation": "Vào phút cuối, cô ấy quyết định rút lui khỏi cuộc thi vì cảm thấy chưa đủ sẵn sàng để tham gia."
+        },
+        {
+            "word": "get along",
+            "type": "phrase",
+            "ipa": "/ɡet əˈlɒŋ/",
+            "meaning": "hòa hợp, có quan hệ tốt",
+            "example": "Tom and Jerry have been best friends for years because they always ______ well, despite their different personalities and interests.",
+            "exampleTranslation": "Tom và Jerry là bạn thân nhiều năm vì họ luôn hòa hợp tốt, dù tính cách và sở thích khác nhau."
+        },
+        {
+            "word": "look into",
+            "type": "phrase",
+            "ipa": "/lʊk ˈɪntuː/",
+            "meaning": "điều tra, xem xét",
+            "example": "Maria will ______ the issue of delayed shipments and find a solution to ensure customers receive their orders on time.",
+            "exampleTranslation": "Maria sẽ xem xét vấn đề giao hàng trễ và tìm giải pháp để đảm bảo khách nhận hàng đúng hạn."
+        },
+        {
+            "word": "broke down",
+            "type": "phrase",
+            "ipa": "/broʊk daʊn/",
+            "meaning": "bị hỏng (xe, máy móc)",
+            "example": "When the car ______ on the highway during their road trip, Jason quickly called for roadside assistance to get help.",
+            "exampleTranslation": "Khi xe bị hỏng trên đường cao tốc, Jason đã nhanh chóng gọi cứu hộ để được giúp đỡ."
+        },
+        {
+            "word": "give up",
+            "type": "phrase",
+            "ipa": "/ɡɪv ʌp/",
+            "meaning": "từ bỏ",
+            "example": "Even though the exam was challenging, Lily refused to ______ and studied hard every night to prepare for the next one.",
+            "exampleTranslation": "Dù kỳ thi rất khó, Lily không từ bỏ mà vẫn chăm chỉ học mỗi tối để chuẩn bị cho lần thi tới."
+        },
+        {
+            "word": "turn up",
+            "type": "phrase",
+            "ipa": "/tɜːn ʌp/",
+            "meaning": "đến, xuất hiện",
+            "example": "Even though the party officially started at 7 PM, many guests began to ______ around 8 PM, bringing their own snacks.",
+            "exampleTranslation": "Dù bữa tiệc chính thức bắt đầu lúc 7 giờ tối, nhiều khách bắt đầu xuất hiện lúc 8 giờ, mang theo đồ ăn nhẹ."
+        },
+        {
+            "word": "get away",
+            "type": "phrase",
+            "ipa": "/ɡet əˈweɪ/",
+            "meaning": "đi nghỉ, trốn khỏi cuộc sống thường nhật",
+            "example": "My parents decided to ______ for the weekend to relax and recharge at a cozy cabin by the lake.",
+            "exampleTranslation": "Bố mẹ tôi quyết định đi nghỉ cuối tuần để thư giãn tại căn cabin ấm cúng bên hồ."
+        },
+        {
+            "word": "throw away",
+            "type": "phrase",
+            "ipa": "/θroʊ əˈweɪ/",
+            "meaning": "vứt bỏ",
+            "example": "It’s important to ______ any expired food items in the fridge to keep everything fresh and safe to eat.",
+            "exampleTranslation": "Việc vứt bỏ thực phẩm hết hạn trong tủ lạnh rất quan trọng để giữ mọi thứ tươi ngon và an toàn."
+        },
+        {
+            "word": "count on",
+            "type": "phrase",
+            "ipa": "/kaʊnt ɒn/",
+            "meaning": "tin tưởng, dựa vào",
+            "example": "Minh can always ______ his sister to help him out when he is in need, as she’s incredibly supportive and reliable.",
+            "exampleTranslation": "Minh luôn có thể tin tưởng chị gái sẽ giúp đỡ khi cần vì cô ấy rất đáng tin và hay hỗ trợ."
+        },
+        {
+            "word": "showed up",
+            "type": "phrase",
+            "ipa": "/ʃoʊd ʌp/",
+            "meaning": "xuất hiện, có mặt",
+            "example": "Lucy was nervous about the job interview, but she ______ early at the company to calm her nerves and feel more prepared.",
+            "exampleTranslation": "Lucy lo lắng về buổi phỏng vấn nhưng đã đến sớm tại công ty để trấn tĩnh và chuẩn bị tốt hơn."
+        },
+        {
+            "word": "take over",
+            "type": "phrase",
+            "ipa": "/teɪk ˈoʊvə(r)/",
+            "meaning": "tiếp quản (công việc, trách nhiệm)",
+            "example": "When the manager left the company, Angela was promoted to ______ his responsibilities and lead the team with great enthusiasm.",
+            "exampleTranslation": "Khi quản lý rời công ty, Angela được thăng chức để tiếp quản trách nhiệm và dẫn dắt nhóm một cách nhiệt tình."
+        },
+        {
+            "word": "looks after",
+            "type": "phrase",
+            "ipa": "/lʊks ˈɑːftə(r)/",
+            "meaning": "chăm sóc",
+            "example": "Grandma always ______ her grandchildren while their parents are at work, keeping them entertained with fun games and stories.",
+            "exampleTranslation": "Bà luôn chăm sóc các cháu khi bố mẹ đi làm, giúp các bé giải trí bằng trò chơi và kể chuyện thú vị."
+        }
+    ]
 };

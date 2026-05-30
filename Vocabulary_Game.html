@@ -68,7 +68,18 @@
           <span id="society-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Tiến độ: 0%</span>
         </div>
 
-        <!-- Topic 3: OUR ENVIRONMENT (Locked) -->
+        <!-- Topic 3: PHRASAL VERBS (Active) -->
+        <div class="topic-card" data-topic="phrasalVerbs" onclick="selectTopic('phrasalVerbs')">
+          <span class="topic-icon">📚</span>
+          <h3 class="topic-title">PHRASAL VERBS</h3>
+          <p class="topic-meta">100 Câu Phrasal Verbs trọng tâm ôn luyện thi.</p>
+          <div class="topic-progress-container">
+            <div id="phrasalVerbs-progress-fill" class="topic-progress-fill"></div>
+          </div>
+          <span id="phrasalVerbs-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Tiến độ: 0%</span>
+        </div>
+
+        <!-- Topic 4: OUR ENVIRONMENT (Locked) -->
         <div class="topic-card locked" data-topic="ourEnvironment" onclick="showLockedAlert('OUR ENVIRONMENT')">
           <span class="topic-icon">🌳</span>
           <h3 class="topic-title">OUR ENVIRONMENT</h3>
@@ -76,7 +87,7 @@
           <span class="lock-badge">🔒 Sắp ra mắt</span>
         </div>
 
-        <!-- Topic 4: OUR FUTURE (Locked) -->
+        <!-- Topic 5: OUR FUTURE (Locked) -->
         <div class="topic-card locked" data-topic="ourFuture" onclick="showLockedAlert('OUR FUTURE')">
           <span class="topic-icon">🚀</span>
           <h3 class="topic-title">OUR FUTURE</h3>
@@ -493,6 +504,7 @@
       const topics = [
         { id: 'ourLife', progressFillId: 'life-progress-fill', progressTextId: 'life-progress-text' },
         { id: 'ourSociety', progressFillId: 'society-progress-fill', progressTextId: 'society-progress-text' },
+        { id: 'phrasalVerbs', progressFillId: 'phrasalVerbs-progress-fill', progressTextId: 'phrasalVerbs-progress-text' },
         { id: 'ourEnvironment', progressFillId: 'environment-progress-fill', progressTextId: 'environment-progress-text' },
         { id: 'ourFuture', progressFillId: 'future-progress-fill', progressTextId: 'future-progress-text' }
       ];
@@ -581,7 +593,7 @@
       currentTopic = topic;
       
       // Update header badges
-      const topicNameText = topic === 'ourLife' ? 'OUR LIFE' : (topic === 'ourSociety' ? 'OUR SOCIETY' : (topic === 'ourEnvironment' ? 'OUR ENVIRONMENT' : 'OUR FUTURE'));
+      const topicNameText = topic === 'ourLife' ? 'OUR LIFE' : (topic === 'ourSociety' ? 'OUR SOCIETY' : (topic === 'phrasalVerbs' ? 'PHRASAL VERBS' : (topic === 'ourEnvironment' ? 'OUR ENVIRONMENT' : 'OUR FUTURE')));
       document.getElementById('mode-topic-badge').innerText = topicNameText;
       
       const badge = document.getElementById('mode-topic-badge');
@@ -627,6 +639,7 @@
       const themeColors = {
         ourLife: '#8b5cf6',
         ourSociety: '#3b82f6',
+        phrasalVerbs: '#f59e0b',
         ourEnvironment: '#14b8a6',
         ourFuture: '#ec4899'
       };

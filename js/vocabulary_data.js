@@ -591,6 +591,310 @@ const vocabularyData = {
       meaning: "giàu có",
       example: "He came from a wealthy family but chose a simple life.",
       exampleTranslation: "Anh ấy xuất thân từ một gia đình giàu có nhưng chọn cuộc sống giản dị."
+    },
+    {
+      word: "be admired for something",
+      type: "phrase",
+      ipa: "/biː ədˈmaɪəd fɔː(r) ˈsʌmθɪŋ/",
+      meaning: "được ngưỡng mộ vì điều gì",
+      example: "The school is widely admired for its excellent teaching.",
+      exampleTranslation: "Ngôi trường được ngưỡng mộ rộng rãi vì chất lượng giảng dạy tuyệt vời."
+    },
+    {
+      word: "be associated with",
+      type: "phrase",
+      ipa: "/biː əˈsəʊʃieɪtɪd wɪð/",
+      meaning: "gắn liền với",
+      example: "Her name is often associated with peace and kindness.",
+      exampleTranslation: "Tên của cô ấy thường được gắn liền với hòa bình và lòng tốt."
+    },
+    {
+      word: "be dedicated to something",
+      type: "phrase",
+      ipa: "/biː ˈdedɪkeɪtɪd tuː ˈsʌmθɪŋ/",
+      meaning: "cống hiến cho thứ gì",
+      example: "She is dedicated to her job.",
+      exampleTranslation: "Cô cống hiến cho công việc."
+    },
+    {
+      word: "be diagnosed with something",
+      type: "phrase",
+      ipa: "/biː ˌdaɪəɡˈnəʊzd wɪð ˈsʌmθɪŋ/",
+      meaning: "được chẩn đoán mắc bệnh gì",
+      example: "He has recently been diagnosed with cancer.",
+      exampleTranslation: "Anh ấy gần đây bị chẩn đoán mắc ung thư."
+    },
+    {
+      word: "devote something to (doing) something",
+      type: "phrase",
+      ipa: "/dɪˈvəʊt ˈsʌmθɪŋ tuː/",
+      meaning: "cống hiến thứ gì cho thứ gì/việc gì",
+      example: "I could only devote two hours a day to the work.",
+      exampleTranslation: "Tôi chỉ có thể dành ra hai tiếng mỗi ngày cho công việc."
+    },
+    {
+      word: "drop out",
+      type: "phrase",
+      ipa: "/drɒp aʊt/",
+      meaning: "bỏ học",
+      example: "She dropped out at the age of 17.",
+      exampleTranslation: "Cô ấy bỏ học năm 17 tuổi."
+    },
+    {
+      word: "earn respect",
+      type: "phrase",
+      ipa: "/ɜːn rɪˈspekt/",
+      meaning: "có được sự tôn trọng",
+      example: "She worked hard and overcame many challenges to earn respect from her community.",
+      exampleTranslation: "Cô ấy đã làm việc chăm chỉ và vượt qua nhiều thử thách để giành được sự tôn trọng từ cộng đồng."
+    },
+    {
+      word: "gain recognition",
+      type: "phrase",
+      ipa: "/ɡeɪn ˌrekəɡˈnɪʃn/",
+      meaning: "có được sự công nhận",
+      example: "He gained recognition after inventing a new farming machine.",
+      exampleTranslation: "Anh ấy đã được công nhận sau khi phát minh ra một chiếc máy nông nghiệp mới."
+    },
+    {
+      word: "grow up",
+      type: "phrase",
+      ipa: "/ɡrəʊ ʌp/",
+      meaning: "lớn lên",
+      example: "He grew up in a small village before becoming a famous scientist.",
+      exampleTranslation: "Anh ấy đã lớn lên ở một ngôi làng nhỏ trước khi trở thành một nhà khoa học nổi tiếng."
+    },
+    {
+      word: "make a huge contribution to",
+      type: "phrase",
+      ipa: "/meɪk ə hjuːdʒ ˌkɒntrɪˈbjuːʃn tuː/",
+      meaning: "có đóng góp to lớn với",
+      example: "She made a huge contribution to education by building schools in poor areas.",
+      exampleTranslation: "Cô ấy đã có đóng góp lớn cho giáo dục bằng cách xây trường học ở những khu vực nghèo."
+    },
+    {
+      word: "make headlines",
+      type: "phrase",
+      ipa: "/meɪk ˈhedlaɪnz/",
+      meaning: "trở thành tâm điểm bàn luận trên các mặt báo",
+      example: "The young doctor made headlines after saving dozens of lives in the flood.",
+      exampleTranslation: "Vị bác sĩ trẻ đã lên trang nhất sau khi cứu sống hàng chục người trong trận lũ."
+    },
+    {
+      word: "make progress",
+      type: "phrase",
+      ipa: "/meɪk ˈprəʊɡres/",
+      meaning: "tiến bộ",
+      example: "She worked hard every day and gradually made progress in her studies.",
+      exampleTranslation: "Cô ấy chăm chỉ mỗi ngày và dần dần đã có tiến bộ trong việc học."
+    },
+    {
+      word: "pass away",
+      type: "phrase",
+      ipa: "/pɑːs əˈweɪ/",
+      meaning: "qua đời",
+      example: "My grandmother passed away when I was in college.",
+      exampleTranslation: "Bà tôi qua đời hồi tôi học đại học."
+    },
+    {
+      word: "think outside the box",
+      type: "phrase",
+      ipa: "/θɪŋk ˌaʊtˈsaɪd ðə bɒks/",
+      meaning: "suy nghĩ, tư duy sáng tạo, khác biệt",
+      example: "To solve the problem, he had to think outside the box.",
+      exampleTranslation: "Để giải quyết vấn đề, anh ấy phải suy nghĩ theo cách khác biệt."
+    },
+    {
+      word: "accommodation",
+      type: "n",
+      ipa: "/əˌkɒməˈdeɪʃn/",
+      meaning: "nơi ở, nơi cư trú",
+      example: "The hotel provides comfortable accommodation.",
+      exampleTranslation: "Khách sạn cung cấp chỗ ở thoải mái."
+    },
+    {
+      word: "adventure",
+      type: "n",
+      ipa: "/ədˈventʃə(r)/",
+      meaning: "chuyến phiêu lưu, sự phiêu lưu",
+      example: "We went on an adventure through the jungle and saw wild animals.",
+      exampleTranslation: "Chúng tôi đã tham gia một cuộc phiêu lưu xuyên rừng và nhìn thấy động vật hoang dã."
+    },
+    {
+      word: "arise",
+      type: "v",
+      ipa: "/əˈraɪz/",
+      meaning: "nảy sinh, phát sinh",
+      example: "Problems may arise during the journey.",
+      exampleTranslation: "Các vấn đề có thể phát sinh trong chuyến đi."
+    },
+    {
+      word: "backpacking",
+      type: "n",
+      ipa: "/ˈbækˌpækɪŋ/",
+      meaning: "đi phượt bằng ba lô",
+      example: "He went backpacking across Europe last summer.",
+      exampleTranslation: "Anh ấy đã đi du lịch bụi khắp châu Âu vào mùa hè trước."
+    },
+    {
+      word: "bed and breakfast (B&B)",
+      type: "n",
+      ipa: "/ˌbed ən ˈbrekfəst/",
+      meaning: "nơi lưu trú nhỏ (chỉ gồm giường ngủ và ăn sáng)",
+      example: "We stayed at a small bed and breakfast in the countryside.",
+      exampleTranslation: "Chúng tôi ở một nhà nghỉ nhỏ có bữa sáng ở vùng quê."
+    },
+    {
+      word: "belongings",
+      type: "n",
+      ipa: "/bɪˈlɒŋɪŋz/",
+      meaning: "đồ dùng cá nhân",
+      example: "She packed her belongings for the trip.",
+      exampleTranslation: "Cô ấy đã đóng gói đồ đạc cho chuyến đi."
+    },
+    {
+      word: "budget",
+      type: "n",
+      ipa: "/ˈbʌdʒɪt/",
+      meaning: "ngân sách",
+      example: "We planned the trip to fit our budget.",
+      exampleTranslation: "Chúng tôi lên kế hoạch chuyến đi phù hợp với ngân sách."
+    },
+    {
+      word: "cable car",
+      type: "n",
+      ipa: "/ˈkeɪbl ˌkɑː(r)/",
+      meaning: "cáp treo",
+      example: "We went up the mountain by cable car.",
+      exampleTranslation: "Chúng tôi đã đi lên núi bằng cáp treo."
+    },
+    {
+      word: "campsite",
+      type: "n",
+      ipa: "/ˈkæmpsaɪt/",
+      meaning: "nơi cắm trại",
+      example: "We found a nice campsite in the forest.",
+      exampleTranslation: "Chúng tôi tìm được một khu cắm trại đẹp trong rừng."
+    },
+    {
+      word: "caravan",
+      type: "n",
+      ipa: "/ˈkærəvæn/",
+      meaning: "nhà di động (cho các kỳ nghỉ)",
+      example: "They travelled in a caravan along the coast.",
+      exampleTranslation: "Họ đi du lịch bằng xe caravan dọc theo bờ biển."
+    },
+    {
+      word: "complimentary",
+      type: "adj",
+      ipa: "/ˌkɒmplɪˈmentri/",
+      meaning: "miễn phí",
+      example: "The drinks are complimentary.",
+      exampleTranslation: "Đồ uống là miễn phí."
+    },
+    {
+      word: "couch-surfing",
+      type: "n",
+      ipa: "/ˈkaʊtʃ ˌsɜːfɪŋ/",
+      meaning: "du lịch có chỗ trọ miễn phí tìm trên mạng",
+      example: "She saved money by couch-surfing during her trip.",
+      exampleTranslation: "Cô ấy tiết kiệm tiền bằng cách ở nhờ trong chuyến đi."
+    },
+    {
+      word: "cruise",
+      type: "n",
+      ipa: "/kruːz/",
+      meaning: "du thuyền",
+      example: "They went on a cruise around the Caribbean.",
+      exampleTranslation: "Họ đã đi du thuyền quanh vùng Caribbean."
+    },
+    {
+      word: "currency",
+      type: "n",
+      ipa: "/ˈkʌrənsi/",
+      meaning: "tiền tệ",
+      example: "We changed our currency at the airport.",
+      exampleTranslation: "Chúng tôi đã đổi tiền ở sân bay."
+    },
+    {
+      word: "dingy",
+      type: "adj",
+      ipa: "/ˈdɪndʒi/",
+      meaning: "tối tăm và bẩn thỉu",
+      example: "The hotel room was small and dingy.",
+      exampleTranslation: "Phòng khách sạn nhỏ và tối tăm."
+    },
+    {
+      word: "discreet",
+      type: "adj",
+      ipa: "/dɪˈskriːt/",
+      meaning: "thận trọng, kín đáo",
+      example: "He was discreet when taking photos in the temple.",
+      exampleTranslation: "Anh ấy thận trọng khi chụp ảnh trong đền."
+    },
+    {
+      word: "dry cleaning",
+      type: "n",
+      ipa: "/ˌdraɪ ˈkliːnɪŋ/",
+      meaning: "giặt khô",
+      example: "He sent his suit for dry cleaning at the hotel.",
+      exampleTranslation: "Anh ấy gửi bộ vest đi giặt khô tại khách sạn."
+    },
+    {
+      word: "ecotourism",
+      type: "n",
+      ipa: "/ˈiːkəʊˌtʊərɪzəm/",
+      meaning: "du lịch sinh thái",
+      example: "Ecotourism is popular in the national park.",
+      exampleTranslation: "Du lịch sinh thái rất phổ biến ở công viên quốc gia."
+    },
+    {
+      word: "exchange",
+      type: "n",
+      ipa: "/lksˈtʃeɪndʒ/",
+      meaning: "sự trao đổi",
+      example: "There is a currency exchange near the hotel.",
+      exampleTranslation: "Có một điểm đổi tiền gần khách sạn."
+    },
+    {
+      word: "field trip",
+      type: "n",
+      ipa: "/ˈfiːld trɪp/",
+      meaning: "chuyến đi thực tế",
+      example: "Our class took a field trip to the local museum last Friday.",
+      exampleTranslation: "Lớp chúng tôi đã đi tham quan bảo tàng địa phương vào thứ Sáu tuần trước."
+    },
+    {
+      word: "globetrotter",
+      type: "n",
+      ipa: "/ˈɡləʊbˌtrɒtə(r)/",
+      meaning: "người đi du lịch khắp thế giới",
+      example: "He's a real globetrotter who visits a new country every year.",
+      exampleTranslation: "Anh ấy là một người mê du lịch thế giới, mỗi năm đi một nước."
+    },
+    {
+      word: "guest house",
+      type: "n",
+      ipa: "/ˈɡest ˌhaʊs/",
+      meaning: "nhà nghỉ nhỏ",
+      example: "We stayed in a local guest house near the lake.",
+      exampleTranslation: "Chúng tôi ở một nhà khách địa phương gần hồ."
+    },
+    {
+      word: "harbour",
+      type: "n",
+      ipa: "/ˈhɑːbə(r)/",
+      meaning: "cảng, bến tàu",
+      example: "The boat left the harbour at 10 a.m.",
+      exampleTranslation: "Chiếc thuyền rời cảng lúc 10 giờ sáng."
+    },
+    {
+      word: "harsh",
+      type: "adj",
+      ipa: "/hɑːʃ/",
+      meaning: "khắc nghiệt",
+      example: "The desert had harsh weather during our tour.",
+      exampleTranslation: "Thời tiết ở sa mạc rất khắc nghiệt trong chuyến đi của chúng tôi."
     }
   ],
   ourSociety: [],

@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vocabulary Mastery Game - English Practice</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/vocabulary_game.css">
+</head>
+<body>
+
+  <!-- Audio elements for interactions (synthesized dynamically using Web Audio API to avoid external assets dependency) -->
+
+  <div class="container">
+    
+    <!-- 1. DASHBOARD SCREEN (TOPIC SELECT) -->
+    <div id="dashboard-screen" class="glass-panel">
+      <div class="game-header">
+        <a href="index.html" class="home-link">🏠 Quay lại Trang chủ</a>
+        <h1>Vocabulary Mastery 🎮</h1>
+        <p class="subtitle">Học và làm chủ từ vựng tiếng Anh qua Flashcard 3D và các trò chơi tương tác sinh động.</p>
+      </div>
+
+      <!-- Stats overview block -->
+      <div class="global-stats">
+        <div class="stat-item">
+          <span class="stat-icon">⚡</span>
+          <span id="global-xp" class="stat-val">0 XP</span>
+          <span class="stat-label">Điểm tích lũy</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-icon">🎓</span>
+          <span id="global-learned-count" class="stat-val">0/37</span>
+          <span class="stat-label">Từ đã thuộc</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <span id="global-streak" class="stat-val">1</span>
+          <span class="stat-label">Ngày học liên tiếp</span>
+        </div>
+      </div>
+
+      <h2 style="font-size: 1.3rem; margin-bottom: 20px; font-weight: 700; color: #fff;">Chọn Chủ Đề Từ Vựng</h2>
+      <div class="topics-grid">
+        <!-- Topic 1: OUR LIFE (Active) -->
+        <div class="topic-card" data-topic="ourLife" onclick="selectTopic('ourLife')">
+          <span class="topic-icon">🧬</span>
+          <h3 class="topic-title">OUR LIFE</h3>
+          <p class="topic-meta">37 Từ vựng hoạt động thường ngày, lối sống và bản thân.</p>
+          <div class="topic-progress-container">
+            <div id="life-progress-fill" class="topic-progress-fill"></div>
+          </div>
+          <span id="life-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Tiến độ: 0%</span>
+        </div>
+
+        <!-- Topic 2: OUR SOCIETY (Locked) -->
+        <div class="topic-card locked" data-topic="ourSociety" onclick="showLockedAlert('OUR SOCIETY')">
+          <span class="topic-icon">👥</span>
+          <h3 class="topic-title">OUR SOCIETY</h3>
+          <p class="topic-meta">Các chủ đề về cộng đồng, xã hội và văn hóa xã hội.</p>
+          <span class="lock-badge">🔒 Sắp ra mắt</span>
+        </div>
+
+        <!-- Topic 3: OUR ENVIRONMENT (Locked) -->
+        <div class="topic-card locked" data-topic="ourEnvironment" onclick="showLockedAlert('OUR ENVIRONMENT')">
+          <span class="topic-icon">🌳</span>
+          <h3 class="topic-title">OUR ENVIRONMENT</h3>
+          <p class="topic-meta">Các từ vựng về môi trường, sinh thái và bảo tồn tự nhiên.</p>
+          <span class="lock-badge">🔒 Sắp ra mắt</span>
+        </div>
+
+        <!-- Topic 4: OUR FUTURE (Locked) -->
+        <div class="topic-card locked" data-topic="ourFuture" onclick="showLockedAlert('OUR FUTURE')">
+          <span class="topic-icon">🚀</span>
+          <h3 class="topic-title">OUR FUTURE</h3>
+          <p class="topic-meta">Các từ vựng khoa học công nghệ, nghề nghiệp tương lai.</p>
+          <span class="lock-badge">🔒 Sắp ra mắt</span>
+        </div>
+      </div>
+
+      <div class="reset-history-wrapper">
+        <button class="btn-danger-outline" onclick="resetAllProgress()">🗑️ Xóa lịch sử học tập</button>
+      </div>
+    </div>
+
+    <!-- 2. MODE SELECTION SCREEN -->
+    <div id="mode-screen" class="glass-panel" style="display: none;">
+      <div class="mode-header">
+        <button class="btn-back" onclick="goToDashboard()">← Chủ Đề</button>
+        <span class="current-topic-badge badge-ourLife" id="mode-topic-badge">OUR LIFE</span>
+      </div>
+      
+      <h2 style="font-size: 1.5rem; color: #fff; font-weight: 700; margin-bottom: 8px;">Chọn Phương Thức Học</h2>
+      <p class="subtitle" style="text-align: left; margin-bottom: 25px;">Hãy lựa chọn chế độ học hoặc chơi để bắt đầu củng cố từ vựng.</p>
+
+      <div class="modes-grid">
+        <!-- Card Mode 1: Flashcard -->
+        <div class="mode-card" onclick="startMode('flashcard')">
+          <div class="mode-card-icon" style="color: #a78bfa;">📇</div>
+          <div class="mode-card-body">
+            <h4 class="mode-card-title">Flashcard 3D</h4>
+            <p class="mode-card-desc">Lật thẻ từ vựng 3D trực quan, hỗ trợ nghe phát âm chuẩn Anh - Mỹ và ghi nhận từ đã thuộc.</p>
+          </div>
+        </div>
+
+        <!-- Card Mode 2: Quiz -->
+        <div class="mode-card" onclick="startMode('multipleChoice')">
+          <div class="mode-card-icon" style="color: #60a5fa;">📝</div>
+          <div class="mode-card-body">
+            <h4 class="mode-card-title">Trắc Nghiệm</h4>
+            <p class="mode-card-desc">Rèn luyện phản xạ nhanh bằng cách chọn đúng nghĩa tiếng Việt hoặc từ thích hợp tương ứng.</p>
+          </div>
+        </div>
+
+        <!-- Card Mode 3: Matching -->
+        <div class="mode-card" onclick="startMode('matchCards')">
+          <div class="mode-card-icon" style="color: #34d399;">🧩</div>
+          <div class="mode-card-body">
+            <h4 class="mode-card-title">Ghép Thẻ Từ</h4>
+            <p class="mode-card-desc">Trò chơi lật và ghép cặp từ tiếng Anh với nghĩa tiếng Việt. Thách thức tốc độ ghép thẻ của bạn.</p>
+          </div>
+        </div>
+
+        <!-- Card Mode 4: Spelling -->
+        <div class="mode-card" onclick="startMode('spelling')">
+          <div class="mode-card-icon" style="color: #f472b6;">✍️</div>
+          <div class="mode-card-body">
+            <h4 class="mode-card-title">Luyện Viết Từ</h4>
+            <p class="mode-card-desc">Đọc nghĩa tiếng Việt, gợi ý ngữ cảnh trong câu và viết đúng chính tả từ tiếng Anh để thành thạo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. FLASHCARD STUDY SCREEN -->
+    <div id="flashcard-screen" class="glass-panel" style="display: none;">
+      <div class="game-play-header">
+        <button class="btn-back" onclick="exitToModes()">← Chế Độ</button>
+        <span class="game-title-text">Chế Độ: Flashcard 3D</span>
+        <div class="card-progress-text"><span id="flash-current-index">1</span>/<span id="flash-total-count">37</span></div>
+      </div>
+
+      <!-- Filters for Flashcards -->
+      <div style="display: flex; gap: 8px; justify-content: center; margin-bottom: 20px;">
+        <button id="filter-all" class="btn-spelling-hint" style="color: #fff; background: rgba(139, 92, 246, 0.2); border-color: var(--theme-purple);" onclick="setCardFilter('all')">Tất cả</button>
+        <button id="filter-unlearned" class="btn-spelling-hint" onclick="setCardFilter('unlearned')">Chưa thuộc</button>
+        <button id="filter-learned" class="btn-spelling-hint" onclick="setCardFilter('learned')">Đã thuộc</button>
+      </div>
+
+      <!-- 3D Card Area -->
+      <div class="flashcard-container">
+        <div class="flashcard" id="study-card" onclick="toggleCardFlip()">
+          <!-- Card Front -->
+          <div class="card-face card-front">
+            <span class="word-type" id="card-front-type">n</span>
+            <h2 class="word-term" id="card-front-word">account</h2>
+            <div class="word-ipa" id="card-front-ipa">/ə'kaʊnt/</div>
+            
+            <button class="btn-speak" id="btn-card-audio" onclick="triggerSpeech(event)">
+              🔊 Phát Âm
+            </button>
+            
+            <div class="card-hint">
+              <span>💡 Nhấp thẻ để xem nghĩa và ví dụ</span>
+            </div>
+          </div>
+
+          <!-- Card Back -->
+          <div class="card-face card-back">
+            <h3 class="word-meaning" id="card-back-meaning">câu chuyện, lời tường thuật</h3>
+            
+            <div class="example-container">
+              <div class="example-title">Ví dụ áp dụng:</div>
+              <p class="example-en" id="card-back-example-en">She gave the police a full account of the incident.</p>
+              <p class="example-vi" id="card-back-example-vi">Cô kể cho cảnh sát toàn bộ sự việc.</p>
+            </div>
+            
+            <div class="card-hint">
+              <span>🔄 Nhấp để lật lại mặt trước</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation for Flashcards -->
+      <div class="flashcard-controls">
+        <button class="btn-nav-card" id="btn-prev-card" onclick="prevCard()">←</button>
+        <div class="flashcard-action-bar">
+          <button class="btn-learn-status btn-unlearned" id="btn-toggle-learned" onclick="toggleWordLearnedState()">
+            ⭐ Đánh dấu đã thuộc
+          </button>
+        </div>
+        <button class="btn-nav-card" id="btn-next-card" onclick="nextCard()">→</button>
+      </div>
+    </div>
+
+    <!-- 4. MULTIPLE CHOICE SCREEN -->
+    <div id="quiz-screen" class="glass-panel" style="display: none;">
+      <div class="game-play-header">
+        <button class="btn-back" onclick="exitToModes()">← Chế Độ</button>
+        <span class="game-title-text" id="quiz-header-title">Trắc Nghiệm Nghĩa</span>
+        <div class="card-progress-text" id="quiz-progress-text">Câu 1/10</div>
+      </div>
+
+      <div class="game-progress-bar-container">
+        <div class="game-progress-bar-fill" id="quiz-progress-fill"></div>
+      </div>
+
+      <!-- Question Box -->
+      <div class="quiz-question-box">
+        <h3 class="quiz-question-word" id="quiz-word">achievement</h3>
+        <p class="quiz-question-ipa" id="quiz-ipa">/ə'tʃi:vmənt/</p>
+        <p class="quiz-question-hint">Chọn nghĩa tiếng Việt chính xác của từ vựng trên:</p>
+      </div>
+
+      <!-- Option buttons grid -->
+      <div class="quiz-options-grid" id="quiz-options">
+        <!-- JavaScript loads buttons dynamically -->
+      </div>
+
+      <!-- Explanation Box -->
+      <div class="game-explanation" id="quiz-explanation-box" style="display: none;">
+        <div class="game-explanation-title">📝 Giải thích & Ví dụ:</div>
+        <div class="game-explanation-content" id="quiz-explanation-content">
+          Ví dụ: "..."
+        </div>
+      </div>
+
+      <div class="game-footer-actions">
+        <button class="btn-game-next" id="btn-quiz-next" onclick="nextQuizQuestion()" style="display: none;">
+          Tiếp tục ➔
+        </button>
+      </div>
+    </div>
+
+    <!-- 5. MATCHING SCREEN (MEMORY GAME) -->
+    <div id="matching-screen" class="glass-panel" style="display: none;">
+      <div class="game-play-header">
+        <button class="btn-back" onclick="exitToModes()">← Chế Độ</button>
+        <span class="game-title-text">Trò chơi: Ghép Cặp Từ</span>
+        <span class="card-progress-text" id="matching-pairs-left">Còn lại: 5 cặp</span>
+      </div>
+
+      <div class="matching-timer-row">
+        <div class="timer-indicator">
+          ⏱️ Thời gian: <span id="matching-timer-val">0.0</span> giây
+        </div>
+        <div style="color: #6ee7b7;">
+          Lần ghép sai: <span id="matching-errors-count">0</span>
+        </div>
+      </div>
+
+      <!-- Grid of Cards (10 cards: 5 EN, 5 VI) -->
+      <div class="matching-grid" id="matching-grid-cards">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+    <!-- 6. SPELLING PRACTICE SCREEN -->
+    <div id="spelling-screen" class="glass-panel" style="display: none;">
+      <div class="game-play-header">
+        <button class="btn-back" onclick="exitToModes()">← Chế Độ</button>
+        <span class="game-title-text">Luyện Viết Từ Vựng</span>
+        <div class="card-progress-text" id="spelling-progress-text">Từ 1/10</div>
+      </div>
+
+      <div class="game-progress-bar-container">
+        <div class="game-progress-bar-fill" id="spelling-progress-fill"></div>
+      </div>
+
+      <div class="spelling-box">
+        <h3 class="spelling-meaning" id="spelling-meaning">thành tựu</h3>
+        <p class="spelling-ipa" id="spelling-ipa">/ə'tʃi:vmənt/ (n)</p>
+        
+        <div class="spelling-example-fill" id="spelling-example">
+          It was a remarkable <strong>_______</strong> for such a young player.
+        </div>
+
+        <div class="spelling-input-wrapper">
+          <input type="text" class="spelling-input" id="spell-input" placeholder="Nhập từ tiếng Anh..." autocomplete="off" spellcheck="false">
+        </div>
+
+        <div class="spelling-hints-row">
+          <button class="btn-spelling-hint" id="btn-hint-letter" onclick="getSpellingLetterHint()">💡 Gợi ý chữ cái đầu</button>
+          <button class="btn-spelling-hint" onclick="speakCurrentSpellingWord()">🔊 Nghe phát âm</button>
+        </div>
+      </div>
+
+      <!-- Explanation box -->
+      <div class="game-explanation" id="spelling-explanation-box" style="display: none;">
+        <div class="game-explanation-title" id="spelling-feedback-title">Chính xác!</div>
+        <div class="game-explanation-content" id="spelling-explanation-content">
+          Dịch nghĩa câu ví dụ: "..."
+        </div>
+      </div>
+
+      <div class="game-footer-actions">
+        <button class="btn-game-next" id="btn-spelling-next" onclick="nextSpellingQuestion()" style="display: none;">
+          Tiếp tục ➔
+        </button>
+      </div>
+    </div>
+
+    <!-- 7. GAME RESULTS SCREEN -->
+    <div id="results-screen" class="glass-panel" style="display: none;">
+      <div class="results-screen-content">
+        <span class="trophy-illustration" id="results-emoji">🏆</span>
+        <h2 class="result-title" id="results-title">Hoàn thành thử thách!</h2>
+        <p class="subtitle" id="results-subtitle">Bạn đã hoàn thành xuất sắc lượt ôn tập từ vựng.</p>
+
+        <div class="results-stats-row">
+          <div class="res-stat-card">
+            <span class="res-stat-val" id="res-score-correct">10/10</span>
+            <span class="res-stat-label">Chính xác</span>
+          </div>
+          <div class="res-stat-card">
+            <span class="res-stat-val xp-gain" id="res-score-xp">+100</span>
+            <span class="res-stat-label">XP Tích lũy</span>
+          </div>
+        </div>
+
+        <div class="results-buttons">
+          <button class="btn-res btn-res-primary" id="btn-res-replay" onclick="replayCurrentMode()">
+            🔄 Luyện tập lại
+          </button>
+          <button class="btn-res btn-res-secondary" onclick="exitToModes()">
+            📋 Xem chế độ khác
+          </button>
+          <button class="btn-res btn-res-secondary" onclick="goToDashboard()">
+            🏠 Về trang chủ Game
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Custom Celebration Canvas -->
+  <canvas id="confetti-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1000; display: none;"></canvas>
+
+  <!-- Script data file -->
+  <script src="js/vocabulary_data.js"></script>
+
+  <!-- Main Game logic script -->
+  <script>
+    // --- State variables ---
+    let currentTopic = 'ourLife';
+    let currentMode = ''; // 'flashcard', 'multipleChoice', 'matchCards', 'spelling'
+    
+    // Progress Data stored in LocalStorage
+    let progress = {
+      xp: 0,
+      learned: {}, // e.g., { 'ourLife_account': true }
+      streak: 1,
+      lastStudyDate: '' // 'YYYY-MM-DD'
+    };
+
+    // Card filters
+    let cardFilter = 'all'; // 'all', 'unlearned', 'learned'
+    let currentWordsList = []; // filtered active word lists
+    let activeCardIndex = 0;
+
+    // Quiz and Spelling mode state
+    let quizQuestionList = [];
+    let currentQuestionIndex = 0;
+    let quizAnswersState = []; // tracks first-try success to award XP
+    let spellingHintUsed = false;
+    let spellingLetterHintIndex = 0;
+
+    // Matching mode state
+    let matchingCards = [];
+    let selectedMatchingCard = null;
+    let matchingStartTime = 0;
+    let matchingTimerInterval = null;
+    let matchingErrorsCount = 0;
+    let matchPairsLeftCount = 0;
+
+    // Web Audio Synthesizer (for button clicks and score reward alerts)
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    
+    function playSound(type) {
+      // Resume audio context if suspended (browser security)
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      const now = audioCtx.currentTime;
+
+      if (type === 'click') {
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(400, now);
+        osc.frequency.exponentialRampToValueAtTime(100, now + 0.1);
+        gain.gain.setValueAtTime(0.05, now);
+        gain.gain.linearRampToValueAtTime(0, now + 0.1);
+        osc.start(now);
+        osc.stop(now + 0.1);
+      } else if (type === 'correct') {
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(523.25, now); // C5
+        osc.frequency.setValueAtTime(659.25, now + 0.08); // E5
+        osc.frequency.setValueAtTime(783.99, now + 0.16); // G5
+        gain.gain.setValueAtTime(0.08, now);
+        gain.gain.linearRampToValueAtTime(0, now + 0.35);
+        osc.start(now);
+        osc.stop(now + 0.35);
+      } else if (type === 'wrong') {
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(180, now);
+        osc.frequency.setValueAtTime(120, now + 0.12);
+        gain.gain.setValueAtTime(0.08, now);
+        gain.gain.linearRampToValueAtTime(0, now + 0.25);
+        osc.start(now);
+        osc.stop(now + 0.25);
+      } else if (type === 'match') {
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(587.33, now); // D5
+        osc.frequency.setValueAtTime(880, now + 0.06); // A5
+        gain.gain.setValueAtTime(0.06, now);
+        gain.gain.linearRampToValueAtTime(0, now + 0.2);
+        osc.start(now);
+        osc.stop(now + 0.2);
+      } else if (type === 'win') {
+        // Play small victory fan-fare
+        const notes = [261.63, 329.63, 392.00, 523.25, 659.25, 783.99, 1046.50]; // Arpeggio C Major
+        notes.forEach((freq, idx) => {
+          const oscNode = audioCtx.createOscillator();
+          const gainNode = audioCtx.createGain();
+          oscNode.connect(gainNode);
+          gainNode.connect(audioCtx.destination);
+          
+          oscNode.type = 'triangle';
+          oscNode.frequency.setValueAtTime(freq, now + idx * 0.07);
+          gainNode.gain.setValueAtTime(0.06, now + idx * 0.07);
+          gainNode.gain.linearRampToValueAtTime(0, now + idx * 0.07 + 0.25);
+          
+          oscNode.start(now + idx * 0.07);
+          oscNode.stop(now + idx * 0.07 + 0.25);
+        });
+      }
+    }
+
+    // --- Core initialization ---
+    window.addEventListener('load', () => {
+      loadProgress();
+      updateDashboardStats();
+      checkStreak();
+      
+      // Prefetch synthesis voices
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.getVoices();
+      }
+    });
+
+    function loadProgress() {
+      const localData = localStorage.getItem('vocabularyGameProgress');
+      if (localData) {
+        try {
+          progress = JSON.parse(localData);
+          if (!progress.learned) progress.learned = {};
+          if (!progress.xp) progress.xp = 0;
+          if (!progress.streak) progress.streak = 1;
+        } catch (e) {
+          console.error("Lỗi đọc dữ liệu tiến trình", e);
+        }
+      }
+    }
+
+    function saveProgress() {
+      localStorage.setItem('vocabularyGameProgress', JSON.stringify(progress));
+      updateDashboardStats();
+    }
+
+    function updateDashboardStats() {
+      // XP
+      document.getElementById('global-xp').innerText = `${progress.xp} XP`;
+      
+      // Learned count
+      const totalWords = vocabularyData.ourLife.length;
+      let learnedCount = 0;
+      vocabularyData.ourLife.forEach(w => {
+        if (progress.learned[`ourLife_${w.word}`]) {
+          learnedCount++;
+        }
+      });
+      document.getElementById('global-learned-count').innerText = `${learnedCount}/${totalWords}`;
+      document.getElementById('global-streak').innerText = `${progress.streak}`;
+
+      // Progress bar for Topic OUR LIFE
+      const pct = totalWords > 0 ? Math.round((learnedCount / totalWords) * 100) : 0;
+      document.getElementById('life-progress-fill').style.width = `${pct}%`;
+      document.getElementById('life-progress-text').innerText = `Tiến độ: ${pct}% (${learnedCount}/${totalWords})`;
+    }
+
+    function checkStreak() {
+      const today = new Date().toISOString().split('T')[0];
+      if (progress.lastStudyDate) {
+        const lastDate = new Date(progress.lastStudyDate);
+        const todayDate = new Date(today);
+        const diffTime = Math.abs(todayDate - lastDate);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        
+        if (diffDays === 1) {
+          // Study consecutive day
+          progress.streak += 1;
+          progress.lastStudyDate = today;
+          saveProgress();
+        } else if (diffDays > 1) {
+          // Broken streak
+          progress.streak = 1;
+          progress.lastStudyDate = today;
+          saveProgress();
+        }
+      } else {
+        progress.lastStudyDate = today;
+        saveProgress();
+      }
+    }
+
+    function resetAllProgress() {
+      if (confirm("Bạn có chắc chắn muốn xóa toàn bộ lịch sử học tập, số điểm tích lũy và cột mốc đã thuộc của tất cả từ vựng?")) {
+        progress = {
+          xp: 0,
+          learned: {},
+          streak: 1,
+          lastStudyDate: new Date().toISOString().split('T')[0]
+        };
+        saveProgress();
+        playSound('click');
+        alert("Đã xóa toàn bộ lịch sử.");
+      }
+    }
+
+    function showLockedAlert(topicName) {
+      playSound('wrong');
+      alert(`Chủ đề "${topicName}" đang được biên soạn nội dung! \nDanh sách từ vựng sẽ được tải lên ngay khi nhận được ngữ liệu.`);
+    }
+
+    // --- Navigation ---
+    function selectTopic(topic) {
+      playSound('click');
+      currentTopic = topic;
+      
+      // Update header badges
+      const topicNameText = topic === 'ourLife' ? 'OUR LIFE' : topic;
+      document.getElementById('mode-topic-badge').innerText = topicNameText;
+
+      document.getElementById('dashboard-screen').style.display = 'none';
+      document.getElementById('mode-screen').style.display = 'block';
+    }
+
+    function goToDashboard() {
+      playSound('click');
+      document.getElementById('mode-screen').style.display = 'none';
+      document.getElementById('results-screen').style.display = 'none';
+      document.getElementById('dashboard-screen').style.display = 'block';
+      updateDashboardStats();
+    }
+
+    function exitToModes() {
+      playSound('click');
+      stopTimer();
+      // Hide all game screens
+      document.getElementById('flashcard-screen').style.display = 'none';
+      document.getElementById('quiz-screen').style.display = 'none';
+      document.getElementById('matching-screen').style.display = 'none';
+      document.getElementById('spelling-screen').style.display = 'none';
+      document.getElementById('results-screen').style.display = 'none';
+      document.getElementById('mode-screen').style.display = 'block';
+    }
+
+    function startMode(mode) {
+      playSound('click');
+      currentMode = mode;
+      document.getElementById('mode-screen').style.display = 'none';
+
+      const fullList = vocabularyData[currentTopic] || [];
+      if (fullList.length === 0) {
+        alert("Chủ đề hiện tại không có từ vựng nào để tải!");
+        goToDashboard();
+        return;
+      }
+
+      if (mode === 'flashcard') {
+        cardFilter = 'all';
+        setupFlashcardMode();
+        document.getElementById('flashcard-screen').style.display = 'block';
+      } else if (mode === 'multipleChoice') {
+        setupQuizMode();
+        document.getElementById('quiz-screen').style.display = 'block';
+      } else if (mode === 'matchCards') {
+        setupMatchingMode();
+        document.getElementById('matching-screen').style.display = 'block';
+      } else if (mode === 'spelling') {
+        setupSpellingMode();
+        document.getElementById('spelling-screen').style.display = 'block';
+      }
+    }
+
+    // --- Mode 1: Flashcards logic ---
+    function setupFlashcardMode() {
+      const fullList = vocabularyData[currentTopic];
+      
+      // Apply filters
+      if (cardFilter === 'all') {
+        currentWordsList = [...fullList];
+      } else if (cardFilter === 'unlearned') {
+        currentWordsList = fullList.filter(w => !progress.learned[`${currentTopic}_${w.word}`]);
+      } else if (cardFilter === 'learned') {
+        currentWordsList = fullList.filter(w => !!progress.learned[`${currentTopic}_${w.word}`]);
+      }
+
+      // Update toggle filters active styles
+      document.getElementById('filter-all').style.background = cardFilter === 'all' ? 'rgba(139, 92, 246, 0.2)' : 'rgba(255, 255, 255, 0.04)';
+      document.getElementById('filter-all').style.borderColor = cardFilter === 'all' ? 'var(--theme-purple)' : 'rgba(255, 255, 255, 0.06)';
+      document.getElementById('filter-all').style.color = cardFilter === 'all' ? '#fff' : 'var(--muted)';
+      
+      document.getElementById('filter-unlearned').style.background = cardFilter === 'unlearned' ? 'rgba(139, 92, 246, 0.2)' : 'rgba(255, 255, 255, 0.04)';
+      document.getElementById('filter-unlearned').style.borderColor = cardFilter === 'unlearned' ? 'var(--theme-purple)' : 'rgba(255, 255, 255, 0.06)';
+      document.getElementById('filter-unlearned').style.color = cardFilter === 'unlearned' ? '#fff' : 'var(--muted)';
+
+      document.getElementById('filter-learned').style.background = cardFilter === 'learned' ? 'rgba(139, 92, 246, 0.2)' : 'rgba(255, 255, 255, 0.04)';
+      document.getElementById('filter-learned').style.borderColor = cardFilter === 'learned' ? 'var(--theme-purple)' : 'rgba(255, 255, 255, 0.06)';
+      document.getElementById('filter-learned').style.color = cardFilter === 'learned' ? '#fff' : 'var(--muted)';
+
+      activeCardIndex = 0;
+      updateFlashcardView();
+    }
+
+    function setCardFilter(filter) {
+      playSound('click');
+      cardFilter = filter;
+      setupFlashcardMode();
+    }
+
+    function toggleCardFlip() {
+      const card = document.getElementById('study-card');
+      card.classList.toggle('flipped');
+      playSound('click');
+    }
+
+    function updateFlashcardView() {
+      const card = document.getElementById('study-card');
+      card.classList.remove('flipped'); // Reset flip orientation
+
+      const total = currentWordsList.length;
+      document.getElementById('flash-total-count').innerText = total;
+
+      if (total === 0) {
+        document.getElementById('flash-current-index').innerText = 0;
+        document.getElementById('card-front-word').innerText = "Trống";
+        document.getElementById('card-front-ipa').innerText = "";
+        document.getElementById('card-front-type').innerText = "";
+        document.getElementById('card-back-meaning').innerText = "Không tìm thấy từ vựng tương thích với bộ lọc.";
+        document.getElementById('card-back-example-en').innerText = "";
+        document.getElementById('card-back-example-vi').innerText = "";
+        document.getElementById('btn-card-audio').style.display = 'none';
+        document.getElementById('btn-prev-card').disabled = true;
+        document.getElementById('btn-next-card').disabled = true;
+        document.getElementById('btn-toggle-learned').style.display = 'none';
+        return;
+      }
+
+      document.getElementById('btn-card-audio').style.display = 'inline-flex';
+      document.getElementById('btn-toggle-learned').style.display = 'inline-flex';
+      document.getElementById('flash-current-index').innerText = activeCardIndex + 1;
+
+      const wordData = currentWordsList[activeCardIndex];
+      
+      // Update DOM
+      document.getElementById('card-front-word').innerText = wordData.word;
+      document.getElementById('card-front-ipa').innerText = wordData.ipa;
+      document.getElementById('card-front-type').innerText = wordData.type;
+      
+      document.getElementById('card-back-meaning').innerText = wordData.meaning;
+      document.getElementById('card-back-example-en').innerText = wordData.example;
+      document.getElementById('card-back-example-vi').innerText = wordData.exampleTranslation;
+
+      // Update Nav Buttons
+      document.getElementById('btn-prev-card').disabled = (activeCardIndex === 0);
+      document.getElementById('btn-next-card').disabled = (activeCardIndex === total - 1);
+
+      // Check learned state button styling
+      const key = `${currentTopic}_${wordData.word}`;
+      const isLearned = !!progress.learned[key];
+      const toggleBtn = document.getElementById('btn-toggle-learned');
+      if (isLearned) {
+        toggleBtn.innerText = "✓ Đã thuộc (Bỏ đánh dấu)";
+        toggleBtn.className = "btn-learn-status btn-mark-learned";
+      } else {
+        toggleBtn.innerText = "⭐ Đánh dấu đã thuộc";
+        toggleBtn.className = "btn-learn-status btn-unlearned";
+      }
+    }
+
+    function prevCard() {
+      if (activeCardIndex > 0) {
+        playSound('click');
+        activeCardIndex--;
+        updateFlashcardView();
+      }
+    }
+
+    function nextCard() {
+      if (activeCardIndex < currentWordsList.length - 1) {
+        playSound('click');
+        activeCardIndex++;
+        updateFlashcardView();
+      }
+    }
+
+    function toggleWordLearnedState() {
+      if (currentWordsList.length === 0) return;
+      const wordData = currentWordsList[activeCardIndex];
+      const key = `${currentTopic}_${wordData.word}`;
+      const isLearned = !!progress.learned[key];
+      
+      if (isLearned) {
+        delete progress.learned[key];
+      } else {
+        progress.learned[key] = true;
+        // Award simple XP (1 XP per card learned)
+        progress.xp += 1;
+        playSound('correct');
+      }
+      
+      saveProgress();
+      updateFlashcardView();
+    }
+
+    function triggerSpeech(event) {
+      if (event) event.stopPropagation(); // Don't trigger the card flip
+      if (currentWordsList.length === 0) return;
+      const wordData = currentWordsList[activeCardIndex];
+      speakWord(wordData.word);
+    }
+
+    function speakWord(text) {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        
+        // Synonyms split if contains "/"
+        const cleanText = text.split('/')[0].trim();
+        const utterance = new SpeechSynthesisUtterance(cleanText);
+        utterance.lang = 'en-US';
+        utterance.rate = 0.85;
+
+        // Try to load English voice specifically
+        const voices = window.speechSynthesis.getVoices();
+        const enVoice = voices.find(v => v.lang.startsWith('en-'));
+        if (enVoice) {
+          utterance.voice = enVoice;
+        }
+
+        window.speechSynthesis.speak(utterance);
+      }
+    }
+
+    // --- Mode 2: Multiple Choice Quiz logic ---
+    function setupQuizMode() {
+      const fullList = vocabularyData[currentTopic];
+      
+      // Shuffle & pick 10 questions (or all if less than 10)
+      const shuffled = [...fullList].sort(() => 0.5 - Math.random());
+      quizQuestionList = shuffled.slice(0, Math.min(10, shuffled.length));
+      
+      currentQuestionIndex = 0;
+      quizAnswersState = [];
+
+      loadQuizQuestion();
+    }
+
+    function loadQuizQuestion() {
+      document.getElementById('quiz-explanation-box').style.display = 'none';
+      document.getElementById('btn-quiz-next').style.display = 'none';
+
+      const qTotal = quizQuestionList.length;
+      document.getElementById('quiz-progress-text').innerText = `Câu ${currentQuestionIndex + 1}/${qTotal}`;
+      document.getElementById('quiz-progress-fill').style.width = `${((currentQuestionIndex + 1) / qTotal) * 100}%`;
+
+      const qWord = quizQuestionList[currentQuestionIndex];
+      document.getElementById('quiz-word').innerText = qWord.word;
+      document.getElementById('quiz-ipa').innerText = `${qWord.ipa} (${qWord.type})`;
+
+      // Create options: 1 correct, 3 distractor meanings
+      const distractors = vocabularyData[currentTopic]
+        .filter(w => w.word !== qWord.word)
+        .map(w => w.meaning);
+      
+      const shuffledDistractors = distractors.sort(() => 0.5 - Math.random());
+      const selectedDistractors = shuffledDistractors.slice(0, Math.min(3, shuffledDistractors.length));
+      
+      const options = [qWord.meaning, ...selectedDistractors].sort(() => 0.5 - Math.random());
+
+      const optionsGrid = document.getElementById('quiz-options');
+      optionsGrid.innerHTML = '';
+
+      options.forEach(optText => {
+        const btn = document.createElement('button');
+        btn.className = 'quiz-option-btn';
+        btn.innerText = optText;
+        btn.onclick = () => checkQuizAnswer(optText, btn);
+        optionsGrid.appendChild(btn);
+      });
+    }
+
+    function checkQuizAnswer(selectedOption, selectedBtn) {
+      const qWord = quizQuestionList[currentQuestionIndex];
+      const buttons = document.querySelectorAll('.quiz-option-btn');
+      
+      buttons.forEach(btn => btn.classList.add('locked'));
+      
+      const isCorrect = (selectedOption === qWord.meaning);
+      quizAnswersState.push(isCorrect);
+
+      if (isCorrect) {
+        selectedBtn.classList.add('correct');
+        playSound('correct');
+        // Simple XP (+10 XP per correct first-try)
+        progress.xp += 10;
+        saveProgress();
+      } else {
+        selectedBtn.classList.add('wrong');
+        playSound('wrong');
+        
+        // Highlight correct one
+        buttons.forEach(btn => {
+          if (btn.innerText === qWord.meaning) {
+            btn.classList.add('correct');
+          }
+        });
+      }
+
+      // Display Explanation
+      const expContent = document.getElementById('quiz-explanation-content');
+      expContent.innerHTML = `<strong>Ví dụ:</strong> ${qWord.example}<br><em>Dịch nghĩa: ${qWord.exampleTranslation}</em>`;
+      document.getElementById('quiz-explanation-box').style.display = 'block';
+
+      document.getElementById('btn-quiz-next').style.display = 'inline-flex';
+    }
+
+    function nextQuizQuestion() {
+      currentQuestionIndex++;
+      if (currentQuestionIndex < quizQuestionList.length) {
+        playSound('click');
+        loadQuizQuestion();
+      } else {
+        showModeResults();
+      }
+    }
+
+    // --- Mode 3: Memory Word Matching Game ---
+    function setupMatchingMode() {
+      stopTimer();
+      matchingErrorsCount = 0;
+      selectedMatchingCard = null;
+      document.getElementById('matching-errors-count').innerText = 0;
+      
+      const fullList = vocabularyData[currentTopic];
+      // Pick 5 random words
+      const shuffled = [...fullList].sort(() => 0.5 - Math.random());
+      const selected = shuffled.slice(0, Math.min(5, shuffled.length));
+      matchPairsLeftCount = selected.length;
+      document.getElementById('matching-pairs-left').innerText = `Còn lại: ${matchPairsLeftCount} cặp`;
+
+      // Build cards (5 English, 5 Vietnamese)
+      matchingCards = [];
+      selected.forEach((item, index) => {
+        matchingCards.push({
+          id: `en_${index}`,
+          pairId: index,
+          lang: 'en',
+          text: item.word
+        });
+        matchingCards.push({
+          id: `vi_${index}`,
+          pairId: index,
+          lang: 'vi',
+          text: item.meaning
+        });
+      });
+
+      // Shuffle matching cards
+      matchingCards.sort(() => 0.5 - Math.random());
+
+      // Render cards
+      const grid = document.getElementById('matching-grid-cards');
+      grid.innerHTML = '';
+      
+      matchingCards.forEach(card => {
+        const cardEl = document.createElement('div');
+        cardEl.className = 'matching-card';
+        cardEl.innerText = card.text;
+        cardEl.dataset.id = card.id;
+        cardEl.onclick = () => selectMatchingCardEl(card, cardEl);
+        grid.appendChild(cardEl);
+      });
+
+      // Start timer
+      matchingStartTime = performance.now();
+      document.getElementById('matching-timer-val').innerText = '0.0';
+      matchingTimerInterval = setInterval(() => {
+        const elapsed = (performance.now() - matchingStartTime) / 1000;
+        document.getElementById('matching-timer-val').innerText = elapsed.toFixed(1);
+      }, 100);
+    }
+
+    function selectMatchingCardEl(card, el) {
+      if (el.classList.contains('matched') || el.classList.contains('selected')) return;
+      playSound('click');
+
+      if (!selectedMatchingCard) {
+        // First card selected
+        selectedMatchingCard = { card, el };
+        el.classList.add('selected');
+      } else {
+        // Second card selected
+        const prev = selectedMatchingCard;
+        
+        // Prevent clicking the same card
+        if (prev.card.id === card.id) return;
+
+        el.classList.add('selected');
+
+        if (prev.card.pairId === card.pairId && prev.card.lang !== card.lang) {
+          // Correct pair!
+          setTimeout(() => {
+            prev.el.className = 'matching-card matched';
+            el.className = 'matching-card matched';
+            playSound('match');
+            
+            matchPairsLeftCount--;
+            document.getElementById('matching-pairs-left').innerText = `Còn lại: ${matchPairsLeftCount} cặp`;
+
+            if (matchPairsLeftCount === 0) {
+              completeMatchingGame();
+            }
+          }, 300);
+          
+          selectedMatchingCard = null;
+        } else {
+          // Wrong pair!
+          matchingErrorsCount++;
+          document.getElementById('matching-errors-count').innerText = matchingErrorsCount;
+
+          prev.el.classList.add('mismatch');
+          el.classList.add('mismatch');
+
+          setTimeout(() => {
+            prev.el.className = 'matching-card';
+            el.className = 'matching-card';
+            playSound('wrong');
+          }, 500);
+
+          selectedMatchingCard = null;
+        }
+      }
+    }
+
+    function completeMatchingGame() {
+      stopTimer();
+      playSound('win');
+      
+      const elapsed = parseFloat(document.getElementById('matching-timer-val').innerText);
+      
+      // Reward calculation
+      let xpEarned = 30; // base reward
+      if (matchingErrorsCount === 0) xpEarned += 20; // zero mistakes bonus
+      if (elapsed < 15) xpEarned += 10; // speed bonus
+
+      progress.xp += xpEarned;
+      saveProgress();
+
+      // Transition to results screen
+      setTimeout(() => {
+        showMatchingResults(elapsed, xpEarned);
+      }, 500);
+    }
+
+    function showMatchingResults(elapsed, xpEarned) {
+      document.getElementById('matching-screen').style.display = 'none';
+      document.getElementById('results-screen').style.display = 'block';
+
+      document.getElementById('results-emoji').innerText = '⚡';
+      document.getElementById('results-title').innerText = 'Ghép Cặp Hoàn Tất!';
+      document.getElementById('results-subtitle').innerText = `Hoàn thành trong ${elapsed.toFixed(1)} giây với ${matchingErrorsCount} lỗi ghép sai.`;
+      
+      document.getElementById('res-score-correct').innerText = `${5 - matchingErrorsCount >= 0 ? 5 - matchingErrorsCount : 0}/5`;
+      document.getElementById('res-score-xp').innerText = `+${xpEarned}`;
+
+      triggerConfetti();
+    }
+
+    function stopTimer() {
+      if (matchingTimerInterval) {
+        clearInterval(matchingTimerInterval);
+        matchingTimerInterval = null;
+      }
+    }
+
+    // --- Mode 4: Spelling game logic ---
+    function setupSpellingMode() {
+      const fullList = vocabularyData[currentTopic];
+      
+      // Shuffle & pick 10 words (or all if less than 10)
+      const shuffled = [...fullList].sort(() => 0.5 - Math.random());
+      quizQuestionList = shuffled.slice(0, Math.min(10, shuffled.length));
+
+      currentQuestionIndex = 0;
+      quizAnswersState = [];
+
+      loadSpellingQuestion();
+    }
+
+    function loadSpellingQuestion() {
+      document.getElementById('spelling-explanation-box').style.display = 'none';
+      document.getElementById('btn-spelling-next').style.display = 'none';
+      
+      spellingHintUsed = false;
+      spellingLetterHintIndex = 0;
+      document.getElementById('btn-hint-letter').disabled = false;
+
+      const qTotal = quizQuestionList.length;
+      document.getElementById('spelling-progress-text').innerText = `Câu ${currentQuestionIndex + 1}/${qTotal}`;
+      document.getElementById('spelling-progress-fill').style.width = `${((currentQuestionIndex + 1) / qTotal) * 100}%`;
+
+      const qWord = quizQuestionList[currentQuestionIndex];
+      document.getElementById('spelling-meaning').innerText = qWord.meaning;
+      document.getElementById('spelling-ipa').innerText = `${qWord.ipa} (${qWord.type})`;
+
+      // Example sentence with hidden word
+      // Regex replace word case-insensitive
+      const wordToHide = qWord.word.split('/')[0].trim(); // handle synonyms if needed
+      
+      // Create fill blank e.g. "_________" matching length of word
+      const blanks = "_".repeat(wordToHide.length);
+      
+      // Substitute the hidden word in sentence
+      const regex = new RegExp(`\\b${wordToHide}\\b`, 'gi');
+      let sentences = qWord.example.replace(regex, `<strong>${blanks}</strong>`);
+      
+      // Fallback if regex matching failed (e.g. verb conjugated)
+      if (sentences === qWord.example) {
+        // Find adjacent characters or split the word and obscure it
+        const firstWordSegment = wordToHide.substring(0, Math.min(4, wordToHide.length - 1));
+        const partialRegex = new RegExp(`\\b${firstWordSegment}[a-zA-Z]*\\b`, 'gi');
+        sentences = qWord.example.replace(partialRegex, `<strong>${blanks}</strong>`);
+      }
+      
+      document.getElementById('spelling-example').innerHTML = sentences;
+
+      // Setup Input
+      const input = document.getElementById('spell-input');
+      input.value = '';
+      input.className = 'spelling-input';
+      input.disabled = false;
+      input.focus();
+
+      // Trigger spelling enter key verification
+      input.onkeydown = (e) => {
+        if (e.key === 'Enter') {
+          verifySpelling();
+        }
+      };
+    }
+
+    function verifySpelling() {
+      const input = document.getElementById('spell-input');
+      if (input.disabled) return;
+
+      const userText = input.value.trim().toLowerCase();
+      if (!userText) return;
+
+      const qWord = quizQuestionList[currentQuestionIndex];
+      
+      // Accept synonym inputs or target word matches
+      const targetWords = qWord.word.toLowerCase().split('/').map(w => w.trim());
+      const isCorrect = targetWords.some(w => userText === w);
+
+      input.disabled = true;
+      quizAnswersState.push(isCorrect);
+
+      const feedbackTitle = document.getElementById('spelling-feedback-title');
+      const feedbackContent = document.getElementById('spelling-explanation-content');
+
+      if (isCorrect) {
+        input.className = 'spelling-input correct';
+        playSound('correct');
+        
+        let xpReward = 15; // base spelling reward
+        if (spellingHintUsed) xpReward = 5; // reduced reward if hint used
+        progress.xp += xpReward;
+        saveProgress();
+
+        feedbackTitle.innerText = "✨ Chính xác!";
+        feedbackTitle.style.color = "var(--correct)";
+      } else {
+        input.className = 'spelling-input wrong';
+        playSound('wrong');
+
+        // Correct word reveals
+        feedbackTitle.innerText = `❌ Sai rồi! Đáp án: ${qWord.word}`;
+        feedbackTitle.style.color = "var(--wrong)";
+      }
+
+      // Display example sentence meaning translation
+      feedbackContent.innerHTML = `<strong>Câu gốc:</strong> ${qWord.example}<br><em>Dịch nghĩa: ${qWord.exampleTranslation}</em>`;
+      document.getElementById('spelling-explanation-box').style.display = 'block';
+      document.getElementById('btn-hint-letter').disabled = true;
+
+      document.getElementById('btn-spelling-next').style.display = 'inline-flex';
+    }
+
+    function getSpellingLetterHint() {
+      const qWord = quizQuestionList[currentQuestionIndex];
+      const targetWord = qWord.word.split('/')[0].trim().toLowerCase();
+      
+      spellingHintUsed = true;
+      playSound('click');
+
+      const input = document.getElementById('spell-input');
+      
+      if (spellingLetterHintIndex < targetWord.length) {
+        input.value = targetWord.substring(0, spellingLetterHintIndex + 1);
+        spellingLetterHintIndex++;
+        input.focus();
+        
+        if (spellingLetterHintIndex >= targetWord.length) {
+          document.getElementById('btn-hint-letter').disabled = true;
+        }
+      }
+    }
+
+    function speakCurrentSpellingWord() {
+      const qWord = quizQuestionList[currentQuestionIndex];
+      speakWord(qWord.word);
+    }
+
+    function nextSpellingQuestion() {
+      currentQuestionIndex++;
+      if (currentQuestionIndex < quizQuestionList.length) {
+        playSound('click');
+        loadSpellingQuestion();
+      } else {
+        showModeResults();
+      }
+    }
+
+    // --- Mode results summary screens ---
+    function showModeResults() {
+      // Hide active screens
+      document.getElementById('quiz-screen').style.display = 'none';
+      document.getElementById('spelling-screen').style.display = 'none';
+      document.getElementById('results-screen').style.display = 'block';
+
+      // Calculate score
+      const correctCount = quizAnswersState.filter(a => a === true).length;
+      const total = quizAnswersState.length;
+      
+      let xpEarned = 0;
+      if (currentMode === 'multipleChoice') {
+        xpEarned = correctCount * 10;
+      } else if (currentMode === 'spelling') {
+        // spelling awards 15 XP normally
+        xpEarned = correctCount * 15;
+      }
+
+      document.getElementById('results-emoji').innerText = correctCount >= Math.floor(total * 0.8) ? '🏆' : '📚';
+      document.getElementById('results-title').innerText = correctCount === total ? 'Hoàn hảo 100%!' : 'Hoàn thành thử thách!';
+      document.getElementById('results-subtitle').innerText = `Bạn đã trả lời đúng ${correctCount} trên tổng số ${total} câu hỏi.`;
+
+      document.getElementById('res-score-correct').innerText = `${correctCount}/${total}`;
+      document.getElementById('res-score-xp').innerText = `+${xpEarned}`;
+
+      if (correctCount >= Math.floor(total * 0.7)) {
+        playSound('win');
+        triggerConfetti();
+      }
+    }
+
+    function replayCurrentMode() {
+      startMode(currentMode);
+    }
+
+
+    // --- Canvas Confetti Celebration Module ---
+    const canvas = document.getElementById("confetti-canvas");
+    const ctx = canvas.getContext("2d");
+    let confettiActive = false;
+    let confettiParticles = [];
+    const colors = ["#8b5cf6", "#ec4899", "#3b82f6", "#14b8a6", "#10b981", "#ffb703"];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    function triggerConfetti() {
+      resizeCanvas();
+      window.addEventListener("resize", resizeCanvas);
+      canvas.style.display = "block";
+      confettiActive = true;
+      confettiParticles = [];
+
+      for (let i = 0; i < 120; i++) {
+        confettiParticles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height - canvas.height,
+          size: Math.random() * 8 + 6,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          speedX: Math.random() * 3 - 1.5,
+          speedY: Math.random() * 5 + 3,
+          rotation: Math.random() * 360,
+          rotationSpeed: Math.random() * 4 - 2
+        });
+      }
+
+      requestAnimationFrame(updateConfetti);
+      
+      // Stop after 3.5 seconds
+      setTimeout(() => {
+        confettiActive = false;
+        canvas.style.display = "none";
+        window.removeEventListener("resize", resizeCanvas);
+      }, 3500);
+    }
+
+    function updateConfetti() {
+      if (!confettiActive) return;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      confettiParticles.forEach(p => {
+        p.y += p.speedY;
+        p.x += p.speedX;
+        p.rotation += p.rotationSpeed;
+
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate((p.rotation * Math.PI) / 180);
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+        ctx.restore();
+      });
+
+      requestAnimationFrame(updateConfetti);
+    }
+  </script>
+</body>
+</html>

@@ -1536,7 +1536,7 @@ const vocabularyData = {
       ipa: "/ˈfæsɪneɪtɪŋ/",
       meaning: "hấp dẫn, thú vị",
       example: "Japanese tea ceremonies are fascinating cultural traditions.",
-      exampleTranslation: "Nhiều người coi nghi lễ trà đạo của Nhật Bản là một nét truyền thống văn hoá hấp dẫn."
+      exampleTranslation: "Nghi lễ trà đạo của Nhật Bản là những truyền thống văn hóa hấp dẫn."
     },
     {
       word: "feast",
@@ -1632,7 +1632,7 @@ const vocabularyData = {
       ipa: "/ɪnˈsʌlt/ /ˈɪn.sʌlt/",
       meaning: "lăng mạ; lời lăng mạ",
       example: "He insulted her by laughing at her accent. He took it as a personal insult.",
-      exampleTranslation: "Anh ta xúc phạm cô ấy bằng cách cười nhạo giọng nói. Anh ấy xem đó là một sự xúc phạm cá nhân."
+      exampleTranslation: "Anh ta xúc phạm cô ấy bằng cách cười nhạo giọng nói của cô. Anh ấy xem đó là một sự xúc phạm cá nhân."
     },
     {
       word: "insulting",

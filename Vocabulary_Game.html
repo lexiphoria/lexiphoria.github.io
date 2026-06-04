@@ -808,9 +808,9 @@
     function setupQuizMode() {
       const fullList = vocabularyData[currentTopic];
       
-      // Shuffle & pick 10 questions (or all if less than 10)
+      // Shuffle all actual words in the topic
       const shuffled = [...fullList].sort(() => 0.5 - Math.random());
-      quizQuestionList = shuffled.slice(0, Math.min(10, shuffled.length));
+      quizQuestionList = shuffled;
       
       currentQuestionIndex = 0;
       quizAnswersState = [];
@@ -901,9 +901,9 @@
     function setupSentenceCompletionMode() {
       const fullList = vocabularyData[currentTopic];
       
-      // Shuffle & pick 10 questions (or all if less than 10)
+      // Shuffle all actual words in the topic
       const shuffled = [...fullList].sort(() => 0.5 - Math.random());
-      quizQuestionList = shuffled.slice(0, Math.min(10, shuffled.length));
+      quizQuestionList = shuffled;
       
       currentQuestionIndex = 0;
       quizAnswersState = [];

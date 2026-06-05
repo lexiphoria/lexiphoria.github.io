@@ -7613,6 +7613,2418 @@ const vocabularyData = {
                         "model"
                 ],
                 "answer": "D"
+        },
+{
+                "id": "col_236",
+                "question_num": 236,
+                "word": "gain momentum",
+                "type": "phrase",
+                "ipa": "/gain momentum/",
+                "meaning": "to become stronger or more popular",
+                "example": "Online learning gained momentum during the pandemic.",
+                "exampleTranslation": "Học trực tuyến đã đạt được động lực trong thời kỳ đại dịch.",
+                "blankSentence": "Online learning ________ momentum during the pandemic.",
+                "options": [
+                        "affected",
+                        "gained",
+                        "thrived",
+                        "said"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_237",
+                "question_num": 237,
+                "word": "one-size-fits-all teaching",
+                "type": "phrase",
+                "ipa": "/one-size-fits-all teaching/",
+                "meaning": "teaching that treats all learners the same",
+                "example": "One-size-fits-all teaching rarely meets every learner’s needs.",
+                "exampleTranslation": "Việc giảng dạy một cách phù hợp cho tất cả hiếm khi đáp ứng được nhu cầu của mọi người học.",
+                "blankSentence": "One-size-fits-all ________ rarely meets every learner’s needs.",
+                "options": [
+                        "learning",
+                        "studying",
+                        "schooling",
+                        "teaching"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_238",
+                "question_num": 238,
+                "word": "live coding demonstrations",
+                "type": "phrase",
+                "ipa": "/live coding demonstrations/",
+                "meaning": "live demonstrations of writing code",
+                "example": "Live coding demonstrations help beginners see the process.",
+                "exampleTranslation": "Trình diễn mã hóa trực tiếp giúp người mới bắt đầu thấy được quy trình.",
+                "blankSentence": "________ coding demonstrations help beginners see the process.",
+                "options": [
+                        "give",
+                        "Live",
+                        "make",
+                        "take"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_239",
+                "question_num": 239,
+                "word": "show your appreciation",
+                "type": "phrase",
+                "ipa": "/show your appreciation/",
+                "meaning": "to express gratitude or respect",
+                "example": "A thank-you note can show your appreciation.",
+                "exampleTranslation": "Một lời cảm ơn có thể thể hiện sự đánh giá cao của bạn.",
+                "blankSentence": "A thank-you note can ________ your appreciation.",
+                "options": [
+                        "protect",
+                        "maximize",
+                        "show",
+                        "let"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_240",
+                "question_num": 240,
+                "word": "boost students’ confidence",
+                "type": "phrase",
+                "ipa": "/boost students’ confidence/",
+                "meaning": "to increase students’ confidence",
+                "example": "Positive feedback can boost students’ confidence.",
+                "exampleTranslation": "Phản hồi tích cực có thể thúc đẩy sự tự tin của học sinh.",
+                "blankSentence": "Positive feedback can ________ students’ confidence.",
+                "options": [
+                        "protect",
+                        "test",
+                        "boost",
+                        "depend"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_241",
+                "question_num": 241,
+                "word": "delicious fresh green vegetables",
+                "type": "phrase",
+                "ipa": "/delicious fresh green vegetables/",
+                "meaning": "a correctly ordered adjective-noun phrase",
+                "example": "The market sells delicious fresh green vegetables.",
+                "exampleTranslation": "Chợ bán rau xanh tươi ngon.",
+                "blankSentence": "The market sells ________ fresh green vegetables.",
+                "options": [
+                        "get",
+                        "give",
+                        "make",
+                        "delicious"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_242",
+                "question_num": 242,
+                "word": "feedback on assignments",
+                "type": "phrase",
+                "ipa": "/feedback on assignments/",
+                "meaning": "comments or advice about assignments",
+                "example": "Students need feedback on assignments to improve.",
+                "exampleTranslation": "Học sinh cần phản hồi về bài tập để cải thiện.",
+                "blankSentence": "Students need ________ on assignments to improve.",
+                "options": [
+                        "get",
+                        "feedback",
+                        "make",
+                        "give"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_243",
+                "question_num": 243,
+                "word": "take English to the next level",
+                "type": "phrase",
+                "ipa": "/take english to the next level/",
+                "meaning": "to improve English to a higher standard",
+                "example": "Regular speaking practice can take English to the next level.",
+                "exampleTranslation": "Thực hành nói thường xuyên có thể đưa tiếng Anh lên một tầm cao mới.",
+                "blankSentence": "Regular speaking practice can ________ English to the next level.",
+                "options": [
+                        "look",
+                        "reach",
+                        "take",
+                        "let"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_244",
+                "question_num": 244,
+                "word": "religious practice",
+                "type": "phrase",
+                "ipa": "/religious practice/",
+                "meaning": "an action or custom connected with religion",
+                "example": "Fasting can be a religious practice in some cultures.",
+                "exampleTranslation": "Ăn chay có thể là một thực hành tôn giáo ở một số nền văn hóa.",
+                "blankSentence": "Fasting can be a ________ practice in some cultures.",
+                "options": [
+                        "take",
+                        "get",
+                        "give",
+                        "religious"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_245",
+                "question_num": 245,
+                "word": "the emotional commitment",
+                "type": "phrase",
+                "ipa": "/the emotional commitment/",
+                "meaning": "the emotional dedication involved in something",
+                "example": "Long-term volunteering requires emotional commitment.",
+                "exampleTranslation": "Hoạt động tình nguyện lâu dài đòi hỏi sự cam kết về mặt cảm xúc.",
+                "blankSentence": "Long-term volunteering requires emotional ________.",
+                "options": [
+                        "involvement",
+                        "agreement",
+                        "engagement",
+                        "commitment"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_246",
+                "question_num": 246,
+                "word": "talent retention",
+                "type": "phrase",
+                "ipa": "/talent retention/",
+                "meaning": "keeping talented people in an organisation or country",
+                "example": "Good working conditions support talent retention.",
+                "exampleTranslation": "Điều kiện làm việc tốt hỗ trợ giữ chân nhân tài.",
+                "blankSentence": "Good working conditions support ________ retention.",
+                "options": [
+                        "talent",
+                        "get",
+                        "make",
+                        "take"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_247",
+                "question_num": 247,
+                "word": "supportive school environment",
+                "type": "phrase",
+                "ipa": "/supportive school environment/",
+                "meaning": "a school setting that encourages and protects learners",
+                "example": "A supportive school environment reduces anxiety.",
+                "exampleTranslation": "Một môi trường học tập hỗ trợ làm giảm sự lo lắng.",
+                "blankSentence": "A ________ school environment reduces anxiety.",
+                "options": [
+                        "give",
+                        "get",
+                        "take",
+                        "supportive"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_248",
+                "question_num": 248,
+                "word": "remote work",
+                "type": "phrase",
+                "ipa": "/remote work/",
+                "meaning": "work done away from a central oﬀice",
+                "example": "Remote work can reduce commuting time.",
+                "exampleTranslation": "Làm việc từ xa có thể giảm thời gian đi lại.",
+                "blankSentence": "________ work can reduce commuting time.",
+                "options": [
+                        "make",
+                        "give",
+                        "take",
+                        "Remote"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_249",
+                "question_num": 249,
+                "word": "freelance basis",
+                "type": "phrase",
+                "ipa": "/freelance basis/",
+                "meaning": "working independently for different clients",
+                "example": "Some designers work on a freelance basis.",
+                "exampleTranslation": "Một số nhà thiết kế làm việc tự do.",
+                "blankSentence": "Some designers work on a ________ basis.",
+                "options": [
+                        "get",
+                        "freelance",
+                        "take",
+                        "give"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_250",
+                "question_num": 250,
+                "word": "renewable energy",
+                "type": "phrase",
+                "ipa": "/renewable energy/",
+                "meaning": "energy from sources that can be naturally replaced",
+                "example": "Renewable energy creates new jobs.",
+                "exampleTranslation": "Năng lượng tái tạo tạo ra việc làm mới.",
+                "blankSentence": "________ energy creates new jobs.",
+                "options": [
+                        "Renewable",
+                        "take",
+                        "give",
+                        "make"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_251",
+                "question_num": 251,
+                "word": "digital services",
+                "type": "phrase",
+                "ipa": "/digital services/",
+                "meaning": "services delivered through digital platforms or tools",
+                "example": "Digital services are expanding in banking and education.",
+                "exampleTranslation": "Dịch vụ kỹ thuật số đang mở rộng trong ngân hàng và giáo dục.",
+                "blankSentence": "________ services are expanding in banking and education.",
+                "options": [
+                        "get",
+                        "Digital",
+                        "make",
+                        "give"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_252",
+                "question_num": 252,
+                "word": "career prospects",
+                "type": "phrase",
+                "ipa": "/career prospects/",
+                "meaning": "future chances of getting better jobs",
+                "example": "A strong portfolio can improve career prospects.",
+                "exampleTranslation": "Một danh mục đầu tư mạnh có thể cải thiện triển vọng nghề nghiệp.",
+                "blankSentence": "A strong portfolio can improve ________ prospects.",
+                "options": [
+                        "make",
+                        "get",
+                        "give",
+                        "career"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_253",
+                "question_num": 253,
+                "word": "ever-changing job market",
+                "type": "phrase",
+                "ipa": "/ever-changing job market/",
+                "meaning": "a job market that changes continuously",
+                "example": "Graduates need flexibility in an ever-changing job market.",
+                "exampleTranslation": "Sinh viên tốt nghiệp cần sự linh hoạt trong thị trường việc làm luôn thay đổi.",
+                "blankSentence": "Graduates need flexibility in an ever-changing job ________.",
+                "options": [
+                        "sector",
+                        "world",
+                        "market",
+                        "industry"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_254",
+                "question_num": 254,
+                "word": "human values",
+                "type": "phrase",
+                "ipa": "/human values/",
+                "meaning": "values connected with dignity, ethics, and human needs",
+                "example": "Technology policy should protect human values.",
+                "exampleTranslation": "Chính sách công nghệ cần bảo vệ giá trị con người",
+                "blankSentence": "Technology policy should protect ________ values.",
+                "options": [
+                        "take",
+                        "human",
+                        "give",
+                        "get"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_255",
+                "question_num": 255,
+                "word": "raise the level of something",
+                "type": "phrase",
+                "ipa": "/raise the level of something/",
+                "meaning": "to improve or increase the standard of something",
+                "example": "New facilities can raise the level of sports training.",
+                "exampleTranslation": "Cơ sở vật chất mới có thể nâng cao trình độ huấn luyện thể thao.",
+                "blankSentence": "New facilities can ________ the level of sports training.",
+                "options": [
+                        "shield",
+                        "circulate",
+                        "squeeze",
+                        "raise"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_256",
+                "question_num": 256,
+                "word": "take a nap",
+                "type": "phrase",
+                "ipa": "/take a nap/",
+                "meaning": "to sleep briefly",
+                "example": "A short break lets students take a nap after lunch.",
+                "exampleTranslation": "Giờ nghỉ ngắn giúp học sinh chợp mắt sau bữa trưa.",
+                "blankSentence": "A short break lets students ________ a nap after lunch.",
+                "options": [
+                        "provide",
+                        "result",
+                        "take",
+                        "circulate"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_257",
+                "question_num": 257,
+                "word": "vibrant oﬀice environment",
+                "type": "phrase",
+                "ipa": "/vibrant oﬀice environment/",
+                "meaning": "a lively and energetic workplace",
+                "example": "Young employees often enjoy a vibrant oﬀice environment.",
+                "exampleTranslation": "Nhân viên trẻ thường thích môi trường văn phòng sôi động.",
+                "blankSentence": "Young employees often enjoy a ________ oﬀice environment.",
+                "options": [
+                        "take",
+                        "vibrant",
+                        "get",
+                        "give"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_258",
+                "question_num": 258,
+                "word": "thrive in a fast-paced setting",
+                "type": "phrase",
+                "ipa": "/thrive in a fast-paced setting/",
+                "meaning": "to do well in a busy, quickly changing environment",
+                "example": "She thrives in a fast-paced setting with clear goals.",
+                "exampleTranslation": "Cô ấy phát triển mạnh mẽ trong môi trường có nhịp độ nhanh với mục tiêu rõ ràng.",
+                "blankSentence": "She ________ in a fast-paced setting with clear goals.",
+                "options": [
+                        "thrives",
+                        "matches",
+                        "maximizes",
+                        "practices"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_259",
+                "question_num": 259,
+                "word": "negative vibes",
+                "type": "phrase",
+                "ipa": "/negative vibes/",
+                "meaning": "unpleasant or hostile feelings from a place or group",
+                "example": "A respectful group avoids negative vibes.",
+                "exampleTranslation": "Một nhóm tôn trọng sẽ tránh được những cảm xúc tiêu cực.",
+                "blankSentence": "A respectful group avoids ________ vibes.",
+                "options": [
+                        "take",
+                        "make",
+                        "negative",
+                        "give"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_260",
+                "question_num": 260,
+                "word": "circulate hostility",
+                "type": "phrase",
+                "ipa": "/circulate hostility/",
+                "meaning": "to spread hostile messages or attitudes",
+                "example": "Moderators removed posts that circulated hostility.",
+                "exampleTranslation": "Người điều hành đã xóa các bài đăng lan truyền sự thù địch.",
+                "blankSentence": "Moderators removed posts that ________ hostility.",
+                "options": [
+                        "encouraged",
+                        "monitored",
+                        "said",
+                        "circulated"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_261",
+                "question_num": 261,
+                "word": "survival depends on",
+                "type": "phrase",
+                "ipa": "/survival depends on/",
+                "meaning": "continued existence relies on something",
+                "example": "A language’s survival depends on active users.",
+                "exampleTranslation": "Sự tồn tại của một ngôn ngữ phụ thuộc vào người dùng tích cực.",
+                "blankSentence": "A language’s ________ depends on active users.",
+                "options": [
+                        "take",
+                        "get",
+                        "survival",
+                        "make"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_262",
+                "question_num": 262,
+                "word": "completely changed",
+                "type": "phrase",
+                "ipa": "/completely changed/",
+                "meaning": "changed in a major or total way",
+                "example": "The internet completely changed how people learn.",
+                "exampleTranslation": "Internet đã thay đổi hoàn toàn cách mọi người học tập.",
+                "blankSentence": "The internet ________ changed how people learn.",
+                "options": [
+                        "make",
+                        "get",
+                        "take",
+                        "completely"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_263",
+                "question_num": 263,
+                "word": "teamwork skills",
+                "type": "phrase",
+                "ipa": "/teamwork skills/",
+                "meaning": "skills for working effectively with others",
+                "example": "Group projects help students practise teamwork skills.",
+                "exampleTranslation": "Dự án nhóm giúp học sinh rèn luyện kỹ năng làm việc nhóm.",
+                "blankSentence": "Group projects help students practise ________ skills.",
+                "options": [
+                        "give",
+                        "teamwork",
+                        "make",
+                        "get"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_264",
+                "question_num": 264,
+                "word": "get things done",
+                "type": "phrase",
+                "ipa": "/get things done/",
+                "meaning": "to complete tasks successfully",
+                "example": "A clear plan helps the team get things done.",
+                "exampleTranslation": "Một kế hoạch rõ ràng sẽ giúp nhóm hoàn thành công việc.",
+                "blankSentence": "A clear plan helps the team ________ things done.",
+                "options": [
+                        "get",
+                        "avoid",
+                        "change",
+                        "do"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_265",
+                "question_num": 265,
+                "word": "apply for a position",
+                "type": "phrase",
+                "ipa": "/apply for a position/",
+                "meaning": "to formally request a job",
+                "example": "She applied for a position at a travel company.",
+                "exampleTranslation": "Cô nộp đơn xin việc vào một công ty du lịch.",
+                "blankSentence": "She ________ for a position at a travel company.",
+                "options": [
+                        "applied",
+                        "decided",
+                        "required",
+                        "reduced"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_266",
+                "question_num": 266,
+                "word": "look forward to your response",
+                "type": "phrase",
+                "ipa": "/look forward to your response/",
+                "meaning": "to wait politely for a reply",
+                "example": "Thank you for your time, and I look forward to your response.",
+                "exampleTranslation": "Cảm ơn bạn đã dành thời gian và tôi mong nhận được phản hồi của bạn.",
+                "blankSentence": "Thank you for your time, and I ________ forward to your response.",
+                "options": [
+                        "look",
+                        "let",
+                        "weaken",
+                        "confirm"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_267",
+                "question_num": 267,
+                "word": "show off your range",
+                "type": "phrase",
+                "ipa": "/show off your range/",
+                "meaning": "to display the full extent of an ability",
+                "example": "A good speaking task lets learners show off their range.",
+                "exampleTranslation": "Một bài nói tốt sẽ giúp người học thể hiện được khả năng nói của mình.",
+                "blankSentence": "A good speaking task lets learners ________ off their range.",
+                "options": [
+                        "express",
+                        "use",
+                        "show",
+                        "match"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_268",
+                "question_num": 268,
+                "word": "inner thoughts",
+                "type": "phrase",
+                "ipa": "/inner thoughts/",
+                "meaning": "private personal thoughts",
+                "example": "Writing journals helps students express their inner thoughts.",
+                "exampleTranslation": "Viết nhật ký giúp học sinh bày tỏ những suy nghĩ nội tâm của mình.",
+                "blankSentence": "Writing journals helps students express their ________ thoughts.",
+                "options": [
+                        "get",
+                        "make",
+                        "inner",
+                        "take"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_269",
+                "question_num": 269,
+                "word": "school violence",
+                "type": "phrase",
+                "ipa": "/school violence/",
+                "meaning": "violent behavior occurring in schools",
+                "example": "Schools need prevention plans to reduce school violence.",
+                "exampleTranslation": "Trường học cần có kế hoạch phòng ngừa để giảm bạo lực học đường.",
+                "blankSentence": "Schools need prevention plans to reduce ________ violence.",
+                "options": [
+                        "get",
+                        "make",
+                        "take",
+                        "school"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_270",
+                "question_num": 270,
+                "word": "serious harm",
+                "type": "phrase",
+                "ipa": "/serious harm/",
+                "meaning": "significant physical or emotional damage",
+                "example": "Online abuse can cause serious harm to teenagers.",
+                "exampleTranslation": "Lạm dụng trực tuyến có thể gây tổn hại nghiêm trọng cho thanh thiếu niên.",
+                "blankSentence": "Online abuse can cause ________ harm to teenagers.",
+                "options": [
+                        "give",
+                        "make",
+                        "serious",
+                        "take"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_271",
+                "question_num": 271,
+                "word": "physically and emotionally",
+                "type": "phrase",
+                "ipa": "/physically and emotionally/",
+                "meaning": "in both physical and emotional ways",
+                "example": "Bullying affects learners physically and emotionally.",
+                "exampleTranslation": "Bắt nạt ảnh hưởng đến người học về thể chất và tinh thần.",
+                "blankSentence": "Bullying affects learners ________ and emotionally.",
+                "options": [
+                        "make",
+                        "get",
+                        "take",
+                        "physically"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_272",
+                "question_num": 272,
+                "word": "emotional guidance",
+                "type": "phrase",
+                "ipa": "/emotional guidance/",
+                "meaning": "support that helps people manage feelings",
+                "example": "Teenagers need emotional guidance during stressful periods.",
+                "exampleTranslation": "Thanh thiếu niên cần được hướng dẫn về mặt cảm xúc trong giai đoạn căng thẳng.",
+                "blankSentence": "Teenagers need ________ guidance during stressful periods.",
+                "options": [
+                        "make",
+                        "give",
+                        "emotional",
+                        "get"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_273",
+                "question_num": 273,
+                "word": "take appropriate actions",
+                "type": "phrase",
+                "ipa": "/take appropriate actions/",
+                "meaning": "to do suitable things in response to a situation",
+                "example": "Teachers should take appropriate actions when bullying occurs.",
+                "exampleTranslation": "Giáo viên nên có hành động thích hợp khi bắt nạt xảy ra.",
+                "blankSentence": "Teachers should ________ appropriate actions when bullying occurs.",
+                "options": [
+                        "limit",
+                        "take",
+                        "avoid",
+                        "foster"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_274",
+                "question_num": 274,
+                "word": "lead to health problems",
+                "type": "phrase",
+                "ipa": "/lead to health problems/",
+                "meaning": "to cause health-related issues",
+                "example": "Poor sleep can lead to health problems.",
+                "exampleTranslation": "Giấc ngủ kém có thể dẫn đến các vấn đề về sức khỏe.",
+                "blankSentence": "Poor sleep can ________ to health problems.",
+                "options": [
+                        "gain",
+                        "result",
+                        "lead",
+                        "shield"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_275",
+                "question_num": 275,
+                "word": "the amount of movement",
+                "type": "phrase",
+                "ipa": "/the amount of movement/",
+                "meaning": "how much physical movement there is",
+                "example": "Smart watches can measure the amount of movement each day.",
+                "exampleTranslation": "Đồng hồ thông minh có thể đo được lượng chuyển động mỗi ngày.",
+                "blankSentence": "Smart watches can measure the ________ of movement each day.",
+                "options": [
+                        "quantity",
+                        "amount",
+                        "level",
+                        "number"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_276",
+                "question_num": 276,
+                "word": "lifestyle-related health problems",
+                "type": "phrase",
+                "ipa": "/lifestyle-related health problems/",
+                "meaning": "health problems connected with lifestyle habits",
+                "example": "Schools can teach students about lifestyle-related health problems.",
+                "exampleTranslation": "Trường học có thể dạy học sinh về các vấn đề sức khỏe liên quan đến lối sống.",
+                "blankSentence": "Schools can teach students about lifestyle-related health ________.",
+                "options": [
+                        "conditions",
+                        "issues",
+                        "problems",
+                        "diseases"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_277",
+                "question_num": 277,
+                "word": "largely resulting from",
+                "type": "phrase",
+                "ipa": "/largely resulting from/",
+                "meaning": "mainly caused by",
+                "example": "Stress largely resulting from exams can affect sleep.",
+                "exampleTranslation": "Căng thẳng phần lớn do thi cử có thể ảnh hưởng đến giấc ngủ.",
+                "blankSentence": "Stress ________ resulting from exams can affect sleep.",
+                "options": [
+                        "make",
+                        "largely",
+                        "give",
+                        "take"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_278",
+                "question_num": 278,
+                "word": "unhealthy lifestyle choices",
+                "type": "phrase",
+                "ipa": "/unhealthy lifestyle choices/",
+                "meaning": "poor choices about daily habits",
+                "example": "Unhealthy lifestyle choices can reduce concentration.",
+                "exampleTranslation": "Lựa chọn lối sống không lành mạnh có thể làm giảm khả năng tập trung.",
+                "blankSentence": "________ lifestyle choices can reduce concentration.",
+                "options": [
+                        "take",
+                        "give",
+                        "Unhealthy",
+                        "make"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_279",
+                "question_num": 279,
+                "word": "high-quality voice demos",
+                "type": "phrase",
+                "ipa": "/high-quality voice demos/",
+                "meaning": "voice demonstration samples of good quality",
+                "example": "The platform provides high-quality voice demos for learners.",
+                "exampleTranslation": "Nền tảng này cung cấp các bản demo giọng nói chất lượng cao cho người học.",
+                "blankSentence": "The platform provides high-quality voice ________ for learners.",
+                "options": [
+                        "performances",
+                        "samples",
+                        "shows",
+                        "demos"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_280",
+                "question_num": 280,
+                "word": "almost never consider",
+                "type": "phrase",
+                "ipa": "/almost never consider/",
+                "meaning": "rarely think about choosing something",
+                "example": "Loyal customers almost never consider changing brands.",
+                "exampleTranslation": "Khách hàng trung thành hầu như không bao giờ cân nhắc việc thay đổi thương hiệu.",
+                "blankSentence": "Loyal customers ________ never consider changing brands.",
+                "options": [
+                        "take",
+                        "give",
+                        "almost",
+                        "get"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_281",
+                "question_num": 281,
+                "word": "facilitated by",
+                "type": "phrase",
+                "ipa": "/facilitated by/",
+                "meaning": "guided or supported by someone",
+                "example": "The workshop was facilitated by experienced mentors.",
+                "exampleTranslation": "Hội thảo được hướng dẫn bởi các cố vấn giàu kinh nghiệm.",
+                "blankSentence": "The workshop was ________ by experienced mentors.",
+                "options": [
+                        "facilitated",
+                        "take",
+                        "get",
+                        "give"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_282",
+                "question_num": 282,
+                "word": "at night",
+                "type": "phrase",
+                "ipa": "/at night/",
+                "meaning": "during the night",
+                "example": "Students should avoid heavy meals at night.",
+                "exampleTranslation": "Học sinh nên tránh ăn nhiều vào ban đêm.",
+                "blankSentence": "Students should avoid heavy meals ________ night.",
+                "options": [
+                        "on",
+                        "at",
+                        "in",
+                        "into"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_283",
+                "question_num": 283,
+                "word": "comfortable cotton pillows",
+                "type": "phrase",
+                "ipa": "/comfortable cotton pillows/",
+                "meaning": "pillows made of cotton and comfortable to use",
+                "example": "The hotel provides comfortable cotton pillows.",
+                "exampleTranslation": "Khách sạn cung cấp gối bông thoải mái.",
+                "blankSentence": "The hotel provides ________ cotton pillows.",
+                "options": [
+                        "comfortable",
+                        "make",
+                        "give",
+                        "take"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_284",
+                "question_num": 284,
+                "word": "record-breaking heatwaves",
+                "type": "phrase",
+                "ipa": "/record-breaking heatwaves/",
+                "meaning": "heatwaves that exceed previous records",
+                "example": "Record-breaking heatwaves forced schools to adjust schedules.",
+                "exampleTranslation": "Những đợt nắng nóng kỷ lục buộc các trường học phải điều chỉnh lịch học.",
+                "blankSentence": "Record-breaking ________ forced schools to adjust schedules.",
+                "options": [
+                        "temperatures",
+                        "weathers",
+                        "heatwaves",
+                        "storms"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_285",
+                "question_num": 285,
+                "word": "extreme heat",
+                "type": "phrase",
+                "ipa": "/extreme heat/",
+                "meaning": "very high and dangerous heat",
+                "example": "Outdoor classes should be limited during extreme heat.",
+                "exampleTranslation": "Các lớp học ngoài trời nên được hạn chế khi nhiệt độ cực cao.",
+                "blankSentence": "Outdoor classes should be limited during ________ heat.",
+                "options": [
+                        "give",
+                        "make",
+                        "get",
+                        "extreme"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_286",
+                "question_num": 286,
+                "word": "peak heat hours",
+                "type": "phrase",
+                "ipa": "/peak heat hours/",
+                "meaning": "the hottest hours of the day",
+                "example": "Schools moved sports lessons away from peak heat hours.",
+                "exampleTranslation": "Các trường học đã chuyển các bài học thể thao ra khỏi giờ nắng nóng cao điểm.",
+                "blankSentence": "Schools moved sports lessons away from ________ heat hours.",
+                "options": [
+                        "give",
+                        "peak",
+                        "make",
+                        "get"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_287",
+                "question_num": 287,
+                "word": "indoor activities",
+                "type": "phrase",
+                "ipa": "/indoor activities/",
+                "meaning": "activities done inside buildings",
+                "example": "Indoor activities are safer during heavy rain.",
+                "exampleTranslation": "Các hoạt động trong nhà sẽ an toàn hơn khi có mưa lớn.",
+                "blankSentence": "________ activities are safer during heavy rain.",
+                "options": [
+                        "make",
+                        "take",
+                        "Indoor",
+                        "get"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_288",
+                "question_num": 288,
+                "word": "reflective roofing",
+                "type": "phrase",
+                "ipa": "/reflective roofing/",
+                "meaning": "roofing that reflects sunlight and reduces heat",
+                "example": "Reflective roofing can lower classroom temperatures.",
+                "exampleTranslation": "Tấm lợp phản quang có thể làm giảm nhiệt độ lớp học",
+                "blankSentence": "________ roofing can lower classroom temperatures.",
+                "options": [
+                        "make",
+                        "give",
+                        "Reflective",
+                        "take"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_289",
+                "question_num": 289,
+                "word": "heat index",
+                "type": "phrase",
+                "ipa": "/heat index/",
+                "meaning": "a measure of how hot it feels",
+                "example": "The heat index helps schools decide whether to hold outdoor lessons.",
+                "exampleTranslation": "Chỉ số nhiệt độ giúp các trường quyết định có nên tổ chức các buổi học ngoài trời hay không.",
+                "blankSentence": "The ________ index helps schools decide whether to hold outdoor lessons.",
+                "options": [
+                        "make",
+                        "get",
+                        "heat",
+                        "take"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_290",
+                "question_num": 290,
+                "word": "hydration levels",
+                "type": "phrase",
+                "ipa": "/hydration levels/",
+                "meaning": "the level of water in the body",
+                "example": "Teachers reminded students to monitor hydration levels.",
+                "exampleTranslation": "Giáo viên nhắc nhở học sinh theo dõi mức độ hydrat hóa.",
+                "blankSentence": "Teachers reminded students to monitor ________ levels.",
+                "options": [
+                        "make",
+                        "give",
+                        "take",
+                        "hydration"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_291",
+                "question_num": 291,
+                "word": "real-time data",
+                "type": "phrase",
+                "ipa": "/real-time data/",
+                "meaning": "data available immediately as events happen",
+                "example": "Real-time data can help schools respond to heat risks.",
+                "exampleTranslation": "Dữ liệu thời gian thực có thể giúp các trường ứng phó với rủi ro nhiệt",
+                "blankSentence": "Real-time ________ can help schools respond to heat risks.",
+                "options": [
+                        "data",
+                        "info",
+                        "records",
+                        "details"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_292",
+                "question_num": 292,
+                "word": "cognitive fragmentation",
+                "type": "phrase",
+                "ipa": "/cognitive fragmentation/",
+                "meaning": "a state where attention and thinking are broken into pieces",
+                "example": "Constant notifications can cause cognitive fragmentation.",
+                "exampleTranslation": "Thông báo liên tục có thể gây ra sự phân mảnh nhận thức.",
+                "blankSentence": "Constant notifications can cause ________ fragmentation.",
+                "options": [
+                        "cognitive",
+                        "get",
+                        "give",
+                        "take"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_293",
+                "question_num": 293,
+                "word": "brand strategies",
+                "type": "phrase",
+                "ipa": "/brand strategies/",
+                "meaning": "plans used by brands to reach goals",
+                "example": "Brand strategies should match real consumer needs.",
+                "exampleTranslation": "Chiến lược thương hiệu phải phù hợp với nhu cầu thực sự của người tiêu dùng.",
+                "blankSentence": "________ strategies should match real consumer needs.",
+                "options": [
+                        "give",
+                        "Brand",
+                        "make",
+                        "take"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_294",
+                "question_num": 294,
+                "word": "genuinely useful",
+                "type": "phrase",
+                "ipa": "/genuinely useful/",
+                "meaning": "truly helpful in practice",
+                "example": "Feedback is genuinely useful when it points to specific mistakes.",
+                "exampleTranslation": "Phản hồi thực sự hữu ích khi nó chỉ ra những sai sót cụ thể.",
+                "blankSentence": "Feedback is ________ useful when it points to specific mistakes.",
+                "options": [
+                        "hardly",
+                        "falsely",
+                        "slightly",
+                        "genuinely"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_295",
+                "question_num": 295,
+                "word": "clinical settings",
+                "type": "phrase",
+                "ipa": "/clinical settings/",
+                "meaning": "medical or healthcare environments",
+                "example": "AI tools must be tested in clinical settings.",
+                "exampleTranslation": "Các công cụ AI phải được thử nghiệm trong môi trường lâm sàng.",
+                "blankSentence": "AI tools must be tested in ________ settings.",
+                "options": [
+                        "get",
+                        "take",
+                        "give",
+                        "clinical"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_296",
+                "question_num": 296,
+                "word": "greater participation",
+                "type": "phrase",
+                "ipa": "/greater participation/",
+                "meaning": "more active involvement",
+                "example": "Lower fees can encourage greater participation.",
+                "exampleTranslation": "Lệ phí thấp hơn có thể khuyến khích sự tham gia nhiều hơn.",
+                "blankSentence": "Lower fees can encourage ________ participation.",
+                "options": [
+                        "greater",
+                        "take",
+                        "make",
+                        "give"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_297",
+                "question_num": 297,
+                "word": "strengthening governance",
+                "type": "phrase",
+                "ipa": "/strengthening governance/",
+                "meaning": "improving rules and management systems",
+                "example": "Digital reform requires strengthening governance.",
+                "exampleTranslation": "Cải cách kỹ thuật số đòi hỏi phải tăng cường quản trị.",
+                "blankSentence": "Digital reform requires ________ governance.",
+                "options": [
+                        "make",
+                        "take",
+                        "strengthening",
+                        "give"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_298",
+                "question_num": 298,
+                "word": "equitable society",
+                "type": "phrase",
+                "ipa": "/equitable society/",
+                "meaning": "a society that treats people fairly",
+                "example": "Education can support a more equitable society.",
+                "exampleTranslation": "Giáo dục có thể hỗ trợ một xã hội công bằng hơn.",
+                "blankSentence": "Education can support a more ________ society.",
+                "options": [
+                        "make",
+                        "get",
+                        "equitable",
+                        "take"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_299",
+                "question_num": 299,
+                "word": "smart cities",
+                "type": "phrase",
+                "ipa": "/smart cities/",
+                "meaning": "cities using digital systems to improve services",
+                "example": "Smart cities can improve traﬀic management.",
+                "exampleTranslation": "Thành phố thông minh có thể cải thiện quản lý giao thông",
+                "blankSentence": "________ cities can improve traﬀic management.",
+                "options": [
+                        "make",
+                        "Smart",
+                        "take",
+                        "give"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_300",
+                "question_num": 300,
+                "word": "sustainable future",
+                "type": "phrase",
+                "ipa": "/sustainable future/",
+                "meaning": "a future that can be maintained without damaging resources",
+                "example": "Clean energy is important for a sustainable future.",
+                "exampleTranslation": "Năng lượng sạch rất quan trọng cho một tương lai bền vững.",
+                "blankSentence": "Clean energy is important for a ________ future.",
+                "options": [
+                        "give",
+                        "get",
+                        "sustainable",
+                        "make"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_301",
+                "question_num": 301,
+                "word": "learning resources",
+                "type": "phrase",
+                "ipa": "/learning resources/",
+                "meaning": "materials or tools used for learning",
+                "example": "Students need reliable learning resources.",
+                "exampleTranslation": "Học sinh cần nguồn tài liệu học tập đáng tin cậy.",
+                "blankSentence": "Students need reliable ________ resources.",
+                "options": [
+                        "give",
+                        "learning",
+                        "take",
+                        "get"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_302",
+                "question_num": 302,
+                "word": "real-world experiences",
+                "type": "phrase",
+                "ipa": "/real-world experiences/",
+                "meaning": "experiences from actual life or work",
+                "example": "Internships provide real-world experiences.",
+                "exampleTranslation": "Thực tập cung cấp kinh nghiệm thực tế.",
+                "blankSentence": "Internships provide real-world ________.",
+                "options": [
+                        "methods",
+                        "lessons",
+                        "skills",
+                        "experiences"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_303",
+                "question_num": 303,
+                "word": "future challenges",
+                "type": "phrase",
+                "ipa": "/future challenges/",
+                "meaning": "diﬀiculties likely to appear in the future",
+                "example": "Critical thinking prepares students for future challenges.",
+                "exampleTranslation": "Tư duy phê phán chuẩn bị cho học sinh những thách thức trong tương lai.",
+                "blankSentence": "Critical thinking prepares students for ________ challenges.",
+                "options": [
+                        "future",
+                        "give",
+                        "take",
+                        "get"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_304",
+                "question_num": 304,
+                "word": "global society",
+                "type": "phrase",
+                "ipa": "/global society/",
+                "meaning": "society viewed at a worldwide level",
+                "example": "English is useful in a global society.",
+                "exampleTranslation": "Tiếng Anh rất hữu ích trong một xã hội toàn cầu.",
+                "blankSentence": "English is useful in a ________ society.",
+                "options": [
+                        "take",
+                        "make",
+                        "global",
+                        "give"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_305",
+                "question_num": 305,
+                "word": "global oil prices",
+                "type": "phrase",
+                "ipa": "/global oil prices/",
+                "meaning": "oil prices in the world market",
+                "example": "Global oil prices affect transport costs.",
+                "exampleTranslation": "Giá dầu thế giới ảnh hưởng đến chi phí vận tải.",
+                "blankSentence": "________ oil prices affect transport costs.",
+                "options": [
+                        "get",
+                        "make",
+                        "Global",
+                        "give"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_306",
+                "question_num": 306,
+                "word": "agile methodologies",
+                "type": "phrase",
+                "ipa": "/agile methodologies/",
+                "meaning": "flexible methods for managing work and responding to change",
+                "example": "Startups often use agile methodologies.",
+                "exampleTranslation": "Các công ty khởi nghiệp thường sử dụng các phương pháp linh hoạt.",
+                "blankSentence": "Startups often use ________ methodologies.",
+                "options": [
+                        "give",
+                        "agile",
+                        "get",
+                        "take"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_307",
+                "question_num": 307,
+                "word": "unforeseen challenges",
+                "type": "phrase",
+                "ipa": "/unforeseen challenges/",
+                "meaning": "unexpected diﬀiculties",
+                "example": "Good planning helps teams handle unforeseen challenges.",
+                "exampleTranslation": "Lập kế hoạch tốt giúp các nhóm xử lý những thách thức không lường trước được.",
+                "blankSentence": "Good planning helps teams handle ________ challenges.",
+                "options": [
+                        "give",
+                        "make",
+                        "take",
+                        "unforeseen"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_308",
+                "question_num": 308,
+                "word": "emerging opportunities",
+                "type": "phrase",
+                "ipa": "/emerging opportunities/",
+                "meaning": "new opportunities that are starting to appear",
+                "example": "Students should be ready for emerging opportunities.",
+                "exampleTranslation": "Học sinh nên sẵn sàng cho những cơ hội mới nổi.",
+                "blankSentence": "Students should be ready for ________ opportunities.",
+                "options": [
+                        "emerging",
+                        "make",
+                        "take",
+                        "get"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_309",
+                "question_num": 309,
+                "word": "maintaining resilience",
+                "type": "phrase",
+                "ipa": "/maintaining resilience/",
+                "meaning": "keeping the ability to recover and adapt",
+                "example": "Healthy routines help learners maintain resilience.",
+                "exampleTranslation": "Thói quen lành mạnh giúp người học duy trì khả năng phục hồi.",
+                "blankSentence": "Healthy routines help learners maintain ________.",
+                "options": [
+                        "strength",
+                        "resilience",
+                        "health",
+                        "confidence"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_310",
+                "question_num": 310,
+                "word": "fostering innovation",
+                "type": "phrase",
+                "ipa": "/fostering innovation/",
+                "meaning": "encouraging new ideas and improvements",
+                "example": "Collaboration is important for fostering innovation.",
+                "exampleTranslation": "Hợp tác là quan trọng để thúc đẩy sự đổi mới.",
+                "blankSentence": "Collaboration is important for ________ innovation.",
+                "options": [
+                        "fostering",
+                        "take",
+                        "make",
+                        "give"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_311",
+                "question_num": 311,
+                "word": "maximize user engagement",
+                "type": "phrase",
+                "ipa": "/maximize user engagement/",
+                "meaning": "to make users interact as much as possible",
+                "example": "Some platforms maximize user engagement through recommendations.",
+                "exampleTranslation": "Một số nền tảng tối đa hóa mức độ tương tác của người dùng thông qua các đề xuất.",
+                "blankSentence": "Some platforms ________ user engagement through recommendations.",
+                "options": [
+                        "do",
+                        "maximize",
+                        "say",
+                        "confirm"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_312",
+                "question_num": 312,
+                "word": "rage bait",
+                "type": "phrase",
+                "ipa": "/rage bait/",
+                "meaning": "content designed to make people angry and react",
+                "example": "Rage bait can make online debates more hostile.",
+                "exampleTranslation": "Mồi nhử cơn thịnh nộ có thể khiến các cuộc tranh luận trực tuyến trở nên thù địch hơn.",
+                "blankSentence": "________ bait can make online debates more hostile.",
+                "options": [
+                        "Rage",
+                        "get",
+                        "take",
+                        "make"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_313",
+                "question_num": 313,
+                "word": "light exposure",
+                "type": "phrase",
+                "ipa": "/light exposure/",
+                "meaning": "contact with or amount of light received",
+                "example": "Morning light exposure can improve sleep rhythm.",
+                "exampleTranslation": "Tiếp xúc với ánh sáng buổi sáng có thể cải thiện nhịp điệu giấc ngủ.",
+                "blankSentence": "Morning ________ exposure can improve sleep rhythm.",
+                "options": [
+                        "get",
+                        "give",
+                        "make",
+                        "light"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_314",
+                "question_num": 314,
+                "word": "hormonal cycles",
+                "type": "phrase",
+                "ipa": "/hormonal cycles/",
+                "meaning": "regular patterns of hormone changes",
+                "example": "Sleep can affect hormonal cycles.",
+                "exampleTranslation": "Giấc ngủ có thể ảnh hưởng đến chu kỳ nội tiết tố.",
+                "blankSentence": "Sleep can affect ________ cycles.",
+                "options": [
+                        "get",
+                        "take",
+                        "hormonal",
+                        "make"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_315",
+                "question_num": 315,
+                "word": "domestic fuel prices",
+                "type": "phrase",
+                "ipa": "/domestic fuel prices/",
+                "meaning": "fuel prices within a country",
+                "example": "Domestic fuel prices changed after the policy update.",
+                "exampleTranslation": "Giá xăng dầu trong nước thay đổi sau khi cập nhật chính sách.",
+                "blankSentence": "________ fuel prices changed after the policy update.",
+                "options": [
+                        "get",
+                        "Domestic",
+                        "give",
+                        "make"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_316",
+                "question_num": 316,
+                "word": "mental well-being",
+                "type": "phrase",
+                "ipa": "/mental well-being/",
+                "meaning": "a healthy state of mind and emotions",
+                "example": "Regular exercise supports mental well-being.",
+                "exampleTranslation": "Tập thể dục thường xuyên hỗ trợ sức khỏe tinh thần.",
+                "blankSentence": "Regular exercise supports ________ well-being.",
+                "options": [
+                        "give",
+                        "get",
+                        "mental",
+                        "take"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_317",
+                "question_num": 317,
+                "word": "social media photos",
+                "type": "phrase",
+                "ipa": "/social media photos/",
+                "meaning": "photos posted on social media",
+                "example": "Social media photos can create unrealistic expectations.",
+                "exampleTranslation": "Hình ảnh trên mạng xã hội có thể tạo ra những kỳ vọng không thực tế.",
+                "blankSentence": "________ media photos can create unrealistic expectations.",
+                "options": [
+                        "Social",
+                        "take",
+                        "get",
+                        "make"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_318",
+                "question_num": 318,
+                "word": "post-truth world",
+                "type": "phrase",
+                "ipa": "/post-truth world/",
+                "meaning": "a situation where emotion often matters more than facts",
+                "example": "A post-truth world makes media literacy more important.",
+                "exampleTranslation": "Một thế giới hậu sự thật khiến cho việc hiểu biết về truyền thông trở nên quan trọng hơn.",
+                "blankSentence": "A post-truth ________ makes media literacy more important.",
+                "options": [
+                        "world",
+                        "media",
+                        "society",
+                        "era"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_319",
+                "question_num": 319,
+                "word": "personal beliefs",
+                "type": "phrase",
+                "ipa": "/personal beliefs/",
+                "meaning": "beliefs held by an individual",
+                "example": "Personal beliefs should be checked against evidence.",
+                "exampleTranslation": "Niềm tin cá nhân nên được kiểm tra dựa trên bằng chứng.",
+                "blankSentence": "________ beliefs should be checked against evidence.",
+                "options": [
+                        "give",
+                        "get",
+                        "take",
+                        "Personal"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_320",
+                "question_num": 320,
+                "word": "internet slang",
+                "type": "phrase",
+                "ipa": "/internet slang/",
+                "meaning": "informal words used online",
+                "example": "Internet slang changes quickly.",
+                "exampleTranslation": "Tiếng lóng trên Internet thay đổi nhanh chóng.",
+                "blankSentence": "________ slang changes quickly.",
+                "options": [
+                        "get",
+                        "Internet",
+                        "give",
+                        "take"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_321",
+                "question_num": 321,
+                "word": "serious thinking",
+                "type": "phrase",
+                "ipa": "/serious thinking/",
+                "meaning": "careful and thoughtful reasoning",
+                "example": "Short slogans should not replace serious thinking.",
+                "exampleTranslation": "Những khẩu hiệu ngắn gọn không nên thay thế những suy nghĩ nghiêm túc.",
+                "blankSentence": "Short slogans should not replace ________ thinking.",
+                "options": [
+                        "serious",
+                        "get",
+                        "make",
+                        "give"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_322",
+                "question_num": 322,
+                "word": "mobile usability",
+                "type": "phrase",
+                "ipa": "/mobile usability/",
+                "meaning": "how easy a mobile interface is to use",
+                "example": "Designers test mobile usability before launching an app.",
+                "exampleTranslation": "Các nhà thiết kế kiểm tra khả năng sử dụng trên thiết bị di động trước khi tung ra một ứng dụng.",
+                "blankSentence": "Designers test ________ usability before launching an app.",
+                "options": [
+                        "give",
+                        "make",
+                        "mobile",
+                        "take"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_323",
+                "question_num": 323,
+                "word": "strategic priority",
+                "type": "phrase",
+                "ipa": "/strategic priority/",
+                "meaning": "an important goal in a plan",
+                "example": "Cybersecurity is a strategic priority for schools.",
+                "exampleTranslation": "An ninh mạng là ưu tiên chiến lược của các trường học.",
+                "blankSentence": "Cybersecurity is a ________ priority for schools.",
+                "options": [
+                        "take",
+                        "give",
+                        "strategic",
+                        "get"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_324",
+                "question_num": 324,
+                "word": "mobile environments",
+                "type": "phrase",
+                "ipa": "/mobile environments/",
+                "meaning": "settings where users access content on mobile devices",
+                "example": "Text must be clear in mobile environments.",
+                "exampleTranslation": "Văn bản phải rõ ràng trong môi trường di động.",
+                "blankSentence": "Text must be clear in ________ environments.",
+                "options": [
+                        "make",
+                        "get",
+                        "take",
+                        "mobile"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_325",
+                "question_num": 325,
+                "word": "visual clutter",
+                "type": "phrase",
+                "ipa": "/visual clutter/",
+                "meaning": "too many visual elements that make a design confusing",
+                "example": "Reducing visual clutter improves reading speed.",
+                "exampleTranslation": "Giảm sự lộn xộn về mặt hình ảnh sẽ cải thiện tốc độ đọc.",
+                "blankSentence": "Reducing ________ clutter improves reading speed.",
+                "options": [
+                        "give",
+                        "visual",
+                        "get",
+                        "make"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_326",
+                "question_num": 326,
+                "word": "compete for attention",
+                "type": "phrase",
+                "ipa": "/compete for attention/",
+                "meaning": "to try to attract attention at the same time",
+                "example": "Too many buttons compete for attention.",
+                "exampleTranslation": "Quá nhiều nút tranh giành sự chú ý.",
+                "blankSentence": "Too many buttons ________ for attention.",
+                "options": [
+                        "compete",
+                        "get",
+                        "give",
+                        "make"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_327",
+                "question_num": 327,
+                "word": "busy schedules",
+                "type": "phrase",
+                "ipa": "/busy schedules/",
+                "meaning": "timetables with many commitments",
+                "example": "Busy schedules make regular exercise diﬀicult.",
+                "exampleTranslation": "Lịch trình bận rộn khiến việc tập thể dục thường xuyên trở nên khó khăn.",
+                "blankSentence": "________ schedules make regular exercise diﬀicult.",
+                "options": [
+                        "get",
+                        "make",
+                        "Busy",
+                        "give"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_328",
+                "question_num": 328,
+                "word": "overcome barriers",
+                "type": "phrase",
+                "ipa": "/overcome barriers/",
+                "meaning": "to get past diﬀiculties or obstacles",
+                "example": "Scholarships help learners overcome barriers.",
+                "exampleTranslation": "Học bổng giúp người học vượt qua rào cản.",
+                "blankSentence": "Scholarships help learners ________ barriers.",
+                "options": [
+                        "overcome",
+                        "give",
+                        "make",
+                        "get"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_329",
+                "question_num": 329,
+                "word": "personal fulfilment",
+                "type": "phrase",
+                "ipa": "/personal fulfilment/",
+                "meaning": "a sense of personal satisfaction and meaning",
+                "example": "Creative work can bring personal fulfilment.",
+                "exampleTranslation": "Công việc sáng tạo có thể mang lại sự thỏa mãn cá nhân.",
+                "blankSentence": "Creative work can bring ________ fulfilment.",
+                "options": [
+                        "give",
+                        "personal",
+                        "get",
+                        "take"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_330",
+                "question_num": 330,
+                "word": "professional success",
+                "type": "phrase",
+                "ipa": "/professional success/",
+                "meaning": "success in one’s career",
+                "example": "Communication skills support professional success.",
+                "exampleTranslation": "Kỹ năng giao tiếp hỗ trợ thành công nghề nghiệp.",
+                "blankSentence": "Communication skills support ________ success.",
+                "options": [
+                        "give",
+                        "professional",
+                        "take",
+                        "get"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_331",
+                "question_num": 331,
+                "word": "online resources",
+                "type": "phrase",
+                "ipa": "/online resources/",
+                "meaning": "materials and tools available on the internet",
+                "example": "Learners need to evaluate online resources carefully.",
+                "exampleTranslation": "Người học cần đánh giá tài nguyên trực tuyến một cách cẩn thận.",
+                "blankSentence": "Learners need to evaluate ________ resources carefully.",
+                "options": [
+                        "give",
+                        "make",
+                        "take",
+                        "online"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_332",
+                "question_num": 332,
+                "word": "powerful catalyst",
+                "type": "phrase",
+                "ipa": "/powerful catalyst/",
+                "meaning": "something that strongly speeds up change",
+                "example": "Feedback can be a powerful catalyst for improvement.",
+                "exampleTranslation": "Phản hồi có thể là chất xúc tác mạnh mẽ để cải thiện.",
+                "blankSentence": "Feedback can be a ________ catalyst for improvement.",
+                "options": [
+                        "make",
+                        "give",
+                        "take",
+                        "powerful"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_333",
+                "question_num": 333,
+                "word": "ongoing transformation",
+                "type": "phrase",
+                "ipa": "/ongoing transformation/",
+                "meaning": "a change process that is still continuing",
+                "example": "Digital banking is part of an ongoing transformation.",
+                "exampleTranslation": "Ngân hàng số là một phần của quá trình chuyển đổi đang diễn ra.",
+                "blankSentence": "Digital banking is part of an ________ transformation.",
+                "options": [
+                        "give",
+                        "ongoing",
+                        "get",
+                        "make"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_334",
+                "question_num": 334,
+                "word": "customised study paces",
+                "type": "phrase",
+                "ipa": "/customised study paces/",
+                "meaning": "learning speeds adjusted to individual learners",
+                "example": "Online videos allow customised study paces.",
+                "exampleTranslation": "Video trực tuyến cho phép tùy chỉnh tốc độ học tập.",
+                "blankSentence": "Online videos allow ________ study paces.",
+                "options": [
+                        "customised",
+                        "get",
+                        "make",
+                        "give"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_335",
+                "question_num": 335,
+                "word": "digital trail",
+                "type": "phrase",
+                "ipa": "/digital trail/",
+                "meaning": "records left by online or digital activity",
+                "example": "Every online purchase leaves a digital trail.",
+                "exampleTranslation": "Mỗi giao dịch mua hàng trực tuyến đều để lại dấu vết kỹ thuật số.",
+                "blankSentence": "Every online purchase leaves a ________ trail.",
+                "options": [
+                        "make",
+                        "get",
+                        "digital",
+                        "give"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_336",
+                "question_num": 336,
+                "word": "secure databases",
+                "type": "phrase",
+                "ipa": "/secure databases/",
+                "meaning": "databases protected against misuse or access",
+                "example": "Schools need secure databases for student records.",
+                "exampleTranslation": "Các trường học cần cơ sở dữ liệu an toàn cho hồ sơ học sinh.",
+                "blankSentence": "Schools need ________ databases for student records.",
+                "options": [
+                        "give",
+                        "secure",
+                        "get",
+                        "make"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_337",
+                "question_num": 337,
+                "word": "crafted entirely by students",
+                "type": "phrase",
+                "ipa": "/crafted entirely by students/",
+                "meaning": "made completely by students",
+                "example": "The exhibition showed posters crafted entirely by students.",
+                "exampleTranslation": "Triển lãm trưng bày những tấm áp phích hoàn toàn do sinh viên thực hiện.",
+                "blankSentence": "The exhibition showed posters ________ entirely by students.",
+                "options": [
+                        "make",
+                        "take",
+                        "crafted",
+                        "get"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_338",
+                "question_num": 338,
+                "word": "processing speed",
+                "type": "phrase",
+                "ipa": "/processing speed/",
+                "meaning": "the speed at which a system processes information",
+                "example": "Better hardware improves processing speed.",
+                "exampleTranslation": "Phần cứng tốt hơn cải thiện tốc độ xử lý.",
+                "blankSentence": "Better hardware improves ________ speed.",
+                "options": [
+                        "take",
+                        "make",
+                        "processing",
+                        "give"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_339",
+                "question_num": 339,
+                "word": "memory limitations",
+                "type": "phrase",
+                "ipa": "/memory limitations/",
+                "meaning": "limits in memory capacity",
+                "example": "Early computers suffered from memory limitations.",
+                "exampleTranslation": "Những máy tính đời đầu bị hạn chế về bộ nhớ.",
+                "blankSentence": "Early computers suffered from ________ limitations.",
+                "options": [
+                        "get",
+                        "memory",
+                        "make",
+                        "give"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_340",
+                "question_num": 340,
+                "word": "cultural spectacle",
+                "type": "phrase",
+                "ipa": "/cultural spectacle/",
+                "meaning": "a public cultural display or event",
+                "example": "The debate became a cultural spectacle online.",
+                "exampleTranslation": "Cuộc tranh luận đã trở thành một cảnh tượng văn hóa trực tuyến.",
+                "blankSentence": "The debate became a ________ spectacle online.",
+                "options": [
+                        "make",
+                        "get",
+                        "take",
+                        "cultural"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_341",
+                "question_num": 341,
+                "word": "rural schools",
+                "type": "phrase",
+                "ipa": "/rural schools/",
+                "meaning": "schools located in rural areas",
+                "example": "Rural schools often face resource shortages.",
+                "exampleTranslation": "Các trường học ở nông thôn thường phải đối mặt với tình trạng thiếu nguồn lực.",
+                "blankSentence": "________ schools often face resource shortages.",
+                "options": [
+                        "take",
+                        "Rural",
+                        "get",
+                        "give"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_342",
+                "question_num": 342,
+                "word": "complete beginner",
+                "type": "phrase",
+                "ipa": "/complete beginner/",
+                "meaning": "someone with no prior experience",
+                "example": "The course is suitable for a complete beginner.",
+                "exampleTranslation": "Khóa học phù hợp cho người mới bắt đầu hoàn chỉnh.",
+                "blankSentence": "The course is suitable for a ________ beginner.",
+                "options": [
+                        "complete",
+                        "make",
+                        "get",
+                        "give"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_343",
+                "question_num": 343,
+                "word": "seasoned decorator",
+                "type": "phrase",
+                "ipa": "/seasoned decorator/",
+                "meaning": "an experienced decorator",
+                "example": "A seasoned decorator can finish the design quickly.",
+                "exampleTranslation": "Một người trang trí dày dạn kinh nghiệm có thể hoàn thành thiết kế một cách nhanh chóng.",
+                "blankSentence": "A ________ decorator can finish the design quickly.",
+                "options": [
+                        "give",
+                        "seasoned",
+                        "make",
+                        "get"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_344",
+                "question_num": 344,
+                "word": "STEM programmes",
+                "type": "phrase",
+                "ipa": "/stem programmes/",
+                "meaning": "programmes in science, technology, engineering, and mathematics",
+                "example": "STEM programmes should include practical projects.",
+                "exampleTranslation": "Các chương trình STEM nên bao gồm các dự án thực tế.",
+                "blankSentence": "________ programmes should include practical projects.",
+                "options": [
+                        "get",
+                        "give",
+                        "STEM",
+                        "make"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_345",
+                "question_num": 345,
+                "word": "implemented thoughtfully",
+                "type": "phrase",
+                "ipa": "/implemented thoughtfully/",
+                "meaning": "put into practice with careful planning",
+                "example": "Implemented thoughtfully, technology can support teachers.",
+                "exampleTranslation": "Được triển khai một cách chu đáo, công nghệ có thể hỗ trợ giáo viên.",
+                "blankSentence": "________ thoughtfully, technology can support teachers.",
+                "options": [
+                        "make",
+                        "Implemented",
+                        "give",
+                        "get"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_346",
+                "question_num": 346,
+                "word": "plastic waste",
+                "type": "phrase",
+                "ipa": "/plastic waste/",
+                "meaning": "discarded plastic material",
+                "example": "Robots can help collect plastic waste from rivers.",
+                "exampleTranslation": "Robot có thể giúp thu gom rác thải nhựa từ sông.",
+                "blankSentence": "Robots can help collect ________ waste from rivers.",
+                "options": [
+                        "make",
+                        "take",
+                        "plastic",
+                        "get"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_347",
+                "question_num": 347,
+                "word": "academic burnout",
+                "type": "phrase",
+                "ipa": "/academic burnout/",
+                "meaning": "exhaustion caused by study pressure",
+                "example": "Too many exams can contribute to academic burnout.",
+                "exampleTranslation": "Quá nhiều kỳ thi có thể góp phần làm học sinh kiệt sức.",
+                "blankSentence": "Too many exams can contribute to ________ burnout.",
+                "options": [
+                        "get",
+                        "give",
+                        "academic",
+                        "take"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_348",
+                "question_num": 348,
+                "word": "hyper-competitive environment",
+                "type": "phrase",
+                "ipa": "/hyper-competitive environment/",
+                "meaning": "an extremely competitive setting",
+                "example": "A hyper-competitive environment can increase anxiety.",
+                "exampleTranslation": "Một môi trường siêu cạnh tranh có thể làm tăng sự lo lắng.",
+                "blankSentence": "A hyper-competitive ________ can increase anxiety.",
+                "options": [
+                        "system",
+                        "classroom",
+                        "setting",
+                        "environment"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_349",
+                "question_num": 349,
+                "word": "pursuit of perfection",
+                "type": "phrase",
+                "ipa": "/pursuit of perfection/",
+                "meaning": "the effort to be perfect",
+                "example": "The pursuit of perfection can harm creativity.",
+                "exampleTranslation": "Việc theo đuổi sự hoàn hảo có thể gây tổn hại đến sự sáng tạo.",
+                "blankSentence": "The ________ of perfection can harm creativity.",
+                "options": [
+                        "give",
+                        "make",
+                        "take",
+                        "pursuit"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_350",
+                "question_num": 350,
+                "word": "biometric information storage",
+                "type": "phrase",
+                "ipa": "/biometric information storage/",
+                "meaning": "storage of data about physical identifiers",
+                "example": "Biometric information storage requires strict safeguards.",
+                "exampleTranslation": "Lưu trữ thông tin sinh trắc học đòi hỏi các biện pháp bảo vệ nghiêm ngặt.",
+                "blankSentence": "________ information storage requires strict safeguards.",
+                "options": [
+                        "get",
+                        "take",
+                        "Biometric",
+                        "give"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_351",
+                "question_num": 351,
+                "word": "compromised biological data",
+                "type": "phrase",
+                "ipa": "/compromised biological data/",
+                "meaning": "biological data that has been exposed or misused",
+                "example": "Compromised biological data cannot be replaced like a password.",
+                "exampleTranslation": "Dữ liệu sinh học bị xâm phạm không thể được thay thế như mật khẩu.",
+                "blankSentence": "________ biological data cannot be replaced like a password.",
+                "options": [
+                        "make",
+                        "give",
+                        "Compromised",
+                        "get"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_352",
+                "question_num": 352,
+                "word": "global energy supply",
+                "type": "phrase",
+                "ipa": "/global energy supply/",
+                "meaning": "the worldwide supply of energy",
+                "example": "Global energy supply affects national prices.",
+                "exampleTranslation": "Nguồn cung năng lượng toàn cầu ảnh hưởng đến giá cả quốc gia.",
+                "blankSentence": "________ energy supply affects national prices.",
+                "options": [
+                        "make",
+                        "Global",
+                        "give",
+                        "take"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_353",
+                "question_num": 353,
+                "word": "shield households",
+                "type": "phrase",
+                "ipa": "/shield households/",
+                "meaning": "to protect households from harm or cost",
+                "example": "Subsidies can shield households from sudden price increases.",
+                "exampleTranslation": "Trợ cấp có thể bảo vệ các hộ gia đình khỏi sự tăng giá đột ngột.",
+                "blankSentence": "Subsidies can ________ households from sudden price increases.",
+                "options": [
+                        "harness",
+                        "shield",
+                        "show",
+                        "avoid"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_354",
+                "question_num": 354,
+                "word": "reduced barriers",
+                "type": "phrase",
+                "ipa": "/reduced barriers/",
+                "meaning": "fewer obstacles or diﬀiculties",
+                "example": "Reduced barriers make online learning more accessible.",
+                "exampleTranslation": "Giảm rào cản giúp việc học trực tuyến dễ tiếp cận hơn.",
+                "blankSentence": "________ barriers make online learning more accessible.",
+                "options": [
+                        "take",
+                        "Reduced",
+                        "give",
+                        "make"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_355",
+                "question_num": 355,
+                "word": "sustainable habits",
+                "type": "phrase",
+                "ipa": "/sustainable habits/",
+                "meaning": "habits that can be maintained over time",
+                "example": "Small goals help learners build sustainable habits.",
+                "exampleTranslation": "Mục tiêu nhỏ giúp người học xây dựng thói quen bền vững.",
+                "blankSentence": "Small goals help learners build ________ habits.",
+                "options": [
+                        "take",
+                        "sustainable",
+                        "get",
+                        "give"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_356",
+                "question_num": 356,
+                "word": "global artistic conversation",
+                "type": "phrase",
+                "ipa": "/global artistic conversation/",
+                "meaning": "worldwide discussion about art",
+                "example": "The exhibition joined a global artistic conversation.",
+                "exampleTranslation": "Triển lãm đã tham gia một cuộc trò chuyện nghệ thuật toàn cầu.",
+                "blankSentence": "The exhibition joined a ________ artistic conversation.",
+                "options": [
+                        "give",
+                        "make",
+                        "global",
+                        "take"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_357",
+                "question_num": 357,
+                "word": "manage time better",
+                "type": "phrase",
+                "ipa": "/manage time better/",
+                "meaning": "to organize time more effectively",
+                "example": "A weekly timetable helps students manage time better.",
+                "exampleTranslation": "Thời gian biểu hàng tuần giúp học sinh quản lý thời gian tốt hơn.",
+                "blankSentence": "A weekly timetable helps students ________ time better.",
+                "options": [
+                        "manage",
+                        "respond",
+                        "test",
+                        "squeeze"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_358",
+                "question_num": 358,
+                "word": "reach full potential",
+                "type": "phrase",
+                "ipa": "/reach full potential/",
+                "meaning": "to achieve the highest possible ability",
+                "example": "Supportive teachers help learners reach full potential.",
+                "exampleTranslation": "Giáo viên hỗ trợ giúp người học phát huy hết tiềm năng.",
+                "blankSentence": "Supportive teachers help learners ________ full potential.",
+                "options": [
+                        "reach",
+                        "harness",
+                        "consider",
+                        "confirm"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_359",
+                "question_num": 359,
+                "word": "meaningful progress",
+                "type": "phrase",
+                "ipa": "/meaningful progress/",
+                "meaning": "real and valuable improvement",
+                "example": "Consistent practice leads to meaningful progress.",
+                "exampleTranslation": "Thực hành nhất quán dẫn đến sự tiến bộ có ý nghĩa.",
+                "blankSentence": "Consistent practice leads to ________ progress.",
+                "options": [
+                        "get",
+                        "meaningful",
+                        "take",
+                        "make"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_360",
+                "question_num": 360,
+                "word": "self-schemas",
+                "type": "phrase",
+                "ipa": "/self-schemas/",
+                "meaning": "mental beliefs people hold about themselves",
+                "example": "Negative self-schemas can affect confidence.",
+                "exampleTranslation": "Những sơ đồ bản thân tiêu cực có thể ảnh hưởng đến sự tự tin.",
+                "blankSentence": "Negative ________ can affect confidence.",
+                "options": [
+                        "self-images",
+                        "self-schemas",
+                        "self-beliefs",
+                        "self-thoughts"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_361",
+                "question_num": 361,
+                "word": "confirm existing beliefs",
+                "type": "phrase",
+                "ipa": "/confirm existing beliefs/",
+                "meaning": "to support what someone already believes",
+                "example": "Algorithms may show content that confirms existing beliefs.",
+                "exampleTranslation": "Các thuật toán có thể hiển thị nội dung xác nhận niềm tin hiện có.",
+                "blankSentence": "Algorithms may show content that ________ existing beliefs.",
+                "options": [
+                        "makes",
+                        "confirms",
+                        "says",
+                        "boosts"
+                ],
+                "answer": "B"
+        },
+        {
+                "id": "col_362",
+                "question_num": 362,
+                "word": "barriers to entry",
+                "type": "phrase",
+                "ipa": "/barriers to entry/",
+                "meaning": "obstacles that prevent people from joining a field",
+                "example": "High training costs create barriers to entry.",
+                "exampleTranslation": "Chi phí đào tạo cao tạo ra rào cản gia nhập.",
+                "blankSentence": "High training costs create ________ to entry.",
+                "options": [
+                        "barriers",
+                        "make",
+                        "get",
+                        "give"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_363",
+                "question_num": 363,
+                "word": "waste management sector",
+                "type": "phrase",
+                "ipa": "/waste management sector/",
+                "meaning": "the industry dealing with waste collection and treatment",
+                "example": "The waste management sector needs skilled workers.",
+                "exampleTranslation": "Ngành quản lý chất thải cần lao động có tay nghề cao.",
+                "blankSentence": "The ________ management sector needs skilled workers.",
+                "options": [
+                        "get",
+                        "take",
+                        "waste",
+                        "make"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_364",
+                "question_num": 364,
+                "word": "reputational stigma",
+                "type": "phrase",
+                "ipa": "/reputational stigma/",
+                "meaning": "a negative public image attached to someone or something",
+                "example": "Reputational stigma can discourage young workers.",
+                "exampleTranslation": "Sự kỳ thị về danh tiếng có thể làm nản lòng những người lao động trẻ.",
+                "blankSentence": "________ stigma can discourage young workers.",
+                "options": [
+                        "get",
+                        "give",
+                        "take",
+                        "Reputational"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_365",
+                "question_num": 365,
+                "word": "fast fashion",
+                "type": "phrase",
+                "ipa": "/fast fashion/",
+                "meaning": "cheap clothing produced quickly to follow trends",
+                "example": "Fast fashion creates hidden environmental costs.",
+                "exampleTranslation": "Thời trang nhanh tạo ra chi phí môi trường tiềm ẩn.",
+                "blankSentence": "________ fashion creates hidden environmental costs.",
+                "options": [
+                        "Fast",
+                        "take",
+                        "give",
+                        "make"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_366",
+                "question_num": 366,
+                "word": "hidden price",
+                "type": "phrase",
+                "ipa": "/hidden price/",
+                "meaning": "a cost that is not obvious at first",
+                "example": "Cheap products may carry a hidden price.",
+                "exampleTranslation": "Sản phẩm giá rẻ có thể mang một mức giá ẩn.",
+                "blankSentence": "Cheap products may carry a ________ price.",
+                "options": [
+                        "give",
+                        "get",
+                        "make",
+                        "hidden"
+                ],
+                "answer": "D"
+        },
+        {
+                "id": "col_367",
+                "question_num": 367,
+                "word": "nine-to-five model",
+                "type": "phrase",
+                "ipa": "/nine-to-five model/",
+                "meaning": "a traditional full-time work schedule",
+                "example": "Remote work has weakened the nine-to-five model.",
+                "exampleTranslation": "Làm việc từ xa đã làm suy yếu mô hình 9 giờ 5 phút.",
+                "blankSentence": "Remote work has weakened the nine-to-five ________.",
+                "options": [
+                        "method",
+                        "style",
+                        "model",
+                        "system"
+                ],
+                "answer": "C"
+        },
+        {
+                "id": "col_368",
+                "question_num": 368,
+                "word": "creative and tech-related fields",
+                "type": "phrase",
+                "ipa": "/creative and tech-related fields/",
+                "meaning": "fields connected with creativity and technology",
+                "example": "Freelance work is common in creative and tech-related fields.",
+                "exampleTranslation": "Công việc tự do phổ biến trong các lĩnh vực sáng tạo và liên quan đến công nghệ.",
+                "blankSentence": "Freelance work is common in ________ and tech-related fields.",
+                "options": [
+                        "creative",
+                        "get",
+                        "take",
+                        "make"
+                ],
+                "answer": "A"
+        },
+        {
+                "id": "col_369",
+                "question_num": 369,
+                "word": "combined efforts",
+                "type": "phrase",
+                "ipa": "/combined efforts/",
+                "meaning": "efforts from several people or groups together",
+                "example": "Combined efforts can improve local education.",
+                "exampleTranslation": "Những nỗ lực kết hợp có thể cải thiện giáo dục địa phương.",
+                "blankSentence": "________ efforts can improve local education.",
+                "options": [
+                        "make",
+                        "take",
+                        "Combined",
+                        "get"
+                ],
+                "answer": "C"
         }
 ]
 };

@@ -6491,11 +6491,11 @@ const vocabularyData = {
                 "exampleTranslation": "Một cuộc thi tranh luận tiếng Anh có thể cải thiện sự tự tin khi nói.",
                 "blankSentence": "An ________ debate competition can improve speaking confidence.",
                 "options": [
-                        "get",
-                        "English",
-                        "take",
-                        "make"
-                ],
+				"French",
+				"English",
+				"Spanish",
+				"German"
+		],
                 "answer": "B"
         },
         {
@@ -6653,11 +6653,11 @@ const vocabularyData = {
                 "exampleTranslation": "Trẻ nhỏ dễ bị ảnh hưởng bởi nội dung trực tuyến gây hiểu lầm.",
                 "blankSentence": "Young children are ________ to misleading online content.",
                 "options": [
-                        "take",
-                        "get",
-                        "make",
-                        "susceptible"
-                ],
+				"significant",
+				"effective",
+				"special",
+				"susceptible"
+		],
                 "answer": "D"
         },
         {
@@ -6779,12 +6779,12 @@ const vocabularyData = {
                 "exampleTranslation": "Sự sẵn có liên tục có thể làm tăng căng thẳng trong công việc.",
                 "blankSentence": "________ availability can increase work stress.",
                 "options": [
-                        "Constant",
-                        "take",
-                        "make",
-                        "get"
-                ],
-                "answer": "A"
+				"Critical",
+				"Modern",
+				"Constant",
+				"Stable"
+		],
+                "answer": "C"
         },
         {
                 "id": "col_190",
@@ -7103,12 +7103,12 @@ const vocabularyData = {
                 "exampleTranslation": "Dù trực tuyến hay ngoại tuyến, việc học đều cần có kỷ luật.",
                 "blankSentence": "________ online or offline, learning needs discipline.",
                 "options": [
-                        "make",
-                        "get",
-                        "take",
-                        "Whether"
-                ],
-                "answer": "D"
+				"Whether",
+				"Though",
+				"Because",
+				"While"
+		],
+                "answer": "A"
         },
         {
                 "id": "col_208",
@@ -7193,11 +7193,11 @@ const vocabularyData = {
                 "exampleTranslation": "Các công cụ trực tuyến có thể hỗ trợ giáo dục linh hoạt và cá nhân hóa.",
                 "blankSentence": "Online tools can support ________ and personalised education.",
                 "options": [
-                        "get",
-                        "flexible",
-                        "take",
-                        "make"
-                ],
+				"effective",
+				"flexible",
+				"environmental",
+				"general"
+		],
                 "answer": "B"
         },
         {
@@ -7229,12 +7229,12 @@ const vocabularyData = {
                 "exampleTranslation": "Công việc dự án xây dựng năng lực giải quyết vấn đề.",
                 "blankSentence": "Project work builds ________ capacity to solve problems.",
                 "options": [
-                        "take",
-                        "give",
-                        "the",
-                        "get"
-                ],
-                "answer": "C"
+				"this",
+				"an",
+				"a",
+				"the"
+		],
+                "answer": "D"
         },
         {
                 "id": "col_215",
@@ -7247,12 +7247,12 @@ const vocabularyData = {
                 "exampleTranslation": "Giáo dục thường được mô tả là một quyền cơ bản của con người.",
                 "blankSentence": "Education is often described as ________ fundamental human right.",
                 "options": [
-                        "make",
-                        "get",
-                        "a",
-                        "take"
-                ],
-                "answer": "C"
+				"a",
+				"any",
+				"that",
+				"some"
+		],
+                "answer": "A"
         },
         {
                 "id": "col_216",
@@ -7661,12 +7661,12 @@ const vocabularyData = {
                 "exampleTranslation": "Trình diễn mã hóa trực tiếp giúp người mới bắt đầu thấy được quy trình.",
                 "blankSentence": "________ coding demonstrations help beginners see the process.",
                 "options": [
-                        "give",
-                        "Live",
-                        "make",
-                        "take"
-                ],
-                "answer": "B"
+				"Live",
+				"Stable",
+				"Positive",
+				"Flexible"
+		],
+                "answer": "A"
         },
         {
                 "id": "col_239",
@@ -7715,11 +7715,11 @@ const vocabularyData = {
                 "exampleTranslation": "Chợ bán rau xanh tươi ngon.",
                 "blankSentence": "The market sells ________ fresh green vegetables.",
                 "options": [
-                        "get",
-                        "give",
-                        "make",
-                        "delicious"
-                ],
+				"stable",
+				"creative",
+				"flexible",
+				"delicious"
+		],
                 "answer": "D"
         },
         {
@@ -7769,12 +7769,12 @@ const vocabularyData = {
                 "exampleTranslation": "Ăn chay có thể là một thực hành tôn giáo ở một số nền văn hóa.",
                 "blankSentence": "Fasting can be a ________ practice in some cultures.",
                 "options": [
-                        "take",
-                        "get",
-                        "give",
-                        "religious"
-                ],
-                "answer": "D"
+				"religious",
+				"economic",
+				"visual",
+				"special"
+		],
+                "answer": "A"
         },
         {
                 "id": "col_245",
@@ -7805,12 +7805,12 @@ const vocabularyData = {
                 "exampleTranslation": "Điều kiện làm việc tốt hỗ trợ giữ chân nhân tài.",
                 "blankSentence": "Good working conditions support ________ retention.",
                 "options": [
-                        "talent",
-                        "get",
-                        "make",
-                        "take"
-                ],
-                "answer": "A"
+				"resource",
+				"system",
+				"talent",
+				"practice"
+		],
+                "answer": "C"
         },
         {
                 "id": "col_247",
@@ -7823,12 +7823,12 @@ const vocabularyData = {
                 "exampleTranslation": "Một môi trường học tập hỗ trợ làm giảm sự lo lắng.",
                 "blankSentence": "A ________ school environment reduces anxiety.",
                 "options": [
-                        "give",
-                        "get",
-                        "take",
-                        "supportive"
-                ],
-                "answer": "D"
+				"significant",
+				"substantial",
+				"supportive",
+				"active"
+		],
+                "answer": "C"
         },
         {
                 "id": "col_248",
@@ -7877,12 +7877,12 @@ const vocabularyData = {
                 "exampleTranslation": "Năng lượng tái tạo tạo ra việc làm mới.",
                 "blankSentence": "________ energy creates new jobs.",
                 "options": [
-                        "Renewable",
-                        "take",
-                        "give",
-                        "make"
-                ],
-                "answer": "A"
+				"Positive",
+				"Significant",
+				"Renewable",
+				"Essential"
+		],
+                "answer": "C"
         },
         {
                 "id": "col_251",
@@ -7895,11 +7895,11 @@ const vocabularyData = {
                 "exampleTranslation": "Dịch vụ kỹ thuật số đang mở rộng trong ngân hàng và giáo dục.",
                 "blankSentence": "________ services are expanding in banking and education.",
                 "options": [
-                        "get",
-                        "Digital",
-                        "make",
-                        "give"
-                ],
+				"Modern",
+				"Digital",
+				"Technical",
+				"Stable"
+		],
                 "answer": "B"
         },
         {
@@ -8003,11 +8003,11 @@ const vocabularyData = {
                 "exampleTranslation": "Nhân viên trẻ thường thích môi trường văn phòng sôi động.",
                 "blankSentence": "Young employees often enjoy a ________ oﬀice environment.",
                 "options": [
-                        "take",
-                        "vibrant",
-                        "get",
-                        "give"
-                ],
+				"natural",
+				"vibrant",
+				"crucial",
+				"creative"
+		],
                 "answer": "B"
         },
         {
@@ -8039,12 +8039,12 @@ const vocabularyData = {
                 "exampleTranslation": "Một nhóm tôn trọng sẽ tránh được những cảm xúc tiêu cực.",
                 "blankSentence": "A respectful group avoids ________ vibes.",
                 "options": [
-                        "take",
-                        "make",
-                        "negative",
-                        "give"
-                ],
-                "answer": "C"
+				"general",
+				"negative",
+				"common",
+				"positive"
+		],
+                "answer": "B"
         },
         {
                 "id": "col_260",
@@ -8075,12 +8075,12 @@ const vocabularyData = {
                 "exampleTranslation": "Sự tồn tại của một ngôn ngữ phụ thuộc vào người dùng tích cực.",
                 "blankSentence": "A language’s ________ depends on active users.",
                 "options": [
-                        "take",
-                        "get",
-                        "survival",
-                        "make"
-                ],
-                "answer": "C"
+				"success",
+				"survival",
+				"existence",
+				"growth"
+		],
+                "answer": "B"
         },
         {
                 "id": "col_262",
@@ -8093,12 +8093,12 @@ const vocabularyData = {
                 "exampleTranslation": "Internet đã thay đổi hoàn toàn cách mọi người học tập.",
                 "blankSentence": "The internet ________ changed how people learn.",
                 "options": [
-                        "make",
-                        "get",
-                        "take",
-                        "completely"
-                ],
-                "answer": "D"
+				"totally",
+				"deeply",
+				"completely",
+				"extremely"
+		],
+                "answer": "C"
         },
         {
                 "id": "col_263",
@@ -8111,12 +8111,12 @@ const vocabularyData = {
                 "exampleTranslation": "Dự án nhóm giúp học sinh rèn luyện kỹ năng làm việc nhóm.",
                 "blankSentence": "Group projects help students practise ________ skills.",
                 "options": [
-                        "give",
-                        "teamwork",
-                        "make",
-                        "get"
-                ],
-                "answer": "B"
+				"reason",
+				"benefit",
+				"teamwork",
+				"problem"
+		],
+                "answer": "C"
         },
         {
                 "id": "col_264",
@@ -8201,12 +8201,12 @@ const vocabularyData = {
                 "exampleTranslation": "Viết nhật ký giúp học sinh bày tỏ những suy nghĩ nội tâm của mình.",
                 "blankSentence": "Writing journals helps students express their ________ thoughts.",
                 "options": [
-                        "get",
-                        "make",
-                        "inner",
-                        "take"
-                ],
-                "answer": "C"
+				"direct",
+				"personal",
+				"common",
+				"inner"
+		],
+                "answer": "D"
         },
         {
                 "id": "col_269",
@@ -8237,12 +8237,12 @@ const vocabularyData = {
                 "exampleTranslation": "Lạm dụng trực tuyến có thể gây tổn hại nghiêm trọng cho thanh thiếu niên.",
                 "blankSentence": "Online abuse can cause ________ harm to teenagers.",
                 "options": [
-                        "give",
-                        "make",
-                        "serious",
-                        "take"
-                ],
-                "answer": "C"
+				"traditional",
+				"serious",
+				"healthy",
+				"different"
+		],
+                "answer": "B"
         },
         {
                 "id": "col_271",
@@ -8255,12 +8255,12 @@ const vocabularyData = {
                 "exampleTranslation": "Bắt nạt ảnh hưởng đến người học về thể chất và tinh thần.",
                 "blankSentence": "Bullying affects learners ________ and emotionally.",
                 "options": [
-                        "make",
-                        "get",
-                        "take",
-                        "physically"
-                ],
-                "answer": "D"
+				"greatly",
+				"physically",
+				"deeply",
+				"scarcely"
+		],
+                "answer": "B"
         },
         {
                 "id": "col_272",
@@ -8273,12 +8273,12 @@ const vocabularyData = {
                 "exampleTranslation": "Thanh thiếu niên cần được hướng dẫn về mặt cảm xúc trong giai đoạn căng thẳng.",
                 "blankSentence": "Teenagers need ________ guidance during stressful periods.",
                 "options": [
-                        "make",
-                        "give",
-                        "emotional",
-                        "get"
-                ],
-                "answer": "C"
+				"active",
+				"different",
+				"technical",
+				"emotional"
+		],
+                "answer": "D"
         },
         {
                 "id": "col_273",
@@ -8363,11 +8363,11 @@ const vocabularyData = {
                 "exampleTranslation": "Căng thẳng phần lớn do thi cử có thể ảnh hưởng đến giấc ngủ.",
                 "blankSentence": "Stress ________ resulting from exams can affect sleep.",
                 "options": [
-                        "make",
-                        "largely",
-                        "give",
-                        "take"
-                ],
+				"highly",
+				"largely",
+				"rarely",
+				"widely"
+		],
                 "answer": "B"
         },
         {
@@ -8381,11 +8381,11 @@ const vocabularyData = {
                 "exampleTranslation": "Lựa chọn lối sống không lành mạnh có thể làm giảm khả năng tập trung.",
                 "blankSentence": "________ lifestyle choices can reduce concentration.",
                 "options": [
-                        "take",
-                        "give",
-                        "Unhealthy",
-                        "make"
-                ],
+				"Original",
+				"Crucial",
+				"Unhealthy",
+				"Social"
+		],
                 "answer": "C"
         },
         {
@@ -8417,12 +8417,12 @@ const vocabularyData = {
                 "exampleTranslation": "Khách hàng trung thành hầu như không bao giờ cân nhắc việc thay đổi thương hiệu.",
                 "blankSentence": "Loyal customers ________ never consider changing brands.",
                 "options": [
-                        "take",
-                        "give",
-                        "almost",
-                        "get"
-                ],
-                "answer": "C"
+				"almost",
+				"nearly",
+				"scarcely",
+				"hardly"
+		],
+                "answer": "A"
         },
         {
                 "id": "col_281",
@@ -8471,12 +8471,12 @@ const vocabularyData = {
                 "exampleTranslation": "Khách sạn cung cấp gối bông thoải mái.",
                 "blankSentence": "The hotel provides ________ cotton pillows.",
                 "options": [
-                        "comfortable",
-                        "make",
-                        "give",
-                        "take"
-                ],
-                "answer": "A"
+				"similar",
+				"critical",
+				"comfortable",
+				"modern"
+		],
+                "answer": "C"
         },
         {
                 "id": "col_284",
@@ -8507,12 +8507,12 @@ const vocabularyData = {
                 "exampleTranslation": "Các lớp học ngoài trời nên được hạn chế khi nhiệt độ cực cao.",
                 "blankSentence": "Outdoor classes should be limited during ________ heat.",
                 "options": [
-                        "give",
-                        "make",
-                        "get",
-                        "extreme"
-                ],
-                "answer": "D"
+				"extreme",
+				"financial",
+				"critical",
+				"crucial"
+		],
+                "answer": "A"
         },
         {
                 "id": "col_286",
@@ -8543,11 +8543,11 @@ const vocabularyData = {
                 "exampleTranslation": "Các hoạt động trong nhà sẽ an toàn hơn khi có mưa lớn.",
                 "blankSentence": "________ activities are safer during heavy rain.",
                 "options": [
-                        "make",
-                        "take",
-                        "Indoor",
-                        "get"
-                ],
+				"Active",
+				"Financial",
+				"Indoor",
+				"Negative"
+		],
                 "answer": "C"
         },
         {
@@ -8561,12 +8561,12 @@ const vocabularyData = {
                 "exampleTranslation": "Tấm lợp phản quang có thể làm giảm nhiệt độ lớp học",
                 "blankSentence": "________ roofing can lower classroom temperatures.",
                 "options": [
-                        "make",
-                        "give",
-                        "Reflective",
-                        "take"
-                ],
-                "answer": "C"
+				"General",
+				"Negative",
+				"Substantial",
+				"Reflective"
+		],
+                "answer": "D"
         },
         {
                 "id": "col_289",
@@ -8597,12 +8597,12 @@ const vocabularyData = {
                 "exampleTranslation": "Giáo viên nhắc nhở học sinh theo dõi mức độ hydrat hóa.",
                 "blankSentence": "Teachers reminded students to monitor ________ levels.",
                 "options": [
-                        "make",
-                        "give",
-                        "take",
-                        "hydration"
-                ],
-                "answer": "D"
+				"hydration",
+				"demand",
+				"purpose",
+				"impact"
+		],
+                "answer": "A"
         },
         {
                 "id": "col_291",
@@ -8633,12 +8633,12 @@ const vocabularyData = {
                 "exampleTranslation": "Thông báo liên tục có thể gây ra sự phân mảnh nhận thức.",
                 "blankSentence": "Constant notifications can cause ________ fragmentation.",
                 "options": [
-                        "cognitive",
-                        "get",
-                        "give",
-                        "take"
-                ],
-                "answer": "A"
+				"flexible",
+				"active",
+				"positive",
+				"cognitive"
+		],
+                "answer": "D"
         },
         {
                 "id": "col_293",
@@ -8687,11 +8687,11 @@ const vocabularyData = {
                 "exampleTranslation": "Các công cụ AI phải được thử nghiệm trong môi trường lâm sàng.",
                 "blankSentence": "AI tools must be tested in ________ settings.",
                 "options": [
-                        "get",
-                        "take",
-                        "give",
-                        "clinical"
-                ],
+				"essential",
+				"environmental",
+				"efficient",
+				"clinical"
+		],
                 "answer": "D"
         },
         {
@@ -8705,12 +8705,12 @@ const vocabularyData = {
                 "exampleTranslation": "Lệ phí thấp hơn có thể khuyến khích sự tham gia nhiều hơn.",
                 "blankSentence": "Lower fees can encourage ________ participation.",
                 "options": [
-                        "greater",
-                        "take",
-                        "make",
-                        "give"
-                ],
-                "answer": "A"
+				"substantial",
+				"direct",
+				"greater",
+				"stable"
+		],
+                "answer": "C"
         },
         {
                 "id": "col_297",
@@ -8741,12 +8741,12 @@ const vocabularyData = {
                 "exampleTranslation": "Giáo dục có thể hỗ trợ một xã hội công bằng hơn.",
                 "blankSentence": "Education can support a more ________ society.",
                 "options": [
-                        "make",
-                        "get",
-                        "equitable",
-                        "take"
-                ],
-                "answer": "C"
+				"equitable",
+				"significant",
+				"substantial",
+				"general"
+		],
+                "answer": "A"
         },
         {
                 "id": "col_299",
@@ -8777,12 +8777,12 @@ const vocabularyData = {
                 "exampleTranslation": "Năng lượng sạch rất quan trọng cho một tương lai bền vững.",
                 "blankSentence": "Clean energy is important for a ________ future.",
                 "options": [
-                        "give",
-                        "get",
-                        "sustainable",
-                        "make"
-                ],
-                "answer": "C"
+				"cultural",
+				"personal",
+				"natural",
+				"sustainable"
+		],
+                "answer": "D"
         },
         {
                 "id": "col_301",
@@ -8831,12 +8831,12 @@ const vocabularyData = {
                 "exampleTranslation": "Tư duy phê phán chuẩn bị cho học sinh những thách thức trong tương lai.",
                 "blankSentence": "Critical thinking prepares students for ________ challenges.",
                 "options": [
-                        "future",
-                        "give",
-                        "take",
-                        "get"
-                ],
-                "answer": "A"
+				"negative",
+				"common",
+				"social",
+				"future"
+		],
+                "answer": "D"
         },
         {
                 "id": "col_304",
@@ -8849,12 +8849,12 @@ const vocabularyData = {
                 "exampleTranslation": "Tiếng Anh rất hữu ích trong một xã hội toàn cầu.",
                 "blankSentence": "English is useful in a ________ society.",
                 "options": [
-                        "take",
-                        "make",
-                        "global",
-                        "give"
-                ],
-                "answer": "C"
+				"similar",
+				"direct",
+				"creative",
+				"global"
+		],
+                "answer": "D"
         },
         {
                 "id": "col_305",
@@ -8867,12 +8867,12 @@ const vocabularyData = {
                 "exampleTranslation": "Giá dầu thế giới ảnh hưởng đến chi phí vận tải.",
                 "blankSentence": "________ oil prices affect transport costs.",
                 "options": [
-                        "get",
-                        "make",
-                        "Global",
-                        "give"
-                ],
-                "answer": "C"
+				"Mental",
+				"Global",
+				"Stable",
+				"Significant"
+		],
+                "answer": "B"
         },
         {
                 "id": "col_306",
@@ -8885,12 +8885,12 @@ const vocabularyData = {
                 "exampleTranslation": "Các công ty khởi nghiệp thường sử dụng các phương pháp linh hoạt.",
                 "blankSentence": "Startups often use ________ methodologies.",
                 "options": [
-                        "give",
-                        "agile",
-                        "get",
-                        "take"
-                ],
-                "answer": "B"
+				"agile",
+				"essential",
+				"critical",
+				"positive"
+		],
+                "answer": "A"
         },
         {
                 "id": "col_307",
@@ -8903,12 +8903,12 @@ const vocabularyData = {
                 "exampleTranslation": "Lập kế hoạch tốt giúp các nhóm xử lý những thách thức không lường trước được.",
                 "blankSentence": "Good planning helps teams handle ________ challenges.",
                 "options": [
-                        "give",
-                        "make",
-                        "take",
-                        "unforeseen"
-                ],
-                "answer": "D"
+				"popular",
+				"unforeseen",
+				"original",
+				"common"
+		],
+                "answer": "B"
         },
         {
                 "id": "col_308",
@@ -9029,11 +9029,11 @@ const vocabularyData = {
                 "exampleTranslation": "Giấc ngủ có thể ảnh hưởng đến chu kỳ nội tiết tố.",
                 "blankSentence": "Sleep can affect ________ cycles.",
                 "options": [
-                        "get",
-                        "take",
-                        "hormonal",
-                        "make"
-                ],
+				"effective",
+				"popular",
+				"hormonal",
+				"financial"
+		],
                 "answer": "C"
         },
         {
@@ -9047,12 +9047,12 @@ const vocabularyData = {
                 "exampleTranslation": "Giá xăng dầu trong nước thay đổi sau khi cập nhật chính sách.",
                 "blankSentence": "________ fuel prices changed after the policy update.",
                 "options": [
-                        "get",
-                        "Domestic",
-                        "give",
-                        "make"
-                ],
-                "answer": "B"
+				"Practical",
+				"Economic",
+				"Domestic",
+				"Direct"
+		],
+                "answer": "C"
         },
         {
                 "id": "col_316",
@@ -9065,12 +9065,12 @@ const vocabularyData = {
                 "exampleTranslation": "Tập thể dục thường xuyên hỗ trợ sức khỏe tinh thần.",
                 "blankSentence": "Regular exercise supports ________ well-being.",
                 "options": [
-                        "give",
-                        "get",
-                        "mental",
-                        "take"
-                ],
-                "answer": "C"
+				"personal",
+				"mental",
+				"economic",
+				"visual"
+		],
+                "answer": "B"
         },
         {
                 "id": "col_317",
@@ -9083,11 +9083,11 @@ const vocabularyData = {
                 "exampleTranslation": "Hình ảnh trên mạng xã hội có thể tạo ra những kỳ vọng không thực tế.",
                 "blankSentence": "________ media photos can create unrealistic expectations.",
                 "options": [
-                        "Social",
-                        "take",
-                        "get",
-                        "make"
-                ],
+				"Social",
+				"Efficient",
+				"Effective",
+				"General"
+		],
                 "answer": "A"
         },
         {
@@ -9119,12 +9119,12 @@ const vocabularyData = {
                 "exampleTranslation": "Niềm tin cá nhân nên được kiểm tra dựa trên bằng chứng.",
                 "blankSentence": "________ beliefs should be checked against evidence.",
                 "options": [
-                        "give",
-                        "get",
-                        "take",
-                        "Personal"
-                ],
-                "answer": "D"
+				"Effective",
+				"Personal",
+				"Critical",
+				"Original"
+		],
+                "answer": "B"
         },
         {
                 "id": "col_320",
@@ -9155,12 +9155,12 @@ const vocabularyData = {
                 "exampleTranslation": "Những khẩu hiệu ngắn gọn không nên thay thế những suy nghĩ nghiêm túc.",
                 "blankSentence": "Short slogans should not replace ________ thinking.",
                 "options": [
-                        "serious",
-                        "get",
-                        "make",
-                        "give"
-                ],
-                "answer": "A"
+				"visual",
+				"different",
+				"serious",
+				"traditional"
+		],
+                "answer": "C"
         },
         {
                 "id": "col_322",
@@ -9173,12 +9173,12 @@ const vocabularyData = {
                 "exampleTranslation": "Các nhà thiết kế kiểm tra khả năng sử dụng trên thiết bị di động trước khi tung ra một ứng dụng.",
                 "blankSentence": "Designers test ________ usability before launching an app.",
                 "options": [
-                        "give",
-                        "make",
-                        "mobile",
-                        "take"
-                ],
-                "answer": "C"
+				"visual",
+				"natural",
+				"direct",
+				"mobile"
+		],
+                "answer": "D"
         },
         {
                 "id": "col_323",
@@ -9191,12 +9191,12 @@ const vocabularyData = {
                 "exampleTranslation": "An ninh mạng là ưu tiên chiến lược của các trường học.",
                 "blankSentence": "Cybersecurity is a ________ priority for schools.",
                 "options": [
-                        "take",
-                        "give",
-                        "strategic",
-                        "get"
-                ],
-                "answer": "C"
+				"practical",
+				"essential",
+				"financial",
+				"strategic"
+		],
+                "answer": "D"
         },
         {
                 "id": "col_324",
@@ -9209,12 +9209,12 @@ const vocabularyData = {
                 "exampleTranslation": "Văn bản phải rõ ràng trong môi trường di động.",
                 "blankSentence": "Text must be clear in ________ environments.",
                 "options": [
-                        "make",
-                        "get",
-                        "take",
-                        "mobile"
-                ],
-                "answer": "D"
+				"mobile",
+				"substantial",
+				"creative",
+				"practical"
+		],
+                "answer": "A"
         },
         {
                 "id": "col_325",
@@ -9227,12 +9227,12 @@ const vocabularyData = {
                 "exampleTranslation": "Giảm sự lộn xộn về mặt hình ảnh sẽ cải thiện tốc độ đọc.",
                 "blankSentence": "Reducing ________ clutter improves reading speed.",
                 "options": [
-                        "give",
-                        "visual",
-                        "get",
-                        "make"
-                ],
-                "answer": "B"
+				"similar",
+				"different",
+				"visual",
+				"mental"
+		],
+                "answer": "C"
         },
         {
                 "id": "col_326",
@@ -9299,11 +9299,11 @@ const vocabularyData = {
                 "exampleTranslation": "Công việc sáng tạo có thể mang lại sự thỏa mãn cá nhân.",
                 "blankSentence": "Creative work can bring ________ fulfilment.",
                 "options": [
-                        "give",
-                        "personal",
-                        "get",
-                        "take"
-                ],
+				"natural",
+				"personal",
+				"effective",
+				"direct"
+		],
                 "answer": "B"
         },
         {
@@ -9317,11 +9317,11 @@ const vocabularyData = {
                 "exampleTranslation": "Kỹ năng giao tiếp hỗ trợ thành công nghề nghiệp.",
                 "blankSentence": "Communication skills support ________ success.",
                 "options": [
-                        "give",
-                        "professional",
-                        "take",
-                        "get"
-                ],
+				"creative",
+				"professional",
+				"substantial",
+				"crucial"
+		],
                 "answer": "B"
         },
         {
@@ -9353,11 +9353,11 @@ const vocabularyData = {
                 "exampleTranslation": "Phản hồi có thể là chất xúc tác mạnh mẽ để cải thiện.",
                 "blankSentence": "Feedback can be a ________ catalyst for improvement.",
                 "options": [
-                        "make",
-                        "give",
-                        "take",
-                        "powerful"
-                ],
+				"creative",
+				"modern",
+				"environmental",
+				"powerful"
+		],
                 "answer": "D"
         },
         {
@@ -9389,11 +9389,11 @@ const vocabularyData = {
                 "exampleTranslation": "Video trực tuyến cho phép tùy chỉnh tốc độ học tập.",
                 "blankSentence": "Online videos allow ________ study paces.",
                 "options": [
-                        "customised",
-                        "get",
-                        "make",
-                        "give"
-                ],
+				"customised",
+				"environmental",
+				"visual",
+				"substantial"
+		],
                 "answer": "A"
         },
         {
@@ -9407,11 +9407,11 @@ const vocabularyData = {
                 "exampleTranslation": "Mỗi giao dịch mua hàng trực tuyến đều để lại dấu vết kỹ thuật số.",
                 "blankSentence": "Every online purchase leaves a ________ trail.",
                 "options": [
-                        "make",
-                        "get",
-                        "digital",
-                        "give"
-                ],
+				"effective",
+				"active",
+				"digital",
+				"mental"
+		],
                 "answer": "C"
         },
         {
@@ -9479,11 +9479,11 @@ const vocabularyData = {
                 "exampleTranslation": "Những máy tính đời đầu bị hạn chế về bộ nhớ.",
                 "blankSentence": "Early computers suffered from ________ limitations.",
                 "options": [
-                        "get",
-                        "memory",
-                        "make",
-                        "give"
-                ],
+				"cost",
+				"memory",
+				"support",
+				"development"
+		],
                 "answer": "B"
         },
         {
@@ -9497,12 +9497,12 @@ const vocabularyData = {
                 "exampleTranslation": "Cuộc tranh luận đã trở thành một cảnh tượng văn hóa trực tuyến.",
                 "blankSentence": "The debate became a ________ spectacle online.",
                 "options": [
-                        "make",
-                        "get",
-                        "take",
-                        "cultural"
-                ],
-                "answer": "D"
+				"visual",
+				"cultural",
+				"stable",
+				"critical"
+		],
+                "answer": "B"
         },
         {
                 "id": "col_341",
@@ -9515,11 +9515,11 @@ const vocabularyData = {
                 "exampleTranslation": "Các trường học ở nông thôn thường phải đối mặt với tình trạng thiếu nguồn lực.",
                 "blankSentence": "________ schools often face resource shortages.",
                 "options": [
-                        "take",
-                        "Rural",
-                        "get",
-                        "give"
-                ],
+				"Critical",
+				"Rural",
+				"Different",
+				"Technical"
+		],
                 "answer": "B"
         },
         {
@@ -9605,12 +9605,12 @@ const vocabularyData = {
                 "exampleTranslation": "Robot có thể giúp thu gom rác thải nhựa từ sông.",
                 "blankSentence": "Robots can help collect ________ waste from rivers.",
                 "options": [
-                        "make",
-                        "take",
-                        "plastic",
-                        "get"
-                ],
-                "answer": "C"
+				"positive",
+				"plastic",
+				"stable",
+				"traditional"
+		],
+                "answer": "B"
         },
         {
                 "id": "col_347",
@@ -9623,12 +9623,12 @@ const vocabularyData = {
                 "exampleTranslation": "Quá nhiều kỳ thi có thể góp phần làm học sinh kiệt sức.",
                 "blankSentence": "Too many exams can contribute to ________ burnout.",
                 "options": [
-                        "get",
-                        "give",
-                        "academic",
-                        "take"
-                ],
-                "answer": "C"
+				"significant",
+				"academic",
+				"financial",
+				"technical"
+		],
+                "answer": "B"
         },
         {
                 "id": "col_348",
@@ -9659,12 +9659,12 @@ const vocabularyData = {
                 "exampleTranslation": "Việc theo đuổi sự hoàn hảo có thể gây tổn hại đến sự sáng tạo.",
                 "blankSentence": "The ________ of perfection can harm creativity.",
                 "options": [
-                        "give",
-                        "make",
-                        "take",
-                        "pursuit"
-                ],
-                "answer": "D"
+				"support",
+				"result",
+				"pursuit",
+				"value"
+		],
+                "answer": "C"
         },
         {
                 "id": "col_350",
@@ -9677,12 +9677,12 @@ const vocabularyData = {
                 "exampleTranslation": "Lưu trữ thông tin sinh trắc học đòi hỏi các biện pháp bảo vệ nghiêm ngặt.",
                 "blankSentence": "________ information storage requires strict safeguards.",
                 "options": [
-                        "get",
-                        "take",
-                        "Biometric",
-                        "give"
-                ],
-                "answer": "C"
+				"Biometric",
+				"Popular",
+				"Technical",
+				"Active"
+		],
+                "answer": "A"
         },
         {
                 "id": "col_351",
@@ -9713,12 +9713,12 @@ const vocabularyData = {
                 "exampleTranslation": "Nguồn cung năng lượng toàn cầu ảnh hưởng đến giá cả quốc gia.",
                 "blankSentence": "________ energy supply affects national prices.",
                 "options": [
-                        "make",
-                        "Global",
-                        "give",
-                        "take"
-                ],
-                "answer": "B"
+				"Healthy",
+				"Direct",
+				"Global",
+				"Efficient"
+		],
+                "answer": "C"
         },
         {
                 "id": "col_353",
@@ -9767,11 +9767,11 @@ const vocabularyData = {
                 "exampleTranslation": "Mục tiêu nhỏ giúp người học xây dựng thói quen bền vững.",
                 "blankSentence": "Small goals help learners build ________ habits.",
                 "options": [
-                        "take",
-                        "sustainable",
-                        "get",
-                        "give"
-                ],
+				"social",
+				"sustainable",
+				"traditional",
+				"personal"
+		],
                 "answer": "B"
         },
         {
@@ -9785,12 +9785,12 @@ const vocabularyData = {
                 "exampleTranslation": "Triển lãm đã tham gia một cuộc trò chuyện nghệ thuật toàn cầu.",
                 "blankSentence": "The exhibition joined a ________ artistic conversation.",
                 "options": [
-                        "give",
-                        "make",
-                        "global",
-                        "take"
-                ],
-                "answer": "C"
+				"global",
+				"common",
+				"technical",
+				"critical"
+		],
+                "answer": "A"
         },
         {
                 "id": "col_357",
@@ -9839,11 +9839,11 @@ const vocabularyData = {
                 "exampleTranslation": "Thực hành nhất quán dẫn đến sự tiến bộ có ý nghĩa.",
                 "blankSentence": "Consistent practice leads to ________ progress.",
                 "options": [
-                        "get",
-                        "meaningful",
-                        "take",
-                        "make"
-                ],
+				"active",
+				"meaningful",
+				"technical",
+				"substantial"
+		],
                 "answer": "B"
         },
         {
@@ -9929,12 +9929,12 @@ const vocabularyData = {
                 "exampleTranslation": "Sự kỳ thị về danh tiếng có thể làm nản lòng những người lao động trẻ.",
                 "blankSentence": "________ stigma can discourage young workers.",
                 "options": [
-                        "get",
-                        "give",
-                        "take",
-                        "Reputational"
-                ],
-                "answer": "D"
+				"Reputational",
+				"Similar",
+				"Negative",
+				"Cultural"
+		],
+                "answer": "A"
         },
         {
                 "id": "col_365",
@@ -10001,12 +10001,12 @@ const vocabularyData = {
                 "exampleTranslation": "Công việc tự do phổ biến trong các lĩnh vực sáng tạo và liên quan đến công nghệ.",
                 "blankSentence": "Freelance work is common in ________ and tech-related fields.",
                 "options": [
-                        "creative",
-                        "get",
-                        "take",
-                        "make"
-                ],
-                "answer": "A"
+				"personal",
+				"efficient",
+				"stable",
+				"creative"
+		],
+                "answer": "D"
         },
         {
                 "id": "col_369",

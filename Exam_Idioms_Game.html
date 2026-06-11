@@ -720,7 +720,7 @@
     // =========================================================
     function eiSetupQuiz() {
       const data = examIdiomData[eiTopic] || [];
-      eiQuizList = eiShuffle([...data]).slice(0, Math.min(10, data.length));
+      eiQuizList = eiShuffle([...data]);
       eiQuizIdx = 0;
       eiQuizAnswers = [];
       eiRenderQuizQ();
@@ -802,7 +802,7 @@
     // =========================================================
     function eiSetupSentence() {
       const data = (examIdiomData[eiTopic] || []).filter(d => d.sentence && d.options && d.options.length === 4);
-      eiSentList = eiShuffle([...data]).slice(0, Math.min(10, data.length));
+      eiSentList = eiShuffle([...data]);
       eiSentIdx = 0;
       eiSentAnswers = [];
       eiRenderSentQ();

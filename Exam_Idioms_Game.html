@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Idioms Mastery — Ôn luyện Idioms & Phrasal Verbs từ đề thi</title>
+  <meta name="description" content="Ôn luyện Idioms, Phrasal Verbs, Collocations, Fixed Phrases từ các đề thi THPTQG thực tế qua Flashcard 3D, Trắc nghiệm và Hoàn thành câu.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/vocabulary_game.css?v=2.0.0">
+  <style>
+    /* Extra styles for Exam Idioms Game */
+    .ei-type-badge {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      display: inline-block;
+      letter-spacing: 0.3px;
+    }
+    .ei-type-phrasal_verb { background: rgba(139,92,246,0.15); color: #c084fc; }
+    .ei-type-idiom { background: rgba(245,158,11,0.15); color: #fbbf24; }
+    .ei-type-collocation { background: rgba(16,185,129,0.15); color: #34d399; }
+    .ei-type-fixed_phrase { background: rgba(59,130,246,0.15); color: #60a5fa; }
+    .ei-type-prepositional_phrase { background: rgba(249,115,22,0.15); color: #fb923c; }
+
+    .ei-cambridge-def {
+      font-size: 0.88rem;
+      color: #9ca3af;
+      font-style: italic;
+      margin-bottom: 15px;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .ei-exam-context {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px 14px;
+      background: rgba(139,92,246,0.08);
+      border-left: 3px solid #8b5cf6;
+      border-radius: 0 8px 8px 0;
+      text-align: left;
+    }
+    .ei-exam-context-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #a78bfa;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    .ei-exam-context-text {
+      font-size: 0.85rem;
+      color: #d1d5db;
+      font-style: italic;
+      line-height: 1.35;
+    }
+
+    /* Taller flashcard for more content */
+    #ei-flashcard-screen .flashcard {
+      height: 400px;
+    }
+
+    /* Quiz type badge in question */
+    .ei-quiz-type-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 6px;
+      margin-top: 8px;
+      display: inline-block;
+    }
+
+    /* Sentence option prefix */
+    .ei-option-prefix {
+      font-weight: 800;
+      margin-right: 8px;
+      color: #a78bfa;
+    }
+
+    /* Instruction banner */
+    .ei-instruction-banner {
+      background: rgba(139,92,246,0.06);
+      border: 1px solid rgba(139,92,246,0.15);
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-size: 0.88rem;
+      color: #d1d5db;
+      font-style: italic;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    /* Dynamic topic card top bars */
+    .topic-card .topic-color-bar {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      border-radius: 24px 24px 0 0;
+    }
+
+    /* Scrollable flashcard back */
+    #ei-flashcard-screen .card-back {
+      overflow-y: auto;
+      justify-content: flex-start;
+      padding-top: 22px;
+    }
+
+    /* Explanation content line height */
+    .ei-explanation-line {
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+    .ei-explanation-line:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- 1. DASHBOARD SCREEN -->
+    <div id="ei-dashboard-screen" class="glass-panel">
+      <div class="game-header">
+        <a href="index.html" class="home-link">🏠 Quay lại Trang chủ</a>
+        <h1>Exam Idioms Mastery 🎯</h1>
+        <p class="subtitle">Ôn luyện Idioms, Phrasal Verbs & Collocations từ các đề thi thực tế.</p>
+      </div>
+
+      <!-- Stats -->
+      <div class="global-stats">
+        <div class="stat-item">
+          <span class="stat-icon">⚡</span>
+          <span id="ei-global-xp" class="stat-val">0 XP</span>
+          <span class="stat-label">Điểm tích lũy</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-icon">🎓</span>
+          <span id="ei-global-learned" class="stat-val">0/35</span>
+          <span class="stat-label">Từ đã thuộc</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-icon">🔥</span>
+          <span id="ei-global-streak" class="stat-val">1</span>
+          <span class="stat-label">Ngày học liên tiếp</span>
+        </div>
+      </div>
+
+      <h2 style="font-size: 1.3rem; margin-bottom: 20px; font-weight: 700; color: #fff;">Chọn Đề Thi</h2>
+      <div class="topics-grid" id="ei-topics-grid">
+        <!-- Generated dynamically from EXAM_TOPICS -->
+      </div>
+
+      <div class="reset-history-wrapper">
+        <button class="btn-danger-outline" onclick="eiResetAllProgress()">🗑️ Xóa lịch sử học tập</button>
+      </div>
+    </div>
+
+    <!-- 2. MODE SELECTION SCREEN -->
+    <div id="ei-mode-screen" class="glass-panel" style="display: none;">
+      <div class="mode-header">
+        <button class="btn-back" onclick="eiGoToDashboard()">← Đề Thi</button>
+        <span class="current-topic-badge" id="ei-mode-badge" style="background: rgba(139,92,246,0.15); color: #c084fc; border: 1px solid rgba(139,92,246,0.4);">SỞ GD&ĐT HÀ NỘI 2026</span>
+      </div>
+
+      <h2 style="font-size: 1.5rem; color: #fff; font-weight: 700; margin-bottom: 8px;">Chọn Phương Thức Học</h2>
+      <p class="subtitle" style="text-align: left; margin-bottom: 25px;">Hãy lựa chọn chế độ học hoặc chơi để bắt đầu củng cố từ vựng.</p>
+
+      <div class="modes-grid">
+        <div class="mode-card" onclick="eiStartMode('flashcard')">
+          <div class="mode-card-icon" style="color: #a78bfa;">📇</div>
+          <div class="mode-card-body">
+            <h4 class="mode-card-title">Flashcard 3D</h4>
+            <p class="mode-card-desc">Lật thẻ từ vựng 3D trực quan, hỗ trợ nghe phát âm chuẩn Anh - Mỹ và ghi nhận từ đã thuộc.</p>
+          </div>
+        </div>
+
+        <div class="mode-card" onclick="eiStartMode('quiz')">
+          <div class="mode-card-icon" style="color: #60a5fa;">📝</div>
+          <div class="mode-card-body">
+            <h4 class="mode-card-title">Trắc Nghiệm Nghĩa Từ</h4>
+            <p class="mode-card-desc">Rèn luyện phản xạ nhanh bằng cách chọn đúng nghĩa tiếng Việt hoặc từ thích hợp tương ứng.</p>
+          </div>
+        </div>
+
+        <div class="mode-card" onclick="eiStartMode('sentence')">
+          <div class="mode-card-icon" style="color: #f59e0b;">✍️</div>
+          <div class="mode-card-body">
+            <h4 class="mode-card-title">Hoàn Thành Câu (A, B, C, D)</h4>
+            <p class="mode-card-desc">Chọn đáp án đúng nhất để hoàn thành câu tiếng Anh theo ngữ cảnh đề bài.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. FLASHCARD SCREEN -->
+    <div id="ei-flashcard-screen" class="glass-panel" style="display: none;">
+      <div class="game-play-header">
+        <button class="btn-back" onclick="eiExitToModes()">← Chế Độ</button>
+        <span class="game-title-text">Chế Độ: Flashcard 3D</span>
+        <div class="card-progress-text"><span id="ei-flash-idx">1</span>/<span id="ei-flash-total">35</span></div>
+      </div>
+
+      <!-- Filters -->
+      <div style="display: flex; gap: 8px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap;">
+        <button id="ei-filter-all" class="btn-spelling-hint" style="color: #fff; background: rgba(139,92,246,0.2); border-color: var(--theme-purple);" onclick="eiSetFilter('all')">Tất cả</button>
+        <button id="ei-filter-unlearned" class="btn-spelling-hint" onclick="eiSetFilter('unlearned')">Chưa thuộc</button>
+        <button id="ei-filter-learned" class="btn-spelling-hint" onclick="eiSetFilter('learned')">Đã thuộc</button>
+      </div>
+
+      <!-- 3D Card -->
+      <div class="flashcard-container">
+        <div class="flashcard" id="ei-study-card" onclick="eiToggleFlip()">
+          <!-- Front -->
+          <div class="card-face card-front">
+            <span class="ei-type-badge" id="ei-card-type">Phrasal Verb</span>
+            <h2 class="word-term" id="ei-card-phrase">gravitate towards</h2>
+            <button class="btn-speak" id="ei-btn-audio" onclick="eiSpeakPhrase(event)">🔊 Phát Âm</button>
+            <div class="card-hint"><span>💡 Nhấp thẻ để xem nghĩa và ví dụ</span></div>
+          </div>
+          <!-- Back -->
+          <div class="card-face card-back">
+            <h3 class="word-meaning" id="ei-card-meaning">Bị hút về phía</h3>
+            <p class="ei-cambridge-def" id="ei-card-cambridge">Cambridge definition</p>
+            <div class="example-container">
+              <div class="example-title">Ví dụ áp dụng:</div>
+              <p class="example-en" id="ei-card-example-en">Example sentence</p>
+              <p class="example-vi" id="ei-card-example-vi">Dịch nghĩa</p>
+            </div>
+            <div class="ei-exam-context">
+              <div class="ei-exam-context-title">📋 Ngữ cảnh đề thi:</div>
+              <p class="ei-exam-context-text" id="ei-card-exam-ctx">…context…</p>
+            </div>
+            <div class="card-hint"><span>🔄 Nhấp để lật lại mặt trước</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nav -->
+      <div class="flashcard-controls">
+        <button class="btn-nav-card" id="ei-btn-prev" onclick="eiPrevCard()">←</button>
+        <div class="flashcard-action-bar">
+          <button class="btn-learn-status btn-unlearned" id="ei-btn-learned" onclick="eiToggleLearned()">⭐ Đánh dấu đã thuộc</button>
+        </div>
+        <button class="btn-nav-card" id="ei-btn-next" onclick="eiNextCard()">→</button>
+      </div>
+    </div>
+
+    <!-- 4. QUIZ SCREEN -->
+    <div id="ei-quiz-screen" class="glass-panel" style="display: none;">
+      <div class="game-play-header">
+        <button class="btn-back" onclick="eiExitToModes()">← Chế Độ</button>
+        <span class="game-title-text" id="ei-quiz-title">Trắc Nghiệm Nghĩa</span>
+        <div class="card-progress-text" id="ei-quiz-progress">Câu 1/10</div>
+      </div>
+      <div class="game-progress-bar-container">
+        <div class="game-progress-bar-fill" id="ei-quiz-bar"></div>
+      </div>
+
+      <!-- Question -->
+      <div class="quiz-question-box">
+        <h3 class="quiz-question-word" id="ei-quiz-phrase">phrase</h3>
+        <span class="ei-quiz-type-badge" id="ei-quiz-type-badge">Phrasal Verb</span>
+        <p class="quiz-question-hint" style="margin-top: 12px;">Chọn nghĩa tiếng Việt chính xác của cụm từ trên:</p>
+      </div>
+
+      <!-- Options -->
+      <div class="quiz-options-grid" id="ei-quiz-options"></div>
+
+      <!-- Explanation -->
+      <div class="game-explanation" id="ei-quiz-explain" style="display: none;">
+        <div class="game-explanation-title">📝 Giải thích & Ví dụ:</div>
+        <div class="game-explanation-content" id="ei-quiz-explain-content"></div>
+      </div>
+
+      <div class="game-footer-actions">
+        <button class="btn-game-next" id="ei-quiz-next" onclick="eiNextQuizQ()" style="display: none;">Tiếp tục ➔</button>
+      </div>
+    </div>
+
+    <!-- 5. SENTENCE COMPLETION SCREEN -->
+    <div id="ei-sentence-screen" class="glass-panel" style="display: none;">
+      <div class="game-play-header">
+        <button class="btn-back" onclick="eiExitToModes()">← Chế Độ</button>
+        <span class="game-title-text">Hoàn Thành Câu</span>
+        <div class="card-progress-text" id="ei-sent-progress">Câu 1/10</div>
+      </div>
+      <div class="game-progress-bar-container">
+        <div class="game-progress-bar-fill" id="ei-sent-bar"></div>
+      </div>
+
+      <!-- Instruction -->
+      <div class="ei-instruction-banner">
+        "Mark the letter A, B, C, or D on your answer sheet to indicate the correct answer to each of the following questions."
+      </div>
+
+      <!-- Question -->
+      <div class="quiz-question-box" style="margin-top: 15px;">
+        <p class="sentence-question-text" id="ei-sent-text">Loading question...</p>
+      </div>
+
+      <!-- Options -->
+      <div class="quiz-options-grid" id="ei-sent-options"></div>
+
+      <!-- Explanation -->
+      <div class="game-explanation" id="ei-sent-explain" style="display: none;">
+        <div class="game-explanation-title" id="ei-sent-explain-title">📝 Giải thích & Dịch nghĩa:</div>
+        <div class="game-explanation-content" id="ei-sent-explain-content"></div>
+      </div>
+
+      <div class="game-footer-actions">
+        <button class="btn-game-next" id="ei-sent-next" onclick="eiNextSentQ()" style="display: none;">Tiếp tục ➔</button>
+      </div>
+    </div>
+
+    <!-- 6. RESULTS SCREEN -->
+    <div id="ei-results-screen" class="glass-panel" style="display: none;">
+      <div class="results-screen-content">
+        <span class="trophy-illustration" id="ei-res-emoji">🏆</span>
+        <h2 class="result-title" id="ei-res-title">Hoàn thành thử thách!</h2>
+        <p class="subtitle" id="ei-res-subtitle">Bạn đã hoàn thành xuất sắc lượt ôn tập.</p>
+
+        <div class="results-stats-row">
+          <div class="res-stat-card">
+            <span class="res-stat-val" id="ei-res-score">10/10</span>
+            <span class="res-stat-label">Chính xác</span>
+          </div>
+          <div class="res-stat-card">
+            <span class="res-stat-val xp-gain" id="ei-res-xp">+100</span>
+            <span class="res-stat-label">XP Tích lũy</span>
+          </div>
+        </div>
+
+        <div class="results-buttons">
+          <button class="btn-res btn-res-primary" onclick="eiReplay()">🔄 Luyện tập lại</button>
+          <button class="btn-res btn-res-secondary" onclick="eiExitToModes()">📋 Xem chế độ khác</button>
+          <button class="btn-res btn-res-secondary" onclick="eiGoToDashboard()">🏠 Về trang chủ Game</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Confetti Canvas -->
+  <canvas id="ei-confetti" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1000; display: none;"></canvas>
+
+  <!-- Data -->
+  <script src="js/exam_idioms_data.js?v=1.0.0"></script>
+
+  <!-- Game Logic -->
+  <script>
+    // =========================================================
+    // STATE
+    // =========================================================
+    let eiTopic = '';
+    let eiMode = '';
+    let eiProgress = { xp: 0, learned: {}, streak: 1, lastStudyDate: '' };
+
+    // Flashcard state
+    let eiCardFilter = 'all';
+    let eiCardList = [];
+    let eiCardIdx = 0;
+
+    // Quiz state
+    let eiQuizList = [];
+    let eiQuizIdx = 0;
+    let eiQuizAnswers = [];
+
+    // Sentence state
+    let eiSentList = [];
+    let eiSentIdx = 0;
+    let eiSentAnswers = [];
+
+    // Type display names
+    const EI_TYPE_NAMES = {
+      phrasal_verb: 'Phrasal Verb',
+      idiom: 'Idiom',
+      collocation: 'Collocation',
+      fixed_phrase: 'Fixed Phrase',
+      prepositional_phrase: 'Prep. Phrase'
+    };
+
+    // =========================================================
+    // AUDIO
+    // =========================================================
+    const eiAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    function eiSound(type) {
+      if (eiAudioCtx.state === 'suspended') eiAudioCtx.resume();
+      const osc = eiAudioCtx.createOscillator();
+      const gain = eiAudioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(eiAudioCtx.destination);
+      const now = eiAudioCtx.currentTime;
+
+      if (type === 'click') {
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(400, now);
+        osc.frequency.exponentialRampToValueAtTime(100, now + 0.1);
+        gain.gain.setValueAtTime(0.05, now);
+        gain.gain.linearRampToValueAtTime(0, now + 0.1);
+        osc.start(now); osc.stop(now + 0.1);
+      } else if (type === 'correct') {
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(523.25, now);
+        osc.frequency.setValueAtTime(659.25, now + 0.08);
+        osc.frequency.setValueAtTime(783.99, now + 0.16);
+        gain.gain.setValueAtTime(0.08, now);
+        gain.gain.linearRampToValueAtTime(0, now + 0.35);
+        osc.start(now); osc.stop(now + 0.35);
+      } else if (type === 'wrong') {
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(180, now);
+        osc.frequency.setValueAtTime(120, now + 0.12);
+        gain.gain.setValueAtTime(0.08, now);
+        gain.gain.linearRampToValueAtTime(0, now + 0.25);
+        osc.start(now); osc.stop(now + 0.25);
+      } else if (type === 'win') {
+        [261.63, 329.63, 392, 523.25, 659.25, 783.99, 1046.5].forEach((freq, i) => {
+          const o = eiAudioCtx.createOscillator();
+          const g = eiAudioCtx.createGain();
+          o.connect(g); g.connect(eiAudioCtx.destination);
+          o.type = 'triangle';
+          o.frequency.setValueAtTime(freq, now + i * 0.07);
+          g.gain.setValueAtTime(0.06, now + i * 0.07);
+          g.gain.linearRampToValueAtTime(0, now + i * 0.07 + 0.25);
+          o.start(now + i * 0.07); o.stop(now + i * 0.07 + 0.25);
+        });
+      }
+    }
+
+    // =========================================================
+    // INIT
+    // =========================================================
+    window.addEventListener('load', () => {
+      eiLoadProgress();
+      eiRenderTopics();
+      eiUpdateStats();
+      eiCheckStreak();
+      if ('speechSynthesis' in window) window.speechSynthesis.getVoices();
+    });
+
+    function eiLoadProgress() {
+      const d = localStorage.getItem('examIdiomGameProgress');
+      if (d) {
+        try {
+          eiProgress = JSON.parse(d);
+          if (!eiProgress.learned) eiProgress.learned = {};
+          if (!eiProgress.xp) eiProgress.xp = 0;
+          if (!eiProgress.streak) eiProgress.streak = 1;
+        } catch (e) { console.error(e); }
+      }
+    }
+
+    function eiSaveProgress() {
+      localStorage.setItem('examIdiomGameProgress', JSON.stringify(eiProgress));
+      eiUpdateStats();
+    }
+
+    function eiCheckStreak() {
+      const today = new Date().toISOString().split('T')[0];
+      if (eiProgress.lastStudyDate) {
+        const diff = Math.ceil(Math.abs(new Date(today) - new Date(eiProgress.lastStudyDate)) / 86400000);
+        if (diff === 1) { eiProgress.streak += 1; eiProgress.lastStudyDate = today; eiSaveProgress(); }
+        else if (diff > 1) { eiProgress.streak = 1; eiProgress.lastStudyDate = today; eiSaveProgress(); }
+      } else { eiProgress.lastStudyDate = today; eiSaveProgress(); }
+    }
+
+    function eiUpdateStats() {
+      document.getElementById('ei-global-xp').innerText = `${eiProgress.xp} XP`;
+      let total = 0, learned = 0;
+      EXAM_TOPICS.forEach(t => {
+        const words = examIdiomData[t.id] || [];
+        total += words.length;
+        words.forEach(w => { if (eiProgress.learned[`${t.id}_${w.phrase}`]) learned++; });
+      });
+      document.getElementById('ei-global-learned').innerText = `${learned}/${total}`;
+      document.getElementById('ei-global-streak').innerText = `${eiProgress.streak}`;
+
+      // Update topic progress bars
+      EXAM_TOPICS.forEach(t => {
+        const words = examIdiomData[t.id] || [];
+        const count = words.length;
+        if (count === 0) return;
+        let lc = 0;
+        words.forEach(w => { if (eiProgress.learned[`${t.id}_${w.phrase}`]) lc++; });
+        const pct = Math.round((lc / count) * 100);
+        const fill = document.getElementById(`ei-prog-fill-${t.id}`);
+        const text = document.getElementById(`ei-prog-text-${t.id}`);
+        if (fill) fill.style.width = `${pct}%`;
+        if (text) text.innerText = `Tiến độ: ${pct}% (${lc}/${count})`;
+      });
+    }
+
+    // =========================================================
+    // TOPIC CARDS (Dynamic)
+    // =========================================================
+    function eiRenderTopics() {
+      const grid = document.getElementById('ei-topics-grid');
+      grid.innerHTML = '';
+      EXAM_TOPICS.forEach(t => {
+        const count = (examIdiomData[t.id] || []).length;
+        const card = document.createElement('div');
+        card.className = 'topic-card';
+        card.setAttribute('data-topic', t.id);
+        card.onclick = () => eiSelectTopic(t.id);
+        card.innerHTML = `
+          <div class="topic-color-bar" style="background: ${t.color};"></div>
+          <span class="topic-icon">${t.icon}</span>
+          <h3 class="topic-title">${t.name}</h3>
+          <p class="topic-meta">${t.description}</p>
+          <div class="topic-progress-container">
+            <div id="ei-prog-fill-${t.id}" class="topic-progress-fill" style="background: ${t.color};"></div>
+          </div>
+          <span id="ei-prog-text-${t.id}" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Tiến độ: 0%</span>
+        `;
+        // Hover effect with topic color
+        card.addEventListener('mouseenter', () => {
+          card.style.borderColor = t.color + '60';
+          card.style.boxShadow = `0 12px 30px ${t.color}33`;
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.borderColor = '';
+          card.style.boxShadow = '';
+        });
+        grid.appendChild(card);
+      });
+    }
+
+    // =========================================================
+    // NAVIGATION
+    // =========================================================
+    function eiShowScreen(id) {
+      ['ei-dashboard-screen', 'ei-mode-screen', 'ei-flashcard-screen', 'ei-quiz-screen', 'ei-sentence-screen', 'ei-results-screen'].forEach(s => {
+        document.getElementById(s).style.display = (s === id) ? 'block' : 'none';
+      });
+    }
+
+    function eiSelectTopic(topicId) {
+      eiSound('click');
+      eiTopic = topicId;
+      const t = EXAM_TOPICS.find(x => x.id === topicId);
+      const badge = document.getElementById('ei-mode-badge');
+      badge.innerText = t ? t.name : topicId;
+      if (t) {
+        badge.style.background = t.color + '26';
+        badge.style.color = t.color;
+        badge.style.borderColor = t.color + '66';
+      }
+      eiShowScreen('ei-mode-screen');
+    }
+
+    function eiGoToDashboard() {
+      eiSound('click');
+      eiUpdateStats();
+      eiShowScreen('ei-dashboard-screen');
+    }
+
+    function eiExitToModes() {
+      eiSound('click');
+      eiShowScreen('ei-mode-screen');
+    }
+
+    function eiStartMode(mode) {
+      eiSound('click');
+      eiMode = mode;
+      const data = examIdiomData[eiTopic] || [];
+      if (data.length === 0) { alert('Đề thi này chưa có dữ liệu!'); eiGoToDashboard(); return; }
+
+      if (mode === 'flashcard') {
+        eiCardFilter = 'all';
+        eiSetupFlashcard();
+        eiShowScreen('ei-flashcard-screen');
+      } else if (mode === 'quiz') {
+        eiSetupQuiz();
+        eiShowScreen('ei-quiz-screen');
+      } else if (mode === 'sentence') {
+        eiSetupSentence();
+        eiShowScreen('ei-sentence-screen');
+      }
+    }
+
+    // =========================================================
+    // MODE 1: FLASHCARD
+    // =========================================================
+    function eiSetupFlashcard() {
+      const full = examIdiomData[eiTopic] || [];
+      if (eiCardFilter === 'all') eiCardList = [...full];
+      else if (eiCardFilter === 'unlearned') eiCardList = full.filter(w => !eiProgress.learned[`${eiTopic}_${w.phrase}`]);
+      else eiCardList = full.filter(w => !!eiProgress.learned[`${eiTopic}_${w.phrase}`]);
+
+      // Update filter button styles
+      ['all', 'unlearned', 'learned'].forEach(f => {
+        const btn = document.getElementById(`ei-filter-${f}`);
+        if (f === eiCardFilter) {
+          btn.style.background = 'rgba(139,92,246,0.2)';
+          btn.style.borderColor = 'var(--theme-purple)';
+          btn.style.color = '#fff';
+        } else {
+          btn.style.background = 'rgba(255,255,255,0.04)';
+          btn.style.borderColor = 'rgba(255,255,255,0.06)';
+          btn.style.color = 'var(--muted)';
+        }
+      });
+
+      eiCardIdx = 0;
+      eiRenderCard();
+    }
+
+    function eiSetFilter(f) { eiSound('click'); eiCardFilter = f; eiSetupFlashcard(); }
+
+    function eiToggleFlip() {
+      document.getElementById('ei-study-card').classList.toggle('flipped');
+      eiSound('click');
+    }
+
+    function eiRenderCard() {
+      const card = document.getElementById('ei-study-card');
+      card.classList.remove('flipped');
+      const total = eiCardList.length;
+      document.getElementById('ei-flash-total').innerText = total;
+
+      if (total === 0) {
+        document.getElementById('ei-flash-idx').innerText = 0;
+        document.getElementById('ei-card-phrase').innerText = 'Trống';
+        document.getElementById('ei-card-type').innerText = '';
+        document.getElementById('ei-card-type').className = 'ei-type-badge';
+        document.getElementById('ei-card-meaning').innerText = 'Không tìm thấy từ vựng phù hợp với bộ lọc.';
+        document.getElementById('ei-card-cambridge').innerText = '';
+        document.getElementById('ei-card-example-en').innerText = '';
+        document.getElementById('ei-card-example-vi').innerText = '';
+        document.getElementById('ei-card-exam-ctx').innerText = '';
+        document.getElementById('ei-btn-audio').style.display = 'none';
+        document.getElementById('ei-btn-prev').disabled = true;
+        document.getElementById('ei-btn-next').disabled = true;
+        document.getElementById('ei-btn-learned').style.display = 'none';
+        return;
+      }
+
+      document.getElementById('ei-btn-audio').style.display = 'inline-flex';
+      document.getElementById('ei-btn-learned').style.display = 'inline-flex';
+      document.getElementById('ei-flash-idx').innerText = eiCardIdx + 1;
+
+      const item = eiCardList[eiCardIdx];
+      const typeName = EI_TYPE_NAMES[item.type] || item.type;
+
+      // Front
+      document.getElementById('ei-card-phrase').innerText = item.phrase;
+      const typeBadge = document.getElementById('ei-card-type');
+      typeBadge.innerText = typeName;
+      typeBadge.className = `ei-type-badge ei-type-${item.type}`;
+
+      // Back
+      document.getElementById('ei-card-meaning').innerText = item.meaning_vi;
+      document.getElementById('ei-card-cambridge').innerText = `📖 ${item.cambridge_def}`;
+      document.getElementById('ei-card-example-en').innerText = item.example_en;
+      document.getElementById('ei-card-example-vi').innerText = item.example_vi;
+      document.getElementById('ei-card-exam-ctx').innerText = item.exam_context;
+
+      // Nav
+      document.getElementById('ei-btn-prev').disabled = (eiCardIdx === 0);
+      document.getElementById('ei-btn-next').disabled = (eiCardIdx === total - 1);
+
+      // Learned state
+      const key = `${eiTopic}_${item.phrase}`;
+      const isLearned = !!eiProgress.learned[key];
+      const btn = document.getElementById('ei-btn-learned');
+      if (isLearned) {
+        btn.innerText = '✓ Đã thuộc (Bỏ đánh dấu)';
+        btn.className = 'btn-learn-status btn-mark-learned';
+      } else {
+        btn.innerText = '⭐ Đánh dấu đã thuộc';
+        btn.className = 'btn-learn-status btn-unlearned';
+      }
+    }
+
+    function eiPrevCard() { if (eiCardIdx > 0) { eiSound('click'); eiCardIdx--; eiRenderCard(); } }
+    function eiNextCard() { if (eiCardIdx < eiCardList.length - 1) { eiSound('click'); eiCardIdx++; eiRenderCard(); } }
+
+    function eiToggleLearned() {
+      if (eiCardList.length === 0) return;
+      const item = eiCardList[eiCardIdx];
+      const key = `${eiTopic}_${item.phrase}`;
+      if (eiProgress.learned[key]) {
+        delete eiProgress.learned[key];
+      } else {
+        eiProgress.learned[key] = true;
+        eiProgress.xp += 1;
+        eiSound('correct');
+      }
+      eiSaveProgress();
+      eiRenderCard();
+    }
+
+    function eiSpeakPhrase(e) {
+      if (e) e.stopPropagation();
+      if (eiCardList.length === 0) return;
+      const text = eiCardList[eiCardIdx].phrase;
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(text);
+        u.lang = 'en-US'; u.rate = 0.85;
+        const voices = window.speechSynthesis.getVoices();
+        const enVoice = voices.find(v => v.lang.startsWith('en-'));
+        if (enVoice) u.voice = enVoice;
+        window.speechSynthesis.speak(u);
+      }
+    }
+
+    // =========================================================
+    // MODE 2: QUIZ (Trắc Nghiệm Nghĩa Từ)
+    // =========================================================
+    function eiSetupQuiz() {
+      const data = examIdiomData[eiTopic] || [];
+      eiQuizList = eiShuffle([...data]).slice(0, Math.min(10, data.length));
+      eiQuizIdx = 0;
+      eiQuizAnswers = [];
+      eiRenderQuizQ();
+    }
+
+    function eiRenderQuizQ() {
+      const total = eiQuizList.length;
+      document.getElementById('ei-quiz-progress').innerText = `Câu ${eiQuizIdx + 1}/${total}`;
+      document.getElementById('ei-quiz-bar').style.width = `${((eiQuizIdx) / total) * 100}%`;
+      document.getElementById('ei-quiz-explain').style.display = 'none';
+      document.getElementById('ei-quiz-next').style.display = 'none';
+
+      const item = eiQuizList[eiQuizIdx];
+      document.getElementById('ei-quiz-phrase').innerText = item.phrase;
+      const badge = document.getElementById('ei-quiz-type-badge');
+      badge.innerText = EI_TYPE_NAMES[item.type] || item.type;
+      badge.className = `ei-quiz-type-badge ei-type-${item.type}`;
+
+      // Generate 4 options (1 correct + 3 distractors)
+      const allData = examIdiomData[eiTopic] || [];
+      const distractors = allData.filter(d => d.phrase !== item.phrase).map(d => d.meaning_vi);
+      const shuffledDist = eiShuffle(distractors).slice(0, 3);
+      const options = eiShuffle([item.meaning_vi, ...shuffledDist]);
+      const correctIdx = options.indexOf(item.meaning_vi);
+
+      const container = document.getElementById('ei-quiz-options');
+      container.innerHTML = '';
+      options.forEach((opt, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'quiz-option-btn';
+        btn.innerText = opt;
+        btn.onclick = () => eiAnswerQuiz(btn, i, correctIdx, item);
+        container.appendChild(btn);
+      });
+    }
+
+    function eiAnswerQuiz(btn, selected, correctIdx, item) {
+      const btns = document.querySelectorAll('#ei-quiz-options .quiz-option-btn');
+      btns.forEach(b => b.classList.add('locked'));
+
+      const isCorrect = (selected === correctIdx);
+      if (isCorrect) {
+        btn.classList.add('correct');
+        eiSound('correct');
+        eiQuizAnswers.push(true);
+        eiProgress.xp += 10;
+        eiSaveProgress();
+      } else {
+        btn.classList.add('wrong');
+        btns[correctIdx].classList.add('correct');
+        eiSound('wrong');
+        eiQuizAnswers.push(false);
+      }
+
+      // Show explanation
+      const explain = document.getElementById('ei-quiz-explain');
+      explain.style.display = 'block';
+      document.getElementById('ei-quiz-explain-content').innerHTML = `
+        <div class="ei-explanation-line">✅ <strong>Đáp án đúng:</strong> ${item.phrase} → ${item.meaning_vi}</div>
+        <div class="ei-explanation-line">📖 <strong>Cambridge:</strong> <em>${item.cambridge_def}</em></div>
+        <div class="ei-explanation-line">💡 <strong>Ví dụ:</strong> ${item.example_en}</div>
+        <div class="ei-explanation-line" style="color: var(--muted); font-style: italic;">${item.example_vi}</div>
+      `;
+      document.getElementById('ei-quiz-next').style.display = 'block';
+    }
+
+    function eiNextQuizQ() {
+      eiSound('click');
+      eiQuizIdx++;
+      if (eiQuizIdx >= eiQuizList.length) {
+        eiShowResults();
+      } else {
+        eiRenderQuizQ();
+      }
+    }
+
+    // =========================================================
+    // MODE 3: SENTENCE COMPLETION
+    // =========================================================
+    function eiSetupSentence() {
+      const data = (examIdiomData[eiTopic] || []).filter(d => d.sentence && d.options && d.options.length === 4);
+      eiSentList = eiShuffle([...data]).slice(0, Math.min(10, data.length));
+      eiSentIdx = 0;
+      eiSentAnswers = [];
+      eiRenderSentQ();
+    }
+
+    function eiRenderSentQ() {
+      const total = eiSentList.length;
+      document.getElementById('ei-sent-progress').innerText = `Câu ${eiSentIdx + 1}/${total}`;
+      document.getElementById('ei-sent-bar').style.width = `${((eiSentIdx) / total) * 100}%`;
+      document.getElementById('ei-sent-explain').style.display = 'none';
+      document.getElementById('ei-sent-next').style.display = 'none';
+
+      const item = eiSentList[eiSentIdx];
+      document.getElementById('ei-sent-text').innerHTML = item.sentence.replace('______', '<strong style="color: #a78bfa; font-size: 1.1em;">______</strong>');
+
+      const prefixes = ['A', 'B', 'C', 'D'];
+      const container = document.getElementById('ei-sent-options');
+      container.innerHTML = '';
+      item.options.forEach((opt, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'quiz-option-btn';
+        btn.innerHTML = `<span class="ei-option-prefix">${prefixes[i]}.</span> ${opt}`;
+        btn.onclick = () => eiAnswerSent(btn, i, item);
+        container.appendChild(btn);
+      });
+    }
+
+    function eiAnswerSent(btn, selected, item) {
+      const btns = document.querySelectorAll('#ei-sent-options .quiz-option-btn');
+      btns.forEach(b => b.classList.add('locked'));
+
+      const isCorrect = (selected === item.correct_index);
+      if (isCorrect) {
+        btn.classList.add('correct');
+        eiSound('correct');
+        eiSentAnswers.push(true);
+        eiProgress.xp += 10;
+        eiSaveProgress();
+      } else {
+        btn.classList.add('wrong');
+        btns[item.correct_index].classList.add('correct');
+        eiSound('wrong');
+        eiSentAnswers.push(false);
+      }
+
+      const prefixes = ['A', 'B', 'C', 'D'];
+      const explain = document.getElementById('ei-sent-explain');
+      explain.style.display = 'block';
+      document.getElementById('ei-sent-explain-content').innerHTML = `
+        <div class="ei-explanation-line">✅ <strong>Đáp án đúng:</strong> ${prefixes[item.correct_index]}. ${item.options[item.correct_index]}</div>
+        <div class="ei-explanation-line">📖 ${item.sentence_explanation}</div>
+        <div class="ei-explanation-line">📚 <strong>Cambridge:</strong> <em>${item.cambridge_def}</em></div>
+      `;
+      document.getElementById('ei-sent-next').style.display = 'block';
+    }
+
+    function eiNextSentQ() {
+      eiSound('click');
+      eiSentIdx++;
+      if (eiSentIdx >= eiSentList.length) {
+        eiShowResults();
+      } else {
+        eiRenderSentQ();
+      }
+    }
+
+    // =========================================================
+    // RESULTS
+    // =========================================================
+    function eiShowResults() {
+      const answers = eiMode === 'quiz' ? eiQuizAnswers : eiSentAnswers;
+      const total = answers.length;
+      const correct = answers.filter(a => a).length;
+      const pct = Math.round((correct / total) * 100);
+      const xpEarned = correct * 10;
+
+      document.getElementById('ei-res-score').innerText = `${correct}/${total}`;
+      document.getElementById('ei-res-xp').innerText = `+${xpEarned}`;
+
+      if (pct >= 80) {
+        document.getElementById('ei-res-emoji').innerText = '🏆';
+        document.getElementById('ei-res-title').innerText = 'Xuất sắc!';
+        document.getElementById('ei-res-subtitle').innerText = `Bạn đạt ${pct}% — Tuyệt vời, hãy tiếp tục phát huy!`;
+        eiSound('win');
+        eiFireConfetti();
+      } else if (pct >= 60) {
+        document.getElementById('ei-res-emoji').innerText = '🎉';
+        document.getElementById('ei-res-title').innerText = 'Khá tốt!';
+        document.getElementById('ei-res-subtitle').innerText = `Bạn đạt ${pct}% — Cố gắng thêm một chút nữa nhé!`;
+        eiSound('correct');
+      } else {
+        document.getElementById('ei-res-emoji').innerText = '💪';
+        document.getElementById('ei-res-title').innerText = 'Cần luyện tập thêm!';
+        document.getElementById('ei-res-subtitle').innerText = `Bạn đạt ${pct}% — Đừng nản, hãy ôn lại và thử lại!`;
+      }
+
+      eiShowScreen('ei-results-screen');
+    }
+
+    function eiReplay() {
+      eiSound('click');
+      eiStartMode(eiMode);
+    }
+
+    // =========================================================
+    // RESET
+    // =========================================================
+    function eiResetAllProgress() {
+      if (confirm('Bạn có chắc chắn muốn xóa toàn bộ lịch sử học tập?')) {
+        eiProgress = { xp: 0, learned: {}, streak: 1, lastStudyDate: new Date().toISOString().split('T')[0] };
+        eiSaveProgress();
+        eiSound('click');
+        alert('Đã xóa toàn bộ lịch sử.');
+      }
+    }
+
+    // =========================================================
+    // UTILITIES
+    // =========================================================
+    function eiShuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    // =========================================================
+    // CONFETTI
+    // =========================================================
+    function eiFireConfetti() {
+      const canvas = document.getElementById('ei-confetti');
+      canvas.style.display = 'block';
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const particles = [];
+      const colors = ['#8b5cf6', '#ec4899', '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#c084fc', '#fbbf24'];
+
+      for (let i = 0; i < 150; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height - canvas.height,
+          w: Math.random() * 10 + 4,
+          h: Math.random() * 6 + 2,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          vx: (Math.random() - 0.5) * 4,
+          vy: Math.random() * 3 + 2,
+          rot: Math.random() * 360,
+          rotSpeed: (Math.random() - 0.5) * 10,
+          opacity: 1
+        });
+      }
+
+      let frame = 0;
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
+          p.rot += p.rotSpeed;
+          if (frame > 60) p.opacity -= 0.008;
+
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate((p.rot * Math.PI) / 180);
+          ctx.globalAlpha = Math.max(0, p.opacity);
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+          ctx.restore();
+        });
+
+        frame++;
+        if (frame < 200 && particles.some(p => p.opacity > 0)) {
+          requestAnimationFrame(animate);
+        } else {
+          canvas.style.display = 'none';
+        }
+      }
+      animate();
+    }
+  </script>
+</body>
+</html>

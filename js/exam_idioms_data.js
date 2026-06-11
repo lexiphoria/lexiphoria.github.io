@@ -1,0 +1,490 @@
+/* ================================================================
+ * Exam Idioms Data - Dữ liệu từ vựng trích từ đề thi thực tế
+ * File: js/exam_idioms_data.js
+ * Version: 1.0.0
+ * ================================================================ */
+
+const examIdiomData = {};
+
+// ---------------------------------------------------------------
+// EXAM TOPICS CONFIG
+// ---------------------------------------------------------------
+const EXAM_TOPICS = [
+  {
+    id: 'hanoi2026',
+    name: 'SỞ GD&ĐT HÀ NỘI 2026',
+    icon: '🏛️',
+    description: 'Đề thi thử THPTQG 2026 — Mã đề 9118 (35 cụm từ)',
+    color: '#8b5cf6'
+  }
+];
+
+// ---------------------------------------------------------------
+// TOPIC: Sở GD&ĐT Hà Nội 2026 — Mã đề 9118
+// ---------------------------------------------------------------
+examIdiomData.hanoi2026 = [
+  // ===== PHRASAL VERBS =====
+  {
+    phrase: 'gravitate towards',
+    type: 'phrasal_verb',
+    meaning_vi: 'Bị hút về phía, có xu hướng hướng tới',
+    cambridge_def: 'to be attracted to or move towards something or someone',
+    example_en: 'People tend to gravitate towards others with similar interests.',
+    example_vi: 'Mọi người có xu hướng bị hút về phía những người có cùng sở thích.',
+    exam_context: '…prompting many to gravitate towards sugary snacks.',
+    sentence: 'Under acute stress, many people ______ sugary snacks for quick energy.',
+    options: ['abstain from', 'derive from', 'gravitate towards', 'predispose to'],
+    correct_index: 2,
+    sentence_explanation: 'Khi bị stress, não cần thêm năng lượng nên nhiều người có xu hướng hướng tới đồ ngọt.'
+  },
+  {
+    phrase: 'abstain from',
+    type: 'phrasal_verb',
+    meaning_vi: 'Kiêng, tránh, nhịn (không làm điều gì)',
+    cambridge_def: 'to not do something, especially something enjoyable, that you think might be bad',
+    example_en: 'He took a vow to abstain from alcohol.',
+    example_vi: 'Anh ấy đã thề sẽ kiêng rượu.',
+    exam_context: 'Đáp án nhiễu — trái nghĩa với "gravitate towards" (Q7)',
+    sentence: 'Doctors advise patients to ______ fatty foods to maintain good health.',
+    options: ['gravitate towards', 'abstain from', 'account for', 'end up'],
+    correct_index: 1,
+    sentence_explanation: 'Bác sĩ khuyên bệnh nhân kiêng/tránh đồ ăn nhiều chất béo để duy trì sức khỏe.'
+  },
+  {
+    phrase: 'step up',
+    type: 'phrasal_verb',
+    meaning_vi: 'Tăng cường, đẩy mạnh',
+    cambridge_def: 'to increase the size, amount, or speed of something',
+    example_en: 'The police have stepped up their efforts to fight crime.',
+    example_vi: 'Cảnh sát đã tăng cường nỗ lực chống tội phạm.',
+    exam_context: 'Local authorities have stepped up security arrangements… (Q33)',
+    sentence: 'Local authorities have ______ security arrangements to ensure a safe festival.',
+    options: ['stepped up', 'used up', 'turned up', 'ended up'],
+    correct_index: 0,
+    sentence_explanation: 'Chính quyền địa phương đã tăng cường các sắp xếp an ninh để đảm bảo lễ hội an toàn.'
+  },
+  {
+    phrase: 'use up',
+    type: 'phrasal_verb',
+    meaning_vi: 'Dùng hết, cạn kiệt',
+    cambridge_def: 'to finish a supply of something',
+    example_en: 'Don\'t use up all the hot water!',
+    example_vi: 'Đừng dùng hết nước nóng!',
+    exam_context: 'Đáp án nhiễu (Q33)',
+    sentence: 'We\'ve ______ all the paper in the printer. Could you get some more?',
+    options: ['stepped up', 'used up', 'set aside', 'turned up'],
+    correct_index: 1,
+    sentence_explanation: 'Chúng tôi đã dùng hết giấy trong máy in. Bạn lấy thêm được không?'
+  },
+  {
+    phrase: 'turn up',
+    type: 'phrasal_verb',
+    meaning_vi: 'Xuất hiện, đến (bất ngờ); được tìm thấy',
+    cambridge_def: 'to arrive or appear somewhere, usually unexpectedly',
+    example_en: 'She turned up an hour late.',
+    example_vi: 'Cô ấy xuất hiện muộn một tiếng.',
+    exam_context: 'Đáp án nhiễu (Q33)',
+    sentence: 'We were worried when Tom didn\'t ______ for the meeting on time.',
+    options: ['step up', 'end up', 'turn up', 'use up'],
+    correct_index: 2,
+    sentence_explanation: 'Chúng tôi lo lắng khi Tom không xuất hiện đúng giờ cho cuộc họp.'
+  },
+  {
+    phrase: 'end up',
+    type: 'phrasal_verb',
+    meaning_vi: 'Cuối cùng rơi vào (tình huống/nơi nào đó)',
+    cambridge_def: 'to finally be in a particular place or situation',
+    example_en: 'They\'re going to end up in trouble.',
+    example_vi: 'Họ sẽ cuối cùng gặp rắc rối.',
+    exam_context: 'Đáp án nhiễu (Q33)',
+    sentence: 'If you keep spending like that, you\'ll ______ with no money at all.',
+    options: ['turn up', 'step up', 'use up', 'end up'],
+    correct_index: 3,
+    sentence_explanation: 'Nếu bạn tiếp tục tiêu xài như vậy, cuối cùng bạn sẽ không còn tiền.'
+  },
+  {
+    phrase: 'take up',
+    type: 'phrasal_verb',
+    meaning_vi: 'Bắt đầu (công việc/hoạt động mới); chiếm (thời gian/không gian)',
+    cambridge_def: 'to start doing a particular job or activity',
+    example_en: 'He\'s taken up jogging.',
+    example_vi: 'Anh ấy đã bắt đầu chạy bộ.',
+    exam_context: 'You\'ve taken up a new job or started a new course… (Q24)',
+    sentence: 'After retiring, my grandmother ______ painting as a new hobby.',
+    options: ['took up', 'gave up', 'set aside', 'turned up'],
+    correct_index: 0,
+    sentence_explanation: 'Sau khi nghỉ hưu, bà tôi đã bắt đầu vẽ tranh như một sở thích mới.'
+  },
+  {
+    phrase: 'get along',
+    type: 'phrasal_verb',
+    meaning_vi: 'Hòa hợp, hợp nhau',
+    cambridge_def: 'if two or more people get along, they like each other and are friendly to each other',
+    example_en: 'I don\'t really get along with my sister\'s husband.',
+    example_vi: 'Tôi không thực sự hợp nhau với chồng chị gái tôi.',
+    exam_context: '…I think you two will get along. (Q5)',
+    sentence: 'Don\'t worry. He\'s very friendly, so I think you two will ______.',
+    options: ['get along', 'look forward to', 'take up', 'single out'],
+    correct_index: 0,
+    sentence_explanation: 'Đừng lo. Anh ấy rất thân thiện nên tôi nghĩ hai bạn sẽ hòa hợp.'
+  },
+  {
+    phrase: 'look forward to',
+    type: 'phrasal_verb',
+    meaning_vi: 'Mong chờ, trông đợi',
+    cambridge_def: 'to feel pleased and excited about something that is going to happen',
+    example_en: 'I\'m really looking forward to my holiday.',
+    example_vi: 'Tôi thực sự mong chờ kỳ nghỉ của mình.',
+    exam_context: 'I look forward to your prompt response. (Q1)',
+    sentence: 'I am ______ hearing from you soon regarding my application.',
+    options: ['looking forward to', 'getting along with', 'setting aside', 'working towards'],
+    correct_index: 0,
+    sentence_explanation: 'Tôi mong chờ sớm nhận được hồi âm từ bạn về đơn ứng tuyển của tôi.'
+  },
+  {
+    phrase: 'set aside',
+    type: 'phrasal_verb',
+    meaning_vi: 'Dành riêng (thời gian, tiền bạc) cho mục đích cụ thể',
+    cambridge_def: 'to save something, usually time or money, for a special purpose',
+    example_en: 'He sets aside some time every day to read to his children.',
+    example_vi: 'Anh ấy dành ra thời gian mỗi ngày để đọc sách cho con.',
+    exam_context: 'Setting aside a little time for careful planning… (Q27)',
+    sentence: 'You should ______ some time every day for physical exercise.',
+    options: ['take up', 'set aside', 'end up', 'step up'],
+    correct_index: 1,
+    sentence_explanation: 'Bạn nên dành riêng một chút thời gian mỗi ngày cho việc tập thể dục.'
+  },
+  {
+    phrase: 'single out',
+    type: 'phrasal_verb',
+    meaning_vi: 'Chọn ra, nhắm vào (một cá nhân từ nhóm)',
+    cambridge_def: 'to choose one person or thing from a group for special attention',
+    example_en: 'It\'s not fair the way my sister is always singled out for criticism.',
+    example_vi: 'Không công bằng khi chị tôi luôn bị chọn ra để chỉ trích.',
+    exam_context: 'Singling out one individual risks oversimplifying a broader issue… (Passage 2)',
+    sentence: 'It\'s unfair to ______ one student for punishment when the whole class was noisy.',
+    options: ['single out', 'step up', 'account for', 'compensate for'],
+    correct_index: 0,
+    sentence_explanation: 'Không công bằng khi chọn ra một học sinh để phạt trong khi cả lớp đều ồn.'
+  },
+  {
+    phrase: 'account for',
+    type: 'phrasal_verb',
+    meaning_vi: 'Chiếm (tỷ lệ); giải thích (lý do)',
+    cambridge_def: 'to form the total of something; to explain the reason for something',
+    example_en: 'Students account for the majority of our customers.',
+    example_vi: 'Sinh viên chiếm phần lớn khách hàng của chúng tôi.',
+    exam_context: '…our brain accounts for just 2 percent of our body weight… (Passage 1)',
+    sentence: 'Although the brain ______ only 2% of body weight, it uses 20% of our energy.',
+    options: ['derives from', 'accounts for', 'compensates for', 'gravitates towards'],
+    correct_index: 1,
+    sentence_explanation: 'Mặc dù não chỉ chiếm 2% trọng lượng cơ thể, nó sử dụng 20% năng lượng.'
+  },
+  {
+    phrase: 'compensate for',
+    type: 'phrasal_verb',
+    meaning_vi: 'Bù đắp, đền bù cho',
+    cambridge_def: 'to provide something good or useful in place of something that has been lost',
+    example_en: 'Nothing can compensate for the loss of a loved one.',
+    example_vi: 'Không gì có thể bù đắp cho việc mất đi người thân.',
+    exam_context: '…allows individuals to compensate for emissions… (Passage 2)',
+    sentence: 'Carbon offsetting allows people to ______ their emissions by funding green projects.',
+    options: ['account for', 'compensate for', 'derive from', 'abstain from'],
+    correct_index: 1,
+    sentence_explanation: 'Bù đắp carbon cho phép mọi người bù đắp lượng khí thải bằng cách tài trợ các dự án xanh.'
+  },
+  {
+    phrase: 'derive from',
+    type: 'phrasal_verb',
+    meaning_vi: 'Bắt nguồn từ; thu được từ',
+    cambridge_def: 'to come from something; to get something from something else',
+    example_en: 'She derives great pleasure from painting.',
+    example_vi: 'Cô ấy thu được niềm vui lớn từ việc vẽ tranh.',
+    exam_context: 'Đáp án nhiễu (Q7)',
+    sentence: 'The English word "olive" is ______ the Latin word "oliva".',
+    options: ['derived from', 'accounted for', 'compensated for', 'abstained from'],
+    correct_index: 0,
+    sentence_explanation: 'Từ "olive" trong tiếng Anh bắt nguồn từ từ "oliva" trong tiếng Latin.'
+  },
+  {
+    phrase: 'work towards',
+    type: 'phrasal_verb',
+    meaning_vi: 'Nỗ lực hướng tới, phấn đấu đạt được',
+    cambridge_def: 'to try to achieve something',
+    example_en: 'We need to work towards an agreement.',
+    example_vi: 'Chúng ta cần nỗ lực hướng tới một thỏa thuận.',
+    exam_context: '…particularly when working towards a deadline. (Passage Leaflet)',
+    sentence: 'All team members are ______ the same goal of finishing the project on time.',
+    options: ['looking forward to', 'working towards', 'getting along with', 'setting aside'],
+    correct_index: 1,
+    sentence_explanation: 'Tất cả thành viên nhóm đang nỗ lực hướng tới cùng mục tiêu hoàn thành dự án đúng hạn.'
+  },
+  {
+    phrase: 'feel like',
+    type: 'phrasal_verb',
+    meaning_vi: 'Muốn, thích (làm gì đó)',
+    cambridge_def: 'to want to have or do something',
+    example_en: 'Do you feel like going out tonight?',
+    example_vi: 'Bạn có muốn đi chơi tối nay không?',
+    exam_context: '…do you feel like studying tomorrow…? (Q3)',
+    sentence: 'After a long day at work, I don\'t ______ cooking dinner.',
+    options: ['feel like', 'get along', 'look forward to', 'take up'],
+    correct_index: 0,
+    sentence_explanation: 'Sau một ngày dài làm việc, tôi không muốn nấu bữa tối.'
+  },
+
+  // ===== IDIOMS =====
+  {
+    phrase: 'second nature',
+    type: 'idiom',
+    meaning_vi: 'Bản năng thứ hai, thói quen tự nhiên (làm mà không cần suy nghĩ)',
+    cambridge_def: 'If something is second nature to you, you are so familiar with it that you can do it easily without needing to think very much about it.',
+    example_en: 'Driving is second nature to him.',
+    example_vi: 'Lái xe là bản năng thứ hai của anh ấy.',
+    exam_context: 'When positive behaviours become second nature, they require less effort… (Q28)',
+    sentence: 'After years of practice, playing the piano became ______ to her.',
+    options: ['first instinct', 'second nature', 'third habit', 'main routine'],
+    correct_index: 1,
+    sentence_explanation: 'Sau nhiều năm luyện tập, chơi piano trở thành bản năng thứ hai của cô ấy.'
+  },
+  {
+    phrase: 'eat that frog',
+    type: 'idiom',
+    meaning_vi: 'Hãy làm việc khó nhất/khó chịu nhất trước',
+    cambridge_def: 'A metaphorical expression meaning to tackle your most challenging or important task first thing in the morning.',
+    example_en: 'If you eat that frog first, you\'ll feel more productive all day.',
+    example_vi: 'Nếu bạn làm việc khó nhất trước, bạn sẽ cảm thấy năng suất hơn cả ngày.',
+    exam_context: 'Tiêu đề bài đọc: Eat That Frog! (Passage Leaflet)',
+    sentence: 'Brian Tracy advises people to "______" — do their hardest task at the start of the day.',
+    options: ['eat that frog', 'kill two birds', 'break the ice', 'bite the bullet'],
+    correct_index: 0,
+    sentence_explanation: 'Brian Tracy khuyên mọi người "ăn con ếch" — làm việc khó nhất vào đầu ngày.'
+  },
+
+  // ===== COLLOCATIONS =====
+  {
+    phrase: 'reach one\'s full potential',
+    type: 'collocation',
+    meaning_vi: 'Phát huy hết tiềm năng',
+    cambridge_def: 'to become the best that you are capable of being',
+    example_en: 'I don\'t feel I\'m achieving my full potential in my present job.',
+    example_vi: 'Tôi không cảm thấy mình đang phát huy hết tiềm năng ở công việc hiện tại.',
+    exam_context: '…help you reach your full potential and avoid burnout. (Passage Leaflet)',
+    sentence: 'Good habits can help you ______ and avoid burnout.',
+    options: ['avoid burnout', 'reach your full potential', 'take immediate action', 'make a difference'],
+    correct_index: 1,
+    sentence_explanation: 'Những thói quen tốt có thể giúp bạn phát huy hết tiềm năng và tránh kiệt sức.'
+  },
+  {
+    phrase: 'avoid burnout',
+    type: 'collocation',
+    meaning_vi: 'Tránh kiệt sức',
+    cambridge_def: 'burnout: the state of having no energy or enthusiasm because of working too hard',
+    example_en: 'She suffered burnout after years of overwork.',
+    example_vi: 'Cô ấy bị kiệt sức sau nhiều năm làm việc quá sức.',
+    exam_context: '…reach your full potential and avoid burnout. (Passage Leaflet)',
+    sentence: 'Taking regular breaks is important to ______ when studying for exams.',
+    options: ['reach potential', 'take action', 'avoid burnout', 'make a difference'],
+    correct_index: 2,
+    sentence_explanation: 'Nghỉ ngơi đều đặn rất quan trọng để tránh kiệt sức khi ôn thi.'
+  },
+  {
+    phrase: 'sense of achievement',
+    type: 'collocation',
+    meaning_vi: 'Cảm giác thành tựu',
+    cambridge_def: 'a feeling that you have succeeded in doing something very good and difficult',
+    example_en: 'Completing the marathon gave her a great sense of achievement.',
+    example_vi: 'Hoàn thành cuộc marathon mang lại cho cô ấy cảm giác thành tựu lớn.',
+    exam_context: 'Completing it early gives you a strong sense of achievement… (Passage Leaflet)',
+    sentence: 'Finishing a difficult task early gives you a strong ______.',
+    options: ['sense of achievement', 'career prospects', 'carbon footprint', 'root cause'],
+    correct_index: 0,
+    sentence_explanation: 'Hoàn thành một việc khó sớm mang lại cho bạn cảm giác thành tựu mạnh mẽ.'
+  },
+  {
+    phrase: 'take immediate action',
+    type: 'collocation',
+    meaning_vi: 'Hành động ngay lập tức',
+    cambridge_def: 'take action: to do something to deal with a problem',
+    example_en: 'We must take immediate action to deal with this problem.',
+    example_vi: 'Chúng ta phải hành động ngay lập tức để giải quyết vấn đề này.',
+    exam_context: 'Taking immediate action is essential for long-term success. (Q26)',
+    sentence: '______ is essential for long-term success, rather than waiting for the perfect moment.',
+    options: ['Making immediate action', 'Taking immediate action', 'Doing immediate action', 'Getting immediate action'],
+    correct_index: 1,
+    sentence_explanation: 'Hành động ngay lập tức là cần thiết cho thành công lâu dài, thay vì chờ đợi thời điểm hoàn hảo.'
+  },
+  {
+    phrase: 'make a difference',
+    type: 'collocation',
+    meaning_vi: 'Tạo ra sự khác biệt, có tác động tích cực',
+    cambridge_def: 'to improve a situation; to have an effect on a person or situation',
+    example_en: 'Exercising regularly can make a big difference to your health.',
+    example_vi: 'Tập thể dục đều đặn có thể tạo ra sự khác biệt lớn cho sức khỏe.',
+    exam_context: '…careful planning can also make a difference. (Passage Leaflet)',
+    sentence: 'Careful planning can ______ to your productivity at work.',
+    options: ['take action', 'make a difference', 'set aside', 'step up'],
+    correct_index: 1,
+    sentence_explanation: 'Lập kế hoạch cẩn thận có thể tạo ra sự khác biệt cho năng suất làm việc.'
+  },
+  {
+    phrase: 'career prospects',
+    type: 'collocation',
+    meaning_vi: 'Triển vọng nghề nghiệp',
+    cambridge_def: 'prospects: the possibility of being successful, especially at work',
+    example_en: 'She has excellent career prospects.',
+    example_vi: 'Cô ấy có triển vọng nghề nghiệp xuất sắc.',
+    exam_context: 'Observing successful people can improve your career prospects. (Passage Leaflet)',
+    sentence: 'Developing new skills can significantly improve your ______.',
+    options: ['career prospects', 'carbon footprint', 'root cause', 'sense of achievement'],
+    correct_index: 0,
+    sentence_explanation: 'Phát triển kỹ năng mới có thể cải thiện đáng kể triển vọng nghề nghiệp của bạn.'
+  },
+  {
+    phrase: 'carbon footprint',
+    type: 'collocation',
+    meaning_vi: 'Dấu chân carbon (lượng CO₂ thải ra)',
+    cambridge_def: 'the amount of carbon dioxide that a person, organization, building, etc. produces',
+    example_en: 'We all need to reduce our carbon footprint.',
+    example_vi: 'Tất cả chúng ta cần giảm dấu chân carbon.',
+    exam_context: '…the celebrity with the largest carbon footprint… (Passage 2)',
+    sentence: 'Taylor Swift was ranked as the celebrity with the largest ______.',
+    options: ['carbon offsetting', 'carbon footprint', 'root cause', 'career prospects'],
+    correct_index: 1,
+    sentence_explanation: 'Taylor Swift được xếp hạng là người nổi tiếng có dấu chân carbon lớn nhất.'
+  },
+  {
+    phrase: 'carbon offsetting',
+    type: 'collocation',
+    meaning_vi: 'Bù đắp carbon',
+    cambridge_def: 'the process of trying to reduce damage caused by releasing CO₂ by doing other things that remove CO₂',
+    example_en: 'Carbon offsetting involves investing in projects that reduce emissions.',
+    example_vi: 'Bù đắp carbon bao gồm đầu tư vào các dự án giảm phát thải.',
+    exam_context: 'One popular approach is carbon offsetting… (Passage 2)',
+    sentence: '______ allows individuals to compensate for emissions by funding environmental initiatives.',
+    options: ['Carbon footprint', 'Carbon offsetting', 'Root cause', 'Career prospects'],
+    correct_index: 1,
+    sentence_explanation: 'Bù đắp carbon cho phép cá nhân bù đắp lượng khí thải bằng cách tài trợ sáng kiến môi trường.'
+  },
+  {
+    phrase: 'root cause',
+    type: 'collocation',
+    meaning_vi: 'Nguyên nhân gốc rễ',
+    cambridge_def: 'the main reason for a problem',
+    example_en: 'We need to identify the root cause of the problem.',
+    example_vi: 'Chúng ta cần xác định nguyên nhân gốc rễ của vấn đề.',
+    exam_context: '…these efforts do little to address the root causes of excess carbon emissions. (Passage 2)',
+    sentence: 'To truly solve a problem, you need to find its ______ rather than just treating symptoms.',
+    options: ['sense of achievement', 'carbon footprint', 'root cause', 'career prospects'],
+    correct_index: 2,
+    sentence_explanation: 'Để thực sự giải quyết vấn đề, bạn cần tìm nguyên nhân gốc rễ thay vì chỉ xử lý triệu chứng.'
+  },
+  {
+    phrase: 'predispose to',
+    type: 'collocation',
+    meaning_vi: 'Khiến ai có khuynh hướng/dễ mắc phải',
+    cambridge_def: 'to make someone more likely to think, behave, or suffer from something in a particular way',
+    example_en: 'Smoking predisposes you to lung cancer.',
+    example_vi: 'Hút thuốc khiến bạn dễ mắc ung thư phổi.',
+    exam_context: 'Đáp án nhiễu (Q7)',
+    sentence: 'A poor diet can ______ you ______ various health problems.',
+    options: ['predispose…to', 'abstain…from', 'derive…from', 'compensate…for'],
+    correct_index: 0,
+    sentence_explanation: 'Chế độ ăn kém có thể khiến bạn dễ mắc các vấn đề sức khỏe khác nhau.'
+  },
+  {
+    phrase: 'incline to',
+    type: 'collocation',
+    meaning_vi: 'Có xu hướng, nghiêng về',
+    cambridge_def: 'to have an opinion, or make someone think or behave in a particular way',
+    example_en: 'I incline to the view that peace can be achieved.',
+    example_vi: 'Tôi nghiêng về quan điểm rằng hòa bình có thể đạt được.',
+    exam_context: 'Đáp án nhiễu (Q7)',
+    sentence: 'I am ______ agree with you on this matter.',
+    options: ['inclined to', 'predisposed to', 'derived from', 'abstained from'],
+    correct_index: 0,
+    sentence_explanation: 'Tôi có xu hướng đồng ý với bạn về vấn đề này.'
+  },
+
+  // ===== FIXED PHRASES =====
+  {
+    phrase: 'under warranty',
+    type: 'fixed_phrase',
+    meaning_vi: 'Còn bảo hành',
+    cambridge_def: 'warranty: a written promise from a company to repair or replace a product that develops a fault',
+    example_en: 'The washing machine is still under warranty.',
+    example_vi: 'Máy giặt vẫn còn bảo hành.',
+    exam_context: '…this is a brand-new product and still under warranty… (Q1)',
+    sentence: 'As this product is still ______, the manufacturer will pay for repairs.',
+    options: ['under warranty', 'under scrutiny', 'on a larger scale', 'to some extent'],
+    correct_index: 0,
+    sentence_explanation: 'Vì sản phẩm này vẫn còn bảo hành, nhà sản xuất sẽ trả tiền sửa chữa.'
+  },
+  {
+    phrase: 'back to normal',
+    type: 'fixed_phrase',
+    meaning_vi: 'Trở lại bình thường',
+    cambridge_def: 'as something was before a particular event or situation',
+    example_en: 'Things are slowly getting back to normal after the strike.',
+    example_vi: 'Mọi thứ đang dần trở lại bình thường sau cuộc đình công.',
+    exam_context: 'Their performance went back to normal after consuming carbohydrates. (Passage 1)',
+    sentence: 'After the storm, it took a week for everything to get ______.',
+    options: ['back to normal', 'under scrutiny', 'to some extent', 'in any meaningful sense'],
+    correct_index: 0,
+    sentence_explanation: 'Sau cơn bão, phải mất một tuần để mọi thứ trở lại bình thường.'
+  },
+  {
+    phrase: 'under constant scrutiny',
+    type: 'fixed_phrase',
+    meaning_vi: 'Bị giám sát/xem xét kỹ lưỡng',
+    cambridge_def: 'scrutiny: the careful and detailed examination of something in order to get information about it',
+    example_en: 'The company came under scrutiny after allegations of fraud.',
+    example_vi: 'Công ty bị giám sát kỹ lưỡng sau các cáo buộc gian lận.',
+    exam_context: 'Celebrity air travel remains under constant scrutiny… (Passage 2)',
+    sentence: 'Celebrity air travel remains ______, regardless of public sentiment.',
+    options: ['under warranty', 'under constant scrutiny', 'back to normal', 'to some extent'],
+    correct_index: 1,
+    sentence_explanation: 'Việc di chuyển bằng máy bay của người nổi tiếng vẫn bị giám sát kỹ lưỡng, bất kể dư luận.'
+  },
+
+  // ===== PREPOSITIONAL PHRASES =====
+  {
+    phrase: 'to some extent',
+    type: 'prepositional_phrase',
+    meaning_vi: 'Ở một mức độ nào đó, phần nào',
+    cambridge_def: 'partly',
+    example_en: 'To some extent, she was responsible for the accident.',
+    example_vi: 'Ở một mức độ nào đó, cô ấy phải chịu trách nhiệm cho tai nạn.',
+    exam_context: 'Carbon emissions are, to some extent, unavoidable… (Passage 2)',
+    sentence: 'Carbon emissions are, ______, unavoidable for public figures who travel frequently.',
+    options: ['on a larger scale', 'in any meaningful sense', 'to some extent', 'under scrutiny'],
+    correct_index: 2,
+    sentence_explanation: 'Phát thải carbon, ở một mức độ nào đó, là không thể tránh khỏi với người nổi tiếng di chuyển thường xuyên.'
+  },
+  {
+    phrase: 'in any meaningful sense',
+    type: 'prepositional_phrase',
+    meaning_vi: 'Theo bất kỳ nghĩa thực chất nào',
+    cambridge_def: 'meaningful: useful, serious, or important',
+    example_en: 'The policy has not changed in any meaningful sense.',
+    example_vi: 'Chính sách không thay đổi theo bất kỳ nghĩa thực chất nào.',
+    exam_context: '…they rarely neutralize emissions in any meaningful sense. (Passage 2)',
+    sentence: 'Critics argue that carbon offsets rarely neutralize emissions ______.',
+    options: ['to some extent', 'under scrutiny', 'on a larger scale', 'in any meaningful sense'],
+    correct_index: 3,
+    sentence_explanation: 'Các nhà phê bình cho rằng bù đắp carbon hiếm khi trung hòa phát thải theo nghĩa thực chất.'
+  },
+  {
+    phrase: 'on a larger scale',
+    type: 'prepositional_phrase',
+    meaning_vi: 'Ở quy mô lớn hơn, trên phạm vi rộng hơn',
+    cambridge_def: 'on a large/small scale: used for saying that something is done to a great or limited degree',
+    example_en: 'We need to produce on a larger scale.',
+    example_vi: 'Chúng ta cần sản xuất ở quy mô lớn hơn.',
+    exam_context: 'On a larger scale, integrating media literacy education into school curricula is crucial… (Q4)',
+    sentence: '______, integrating media literacy into school curricula is crucial for developing critical thinkers.',
+    options: ['To some extent', 'In any meaningful sense', 'On a larger scale', 'Under scrutiny'],
+    correct_index: 2,
+    sentence_explanation: 'Ở quy mô lớn hơn, tích hợp giáo dục về truyền thông vào chương trình nhà trường là rất quan trọng.'
+  }
+];

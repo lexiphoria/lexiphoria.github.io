@@ -14,7 +14,7 @@ const EXAM_TOPICS = [
     id: 'tongHop',
     name: 'TỔNG HỢP CÁC ĐỀ THI',
     icon: '📚',
-    description: 'Sở Hà Nội 2026, Đề 25, Đề 03, KS T1/2026, VIP90 Đề 12 & 15 (88 cụm từ)',
+    description: 'Sở Hà Nội, Đề 25, Đề 03, KS T1/2026, VIP90, Đề thi thử 2026 (113 cụm từ)',
     color: '#8b5cf6'
   }
 ];
@@ -1162,5 +1162,316 @@ examIdiomData.tongHop = [
     options: ['At the peak of', 'In the absence of', 'Apart from', 'With regard to'],
     correct_index: 0,
     sentence_explanation: 'Ở đỉnh cao của cuộc khủng hoảng, các bệnh viện bị quá tải bệnh nhân.'
+  },
+
+  // =============================================================
+  // PHẦN 3: Đề thi thử Tốt nghiệp THPT 2026 (Nâng cao)
+  // =============================================================
+
+  // ===== IDIOMS =====
+  {
+    phrase: 'a fish out of water',
+    type: 'idiom',
+    meaning_vi: 'Người lạc lõng, không thoải mái trong môi trường xa lạ',
+    cambridge_def: 'A person who is in a situation that they know nothing about and that feels strange or is not suitable for them.',
+    example_en: 'She felt like a fish out of water at the formal dinner.',
+    example_vi: 'Cô ấy cảm thấy lạc lõng tại bữa tối trang trọng.',
+    exam_context: 'Nói về cú sốc văn hóa khi chuyển đến môi trường mới.',
+    sentence: 'Moving to a new country, he felt like ______ for the first few months.',
+    options: ['a fish out of water', 'at loggerheads', 'in the pink of health', 'part and parcel'],
+    correct_index: 0,
+    sentence_explanation: 'Chuyển đến nước mới, anh ấy cảm thấy lạc lõng trong vài tháng đầu.'
+  },
+  {
+    phrase: 'rule of thumb',
+    type: 'idiom',
+    meaning_vi: 'Quy tắc thực tế, nguyên tắc dựa trên kinh nghiệm',
+    cambridge_def: 'A practical and approximate way of doing or measuring something.',
+    example_en: 'As a rule of thumb, you should drink eight glasses of water a day.',
+    example_vi: 'Theo quy tắc thực tế, bạn nên uống tám ly nước mỗi ngày.',
+    exam_context: 'As a good rule of thumb, proprietary technology must be at least 10 times better...',
+    sentence: 'As a good ______, you should save at least 20% of your income.',
+    options: ['rule of thumb', 'pat on the back', 'fish out of water', 'part and parcel'],
+    correct_index: 0,
+    sentence_explanation: 'Theo quy tắc thực tế, bạn nên tiết kiệm ít nhất 20% thu nhập.'
+  },
+  {
+    phrase: 'part and parcel',
+    type: 'idiom',
+    meaning_vi: 'Phần thiết yếu, không thể tách rời',
+    cambridge_def: 'To be a feature of something, especially a feature that cannot be avoided.',
+    example_en: 'Stress is part and parcel of modern life.',
+    example_vi: 'Căng thẳng là phần không thể tránh khỏi của cuộc sống hiện đại.',
+    exam_context: 'Waste is part and parcel of today\'s consumer society.',
+    sentence: 'Long working hours are ______ of this job.',
+    options: ['part and parcel', 'rule of thumb', 'a fish out of water', 'at loggerheads'],
+    correct_index: 0,
+    sentence_explanation: 'Giờ làm việc dài là phần không thể tránh khỏi của công việc này.'
+  },
+  {
+    phrase: 'pat yourself on the back',
+    type: 'idiom',
+    meaning_vi: 'Tự khen ngợi bản thân, tự đắc',
+    cambridge_def: 'To praise yourself or feel pleased with yourself for doing something well.',
+    example_en: 'You should pat yourself on the back for passing the exam.',
+    example_vi: 'Bạn nên tự khen mình vì đã đỗ kỳ thi.',
+    exam_context: '...neither pat yourself on the back nor ask for sympathy.',
+    sentence: 'After finishing the marathon, she deserved to ______.',
+    options: ['pat herself on the back', 'follow in her footsteps', 'be at loggerheads', 'turn a blind eye'],
+    correct_index: 0,
+    sentence_explanation: 'Sau khi hoàn thành marathon, cô ấy xứng đáng tự khen ngợi bản thân.'
+  },
+  {
+    phrase: 'at loggerheads (with)',
+    type: 'idiom',
+    meaning_vi: 'Bất đồng, tranh cãi gay gắt',
+    cambridge_def: 'To strongly disagree with someone.',
+    example_en: 'The two departments are at loggerheads over the budget.',
+    example_vi: 'Hai bộ phận đang tranh cãi gay gắt về ngân sách.',
+    exam_context: 'Tim Cappelli is at loggerheads with Jason Lodge over the potentially harmful impact...',
+    sentence: 'The neighbors have been ______ over the property boundary for years.',
+    options: ['at loggerheads', 'in the pink', 'part and parcel', 'a fish out of water'],
+    correct_index: 0,
+    sentence_explanation: 'Hàng xóm đã tranh cãi gay gắt về ranh giới đất trong nhiều năm.'
+  },
+  {
+    phrase: 'follow in someone\'s footsteps',
+    type: 'idiom',
+    meaning_vi: 'Nối nghiệp, đi theo con đường của ai',
+    cambridge_def: 'To do the same thing as someone else did previously, especially someone in your family.',
+    example_en: 'She followed in her mother\'s footsteps and became a doctor.',
+    example_vi: 'Cô ấy nối nghiệp mẹ và trở thành bác sĩ.',
+    exam_context: '...opt to follow in their footsteps without question.',
+    sentence: 'Many children ______ and choose the same career as their parents.',
+    options: ['follow in their parents\' footsteps', 'pat themselves on the back', 'are at loggerheads with', 'turn a blind eye to'],
+    correct_index: 0,
+    sentence_explanation: 'Nhiều trẻ em nối nghiệp và chọn cùng nghề nghiệp với cha mẹ.'
+  },
+  {
+    phrase: 'in the pink of health',
+    type: 'idiom',
+    meaning_vi: 'Có sức khỏe cực kỳ tốt, tráng kiện',
+    cambridge_def: 'In very good health or condition.',
+    example_en: 'Despite his age, he\'s in the pink of health.',
+    example_vi: 'Dù tuổi cao, ông ấy vẫn có sức khỏe rất tốt.',
+    exam_context: 'Exercise regularly and get enough sleep to stay in the pink of health!',
+    sentence: 'Grandma is 80 years old but still ______.',
+    options: ['in the pink of health', 'a fish out of water', 'at loggerheads', 'part and parcel'],
+    correct_index: 0,
+    sentence_explanation: 'Bà ngoại 80 tuổi nhưng vẫn có sức khỏe cực kỳ tốt.'
+  },
+
+  // ===== PHRASAL VERBS =====
+  {
+    phrase: 'take a toll on',
+    type: 'phrasal_verb',
+    meaning_vi: 'Gây tổn hại, ảnh hưởng nặng nề',
+    cambridge_def: 'To cause harm or damage to someone or something over a period of time.',
+    example_en: 'Years of stress have taken a toll on his health.',
+    example_vi: 'Nhiều năm căng thẳng đã gây tổn hại đến sức khỏe anh ấy.',
+    exam_context: 'Tác hại của AI đối với các ngành dịch vụ.',
+    sentence: 'Working overtime every day is ______ her mental health.',
+    options: ['taking a toll on', 'teaming up with', 'looking after', 'bringing up'],
+    correct_index: 0,
+    sentence_explanation: 'Làm thêm giờ mỗi ngày đang gây tổn hại đến sức khỏe tinh thần cô ấy.'
+  },
+  {
+    phrase: 'team up (with)',
+    type: 'phrasal_verb',
+    meaning_vi: 'Hợp tác, lập đội cùng ai',
+    cambridge_def: 'To join with another person, or group in order to do something together.',
+    example_en: 'The two companies teamed up to develop a new product.',
+    example_vi: 'Hai công ty đã hợp tác để phát triển sản phẩm mới.',
+    exam_context: 'Local businesses are being encouraged to team up with the government...',
+    sentence: 'Students are encouraged to ______ classmates for the group project.',
+    options: ['team up with', 'take a toll on', 'vie for', 'evolve into'],
+    correct_index: 0,
+    sentence_explanation: 'Học sinh được khuyến khích hợp tác với bạn cùng lớp cho dự án nhóm.'
+  },
+  {
+    phrase: 'look after',
+    type: 'phrasal_verb',
+    meaning_vi: 'Chăm sóc, trông nom',
+    cambridge_def: 'To take care of or be in charge of someone or something.',
+    example_en: 'Who looks after the children when you\'re at work?',
+    example_vi: 'Ai chăm sóc bọn trẻ khi bạn đi làm?',
+    exam_context: 'Encourage children to look after their plants in the garden.',
+    sentence: 'Could you ______ my cat while I\'m on holiday?',
+    options: ['look after', 'bring up', 'team up with', 'vie for'],
+    correct_index: 0,
+    sentence_explanation: 'Bạn có thể chăm sóc con mèo của tôi khi tôi đi nghỉ không?'
+  },
+  {
+    phrase: 'bring up',
+    type: 'phrasal_verb',
+    meaning_vi: 'Nuôi nấng (trẻ); đề cập (chủ đề)',
+    cambridge_def: 'To care for a child until they are an adult; to start to talk about a particular subject.',
+    example_en: 'She was brought up by her grandparents.',
+    example_vi: 'Cô ấy được ông bà nuôi nấng.',
+    exam_context: 'Xuất hiện trong bài đọc về giáo dục gia đình.',
+    sentence: 'He was ______ in a small village in the countryside.',
+    options: ['brought up', 'looked after', 'teamed up', 'vied for'],
+    correct_index: 0,
+    sentence_explanation: 'Anh ấy được nuôi nấng ở một ngôi làng nhỏ vùng nông thôn.'
+  },
+  {
+    phrase: 'vie for',
+    type: 'phrasal_verb',
+    meaning_vi: 'Cạnh tranh, giành giật',
+    cambridge_def: 'To compete with other people to achieve or get something.',
+    example_en: 'Several companies are vying for the contract.',
+    example_vi: 'Nhiều công ty đang cạnh tranh để giành hợp đồng.',
+    exam_context: 'The tournament gives racers opportunities to vie for prizes...',
+    sentence: 'Over 50 athletes are ______ the gold medal in this competition.',
+    options: ['vying for', 'looking after', 'bringing up', 'teaming up with'],
+    correct_index: 0,
+    sentence_explanation: 'Hơn 50 vận động viên đang cạnh tranh huy chương vàng trong cuộc thi này.'
+  },
+  {
+    phrase: 'evolve into',
+    type: 'phrasal_verb',
+    meaning_vi: 'Tiến hóa, phát triển dần thành',
+    cambridge_def: 'To develop gradually, or to cause something to develop gradually into something else.',
+    example_en: 'The company evolved into a major corporation.',
+    example_vi: 'Công ty đã phát triển thành một tập đoàn lớn.',
+    exam_context: 'Từ ứng dụng đơn giản phát triển thành tựa game phức tạp.',
+    sentence: 'What started as a small startup has ______ a billion-dollar company.',
+    options: ['evolved into', 'vied for', 'taken a toll on', 'teamed up with'],
+    correct_index: 0,
+    sentence_explanation: 'Khởi đầu là startup nhỏ đã phát triển thành công ty tỷ đô.'
+  },
+  {
+    phrase: 'give rise to',
+    type: 'phrasal_verb',
+    meaning_vi: 'Làm nảy sinh, gây ra',
+    cambridge_def: 'To cause something to happen or exist, especially something bad.',
+    example_en: 'The new policy gave rise to many complaints.',
+    example_vi: 'Chính sách mới gây ra nhiều phàn nàn.',
+    exam_context: 'Weather conditions and staffing shortages can give rise to significant delays.',
+    sentence: 'The rapid spread of misinformation has ______ public panic.',
+    options: ['given rise to', 'evolved into', 'taken a toll on', 'looked after'],
+    correct_index: 0,
+    sentence_explanation: 'Sự lan truyền nhanh chóng của thông tin sai lệch đã gây ra sự hoảng loạn công chúng.'
+  },
+
+  // ===== COLLOCATIONS =====
+  {
+    phrase: 'draw inspiration from',
+    type: 'collocation',
+    meaning_vi: 'Lấy cảm hứng từ',
+    cambridge_def: 'To get creative ideas from something or someone.',
+    example_en: 'The artist draws inspiration from nature.',
+    example_vi: 'Nghệ sĩ lấy cảm hứng từ thiên nhiên.',
+    exam_context: 'The creator drew inspiration from Vietnamese literature and Hollywood films.',
+    sentence: 'Many fashion designers ______ traditional Vietnamese clothing.',
+    options: ['draw inspiration from', 'sustain attention to', 'sow discord in', 'give rise to'],
+    correct_index: 0,
+    sentence_explanation: 'Nhiều nhà thiết kế thời trang lấy cảm hứng từ trang phục truyền thống Việt Nam.'
+  },
+  {
+    phrase: 'sustain attention',
+    type: 'collocation',
+    meaning_vi: 'Duy trì sự chú ý, sự tập trung',
+    cambridge_def: 'To maintain focus or concentration over a long period.',
+    example_en: 'Children often find it hard to sustain attention for long periods.',
+    example_vi: 'Trẻ em thường thấy khó duy trì sự tập trung trong thời gian dài.',
+    exam_context: 'Người nghiện đa nhiệm gặp khó khăn trong việc duy trì sự tập trung.',
+    sentence: 'Multitasking addicts struggle to ______ on a single task.',
+    options: ['sustain attention', 'draw inspiration', 'sow discord', 'erode trust'],
+    correct_index: 0,
+    sentence_explanation: 'Người nghiện đa nhiệm gặp khó khăn trong việc duy trì sự tập trung vào một nhiệm vụ duy nhất.'
+  },
+  {
+    phrase: 'irreversible ecological damage',
+    type: 'collocation',
+    meaning_vi: 'Thiệt hại sinh thái không thể đảo ngược',
+    cambridge_def: 'Harm to the environment that is so serious that it cannot be repaired.',
+    example_en: 'Mining can cause irreversible ecological damage.',
+    example_vi: 'Khai thác mỏ có thể gây ra thiệt hại sinh thái không thể đảo ngược.',
+    exam_context: 'Mối lo ngại về hệ sinh thái biển khi khai thác khoáng sản đáy biển.',
+    sentence: 'Deep-sea mining may cause ______ to ocean ecosystems.',
+    options: ['irreversible ecological damage', 'decisive competitive edge', 'sterling reputation', 'genuine psychological benefits'],
+    correct_index: 0,
+    sentence_explanation: 'Khai thác biển sâu có thể gây ra thiệt hại sinh thái không thể đảo ngược cho hệ sinh thái đại dương.'
+  },
+  {
+    phrase: 'decisive competitive edge',
+    type: 'collocation',
+    meaning_vi: 'Lợi thế cạnh tranh mang tính quyết định',
+    cambridge_def: 'An advantage that makes a company much more successful than its competitors in a definitive way.',
+    example_en: 'Innovation gives the company a decisive competitive edge.',
+    example_vi: 'Đổi mới mang lại cho công ty lợi thế cạnh tranh quyết định.',
+    exam_context: 'Vai trò của công nghệ độc quyền trong việc định hình doanh nghiệp tỷ đô.',
+    sentence: 'Proprietary technology gives startups a ______ over established competitors.',
+    options: ['decisive competitive edge', 'sterling reputation', 'irreversible ecological damage', 'genuine psychological benefits'],
+    correct_index: 0,
+    sentence_explanation: 'Công nghệ độc quyền mang lại cho startup lợi thế cạnh tranh quyết định so với đối thủ lâu đời.'
+  },
+  {
+    phrase: 'sow discord',
+    type: 'collocation',
+    meaning_vi: 'Gieo rắc bất hòa, chia rẽ',
+    cambridge_def: 'To cause people to disagree or argue with each other, often intentionally.',
+    example_en: 'Fake news is used to sow discord among the public.',
+    example_vi: 'Tin giả được sử dụng để gieo rắc bất hòa trong công chúng.',
+    exam_context: 'Chiến dịch thao túng thông tin gieo rắc sự chia rẽ trong dư luận.',
+    sentence: 'Foreign agents used social media to ______ during the election.',
+    options: ['sow discord', 'sustain attention', 'draw inspiration', 'erode trust'],
+    correct_index: 0,
+    sentence_explanation: 'Các thế lực nước ngoài sử dụng mạng xã hội để gieo rắc bất hòa trong cuộc bầu cử.'
+  },
+  {
+    phrase: 'sterling reputation',
+    type: 'collocation',
+    meaning_vi: 'Danh tiếng xuất sắc, không tì vết',
+    cambridge_def: 'An excellent reputation that is pure, flawless, and highly respected.',
+    example_en: 'The university has a sterling reputation for research.',
+    example_vi: 'Trường đại học có danh tiếng xuất sắc về nghiên cứu.',
+    exam_context: 'Hiệu ứng tích lũy lòng tin tạo nên sterling reputation cho nhà lãnh đạo.',
+    sentence: 'Years of honest business practices built the company\'s ______.',
+    options: ['sterling reputation', 'decisive competitive edge', 'irreversible damage', 'genuine benefits'],
+    correct_index: 0,
+    sentence_explanation: 'Nhiều năm kinh doanh trung thực đã xây dựng danh tiếng xuất sắc cho công ty.'
+  },
+
+  // ===== PREPOSITIONAL PHRASES =====
+  {
+    phrase: 'in the midst of',
+    type: 'prepositional_phrase',
+    meaning_vi: 'Ở giữa, ngay trong lúc (khủng hoảng)',
+    cambridge_def: 'In the middle of an event, situation, or activity, especially a busy or difficult one.',
+    example_en: 'In the midst of the chaos, she remained calm.',
+    example_vi: 'Giữa cơn hỗn loạn, cô ấy vẫn bình tĩnh.',
+    exam_context: 'In the midst of this crisis, a man she had never met offered his help.',
+    sentence: '______ the pandemic, many businesses were forced to close.',
+    options: ['In the midst of', 'At the expense of', 'On the fly', 'Beyond jurisdiction'],
+    correct_index: 0,
+    sentence_explanation: 'Giữa đại dịch, nhiều doanh nghiệp buộc phải đóng cửa.'
+  },
+  {
+    phrase: 'at the expense of',
+    type: 'prepositional_phrase',
+    meaning_vi: 'Trả giá bằng, đánh đổi bằng, làm tổn hại đến',
+    cambridge_def: 'In a way that harms something else.',
+    example_en: 'He succeeded at the expense of his health.',
+    example_vi: 'Anh ấy thành công nhưng đánh đổi bằng sức khỏe.',
+    exam_context: 'Phản ứng nhanh phải đánh đổi bằng khả năng tư duy sâu sắc.',
+    sentence: 'Economic growth should not come ______ environmental protection.',
+    options: ['at the expense of', 'in the midst of', 'on the fly', 'at the forefront of'],
+    correct_index: 0,
+    sentence_explanation: 'Tăng trưởng kinh tế không nên đánh đổi bằng bảo vệ môi trường.'
+  },
+  {
+    phrase: 'on the fly',
+    type: 'prepositional_phrase',
+    meaning_vi: 'Ứng biến nhanh, làm ngay không chuẩn bị trước',
+    cambridge_def: 'If you do something on the fly, you do it quickly while you are doing other things, without preparing it.',
+    example_en: 'The software can translate languages on the fly.',
+    example_vi: 'Phần mềm có thể dịch ngôn ngữ ngay lập tức.',
+    exam_context: 'Automated solar panels change their angles on the fly to maximize absorption.',
+    sentence: 'Good teachers can adjust their lesson plans ______ based on students\' responses.',
+    options: ['on the fly', 'at the expense of', 'in the midst of', 'at the peak of'],
+    correct_index: 0,
+    sentence_explanation: 'Giáo viên giỏi có thể điều chỉnh bài giảng ngay lập tức dựa trên phản hồi của học sinh.'
   }
 ];

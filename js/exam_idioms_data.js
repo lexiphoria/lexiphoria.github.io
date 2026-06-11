@@ -11,25 +11,18 @@ const examIdiomData = {};
 // ---------------------------------------------------------------
 const EXAM_TOPICS = [
   {
-    id: 'hanoi2026',
-    name: 'SỞ GD&ĐT HÀ NỘI 2026',
-    icon: '🏛️',
-    description: 'Đề thi thử THPTQG 2026 — Mã đề 9118 (35 cụm từ)',
-    color: '#8b5cf6'
-  },
-  {
-    id: 'combo5de',
-    name: 'TỔNG HỢP 5 ĐỀ THI',
+    id: 'tongHop',
+    name: 'TỔNG HỢP CÁC ĐỀ THI',
     icon: '📚',
-    description: 'Đề 25, Đề 03, KS T1/2026, VIP90 Đề 12 & 15 (80+ cụm từ)',
-    color: '#10b981'
+    description: 'Sở Hà Nội 2026, Đề 25, Đề 03, KS T1/2026, VIP90 Đề 12 & 15 (88 cụm từ)',
+    color: '#8b5cf6'
   }
 ];
 
 // ---------------------------------------------------------------
-// TOPIC: Sở GD&ĐT Hà Nội 2026 — Mã đề 9118
+// TOPIC: Tổng hợp tất cả các đề thi
 // ---------------------------------------------------------------
-examIdiomData.hanoi2026 = [
+examIdiomData.tongHop = [
   // ===== PHRASAL VERBS =====
   {
     phrase: 'gravitate towards',
@@ -493,13 +486,11 @@ examIdiomData.hanoi2026 = [
     options: ['To some extent', 'In any meaningful sense', 'On a larger scale', 'Under scrutiny'],
     correct_index: 2,
     sentence_explanation: 'Ở quy mô lớn hơn, tích hợp giáo dục về truyền thông vào chương trình nhà trường là rất quan trọng.'
-  }
-];
+  },
 
-// ---------------------------------------------------------------
-// TOPIC: Tổng hợp 5 Đề thi (Đề 25, Đề 03, KS T1/2026, VIP90 Đề 12, VIP90 Đề 15)
-// ---------------------------------------------------------------
-examIdiomData.combo5de = [
+  // =============================================================
+  // PHẦN 2: Đề 25, Đề 03, KS T1/2026, VIP90 Đề 12 & 15
+  // =============================================================
   // ===== IDIOMS =====
   {
     phrase: 'turn a blind eye (to)',

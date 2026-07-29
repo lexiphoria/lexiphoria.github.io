@@ -10347,6 +10347,622 @@ const vocabularyData = {
       meaning: "Tỷ suất hiện mắc (tỷ lệ người mắc bệnh trên tổng dân số)",
       example: "The prevalence rate helps public health officials estimate total healthcare needs.",
       exampleTranslation: "Tỷ suất hiện mắc giúp giới chức y tế cộng đồng ước tính tổng nhu cầu chăm sóc sức khỏe."
+    },
+    {
+      word: "Probabilistic forecasts",
+      type: "n.phr",
+      ipa: "/ˌprɒb.ə.bɪˈlɪs.tɪk ˈfɔːr.kɑːsts/",
+      meaning: "Dự báo xác suất (dự báo hiển thị phân phối xác suất các kịch bản tương lai)",
+      example: "Good probabilistic forecasts consider all potential uncertainties in demographic variables.",
+      exampleTranslation: "Dự báo xác suất tốt sẽ xem xét tất cả các yếu tố không chắc chắn tiềm ẩn trong các biến số nhân khẩu học."
+    },
+    {
+      word: "Pronatalistic",
+      type: "adj",
+      ipa: "/ˌproʊ.neɪˈtæl.ɪs.tɪk/",
+      meaning: "Khuyến khích sinh sản (thúc đẩy tỷ lệ sinh)",
+      example: "The government introduced pronatalistic policies to encourage higher birth rates.",
+      exampleTranslation: "Chính phủ đã đưa ra các chính sách khuyến sinh nhằm thúc đẩy tỷ lệ sinh cao hơn."
+    },
+    {
+      word: "Record life-expectancy",
+      type: "n.phr",
+      ipa: "/ˈrek.ɔːd laɪf ɪkˈspek.tən.si/",
+      meaning: "Tuổi thọ kỷ kỷ lục (tuổi thọ cao nhất thế giới quan sát được trong năm)",
+      example: "Japanese women have consistently set the record life-expectancy internationally.",
+      exampleTranslation: "Phụ nữ Nhật Bản liên tục lập kỷ kỷ lục thế giới về tuổi thọ trung bình."
+    },
+    {
+      word: "Replacement level",
+      type: "n.phr",
+      ipa: "/rɪˈpleɪs.mənt ˈlev.əl/",
+      meaning: "Mức sinh thay thế (mức sinh trung bình duy trì quy mô dân số ổn định, khoảng 2.1)",
+      example: "Falling below the replacement level long-term leads to population decline.",
+      exampleTranslation: "Mức sinh duy trì dưới mức thay thế trong thời gian dài sẽ dẫn đến suy giảm dân số."
+    },
+    {
+      word: "Report on the Elderly",
+      type: "n.phr",
+      ipa: "/rɪˈpɔːrt ɒn ðə ˈel.dər.li/",
+      meaning: "Báo cáo quốc gia về người cao tuổi",
+      example: "The Report on the Elderly provides comprehensive data on aging populations.",
+      exampleTranslation: "Báo cáo về Người cao tuổi cung cấp dữ liệu toàn diện về tình trạng già hóa dân số."
+    },
+    {
+      word: "Selection bias",
+      type: "n.phr",
+      ipa: "/sɪˈlek.ʃən ˈbaɪ.əs/",
+      meaning: "Thiên vị chọn mẫu / Sai số chọn mẫu",
+      example: "Researchers adjusted their sampling method to avoid selection bias in the survey.",
+      exampleTranslation: "Các nhà nghiên cứu đã điều chỉnh phương pháp chọn mẫu để tránh sai số chọn mẫu trong cuộc điều tra."
+    },
+    {
+      word: "Semi-Supercentenarians",
+      type: "n",
+      ipa: "/ˈsem.i ˌsuː.pər.sen.təˈneə.ri.ənz/",
+      meaning: "Người sống thọ từ 105 đến 109 tuổi",
+      example: "Semi-supercentenarians are individuals who have reached the age of 105 to 109.",
+      exampleTranslation: "Nhóm đại thọ 105-109 tuổi là những người đạt độ tuổi từ 105 đến 109."
+    },
+    {
+      word: "Socio-Economic Panel (SOEP)",
+      type: "n.phr",
+      ipa: "/ˌsoʊ.si.oʊ e.kəˈnɒm.ɪk ˈpæn.əl/",
+      meaning: "Bảng khảo sát dọc Kinh tế - Xã hội",
+      example: "The Socio-Economic Panel tracks long-term household income and employment trends.",
+      exampleTranslation: "Bảng khảo sát Kinh tế - Xã hội theo dõi xu hướng thu nhập hộ gia đình và việc làm dài hạn."
+    },
+    {
+      word: "Spouse splitting",
+      type: "n.phr",
+      ipa: "/spaʊs ˈsplɪt.ɪŋ/",
+      meaning: "Phương pháp gộp và chia đôi thu nhập tính thuế vợ chồng",
+      example: "Spouse splitting lowers the overall tax burden when income gaps between partners are high.",
+      exampleTranslation: "Chế độ chia đôi thuế vợ chồng làm giảm tổng nghĩa vụ thuế khi chênh lệch thu nhập giữa hai người lớn."
+    },
+    {
+      word: "Supercentenarians",
+      type: "n",
+      ipa: "/ˌsuː.pər.sen.təˈneə.ri.ənz/",
+      meaning: "Người sống siêu thọ từ 110 tuổi trở lên",
+      example: "Only a small fraction of centenarians survive to become supercentenarians.",
+      exampleTranslation: "Chỉ một tỷ lệ rất nhỏ những người thọ trăm tuổi sống đến mức siêu thọ 110 tuổi trở lên."
+    },
+    {
+      word: "Tempo effect",
+      type: "n.phr",
+      ipa: "/ˈtem.poʊ ɪˈfekt/",
+      meaning: "Hiệu ứng nhịp độ (sai lệch chỉ số do thay đổi độ tuổi sinh đẻ)",
+      example: "Delaying childbirth to older ages creates a temporary tempo effect in period fertility.",
+      exampleTranslation: "Việc trì hoãn sinh con sang tuổi muộn hơn tạo ra hiệu ứng nhịp độ tạm thời trong mức sinh thời kỳ."
+    },
+    {
+      word: "Total Fertility Rate (TFR)",
+      type: "n.phr",
+      ipa: "/ˈtoʊ.təl fərˈtɪl.ə.ti reɪt/",
+      meaning: "Tổng tỷ suất sinh (số con trung bình một phụ nữ sinh ra trong đời)",
+      example: "The country's total fertility rate dropped below 1.5 children per woman.",
+      exampleTranslation: "Tổng tỷ suất sinh của quốc gia đã giảm xuống dưới 1,5 con trên mỗi phụ nữ."
+    },
+    {
+      word: "Abortion Rate",
+      type: "n.phr",
+      ipa: "/əˈbɔːr.ʃən reɪt/",
+      meaning: "Tỷ lệ phá thai (số ca phá thai trên 1.000 phụ nữ tuổi 15-44/49)",
+      example: "The abortion rate declined after comprehensive reproductive health education was implemented.",
+      exampleTranslation: "Tỷ lệ phá thai đã giảm sau khi giáo dục sức khỏe sinh sản toàn diện được triển khai."
+    },
+    {
+      word: "Abortion Ratio",
+      type: "n.phr",
+      ipa: "/əˈbɔːr.ʃən ˈreɪ.ʃioʊ/",
+      meaning: "Tỷ số phá thai (số ca phá thai trên 1.000 trẻ sinh sống)",
+      example: "The abortion ratio measures the number of abortions relative to live births in a year.",
+      exampleTranslation: "Tỷ số phá thai đo lường số ca phá thai tương quan với số trẻ sinh sống trong năm."
+    },
+    {
+      word: "Acquired Immunodeficiency Syndrome (AIDS)",
+      type: "n.phr",
+      ipa: "/əˈkwaɪəd ˌɪm.jə.noʊ.dɪˈfɪʃ.ən.si ˈsɪn.droʊm/",
+      meaning: "Hội chứng suy giảm miễn dịch mắc phải (AIDS)",
+      example: "AIDS occurs at the advanced stage of HIV infection when immunity is severely compromised.",
+      exampleTranslation: "AIDS xảy ra ở giai đoạn tiến triển của nhiễm HIV khi hệ miễn dịch suy giảm nghiêm trọng."
+    },
+    {
+      word: "Age-Dependency Ratio",
+      type: "n.phr",
+      ipa: "/eɪdʒ dɪˈpen.dən.si ˈreɪ.ʃioʊ/",
+      meaning: "Tỷ lệ phụ thuộc theo tuổi (dưới 15 và trên 64 so với lực lượng lao động 15-64)",
+      example: "A rising age-dependency ratio indicates fewer working-age adults supporting dependents.",
+      exampleTranslation: "Tỷ lệ phụ thuộc theo tuổi tăng lên phản ánh ít lao động ủng hộ các nhóm phụ thuộc."
+    },
+    {
+      word: "Age-Specific Rate",
+      type: "n.phr",
+      ipa: "/eɪdʒ spəˈsɪf.ɪk reɪt/",
+      meaning: "Tỷ suất đặc trưng theo tuổi (tỷ lệ sinh, tử, kết hôn cho từng nhóm tuổi)",
+      example: "Age-specific rates help demographers analyze trends across different generational cohorts.",
+      exampleTranslation: "Tỷ suất đặc trưng theo tuổi giúp các nhà nhân khẩu học phân tích xu hướng giữa các nhóm thế hệ."
+    },
+    {
+      word: "Aging of Population",
+      type: "n.phr",
+      ipa: "/ˈeɪ.dʒɪŋ əv ˌpɒp.jəˈleɪ.ʃən/",
+      meaning: "Già hóa dân số (tăng tỷ lệ người lớn/người già và giảm tỷ lệ trẻ em)",
+      example: "Declining fertility and rising life expectancy drive the aging of population worldwide.",
+      exampleTranslation: "Mức sinh giảm cùng tuổi thọ tăng thúc đẩy quá trình già hóa dân số trên toàn cầu."
+    },
+    {
+      word: "Antinatalist Policy",
+      type: "n.phr",
+      ipa: "/ˌæn.tiˈneɪ.təl.ɪst ˈpɒl.ə.si/",
+      meaning: "Chính sách hạn chế sinh (nhằm giảm tốc độ gia tăng dân số)",
+      example: "The government adopted an antinatalist policy to curb rapid population growth.",
+      exampleTranslation: "Chính phủ áp dụng chính sách giảm sinh nhằm kiềm chế sự gia tăng dân số quá nhanh."
+    },
+    {
+      word: "Antiretroviral therapy (ART)",
+      type: "n.phr",
+      ipa: "/ˌæn.ti.ret.roʊˈvaɪə.rəl ˈθer.ə.pi/",
+      meaning: "Liệu pháp kháng retrovirus (điều trị HIV)",
+      example: "Widespread ART coverage reduces HIV mortality rates and prolongs life expectancy.",
+      exampleTranslation: "Phủ sóng liệu pháp ART rộng rãi giúp giảm tỷ lệ tử vong do HIV và kéo dài tuổi thọ."
+    },
+    {
+      word: "Baby Bust",
+      type: "n.phr",
+      ipa: "/ˈbeɪ.bi bʌst/",
+      meaning: "Giai đoạn suy giảm sinh đột ngột (sau thời kỳ bùng nổ trẻ em)",
+      example: "The baby bust led to a sharp decrease in school enrollment a decade later.",
+      exampleTranslation: "Thời kỳ suy giảm sinh đã dẫn đến sự giảm mạnh tỷ lệ nhập học một thập kỷ sau đó."
+    },
+    {
+      word: "Balancing Equation",
+      type: "n.phr",
+      ipa: "/ˈbæl.ən.sɪŋ ɪˈkweɪ.ʒən/",
+      meaning: "Phương trình cân bằng dân số (tính biến động dân số qua sinh, tử, di cư)",
+      example: "The demographic balancing equation accounts for births, deaths, and net migration.",
+      exampleTranslation: "Phương trình cân bằng nhân khẩu học tính toán số sinh, số tử và cán cân di cư."
+    },
+    {
+      word: "Brain Drain",
+      type: "n.phr",
+      ipa: "/breɪn dreɪn/",
+      meaning: "Chảy máu chất xám (di cư của lao động có trình độ cao ra nước ngoài)",
+      example: "Developing countries face economic challenges when experiencing severe brain drain.",
+      exampleTranslation: "Các quốc gia đang phát triển đối mặt thử thách kinh tế khi bị chảy máu chất xám nghiêm trọng."
+    },
+    {
+      word: "Carrying Capacity",
+      type: "n.phr",
+      ipa: "/ˈkær.i.ɪŋ kəˈpæs.ə.ti/",
+      meaning: "Sức chứa môi trường (quy mô dân số tối đa hệ sinh thái chịu đựng được)",
+      example: "Overpopulating a region beyond its carrying capacity risks resource depletion.",
+      exampleTranslation: "Quá tải dân số vượt mức sức chứa môi trường gây nguy cơ cạn kiệt tài nguyên."
+    },
+    {
+      word: "Case Fatality Rate",
+      type: "n.phr",
+      ipa: "/keɪs fəˈtæl.ə.ti reɪt/",
+      meaning: "Tỷ lệ tử vong trên số ca bệnh (tỷ lệ người mắc bệnh tử vong do bệnh đó)",
+      example: "Early diagnosis and treatment significantly reduced the disease's case fatality rate.",
+      exampleTranslation: "Chẩn đoán và điều trị sớm đã làm giảm đáng kể tỷ lệ tử vong trên số ca bệnh."
+    },
+    {
+      word: "Cause-Specific Death Rate",
+      type: "n.phr",
+      ipa: "/kɔːz spəˈsɪf.ɪk deθ reɪt/",
+      meaning: "Tỷ suất tử vong theo nguyên nhân (số ca tử vong vì nguyên nhân cụ thể trên 100.000 dân)",
+      example: "Heart disease remains the leading cause-specific death rate in many nations.",
+      exampleTranslation: "Bệnh tim vẫn là nguyên nhân tử vong hàng đầu theo tỷ suất tử vong nguyên nhân."
+    },
+    {
+      word: "Census",
+      type: "n",
+      ipa: "/ˈsen.səs/",
+      meaning: "Cuộc tổng điều tra dân số",
+      example: "A national census is conducted every ten years to collect demographic data.",
+      exampleTranslation: "Cuộc tổng điều tra dân số quốc gia được tiến hành 10 năm một lần để thu thập dữ liệu."
+    },
+    {
+      word: "Childbearing Years",
+      type: "n.phr",
+      ipa: "/ˈtʃaɪldˌbeə.rɪŋ jɪəz/",
+      meaning: "Độ tuổi sinh đẻ của phụ nữ (thường từ 15-44 hoặc 15-49 tuổi)",
+      example: "Fertility measurements focus on women throughout their childbearing years.",
+      exampleTranslation: "Các phép đo mức sinh tập trung vào phụ nữ trong suốt độ tuổi sinh đẻ."
+    },
+    {
+      word: "Child-Woman Ratio",
+      type: "n.phr",
+      ipa: "/tʃaɪld ˈwʊm.ən ˈreɪ.ʃioʊ/",
+      meaning: "Tỷ số trẻ em / phụ nữ (số trẻ dưới 5 tuổi trên 1.000 phụ nữ độ tuổi sinh đẻ)",
+      example: "The child-woman ratio serves as a crude fertility proxy when birth registration data is missing.",
+      exampleTranslation: "Tỷ số trẻ em/phụ nữ là chỉ số ước tính mức sinh thô khi thiếu dữ liệu đăng ký sinh."
+    },
+    {
+      word: "Closed Population",
+      type: "n.phr",
+      ipa: "/kloʊzd ˌpɒp.jəˈleɪ.ʃən/",
+      meaning: "Dân số đóng (dân số không có di dân ra hay vào)",
+      example: "In a closed population, changes in population size depend solely on births and deaths.",
+      exampleTranslation: "Trong một quần thể dân số đóng, thay đổi quy mô dân số hoàn toàn phụ thuộc vào sinh và tử."
+    },
+    {
+      word: "Consensual Union",
+      type: "n.phr",
+      ipa: "/kənˈsen.ʃu.əl ˈjuː.njən/",
+      meaning: "Sống chung không kết hôn (chung sống như vợ chồng lâu dài)",
+      example: "Couples living in a consensual union may share a household without legal marriage.",
+      exampleTranslation: "Các cặp đôi sống chung không kết hôn chia sẻ cuộc sống gia đình mà không đăng ký kết hôn."
+    },
+    {
+      word: "Contraceptive Prevalence",
+      type: "n.phr",
+      ipa: "/ˌkɒn.trəˈsep.tɪv ˈprev.əl.əns/",
+      meaning: "Tỷ lệ sử dụng biện pháp tránh thai (phần trăm các cặp đôi đang sử dụng)",
+      example: "High contraceptive prevalence indicates broad access to family planning services.",
+      exampleTranslation: "Tỷ lệ sử dụng biện pháp tránh thai cao thể hiện sự tiếp cận rộng rãi với dịch vụ kế hoạch hóa gia đình."
+    },
+    {
+      word: "Contraceptive Use",
+      type: "n.phr",
+      ipa: "/ˌkɒn.trəˈsep.tɪv juːs/",
+      meaning: "Việc sử dụng biện pháp tránh thai (hiện đại hoặc truyền thống)",
+      example: "Modern contraceptive use includes pills, implants, IUDs, and condoms.",
+      exampleTranslation: "Việc sử dụng biện pháp tránh thai hiện đại bao gồm thuốc uống, cấy ghép, vòng tránh thai và bao cao su."
+    },
+    {
+      word: "Crude Rate",
+      type: "n.phr",
+      ipa: "/kruːd reɪt/",
+      meaning: "Tỷ suất thô (tỷ lệ sự kiện nhân khẩu tính trên toàn bộ dân số)",
+      example: "The crude death rate is calculated for an entire population without age standardization.",
+      exampleTranslation: "Tỷ suất tử thô được tính cho toàn bộ dân số mà không chuẩn hóa theo độ tuổi."
+    },
+    {
+      word: "Demographic Transition",
+      type: "n.phr",
+      ipa: "/ˌdɪm.əˈɡræf.ɪk trænˈzɪʃ.ən/",
+      meaning: "Chuyển tiếp nhân khẩu học (chuyển từ tỷ lệ sinh/tử cao sang thấp)",
+      example: "During the demographic transition, death rates drop before birth rates, accelerating population growth.",
+      exampleTranslation: "Trong quá trình chuyển tiếp nhân khẩu học, tỷ lệ tử giảm trước tỷ lệ sinh, làm gia tăng dân số nhanh."
+    },
+    {
+      word: "Depopulation",
+      type: "n",
+      ipa: "/ˌdiː.pɒp.jəˈleɪ.ʃən/",
+      meaning: "Sự suy giảm dân số",
+      example: "Rural depopulation occurs when young adults move to major cities for work.",
+      exampleTranslation: "Sự suy giảm dân số nông thôn xảy ra khi giới trẻ chuyển đến các thành phố lớn để làm việc."
+    },
+    {
+      word: "Double Dependency",
+      type: "n.phr",
+      ipa: "/ˈdʌb.əl dɪˈpen.dən.si/",
+      meaning: "Phụ thuộc kép (tỷ lệ phụ thuộc trẻ em và người già đều ở mức cao)",
+      example: "Societies experiencing double dependency face economic pressure to support both young and old.",
+      exampleTranslation: "Các xã hội gặp tình trạng phụ thuộc kép đối mặt áp lực kinh tế hỗ trợ cả trẻ em lẫn người già."
+    },
+    {
+      word: "Doubling Time",
+      type: "n.phr",
+      ipa: "/ˈdʌb.lɪŋ taɪm/",
+      meaning: "Thời gian tăng gấp đôi quy mô dân số",
+      example: "At a 2% annual growth rate, a population's doubling time is approximately 35 years.",
+      exampleTranslation: "Với tốc độ tăng trưởng 2%/năm, thời gian tăng gấp đôi dân số là khoảng 35 năm."
+    },
+    {
+      word: "Economic Infrastructure",
+      type: "n.phr",
+      ipa: "/ˌiː.kəˈnɒm.ɪk ˈɪn.frəˌstrʌk.tʃər/",
+      meaning: "Hạ tầng kinh tế (giao thông, viễn thông, năng lượng, tài chính)",
+      example: "Investing in economic infrastructure promotes commerce and improves living standards.",
+      exampleTranslation: "Đầu tư vào hạ tầng kinh tế thúc đẩy thương mại và nâng cao mức sống."
+    },
+    {
+      word: "Economic Security",
+      type: "n.phr",
+      ipa: "/ˌiː.kəˈnɒm.ɪk sɪˈkjʊə.rə.ti/",
+      meaning: "An ninh kinh tế (sự ổn định thu nhập và nguồn lực đảm bảo mức sống)",
+      example: "Social safety nets enhance economic security for retired workers.",
+      exampleTranslation: "Mạng lưới an sinh xã hội tăng cường an ninh kinh tế cho người lao động đã nghỉ hưu."
+    },
+    {
+      word: "Ethnicity",
+      type: "n",
+      ipa: "/eθˈnɪs.ə.ti/",
+      meaning: "Dân tộc / Bản sắc văn hóa dân tộc",
+      example: "Ethnicity is defined by shared cultural practices, language, and traditions.",
+      exampleTranslation: "Bản sắc dân tộc được xác định bởi phong tục văn hóa, ngôn ngữ và truyền thống chung."
+    },
+    {
+      word: "Fecundity",
+      type: "n",
+      ipa: "/fɪˈkʌn.də.ti/",
+      meaning: "Khả năng sinh sản về mặt sinh lý của phụ nữ",
+      example: "Fecundity refers to the biological capacity to bear children, distinct from actual fertility.",
+      exampleTranslation: "Khả năng sinh sản về sinh lý chỉ năng lực sinh học, khác với mức sinh thực tế."
+    },
+    {
+      word: "Fertility (Reproductive)",
+      type: "n",
+      ipa: "/fərˈtɪl.ə.ti/",
+      meaning: "Kết quả sinh sản thực tế của cá nhân/quần thể",
+      example: "Fertility rates reflect the actual number of live births recorded in a population.",
+      exampleTranslation: "Tỷ lệ sinh phản ánh số lượng con sinh sống thực tế được ghi nhận trong một dân số."
+    },
+    {
+      word: "Gender Equity",
+      type: "n.phr",
+      ipa: "/ˈdʒen.dər ˈek.wɪ.ti/",
+      meaning: "Công bằng giới (quá trình đối xử công bằng để bù đắp bất lợi lịch sử)",
+      example: "Achieving gender equity requires targeted policies to empower disadvantaged groups.",
+      exampleTranslation: "Đạt được công bằng giới đòi hỏi các chính sách mục tiêu nhằm trao quyền cho nhóm yếu thế."
+    },
+    {
+      word: "Gender Equality",
+      type: "n.phr",
+      ipa: "/ˈdʒen.dər iˈkwɒl.ə.ti/",
+      meaning: "Bình đẳng giới (quyền, cơ hội và nguồn lực bình đẳng giữa nam và nữ)",
+      example: "Gender equality ensures both men and women enjoy equal human rights and opportunities.",
+      exampleTranslation: "Bình đẳng giới đảm bảo cả nam và nữ đều thụ hưởng quyền con người và cơ hội như nhau."
+    },
+    {
+      word: "General Fertility Rate",
+      type: "n.phr",
+      ipa: "/ˈdʒen.ər.əl fərˈtɪl.ə.ti reɪt/",
+      meaning: "Tỷ suất sinh chung (số trẻ sinh sống trên 1.000 phụ nữ trong độ tuổi sinh đẻ)",
+      example: "The general fertility rate isolates births relative to the female reproductive population.",
+      exampleTranslation: "Tỷ suất sinh chung tính số sinh tương quan với nhóm phụ nữ trong độ tuổi sinh đẻ."
+    },
+    {
+      word: "Gross National Income (GNI)",
+      type: "n.phr",
+      ipa: "/ɡroʊs ˈnæʃ.ən.əl ˈɪn.kʌm/",
+      meaning: "Tổng thu nhập quốc dân (GNI)",
+      example: "GNI measures the total value added by resident producers plus net income from abroad.",
+      exampleTranslation: "GNI đo lường tổng giá trị gia tăng bởi sản xuất trong nước cộng thu nhập thuần từ nước ngoài."
+    },
+    {
+      word: "Gross Reproduction Rate (GRR)",
+      type: "n.phr",
+      ipa: "/ɡroʊs ˌriː.prəˈdʌk.ʃən reɪt/",
+      meaning: "Tỷ suất tái sản xuất thô (số con gái trung bình một phụ nữ sinh ra)",
+      example: "The Gross Reproduction Rate measures female births per woman assuming zero mortality before age 50.",
+      exampleTranslation: "Tỷ suất tái sản xuất thô đo lường số con gái mỗi phụ nữ sinh ra giả định không có tử vong trước 50 tuổi."
+    },
+    {
+      word: "Human Immunodeficiency Virus (HIV)",
+      type: "n.phr",
+      ipa: "/ˈhjuː.mən ˌɪm.jə.noʊ.dɪˈfɪʃ.ən.si ˈvaɪə.rəs/",
+      meaning: "Virus gây suy giảm miễn dịch ở người (HIV)",
+      example: "HIV targets immune cells, leaving the body vulnerable to opportunistic infections.",
+      exampleTranslation: "HIV tấn công các tế bào miễn dịch, khiến cơ thể dễ bị nhiễm trùng cơ hội."
+    },
+    {
+      word: "In-migration",
+      type: "n.phr",
+      ipa: "/ˈɪn maɪˈɡreɪ.ʃən/",
+      meaning: "Sự nhập cư nội địa (chuyển từ vùng này sang vùng khác trong cùng quốc gia)",
+      example: "High in-migration expanded the working population of the capital city.",
+      exampleTranslation: "Nhập cư nội địa cao đã mở rộng lực lượng lao động của thủ đô."
+    },
+    {
+      word: "Least Developed Countries",
+      type: "n.phr",
+      ipa: "/liːst dɪˈvel.əpt ˈkʌn.triz/",
+      meaning: "Các quốc gia kém phát triển nhất (theo tiêu chí LHQ)",
+      example: "The UN provides special development assistance to least developed countries.",
+      exampleTranslation: "Liên Hợp Quốc cung cấp hỗ trợ phát triển đặc biệt cho các quốc gia kém phát triển nhất."
+    },
+    {
+      word: "Less Developed Countries",
+      type: "n.phr",
+      ipa: "/les dɪˈvel.əpt ˈkʌn.triz/",
+      meaning: "Các quốc gia đang phát triển (ít phát triển hơn nhóm phát triển)",
+      example: "Less developed countries often experience rapid urban population growth.",
+      exampleTranslation: "Các quốc gia đang phát triển thường trải qua sự gia tăng nhanh chóng dân số thành thị."
+    },
+    {
+      word: "Low Overall Dependency",
+      type: "n.phr",
+      ipa: "/loʊ ˌoʊ.vərˈɑːl dɪˈpen.dən.si/",
+      meaning: "Mức phụ thuộc tổng thể thấp (do di dân lao động dồi dào và ít người già)",
+      example: "Immigration of working-age adults maintains low overall dependency in host countries.",
+      exampleTranslation: "Di dân trong độ tuổi lao động giúp duy trì mức phụ thuộc tổng thể thấp ở các nước tiếp nhận."
+    },
+    {
+      word: "Male Involvement",
+      type: "n.phr",
+      ipa: "/meɪl ɪnˈvɒlv.mənt/",
+      meaning: "Sự tham gia của nam giới trong sức khỏe sinh sản và gia đình",
+      example: "Promoting male involvement leads to better reproductive health outcomes for families.",
+      exampleTranslation: "Thúc đẩy sự tham gia của nam giới mang lại kết quả sức khỏe sinh sản tốt hơn cho gia đình."
+    },
+    {
+      word: "Marital Fertility Rate",
+      type: "n.phr",
+      ipa: "/ˈmær.ɪ.təl fərˈtɪl.ə.ti reɪt/",
+      meaning: "Tỷ suất sinh trong hôn nhân (số trẻ sinh ra trên 1.000 phụ nữ có gia đình)",
+      example: "The marital fertility rate compares live births specifically among married women.",
+      exampleTranslation: "Tỷ suất sinh trong hôn nhân so sánh số trẻ sinh sống riêng ở nhóm phụ nữ đã kết hôn."
+    },
+    {
+      word: "Megalopolis",
+      type: "n",
+      ipa: "/ˌmeɡ.əˈlɒp.əl.ɪs/",
+      meaning: "Siêu đô thị liên hoàn (chuỗi các đô thị và thành phố nối liền)",
+      example: "The BosWash corridor in the northeastern U.S. is a famous example of a megalopolis.",
+      exampleTranslation: "Hành lang BosWash ở đông bắc Hoa Kỳ là ví dụ nổi tiếng về siêu đô thị liên hoàn."
+    },
+    {
+      word: "MENA Countries",
+      type: "n.phr",
+      ipa: "/ˈmiː.nə ˈkʌn.triz/",
+      meaning: "Các quốc gia Trung Đông và Bắc Phi",
+      example: "MENA countries share distinct economic structures and demographic dynamics.",
+      exampleTranslation: "Các quốc gia MENA chia sẻ cấu trúc kinh tế và động lực nhân khẩu học đặc trưng."
+    },
+    {
+      word: "Metropolitan Area",
+      type: "n.phr",
+      ipa: "/ˌmet.rəˈpɒl.ɪ.tən ˈeə.ri.ə/",
+      meaning: "Vùng đô thị lớn (gồm thành phố trung tâm và các khu vực lân cận)",
+      example: "The Tokyo metropolitan area is the most populous urban agglomeration in the world.",
+      exampleTranslation: "Vùng đô thị Tokyo là khu vực đô thị đông dân nhất thế giới."
+    },
+    {
+      word: "Millennium Development Goals (MDGs)",
+      type: "n.phr",
+      ipa: "/mɪˈlen.i.əm dɪˈvel.əp.mənt ɡoʊlz/",
+      meaning: "Các Mục tiêu Phát triển Thiên niên kỷ (8 mục tiêu LHQ đến 2015)",
+      example: "The MDGs targeted poverty reduction, education, gender equality, and child health.",
+      exampleTranslation: "Các mục tiêu MDG nhắm vào giảm nghèo, giáo dục, bình đẳng giới và sức khỏe trẻ em."
+    },
+    {
+      word: "Mobility",
+      type: "n",
+      ipa: "/moʊˈbɪl.ə.ti/",
+      meaning: "Sự cơ động dân số (di chuyển địa lý của con người)",
+      example: "High spatial mobility allows workers to relocate where labor demand is highest.",
+      exampleTranslation: "Sự cơ động địa lý cao cho phép lao động chuyển đến nơi có nhu cầu cao nhất."
+    },
+    {
+      word: "Natality",
+      type: "n",
+      ipa: "/neɪˈtæl.ə.ti/",
+      meaning: "Mức sinh / Số sinh (yếu tố sinh trong biến động dân số)",
+      example: "Natality and mortality are the primary natural components of population change.",
+      exampleTranslation: "Số sinh và số tử là hai yếu tố tự nhiên chính trong biến động dân số."
+    },
+    {
+      word: "Natural Increase (or Decrease)",
+      type: "n.phr",
+      ipa: "/ˈnætʃ.ər.əl ɪnˈkriːs/",
+      meaning: "Tăng (hoặc giảm) tự nhiên (hiệu số giữa số sinh và số tử)",
+      example: "Natural increase occurs when total live births exceed total deaths in a given period.",
+      exampleTranslation: "Tăng tự nhiên xảy ra khi tổng số trẻ sinh sống vượt quá tổng số ca tử vong."
+    },
+    {
+      word: "Neo-Malthusian",
+      type: "n / adj",
+      ipa: "/ˌniː.oʊ mælˈθjuː.zi.ən/",
+      meaning: "Tân Malthus (thuyết ủng hộ hạn chế tăng dân số bằng biện pháp tránh thai)",
+      example: "Neo-Malthusian theorists advocate family planning to prevent overpopulation.",
+      exampleTranslation: "Các nhà lý luận Tân Malthus ủng hộ kế hoạch hóa gia đình để ngăn chặn bùng nổ dân số."
+    },
+    {
+      word: "Neonatal Mortality Rate",
+      type: "n.phr",
+      ipa: "/ˌniː.oʊˈneɪ.təl mɔːrˈtæl.ə.ti reɪt/",
+      meaning: "Tỷ lệ tử vong sơ sinh sớm (dưới 28 ngày tuổi trên 1.000 trẻ sinh sống)",
+      example: "Improving newborn medical care drastically drops the neonatal mortality rate.",
+      exampleTranslation: "Cải thiện chăm sóc y tế cho trẻ sơ sinh giúp giảm mạnh tỷ lệ tử vong sơ sinh sớm."
+    },
+    {
+      word: "Out-migration",
+      type: "n.phr",
+      ipa: "/ˈaʊt maɪˈɡreɪ.ʃən/",
+      meaning: "Sự xuất cư nội địa (chuyển khỏi một địa phương sang địa phương khác)",
+      example: "Severe economic downturns often accelerate rural out-migration to industrial hubs.",
+      exampleTranslation: "Suy thoái kinh tế nghiêm trọng thường đẩy nhanh xuất cư từ nông thôn sang khu công nghiệp."
+    },
+    {
+      word: "Parity",
+      type: "n",
+      ipa: "/ˈpær.ə.ti/",
+      meaning: "Thứ tự/số con đã sinh (số trẻ một phụ nữ đã sinh sống trước đó)",
+      example: "Zero-parity women are those who have not yet given birth to a child.",
+      exampleTranslation: "Phụ nữ có thứ tự sinh bằng 0 là những người chưa từng sinh con."
+    },
+    {
+      word: "Percent Urban",
+      type: "n.phr",
+      ipa: "/pəˈsent ˈɜː.bən/",
+      meaning: "Tỷ lệ dân số đô thị (phần trăm dân số sống ở khu vực thành thị)",
+      example: "The percent urban of a country reflects its level of industrialization and development.",
+      exampleTranslation: "Tỷ lệ dân số đô thị của một quốc gia phản ánh mức độ công nghiệp hóa và phát triển."
+    },
+    {
+      word: "Perinatal Mortality Rate",
+      type: "n.phr",
+      ipa: "/ˌper.ɪˈneɪ.təl mɔːrˈtæl.ə.ti reɪt/",
+      meaning: "Tỷ lệ tử vong chu sinh (thai chết lưu sau 28 tuần + tử vong dưới 7 ngày tuổi)",
+      example: "The perinatal mortality rate evaluates maternal care quality before and during delivery.",
+      exampleTranslation: "Tỷ lệ tử vong chu sinh đánh giá chất lượng chăm sóc người mẹ trước và trong khi sinh."
+    },
+    {
+      word: "Period Analysis",
+      type: "n.phr",
+      ipa: "/ˈpɪə.ri.əd əˈnæl.ə.sɪs/",
+      meaning: "Phân tích thời kỳ (nghiên cứu biến động dân số tại một thời điểm nhất định)",
+      example: "Period analysis provides a snapshot of demographic indicators during a single calendar year.",
+      exampleTranslation: "Phân tích thời kỳ cung cấp bức ảnh toàn cảnh các chỉ số nhân khẩu học trong một năm lịch."
+    },
+    {
+      word: "Post-Neonatal Mortality Rate",
+      type: "n.phr",
+      ipa: "/poʊst ˌniː.oʊˈneɪ.təl mɔːrˈtæl.ə.ti reɪt/",
+      meaning: "Tỷ lệ tử vong sau sơ sinh (từ 28 ngày đến 1 tuổi trên 1.000 trẻ sinh sống)",
+      example: "Post-neonatal mortality rate is closely linked to environmental hygiene and nutrition.",
+      exampleTranslation: "Tỷ lệ tử vong sau sơ sinh gắn liền với vệ sinh môi trường và dinh dưỡng."
+    },
+    {
+      word: "Pronatalist Policy",
+      type: "n.phr",
+      ipa: "/ˌproʊˈneɪ.təl.ɪst ˈpɒl.ə.si/",
+      meaning: "Chính sách khuyến sinh (thúc đẩy tỷ lệ sinh con)",
+      example: "Financial incentives for larger families are a common feature of a pronatalist policy.",
+      exampleTranslation: "Trợ cấp tài chính cho gia đình đông con là đặc điểm phổ biến của chính sách khuyến sinh."
+    },
+    {
+      word: "Purchasing Power",
+      type: "n.phr",
+      ipa: "/ˈpɜː.tʃə.sɪŋ ˌpaʊ.ər/",
+      meaning: "Sức mua (khả năng người tiêu dùng mua hàng hóa và dịch vụ)",
+      example: "Inflation erodes consumer purchasing power unless wages increase at an equal rate.",
+      exampleTranslation: "Lạm phát làm suy giảm sức mua của người tiêu dùng trừ khi tiền lương tăng tương ứng."
+    },
+    {
+      word: "“Push-Pull” Hypothesis",
+      type: "n.phr",
+      ipa: "/pʊʃ pʊl haɪˈpɒθ.ə.sɪs/",
+      meaning: "Giả thuyết 'Đẩy - Kéo' di dân (lực đẩy từ nơi đi và lực hút từ nơi đến)",
+      example: "Poverty acts as a push factor while employment opportunities serve as a pull factor.",
+      exampleTranslation: "Nghèo đói đóng vai trò là yếu tố đẩy trong khi cơ hội việc làm đóng vai trò là yếu tố kéo."
+    },
+    {
+      word: "Vital statistics",
+      type: "n.phr",
+      ipa: "/ˈvaɪ.təl stəˈtɪs.tɪks/",
+      meaning: "Thống kê hộ tịch / bộ chỉ số sinh tử (sinh, tử, kết hôn, ly hôn)",
+      example: "Vital statistics are collected by government agencies through official registration.",
+      exampleTranslation: "Thống kê hộ tịch được thu thập bởi các cơ quan chính phủ thông qua đăng ký chính thức."
+    },
+    {
+      word: "Women’s Empowerment",
+      type: "n.phr",
+      ipa: "/ˈwɪm.ɪnz ɪmˈpaʊ.ər.mənt/",
+      meaning: "Trao quyền cho phụ nữ (nâng cao địa vị và khả năng ra quyết định)",
+      example: "Women's empowerment enhances decision-making autonomy in health and education.",
+      exampleTranslation: "Trao quyền cho phụ nữ nâng cao năng lực tự chủ ra quyết định trong y tế và giáo dục."
+    },
+    {
+      word: "“Young” Population",
+      type: "n.phr",
+      ipa: "/jʌŋ ˌpɒp.jəˈleɪ.ʃən/",
+      meaning: "Dân số trẻ (tỷ lệ trẻ em/thanh niên cao, tuổi trung vị thấp, tiềm năng tăng trưởng lớn)",
+      example: "A young population offers a demographic dividend if employment creation keeps pace.",
+      exampleTranslation: "Dân số trẻ mang lại lợi tức nhân khẩu học nếu việc làm được tạo ra kịp thời."
+    },
+    {
+      word: "Zero Population Growth",
+      type: "n.phr",
+      ipa: "/ˈzɪə.roʊ ˌpɒp.jəˈleɪ.ʃən ɡroʊθ/",
+      meaning: "Tăng trưởng dân số bằng 0 (dân số cân bằng khi sinh+nhập bằng tử+xuất)",
+      example: "Zero population growth is achieved when births plus immigration equal deaths plus emigration.",
+      exampleTranslation: "Tăng trưởng dân số bằng 0 đạt được khi số sinh cộng nhập cư bằng số tử cộng xuất cư."
     }
   ]
 };

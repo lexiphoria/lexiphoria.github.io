@@ -90,6 +90,17 @@
           <span id="collocations-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Tiến độ: 0%</span>
         </div>
 
+        <!-- Topic 5: DEMOGRAPHIC TERMS (Active) -->
+        <div class="topic-card" data-topic="demographicTerms" onclick="selectTopic('demographicTerms')">
+          <span class="topic-icon">📊</span>
+          <h3 class="topic-title">DEMOGRAPHIC TERMS</h3>
+          <p class="topic-meta">40 Thuật ngữ nhân khẩu học & dân số học (Glossary of Demographic Terms).</p>
+          <div class="topic-progress-container">
+            <div id="demographicTerms-progress-fill" class="topic-progress-fill"></div>
+          </div>
+          <span id="demographicTerms-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Tiến độ: 0%</span>
+        </div>
+
         <!-- Topic 5: OUR ENVIRONMENT (Locked) -->
         <div class="topic-card locked" data-topic="ourEnvironment" onclick="showLockedAlert('OUR ENVIRONMENT')">
           <span class="topic-icon">🌳</span>
@@ -481,6 +492,7 @@
       const topics = [
         { id: 'ourLife', progressFillId: 'life-progress-fill', progressTextId: 'life-progress-text' },
         { id: 'ourSociety', progressFillId: 'society-progress-fill', progressTextId: 'society-progress-text' },
+        { id: 'demographicTerms', progressFillId: 'demographicTerms-progress-fill', progressTextId: 'demographicTerms-progress-text' },
         { id: 'phrasalVerbs', progressFillId: 'phrasalVerbs-progress-fill', progressTextId: 'phrasalVerbs-progress-text' },
         { id: 'collocations', progressFillId: 'collocations-progress-fill', progressTextId: 'collocations-progress-text' },
         { id: 'ourEnvironment', progressFillId: 'environment-progress-fill', progressTextId: 'environment-progress-text' },
@@ -571,7 +583,16 @@
       currentTopic = topic;
       
       // Update header badges
-      const topicNameText = topic === 'ourLife' ? 'OUR LIFE' : (topic === 'ourSociety' ? 'OUR SOCIETY' : (topic === 'phrasalVerbs' ? 'PHRASAL VERBS' : (topic === 'collocations' ? 'COLLOCATIONS' : (topic === 'ourEnvironment' ? 'OUR ENVIRONMENT' : 'OUR FUTURE'))));
+      const topicTitles = {
+        ourLife: 'OUR LIFE',
+        ourSociety: 'OUR SOCIETY',
+        demographicTerms: 'DEMOGRAPHIC TERMS',
+        phrasalVerbs: 'PHRASAL VERBS',
+        collocations: 'COLLOCATIONS',
+        ourEnvironment: 'OUR ENVIRONMENT',
+        ourFuture: 'OUR FUTURE'
+      };
+      const topicNameText = topicTitles[topic] || topic.toUpperCase();
       document.getElementById('mode-topic-badge').innerText = topicNameText;
       
       const badge = document.getElementById('mode-topic-badge');

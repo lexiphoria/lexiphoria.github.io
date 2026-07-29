@@ -10026,5 +10026,327 @@ const vocabularyData = {
                 ],
                 "answer": "C"
         }
-]
+],
+  demographicTerms: [
+    {
+      word: "Ageism",
+      type: "n",
+      ipa: "/ˈeɪ.dʒɪ.zəm/",
+      meaning: "Sự phân biệt đối xử theo tuổi tác",
+      example: "Ageism can prevent older workers from getting hired or promoted.",
+      exampleTranslation: "Sự phân biệt tuổi tác có thể ngăn cản những người lao động lớn tuổi được tuyển dụng hoặc thăng chức."
+    },
+    {
+      word: "Baby boom cohorts",
+      type: "n.phr",
+      ipa: "/ˈbeɪ.bi buːm ˈkoʊ.hɔːrts/",
+      meaning: "Thế hệ bùng nổ trẻ em (sinh giữa thập niên 1950 - 1960)",
+      example: "Baby boom cohorts represent a disproportionately large share of the population.",
+      exampleTranslation: "Các thế hệ bùng nổ trẻ em chiếm một tỷ lệ lớn đáng kể trong tổng số dân."
+    },
+    {
+      word: "Birth cohort",
+      type: "n.phr",
+      ipa: "/bɜːrθ ˈkoʊ.hɔːrt/",
+      meaning: "Thế hệ/nhóm người sinh cùng thời kỳ",
+      example: "All people born in 2000 belong to the same birth cohort.",
+      exampleTranslation: "Tất cả những người sinh năm 2000 đều thuộc cùng một nhóm thế hệ sinh."
+    },
+    {
+      word: "Birth deficit",
+      type: "n.phr",
+      ipa: "/bɜːrθ ˈdef.ə.sɪt/",
+      meaning: "Thâm hụt sinh (số sinh ít hơn số tử)",
+      example: "The country experienced a birth deficit as death rates exceeded birth rates.",
+      exampleTranslation: "Quốc gia này đã trải qua tình trạng thâm hụt sinh khi tỷ lệ tử vượt quá tỷ lệ sinh."
+    },
+    {
+      word: "Birth rate",
+      type: "n.phr",
+      ipa: "/bɜːrθ reɪt/",
+      meaning: "Tỷ lệ sinh (số trẻ sinh sống trên 1.000 dân/năm)",
+      example: "The crude birth rate was recorded at 8.4 per thousand inhabitants.",
+      exampleTranslation: "Tỷ lệ sinh thô được ghi nhận là 8,4 trên 1.000 dân."
+    },
+    {
+      word: "Cohort fertility",
+      type: "n.phr",
+      ipa: "/ˈkoʊ.hɔːrt fərˈtɪl.ə.ti/",
+      meaning: "Mức sinh theo thế hệ (tổng số con của phụ nữ sinh cùng năm)",
+      example: "Cohort fertility measures the average number of live births per woman in a specific birth cohort.",
+      exampleTranslation: "Mức sinh theo thế hệ đo lường số con sinh sống trung bình của mỗi phụ nữ trong một thế hệ sinh cụ thể."
+    },
+    {
+      word: "Centenarians",
+      type: "n",
+      ipa: "/ˌsen.təˈneə.ri.ənz/",
+      meaning: "Người sống thọ từ 100 tuổi trở lên",
+      example: "The number of centenarians has grown rapidly due to advancements in healthcare.",
+      exampleTranslation: "Số lượng người thọ trăm tuổi đã tăng nhanh nhờ những tiến bộ trong y tế."
+    },
+    {
+      word: "Cohort",
+      type: "n",
+      ipa: "/ˈkoʊ.hɔːrt/",
+      meaning: "Nhóm người có chung đặc điểm thời gian (sinh, kết hôn, nhập cư)",
+      example: "Researchers tracked a cohort of college graduates over twenty years.",
+      exampleTranslation: "Các nhà nghiên cứu đã theo dõi một nhóm sinh viên tốt nghiệp đại học trong hơn 20 năm."
+    },
+    {
+      word: "Cohort mortality",
+      type: "n.phr",
+      ipa: "/ˈkoʊ.hɔːrt mɔːrˈtæl.ə.ti/",
+      meaning: "Tỷ lệ tử vong theo thế hệ",
+      example: "Cohort mortality is used to track changes in death rates over time for a specific birth group.",
+      exampleTranslation: "Tỷ lệ tử vong theo thế hệ được dùng để theo dõi thay đổi tỷ lệ tử theo thời gian của một nhóm sinh cụ thể."
+    },
+    {
+      word: "Demography",
+      type: "n",
+      ipa: "/dɪˈmɒɡ.rə.fi/",
+      meaning: "Nhân khẩu học (khoa học nghiên cứu quy mô và cơ cấu dân số)",
+      example: "Demography examines population dynamics including fertility, mortality, and migration.",
+      exampleTranslation: "Nhân khẩu học nghiên cứu sự biến động dân số bao gồm mức sinh, mức tử và di cư."
+    },
+    {
+      word: "Earning points",
+      type: "n.phr",
+      ipa: "/ˈɜːr.nɪŋ pɔɪnts/",
+      meaning: "Điểm tích lũy lương hưu theo thu nhập",
+      example: "Workers accumulate earning points each year based on their income relative to the average.",
+      exampleTranslation: "Người lao động tích lũy điểm hưu trí mỗi năm dựa trên thu nhập so với mức trung bình."
+    },
+    {
+      word: "Fetal Origins Hypothesis",
+      type: "n.phr",
+      ipa: "/ˈfiː.təl ˈɒr.ɪ.dʒɪnz haɪˈpɒθ.ə.sɪs/",
+      meaning: "Giả thuyết nguồn gốc bào thai (bệnh mãn tính hình thành từ trong bụng mẹ)",
+      example: "The Fetal Origins Hypothesis suggests in utero conditions affect adult disease risk.",
+      exampleTranslation: "Giả thuyết Nguồn gốc Bào thai cho rằng điều kiện trong tử cung ảnh hưởng đến nguy cơ bệnh tật khi trưởng thành."
+    },
+    {
+      word: "Fertility",
+      type: "n",
+      ipa: "/fərˈtɪl.ə.ti/",
+      meaning: "Khả năng sinh sản / Mức sinh",
+      example: "High fertility rates contribute to rapid population expansion.",
+      exampleTranslation: "Tỷ lệ sinh sản cao đóng góp vào sự gia tăng dân số nhanh chóng."
+    },
+    {
+      word: "Generation renewal",
+      type: "n.phr",
+      ipa: "/ˌdʒen.əˈreɪ.ʃən rɪˈnjuː.əl/",
+      meaning: "Sự thay thế thế hệ (số sinh cân bằng số tử giúp giữ quy mô dân số)",
+      example: "Generation renewal requires a total fertility rate of about 2.1 children per woman.",
+      exampleTranslation: "Sự thay thế thế hệ yêu cầu tổng tỷ lệ sinh đạt khoảng 2,1 con trên mỗi phụ nữ."
+    },
+    {
+      word: "Healthy Migrant Hypothesis",
+      type: "n.phr",
+      ipa: "/ˈhel.θi ˈmaɪ.ɡrənt haɪˈpɒθ.ə.sɪs/",
+      meaning: "Giả thuyết di dân khỏe mạnh (người di cư thường có sức khỏe tốt hơn)",
+      example: "The Healthy Migrant Hypothesis explains why new immigrants often show higher life expectancy.",
+      exampleTranslation: "Giả thuyết Di dân Khỏe mạnh giải thích tại sao những người nhập cư mới thường có tuổi thọ cao hơn."
+    },
+    {
+      word: "Human Development Index",
+      type: "n.phr",
+      ipa: "/ˈhjuː.mən dɪˈvel.əp.mənt ˈɪn.deks/",
+      meaning: "Chỉ số phát triển con người (HDI - y tế, giáo dục, mức sống)",
+      example: "The Human Development Index evaluates countries based on health, education, and income.",
+      exampleTranslation: "Chỉ số Phát triển Con người đánh giá các quốc gia dựa trên y tế, giáo dục và thu nhập."
+    },
+    {
+      word: "Incidence",
+      type: "n",
+      ipa: "/ˈɪn.sɪ.dəns/",
+      meaning: "Tỷ lệ mắc bệnh mới (số ca phát sinh trong một thời kỳ)",
+      example: "The incidence of diabetes has risen sharply over the past decade.",
+      exampleTranslation: "Tỷ lệ mắc mới bệnh tiểu đường đã tăng mạnh trong thập kỷ qua."
+    },
+    {
+      word: "Incidence rate",
+      type: "n.phr",
+      ipa: "/ˈɪn.sɪ.dəns reɪt/",
+      meaning: "Tỷ suất mắc bệnh mới (số ca mới trên 1.000 dân/năm)",
+      example: "The incidence rate is calculated by dividing new cases by the population at risk.",
+      exampleTranslation: "Tỷ suất mắc bệnh mới được tính bằng cách chia số ca mới cho dân số có nguy cơ."
+    },
+    {
+      word: "Infant mortality",
+      type: "n.phr",
+      ipa: "/ˈɪn.fənt mɔːrˈtæl.ə.ti/",
+      meaning: "Tỷ lệ tử vong ở trẻ sơ sinh (dưới 1 tuổi trên 1.000 trẻ sinh sống)",
+      example: "A low infant mortality rate is a key indicator of good healthcare quality.",
+      exampleTranslation: "Tỷ lệ tử vong ở trẻ sơ sinh thấp là chỉ số quan trọng phản ánh chất lượng y tế tốt."
+    },
+    {
+      word: "Internal migration",
+      type: "n.phr",
+      ipa: "/ɪnˈtɜː.nəl maɪˈɡreɪ.ʃən/",
+      meaning: "Di cư nội địa (di chuyển trong phạm vi lãnh thổ quốc gia)",
+      example: "Rural-to-urban drift is the most common form of internal migration.",
+      exampleTranslation: "Dòng di dân từ nông thôn ra thành thị là hình thức di cư nội địa phổ biến nhất."
+    },
+    {
+      word: "Life Table",
+      type: "n.phr",
+      ipa: "/laɪf ˈteɪ.bəl/",
+      meaning: "Bảng sống / Bảng tử vong (thống kê tuổi thọ và xác suất sống)",
+      example: "Insurance companies use a life table to calculate life insurance premiums.",
+      exampleTranslation: "Các công ty bảo hiểm sử dụng bảng sống để tính phí bảo hiểm nhân thọ."
+    },
+    {
+      word: "Life expectancy",
+      type: "n.phr",
+      ipa: "/laɪf ɪkˈspek.tən.si/",
+      meaning: "Tuổi thọ trung bình dự kiến",
+      example: "Advances in modern medicine have significantly increased global life expectancy.",
+      exampleTranslation: "Những tiến bộ trong y học hiện đại đã gia tăng đáng kể tuổi thọ trung bình toàn cầu."
+    },
+    {
+      word: "Median",
+      type: "n",
+      ipa: "/ˈmiː.di.ən/",
+      meaning: "Số trung vị (giá trị nằm ở chính giữa một dãy số)",
+      example: "The median age of the national population is currently 42 years.",
+      exampleTranslation: "Độ tuổi trung vị của dân số cả nước hiện là 42 tuổi."
+    },
+    {
+      word: "Microcensus",
+      type: "n",
+      ipa: "/ˈmaɪ.kroʊˌsen.səs/",
+      meaning: "Cuộc điều tra mẫu đại diện hộ gia đình",
+      example: "The Microcensus collects yearly socio-economic statistics from a sample of households.",
+      exampleTranslation: "Cuộc điều tra mẫu thu thập thống kê kinh tế - xã hội hàng năm từ một nhóm hộ gia đình."
+    },
+    {
+      word: "Migration",
+      type: "n",
+      ipa: "/maɪˈɡreɪ.ʃən/",
+      meaning: "Sự di cư (di chuyển nơi cư trú từ vùng này sang vùng khác)",
+      example: "Economic opportunity is a primary driver of international migration.",
+      exampleTranslation: "Cơ hội kinh tế là động lực chính của việc di cư quốc tế."
+    },
+    {
+      word: "Morbidity",
+      type: "n",
+      ipa: "/mɔːrˈbɪd.ə.ti/",
+      meaning: "Tình trạng bệnh tật / Tỷ lệ mắc bệnh trong dân số",
+      example: "Morbidity statistics show the prevalence of chronic illnesses in a community.",
+      exampleTranslation: "Thống kê tình trạng bệnh tật thể hiện mức độ phổ biến của các bệnh mãn tính trong cộng đồng."
+    },
+    {
+      word: "Mortality",
+      type: "n",
+      ipa: "/mɔːrˈtæl.ə.ti/",
+      meaning: "Tỷ lệ tử vong / Sự tử vong",
+      example: "Improved sanitation helped reduce child mortality significantly.",
+      exampleTranslation: "Điều kiện vệ sinh cải thiện đã giúp giảm đáng kể tỷ lệ tử vong ở trẻ em."
+    },
+    {
+      word: "Mortality risk",
+      type: "n.phr",
+      ipa: "/mɔːrˈtæl.ə.ti rɪsk/",
+      meaning: "Nguy cơ tử vong (xác suất tử vong)",
+      example: "Smoking significantly increases the individual mortality risk for cardiovascular disease.",
+      exampleTranslation: "Hút thuốc làm tăng đáng kể nguy cơ tử vong cá nhân do bệnh tim mạch."
+    },
+    {
+      word: "Net migration",
+      type: "n.phr",
+      ipa: "/net maɪˈɡreɪ.ʃən/",
+      meaning: "Di cư thuần / Cán cân di cư (số người nhập cư trừ đi số người xuất cư)",
+      example: "Positive net migration contributed to total population growth last year.",
+      exampleTranslation: "Cán cân di cư dương đã đóng góp vào sự tăng trưởng tổng dân số năm ngoái."
+    },
+    {
+      word: "Nuptiality",
+      type: "n",
+      ipa: "/nʌpˈʃæl.ə.ti/",
+      meaning: "Tỷ lệ kết hôn (tỷ lệ người kết hôn lần đầu theo độ tuổi)",
+      example: "Nuptiality patterns show that young adults are marrying at older ages.",
+      exampleTranslation: "Mô hình kết hôn cho thấy thanh niên đang kết hôn ở độ tuổi muộn hơn."
+    },
+    {
+      word: "NUTS",
+      type: "n",
+      ipa: "/nʌts/",
+      meaning: "Danh mục các đơn vị hành chính thống kê của Liên minh Châu Âu",
+      example: "NUTS provides a standardized regional classification for spatial statistical data in the EU.",
+      exampleTranslation: "NUTS cung cấp phân loại vùng tiêu chuẩn cho dữ liệu thống kê không gian ở EU."
+    },
+    {
+      word: "Old-age dependency ratio",
+      type: "n.phr",
+      ipa: "/oʊld eɪdʒ dɪˈpen.dən.si ˈreɪ.ʃioʊ/",
+      meaning: "Tỷ lệ phụ thuộc tuổi già (tỷ lệ người nghỉ hưu so với lực lượng lao động)",
+      example: "An aging population raises the old-age dependency ratio, putting pressure on pensions.",
+      exampleTranslation: "Dân số gia hóa làm tăng tỷ lệ phụ thuộc tuổi già, gây áp lực lên hệ thống hưu trí."
+    },
+    {
+      word: "Opportunity costs",
+      type: "n.phr",
+      ipa: "/ˌɒp.əˈtʃuː.nə.ti kɒsts/",
+      meaning: "Chi phí cơ hội (lợi ích mất đi khi lựa chọn phương án khác)",
+      example: "The opportunity costs of raising a child include potential lost earnings from taking leave.",
+      exampleTranslation: "Chi phí cơ hội của việc nuôi con bao gồm thu nhập tiềm năng bị mất do nghỉ làm."
+    },
+    {
+      word: "Peer group",
+      type: "n.phr",
+      ipa: "/pɪər ɡruːp/",
+      meaning: "Nhóm bạn cùng lứa / Nhóm đồng đẳng",
+      example: "Adolescents are heavily influenced by the values and behaviors of their peer group.",
+      exampleTranslation: "Thanh thiếu niên bị ảnh hưởng mạnh mẽ bởi các giá trị và hành vi của nhóm bạn cùng lứa."
+    },
+    {
+      word: "Period fertility",
+      type: "n.phr",
+      ipa: "/ˈpɪə.ri.əd fərˈtɪl.ə.ti/",
+      meaning: "Mức sinh thời kỳ (số sinh trung bình của phụ nữ trong thời kỳ nhất định)",
+      example: "Period fertility reflects birth rates observed during a specific calendar year.",
+      exampleTranslation: "Mức sinh thời kỳ phản ánh tỷ lệ sinh quan sát được trong một năm lịch cụ thể."
+    },
+    {
+      word: "Plasticity of longevity",
+      type: "n.phr",
+      ipa: "/plæsˈtɪs.ə.ti əv lɒnˈdʒev.ə.ti/",
+      meaning: "Khả năng kéo dài tuổi thọ (nguy cơ tử vong có thể giảm ở tuổi rất cao)",
+      example: "The plasticity of longevity suggests that human life expectancy can still be extended.",
+      exampleTranslation: "Khả năng kéo dài tuổi thọ cho thấy tuổi thọ của con người vẫn có thể được mở rộng."
+    },
+    {
+      word: "Population momentum",
+      type: "n.phr",
+      ipa: "/ˌpɒp.jəˈleɪ.ʃən məˈmen.təm/",
+      meaning: "Đà tăng dân số (dân số tiếp tục tăng do lực lượng trẻ đông đảo dù mức sinh giảm)",
+      example: "Population momentum causes developing nations to expand even after fertility drops.",
+      exampleTranslation: "Đà tăng dân số khiến các quốc gia đang phát triển tiếp tục gia tăng dù mức sinh đã giảm."
+    },
+    {
+      word: "Population pyramid",
+      type: "n.phr",
+      ipa: "/ˌpɒp.jəˈleɪ.ʃən ˈpɪr.ə.mɪd/",
+      meaning: "Tháp dân số (biểu đồ cơ cấu dân số theo tuổi và giới tính)",
+      example: "A narrow base on a population pyramid indicates a declining birth rate.",
+      exampleTranslation: "Đáy hẹp trên tháp dân số biểu thị tỷ lệ sinh đang giảm."
+    },
+    {
+      word: "Prevalence",
+      type: "n",
+      ipa: "/ˈprev.əl.əns/",
+      meaning: "Tỷ lệ hiện mắc (tổng số ca bệnh hiện có tại một thời điểm)",
+      example: "Researchers measured the prevalence of hypertension among adults over 60.",
+      exampleTranslation: "Các nhà nghiên cứu đo lường tỷ lệ hiện mắc cao huyết áp ở người lớn trên 60 tuổi."
+    },
+    {
+      word: "Prevalence rate",
+      type: "n.phr",
+      ipa: "/ˈprev.əl.əns reɪt/",
+      meaning: "Tỷ suất hiện mắc (tỷ lệ người mắc bệnh trên tổng dân số)",
+      example: "The prevalence rate helps public health officials estimate total healthcare needs.",
+      exampleTranslation: "Tỷ suất hiện mắc giúp giới chức y tế cộng đồng ước tính tổng nhu cầu chăm sóc sức khỏe."
+    }
+  ]
 };

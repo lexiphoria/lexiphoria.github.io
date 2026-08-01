@@ -10925,7 +10925,7 @@ const vocabularyData = {
       exampleTranslation: "Lạm phát làm suy giảm sức mua của người tiêu dùng trừ khi tiền lương tăng tương ứng."
     },
     {
-      word: ""Push-Pull" Hypothesis",
+      word: "\"Push-Pull\" Hypothesis",
       type: "n.phr",
       ipa: "/pʊʃ pʊl haɪˈpɒθ.ə.sɪs/",
       meaning: "Giả thuyết 'Đẩy - Kéo' di dân (lực đẩy từ nơi đi và lực hút từ nơi đến)",
@@ -10949,7 +10949,7 @@ const vocabularyData = {
       exampleTranslation: "Trao quyền cho phụ nữ nâng cao năng lực tự chủ ra quyết định trong y tế và giáo dục."
     },
     {
-      word: ""Young" Population",
+      word: "Young Population",
       type: "n.phr",
       ipa: "/jʌŋ ˌpɒp.jəˈleɪ.ʃən/",
       meaning: "Dân số trẻ (tỷ lệ trẻ em/thanh niên cao, tuổi trung vị thấp, tiềm năng tăng trưởng lớn)",

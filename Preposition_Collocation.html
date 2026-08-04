@@ -89,7 +89,6 @@
 
             <div class="question-box">
                 <div id="question-text" class="question-text">Đang tải câu hỏi...</div>
-                <div id="question-translation" class="question-translation">Dịch nghĩa câu hỏi đang tải...</div>
             </div>
 
             <div id="options-grid" class="options-grid">
@@ -283,12 +282,8 @@
             const questionsPool = quizData[currentStage];
             const q = questionsPool[currentQuestionIndex];
 
-            // Setup question text & translation
+            // Setup question text
             document.getElementById('question-text').innerHTML = q.question;
-            
-            // Map the Vietnamese translation or formula name as help text
-            let hintText = q.explanation.replace(/<\/?[^>]+(>|$)/g, ""); // strip HTML
-            document.getElementById('question-translation').innerText = `Gợi ý: ${hintText}`;
 
             const stageLength = questionsPool.length;
             document.getElementById('question-tracker').innerText = `Câu ${currentQuestionIndex + 1} / ${stageLength}`;

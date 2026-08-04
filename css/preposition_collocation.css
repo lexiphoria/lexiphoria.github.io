@@ -343,14 +343,7 @@ h1 {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.5;
-  margin-bottom: 12px;
   color: #fff;
-}
-
-.question-translation {
-  font-size: 0.95rem;
-  color: var(--muted);
-  font-style: italic;
 }
 
 .options-grid {

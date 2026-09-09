@@ -1,0 +1,165 @@
+/* ===================================================================
+   GLOBAL SUCCESS 11 - LESSON 2: LANGUAGE STYLES
+   Pronunciation, Vocabulary, Grammar & Dollar Challenge Minigame
+   =================================================================== */
+
+/* Pronunciation Phonetics Table */
+.pronun-table-wrapper {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.pronun-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.pronun-table th {
+  background: rgba(99, 102, 241, 0.15);
+  color: #c7d2fe;
+  font-weight: 700;
+  padding: 14px 18px;
+  font-size: 0.92rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pronun-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: #e2e8f0;
+  font-size: 0.95rem;
+}
+
+.pronun-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.phonetic-tag {
+  font-family: 'Space Grotesk', monospace;
+  font-weight: 700;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.15);
+  padding: 2px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.phonetic-tag.strong {
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.15);
+}
+
+/* Practice Sentences Grid */
+.sentence-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 14px;
+}
+
+.sentence-card {
+  background: var(--bg-card-hover);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+
+.sentence-card:hover {
+  border-color: #38bdf8;
+  box-shadow: 0 4px 16px rgba(56, 189, 248, 0.15);
+}
+
+/* Grammar Theory Comparison */
+.grammar-comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.grammar-rule-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.grammar-rule-card.past-simple {
+  border-top: 4px solid #3b82f6;
+}
+
+.grammar-rule-card.present-perfect {
+  border-top: 4px solid #10b981;
+}
+
+.grammar-rule-header {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.grammar-rule-uses {
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.grammar-rule-uses li {
+  margin-bottom: 8px;
+}
+
+/* Dollar Challenge Minigame Styles */
+.dollar-game-card {
+  background: linear-gradient(135deg, #064e3b 0%, #0f172a 100%);
+  border: 2px solid #10b981;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 12px 32px rgba(16, 185, 129, 0.2);
+}
+
+.dollar-game-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.dollar-bank-display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(251, 191, 36, 0.4);
+}
+
+.dollar-bank-amount {
+  font-family: 'Space Grotesk', monospace;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: #fbbf24;
+}
+
+.question-prize-badge {
+  background: rgba(251, 191, 36, 0.2);
+  color: #fef08a;
+  border: 1px solid #fbbf24;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.85rem;
+}

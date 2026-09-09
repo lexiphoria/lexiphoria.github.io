@@ -61,7 +61,11 @@ function switchUnit(idx) {
     showUnitView();
   }
 
-  // Update sidebar active class
+  // Update top-unit-select dropdown
+  const select = document.getElementById('top-unit-select');
+  if (select) select.value = idx;
+
+  // Update sidebar active class if present
   document.querySelectorAll('.unit-nav-btn').forEach((btn, i) => {
     btn.classList.toggle('active', i === idx);
   });
@@ -94,9 +98,9 @@ function loadUnit(idx) {
   const elDesc = document.getElementById('unit-hero-desc');
   if (elDesc) elDesc.textContent = unit.overview.summary;
 
-  // Initialize Lesson 1 if Unit 1
-  if (idx === 0 && typeof initLesson1 === 'function') {
-    initLesson1();
+  // Initialize Master Slide Presentation if Unit 1
+  if (idx === 0) {
+    if (typeof openLessonPresentation === 'function') openLessonPresentation(1, 0);
   }
 
   // Render Objectives (Overview Tab)
@@ -495,6 +499,10 @@ function initEventListeners() {
       btn.classList.add('active');
       const panel = document.getElementById(`panel-${tabKey}`);
       if (panel) panel.classList.add('active');
+
+      if (tabKey === 'presentation' && typeof renderMasterSlide === 'function') {
+        renderMasterSlide();
+      }
     });
   });
 
@@ -522,24 +530,18 @@ function switchSachMemLesson(lessonKey) {
     item.classList.remove('active');
   });
 
-  const tabBtns = document.querySelectorAll('.tab-btn');
-  const panels = document.querySelectorAll('.tab-content-panel');
-
-  if (lessonKey === 'getting-started') {
+  if (lessonKey === 'getting-started' || lessonKey === '1') {
     const m1 = document.getElementById('menu-lesson-1');
     if (m1) m1.classList.add('active');
-    tabBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-tab') === 'getting-started'));
-    panels.forEach(p => p.classList.toggle('active', p.id === 'panel-getting-started'));
-  } else if (lessonKey === 'vocabulary') {
+    if (typeof openLessonPresentation === 'function') {
+      openLessonPresentation(1, 0);
+    }
+  } else if (lessonKey === 'language' || lessonKey === 'vocabulary' || lessonKey === '2') {
     const m2 = document.getElementById('menu-lesson-2');
     if (m2) m2.classList.add('active');
-    tabBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-tab') === 'vocabulary'));
-    panels.forEach(p => p.classList.toggle('active', p.id === 'panel-vocabulary'));
-  } else if (lessonKey === 'reading') {
-    const m3 = document.getElementById('menu-lesson-3');
-    if (m3) m3.classList.add('active');
-    tabBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-tab') === 'reading'));
-    panels.forEach(p => p.classList.toggle('active', p.id === 'panel-reading'));
+    if (typeof openLessonPresentation === 'function') {
+      openLessonPresentation(2, 0);
+    }
   } else {
     alert(`Lesson ${lessonKey.toUpperCase()} is being prepared in the curriculum!`);
   }

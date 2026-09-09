@@ -9,60 +9,58 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/journey_map.css">
+  <link rel="stylesheet" href="css/slide_viewer.css">
   <link rel="stylesheet" href="css/lesson_getting_started.css">
+  <link rel="stylesheet" href="css/lesson_language.css">
 </head>
 <body>
 
-  <!-- Mobile Header -->
-  <header class="mobile-header">
-    <button class="mobile-toggle-btn" id="mobile-toggle" aria-label="Toggle Menu">☰</button>
-    <div style="font-weight: 700; font-size: 1.1rem; color: #fff;">Global Success 11</div>
-    <a href="../index.html" style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem;">🏠 Trang chủ</a>
+  <!-- Sleek Modern Top Navbar (Replaces bulky sidebar per user request) -->
+  <header class="top-navbar">
+    <div class="top-nav-left">
+      <a href="../index.html" class="top-nav-btn home-link" title="Trang chủ">🏠 Trang Chủ</a>
+      <div class="top-brand-group">
+        <span class="top-brand-badge">GRADE 11</span>
+        <h1 class="top-brand-title">Global Success 11</h1>
+      </div>
+    </div>
+
+    <div class="top-nav-center">
+      <div class="top-unit-selector">
+        <span class="top-unit-label">Unit:</span>
+        <select id="top-unit-select" class="top-unit-select" onchange="switchUnit(parseInt(this.value, 10))">
+          <option value="0">Unit 1: A Long and Healthy Life</option>
+          <option value="1">Unit 2: The Generation Gap</option>
+          <option value="2">Unit 3: Cities of the Future</option>
+          <option value="3">Unit 4: ASEAN and Viet Nam</option>
+          <option value="4">Unit 5: Global Warming</option>
+          <option value="5">Unit 6: Preserving Our Heritage</option>
+          <option value="6">Unit 7: Education Options for School-Leavers</option>
+          <option value="7">Unit 8: Becoming Independent</option>
+          <option value="8">Unit 9: Social Issues</option>
+          <option value="9">Unit 10: The Ecosystem</option>
+        </select>
+      </div>
+
+      <button class="top-nav-btn journey-link" id="btn-nav-journey-map" onclick="showJourneyMapView()">
+        🗺️ Bản Đồ Di Sản
+      </button>
+    </div>
+
+    <div class="top-nav-right">
+      <div class="top-search-box">
+        <span class="top-search-icon">🔍</span>
+        <input type="text" id="global-search-input" placeholder="Tìm kiếm..." autocomplete="off">
+      </div>
+      <button class="top-nav-btn lock-btn" onclick="lockPortal()" title="Khóa bài giảng">🔒 Khóa</button>
+    </div>
   </header>
 
   <div class="app-container">
-    <!-- Sidebar Navigation -->
-    <aside class="sidebar" id="sidebar">
-      <div class="sidebar-header">
-        <span class="brand-badge">Grade 11 • B1-B2</span>
-        <h1 class="sidebar-title">Global Success 11</h1>
-        <div style="display: flex; gap: 8px; align-items: center; margin-top: 12px;">
-          <a class="home-nav-btn" href="../index.html" style="margin-top: 0; flex: 1; justify-content: center;">← Trang Chủ</a>
-          <button class="home-nav-btn" onclick="lockPortal()" style="margin-top: 0; cursor: pointer;" title="Khóa trang truy cập">🔒 Khóa</button>
-        </div>
-      </div>
-
-      <div class="sidebar-search-box">
-        <div class="search-input-wrapper">
-          <span class="search-icon">🔍</span>
-          <input type="text" id="global-search-input" placeholder="Tìm từ vựng, ngữ pháp..." autocomplete="off">
-        </div>
-      </div>
-
-      <!-- Prominent Heritage Journey Map Entry Point -->
-      <div style="padding: 0 16px 8px 16px;">
-        <button class="journey-nav-btn active" id="btn-nav-journey-map" onclick="showJourneyMapView()">
-          <span style="font-size: 1.35rem;">🗺️</span>
-          <div style="text-align: left; flex: 1;">
-            <div style="font-weight: 800; font-size: 0.88rem; color: #fff;">Bản Đồ Di Sản</div>
-            <div style="font-size: 0.72rem; color: #fef3c7;">Heritage Journey Map</div>
-          </div>
-          <span class="journey-badge-new">NEW</span>
-        </button>
-      </div>
-
-      <div style="padding: 0 18px 6px; font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;">
-        Danh Sách 10 Units
-      </div>
-
-      <ul class="unit-nav-list" id="unit-nav-list">
-        <!-- Units 1 to 10 rendered here -->
-      </ul>
-    </aside>
 
     <!-- Main Content Area -->
     <main class="main-content">
@@ -179,9 +177,9 @@
                 <span>1. GETTING STARTED</span>
                 <span class="lesson-tag">🌟 ONLINE PPTX LESSON</span>
               </div>
-              <div class="sachmem-lesson-item" id="menu-lesson-2" onclick="switchSachMemLesson('vocabulary')">
+              <div class="sachmem-lesson-item" id="menu-lesson-2" onclick="switchSachMemLesson('language')">
                 <span>2. LANGUAGE (Vocabulary & Grammar)</span>
-                <span style="font-size: 0.75rem; color: #94a3b8;">Language focus</span>
+                <span class="lesson-tag">🌟 ONLINE PPTX LESSON</span>
               </div>
               <div class="sachmem-lesson-item" id="menu-lesson-3" onclick="switchSachMemLesson('reading')">
                 <span>3. READING</span>
@@ -227,17 +225,64 @@
 
         <!-- Navigation Tabs -->
         <nav class="tabs-navigation" aria-label="Lesson Navigation Tabs">
-          <button class="tab-btn active" data-tab="getting-started">🎬 Lesson 1: Getting Started</button>
-          <button class="tab-btn" data-tab="overview">📖 Unit Objectives</button>
-          <button class="tab-btn" data-tab="vocabulary">🔤 Vocabulary</button>
-          <button class="tab-btn" data-tab="grammar">🧠 In-Depth Grammar</button>
-          <button class="tab-btn" data-tab="reading">📑 Reading & Phrases</button>
-          <button class="tab-btn" data-tab="flashcards">🗂️ 3D Flashcards</button>
-          <button class="tab-btn" data-tab="quiz">✍️ Quiz Challenge</button>
+          <button class="tab-btn active" data-tab="presentation" id="tab-presentation-btn">🎬 Bài Giảng Slide</button>
+          <button class="tab-btn" data-tab="flashcards" id="tab-flashcards-btn">🗂️ 3D Flashcards</button>
         </nav>
 
-        <!-- TAB 0: LESSON 1 GETTING STARTED (ONLINE INTERACTIVE E-LESSON) -->
-        <section class="tab-content-panel active" id="panel-getting-started">
+        <!-- TAB 0: MASTER SLIDE PRESENTATION (MATCHING DESIGN REFERENCE) -->
+        <section class="tab-content-panel active" id="panel-presentation">
+          <div class="slide-presentation-card" id="slide-presentation-card">
+            
+            <!-- Top Header -->
+            <div class="slide-viewer-header">
+              <div class="slide-header-left">
+                <button class="slide-btn-unit" id="slide-header-unit-btn" onclick="returnToUnitOverview()">← Unit 1</button>
+                <div class="slide-header-title" id="slide-header-lesson-title">Lesson 1 · Getting Started</div>
+              </div>
+              <div class="slide-header-right">
+                <button class="slide-btn-header-action" id="slide-btn-fullscreen" onclick="togglePresentationFullscreen()" title="Toàn màn hình (F)">⛶</button>
+                <button class="slide-btn-header-action" onclick="returnToUnitOverview()" title="Đóng (Esc)">✕</button>
+              </div>
+            </div>
+
+            <!-- Main Slide Canvas -->
+            <div class="slide-stage-canvas">
+              <div class="slide-content-col">
+                <div class="slide-cat-badge" id="slide-cat-badge">UNIT 1 · GETTING STARTED</div>
+                <h1 class="slide-main-title" id="slide-main-title">Getting Started</h1>
+                <div class="slide-main-subtitle" id="slide-main-subtitle">Living Long and Healthy</div>
+                <div class="slide-main-desc" id="slide-main-desc">Slide contents</div>
+                <div class="slide-answer-box" id="slide-answer-box"></div>
+              </div>
+              <div class="slide-media-col" id="slide-art-container"></div>
+            </div>
+
+            <!-- Interactive Activities drawer toggle -->
+            <div class="slide-interactive-bar">
+              <span>🎯 Hoạt động tương tác & Mini-game thực hành đi kèm bài học:</span>
+              <button class="btn-open-interactive" id="btn-slide-interactive-toggle" onclick="toggleSlideInteractiveDrawer()">
+                🎒 Mở Bài Tập Tương Tác
+              </button>
+            </div>
+
+            <!-- Bottom Toolbar Controls -->
+            <div class="slide-viewer-footer">
+              <div class="slide-footer-left">
+                <button class="slide-nav-btn" id="slide-btn-prev" onclick="presentationPrevSlide()">← Trước</button>
+                <button class="slide-nav-btn" id="slide-btn-next" onclick="presentationNextSlide()">Sau →</button>
+                <span class="slide-page-counter" id="slide-page-counter">1 / 35</span>
+                <div class="slide-dots-rail" id="slide-dots-rail"></div>
+              </div>
+              <div class="slide-shortcuts-legend">
+                ← → chuyển slide · F toàn màn hình · A hiện đáp án · Esc đóng
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- TAB: LESSON 1 GETTING STARTED (ONLINE INTERACTIVE E-LESSON) -->
+        <section class="tab-content-panel" id="panel-getting-started">
           
           <!-- Lesson 1 Control Toolbar -->
           <div class="lesson1-toolbar">
@@ -638,48 +683,419 @@
           </div>
         </section>
 
-        <!-- TAB 1: OVERVIEW -->
-        <section class="tab-content-panel" id="panel-overview">
-          <div class="content-section">
-            <div class="section-header">
-              <h3 class="section-title">🎯 Mục Tiêu Bài Học (Learning Objectives)</h3>
+        <!-- TAB: LESSON 2 LANGUAGE (ONLINE INTERACTIVE E-LESSON) -->
+        <section class="tab-content-panel" id="panel-language">
+          
+          <!-- Lesson 2 Control Toolbar -->
+          <div class="lesson1-toolbar">
+            <div class="lesson1-mode-switch">
+              <button class="mode-btn active" id="btn-l2-interactive" onclick="switchLesson2Mode('interactive')">
+                🎒 Interactive E-Lesson
+              </button>
+              <button class="mode-btn" id="btn-l2-presentation" onclick="switchLesson2Mode('presentation')">
+                👨‍🏫 Classroom Slides (35 Slides)
+              </button>
             </div>
-            <div class="objectives-grid" id="objectives-grid"></div>
+            
+            <div class="lesson1-progress-tracker">
+              <span>Current Lesson: <strong>Lesson 2: Language</strong></span>
+            </div>
+          </div>
+
+          <!-- PRESENTATION MODE CONTAINER (SLIDESHOW) -->
+          <div id="lesson2-presentation-view" class="slideshow-wrapper" style="display: none;">
+            <div class="slide-canvas">
+              <div class="slide-inner-content">
+                <div class="slide-badge-category" id="slide-l2-cat">Cover</div>
+                <h3 class="slide-headline" id="slide-l2-title">GLOBAL SUCCESS 11</h3>
+                <div class="slide-subheadline" id="slide-l2-subtitle">UNIT 1: A LONG AND HEALTHY LIFE</div>
+                <div class="slide-body-box" id="slide-l2-body">
+                  Living Long and Healthy: Key Habits for a Better Life
+                </div>
+                <div class="slide-reveal-box" id="slide-l2-reveal"></div>
+              </div>
+            </div>
+
+            <!-- Slide Controls -->
+            <div class="slide-controls-bar">
+              <div style="display: flex; gap: 8px;">
+                <button class="slide-btn" id="btn-l2-slide-prev" onclick="prevLesson2Slide()">← Previous Slide</button>
+                <button class="slide-btn" id="btn-l2-slide-next" onclick="nextLesson2Slide()">Next Slide →</button>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 14px;">
+                <button class="slide-btn" onclick="toggleLesson2SlideReveal()" style="background: rgba(245, 158, 11, 0.2); border-color: #f59e0b; color: #fbbf24;">
+                  👁️ Reveal / Hide Answer (Space)
+                </button>
+                <span class="slide-counter-display" id="slide-l2-counter">1 / 35</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- INTERACTIVE LEARNING VIEW CONTAINER -->
+          <div id="lesson2-interactive-view" class="lesson1-container">
+            
+            <!-- Stage Navigation Pills -->
+            <div class="lesson1-stage-nav">
+              <button class="stage-pill stage-pill-l2 active" data-stage="warmup" onclick="switchLesson2Stage('warmup')">
+                🌟 1. Warm-up (Floating Market)
+              </button>
+              <button class="stage-pill stage-pill-l2" data-stage="pronun" onclick="switchLesson2Stage('pronun')">
+                🗣️ 2. Pronunciation (Strong/Weak)
+              </button>
+              <button class="stage-pill stage-pill-l2" data-stage="vocab" onclick="switchLesson2Stage('vocab')">
+                🔤 3. Vocabulary (Health & Body)
+              </button>
+              <button class="stage-pill stage-pill-l2" data-stage="grammar" onclick="switchLesson2Stage('grammar')">
+                🧠 4. Grammar (Past vs. Present Perfect)
+              </button>
+              <button class="stage-pill stage-pill-l2" data-stage="dollar" onclick="switchLesson2Stage('dollar')">
+                💰 5. Minigame: Dollar Challenge
+              </button>
+              <button class="stage-pill stage-pill-l2" data-stage="wrapup" onclick="switchLesson2Stage('wrapup')">
+                📋 6. Consolidation & Homework
+              </button>
+            </div>
+
+            <!-- STAGE 1: WARM-UP (CAI RANG FLOATING MARKET) -->
+            <div class="interactive-stage-section stage-sec-l2 active" id="stage-l2-warmup">
+              <div class="stage-header">
+                <div class="stage-title">🌱 Warm-up: Cai Rang Floating Market Quiz</div>
+                <div class="stage-desc">Join tourists in Can Tho to explore fresh produce and review core vocabulary from Lesson 1!</div>
+              </div>
+
+              <div class="dinner-game-card" style="background: linear-gradient(135deg, #0c4a6e 0%, #0f172a 100%); border-color: #38bdf8;">
+                <div class="dinner-header">
+                  <span class="dinner-badge" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border-color: #38bdf8;">🌾 Can Tho Cultural Setting</span>
+                  <h3 class="dinner-title">Cai Rang Floating Market Vocabulary Challenge</h3>
+                  <p class="dinner-story">
+                    Answer all 6 review questions to stock up on fresh fruits and reinforce key health habits!
+                  </p>
+                </div>
+
+                <div class="dinner-quiz-box">
+                  <div class="dinner-question-text" id="market-q-text">Loading question...</div>
+                  <div class="dinner-options-grid" id="market-opts-grid"></div>
+                  <div id="market-result-msg" style="margin-top: 14px; font-weight: 700; text-align: center; color: #fbbf24;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STAGE 2: PRONUNCIATION (STRONG & WEAK FORMS) -->
+            <div class="interactive-stage-section stage-sec-l2" id="stage-l2-pronun">
+              <div class="stage-header">
+                <div class="stage-title">🗣️ Pronunciation: Strong and Weak Forms of Auxiliary Verbs</div>
+                <div class="stage-desc">Notice how auxiliary verbs are unstressed (weak form) in questions, but stressed (strong form) in short answers!</div>
+              </div>
+
+              <div class="pronun-table-wrapper">
+                <table class="pronun-table">
+                  <thead>
+                    <tr>
+                      <th>Auxiliary Verb</th>
+                      <th>Weak Form (in Questions)</th>
+                      <th>Strong Form (in Short Answers)</th>
+                      <th>Listen</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>do</strong></td>
+                      <td>Do you …? <span class="phonetic-tag">/də/</span></td>
+                      <td>I do. <span class="phonetic-tag strong">/duː/</span></td>
+                      <td><button class="btn-audio" onclick="speakEnglish('Do you exercise? Yes, I do.')">🔊</button></td>
+                    </tr>
+                    <tr>
+                      <td><strong>does</strong></td>
+                      <td>Does she …? <span class="phonetic-tag">/dəz/</span></td>
+                      <td>She does. <span class="phonetic-tag strong">/dʌz/</span></td>
+                      <td><button class="btn-audio" onclick="speakEnglish('Does she exercise? Yes, she does.')">🔊</button></td>
+                    </tr>
+                    <tr>
+                      <td><strong>can</strong></td>
+                      <td>Can I …? <span class="phonetic-tag">/kən/</span></td>
+                      <td>You can. <span class="phonetic-tag strong">/kæn/</span></td>
+                      <td><button class="btn-audio" onclick="speakEnglish('Can I join? Yes, you can.')">🔊</button></td>
+                    </tr>
+                    <tr>
+                      <td><strong>could</strong></td>
+                      <td>Could we …? <span class="phonetic-tag">/kəd/</span></td>
+                      <td>We could. <span class="phonetic-tag strong">/kʊd/</span></td>
+                      <td><button class="btn-audio" onclick="speakEnglish('Could we go? Yes, we could.')">🔊</button></td>
+                    </tr>
+                    <tr>
+                      <td><strong>were</strong></td>
+                      <td>Were they …? <span class="phonetic-tag">/wə/</span></td>
+                      <td>They were. <span class="phonetic-tag strong">/wɜː/</span></td>
+                      <td><button class="btn-audio" onclick="speakEnglish('Were they healthy? Yes, they were.')">🔊</button></td>
+                    </tr>
+                    <tr>
+                      <td><strong>has / have</strong></td>
+                      <td>Has he …? <span class="phonetic-tag">/həz/</span></td>
+                      <td>He has. <span class="phonetic-tag strong">/hæz/</span></td>
+                      <td><button class="btn-audio" onclick="speakEnglish('Has he started? Yes, he has.')">🔊</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="task-box">
+                <span class="task-title-badge">Task 2 • Read Aloud & Practice</span>
+                <p style="font-size: 0.95rem; color: #cbd5e1; margin-bottom: 16px;">Click 🔊 to listen to each conversation pair, then practice repeating out loud:</p>
+                
+                <div class="sentence-cards-grid">
+                  <div class="sentence-card">
+                    <div>
+                      <div style="font-weight: 700; color: #fff;">1. Does <span class="phonetic-tag">/dəz/</span> she exercise?</div>
+                      <div style="color: #a7f3d0; margin-top: 4px;">– Yes, she does. <span class="phonetic-tag strong">/dʌz/</span></div>
+                    </div>
+                    <button class="btn-audio" onclick="speakEnglish('Does she exercise? Yes, she does.')">🔊</button>
+                  </div>
+                  <div class="sentence-card">
+                    <div>
+                      <div style="font-weight: 700; color: #fff;">2. Were <span class="phonetic-tag">/wə/</span> you eating healthily?</div>
+                      <div style="color: #a7f3d0; margin-top: 4px;">– Yes, I was. <span class="phonetic-tag strong">/wɒz/</span></div>
+                    </div>
+                    <button class="btn-audio" onclick="speakEnglish('Were you eating healthily? Yes, I was.')">🔊</button>
+                  </div>
+                  <div class="sentence-card">
+                    <div>
+                      <div style="font-weight: 700; color: #fff;">3. Do <span class="phonetic-tag">/də/</span> you eat vegetables?</div>
+                      <div style="color: #a7f3d0; margin-top: 4px;">– Yes, I do. <span class="phonetic-tag strong">/duː/</span></div>
+                    </div>
+                    <button class="btn-audio" onclick="speakEnglish('Do you eat vegetables? Yes, I do.')">🔊</button>
+                  </div>
+                  <div class="sentence-card">
+                    <div>
+                      <div style="font-weight: 700; color: #fff;">4. Can <span class="phonetic-tag">/kən/</span> he get up early?</div>
+                      <div style="color: #a7f3d0; margin-top: 4px;">– Yes, he can. <span class="phonetic-tag strong">/kæn/</span></div>
+                    </div>
+                    <button class="btn-audio" onclick="speakEnglish('Can he get up early? Yes, he can.')">🔊</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STAGE 3: VOCABULARY (HEALTH & BODY) -->
+            <div class="interactive-stage-section stage-sec-l2" id="stage-l2-vocab">
+              <div class="stage-header">
+                <div class="stage-title">🔤 5 Key Health & Body Words</div>
+                <div class="stage-desc">Learn key vocabulary items related to muscles, treatments, and physical well-being.</div>
+              </div>
+
+              <div class="vocab-grid">
+                <div class="vocab-card">
+                  <div class="vocab-card-header">
+                    <div>
+                      <div class="vocab-word">muscles</div>
+                      <div class="vocab-phonetic">/ˈmʌslz/ • <span class="vocab-pos">n</span></div>
+                    </div>
+                    <button class="btn-audio" onclick="speakEnglish('muscles')" title="Listen">🔊</button>
+                  </div>
+                  <div class="vocab-meaning">cơ bắp</div>
+                  <div class="vocab-example">"Pieces of flesh in our body that allow movement of our arms and legs."</div>
+                </div>
+
+                <div class="vocab-card">
+                  <div class="vocab-card-header">
+                    <div>
+                      <div class="vocab-word">treatment</div>
+                      <div class="vocab-phonetic">/ˈtriːtmənt/ • <span class="vocab-pos">n</span></div>
+                    </div>
+                    <button class="btn-audio" onclick="speakEnglish('treatment')" title="Listen">🔊</button>
+                  </div>
+                  <div class="vocab-meaning">sự điều trị, liệu trình chữa bệnh</div>
+                  <div class="vocab-example">"Something that helps to cure an illness or injury."</div>
+                </div>
+
+                <div class="vocab-card">
+                  <div class="vocab-card-header">
+                    <div>
+                      <div class="vocab-word">strength</div>
+                      <div class="vocab-phonetic">/streŋkθ/ • <span class="vocab-pos">n</span></div>
+                    </div>
+                    <button class="btn-audio" onclick="speakEnglish('strength')" title="Listen">🔊</button>
+                  </div>
+                  <div class="vocab-meaning">sức mạnh thể chất, độ bền</div>
+                  <div class="vocab-example">"The quality of being physically strong."</div>
+                </div>
+
+                <div class="vocab-card">
+                  <div class="vocab-card-header">
+                    <div>
+                      <div class="vocab-word">suffer from</div>
+                      <div class="vocab-phonetic">/ˈsʌfə frɒm/ • <span class="vocab-pos">phr v</span></div>
+                    </div>
+                    <button class="btn-audio" onclick="speakEnglish('suffer from')" title="Listen">🔊</button>
+                  </div>
+                  <div class="vocab-meaning">chịu đựng, mắc phải bệnh gì</div>
+                  <div class="vocab-example">"To experience physical pain or have a health problem."</div>
+                </div>
+
+                <div class="vocab-card">
+                  <div class="vocab-card-header">
+                    <div>
+                      <div class="vocab-word">examine</div>
+                      <div class="vocab-phonetic">/ɪɡˈzæmɪn/ • <span class="vocab-pos">v</span></div>
+                    </div>
+                    <button class="btn-audio" onclick="speakEnglish('examine')" title="Listen">🔊</button>
+                  </div>
+                  <div class="vocab-meaning">khám bệnh, kiểm tra cơ thể</div>
+                  <div class="vocab-example">"To look at someone's body carefully to detect health problems."</div>
+                </div>
+              </div>
+
+              <!-- Vocabulary Task 2 -->
+              <div class="task-box" style="margin-top: 24px;">
+                <span class="task-title-badge">Task 2 • Complete The Sentences</span>
+                <p style="font-size: 0.95rem; color: #cbd5e1; margin-bottom: 16px;">Fill in each blank with the correct form of the 5 vocabulary words above:</p>
+
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                  <div class="task-statement-row">
+                    <div>1. The doctor <input type="text" id="v2-input-1" placeholder="word form..." style="background: #1e293b; border: 1px solid #475569; color: #fbbf24; padding: 4px 8px; border-radius: 6px; width: 120px; font-weight: 700;"> her carefully, but could not find anything wrong.</div>
+                  </div>
+                  <div class="task-statement-row">
+                    <div>2. He is receiving <input type="text" id="v2-input-2" placeholder="word form..." style="background: #1e293b; border: 1px solid #475569; color: #fbbf24; padding: 4px 8px; border-radius: 6px; width: 120px; font-weight: 700;"> for his health problem.</div>
+                  </div>
+                  <div class="task-statement-row">
+                    <div>3. Regular exercise can help you improve your muscle <input type="text" id="v2-input-3" placeholder="word form..." style="background: #1e293b; border: 1px solid #475569; color: #fbbf24; padding: 4px 8px; border-radius: 6px; width: 120px; font-weight: 700;">.</div>
+                  </div>
+                  <div class="task-statement-row">
+                    <div>4. To build your <input type="text" id="v2-input-4" placeholder="word form..." style="background: #1e293b; border: 1px solid #475569; color: #fbbf24; padding: 4px 8px; border-radius: 6px; width: 120px; font-weight: 700;">, you can try lifting weights.</div>
+                  </div>
+                  <div class="task-statement-row">
+                    <div>5. Nam can’t sleep well. He is <input type="text" id="v2-input-5" placeholder="word form..." style="background: #1e293b; border: 1px solid #475569; color: #fbbf24; padding: 4px 8px; border-radius: 6px; width: 150px; font-weight: 700;"> stress.</div>
+                  </div>
+                </div>
+
+                <div style="margin-top: 14px; display: flex; align-items: center; gap: 14px;">
+                  <button class="slide-btn" onclick="checkVocabTask2()" style="background: #10b981; border-color: #10b981;">Check Answers</button>
+                  <span id="v2-result-msg" style="font-weight: 700;"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- STAGE 4: GRAMMAR (PAST SIMPLE VS PRESENT PERFECT) -->
+            <div class="interactive-stage-section stage-sec-l2" id="stage-l2-grammar">
+              <div class="stage-header">
+                <div class="stage-title">🧠 Grammar: Past Simple vs. Present Perfect</div>
+                <div class="stage-desc">Understand when to use Past Simple (finished past events) versus Present Perfect (connected to present).</div>
+              </div>
+
+              <div class="grammar-comparison-grid">
+                <div class="grammar-rule-card past-simple">
+                  <div class="grammar-rule-header">📘 Past Simple (S + V-ed / V2)</div>
+                  <ul class="grammar-rule-uses">
+                    <li><strong>Usage:</strong> Describes events that started and finished at a specific time in the past.</li>
+                    <li><strong>Common Time Clues:</strong> <em>yesterday, last night, 2 years ago, in 2020, when I was small</em>.</li>
+                    <li><strong>Example:</strong> "You <strong>did</strong> a great job yesterday."</li>
+                    <li><strong>Example:</strong> "We <strong>lived</strong> in Ha Noi when I was little. Now we live in Hai Phong."</li>
+                  </ul>
+                </div>
+
+                <div class="grammar-rule-card present-perfect">
+                  <div class="grammar-rule-header">📗 Present Perfect (S + have/has + V3/ed)</div>
+                  <ul class="grammar-rule-uses">
+                    <li><strong>Usage:</strong> Describes actions that started in the past and continue into the present, or recent actions with present results.</li>
+                    <li><strong>Common Time Clues:</strong> <em>since, for, so far, recently, just, already, yet</em>.</li>
+                    <li><strong>Example:</strong> "You <strong>have done</strong> a great job so far."</li>
+                    <li><strong>Example:</strong> "We <strong>have just moved</strong> to Hai Phong."</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Grammar Task 1 -->
+              <div class="task-box">
+                <span class="task-title-badge">Task 1 • Put Verbs In Either Past Simple or Present Perfect</span>
+                <p style="font-size: 0.95rem; color: #cbd5e1; margin-bottom: 16px;">Conjugate each verb in brackets into the correct tense:</p>
+
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                  <div class="task-statement-row">
+                    <div>1. He (see) <input type="text" id="g1-input-1" placeholder="conjugate..." style="background: #1e293b; border: 1px solid #475569; color: #fbbf24; padding: 4px 8px; border-radius: 6px; width: 110px; font-weight: 700;"> the doctor yesterday.</div>
+                  </div>
+                  <div class="task-statement-row">
+                    <div>2. She (suffer) <input type="text" id="g1-input-2" placeholder="conjugate..." style="background: #1e293b; border: 1px solid #475569; color: #fbbf24; padding: 4px 8px; border-radius: 6px; width: 110px; font-weight: 700;"> from a serious headache, but after treatment, she felt better.</div>
+                  </div>
+                  <div class="task-statement-row">
+                    <div>3. Our living conditions (improve) <input type="text" id="g1-input-3" placeholder="conjugate..." style="background: #1e293b; border: 1px solid #475569; color: #fbbf24; padding: 4px 8px; border-radius: 6px; width: 160px; font-weight: 700;"> over the last few decades. Now people live much better.</div>
+                  </div>
+                  <div class="task-statement-row">
+                    <div>4. The doctor (just, examine) <input type="text" id="g1-input-4" placeholder="conjugate..." style="background: #1e293b; border: 1px solid #475569; color: #fbbf24; padding: 4px 8px; border-radius: 6px; width: 180px; font-weight: 700;"> her. Fortunately, the treatment is working.</div>
+                  </div>
+                </div>
+
+                <div style="margin-top: 14px; display: flex; align-items: center; gap: 14px;">
+                  <button class="slide-btn" onclick="checkGrammarTask1()" style="background: #10b981; border-color: #10b981;">Check Grammar</button>
+                  <span id="g1-result-msg" style="font-weight: 700;"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- STAGE 5: MINIGAME DOLLAR CHALLENGE -->
+            <div class="interactive-stage-section stage-sec-l2" id="stage-l2-dollar">
+              <div class="dollar-game-card">
+                <div class="dollar-game-header">
+                  <div>
+                    <span class="dinner-badge" style="background: rgba(251, 191, 36, 0.2); color: #fbbf24; border-color: #fbbf24;">🎮 Grammar Minigame</span>
+                    <h3 style="font-size: 1.8rem; font-weight: 800; color: #fff; margin-top: 6px;">Dollar Challenge: Past vs. Present Perfect</h3>
+                  </div>
+
+                  <div class="dollar-bank-display">
+                    <span style="font-size: 1.2rem;">💰</span>
+                    <span style="font-size: 0.85rem; color: #cbd5e1;">Bank:</span>
+                    <span class="dollar-bank-amount" id="dollar-bank-num">$0</span>
+                  </div>
+                </div>
+
+                <div class="dinner-quiz-box">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                    <span class="question-prize-badge" id="dollar-prize-badge">+$5 Reward</span>
+                  </div>
+                  <div class="dinner-question-text" id="dollar-q-text">Loading question...</div>
+                  <div class="dinner-options-grid" id="dollar-opts-grid"></div>
+                  <div id="dollar-result-msg" style="margin-top: 14px; font-weight: 700; text-align: center; color: #fbbf24;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STAGE 6: CONSOLIDATION & HOMEWORK -->
+            <div class="interactive-stage-section stage-sec-l2" id="stage-l2-wrapup">
+              <div class="stage-header">
+                <div class="stage-title">📋 Consolidation & Homework</div>
+                <div class="stage-desc">Review lesson highlights and practice assignments.</div>
+              </div>
+
+              <div class="content-section" style="padding: 0;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
+                  <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid #10b981; border-radius: 14px; padding: 20px;">
+                    <h4 style="color: #34d399; font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                      <span>🎯</span> What We've Learnt
+                    </h4>
+                    <ul style="color: #cbd5e1; line-height: 1.8; padding-left: 20px; font-size: 0.95rem;">
+                      <li><strong>Pronunciation:</strong> Strong and weak forms of auxiliary verbs in connected speech.</li>
+                      <li><strong>Vocabulary:</strong> 5 key items (muscles, treatment, strength, suffer from, examine).</li>
+                      <li><strong>Grammar:</strong> Contrasting Past Simple vs Present Perfect in sentence construction.</li>
+                    </ul>
+                  </div>
+
+                  <div style="background: rgba(245, 158, 11, 0.1); border: 1px solid #f59e0b; border-radius: 14px; padding: 20px;">
+                    <h4 style="color: #fbbf24; font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                      <span>📝</span> Homework
+                    </h4>
+                    <ul style="color: #cbd5e1; line-height: 1.8; padding-left: 20px; font-size: 0.95rem;">
+                      <li>Complete all corresponding grammar and vocabulary tasks in the Workbook.</li>
+                      <li>Practice saying the 4 sentence pairs from Task 2 out loud with correct strong/weak forms.</li>
+                      <li>Write 4 sentences about your healthy activities using both tenses.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 
-        <!-- TAB 2: VOCABULARY -->
-        <section class="tab-content-panel" id="panel-vocabulary">
-          <div class="content-section">
-            <div class="section-header">
-              <h3 class="section-title">📚 Danh Sách Từ Vựng Cốt Lõi</h3>
-              <span style="font-size: 0.85rem; color: var(--text-muted);">Bấm 🔊 để nghe phát âm giọng chuẩn</span>
-            </div>
-            <div class="vocab-grid" id="vocab-grid"></div>
-          </div>
-        </section>
-
-        <!-- TAB 3: GRAMMAR -->
-        <section class="tab-content-panel" id="panel-grammar">
-          <div class="content-section" id="grammar-container"></div>
-        </section>
-
-        <!-- TAB 4: READING & SPEAKING -->
-        <section class="tab-content-panel" id="panel-reading">
-          <div class="content-section">
-            <div class="reading-box">
-              <h3 class="reading-topic-title" id="reading-topic-title">Reading Focus</h3>
-              <p class="reading-content" id="reading-takeaway-text">Passage Summary</p>
-            </div>
-
-            <div class="section-header" style="margin-top: 24px;">
-              <h3 class="section-title">🗣️ Mẫu Câu Giao Tiếp & Thảo Luận</h3>
-            </div>
-            <div class="speaking-phrase-list" id="speaking-phrase-list"></div>
-          </div>
-        </section>
-
-        <!-- TAB 5: FLASHCARDS -->
+        <!-- TAB: FLASHCARDS (KEPT AS REQUESTED) -->
         <section class="tab-content-panel" id="panel-flashcards">
           <div class="content-section">
             <div class="flashcard-section">
@@ -702,19 +1118,6 @@
                 <button class="btn-flashcard" onclick="prevFlashcard()">← Thẻ Trước</button>
                 <span class="flashcard-counter" id="fc-counter">1 / 8</span>
                 <button class="btn-flashcard" onclick="nextFlashcard()">Thẻ Kế →</button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- TAB 6: QUIZ -->
-        <section class="tab-content-panel" id="panel-quiz">
-          <div class="content-section">
-            <div class="quiz-container">
-              <div id="quiz-questions-list"></div>
-              <div class="quiz-actions">
-                <button class="btn-submit-quiz" id="quiz-submit-btn" onclick="submitQuiz()">Nộp Bài & Xem Giải Thích</button>
-                <button class="btn-retry-quiz" id="quiz-retry-btn" onclick="retryQuiz()" style="display: none;">Làm Lại Quiz</button>
               </div>
             </div>
           </div>
@@ -818,6 +1221,8 @@
 
   <script src="js/data.js"></script>
   <script src="js/lesson_getting_started.js"></script>
+  <script src="js/lesson_language.js"></script>
+  <script src="js/slide_viewer.js"></script>
   <script src="js/app.js"></script>
   <script src="js/journey_map.js"></script>
 </body>

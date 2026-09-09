@@ -1,0 +1,910 @@
+/* ===================================================================
+   GLOBAL SUCCESS 11 - SÁCH MỀM INTERACTION & LESSON 1 GETTING STARTED
+   =================================================================== */
+
+/* Sách Mềm Unit Banner & 8 Lessons Navigation */
+.sachmem-unit-container {
+  margin-bottom: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.sachmem-top-banner {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sachmem-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sachmem-logo-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 1.15rem;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.5px;
+}
+
+.sachmem-sub-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  text-transform: uppercase;
+}
+
+/* Green Official Unit Header */
+.sachmem-unit-header-bar {
+  background: linear-gradient(90deg, #15803d 0%, #16a34a 100%);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: #fff;
+}
+
+.sachmem-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sachmem-back-btn {
+  background: rgba(0, 0, 0, 0.25);
+  border: none;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+}
+
+.sachmem-back-btn:hover {
+  background: rgba(0, 0, 0, 0.45);
+  transform: translateX(-2px);
+}
+
+.sachmem-unit-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sachmem-unit-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.sachmem-unit-num-badge {
+  background: #ea580c;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding: 2px 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.sachmem-unit-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Two-column layout: 8 Lessons + Extra Resources */
+.sachmem-body-layout {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  min-height: 240px;
+}
+
+@media (max-width: 900px) {
+  .sachmem-body-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 8 Lessons Menu */
+.sachmem-lessons-menu {
+  padding: 16px;
+  background: rgba(15, 23, 42, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sachmem-lesson-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.sachmem-lesson-item:hover {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.sachmem-lesson-item.active {
+  background: linear-gradient(90deg, rgba(16, 185, 129, 0.25) 0%, rgba(5, 150, 105, 0.15) 100%);
+  border-color: #10b981;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+}
+
+.sachmem-lesson-item .lesson-tag {
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  font-weight: 700;
+}
+
+.sachmem-lesson-item.active .lesson-tag {
+  background: #10b981;
+  color: #fff;
+  border-color: #10b981;
+}
+
+/* Extra Resources Column */
+.sachmem-extra-resources {
+  background: linear-gradient(180deg, rgba(185, 28, 28, 0.85) 0%, rgba(153, 27, 27, 0.95) 100%);
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.extra-title {
+  color: #fef08a;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.extra-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.extra-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  border-color: #fef08a;
+  color: #fef08a;
+}
+
+/* ===================================================================
+   LESSON 1: GETTING STARTED - MAIN CONTAINER & TOOLBAR
+   =================================================================== */
+
+.lesson1-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lesson1-toolbar {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.lesson1-mode-switch {
+  display: flex;
+  gap: 8px;
+  background: rgba(15, 23, 42, 0.6);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.mode-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mode-btn.active {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+}
+
+.lesson1-progress-tracker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Stage Navigation Pills */
+.lesson1-stage-nav {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 2px 10px 2px;
+  scrollbar-width: thin;
+}
+
+.stage-pill {
+  white-space: nowrap;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stage-pill:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.stage-pill.active {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-color: #10b981;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+/* ===================================================================
+   PRESENTATION SLIDESHOW MODE (35 SLIDES)
+   =================================================================== */
+
+.slideshow-wrapper {
+  background: #090d16;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.slide-canvas {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at center, #1e293b 0%, #0a0f1d 100%);
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+.slide-inner-content {
+  flex: 1;
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.slide-badge-category {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #34d399;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.slide-headline {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.slide-subheadline {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  margin-bottom: 24px;
+}
+
+.slide-body-box {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 24px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #e2e8f0;
+}
+
+.slide-reveal-box {
+  margin-top: 16px;
+  padding: 16px 20px;
+  border-radius: 10px;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid #10b981;
+  color: #a7f3d0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.slide-reveal-box.show {
+  display: block;
+}
+
+/* Slide Controls Footer */
+.slide-controls-bar {
+  background: #0d1322;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.slide-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.slide-btn:hover:not(:disabled) {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.slide-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.slide-counter-display {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  color: #fbbf24;
+  font-size: 1rem;
+}
+
+/* ===================================================================
+   INTERACTIVE E-LESSON STAGES
+   =================================================================== */
+
+.interactive-stage-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: var(--card-shadow);
+  display: none;
+}
+
+.interactive-stage-section.active {
+  display: block;
+  animation: fadeIn 0.35s ease;
+}
+
+.stage-header {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.stage-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stage-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-top: 6px;
+}
+
+/* 7 Habits Grid (Warm-up) */
+.habits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.habit-card {
+  background: var(--bg-card-hover);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  gap: 14px;
+  transition: all 0.25s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.habit-card:hover {
+  transform: translateY(-3px);
+  border-color: #10b981;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.15);
+}
+
+.habit-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.habit-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+.habit-vn {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* ===================================================================
+   MINIGAME 1: "A SURPRISED DINNER" (20/10)
+   =================================================================== */
+
+.dinner-game-card {
+  background: linear-gradient(135deg, #1e1b4b 0%, #311042 100%);
+  border: 2px solid #ec4899;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(236, 72, 153, 0.2);
+}
+
+.dinner-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dinner-badge {
+  background: rgba(236, 72, 153, 0.2);
+  color: #f472b6;
+  border: 1px solid #f472b6;
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: inline-block;
+}
+
+.dinner-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #fff;
+  margin-top: 8px;
+}
+
+.dinner-story {
+  font-size: 1rem;
+  color: #cbd5e1;
+  max-width: 680px;
+  margin: 8px auto 0;
+  line-height: 1.5;
+}
+
+/* Table spread: 5 dishes to unlock */
+.dinner-table-spread {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.dish-slot {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.dish-slot.unlocked {
+  background: rgba(236, 72, 153, 0.2);
+  border-color: #ec4899;
+  border-style: solid;
+  transform: scale(1.08);
+  box-shadow: 0 4px 14px rgba(236, 72, 153, 0.4);
+}
+
+.dinner-quiz-box {
+  background: rgba(15, 23, 42, 0.8);
+  border-radius: 14px;
+  padding: 20px;
+  margin-top: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dinner-question-text {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fef08a;
+  margin-bottom: 16px;
+}
+
+.dinner-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.dinner-opt-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.dinner-opt-btn:hover:not(:disabled) {
+  background: rgba(236, 72, 153, 0.25);
+  border-color: #ec4899;
+}
+
+.dinner-opt-btn.correct {
+  background: #10b981 !important;
+  border-color: #10b981 !important;
+  color: #fff !important;
+}
+
+.dinner-opt-btn.wrong {
+  background: #ef4444 !important;
+  border-color: #ef4444 !important;
+  color: #fff !important;
+}
+
+/* ===================================================================
+   STAGE 4: DIALOGUE LISTEN & READ (MARK & NAM)
+   =================================================================== */
+
+.dialogue-media-player {
+  background: #0f172a;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  border: 1px solid var(--border-color);
+}
+
+.dialogue-video-frame {
+  width: 100%;
+  max-height: 440px;
+  background: #000;
+  display: block;
+}
+
+.dialogue-mode-toggles {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.chat-dialogue-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.chat-bubble {
+  display: flex;
+  gap: 12px;
+  max-width: 88%;
+}
+
+.chat-bubble.mark {
+  align-self: flex-start;
+}
+
+.chat-bubble.nam {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.chat-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #3b82f6;
+  color: #fff;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.95rem;
+}
+
+.chat-bubble.nam .chat-avatar {
+  background: #10b981;
+}
+
+.chat-content {
+  background: var(--bg-card-hover);
+  border: 1px solid var(--border-color);
+  padding: 12px 18px;
+  border-radius: 16px;
+  position: relative;
+}
+
+.chat-bubble.mark .chat-content {
+  border-top-left-radius: 4px;
+}
+
+.chat-bubble.nam .chat-content {
+  border-top-right-radius: 4px;
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.chat-speaker-name {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #94a3b8;
+  margin-bottom: 4px;
+}
+
+.chat-english {
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.chat-vietnamese {
+  font-size: 0.84rem;
+  color: #a7f3d0;
+  margin-top: 6px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  padding-top: 4px;
+}
+
+.btn-speak-line {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-left: 8px;
+  transition: color 0.2s;
+}
+
+.btn-speak-line:hover {
+  color: #fbbf24;
+}
+
+/* ===================================================================
+   MINIGAME 2: "BAKE CAKE" (6 QUESTIONS)
+   =================================================================== */
+
+.cake-game-wrapper {
+  background: linear-gradient(135deg, #451a03 0%, #1e1b4b 100%);
+  border: 2px solid #f59e0b;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(245, 158, 11, 0.2);
+}
+
+.cake-graphic-stage {
+  text-align: center;
+  padding: 20px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cake-display-icon {
+  font-size: 4.5rem;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cake-step-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #fef08a;
+  margin-top: 10px;
+}
+
+.cake-progress-dots {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.cake-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.cake-dot.done {
+  background: #f59e0b;
+  transform: scale(1.15);
+  box-shadow: 0 0 8px #f59e0b;
+}
+
+/* Practice Tasks 2, 3, 4 Containers */
+.task-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.task-title-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(99, 102, 241, 0.2);
+  color: #818cf8;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.task-statement-row {
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.tf-btn-group {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-tf {
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-tf.active {
+  background: #10b981;
+  border-color: #10b981;
+}
+
+.btn-tf.wrong {
+  background: #ef4444;
+  border-color: #ef4444;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}

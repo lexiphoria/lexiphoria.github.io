@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài Giảng Tiếng Anh 11 - Global Success Hub & Heritage Journey Map</title>
+  <meta name="description" content="Bài giảng điện tử, bản đồ hành trình di sản xuyên Việt, từ vựng, ngữ pháp, flashcard và trắc nghiệm củng cố toàn bộ 10 Unit chương trình Tiếng Anh 11 Global Success.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/journey_map.css">
+  <link rel="stylesheet" href="css/lesson_getting_started.css">
+</head>
+<body>
+
+  <!-- Mobile Header -->
+  <header class="mobile-header">
+    <button class="mobile-toggle-btn" id="mobile-toggle" aria-label="Toggle Menu">☰</button>
+    <div style="font-weight: 700; font-size: 1.1rem; color: #fff;">Global Success 11</div>
+    <a href="../index.html" style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem;">🏠 Trang chủ</a>
+  </header>
+
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <span class="brand-badge">Grade 11 • B1-B2</span>
+        <h1 class="sidebar-title">Global Success 11</h1>
+        <div style="display: flex; gap: 8px; align-items: center; margin-top: 12px;">
+          <a class="home-nav-btn" href="../index.html" style="margin-top: 0; flex: 1; justify-content: center;">← Trang Chủ</a>
+          <button class="home-nav-btn" onclick="lockPortal()" style="margin-top: 0; cursor: pointer;" title="Khóa trang truy cập">🔒 Khóa</button>
+        </div>
+      </div>
+
+      <div class="sidebar-search-box">
+        <div class="search-input-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="global-search-input" placeholder="Tìm từ vựng, ngữ pháp..." autocomplete="off">
+        </div>
+      </div>
+
+      <!-- Prominent Heritage Journey Map Entry Point -->
+      <div style="padding: 0 16px 8px 16px;">
+        <button class="journey-nav-btn active" id="btn-nav-journey-map" onclick="showJourneyMapView()">
+          <span style="font-size: 1.35rem;">🗺️</span>
+          <div style="text-align: left; flex: 1;">
+            <div style="font-weight: 800; font-size: 0.88rem; color: #fff;">Bản Đồ Di Sản</div>
+            <div style="font-size: 0.72rem; color: #fef3c7;">Heritage Journey Map</div>
+          </div>
+          <span class="journey-badge-new">NEW</span>
+        </button>
+      </div>
+
+      <div style="padding: 0 18px 6px; font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;">
+        Danh Sách 10 Units
+      </div>
+
+      <ul class="unit-nav-list" id="unit-nav-list">
+        <!-- Units 1 to 10 rendered here -->
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- ===================================================================
+           VIEW PANEL 1: HERITAGE JOURNEY MAP (3840x4640 ARCHITECTURE)
+           =================================================================== -->
+      <section class="view-panel active-view" id="view-journey-map">
+        <!-- Map Header Controls -->
+        <div class="map-header-bar">
+          <div class="map-title-group">
+            <span class="map-title-icon">🏮</span>
+            <div>
+              <h2 class="map-main-title">Heritage Journey Map — Bản Đồ Di Sản</h2>
+              <p class="map-sub-title">16 Điểm Mốc Xuyên Việt (Kỳ 1 & Kỳ 2) • Tỉ lệ chuẩn 3840 × 4640</p>
+            </div>
+          </div>
+
+          <div class="map-actions-group">
+            <button class="btn-toggle-view active" id="btn-view-mode-map" onclick="toggleMapOrListView('map')">🗺️ Bản Đồ</button>
+            <button class="btn-toggle-view" id="btn-view-mode-list" onclick="toggleMapOrListView('list')">📋 Danh Sách</button>
+          </div>
+        </div>
+
+        <div class="map-viewport-container">
+          <!-- Calibration Tool HUD bar -->
+          <div class="calibration-bar">
+            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+              <span>🎯 Calibration Tool (Click lên bản đồ để đo tọa độ):</span>
+              <span class="coord-display" id="calib-coords">{ x: 0.0, y: 0.0 }</span>
+            </div>
+            <button onclick="copyCalibCoords()" style="background: rgba(245,158,11,0.2); border: 1px solid #f59e0b; color: #fbbf24; padding: 3px 10px; border-radius: 6px; cursor: pointer; font-size: 0.75rem;">
+              📋 Copy Tọa Độ
+            </button>
+          </div>
+
+          <!-- Main Viewport with exact 3840 / 4640 aspect ratio -->
+          <div class="map-viewport">
+            <!-- Background Image (WebP, lazy, blur-up placeholder fallback) -->
+            <img class="map-bg" src="assets/heritage_map_3840x4640.webp" onerror="this.src='assets/map-placeholder.svg'" alt="Heritage Journey Map" loading="lazy">
+
+            <!-- 16 Pins will be injected dynamically by journey_map.js -->
+
+            <!-- Single Shared Popup (Moves to active pin coordinate) -->
+            <div class="map-popup" id="map-single-popup" onclick="event.stopPropagation()">
+              <button class="popup-close-btn" onclick="closeMapPopup(event)" title="Đóng">✕</button>
+              <div class="popup-header-row">
+                <span class="popup-badge" id="popup-badge">U1</span>
+                <span class="popup-semester-tag" id="popup-semester-tag">Học kỳ 1</span>
+              </div>
+              <h4 class="popup-title" id="popup-title">A Long and Healthy Life</h4>
+              <div class="popup-vntitle" id="popup-vntitle">Cuộc sống dài lâu và khỏe mạnh</div>
+              <p class="popup-desc" id="popup-desc"></p>
+              <button class="popup-action-btn" id="popup-action-btn">Vào bài học ngay ➜</button>
+            </div>
+
+            <!-- FAB Backpack + Passport at top-right -->
+            <button class="map-fab-backpack" id="backpack-fab" title="Mở Hộ Chiếu Hành Trình" aria-label="Hộ Chiếu Hành Trình">
+              <span>🎒</span>
+              <span class="fab-counter" id="backpack-badge">1</span>
+            </button>
+          </div>
+
+          <!-- Mobile / List View (Equivalent unit list on small screens or list mode) -->
+          <div class="mobile-list-view">
+            <div style="font-weight: 700; color: #fbbf24; margin-bottom: 14px; font-size: 0.95rem; display: flex; align-items: center; justify-content: space-between;">
+              <span>📋 Tiến Độ Học Tập 10 Units</span>
+              <span style="font-size: 0.8rem; color: #94a3b8;">Chọn bài để học ngay</span>
+            </div>
+            <div id="mobile-list-container"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           VIEW PANEL 2: UNIT LESSON DETAILS (OVERVIEW, VOCAB, GRAMMAR, QUIZ)
+           =================================================================== -->
+      <section class="view-panel" id="view-unit-lessons">
+        <!-- Sách Mềm 8-Lessons Official Curriculum Header & Navigation -->
+        <div class="sachmem-unit-container">
+          <!-- Top Global Success branding row -->
+          <div class="sachmem-top-banner">
+            <div class="sachmem-brand">
+              <span style="font-size: 1.4rem;">📘</span>
+              <div>
+                <span class="sachmem-logo-text">Tiếng Anh 11 - GLOBAL SUCCESS</span>
+                <div style="font-size: 0.75rem; color: #94a3b8;">SÁCH HỌC SINH • SÁCH MỀM GIÁO VIÊN 2.0</div>
+              </div>
+            </div>
+            <button class="sachmem-sub-badge" onclick="showJourneyMapView()" style="cursor: pointer;">
+              🗺️ Bản Đồ Di Sản
+            </button>
+          </div>
+
+          <!-- Official Green Header Bar: Unit [1] A long and healthy life -->
+          <div class="sachmem-unit-header-bar">
+            <div class="sachmem-header-left">
+              <button class="sachmem-back-btn" onclick="showJourneyMapView()" title="Back to Heritage Map">←</button>
+              <div class="sachmem-unit-title-group">
+                <span class="sachmem-unit-label">Unit</span>
+                <span class="sachmem-unit-num-badge" id="sachmem-unit-num">1</span>
+                <span class="sachmem-unit-name" id="sachmem-unit-title">A long and healthy life</span>
+              </div>
+            </div>
+            <div style="font-size: 0.85rem; color: #dcfce7; font-weight: 600;" id="sachmem-unit-vntitle">
+              Health, Nutrition, Fitness & Longevity
+            </div>
+          </div>
+
+          <!-- 8 Lessons List & Extra Resources Columns -->
+          <div class="sachmem-body-layout">
+            <div class="sachmem-lessons-menu">
+              <div class="sachmem-lesson-item active" id="menu-lesson-1" onclick="switchSachMemLesson('getting-started')">
+                <span>1. GETTING STARTED</span>
+                <span class="lesson-tag">🌟 ONLINE PPTX LESSON</span>
+              </div>
+              <div class="sachmem-lesson-item" id="menu-lesson-2" onclick="switchSachMemLesson('vocabulary')">
+                <span>2. LANGUAGE (Vocabulary & Grammar)</span>
+                <span style="font-size: 0.75rem; color: #94a3b8;">Language focus</span>
+              </div>
+              <div class="sachmem-lesson-item" id="menu-lesson-3" onclick="switchSachMemLesson('reading')">
+                <span>3. READING</span>
+                <span style="font-size: 0.75rem; color: #94a3b8;">Reading comprehension</span>
+              </div>
+              <div class="sachmem-lesson-item" id="menu-lesson-4" onclick="switchSachMemLesson('speaking')">
+                <span>4. SPEAKING</span>
+                <span style="font-size: 0.75rem; color: #94a3b8;">Speaking practice</span>
+              </div>
+              <div class="sachmem-lesson-item" id="menu-lesson-5" onclick="switchSachMemLesson('listening')">
+                <span>5. LISTENING</span>
+                <span style="font-size: 0.75rem; color: #94a3b8;">Listening practice</span>
+              </div>
+              <div class="sachmem-lesson-item" id="menu-lesson-6" onclick="switchSachMemLesson('writing')">
+                <span>6. WRITING</span>
+                <span style="font-size: 0.75rem; color: #94a3b8;">Writing skills</span>
+              </div>
+              <div class="sachmem-lesson-item" id="menu-lesson-7" onclick="switchSachMemLesson('culture')">
+                <span>7. COMMUNICATION AND CULTURE / CLIL</span>
+                <span style="font-size: 0.75rem; color: #94a3b8;">Culture & CLIL</span>
+              </div>
+              <div class="sachmem-lesson-item" id="menu-lesson-8" onclick="switchSachMemLesson('lookingback')">
+                <span>8. LOOKING BACK & PROJECT</span>
+                <span style="font-size: 0.75rem; color: #94a3b8;">Review & Project</span>
+              </div>
+            </div>
+
+            <!-- Extra Resources Right Column -->
+            <div class="sachmem-extra-resources">
+              <div class="extra-title">EXTRA RESOURCES</div>
+              <button class="extra-btn" onclick="openExtraResource('games')">
+                <span>🎮</span> GAMES
+              </button>
+              <button class="extra-btn" onclick="openExtraResource('videos')">
+                <span>▶️</span> VIDEOS
+              </button>
+              <button class="extra-btn" onclick="openExtraResource('glossary')">
+                <span>📑</span> GLOSSARY
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <nav class="tabs-navigation" aria-label="Lesson Navigation Tabs">
+          <button class="tab-btn active" data-tab="getting-started">🎬 Lesson 1: Getting Started</button>
+          <button class="tab-btn" data-tab="overview">📖 Unit Objectives</button>
+          <button class="tab-btn" data-tab="vocabulary">🔤 Vocabulary</button>
+          <button class="tab-btn" data-tab="grammar">🧠 In-Depth Grammar</button>
+          <button class="tab-btn" data-tab="reading">📑 Reading & Phrases</button>
+          <button class="tab-btn" data-tab="flashcards">🗂️ 3D Flashcards</button>
+          <button class="tab-btn" data-tab="quiz">✍️ Quiz Challenge</button>
+        </nav>
+
+        <!-- TAB 0: LESSON 1 GETTING STARTED (ONLINE INTERACTIVE E-LESSON) -->
+        <section class="tab-content-panel active" id="panel-getting-started">
+          
+          <!-- Lesson 1 Control Toolbar -->
+          <div class="lesson1-toolbar">
+            <div class="lesson1-mode-switch">
+              <button class="mode-btn active" id="btn-mode-interactive" onclick="switchLesson1Mode('interactive')">
+                🎒 Interactive E-Lesson
+              </button>
+              <button class="mode-btn" id="btn-mode-presentation" onclick="switchLesson1Mode('presentation')">
+                👨‍🏫 Classroom Slides (35 Slides)
+              </button>
+            </div>
+            
+            <div class="lesson1-progress-tracker">
+              <span>Current Lesson: <strong>Lesson 1: Getting Started</strong></span>
+            </div>
+          </div>
+
+          <!-- PRESENTATION MODE CONTAINER (SLIDESHOW) -->
+          <div id="lesson1-presentation-view" class="slideshow-wrapper" style="display: none;">
+            <div class="slide-canvas" id="slide-canvas">
+              <div class="slide-inner-content">
+                <div class="slide-badge-category" id="slide-cat-text">Cover</div>
+                <h3 class="slide-headline" id="slide-title-text">GLOBAL SUCCESS 11</h3>
+                <div class="slide-subheadline" id="slide-subtitle-text">UNIT 1: A LONG AND HEALTHY LIFE</div>
+                <div class="slide-body-box" id="slide-body-content">
+                  Living Long and Healthy: Key Habits for a Better Life
+                </div>
+                <div class="slide-reveal-box" id="slide-reveal-answer"></div>
+              </div>
+            </div>
+
+            <!-- Slide Controls -->
+            <div class="slide-controls-bar">
+              <div style="display: flex; gap: 8px;">
+                <button class="slide-btn" id="btn-slide-prev" onclick="prevSlide()">← Previous Slide</button>
+                <button class="slide-btn" id="btn-slide-next" onclick="nextSlide()">Next Slide →</button>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 14px;">
+                <button class="slide-btn" onclick="toggleSlideReveal()" style="background: rgba(245, 158, 11, 0.2); border-color: #f59e0b; color: #fbbf24;">
+                  👁️ Reveal / Hide Answer (Space)
+                </button>
+                <span class="slide-counter-display" id="slide-counter-num">1 / 35</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- INTERACTIVE LEARNING VIEW CONTAINER -->
+          <div id="lesson1-interactive-view" class="lesson1-container">
+            
+            <!-- Stage Navigation Pills -->
+            <div class="lesson1-stage-nav">
+              <button class="stage-pill active" data-stage="warmup" onclick="switchLesson1Stage('warmup')">
+                🌟 1. Warm-up (7 Habits)
+              </button>
+              <button class="stage-pill" data-stage="vocab" onclick="switchLesson1Stage('vocab')">
+                🔤 2. Core Vocabulary
+              </button>
+              <button class="stage-pill" data-stage="dinner" onclick="switchLesson1Stage('dinner')">
+                🍽️ 3. Minigame: A Surprised Dinner
+              </button>
+              <button class="stage-pill" data-stage="dialogue" onclick="switchLesson1Stage('dialogue')">
+                🎧 4. Listen & Read: Mark & Nam
+              </button>
+              <button class="stage-pill" data-stage="tasks" onclick="switchLesson1Stage('tasks')">
+                📝 5. Practice: Tasks 2, 3, 4
+              </button>
+              <button class="stage-pill" data-stage="cake" onclick="switchLesson1Stage('cake')">
+                🎂 6. Minigame: Bake Cake
+              </button>
+              <button class="stage-pill" data-stage="wrapup" onclick="switchLesson1Stage('wrapup')">
+                📋 7. Consolidation & Homework
+              </button>
+            </div>
+
+            <!-- STAGE 1: WARM-UP -->
+            <div class="interactive-stage-section active" id="stage-warmup">
+              <div class="stage-header">
+                <div class="stage-title">🌱 Warm-up: Nutrition & 7 Golden Habits for Health</div>
+                <div class="stage-desc">Discover how our bodies and minds stay healthy and well through balanced nutrition, hydration, and positive lifestyle habits.</div>
+              </div>
+
+              <div class="habits-grid">
+                <div class="habit-card" onclick="speakEnglish('Spend time focusing on a new skill or hobby.')">
+                  <div class="habit-num">1</div>
+                  <div>
+                    <div class="habit-text">Spend time focusing on a new skill or hobby.</div>
+                  </div>
+                </div>
+                <div class="habit-card" onclick="speakEnglish('Spend time with people you care about.')">
+                  <div class="habit-num">2</div>
+                  <div>
+                    <div class="habit-text">Spend time with people you care about.</div>
+                  </div>
+                </div>
+                <div class="habit-card" onclick="speakEnglish('Enjoy lots of physical activity.')">
+                  <div class="habit-num">3</div>
+                  <div>
+                    <div class="habit-text">Enjoy lots of physical activity.</div>
+                  </div>
+                </div>
+                <div class="habit-card" onclick="speakEnglish('Eat a healthy balance of different foods.')">
+                  <div class="habit-num">4</div>
+                  <div>
+                    <div class="habit-text">Eat a healthy balance of different foods.</div>
+                  </div>
+                </div>
+                <div class="habit-card" onclick="speakEnglish('Drink lots of water.')">
+                  <div class="habit-num">5</div>
+                  <div>
+                    <div class="habit-text">Drink lots of water to stay hydrated.</div>
+                  </div>
+                </div>
+                <div class="habit-card" onclick="speakEnglish('Make time to rest and relax.')">
+                  <div class="habit-num">6</div>
+                  <div>
+                    <div class="habit-text">Make time to rest and relax.</div>
+                  </div>
+                </div>
+                <div class="habit-card" onclick="speakEnglish('Talk about or express how you are feeling.')">
+                  <div class="habit-num">7</div>
+                  <div>
+                    <div class="habit-text">Talk about or express how you are feeling.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STAGE 2: VOCABULARY -->
+            <div class="interactive-stage-section" id="stage-vocab">
+              <div class="stage-header">
+                <div class="stage-title">🔤 5 Core Lexical Items</div>
+                <div class="stage-desc">Click 🔊 to listen to standard native pronunciation and repeat out loud.</div>
+              </div>
+
+              <div class="vocab-grid">
+                <div class="vocab-card">
+                  <div class="vocab-card-header">
+                    <div>
+                      <div class="vocab-word">work out</div>
+                      <div class="vocab-phonetic">/ˈwɜːk aʊt/ • <span class="vocab-pos">v</span></div>
+                    </div>
+                    <button class="btn-audio" onclick="speakEnglish('work out')" title="Listen to pronunciation">🔊</button>
+                  </div>
+                  <div class="vocab-meaning">tập luyện thể dục thể thao</div>
+                  <div class="vocab-example">"Nam works out regularly to stay fit and healthy."</div>
+                </div>
+
+                <div class="vocab-card">
+                  <div class="vocab-card-header">
+                    <div>
+                      <div class="vocab-word">(be) full of</div>
+                      <div class="vocab-phonetic">/fʊl əv/ • <span class="vocab-pos">phr</span></div>
+                    </div>
+                    <button class="btn-audio" onclick="speakEnglish('full of')" title="Listen to pronunciation">🔊</button>
+                  </div>
+                  <div class="vocab-meaning">tràn đầy (năng lượng, sức sống)</div>
+                  <div class="vocab-example">"At 90, Nam's grandfather is still full of energy."</div>
+                </div>
+
+                <div class="vocab-card">
+                  <div class="vocab-card-header">
+                    <div>
+                      <div class="vocab-word">diet</div>
+                      <div class="vocab-phonetic">/ˈdaɪ.ət/ • <span class="vocab-pos">n</span></div>
+                    </div>
+                    <button class="btn-audio" onclick="speakEnglish('diet')" title="Listen to pronunciation">🔊</button>
+                  </div>
+                  <div class="vocab-meaning">chế độ ăn uống</div>
+                  <div class="vocab-example">"A healthy diet consists of plenty of vegetables and fruits."</div>
+                </div>
+
+                <div class="vocab-card">
+                  <div class="vocab-card-header">
+                    <div>
+                      <div class="vocab-word">balanced</div>
+                      <div class="vocab-phonetic">/ˈbælənst/ • <span class="vocab-pos">adj</span></div>
+                    </div>
+                    <button class="btn-audio" onclick="speakEnglish('balanced')" title="Listen to pronunciation">🔊</button>
+                  </div>
+                  <div class="vocab-meaning">cân bằng, điều độ</div>
+                  <div class="vocab-example">"Eating a balanced diet is key to a long life."</div>
+                </div>
+
+                <div class="vocab-card">
+                  <div class="vocab-card-header">
+                    <div>
+                      <div class="vocab-word">fit</div>
+                      <div class="vocab-phonetic">/fɪt/ • <span class="vocab-pos">adj</span></div>
+                    </div>
+                    <button class="btn-audio" onclick="speakEnglish('fit')" title="Listen to pronunciation">🔊</button>
+                  </div>
+                  <div class="vocab-meaning">cân đối, săn chắc, khỏe mạnh</div>
+                  <div class="vocab-example">"Mark noticed that Nam looked very fit and healthy."</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STAGE 3: MINIGAME A SURPRISED DINNER -->
+            <div class="interactive-stage-section" id="stage-dinner">
+              <div class="dinner-game-card">
+                <div class="dinner-header">
+                  <span class="dinner-badge">🎁 Vocabulary Review Minigame</span>
+                  <h3 class="dinner-title">A Surprised Dinner (October 20th)</h3>
+                  <p class="dinner-story">
+                    Dad and son are teaming up to prepare a surprise healthy dinner for Mom on Vietnam Women's Day (October 20th). Answer each vocabulary definition correctly to unlock 5 delicious and nutritious dishes on the table!
+                  </p>
+                </div>
+
+                <!-- 5 Dish Slots -->
+                <div class="dinner-table-spread" id="dinner-table-dishes"></div>
+
+                <div class="dinner-quiz-box">
+                  <div class="dinner-question-text" id="dinner-q-text">Loading question...</div>
+                  <div class="dinner-options-grid" id="dinner-opts-grid"></div>
+                  <div id="dinner-result-msg" style="margin-top: 14px; font-weight: 700; text-align: center; color: #fbbf24;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STAGE 4: DIALOGUE LISTEN & READ -->
+            <div class="interactive-stage-section" id="stage-dialogue">
+              <div class="stage-header">
+                <div class="stage-title">🎧 Task 1: Listen and Read (Mark & Nam)</div>
+                <div class="stage-desc">Listen and read the conversation between Mark and Nam about healthy lifestyle choices and Nam's energetic 90-year-old grandfather.</div>
+              </div>
+
+              <!-- Media Video / Audio Player -->
+              <div class="dialogue-media-player">
+                <video class="dialogue-video-frame" controls poster="assets/lesson1/image93.png">
+                  <source src="assets/lesson1/media6.mp4" type="video/mp4">
+                  Your browser does not support direct video playback.
+                </video>
+              </div>
+
+              <!-- Role-Play Toggles -->
+              <div class="dialogue-mode-toggles">
+                <span style="font-weight: 700; color: #94a3b8; align-self: center;">Role-play Mode:</span>
+                <button class="stage-pill btn-role-toggle active" data-role="all" onclick="filterRolePlay('all')">👥 All Roles</button>
+                <button class="stage-pill btn-role-toggle" data-role="mark" onclick="filterRolePlay('mark')">👦 Mark Only</button>
+                <button class="stage-pill btn-role-toggle" data-role="nam" onclick="filterRolePlay('nam')">🧑 Nam Only</button>
+              </div>
+
+              <!-- Chat Bubbles -->
+              <div class="chat-dialogue-container" id="chat-dialogue-list"></div>
+            </div>
+
+            <!-- STAGE 5: PRACTICE TASKS (2, 3, 4) -->
+            <div class="interactive-stage-section" id="stage-tasks">
+              <div class="stage-header">
+                <div class="stage-title">📝 Practice Tasks (Tasks 2, 3, 4)</div>
+                <div class="stage-desc">Practice reading comprehension, vocabulary in context, and grammar structures according to the textbook.</div>
+              </div>
+
+              <!-- TASK 2 -->
+              <div class="task-box">
+                <span class="task-title-badge">Task 2 • True (T) or False (F)</span>
+                <p style="font-size: 0.95rem; color: #cbd5e1; margin-bottom: 16px;">Read the conversation again and decide whether the following statements are True (T) or False (F):</p>
+                
+                <div class="task-statement-row">
+                  <div style="flex: 1; font-weight: 500;">1. Nam has always had healthy habits.</div>
+                  <div class="tf-btn-group">
+                    <button class="btn-tf" onclick="checkTask2(this, false, 't2-exp-1')">T</button>
+                    <button class="btn-tf" onclick="checkTask2(this, true, 't2-exp-1')">F</button>
+                  </div>
+                </div>
+                <div id="t2-exp-1" style="display: none; font-size: 0.85rem; color: #34d399; margin-bottom: 12px; padding: 6px 12px; background: rgba(16, 185, 129, 0.1); border-radius: 6px;">
+                  💡 Explanation: <strong>False</strong>. Nam said: <em>"I ate a lot of fast food, but now I prefer fresh fruits and vegetables."</em> He used to eat burgers and chips and stay up late.
+                </div>
+
+                <div class="task-statement-row">
+                  <div style="flex: 1; font-weight: 500;">2. He has learnt the importance of exercise and healthy food.</div>
+                  <div class="tf-btn-group">
+                    <button class="btn-tf" onclick="checkTask2(this, true, 't2-exp-2')">T</button>
+                    <button class="btn-tf" onclick="checkTask2(this, false, 't2-exp-2')">F</button>
+                  </div>
+                </div>
+                <div id="t2-exp-2" style="display: none; font-size: 0.85rem; color: #34d399; margin-bottom: 12px; padding: 6px 12px; background: rgba(16, 185, 129, 0.1); border-radius: 6px;">
+                  💡 Explanation: <strong>True</strong>. Nam learnt from his grandfather that: <em>"taking regular exercise and eating a balanced diet are the key to a long and healthy life."</em>
+                </div>
+
+                <div class="task-statement-row">
+                  <div style="flex: 1; font-weight: 500;">3. Nam’s grandfather goes to sleep early, exercises everyday and eats healthily.</div>
+                  <div class="tf-btn-group">
+                    <button class="btn-tf" onclick="checkTask2(this, true, 't2-exp-3')">T</button>
+                    <button class="btn-tf" onclick="checkTask2(this, false, 't2-exp-3')">F</button>
+                  </div>
+                </div>
+                <div id="t2-exp-3" style="display: none; font-size: 0.85rem; color: #34d399; margin-bottom: 12px; padding: 6px 12px; background: rgba(16, 185, 129, 0.1); border-radius: 6px;">
+                  💡 Explanation: <strong>True</strong>. Nam shared: <em>"Well, he does exercise every morning, goes to bed early, and eats a lot of vegetables."</em>
+                </div>
+              </div>
+
+              <!-- TASK 3 -->
+              <div class="task-box">
+                <span class="task-title-badge">Task 3 • Fill In The Blanks To Make Phrases</span>
+                <p style="font-size: 0.95rem; color: #cbd5e1; margin-bottom: 16px;">Fill in the blanks with the words: <code>energy</code>, <code>habits</code>, <code>regular</code>, <code>balanced</code>:</p>
+                
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                  <div class="task-statement-row">
+                    <div>1. Full of <input type="text" id="t3-input-1" placeholder="Missing word..." style="background: #1e293b; border: 1px solid #475569; color: #fff; padding: 4px 10px; border-radius: 6px; width: 130px;">: having strength and enthusiasm</div>
+                  </div>
+                  <div class="task-statement-row">
+                    <div>2. Bad <input type="text" id="t3-input-2" placeholder="Missing word..." style="background: #1e293b; border: 1px solid #475569; color: #fff; padding: 4px 10px; border-radius: 6px; width: 130px;">: things we often do that are not good for health</div>
+                  </div>
+                  <div class="task-statement-row">
+                    <div>3. <input type="text" id="t3-input-3" placeholder="Missing word..." style="background: #1e293b; border: 1px solid #475569; color: #fff; padding: 4px 10px; border-radius: 6px; width: 130px;"> exercise: physical activity done frequently</div>
+                  </div>
+                  <div class="task-statement-row">
+                    <div>4. <input type="text" id="t3-input-4" placeholder="Missing word..." style="background: #1e293b; border: 1px solid #475569; color: #fff; padding: 4px 10px; border-radius: 6px; width: 130px;"> diet: the correct types and amounts of food</div>
+                  </div>
+                </div>
+
+                <div style="margin-top: 14px; display: flex; align-items: center; gap: 14px;">
+                  <button class="slide-btn" onclick="checkTask3()" style="background: #10b981; border-color: #10b981;">Check Answers</button>
+                  <span id="t3-result" style="font-weight: 700;"></span>
+                </div>
+              </div>
+
+              <!-- TASK 4 -->
+              <div class="task-box">
+                <span class="task-title-badge">Task 4 • Grammar: Past Simple vs Present Perfect</span>
+                <p style="font-size: 0.95rem; color: #cbd5e1; margin-bottom: 16px;">Complete the text based on the conversation in Task 1. Use the correct forms of the verbs in brackets:</p>
+                
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 18px; border-radius: 12px; line-height: 2; font-size: 1.05rem;">
+                  In the past, Nam (1. eat) <input type="text" id="t4-input-1" placeholder="verb form..." style="background: #0f172a; border: 1px solid #475569; color: #fbbf24; padding: 4px 8px; border-radius: 6px; width: 100px; font-weight: 700;"> fast food and often stayed up late. 
+                  But he (2. start) <input type="text" id="t4-input-2" placeholder="verb form..." style="background: #0f172a; border: 1px solid #475569; color: #fbbf24; padding: 4px 8px; border-radius: 6px; width: 130px; font-weight: 700;"> eating healthy food and 
+                  (3. give) <input type="text" id="t4-input-3" placeholder="verb form..." style="background: #0f172a; border: 1px solid #475569; color: #fbbf24; padding: 4px 8px; border-radius: 6px; width: 130px; font-weight: 700;"> up bad habits. 
+                  He has changed his lifestyle since he (4. visit) <input type="text" id="t4-input-4" placeholder="verb form..." style="background: #0f172a; border: 1px solid #475569; color: #fbbf24; padding: 4px 8px; border-radius: 6px; width: 100px; font-weight: 700;"> his grandfather, who 
+                  (5. just celebrate) <input type="text" id="t4-input-5" placeholder="verb form..." style="background: #0f172a; border: 1px solid #475569; color: #fbbf24; padding: 4px 8px; border-radius: 6px; width: 180px; font-weight: 700;"> his 90th birthday.
+                </div>
+
+                <div style="margin-top: 14px; display: flex; align-items: center; gap: 14px;">
+                  <button class="slide-btn" onclick="checkTask4()" style="background: #10b981; border-color: #10b981;">Check Grammar</button>
+                  <span id="t4-feedback" style="font-weight: 700;"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- STAGE 6: MINIGAME BAKE CAKE -->
+            <div class="interactive-stage-section" id="stage-cake">
+              <div class="cake-game-wrapper">
+                <div style="text-align: center;">
+                  <span class="dinner-badge" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border-color: #fbbf24;">🎂 Reading Comprehension Minigame</span>
+                  <h3 style="font-size: 1.8rem; font-weight: 800; color: #fff; margin-top: 8px;">BAKE CAKE!!!</h3>
+                  <p style="font-size: 0.95rem; color: #cbd5e1; max-width: 650px; margin: 8px auto 0;">
+                    Let's bake a celebration cake for Nam's grandfather on his 90th birthday! Each correct answer completes one stage of the baking process.
+                  </p>
+                </div>
+
+                <div class="cake-graphic-stage">
+                  <div class="cake-display-icon" id="cake-display-icon">🥣</div>
+                  <div class="cake-step-title" id="cake-step-title">Step 1: Prepare delicious sponge cake base</div>
+                  <div class="cake-progress-dots" id="cake-dots-container"></div>
+                </div>
+
+                <div class="dinner-quiz-box" style="background: rgba(15, 23, 42, 0.85);">
+                  <div class="dinner-question-text" id="cake-q-text">Loading question...</div>
+                  <div class="dinner-options-grid" id="cake-opts-grid"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STAGE 7: CONSOLIDATION & HOMEWORK -->
+            <div class="interactive-stage-section" id="stage-wrapup">
+              <div class="stage-header">
+                <div class="stage-title">📋 Consolidation & Homework</div>
+                <div class="stage-desc">Review lesson highlights and prepare for upcoming assignments.</div>
+              </div>
+
+              <div class="content-section" style="padding: 0;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
+                  <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid #10b981; border-radius: 14px; padding: 20px;">
+                    <h4 style="color: #34d399; font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                      <span>🎯</span> What We've Learnt
+                    </h4>
+                    <ul style="color: #cbd5e1; line-height: 1.8; padding-left: 20px; font-size: 0.95rem;">
+                      <li><strong>5 Core Health Vocabulary Items:</strong> work out, fit, diet, balanced, full of energy.</li>
+                      <li><strong>Reading Skill:</strong> Extracting specific information from dialogue between Mark and Nam.</li>
+                      <li><strong>Core Grammar:</strong> Distinguishing Past Simple from Present Perfect tenses.</li>
+                    </ul>
+                  </div>
+
+                  <div style="background: rgba(245, 158, 11, 0.1); border: 1px solid #f59e0b; border-radius: 14px; padding: 20px;">
+                    <h4 style="color: #fbbf24; font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                      <span>📝</span> Homework
+                    </h4>
+                    <ul style="color: #cbd5e1; line-height: 1.8; padding-left: 20px; font-size: 0.95rem;">
+                      <li>Complete all corresponding exercises in the Workbook.</li>
+                      <li>Write a short paragraph (80-100 words) describing your personal habits to keep fit and healthy.</li>
+                      <li>Prepare materials and ideas for the Project in Lesson 8.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- TAB 1: OVERVIEW -->
+        <section class="tab-content-panel" id="panel-overview">
+          <div class="content-section">
+            <div class="section-header">
+              <h3 class="section-title">🎯 Mục Tiêu Bài Học (Learning Objectives)</h3>
+            </div>
+            <div class="objectives-grid" id="objectives-grid"></div>
+          </div>
+        </section>
+
+        <!-- TAB 2: VOCABULARY -->
+        <section class="tab-content-panel" id="panel-vocabulary">
+          <div class="content-section">
+            <div class="section-header">
+              <h3 class="section-title">📚 Danh Sách Từ Vựng Cốt Lõi</h3>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Bấm 🔊 để nghe phát âm giọng chuẩn</span>
+            </div>
+            <div class="vocab-grid" id="vocab-grid"></div>
+          </div>
+        </section>
+
+        <!-- TAB 3: GRAMMAR -->
+        <section class="tab-content-panel" id="panel-grammar">
+          <div class="content-section" id="grammar-container"></div>
+        </section>
+
+        <!-- TAB 4: READING & SPEAKING -->
+        <section class="tab-content-panel" id="panel-reading">
+          <div class="content-section">
+            <div class="reading-box">
+              <h3 class="reading-topic-title" id="reading-topic-title">Reading Focus</h3>
+              <p class="reading-content" id="reading-takeaway-text">Passage Summary</p>
+            </div>
+
+            <div class="section-header" style="margin-top: 24px;">
+              <h3 class="section-title">🗣️ Mẫu Câu Giao Tiếp & Thảo Luận</h3>
+            </div>
+            <div class="speaking-phrase-list" id="speaking-phrase-list"></div>
+          </div>
+        </section>
+
+        <!-- TAB 5: FLASHCARDS -->
+        <section class="tab-content-panel" id="panel-flashcards">
+          <div class="content-section">
+            <div class="flashcard-section">
+              <div class="flashcard-wrapper" id="flashcard-wrapper" onclick="flipFlashcard()">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">
+                    <div class="flashcard-hint">CHẠM ĐỂ XEM NGHĨA</div>
+                    <div class="flashcard-word" id="fc-word">Longevity</div>
+                    <div class="flashcard-phonetic" id="fc-phonetic">/lɒnˈdʒevəti/</div>
+                  </div>
+                  <div class="flashcard-back">
+                    <div class="flashcard-hint" style="color: #d946ef;">Ý NGHĨA & VÍ DỤ</div>
+                    <div class="flashcard-meaning" id="fc-meaning">sự trường thọ</div>
+                    <div class="flashcard-example" id="fc-example">"A balanced diet promotes longevity."</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flashcard-controls">
+                <button class="btn-flashcard" onclick="prevFlashcard()">← Thẻ Trước</button>
+                <span class="flashcard-counter" id="fc-counter">1 / 8</span>
+                <button class="btn-flashcard" onclick="nextFlashcard()">Thẻ Kế →</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 6: QUIZ -->
+        <section class="tab-content-panel" id="panel-quiz">
+          <div class="content-section">
+            <div class="quiz-container">
+              <div id="quiz-questions-list"></div>
+              <div class="quiz-actions">
+                <button class="btn-submit-quiz" id="quiz-submit-btn" onclick="submitQuiz()">Nộp Bài & Xem Giải Thích</button>
+                <button class="btn-retry-quiz" id="quiz-retry-btn" onclick="retryQuiz()" style="display: none;">Làm Lại Quiz</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Student Backpack / Learning Passport Modal -->
+  <div class="passport-modal-backdrop" id="backpack-modal">
+    <div class="passport-card">
+      <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 14px; margin-bottom: 18px;">
+        <h3 style="font-size: 1.25rem; font-weight: 800; display: flex; align-items: center; gap: 10px; color: #fbbf24;">
+          <span>🎒</span> Hộ Chiếu Hành Trình Di Sản
+        </h3>
+        <button class="popup-close-btn" id="btn-close-backpack" title="Đóng">✕</button>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 20px;">
+        <div style="background: rgba(15,23,42,0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px; text-align: center;">
+          <div style="font-size: 1.5rem; font-weight: 800; color: #fbbf24;" id="stat-explored-count">1 / 10</div>
+          <div style="font-size: 0.75rem; color: #94a3b8;">Units Đã Học</div>
+        </div>
+        <div style="background: rgba(15,23,42,0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px; text-align: center;">
+          <div style="font-size: 1.5rem; font-weight: 800; color: #10b981;">120+</div>
+          <div style="font-size: 0.75rem; color: #94a3b8;">Từ Vựng Trọng Tâm</div>
+        </div>
+        <div style="background: rgba(15,23,42,0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px; text-align: center;">
+          <div style="font-size: 1.5rem; font-weight: 800; color: #38bdf8;">20</div>
+          <div style="font-size: 0.75rem; color: #94a3b8;">Chuyên Đề Ngữ Pháp</div>
+        </div>
+        <div style="background: rgba(15,23,42,0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px; text-align: center;">
+          <div style="font-size: 1.5rem; font-weight: 800; color: #e040fb;">10</div>
+          <div style="font-size: 0.75rem; color: #94a3b8;">Bộ Đề Quiz THPTQG</div>
+        </div>
+      </div>
+
+      <div style="background: rgba(15,23,42,0.5); border-radius: 14px; padding: 14px; border: 1px solid rgba(255,255,255,0.05);">
+        <div style="font-size: 0.85rem; font-weight: 700; color: #e2e8f0; margin-bottom: 10px;">
+          <span>🏅</span> Huy Hiệu Đã Đạt Được
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">
+          <div style="background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.4); border-radius: 10px; padding: 8px; text-align: center;" id="badge-first-step">
+            <div style="font-size: 1.4rem;">⛩️</div>
+            <div style="font-size: 0.7rem; font-weight: 600; color: #cbd5e1;">Mở Cổng Làng</div>
+          </div>
+          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 8px; text-align: center;" id="badge-sem1">
+            <div style="font-size: 1.4rem;">🛶</div>
+            <div style="font-size: 0.7rem; font-weight: 600; color: #cbd5e1;">Vượt Sông Hồng</div>
+          </div>
+          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 8px; text-align: center;" id="badge-camau">
+            <div style="font-size: 1.4rem;">🚩</div>
+            <div style="font-size: 0.7rem; font-weight: 600; color: #cbd5e1;">Mũi Cà Mau</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; text-align: center;">
+        <button class="popup-action-btn" onclick="document.getElementById('backpack-modal').classList.remove('open')">
+          Tiếp Tục Hành Trình ➜
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Modal Overlay -->
+  <div class="search-results-overlay" id="search-results-overlay" onclick="closeSearchModal()">
+    <div class="search-modal-box" onclick="event.stopPropagation()">
+      <div class="search-modal-header">
+        <div class="search-modal-title">🔍 Kết Quả Tìm Kiếm Toàn Bộ 10 Units</div>
+        <button class="btn-close-modal" onclick="closeSearchModal()">✕</button>
+      </div>
+      <div id="search-results-list"></div>
+    </div>
+  </div>
+
+  <!-- Password Protection Gate -->
+  <div class="password-gate-overlay" id="password-gate">
+    <div class="password-gate-card">
+      <div class="lock-icon-glow">🔐</div>
+      <h2 class="lock-title">Khu Vực Giới Hạn</h2>
+      <p class="lock-desc">
+        Vui lòng nhập mật khẩu để truy cập và xem trọn bộ bài giảng <strong>Global Success 11</strong>.
+      </p>
+
+      <form id="password-form" onsubmit="event.preventDefault(); verifyPassword();">
+        <div class="password-input-group">
+          <input type="password" id="pass-input" placeholder="Nhập mật khẩu..." autofocus autocomplete="off">
+          <button type="button" class="btn-toggle-pass" onclick="togglePassVisibility()" title="Ẩn/Hiện mật khẩu">👁️</button>
+        </div>
+        <div class="password-error-msg" id="pass-error"></div>
+        
+        <div class="lock-buttons">
+          <button type="submit" class="btn-unlock" id="btn-unlock">Mở Khóa Bài Giảng</button>
+          <a href="../index.html" class="btn-lock-home">← Về Trang Chủ</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/lesson_getting_started.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/journey_map.js"></script>
+</body>
+</html>

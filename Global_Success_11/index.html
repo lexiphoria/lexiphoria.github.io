@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/slide_viewer.css">
   <link rel="stylesheet" href="css/lesson_getting_started.css">
   <link rel="stylesheet" href="css/lesson_language.css">
+  <link rel="stylesheet" href="css/lesson_interactive_suite.css">
 </head>
 <body>
 
@@ -183,27 +184,27 @@
               </div>
               <div class="sachmem-lesson-item" id="menu-lesson-3" onclick="switchSachMemLesson('reading')">
                 <span>3. READING</span>
-                <span style="font-size: 0.75rem; color: #94a3b8;">Reading comprehension</span>
+                <span class="lesson-tag">🌟 ONLINE PPTX LESSON</span>
               </div>
               <div class="sachmem-lesson-item" id="menu-lesson-4" onclick="switchSachMemLesson('speaking')">
                 <span>4. SPEAKING</span>
-                <span style="font-size: 0.75rem; color: #94a3b8;">Speaking practice</span>
+                <span class="lesson-tag">🌟 ONLINE PPTX LESSON</span>
               </div>
               <div class="sachmem-lesson-item" id="menu-lesson-5" onclick="switchSachMemLesson('listening')">
                 <span>5. LISTENING</span>
-                <span style="font-size: 0.75rem; color: #94a3b8;">Listening practice</span>
+                <span class="lesson-tag">🌟 ONLINE PPTX LESSON</span>
               </div>
               <div class="sachmem-lesson-item" id="menu-lesson-6" onclick="switchSachMemLesson('writing')">
                 <span>6. WRITING</span>
-                <span style="font-size: 0.75rem; color: #94a3b8;">Writing skills</span>
+                <span class="lesson-tag">🌟 ONLINE PPTX LESSON</span>
               </div>
               <div class="sachmem-lesson-item" id="menu-lesson-7" onclick="switchSachMemLesson('culture')">
                 <span>7. COMMUNICATION AND CULTURE / CLIL</span>
-                <span style="font-size: 0.75rem; color: #94a3b8;">Culture & CLIL</span>
+                <span class="lesson-tag">🌟 ONLINE PPTX LESSON</span>
               </div>
               <div class="sachmem-lesson-item" id="menu-lesson-8" onclick="switchSachMemLesson('lookingback')">
                 <span>8. LOOKING BACK & PROJECT</span>
-                <span style="font-size: 0.75rem; color: #94a3b8;">Review & Project</span>
+                <span class="lesson-tag">🌟 ONLINE PPTX LESSON</span>
               </div>
             </div>
 
@@ -1095,6 +1096,463 @@
           </div>
         </section>
 
+        
+        <!-- ===================================================================
+             TAB: LESSON 3 READING (ONLINE INTERACTIVE E-LESSON)
+             =================================================================== -->
+        <section class="tab-content-panel" id="panel-reading">
+          <div class="suite-panel-container">
+            <div class="suite-header">
+              <div class="suite-title-group">
+                <span class="suite-badge">Lesson 3 · Reading</span>
+                <div>
+                  <h2 class="suite-main-title">How to Live a Long and Healthy Life</h2>
+                  <p class="suite-sub-title">Reading Comprehension • 3 Pillars of Longevity: Eat Better, Move More, Sleep Well</p>
+                </div>
+              </div>
+              <button class="suite-btn-action" onclick="openLessonPresentation(3, 0)">
+                🎬 Mở Slide Bài Giảng (43 Slides)
+              </button>
+            </div>
+
+            <!-- Stage 1: Fresh Juice Minigame -->
+            <div class="suite-card">
+              <div class="suite-card-title"><span>🍹</span> Minigame: Fresh Juice Blender (Tenses & Vocab)</div>
+              <div class="game-arena-card" id="l3-juice-q-container">
+                <!-- Injected by lesson_interactive_suite.js -->
+              </div>
+            </div>
+
+            <!-- Stage 2: 3 Pillars of Longevity Passage -->
+            <div class="suite-card">
+              <div class="suite-card-title"><span>📖</span> Reading Passage: The 3 Pillars of Longevity</div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 14px;">
+                <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid #10b981; border-radius: 14px; padding: 18px;">
+                  <h4 style="color: #34d399; font-size: 1.1rem; margin-bottom: 8px;">🥗 Pillar 1: Eat Better</h4>
+                  <p style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.6;">
+                    Read food labels carefully to avoid too much sodium and sugar. Add plenty of leafy greens, fruits, and whole grains to provide cellular micronutrients.
+                  </p>
+                  <button class="suite-btn-action" style="padding: 6px 12px; font-size: 0.82rem; background: #059669;" onclick="speakEnglish('Eat better. Study food labels carefully. Avoid too much salt and sugar. Add fresh vegetables and whole grains.')">🔊 Listen</button>
+                </div>
+                <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid #3b82f6; border-radius: 14px; padding: 18px;">
+                  <h4 style="color: #60a5fa; font-size: 1.1rem; margin-bottom: 8px;">🏃 Pillar 2: Move More</h4>
+                  <p style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.6;">
+                    Do at least 30 minutes of moderate exercise daily. Mix cardio, bodyweight squats, and walking to strengthen muscles and improve heart health.
+                  </p>
+                  <button class="suite-btn-action" style="padding: 6px 12px; font-size: 0.82rem; background: #2563eb;" onclick="speakEnglish('Move more. Engage in at least 30 minutes of physical activity daily to strengthen heart and muscles.')">🔊 Listen</button>
+                </div>
+                <div style="background: rgba(168, 85, 247, 0.1); border: 1px solid #a855f7; border-radius: 14px; padding: 18px;">
+                  <h4 style="color: #c084fc; font-size: 1.1rem; margin-bottom: 8px;">🌙 Pillar 3: Sleep Well</h4>
+                  <p style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.6;">
+                    Aim for 7 to 8 hours of restorative sleep. Screens give off blue light that delays melatonin. Turn off devices 30-60 minutes before bedtime.
+                  </p>
+                  <button class="suite-btn-action" style="padding: 6px 12px; font-size: 0.82rem; background: #7c3aed;" onclick="speakEnglish('Sleep well. Get 7 to 8 hours of sleep nightly. Turn off electronic screens early to avoid blue light.')">🔊 Listen</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage 3: Key Vocabulary -->
+            <div class="suite-card">
+              <div class="suite-card-title"><span>🔤</span> Core Vocabulary Spotlight</div>
+              <div class="suite-grid-3col">
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.06);">
+                  <div style="font-weight: 700; color: #fff;">life expectancy</div>
+                  <div style="color: #38bdf8; font-size: 0.82rem;">/laɪf ɪkˈspektənsi/ (n)</div>
+                  <div style="color: #cbd5e1; font-size: 0.85rem; margin-top: 4px;">tuổi thọ trung bình dự tính</div>
+                </div>
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.06);">
+                  <div style="font-weight: 700; color: #fff;">nutrient</div>
+                  <div style="color: #38bdf8; font-size: 0.82rem;">/ˈnjuːtriənt/ (n)</div>
+                  <div style="color: #cbd5e1; font-size: 0.85rem; margin-top: 4px;">chất dinh dưỡng</div>
+                </div>
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.06);">
+                  <div style="font-weight: 700; color: #fff;">give off</div>
+                  <div style="color: #38bdf8; font-size: 0.82rem;">/ɡɪv ɒf/ (phr v)</div>
+                  <div style="color: #cbd5e1; font-size: 0.85rem; margin-top: 4px;">phát ra, tỏa ra (ánh sáng/khí)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             TAB: LESSON 4 SPEAKING (ONLINE INTERACTIVE E-LESSON)
+             =================================================================== -->
+        <section class="tab-content-panel" id="panel-speaking">
+          <div class="suite-panel-container">
+            <div class="suite-header">
+              <div class="suite-title-group">
+                <span class="suite-badge" style="background: linear-gradient(135deg, #f59e0b, #d97706);">Lesson 4 · Speaking</span>
+                <div>
+                  <h2 class="suite-main-title">Giving Instructions for an Exercise Routine</h2>
+                  <p class="suite-sub-title">Movement Coaching • Sequence Markers (First, Next, Then, Finally) • Form & Cues</p>
+                </div>
+              </div>
+              <button class="suite-btn-action" onclick="openLessonPresentation(4, 0)">
+                🎬 Mở Slide Bài Giảng (33 Slides)
+              </button>
+            </div>
+
+            <!-- Stage 1: Harvest Carrots Minigame -->
+            <div class="suite-card">
+              <div class="suite-card-title"><span>🥕</span> Minigame: Harvest Carrots (Nutrition & Workout Rules)</div>
+              <div class="game-arena-card" id="l4-carrots-q-container">
+                <!-- Injected by lesson_interactive_suite.js -->
+              </div>
+            </div>
+
+            <!-- Stage 2: Exercise Routine Simulator -->
+            <div class="suite-card">
+              <div class="suite-card-title"><span>🏋️‍♂️</span> Interactive Exercise Routine Simulator</div>
+              <div style="display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap;">
+                <button class="routine-selector-btn suite-stage-tab active" data-routine="squats" onclick="switchSimRoutine('squats')">
+                  🦵 Squats Routine
+                </button>
+                <button class="routine-selector-btn suite-stage-tab" data-routine="starjumps" onclick="switchSimRoutine('starjumps')">
+                  ⭐ Star Jumps Routine
+                </button>
+                <button class="routine-selector-btn suite-stage-tab" data-routine="pushups" onclick="switchSimRoutine('pushups')">
+                  💪 Push-ups Routine
+                </button>
+              </div>
+
+              <div id="exercise-sim-content">
+                <!-- Injected by lesson_interactive_suite.js -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             TAB: LESSON 5 LISTENING (ONLINE INTERACTIVE E-LESSON)
+             =================================================================== -->
+        <section class="tab-content-panel" id="panel-listening">
+          <div class="suite-panel-container">
+            <div class="suite-header">
+              <div class="suite-title-group">
+                <span class="suite-badge" style="background: linear-gradient(135deg, #06b6d4, #0891b2);">Lesson 5 · Listening</span>
+                <div>
+                  <h2 class="suite-main-title">Food and Health: Teen Life Broadcast</h2>
+                  <p class="suite-sub-title">Audio Comprehension • Teenage Nutritional Balance • 1-Day Healthy Meal Planner</p>
+                </div>
+              </div>
+              <button class="suite-btn-action" onclick="openLessonPresentation(5, 0)">
+                🎬 Mở Slide Bài Giảng (34 Slides)
+              </button>
+            </div>
+
+            <!-- Stage 1: Food Sorter -->
+            <div class="suite-card">
+              <div class="suite-card-title"><span>🥗</span> Interactive Challenge: Wholesome vs Processed Food Sorter</div>
+              <div class="game-arena-card" id="l5-food-sorter-container">
+                <!-- Injected by lesson_interactive_suite.js -->
+              </div>
+            </div>
+
+            <!-- Stage 2: TV Broadcast Transcript & Audio -->
+            <div class="suite-card">
+              <div class="suite-card-title">
+                <span>📻</span> TV Show 'Teen Life' Broadcast Audio & Transcript
+                <button class="suite-btn-action" style="margin-left: auto; padding: 6px 14px; font-size: 0.85rem;" onclick="speakEnglish('Good evening! I am Oliver and you are watching Teen Life. Today Dr. Mary shares practical nutrition advice for teenagers. Cut down on sugary sodas and eat whole grains!')">
+                  🔊 Read Audio Transcript
+                </button>
+              </div>
+              <div style="background: rgba(15, 23, 42, 0.6); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.06); font-size: 0.95rem; color: #cbd5e1; line-height: 1.7;">
+                <p><strong>Host (Oliver):</strong> Good evening! I’m Oliver and you’re watching "Teen Life". This week we have received a lot of questions about teen diet, energy, and skin health. Welcome, Dr. Mary!</p>
+                <p><strong>Dr. Mary:</strong> Hello Oliver! Many teenagers suffer from afternoon fatigue and skin acne. The primary cause is often high sugar and processed food intake. To fix this: replace sugary snacks with whole grains, eat lean fish and fresh greens, and drink plenty of clean water.</p>
+              </div>
+            </div>
+
+            <!-- Stage 3: 1-Day Meal Planner -->
+            <div class="suite-card">
+              <div class="suite-card-title"><span>🥑</span> 1-Day Healthy Teen Meal Planner Studio</div>
+              <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 16px;">Build a balanced nutrition menu for an active high school student:</p>
+              
+              <div class="meal-slot-row">
+                <span class="meal-slot-label">🍳 Breakfast:</span>
+                <input type="text" class="meal-slot-input" id="plan-breakfast" placeholder="e.g., Rolled oats with blueberries, boiled egg, warm water">
+              </div>
+              <div class="meal-slot-row">
+                <span class="meal-slot-label">🍱 Lunch:</span>
+                <input type="text" class="meal-slot-input" id="plan-lunch" placeholder="e.g., Brown rice, grilled chicken breast, steamed broccoli">
+              </div>
+              <div class="meal-slot-row">
+                <span class="meal-slot-label">🍎 Snack:</span>
+                <input type="text" class="meal-slot-input" id="plan-snack" placeholder="e.g., Greek yogurt with raw walnuts and banana">
+              </div>
+              <div class="meal-slot-row">
+                <span class="meal-slot-label">🍲 Dinner:</span>
+                <input type="text" class="meal-slot-input" id="plan-dinner" placeholder="e.g., Steamed salmon, pumpkin soup, fresh green salad">
+              </div>
+
+              <div style="margin-top: 16px;">
+                <button class="suite-btn-action" onclick="calculateMealPlanScore()">
+                  📊 Evaluate Nutritional Balance
+                </button>
+              </div>
+              <div id="meal-plan-result"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             TAB: LESSON 6 WRITING (ONLINE INTERACTIVE E-LESSON)
+             =================================================================== -->
+        <section class="tab-content-panel" id="panel-writing">
+          <div class="suite-panel-container">
+            <div class="suite-header">
+              <div class="suite-title-group">
+                <span class="suite-badge" style="background: linear-gradient(135deg, #ec4899, #db2777);">Lesson 6 · Writing</span>
+                <div>
+                  <h2 class="suite-main-title">A Short Message: Invitations & Replies</h2>
+                  <p class="suite-sub-title">Writing Skills • 3-Part Structure (Greeting, Body, Closing) • Live Composer & Peer Review</p>
+                </div>
+              </div>
+              <button class="suite-btn-action" onclick="openLessonPresentation(6, 0)">
+                🎬 Mở Slide Bài Giảng (29 Slides)
+              </button>
+            </div>
+
+            <div class="suite-grid-2col">
+              <!-- Left: Form Controls -->
+              <div class="suite-card">
+                <div class="suite-card-title"><span>✍️</span> Short Message Composer</div>
+                
+                <div style="margin-bottom: 14px;">
+                  <label style="color: #94a3b8; font-size: 0.85rem; font-weight: 700; display: block; margin-bottom: 6px;">Response Mode:</label>
+                  <div style="display: flex; gap: 16px;">
+                    <label style="color: #34d399; font-weight: 700; cursor: pointer;">
+                      <input type="radio" name="msg-mode" value="accept" checked onchange="updateMessageComposer()"> ✅ Accept Invitation
+                    </label>
+                    <label style="color: #f87171; font-weight: 700; cursor: pointer;">
+                      <input type="radio" name="msg-mode" value="decline" onchange="updateMessageComposer()"> ❌ Decline Politely
+                    </label>
+                  </div>
+                </div>
+
+                <div style="margin-bottom: 12px;">
+                  <label style="color: #94a3b8; font-size: 0.85rem; font-weight: 700; display: block; margin-bottom: 4px;">Recipient's Name:</label>
+                  <input type="text" id="msg-friend-name" value="Nam" oninput="updateMessageComposer()" class="meal-slot-input" style="width: 100%;">
+                </div>
+
+                <div style="margin-bottom: 12px;">
+                  <label style="color: #94a3b8; font-size: 0.85rem; font-weight: 700; display: block; margin-bottom: 4px;">Activity:</label>
+                  <input type="text" id="msg-activity" value="cycling club session" oninput="updateMessageComposer()" class="meal-slot-input" style="width: 100%;">
+                </div>
+
+                <div style="margin-bottom: 12px;">
+                  <label style="color: #94a3b8; font-size: 0.85rem; font-weight: 700; display: block; margin-bottom: 4px;">Time & Meeting Location:</label>
+                  <input type="text" id="msg-time" value="6:30 a.m. this Saturday" oninput="updateMessageComposer()" class="meal-slot-input" style="width: 100%;">
+                </div>
+
+                <div style="margin-bottom: 12px;">
+                  <label style="color: #94a3b8; font-size: 0.85rem; font-weight: 700; display: block; margin-bottom: 4px;">Reason (If declining):</label>
+                  <input type="text" id="msg-reason" value="have an important doctor's checkup" oninput="updateMessageComposer()" class="meal-slot-input" style="width: 100%;">
+                </div>
+
+                <div style="margin-bottom: 16px;">
+                  <label style="color: #94a3b8; font-size: 0.85rem; font-weight: 700; display: block; margin-bottom: 4px;">Your Name (Sign-off):</label>
+                  <input type="text" id="msg-my-name" value="Linda" oninput="updateMessageComposer()" class="meal-slot-input" style="width: 100%;">
+                </div>
+
+                <button class="suite-btn-action" onclick="copyMessageDraft()">
+                  📋 Copy Message to Clipboard
+                </button>
+              </div>
+
+              <!-- Right: Live Letter Envelope Preview -->
+              <div class="suite-card">
+                <div class="suite-card-title"><span>💌</span> Live Message Card Preview</div>
+                <div class="message-preview-envelope" id="msg-live-preview">
+                  <!-- Injected by lesson_interactive_suite.js -->
+                </div>
+
+                <div style="margin-top: 20px; background: rgba(15, 23, 42, 0.6); padding: 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.06);">
+                  <div style="color: #38bdf8; font-weight: 700; font-size: 0.9rem; margin-bottom: 8px;">Peer Review Rubric (NLS 3.1NC1a):</div>
+                  <ul style="color: #94a3b8; font-size: 0.85rem; line-height: 1.6; margin: 0; padding-left: 18px;">
+                    <li>✓ Proper Greeting with comma</li>
+                    <li>✓ Direct expression of acceptance or polite refusal</li>
+                    <li>✓ Specific time, place, or valid reason</li>
+                    <li>✓ Courteous sign-off and sender's name</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             TAB: LESSON 7 COMMUNICATION & CLIL (ONLINE INTERACTIVE E-LESSON)
+             =================================================================== -->
+        <section class="tab-content-panel" id="panel-culture">
+          <div class="suite-panel-container">
+            <div class="suite-header">
+              <div class="suite-title-group">
+                <span class="suite-badge" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">Lesson 7 · CLIL</span>
+                <div>
+                  <h2 class="suite-main-title">Everyday English & Biology: Bacteria and Viruses</h2>
+                  <p class="suite-sub-title">Offering Help • Microorganisms Comparison Lab • Antibiotic Stewardship</p>
+                </div>
+              </div>
+              <button class="suite-btn-action" onclick="openLessonPresentation(7, 0)">
+                🎬 Mở Slide Bài Giảng (48 Slides)
+              </button>
+            </div>
+
+            <!-- Stage 1: Everyday English Dialogue Roleplay -->
+            <div class="suite-card">
+              <div class="suite-card-title"><span>🤝</span> Everyday English: Offering Help & Responding</div>
+              <div class="suite-grid-2col">
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 18px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.06);">
+                  <div style="color: #34d399; font-weight: 700; margin-bottom: 6px;">Offering Help:</div>
+                  <ul style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.8; padding-left: 18px; margin: 0;">
+                    <li>"Can I give you a hand with carrying the gym mats?"</li>
+                    <li>"Would you like me to get you some cold water?"</li>
+                    <li>"Shall I show you the stretching routine?"</li>
+                  </ul>
+                </div>
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 18px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.06);">
+                  <div style="color: #38bdf8; font-weight: 700; margin-bottom: 6px;">Responding:</div>
+                  <ul style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.8; padding-left: 18px; margin: 0;">
+                    <li><strong>Accepting:</strong> "Yes, please. That's very kind of you!"</li>
+                    <li><strong>Declining:</strong> "No, thanks. I think I can manage, but thank you for asking!"</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage 2: CLIL Comparison Table -->
+            <div class="suite-card">
+              <div class="suite-card-title">
+                <span>🔬</span> CLIL Biology Comparison: Bacteria vs. Viruses
+                <div style="margin-left: auto; display: flex; gap: 8px;">
+                  <button class="clil-filter-btn suite-stage-tab active" data-filter="all" onclick="filterCLILTable('all')">All Features</button>
+                  <button class="clil-filter-btn suite-stage-tab" data-filter="treatment" onclick="filterCLILTable('treatment')">Treatment Only</button>
+                </div>
+              </div>
+
+              <div style="overflow-x: auto;">
+                <table class="suite-table" id="clil-comparison-table">
+                  <thead>
+                    <tr>
+                      <th>Biological Feature</th>
+                      <th style="color: #34d399;">🧫 Bacteria</th>
+                      <th style="color: #f87171;">🦠 Viruses</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr data-cat="structure">
+                      <td><strong>Living Status</strong></td>
+                      <td>Living, single-celled organisms</td>
+                      <td>Non-living outside host cell</td>
+                    </tr>
+                    <tr data-cat="structure">
+                      <td><strong>Relative Size</strong></td>
+                      <td>Microscopic (~1-2 micrometers)</td>
+                      <td>Sub-microscopic (10 to 100x smaller than bacteria)</td>
+                    </tr>
+                    <tr data-cat="structure">
+                      <td><strong>Cellular Structure</strong></td>
+                      <td>Complete cell with cell wall & DNA</td>
+                      <td>No cells; genetic material inside protein coat</td>
+                    </tr>
+                    <tr data-cat="treatment">
+                      <td><strong>Medical Treatment</strong></td>
+                      <td><span style="color: #34d399; font-weight: 700;">Antibiotics kill bacteria</span></td>
+                      <td><span style="color: #f87171; font-weight: 700;">Antibiotics have NO effect</span> (Vaccines & Antivirals)</td>
+                    </tr>
+                    <tr data-cat="disease">
+                      <td><strong>Disease Examples</strong></td>
+                      <td>Tuberculosis, cholera, strep throat</td>
+                      <td>Flu, measles, chickenpox, COVID-19</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Stage 3: Prescription Challenge -->
+            <div class="suite-card">
+              <div class="suite-card-title"><span>💊</span> Doctor's Advisory Challenge: When are Antibiotics Needed?</div>
+              <div class="suite-grid-2col">
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 18px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.06);">
+                  <div style="font-weight: 700; color: #fff; margin-bottom: 6px;">Patient 1: Common Cold & Runny Nose</div>
+                  <p style="color: #cbd5e1; font-size: 0.88rem;">Patient has sneezing and clear mucus caused by Rhinovirus. Should antibiotics be prescribed?</p>
+                  <div style="display: flex; gap: 10px; margin-top: 10px;">
+                    <button class="suite-btn-action" style="background: #ef4444; padding: 6px 14px; font-size: 0.85rem;" onclick="verifyPrescription(1, true)">Give Antibiotics</button>
+                    <button class="suite-btn-action" style="background: #10b981; padding: 6px 14px; font-size: 0.85rem;" onclick="verifyPrescription(1, false)">No Antibiotics (Rest & Hydrate)</button>
+                  </div>
+                  <div id="rx-result-1" style="margin-top: 10px; font-size: 0.88rem; font-weight: 600;"></div>
+                </div>
+
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 18px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.06);">
+                  <div style="font-weight: 700; color: #fff; margin-bottom: 6px;">Patient 2: Strep Throat Infection</div>
+                  <p style="color: #cbd5e1; font-size: 0.88rem;">Throat swab confirmed Streptococcus bacterial infection. Should antibiotics be prescribed?</p>
+                  <div style="display: flex; gap: 10px; margin-top: 10px;">
+                    <button class="suite-btn-action" style="background: #10b981; padding: 6px 14px; font-size: 0.85rem;" onclick="verifyPrescription(2, true)">Give Antibiotics</button>
+                    <button class="suite-btn-action" style="background: #ef4444; padding: 6px 14px; font-size: 0.85rem;" onclick="verifyPrescription(2, false)">No Antibiotics</button>
+                  </div>
+                  <div id="rx-result-2" style="margin-top: 10px; font-size: 0.88rem; font-weight: 600;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             TAB: LESSON 8 LOOKING BACK & PROJECT (ONLINE INTERACTIVE E-LESSON)
+             =================================================================== -->
+        <section class="tab-content-panel" id="panel-lookingback">
+          <div class="suite-panel-container">
+            <div class="suite-header">
+              <div class="suite-title-group">
+                <span class="suite-badge" style="background: linear-gradient(135deg, #6366f1, #4f46e5);">Lesson 8 · Project</span>
+                <div>
+                  <h2 class="suite-main-title">Looking Back & Healthy Habits Posters</h2>
+                  <p class="suite-sub-title">Unit 1 Capstone Review • Longevity Arena • Digital Poster Project Studio (NLS 3.1a)</p>
+                </div>
+              </div>
+              <button class="suite-btn-action" onclick="openLessonPresentation(8, 0)">
+                🎬 Mở Slide Bài Giảng (24 Slides)
+              </button>
+            </div>
+
+            <!-- Stage 1: Longevity Science Challenge Arena -->
+            <div class="suite-card">
+              <div class="suite-card-title"><span>🧬</span> Longevity Science Challenge Arena</div>
+              <div class="game-arena-card" id="l8-longevity-container">
+                <!-- Injected by lesson_interactive_suite.js -->
+              </div>
+            </div>
+
+            <!-- Stage 2: Digital Poster Studio -->
+            <div class="suite-card">
+              <div class="suite-card-title"><span>🎨</span> Healthy Habits Digital Poster Studio (NLS 3.1a & 2.4a)</div>
+              <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 16px;">Select a campaign habit theme to generate the digital poster blueprint:</p>
+
+              <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <button class="poster-theme-btn suite-stage-tab active" data-theme="hydration" onclick="selectPosterTheme('hydration')">
+                  💧 Smart Hydration
+                </button>
+                <button class="poster-theme-btn suite-stage-tab" data-theme="sleep" onclick="selectPosterTheme('sleep')">
+                  🌙 Digital Sunset
+                </button>
+                <button class="poster-theme-btn suite-stage-tab" data-theme="plate" onclick="selectPosterTheme('plate')">
+                  🥗 Rainbow Plate
+                </button>
+                <button class="poster-theme-btn suite-stage-tab" data-theme="movement" onclick="selectPosterTheme('movement')">
+                  🏃 30-Min Movement
+                </button>
+              </div>
+
+              <!-- Poster Preview Canvas -->
+              <div id="poster-preview-canvas" style="border: 2px dashed #38bdf8; border-radius: 18px; padding: 6px; transition: all 0.3s ease;">
+                <!-- Injected by lesson_interactive_suite.js -->
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- TAB: FLASHCARDS (KEPT AS REQUESTED) -->
         <section class="tab-content-panel" id="panel-flashcards">
           <div class="content-section">
@@ -1222,6 +1680,13 @@
   <script src="js/data.js"></script>
   <script src="js/lesson_getting_started.js"></script>
   <script src="js/lesson_language.js"></script>
+    <script src="js/lesson_reading.js"></script>
+  <script src="js/lesson_speaking.js"></script>
+  <script src="js/lesson_listening.js"></script>
+  <script src="js/lesson_writing.js"></script>
+  <script src="js/lesson_communication.js"></script>
+  <script src="js/lesson_lookingback.js"></script>
+  <script src="js/lesson_interactive_suite.js"></script>
   <script src="js/slide_viewer.js"></script>
   <script src="js/app.js"></script>
   <script src="js/journey_map.js"></script>

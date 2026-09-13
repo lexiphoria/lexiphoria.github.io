@@ -1,0 +1,374 @@
+/* Global Success 11 - Interactive Learning Suite (Lessons 3 to 8) */
+.suite-panel-container {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+}
+
+.suite-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.suite-title-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.suite-badge {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.82rem;
+  padding: 6px 14px;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.suite-main-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.suite-sub-title {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin: 4px 0 0 0;
+}
+
+/* Stage Navigation Tabs */
+.suite-stage-nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+  background: rgba(15, 23, 42, 0.6);
+  padding: 8px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.suite-stage-tab {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.suite-stage-tab:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.suite-stage-tab.active {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #fff;
+  box-shadow: 0 4px 14px -2px rgba(59, 130, 246, 0.5);
+}
+
+/* Card Boxes */
+.suite-card {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.suite-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Interactive Grids & Games */
+.suite-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.suite-grid-3col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+/* Minigame Quiz Boxes */
+.game-arena-card {
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 26px;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-arena-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #10b981, #3b82f6, #8b5cf6);
+}
+
+.game-hud-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.game-score-badge {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid #10b981;
+  color: #34d399;
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 4px 14px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.game-q-counter {
+  color: #94a3b8;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.game-question-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f8fafc;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.game-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.game-opt-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+  padding: 12px 18px;
+  border-radius: 12px;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.game-opt-btn:hover:not(:disabled) {
+  background: rgba(59, 130, 246, 0.15);
+  border-color: #3b82f6;
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.game-opt-btn.correct {
+  background: rgba(16, 185, 129, 0.25) !important;
+  border-color: #10b981 !important;
+  color: #34d399 !important;
+}
+
+.game-opt-btn.wrong {
+  background: rgba(239, 68, 68, 0.25) !important;
+  border-color: #ef4444 !important;
+  color: #fca5a5 !important;
+}
+
+.game-feedback-msg {
+  margin-top: 16px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  min-height: 24px;
+}
+
+/* Exercise Simulator (Lesson 4) */
+.exercise-sim-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: rgba(30, 41, 59, 0.7);
+  border-radius: 18px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.exercise-visual-frame {
+  width: 220px;
+  height: 220px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 2px solid #3b82f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+}
+
+.exercise-visual-frame img {
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+}
+
+.exercise-step-tag {
+  background: #f59e0b;
+  color: #1e1b4b;
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 4px 14px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+/* Meal Planner (Lesson 5) */
+.meal-slot-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(15, 23, 42, 0.5);
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 10px;
+}
+
+.meal-slot-label {
+  font-weight: 700;
+  color: #38bdf8;
+  min-width: 110px;
+  font-size: 0.95rem;
+}
+
+.meal-slot-input {
+  flex: 1;
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.92rem;
+}
+
+/* Message Composer (Lesson 6) */
+.message-preview-envelope {
+  background: #fff;
+  color: #1e293b;
+  border-radius: 16px;
+  padding: 24px;
+  font-family: inherit;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  line-height: 1.6;
+}
+
+.message-preview-envelope .msg-greeting {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.message-preview-envelope .msg-body {
+  margin-bottom: 14px;
+  color: #334155;
+}
+
+.message-preview-envelope .msg-signoff {
+  font-weight: 600;
+  color: #475569;
+}
+
+/* Comparison Table (Lesson 7) */
+.suite-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+  font-size: 0.92rem;
+}
+
+.suite-table th, .suite-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.suite-table th {
+  background: rgba(30, 41, 59, 0.7);
+  color: #38bdf8;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+}
+
+.suite-table tr:hover td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Action Buttons */
+.suite-btn-action {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.suite-btn-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px -4px rgba(16, 185, 129, 0.5);
+}

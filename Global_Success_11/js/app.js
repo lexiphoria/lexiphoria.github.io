@@ -530,20 +530,38 @@ function switchSachMemLesson(lessonKey) {
     item.classList.remove('active');
   });
 
-  if (lessonKey === 'getting-started' || lessonKey === '1') {
-    const m1 = document.getElementById('menu-lesson-1');
-    if (m1) m1.classList.add('active');
-    if (typeof openLessonPresentation === 'function') {
-      openLessonPresentation(1, 0);
+  const lessonMap = {
+    'getting-started': 1,
+    '1': 1,
+    'language': 2,
+    'vocabulary': 2,
+    '2': 2,
+    'reading': 3,
+    '3': 3,
+    'speaking': 4,
+    '4': 4,
+    'listening': 5,
+    '5': 5,
+    'writing': 6,
+    '6': 6,
+    'culture': 7,
+    'communication': 7,
+    '7': 7,
+    'lookingback': 8,
+    'project': 8,
+    '8': 8
+  };
+
+  const lessonNum = lessonMap[lessonKey] || 1;
+  const menuItem = document.getElementById(`menu-lesson-${lessonNum}`);
+  if (menuItem) menuItem.classList.add('active');
+
+  if (typeof openLessonPresentation === 'function') {
+    openLessonPresentation(lessonNum, 0, false);
+    const card = document.getElementById('slide-presentation-card');
+    if (card) {
+      card.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  } else if (lessonKey === 'language' || lessonKey === 'vocabulary' || lessonKey === '2') {
-    const m2 = document.getElementById('menu-lesson-2');
-    if (m2) m2.classList.add('active');
-    if (typeof openLessonPresentation === 'function') {
-      openLessonPresentation(2, 0);
-    }
-  } else {
-    alert(`Lesson ${lessonKey.toUpperCase()} is being prepared in the curriculum!`);
   }
 }
 

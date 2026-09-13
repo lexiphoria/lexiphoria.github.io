@@ -1,6 +1,6 @@
 /**
  * Global Success 11 - Master Slide Presentation Engine
- * Handles direct slide playback for all lessons with clean aesthetic
+ * Handles direct slide playback for all 8 lessons with clean aesthetic
  * Shortcuts: [←] [→] Navigate | [F] Fullscreen | [A] Reveal Answers | [Esc] Close
  */
 
@@ -8,35 +8,107 @@ let currentSlideLesson = 1;
 let currentSlideIndex = 0;
 let isAnswerRevealed = false;
 
-// Return current active deck
+// Return current active deck for lessons 1 to 8
 function getActiveDeck() {
-  if (currentSlideLesson === 2 && typeof LESSON2_SLIDES !== 'undefined') {
-    return LESSON2_SLIDES;
+  switch (currentSlideLesson) {
+    case 1:
+      return (typeof LESSON1_SLIDES !== 'undefined') ? LESSON1_SLIDES : [];
+    case 2:
+      return (typeof LESSON2_SLIDES !== 'undefined') ? LESSON2_SLIDES : [];
+    case 3:
+      return (typeof LESSON3_SLIDES !== 'undefined') ? LESSON3_SLIDES : [];
+    case 4:
+      return (typeof LESSON4_SLIDES !== 'undefined') ? LESSON4_SLIDES : [];
+    case 5:
+      return (typeof LESSON5_SLIDES !== 'undefined') ? LESSON5_SLIDES : [];
+    case 6:
+      return (typeof LESSON6_SLIDES !== 'undefined') ? LESSON6_SLIDES : [];
+    case 7:
+      return (typeof LESSON7_SLIDES !== 'undefined') ? LESSON7_SLIDES : [];
+    case 8:
+      return (typeof LESSON8_SLIDES !== 'undefined') ? LESSON8_SLIDES : [];
+    default:
+      return (typeof LESSON1_SLIDES !== 'undefined') ? LESSON1_SLIDES : [];
   }
-  if (typeof LESSON1_SLIDES !== 'undefined') {
-    return LESSON1_SLIDES;
-  }
-  return [];
 }
 
-// Get Lesson Name
+// Get Lesson Metadata
 function getLessonMetadata(num) {
-  if (num === 2) {
-    return {
-      name: "Lesson 2 · Language",
-      sub: "Sounds, words, tenses",
+  const meta = {
+    1: {
+      name: "Lesson 1 · Getting Started",
+      sub: "Living Long and Healthy",
       unit: "Unit 1",
       unitTitle: "A Long and Healthy Life",
-      defaultCoverImage: "assets/lesson2/image110.jpeg"
-    };
-  }
-  return {
-    name: "Lesson 1 · Getting Started",
-    sub: "Living Long and Healthy",
-    unit: "Unit 1",
-    unitTitle: "A Long and Healthy Life",
-    defaultCoverImage: "assets/lesson1/image16.jpeg"
+      defaultCoverImage: "assets/lesson1/image16.jpeg",
+      interactiveTitle: "🎒 Mở Bài Tập Tương Tác Lesson 1 (Games & Dialogue)",
+      interactiveId: "panel-getting-started"
+    },
+    2: {
+      name: "Lesson 2 · Language",
+      sub: "Sounds, Words, Tenses",
+      unit: "Unit 1",
+      unitTitle: "A Long and Healthy Life",
+      defaultCoverImage: "assets/lesson2/image110.jpeg",
+      interactiveTitle: "🎒 Mở Bài Tập Tương Tác Lesson 2 (Dollar Challenge & Vocab)",
+      interactiveId: "panel-language"
+    },
+    3: {
+      name: "Lesson 3 · Reading",
+      sub: "How to Live a Long and Healthy Life",
+      unit: "Unit 1",
+      unitTitle: "A Long and Healthy Life",
+      defaultCoverImage: "assets/lesson3/image1.jpeg",
+      interactiveTitle: "🎒 Mở Bài Đọc & Minigame Fresh Juice Lesson 3",
+      interactiveId: "panel-reading"
+    },
+    4: {
+      name: "Lesson 4 · Speaking",
+      sub: "Giving Instructions for an Exercise Routine",
+      unit: "Unit 1",
+      unitTitle: "A Long and Healthy Life",
+      defaultCoverImage: "assets/lesson4/image16.jpeg",
+      interactiveTitle: "🎒 Mở Phòng Tập Thể Dục Tương Tác Lesson 4 (Carrots & Simulator)",
+      interactiveId: "panel-speaking"
+    },
+    5: {
+      name: "Lesson 5 · Listening",
+      sub: "Food and Health",
+      unit: "Unit 1",
+      unitTitle: "A Long and Healthy Life",
+      defaultCoverImage: "assets/lesson5/image1.jpeg",
+      interactiveTitle: "🎒 Mở Audio TV Show & Bộ Lập Thực Đơn Lesson 5",
+      interactiveId: "panel-listening"
+    },
+    6: {
+      name: "Lesson 6 · Writing",
+      sub: "A Short Message",
+      unit: "Unit 1",
+      unitTitle: "A Long and Healthy Life",
+      defaultCoverImage: "assets/lesson6/image1.jpeg",
+      interactiveTitle: "🎒 Mở Studio Soạn Tin Nhắn Ngắn & Peer Review Lesson 6",
+      interactiveId: "panel-writing"
+    },
+    7: {
+      name: "Lesson 7 · Communication & CLIL",
+      sub: "Everyday English & Bacteria vs Viruses",
+      unit: "Unit 1",
+      unitTitle: "A Long and Healthy Life",
+      defaultCoverImage: "assets/lesson7/image1.jpeg",
+      interactiveTitle: "🎒 Mở Bảng So Sánh Sinh Học CLIL & Roleplay Lesson 7",
+      interactiveId: "panel-culture"
+    },
+    8: {
+      name: "Lesson 8 · Looking Back & Project",
+      sub: "Review & Healthy Habits Posters",
+      unit: "Unit 1",
+      unitTitle: "A Long and Healthy Life",
+      defaultCoverImage: "assets/lesson8/image1.jpeg",
+      interactiveTitle: "🎒 Mở Đấu Trường Sống Thọ & Studio Poster Lesson 8",
+      interactiveId: "panel-lookingback"
+    }
   };
+  return meta[num] || meta[1];
 }
 
 // Initialize or Open Lesson Presentation directly
@@ -109,7 +181,7 @@ function renderMasterSlide() {
   const elAnswer = document.getElementById('slide-answer-box');
   if (elAnswer) {
     if (slide.reveal) {
-      elAnswer.innerHTML = `<strong>💡 Answers / Notes:</strong><br>${slide.reveal.replace(/\n/g, '<br>')}`;
+      elAnswer.innerHTML = `<strong>💡 Answers / Teacher Notes:</strong><br>${slide.reveal.replace(/\\n/g, '<br>')}`;
       elAnswer.classList.toggle('visible', isAnswerRevealed);
     } else {
       elAnswer.classList.remove('visible');
@@ -119,24 +191,26 @@ function renderMasterSlide() {
   // Media / Art Frame
   const elMediaBox = document.getElementById('slide-art-container');
   if (elMediaBox) {
-    // Select illustration based on lesson & category
-    let imgSrc = meta.defaultCoverImage;
-    if (currentSlideLesson === 2) {
-      if (slide.cat === 'Warm-up') imgSrc = "assets/lesson2/image16.jpeg";
-      else if (slide.cat === 'Pronunciation') imgSrc = "assets/lesson2/image30.png";
-      else if (slide.cat === 'Vocabulary') imgSrc = "assets/lesson2/image46.png";
-      else if (slide.cat === 'Grammar') imgSrc = "assets/lesson2/image60.png";
-      else if (slide.cat === 'Review Game') imgSrc = "assets/lesson2/image72.png";
-    } else {
-      if (slide.cat === 'Warm-up') imgSrc = "assets/lesson1/image16.jpeg";
-      else if (slide.cat === 'Game 1') imgSrc = "assets/lesson1/image101.png";
-      else if (slide.cat === 'Reading') imgSrc = "assets/lesson1/image104.png";
-      else if (slide.cat === 'Game 2') imgSrc = "assets/lesson1/image110.GIF";
+    // Select image: use slide.img if defined, else fallback to category or defaultCoverImage
+    let imgSrc = slide.img || meta.defaultCoverImage;
+    if (!slide.img) {
+      if (currentSlideLesson === 2) {
+        if (slide.cat === 'Warm-up') imgSrc = "assets/lesson2/image16.jpeg";
+        else if (slide.cat === 'Pronunciation') imgSrc = "assets/lesson2/image30.png";
+        else if (slide.cat === 'Vocabulary') imgSrc = "assets/lesson2/image46.png";
+        else if (slide.cat === 'Grammar') imgSrc = "assets/lesson2/image60.png";
+        else if (slide.cat === 'Review Game') imgSrc = "assets/lesson2/image72.png";
+      } else if (currentSlideLesson === 1) {
+        if (slide.cat === 'Warm-up') imgSrc = "assets/lesson1/image16.jpeg";
+        else if (slide.cat === 'Game 1') imgSrc = "assets/lesson1/image101.png";
+        else if (slide.cat === 'Reading') imgSrc = "assets/lesson1/image104.png";
+        else if (slide.cat === 'Game 2') imgSrc = "assets/lesson1/image110.GIF";
+      }
     }
 
     elMediaBox.innerHTML = `
       <div class="slide-art-frame">
-        <img src="${imgSrc}" alt="${slide.title}" onerror="this.src='../assets/images/unit1.jpg'">
+        <img src="${imgSrc}" alt="${slide.title}" onerror="this.src='${meta.defaultCoverImage}'">
       </div>
     `;
   }
@@ -160,7 +234,6 @@ function renderMasterSlide() {
             onclick="presentationJumpToSlide(${i})"></span>
     `).join('');
 
-    // Ensure active dot is scrolled into view
     const activeDot = elDots.children[currentSlideIndex];
     if (activeDot && typeof activeDot.scrollIntoView === 'function') {
       activeDot.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
@@ -170,9 +243,7 @@ function renderMasterSlide() {
   // Update interactive drawer toggle label
   const elInteractiveBtn = document.getElementById('btn-slide-interactive-toggle');
   if (elInteractiveBtn) {
-    elInteractiveBtn.textContent = currentSlideLesson === 1 
-      ? "🎒 Mở Bài Tập Tương Tác Lesson 1 (Games & Dialogue)" 
-      : "🎒 Mở Bài Tập Tương Tác Lesson 2 (Dollar Challenge & Vocab)";
+    elInteractiveBtn.textContent = meta.interactiveTitle;
   }
 }
 
@@ -226,6 +297,7 @@ function togglePresentationFullscreen() {
   if (btn) {
     btn.textContent = card.classList.contains('fullscreen') ? "🗗" : "⛶";
   }
+  document.body.style.overflow = card.classList.contains('fullscreen') ? 'hidden' : '';
 }
 
 // Return / Scroll to Unit Overview
@@ -247,16 +319,27 @@ function returnToUnitOverview() {
 
 // Toggle Interactive Practice Panel
 function toggleSlideInteractiveDrawer() {
-  // If lesson 1, switch to interactive mode or scroll down
-  if (currentSlideLesson === 1) {
-    if (typeof switchLesson1Mode === 'function') switchLesson1Mode('interactive');
-    const interSec = document.getElementById('lesson1-interactive-view');
-    if (interSec) {
-      interSec.style.display = 'block';
-      interSec.scrollIntoView({ behavior: 'smooth' });
-    }
+  const meta = getLessonMetadata(currentSlideLesson);
+  const targetPanelId = meta.interactiveId;
+
+  // If fullscreen, exit fullscreen first
+  const card = document.getElementById('slide-presentation-card');
+  if (card && card.classList.contains('fullscreen')) {
+    card.classList.remove('fullscreen');
+    document.body.style.overflow = '';
+    const btn = document.getElementById('slide-btn-fullscreen');
+    if (btn) btn.textContent = "⛶";
+  }
+
+  // Switch to corresponding interactive panel if exists
+  const targetPanel = document.getElementById(targetPanelId);
+  if (targetPanel) {
+    document.querySelectorAll('.tab-content-panel').forEach(p => p.classList.remove('active'));
+    targetPanel.classList.add('active');
+    targetPanel.scrollIntoView({ behavior: 'smooth' });
   } else {
-    const interSec = document.getElementById('lesson2-interactive-view');
+    // Scroll down to lesson interactive view if present
+    const interSec = document.getElementById(`lesson${currentSlideLesson}-interactive-view`);
     if (interSec) {
       interSec.style.display = 'block';
       interSec.scrollIntoView({ behavior: 'smooth' });
@@ -266,7 +349,6 @@ function toggleSlideInteractiveDrawer() {
 
 // Global Keyboard Handler for Slide Viewer
 document.addEventListener('keydown', (e) => {
-  // Ignore if user is typing in an input or textarea
   if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
 
   const presPanel = document.getElementById('panel-presentation');
@@ -290,7 +372,7 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// Auto-initialize when DOM ready (false for fullscreen on initial load)
+// Auto-initialize when DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   openLessonPresentation(1, 0, false);
 });

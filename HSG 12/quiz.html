@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Làm Bài Thi HSG 12 - Tương Tác Trực Tuyến</title>
+  <meta name="description" content="Trình làm bài thi tương tác Học sinh giỏi Tiếng Anh 12 với split-screen đọc hiểu, quét mã QR file nghe, tính giờ và chấm điểm tự động.">
+  <link rel="stylesheet" href="css/hsg.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <div style="display:flex; align-items:center; gap:1rem;">
+        <a href="index.html" class="btn btn-secondary" style="padding:0.4rem 0.85rem; font-size:0.85rem;" title="Quay lại danh sách đề">
+          ← Danh Sách Đề
+        </a>
+        <div class="brand-text">
+          <h1 id="quizTitle">Practice Test 1</h1>
+          <p id="quizModeBadge" class="tag tag-success" style="display:inline-block; margin-top:2px;">⏱️ Thi Thử Tính Giờ</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- Switch Test Dropdown -->
+        <select id="testSelect" class="btn btn-secondary" style="padding:0.45rem 0.75rem; font-size:0.85rem; cursor:pointer;" title="Chuyển đổi đề thi">
+          <option value="1">Practice Test 1</option>
+          <option value="2">Practice Test 2</option>
+          <option value="3">Practice Test 3</option>
+          <option value="4">Practice Test 4</option>
+          <option value="5">Practice Test 5</option>
+        </select>
+
+        <button id="themeToggleBtn" class="btn-icon" title="Chuyển đổi giao diện Sáng / Tối">
+          🌙
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Quiz Top Bar -->
+  <div class="quiz-topbar">
+    <div class="quiz-topbar-content">
+      <div class="quiz-info-group">
+        <div id="timerBox" class="timer-box">
+          <span>⏱️</span>
+          <span id="timerValue">60:00</span>
+        </div>
+        <div class="progress-info">
+          <span id="answeredStat" style="font-weight:600;">0 / 50 đã trả lời</span>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:1rem;">
+        <button id="submitTestBtn" class="btn btn-primary" style="padding:0.5rem 1.25rem;">
+          📤 Nộp Bài Thi
+        </button>
+      </div>
+    </div>
+    <!-- Progress Bar Line -->
+    <div style="width:100%; height:3px; background:rgba(255,255,255,0.08); margin-top:0.6rem; border-radius:2px; overflow:hidden;">
+      <div id="progressBar" style="width:0%; height:100%; background:var(--accent-gradient); transition:width 0.3s ease;"></div>
+    </div>
+  </div>
+
+  <!-- Main Quiz Container (Split Screen) -->
+  <div class="quiz-wrapper">
+    <div class="quiz-main-container">
+
+      <!-- Left: Reading Passage Pane (Sticky) -->
+      <aside id="passagePane" class="passage-pane" aria-label="Bài đọc hiểu và văn bản"></aside>
+
+      <!-- Center: Questions Stream -->
+      <main id="questionsContainer" class="questions-pane" aria-label="Danh sách câu hỏi"></main>
+
+      <!-- Right: Sticky Palette (1-50) -->
+      <aside class="palette-pane" aria-label="Bảng câu hỏi">
+        <h3>Bảng Câu Hỏi (1 – 50)</h3>
+        <div class="palette-legend">
+          <div class="legend-item"><span class="legend-dot answered"></span> Đã làm</div>
+          <div class="legend-item"><span class="legend-dot flagged"></span> Gắn cờ</div>
+          <div class="legend-item"><span class="legend-dot unanswered"></span> Chưa làm</div>
+        </div>
+        <div id="paletteGrid" class="palette-grid"></div>
+
+        <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid var(--border-color); display:flex; flex-direction:column; gap:0.5rem;">
+          <button class="btn btn-secondary" style="width:100%; font-size:0.82rem;" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+            ⬆️ Lên đầu trang
+          </button>
+          <button class="btn btn-primary" style="width:100%; font-size:0.85rem;" onclick="window.confirmSubmit()">
+            📤 Hoàn thành &amp; Nộp bài
+          </button>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- Result Modal -->
+  <div id="resultModal" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="modal-score-circle">
+        <span class="score-num" id="modalScoreText">8.5</span>
+        <span class="score-max">/ 10 Điểm</span>
+      </div>
+
+      <h2 style="text-align:center; font-size:1.4rem; font-weight:800; margin-bottom:0.5rem;">Kết Quả Bài Thi HSG 12</h2>
+      <p style="text-align:center; color:var(--text-secondary); font-size:0.9rem; margin-bottom:1.5rem;">
+        Chúc mừng bạn đã hoàn thành bài thi! Dưới đây là phân tích chi tiết kết quả.
+      </p>
+
+      <div class="score-stats-grid">
+        <div class="score-stat-item">
+          <div class="score-stat-val" id="modalCorrectCount" style="color:var(--success);">42 / 50</div>
+          <div class="score-stat-lbl">Số câu đúng</div>
+        </div>
+        <div class="score-stat-item">
+          <div class="score-stat-val" id="modalAccuracy" style="color:var(--accent-primary);">84%</div>
+          <div class="score-stat-lbl">Độ chính xác</div>
+        </div>
+        <div class="score-stat-item">
+          <div class="score-stat-val" style="color:var(--warning);">50</div>
+          <div class="score-stat-lbl">Tổng câu hỏi</div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:1.5rem;">
+        <h4 style="font-size:0.9rem; margin-bottom:0.6rem; color:var(--text-secondary);">Phân tích theo từng kỹ năng:</h4>
+        <div id="modalSectionBreakdown" style="background:var(--bg-card); padding:0.75rem 1rem; border-radius:var(--radius-md); border:1px solid var(--border-color);">
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
+        <button class="btn btn-secondary" onclick="window.closeModal()">
+          🔍 Xem Lại Bài Làm
+        </button>
+        <button class="btn btn-primary" onclick="window.restartTest()">
+          🔄 Làm Lại Đề Này
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

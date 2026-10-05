@@ -385,7 +385,7 @@ const HSG_TESTS_DATA = [
         "category": "Completion",
         "instruction": "Đọc đoạn văn và chọn mệnh đề/cụm từ đúng nhất để hoàn chỉnh văn bản.",
         "passageTitle": "Đoạn văn điền khuyết (Text Completion) - Đề 1",
-        "passage": "",
+        "passage": "Read the following passage and mark the letter A, B, C, or D on your answer sheet to indicate the correct option that best fits each of the numbered blanks from 17 to 21. \nOnline learning has become an increasingly common feature of modern education, (17) _________. With the rapid development of digital technology, students can now access lessons, materials, and discussions from virtually anywhere, (18) _________. This flexibility has made online learning particularly attractive to working adults and learners living in remote areas. \nIn addition to convenience, online learning offers several educational benefits. (19) _________. Moreover, digital platforms often provide interactive tools such as videos, quizzes, and discussion forums that enhance students’ engagement and understanding. These features allow learners to take greater responsibility for their own learning process. \nHowever, online learning also presents certain challenges. Without regular face-to-face interaction with teachers and classmates, (20) _________. Some critics argue that this learning format may reduce learners’ motivation and increase feelings of isolation. (21) _________.",
         "question": "",
         "options": {
           "A": "which significantly transforms traditional teaching methods",
@@ -405,7 +405,7 @@ const HSG_TESTS_DATA = [
         "category": "Completion",
         "instruction": "Đọc đoạn văn và chọn mệnh đề/cụm từ đúng nhất để hoàn chỉnh văn bản.",
         "passageTitle": "Đoạn văn điền khuyết (Text Completion) - Đề 1",
-        "passage": "",
+        "passage": "Read the following passage and mark the letter A, B, C, or D on your answer sheet to indicate the correct option that best fits each of the numbered blanks from 17 to 21. \nOnline learning has become an increasingly common feature of modern education, (17) _________. With the rapid development of digital technology, students can now access lessons, materials, and discussions from virtually anywhere, (18) _________. This flexibility has made online learning particularly attractive to working adults and learners living in remote areas. \nIn addition to convenience, online learning offers several educational benefits. (19) _________. Moreover, digital platforms often provide interactive tools such as videos, quizzes, and discussion forums that enhance students’ engagement and understanding. These features allow learners to take greater responsibility for their own learning process. \nHowever, online learning also presents certain challenges. Without regular face-to-face interaction with teachers and classmates, (20) _________. Some critics argue that this learning format may reduce learners’ motivation and increase feelings of isolation. (21) _________.",
         "question": "",
         "options": {
           "A": "making education more accessible and flexible",
@@ -425,7 +425,7 @@ const HSG_TESTS_DATA = [
         "category": "Completion",
         "instruction": "Đọc đoạn văn và chọn mệnh đề/cụm từ đúng nhất để hoàn chỉnh văn bản.",
         "passageTitle": "Đoạn văn điền khuyết (Text Completion) - Đề 1",
-        "passage": "",
+        "passage": "Read the following passage and mark the letter A, B, C, or D on your answer sheet to indicate the correct option that best fits each of the numbered blanks from 17 to 21. \nOnline learning has become an increasingly common feature of modern education, (17) _________. With the rapid development of digital technology, students can now access lessons, materials, and discussions from virtually anywhere, (18) _________. This flexibility has made online learning particularly attractive to working adults and learners living in remote areas. \nIn addition to convenience, online learning offers several educational benefits. (19) _________. Moreover, digital platforms often provide interactive tools such as videos, quizzes, and discussion forums that enhance students’ engagement and understanding. These features allow learners to take greater responsibility for their own learning process. \nHowever, online learning also presents certain challenges. Without regular face-to-face interaction with teachers and classmates, (20) _________. Some critics argue that this learning format may reduce learners’ motivation and increase feelings of isolation. (21) _________.",
         "question": "",
         "options": {
           "A": "Students are allowed to study at their own pace and review lessons when necessary",
@@ -445,7 +445,7 @@ const HSG_TESTS_DATA = [
         "category": "Completion",
         "instruction": "Đọc đoạn văn và chọn mệnh đề/cụm từ đúng nhất để hoàn chỉnh văn bản.",
         "passageTitle": "Đoạn văn điền khuyết (Text Completion) - Đề 1",
-        "passage": "",
+        "passage": "Read the following passage and mark the letter A, B, C, or D on your answer sheet to indicate the correct option that best fits each of the numbered blanks from 17 to 21. \nOnline learning has become an increasingly common feature of modern education, (17) _________. With the rapid development of digital technology, students can now access lessons, materials, and discussions from virtually anywhere, (18) _________. This flexibility has made online learning particularly attractive to working adults and learners living in remote areas. \nIn addition to convenience, online learning offers several educational benefits. (19) _________. Moreover, digital platforms often provide interactive tools such as videos, quizzes, and discussion forums that enhance students’ engagement and understanding. These features allow learners to take greater responsibility for their own learning process. \nHowever, online learning also presents certain challenges. Without regular face-to-face interaction with teachers and classmates, (20) _________. Some critics argue that this learning format may reduce learners’ motivation and increase feelings of isolation. (21) _________.",
         "question": "",
         "options": {
           "A": "learners may find it difficult to stay focused and motivated",
@@ -465,7 +465,7 @@ const HSG_TESTS_DATA = [
         "category": "Completion",
         "instruction": "Đọc đoạn văn và chọn mệnh đề/cụm từ đúng nhất để hoàn chỉnh văn bản.",
         "passageTitle": "Đoạn văn điền khuyết (Text Completion) - Đề 1",
-        "passage": "",
+        "passage": "Read the following passage and mark the letter A, B, C, or D on your answer sheet to indicate the correct option that best fits each of the numbered blanks from 17 to 21. \nOnline learning has become an increasingly common feature of modern education, (17) _________. With the rapid development of digital technology, students can now access lessons, materials, and discussions from virtually anywhere, (18) _________. This flexibility has made online learning particularly attractive to working adults and learners living in remote areas. \nIn addition to convenience, online learning offers several educational benefits. (19) _________. Moreover, digital platforms often provide interactive tools such as videos, quizzes, and discussion forums that enhance students’ engagement and understanding. These features allow learners to take greater responsibility for their own learning process. \nHowever, online learning also presents certain challenges. Without regular face-to-face interaction with teachers and classmates, (20) _________. Some critics argue that this learning format may reduce learners’ motivation and increase feelings of isolation. (21) _________.",
         "question": "",
         "options": {
           "A": "Therefore, these challenges can be overcome with proper support and guidance",
@@ -2128,7 +2128,7 @@ const HSG_TESTS_DATA = [
         "num": 1,
         "section": "Phần Nghe 1 (Listening Part 1)",
         "category": "Listening",
-        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất. Quét mã QR đính kèm để nghe file âm thanh.",
+        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất (sử dụng trình phát âm thanh bên dưới).",
         "passageTitle": "",
         "passage": "",
         "question": "What does Brad have to do before he eats breakfast?",
@@ -2140,6 +2140,7 @@ const HSG_TESTS_DATA = [
         "answer": "A",
         "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"clean his sleeping quarters\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CBH.mp3",
           "qrImage": "assets/qr/page_18_img_1.png",
           "driveUrl": "https://drive.google.com/file/d/1ORgTa1lJmQMFR5staXAE29yGWtmf2M0m/view?usp=drive_link",
           "title": "Listening Part 1 - Brad's Message to Parents"
@@ -2151,7 +2152,7 @@ const HSG_TESTS_DATA = [
         "num": 2,
         "section": "Phần Nghe 1 (Listening Part 1)",
         "category": "Listening",
-        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất. Quét mã QR đính kèm để nghe file âm thanh.",
+        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất (sử dụng trình phát âm thanh bên dưới).",
         "passageTitle": "",
         "passage": "",
         "question": "What happened to Brad when he went fishing?",
@@ -2163,6 +2164,7 @@ const HSG_TESTS_DATA = [
         "answer": "C",
         "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"He slipped and lost one of his shoes\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CBH.mp3",
           "qrImage": "assets/qr/page_18_img_1.png",
           "driveUrl": "https://drive.google.com/file/d/1ORgTa1lJmQMFR5staXAE29yGWtmf2M0m/view?usp=drive_link",
           "title": "Listening Part 1 - Brad's Message to Parents"
@@ -2174,7 +2176,7 @@ const HSG_TESTS_DATA = [
         "num": 3,
         "section": "Phần Nghe 1 (Listening Part 1)",
         "category": "Listening",
-        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất. Quét mã QR đính kèm để nghe file âm thanh.",
+        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất (sử dụng trình phát âm thanh bên dưới).",
         "passageTitle": "",
         "passage": "",
         "question": "What did he eat for dinner?",
@@ -2186,6 +2188,7 @@ const HSG_TESTS_DATA = [
         "answer": "B",
         "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"hot dogs\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CBH.mp3",
           "qrImage": "assets/qr/page_18_img_1.png",
           "driveUrl": "https://drive.google.com/file/d/1ORgTa1lJmQMFR5staXAE29yGWtmf2M0m/view?usp=drive_link",
           "title": "Listening Part 1 - Brad's Message to Parents"
@@ -2197,7 +2200,7 @@ const HSG_TESTS_DATA = [
         "num": 4,
         "section": "Phần Nghe 1 (Listening Part 1)",
         "category": "Listening",
-        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất. Quét mã QR đính kèm để nghe file âm thanh.",
+        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất (sử dụng trình phát âm thanh bên dưới).",
         "passageTitle": "",
         "passage": "",
         "question": "What was Brad doing when he got lost in the forest?",
@@ -2209,6 +2212,7 @@ const HSG_TESTS_DATA = [
         "answer": "B",
         "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"He was searching for wood\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CBH.mp3",
           "qrImage": "assets/qr/page_18_img_1.png",
           "driveUrl": "https://drive.google.com/file/d/1ORgTa1lJmQMFR5staXAE29yGWtmf2M0m/view?usp=drive_link",
           "title": "Listening Part 1 - Brad's Message to Parents"
@@ -2220,7 +2224,7 @@ const HSG_TESTS_DATA = [
         "num": 5,
         "section": "Phần Nghe 1 (Listening Part 1)",
         "category": "Listening",
-        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất. Quét mã QR đính kèm để nghe file âm thanh.",
+        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất (sử dụng trình phát âm thanh bên dưới).",
         "passageTitle": "",
         "passage": "",
         "question": "How did Brad like summer camp?",
@@ -2232,6 +2236,7 @@ const HSG_TESTS_DATA = [
         "answer": "B",
         "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"It was okay\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CBH.mp3",
           "qrImage": "assets/qr/page_18_img_1.png",
           "driveUrl": "https://drive.google.com/file/d/1ORgTa1lJmQMFR5staXAE29yGWtmf2M0m/view?usp=drive_link",
           "title": "Listening Part 1 - Brad's Message to Parents"
@@ -2256,6 +2261,7 @@ const HSG_TESTS_DATA = [
         "answer": "C",
         "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"to have a relevant qualification.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CHVT.mp3",
           "qrImage": "assets/qr/page_18_img_2.png",
           "driveUrl": "https://drive.google.com/file/d/16-QYhY333_h5mP0YdCsy0x3EQdBWBcnk/view?usp=drive_link",
           "title": "Listening Part 2 - Barbara Darby (Casting Director)"
@@ -2280,6 +2286,7 @@ const HSG_TESTS_DATA = [
         "answer": "A",
         "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"can play a variety of roles.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CHVT.mp3",
           "qrImage": "assets/qr/page_18_img_2.png",
           "driveUrl": "https://drive.google.com/file/d/16-QYhY333_h5mP0YdCsy0x3EQdBWBcnk/view?usp=drive_link",
           "title": "Listening Part 2 - Barbara Darby (Casting Director)"
@@ -2304,6 +2311,7 @@ const HSG_TESTS_DATA = [
         "answer": "C",
         "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"before a final short list is drawn up\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CHVT.mp3",
           "qrImage": "assets/qr/page_18_img_2.png",
           "driveUrl": "https://drive.google.com/file/d/16-QYhY333_h5mP0YdCsy0x3EQdBWBcnk/view?usp=drive_link",
           "title": "Listening Part 2 - Barbara Darby (Casting Director)"
@@ -2328,6 +2336,7 @@ const HSG_TESTS_DATA = [
         "answer": "B",
         "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"professional recognition.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CHVT.mp3",
           "qrImage": "assets/qr/page_18_img_2.png",
           "driveUrl": "https://drive.google.com/file/d/16-QYhY333_h5mP0YdCsy0x3EQdBWBcnk/view?usp=drive_link",
           "title": "Listening Part 2 - Barbara Darby (Casting Director)"
@@ -2352,6 +2361,7 @@ const HSG_TESTS_DATA = [
         "answer": "A",
         "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"She’d become tired of travelling.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CHVT.mp3",
           "qrImage": "assets/qr/page_18_img_2.png",
           "driveUrl": "https://drive.google.com/file/d/16-QYhY333_h5mP0YdCsy0x3EQdBWBcnk/view?usp=drive_link",
           "title": "Listening Part 2 - Barbara Darby (Casting Director)"

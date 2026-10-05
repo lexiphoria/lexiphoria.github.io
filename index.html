@@ -10,22 +10,35 @@
 
 <body>
     <main class="container">
+        <!-- Hero Section with Animated Character Mascot -->
         <section class="hero">
-            <h1>Daily English Practice</h1>
-            <p>
-                Choose suitable exercises to practice vocabulary, grammar, and reading skills. Each exercise is designed
-                for you to practice quickly, remember well, and progress every day.
-            </p>
+            <div class="hero-content">
+                <h1>Daily English Practice</h1>
+                <p>
+                    Choose suitable exercises to practice vocabulary, grammar, and reading skills. Each exercise is designed
+                    for you to practice quickly, remember well, and progress every day.
+                </p>
+            </div>
+            <div class="hero-mascot">
+                <img src="assets/characters/mascot_welcome.png" alt="English Practice Mascot" title="Welcome to Daily English Practice!">
+            </div>
         </section>
 
         <!-- 4 thẻ trọng tâm theo lộ trình: Vocabulary Mastery → English Quiz → Text Completion → HSG 12 -->
         <h2 class="section-title">Core Learning Roadmap</h2>
-        <section class="exercise-grid" aria-label="Core learning roadmap">
+        <section class="core-grid" aria-label="Core learning roadmap">
             <!-- 1. Vocabulary Mastery -->
-            <article class="card" style="background: linear-gradient(135deg, #1e1b3a 0%, #311b92 100%); border-color: #8e24aa; color: #e8eaed; box-shadow: 0 0 15px rgba(142, 36, 170, 0.25);">
-                <span class="tag" style="background: #e040fb; color: #fff;">Interactive Cards</span>
-                <span class="tag" style="background: rgba(16, 185, 129, 0.25); color: #10b981; margin-top: 6px;">All Levels</span>
-                <h3 style="color: #fff; margin: 18px 0 24px;">Vocabulary Mastery</h3>
+            <article class="card" style="background: linear-gradient(135deg, #1e1b3a 0%, #311b92 100%); border-color: #8e24aa; color: #e8eaed; box-shadow: 0 0 18px rgba(142, 36, 170, 0.28);">
+                <div class="card-top">
+                    <div class="card-tags">
+                        <span class="tag" style="background: #e040fb; color: #fff;">Interactive Cards</span>
+                        <span class="tag" style="background: rgba(16, 185, 129, 0.25); color: #10b981;">Step 1 • All Levels</span>
+                    </div>
+                    <div class="card-character char-bg-dark">
+                        <img src="assets/characters/vocab_panda.png" alt="Vocabulary Panda">
+                    </div>
+                </div>
+                <h3 style="color: #fff; margin: 10px 0 12px;">Vocabulary Mastery</h3>
                 <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 20px; line-height: 1.5;">
                     Học từ vựng theo chủ đề qua thẻ 3D lật động, trò chơi trắc nghiệm nghĩa, luyện viết chính tả và ghép từ nhanh.
                 </p>
@@ -33,9 +46,17 @@
             </article>
 
             <!-- 2. English Quiz -->
-            <article class="card">
-                <span class="tag">Multiple Choice</span>
-                <h3>English Quiz</h3>
+            <article class="card" style="background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%); border-color: #a7f3d0;">
+                <div class="card-top">
+                    <div class="card-tags">
+                        <span class="tag">Multiple Choice</span>
+                        <span class="tag" style="background: #dcfce7; color: #15803d;">Step 2 • Grammar &amp; MCQ</span>
+                    </div>
+                    <div class="card-character char-bg-light">
+                        <img src="assets/characters/quiz_student.png" alt="English Quiz Student">
+                    </div>
+                </div>
+                <h3 style="margin: 10px 0 12px;">English Quiz</h3>
                 <p>
                     A comprehensive quiz with English questions at basic and advanced levels, suitable for quickly
                     checking your knowledge.
@@ -44,21 +65,36 @@
             </article>
 
             <!-- 3. Text Completion Quiz -->
-            <article class="card">
-                <span class="tag">Reading Practice</span>
-                <h3>Text Completion Quiz</h3>
+            <article class="card" style="background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%); border-color: #bae6fd;">
+                <div class="card-top">
+                    <div class="card-tags">
+                        <span class="tag" style="background: #e0f2fe; color: #0284c7;">Reading Practice</span>
+                        <span class="tag" style="background: #e0e7ff; color: #4338ca;">Step 3 • THPT 2025</span>
+                    </div>
+                    <div class="card-character char-bg-blue">
+                        <img src="assets/characters/reading_scholar.png" alt="Text Completion Scholar">
+                    </div>
+                </div>
+                <h3 style="margin: 10px 0 12px;">Text Completion Quiz</h3>
                 <p>
                     Practice text completion questions in the THPT National Exam format (2025). Improve your reading
                     comprehension and grammar skills.
                 </p>
-                <a class="btn btn-primary" href="TextCompletion.html">Start Text Completion</a>
+                <a class="btn btn-primary" href="TextCompletion.html" style="background: #0284c7;">Start Text Completion</a>
             </article>
 
             <!-- 4. HSG 12 -->
             <article class="card" style="background: linear-gradient(135deg, #090e1f 0%, #1a103c 100%); border-color: #a855f7; color: #e8eaed; box-shadow: 0 0 24px rgba(168, 85, 247, 0.25);">
-                <span class="tag" style="background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); color: #fff;">🏆 HSG 12 Chuyên Sâu</span>
-                <span class="tag" style="background: rgba(245, 158, 11, 0.25); color: #f59e0b; margin-top: 6px;">Grade 12</span>
-                <h3 style="color: #fff; margin: 18px 0 10px;">Ôn Thi Học Sinh Giỏi 12 (P1)</h3>
+                <div class="card-top">
+                    <div class="card-tags">
+                        <span class="tag" style="background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); color: #fff;">🏆 HSG 12 Chuyên Sâu</span>
+                        <span class="tag" style="background: rgba(245, 158, 11, 0.25); color: #f59e0b;">Step 4 • Grade 12</span>
+                    </div>
+                    <div class="card-character char-bg-dark">
+                        <img src="assets/characters/hsg_graduate.png" alt="HSG 12 Scholar">
+                    </div>
+                </div>
+                <h3 style="color: #fff; margin: 10px 0 10px;">Ôn Thi Học Sinh Giỏi 12 (P1)</h3>
                 <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 20px; line-height: 1.5;">
                     Trọn bộ 5 Practice Tests (250 câu hỏi) từ tài liệu <strong>TỔNG HỢP - P1</strong>: Quét mã QR file nghe gốc, bài đọc Split-Screen, chế độ Thi thử 60 phút và Luyện tập xem lời giải chi tiết.
                 </p>
@@ -68,20 +104,34 @@
 
         <!-- Nhóm Extra Materials: V-ACT, Exam Idioms, Preposition & Collocation -->
         <h2 class="section-title" style="margin-top: 40px;">Extra Materials</h2>
-        <section class="exercise-grid" aria-label="Extra materials">
+        <section class="extra-grid" aria-label="Extra materials">
             <!-- 1. V-ACT TEST -->
             <article class="card" style="background: linear-gradient(135deg, #1e1b3a 0%, #2d1f4e 100%); border-color: #4338ca; color: #e8eaed;">
-                <span class="tag" style="background: #6366f1; color: #fff;">ĐGNL Practice</span>
-                <span class="tag" style="background: rgba(245,158,11,0.2); color: #f59e0b;">Grade 12</span>
-                <h3 style="color: #e8eaed;">V-ACT TEST</h3>
+                <div class="card-top">
+                    <div class="card-tags">
+                        <span class="tag" style="background: #6366f1; color: #fff;">ĐGNL Practice</span>
+                        <span class="tag" style="background: rgba(245,158,11,0.2); color: #f59e0b;">Grade 12</span>
+                    </div>
+                    <div class="card-character char-bg-dark">
+                        <img src="assets/characters/vact_digital.png" alt="V-ACT Digital">
+                    </div>
+                </div>
+                <h3 style="color: #e8eaed; margin: 10px 0 18px;">V-ACT TEST</h3>
                 <a class="btn btn-primary" href="V-ACT_TEST/index.html" style="background: #6366f1;">Start V-ACT Test</a>
             </article>
 
             <!-- 2. Exam Idioms Mastery -->
             <article class="card" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); border-color: #10b981; color: #e8eaed; box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);">
-                <span class="tag" style="background: #10b981; color: #fff;">🎯 Exam Practice</span>
-                <span class="tag" style="background: rgba(139, 92, 246, 0.25); color: #c084fc; margin-top: 6px;">Grade 12</span>
-                <h3 style="color: #fff; margin: 18px 0 10px;">Exam Idioms Mastery</h3>
+                <div class="card-top">
+                    <div class="card-tags">
+                        <span class="tag" style="background: #10b981; color: #fff;">🎯 Exam Practice</span>
+                        <span class="tag" style="background: rgba(139, 92, 246, 0.25); color: #c084fc;">Grade 12</span>
+                    </div>
+                    <div class="card-character char-bg-dark">
+                        <img src="assets/characters/idioms_einstein.png" alt="Exam Idioms Genius">
+                    </div>
+                </div>
+                <h3 style="color: #fff; margin: 10px 0 10px;">Exam Idioms Mastery</h3>
                 <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 20px; line-height: 1.5;">
                     Ôn luyện Idioms, Phrasal Verbs, Collocations &amp; Fixed Phrases trích từ đề thi THPTQG thực tế qua Flashcard 3D, Trắc nghiệm và Hoàn thành câu.
                 </p>
@@ -90,9 +140,16 @@
 
             <!-- 3. Preposition & Collocation -->
             <article class="card" style="background: linear-gradient(135deg, #090b11 0%, #1e1b4b 100%); border-color: #6366f1; color: #e8eaed; box-shadow: 0 0 15px rgba(99, 102, 241, 0.25);">
-                <span class="tag" style="background: #10b981; color: #fff;">Vocabulary Game</span>
-                <span class="tag" style="background: rgba(245, 158, 11, 0.25); color: #f59e0b; margin-top: 6px;">Grade 9</span>
-                <h3 style="color: #fff; margin: 18px 0 24px;">Preposition &amp; Collocation</h3>
+                <div class="card-top">
+                    <div class="card-tags">
+                        <span class="tag" style="background: #10b981; color: #fff;">Vocabulary Game</span>
+                        <span class="tag" style="background: rgba(245, 158, 11, 0.25); color: #f59e0b;">Grade 9</span>
+                    </div>
+                    <div class="card-character char-bg-dark">
+                        <img src="assets/characters/collocation_teacher.png" alt="Grammar &amp; Preposition Teacher">
+                    </div>
+                </div>
+                <h3 style="color: #fff; margin: 10px 0 20px;">Preposition &amp; Collocation</h3>
                 <a class="btn btn-primary" href="Preposition_Collocation.html" style="background: linear-gradient(135deg, #6366f1 0%, #d946ef 100%); border: none;">Start Mastery Quiz</a>
             </article>
         </section>

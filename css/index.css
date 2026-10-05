@@ -33,75 +33,39 @@ body {
   padding: 28px 0 44px;
 }
 
-.hero {
-  background: linear-gradient(130deg, #0f766e 0%, #155e75 70%);
-  color: #fff;
+.hero-banner-wrap {
+  width: 100%;
   border-radius: calc(var(--radius) + 4px);
-  padding: 36px 36px;
-  box-shadow: var(--shadow);
   overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 2px solid #e7ded2;
+  background: #fbf7ee;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 28px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.hero::after {
-  content: "";
+.hero-banner-wrap:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 42px rgba(18, 28, 38, 0.16);
+}
+
+.hero-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.visually-hidden {
   position: absolute;
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.12);
-  right: -90px;
-  top: -120px;
-  pointer-events: none;
-}
-
-.hero-content {
-  flex: 1;
-  max-width: 680px;
-  z-index: 2;
-}
-
-.hero-mascot {
-  flex-shrink: 0;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-mascot img {
-  width: 130px;
-  height: 130px;
-  object-fit: contain;
-  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.28));
-  animation: floatMascot 4s ease-in-out infinite;
-}
-
-@keyframes floatMascot {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-8px) rotate(2deg);
-  }
-}
-
-.hero h1 {
-  margin: 0 0 10px;
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  line-height: 1.2;
-  letter-spacing: 0.3px;
-}
-
-.hero p {
-  margin: 0;
-  max-width: 720px;
-  color: #e5f9f6;
-  font-size: 1.05rem;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .section-title {
@@ -279,19 +243,12 @@ footer {
 }
 
 @media (max-width: 640px) {
-  .hero {
-    flex-direction: column-reverse;
-    text-align: center;
-    padding: 28px 20px;
-    gap: 16px;
-  }
-
-  .hero-mascot img {
-    width: 100px;
-    height: 100px;
+  .hero-banner-wrap {
+    border-radius: var(--radius);
   }
 
   .card {
     padding: 18px;
   }
 }
+

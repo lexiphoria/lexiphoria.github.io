@@ -236,16 +236,18 @@
   function reflowPassage(text) {
     const blocks = [];
     let prevLine = '';
+    const lines = text.split('\n').map(raw => raw.trim())
+      .filter(line => line && !/^questions?:?$/i.test(line));
 
-    text.split('\n').forEach(raw => {
-      const line = raw.trim();
-      if (!line || /^questions?:?$/i.test(line)) return;
-
-      const isTitle = line.length < 100 && /[A-Z]{3}/.test(line) && line === line.toUpperCase();
+    lines.forEach((line, i) => {
       const isItem = /^[a-hA-H]\.\s/.test(line) || /^\(\d{1,2}\)\s*[A-Z]/.test(line);
       const last = blocks[blocks.length - 1];
-      const startsNew = !last || isTitle || isItem || last.type === 'title' ||
-        /[.!?:]["'”’]?$/.test(prevLine);
+      const prevEnded = !last || /[.!?:]["'”’]?$/.test(prevLine);
+      // Headings: ALL CAPS, or a short standalone line followed by a new sentence ("The Video Loggers")
+      const isTitle = (line.length < 100 && /[A-Z]{3}/.test(line) && line === line.toUpperCase()) ||
+        (!isItem && prevEnded && line.length <= 60 && !/[.,;:?]["'”’]?$/.test(line) &&
+          !/^(read|mark|choose)\b/i.test(line) && /^[A-Z“"']/.test(lines[i + 1] || ''));
+      const startsNew = prevEnded || isTitle || isItem || last.type === 'title';
 
       if (startsNew) {
         blocks.push({ type: isTitle ? 'title' : isItem ? 'item' : 'para', text: line });

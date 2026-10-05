@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/hsg.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>">
 </head>
-<body>
+<body class="quiz-page">
 
   <!-- Site Header -->
   <header class="site-header">
@@ -69,7 +69,7 @@
   <div class="quiz-wrapper">
     <div class="quiz-main-container">
 
-      <!-- Left: Reading Passage Pane (Sticky) -->
+      <!-- Left: Reading Passage Pane (wide, scrolls independently) -->
       <aside id="passagePane" class="passage-pane" aria-label="Bài đọc hiểu và văn bản"></aside>
 
       <!-- Center: Questions Stream -->
@@ -86,7 +86,7 @@
         <div id="paletteGrid" class="palette-grid"></div>
 
         <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid var(--border-color); display:flex; flex-direction:column; gap:0.5rem;">
-          <button class="btn btn-secondary" style="width:100%; font-size:0.82rem;" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+          <button class="btn btn-secondary" style="width:100%; font-size:0.82rem;" onclick="window.scrollQuestionsTop()">
             ⬆️ Lên đầu trang
           </button>
           <button class="btn btn-primary" style="width:100%; font-size:0.85rem;" onclick="window.confirmSubmit()">
@@ -139,6 +139,22 @@
         <button class="btn btn-primary" onclick="window.restartTest()">
           🔄 Làm Lại Đề Này
         </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Audio Sticky Controller -->
+  <div id="stickyAudioController" class="sticky-audio-controller" style="display:none;">
+    <div class="sticky-audio-content">
+      <div class="sticky-audio-info">
+        <span class="sticky-pulse"></span>
+        <span id="stickyAudioTitle" class="sticky-title">🎧 Đang phát bài nghe</span>
+      </div>
+      <div class="sticky-audio-actions">
+        <button type="button" class="sticky-btn" onclick="window.stickySeek(-5)" title="Tua lùi 5 giây">⏪ -5s</button>
+        <button type="button" class="sticky-btn sticky-btn-play" id="stickyPlayPauseBtn" onclick="window.stickyTogglePlay()" title="Tạm dừng / Tiếp tục">⏸️</button>
+        <button type="button" class="sticky-btn" onclick="window.stickySeek(5)" title="Tua tới 5 giây">+5s ⏩</button>
+        <span id="stickyAudioTimer" class="sticky-time">00:00 / 00:00</span>
       </div>
     </div>
   </div>

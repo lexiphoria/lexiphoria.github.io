@@ -18,7 +18,7 @@ const HSG_TESTS_DATA = [
         "num": 1,
         "section": "Phần Nghe 1 (Listening Part 1)",
         "category": "Listening",
-        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất. Quét mã QR đính kèm để nghe file âm thanh.",
+        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất (sử dụng trình phát âm thanh bên dưới).",
         "passageTitle": "",
         "passage": "",
         "question": "You are in a shop when you overhear this man answering the telephone. What does the caller \nwant to buy?",
@@ -30,6 +30,7 @@ const HSG_TESTS_DATA = [
         "answer": "B",
         "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"a book about guitar music\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CVA-HN.mp3",
           "qrImage": "assets/qr/page_1_img_1.png",
           "driveUrl": "",
           "title": "Listening Part 1 (DHBB 2019 - CVA HN)"
@@ -41,7 +42,7 @@ const HSG_TESTS_DATA = [
         "num": 2,
         "section": "Phần Nghe 1 (Listening Part 1)",
         "category": "Listening",
-        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất. Quét mã QR đính kèm để nghe file âm thanh.",
+        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất (sử dụng trình phát âm thanh bên dưới).",
         "passageTitle": "",
         "passage": "",
         "question": "You are listening to the radio when you hear this man speaking. What is he talking about?",
@@ -53,6 +54,7 @@ const HSG_TESTS_DATA = [
         "answer": "B",
         "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"shipbuilding\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CVA-HN.mp3",
           "qrImage": "assets/qr/page_1_img_1.png",
           "driveUrl": "",
           "title": "Listening Part 1 (DHBB 2019 - CVA HN)"
@@ -64,7 +66,7 @@ const HSG_TESTS_DATA = [
         "num": 3,
         "section": "Phần Nghe 1 (Listening Part 1)",
         "category": "Listening",
-        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất. Quét mã QR đính kèm để nghe file âm thanh.",
+        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất (sử dụng trình phát âm thanh bên dưới).",
         "passageTitle": "",
         "passage": "",
         "question": "You are sitting in a café when you hear this woman speaking. She is telling her friend about",
@@ -76,6 +78,7 @@ const HSG_TESTS_DATA = [
         "answer": "B",
         "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"buying a new coat\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CVA-HN.mp3",
           "qrImage": "assets/qr/page_1_img_1.png",
           "driveUrl": "",
           "title": "Listening Part 1 (DHBB 2019 - CVA HN)"
@@ -87,7 +90,7 @@ const HSG_TESTS_DATA = [
         "num": 4,
         "section": "Phần Nghe 1 (Listening Part 1)",
         "category": "Listening",
-        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất. Quét mã QR đính kèm để nghe file âm thanh.",
+        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất (sử dụng trình phát âm thanh bên dưới).",
         "passageTitle": "",
         "passage": "",
         "question": "Listen to this woman introducing a college lecture. The visiting lecturer",
@@ -99,6 +102,7 @@ const HSG_TESTS_DATA = [
         "answer": "A",
         "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"has recently changed career\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CVA-HN.mp3",
           "qrImage": "assets/qr/page_1_img_1.png",
           "driveUrl": "",
           "title": "Listening Part 1 (DHBB 2019 - CVA HN)"
@@ -110,7 +114,7 @@ const HSG_TESTS_DATA = [
         "num": 5,
         "section": "Phần Nghe 1 (Listening Part 1)",
         "category": "Listening",
-        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất. Quét mã QR đính kèm để nghe file âm thanh.",
+        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất (sử dụng trình phát âm thanh bên dưới).",
         "passageTitle": "",
         "passage": "",
         "question": "You will hear someone talking about soap operas. What does the speaker think about them?",
@@ -122,6 +126,7 @@ const HSG_TESTS_DATA = [
         "answer": "C",
         "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"People become addicted to them without realizing it.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CVA-HN.mp3",
           "qrImage": "assets/qr/page_1_img_1.png",
           "driveUrl": "",
           "title": "Listening Part 1 (DHBB 2019 - CVA HN)"
@@ -146,6 +151,7 @@ const HSG_TESTS_DATA = [
         "answer": "D",
         "explanation": "Đáp án đúng là **D**.\n- Phương án **D**: *\"You have to be quick to exploit opportunities.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CBG.mp3",
           "qrImage": "assets/qr/page_1_img_2.png",
           "driveUrl": "",
           "title": "Listening Part 2 - Alex Mustard (DHBB 2019 - CBG)"
@@ -170,6 +176,7 @@ const HSG_TESTS_DATA = [
         "answer": "A",
         "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"They are the ones he had most fun shooting.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CBG.mp3",
           "qrImage": "assets/qr/page_1_img_2.png",
           "driveUrl": "",
           "title": "Listening Part 2 - Alex Mustard (DHBB 2019 - CBG)"
@@ -194,6 +201,7 @@ const HSG_TESTS_DATA = [
         "answer": "A",
         "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"He tries to avoid looking aggressive in their company.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CBG.mp3",
           "qrImage": "assets/qr/page_1_img_2.png",
           "driveUrl": "",
           "title": "Listening Part 2 - Alex Mustard (DHBB 2019 - CBG)"
@@ -218,6 +226,7 @@ const HSG_TESTS_DATA = [
         "answer": "A",
         "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"choose subjects that are likely to keep relatively still.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CBG.mp3",
           "qrImage": "assets/qr/page_1_img_2.png",
           "driveUrl": "",
           "title": "Listening Part 2 - Alex Mustard (DHBB 2019 - CBG)"
@@ -242,6 +251,7 @@ const HSG_TESTS_DATA = [
         "answer": "D",
         "explanation": "Đáp án đúng là **D**.\n- Phương án **D**: *\"the temperature and clarity of the water.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CBG.mp3",
           "qrImage": "assets/qr/page_1_img_2.png",
           "driveUrl": "",
           "title": "Listening Part 2 - Alex Mustard (DHBB 2019 - CBG)"

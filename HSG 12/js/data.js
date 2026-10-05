@@ -1073,7 +1073,7 @@ const HSG_TESTS_DATA = [
         "num": 1,
         "section": "Phần Nghe 1 (Listening Part 1)",
         "category": "Listening",
-        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất. Quét mã QR đính kèm để nghe file âm thanh.",
+        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất (sử dụng trình phát âm thanh bên dưới).",
         "passageTitle": "",
         "passage": "",
         "question": "How does Diane Webber view “job for life”?",
@@ -1086,6 +1086,7 @@ const HSG_TESTS_DATA = [
         "answer": "B",
         "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"She feels that many long-serving employees fail to make a useful contribution.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CBN.mp3",
           "qrImage": "assets/qr/page_9_img_1.png",
           "driveUrl": "",
           "title": "Listening Part 1 - Job Market Expectations"
@@ -1097,7 +1098,7 @@ const HSG_TESTS_DATA = [
         "num": 2,
         "section": "Phần Nghe 1 (Listening Part 1)",
         "category": "Listening",
-        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất. Quét mã QR đính kèm để nghe file âm thanh.",
+        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất (sử dụng trình phát âm thanh bên dưới).",
         "passageTitle": "",
         "passage": "",
         "question": "According to Diane, younger workers in today’s workplace",
@@ -1110,6 +1111,7 @@ const HSG_TESTS_DATA = [
         "answer": "B",
         "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"accept lateral moves if they are attractive.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CBN.mp3",
           "qrImage": "assets/qr/page_9_img_1.png",
           "driveUrl": "",
           "title": "Listening Part 1 - Job Market Expectations"
@@ -1121,7 +1123,7 @@ const HSG_TESTS_DATA = [
         "num": 3,
         "section": "Phần Nghe 1 (Listening Part 1)",
         "category": "Listening",
-        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất. Quét mã QR đính kèm để nghe file âm thanh.",
+        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất (sử dụng trình phát âm thanh bên dưới).",
         "passageTitle": "",
         "passage": "",
         "question": "What does Diane say about continuity in companies?",
@@ -1134,6 +1136,7 @@ const HSG_TESTS_DATA = [
         "answer": "C",
         "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"It is unimportant, due to the greater emphasis on teamwork.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CBN.mp3",
           "qrImage": "assets/qr/page_9_img_1.png",
           "driveUrl": "",
           "title": "Listening Part 1 - Job Market Expectations"
@@ -1145,7 +1148,7 @@ const HSG_TESTS_DATA = [
         "num": 4,
         "section": "Phần Nghe 1 (Listening Part 1)",
         "category": "Listening",
-        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất. Quét mã QR đính kèm để nghe file âm thanh.",
+        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất (sử dụng trình phát âm thanh bên dưới).",
         "passageTitle": "",
         "passage": "",
         "question": "According to Diane, what is the actual benefit of higher levels of personnel movement?",
@@ -1158,6 +1161,7 @@ const HSG_TESTS_DATA = [
         "answer": "C",
         "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"More creativity.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CBN.mp3",
           "qrImage": "assets/qr/page_9_img_1.png",
           "driveUrl": "",
           "title": "Listening Part 1 - Job Market Expectations"
@@ -1169,7 +1173,7 @@ const HSG_TESTS_DATA = [
         "num": 5,
         "section": "Phần Nghe 1 (Listening Part 1)",
         "category": "Listening",
-        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất. Quét mã QR đính kèm để nghe file âm thanh.",
+        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất (sử dụng trình phát âm thanh bên dưới).",
         "passageTitle": "",
         "passage": "",
         "question": "Diane considers that nowadays companies are at most risk from",
@@ -1182,6 +1186,7 @@ const HSG_TESTS_DATA = [
         "answer": "B",
         "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"successful high-fliers who quickly move on.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CBN.mp3",
           "qrImage": "assets/qr/page_9_img_1.png",
           "driveUrl": "",
           "title": "Listening Part 1 - Job Market Expectations"
@@ -1205,6 +1210,7 @@ const HSG_TESTS_DATA = [
         "answer": "C",
         "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"She has confidence that she will succeed in the early rounds.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/ANH-10-HLK-TN.mp3",
           "qrImage": "assets/qr/page_9_img_2.png",
           "driveUrl": "https://drive.google.com/file/d/1XP2HLCHj0QoQLSnnWiHZKFf_CAM0MYy-/view?usp=drive_link",
           "title": "Listening Part 2 - Marianne Nolan (Surfing Champion)"
@@ -1228,6 +1234,7 @@ const HSG_TESTS_DATA = [
         "answer": "B",
         "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"are determined to achieve the same recognition for their skill as men.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/ANH-10-HLK-TN.mp3",
           "qrImage": "assets/qr/page_9_img_2.png",
           "driveUrl": "https://drive.google.com/file/d/1XP2HLCHj0QoQLSnnWiHZKFf_CAM0MYy-/view?usp=drive_link",
           "title": "Listening Part 2 - Marianne Nolan (Surfing Champion)"
@@ -1251,6 +1258,7 @@ const HSG_TESTS_DATA = [
         "answer": "A",
         "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"It surprised her to receive so much publicity.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/ANH-10-HLK-TN.mp3",
           "qrImage": "assets/qr/page_9_img_2.png",
           "driveUrl": "https://drive.google.com/file/d/1XP2HLCHj0QoQLSnnWiHZKFf_CAM0MYy-/view?usp=drive_link",
           "title": "Listening Part 2 - Marianne Nolan (Surfing Champion)"
@@ -1274,6 +1282,7 @@ const HSG_TESTS_DATA = [
         "answer": "D",
         "explanation": "Đáp án đúng là **D**.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/ANH-10-HLK-TN.mp3",
           "qrImage": "assets/qr/page_9_img_2.png",
           "driveUrl": "https://drive.google.com/file/d/1XP2HLCHj0QoQLSnnWiHZKFf_CAM0MYy-/view?usp=drive_link",
           "title": "Listening Part 2 - Marianne Nolan (Surfing Champion)"
@@ -1297,6 +1306,7 @@ const HSG_TESTS_DATA = [
         "answer": "C",
         "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"Know when you have reached your limit.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/ANH-10-HLK-TN.mp3",
           "qrImage": "assets/qr/page_9_img_2.png",
           "driveUrl": "https://drive.google.com/file/d/1XP2HLCHj0QoQLSnnWiHZKFf_CAM0MYy-/view?usp=drive_link",
           "title": "Listening Part 2 - Marianne Nolan (Surfing Champion)"

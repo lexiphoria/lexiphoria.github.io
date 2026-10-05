@@ -1328,8 +1328,8 @@ const HSG_TESTS_DATA = [
           "C": "did",
           "D": "had"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"took\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"made\".\nCụm cố định \"make a discovery\" (thực hiện một phát hiện).",
         "audio": null
       },
       {
@@ -1348,8 +1348,8 @@ const HSG_TESTS_DATA = [
           "C": "looking after",
           "D": "looking out"
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"looking after\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"looking out\".\n\"apparently looking out at him\": con voi ma mút trong bức tường băng như đang nhìn ra phía người đàn ông; các cụm khác sai nghĩa (watch out = coi chừng, watch over = canh giữ, look after = chăm sóc).",
         "audio": null
       },
       {
@@ -1368,8 +1368,8 @@ const HSG_TESTS_DATA = [
           "C": "to reach",
           "D": "reach"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"reached\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"reaching\".\nMệnh đề rút gọn chủ động: \"some (of them) reaching a length of five meters\".",
         "audio": null
       },
       {
@@ -1388,8 +1388,8 @@ const HSG_TESTS_DATA = [
           "C": "given a wide berth",
           "D": "held in high regard"
         },
-        "answer": "D",
-        "explanation": "Đáp án đúng là **D**.\n- Phương án **D**: *\"held in high regard\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"put to good use\".\n\"put to good use\" (được tận dụng hiệu quả), được giải thích ngay sau: dùng để bảo vệ con non và gạt tuyết.",
         "audio": null
       },
       {
@@ -1408,8 +1408,8 @@ const HSG_TESTS_DATA = [
           "C": "notwithstanding",
           "D": "but"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"nevertheless\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"but\".\n\"..., but while mammoths mainly ate grass..., mastodons preferred...\" – chỉ \"but\" đứng trước được \"while\" để nối hai mệnh đề độc lập.",
         "audio": null
       },
       {
@@ -1428,8 +1428,8 @@ const HSG_TESTS_DATA = [
           "C": "totals",
           "D": "numbers"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"quantities\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"numbers\".\n\"mammoth numbers\" = số lượng cá thể (danh từ đếm được).",
         "audio": null
       },
       {
@@ -1448,8 +1448,8 @@ const HSG_TESTS_DATA = [
           "C": "major",
           "D": "special"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"important\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"dominant\".\n\"the dominant voice and focus of the Jackson 5\" – giọng ca chủ đạo; \"important/major/special voice\" không tự nhiên bằng.",
         "audio": null
       },
       {
@@ -1468,8 +1468,8 @@ const HSG_TESTS_DATA = [
           "C": "hit back-to-back chart busting",
           "D": "chart-busting-back-to-back hits"
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"hit back-to-back chart busting\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"back-to-back chart-busting hits\".\nTrật tự đúng: \"back-to-back chart-busting hits\" (liên tiếp các bản hit đứng đầu bảng xếp hạng).",
         "audio": null
       },
       {
@@ -1488,8 +1488,8 @@ const HSG_TESTS_DATA = [
           "C": "group",
           "D": "team"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"class\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"group\".\n\"a group like The Temptations\" – nhóm nhạc.",
         "audio": null
       },
       {
@@ -1508,8 +1508,8 @@ const HSG_TESTS_DATA = [
           "C": "although",
           "D": "because"
         },
-        "answer": "D",
-        "explanation": "Đáp án đúng là **D**.\n- Phương án **D**: *\"because\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"yet\".\nTương phản: đóng phim không thành công \"yet had much better luck with... music videos\".",
         "audio": null
       },
       {
@@ -1528,8 +1528,8 @@ const HSG_TESTS_DATA = [
           "C": "with",
           "D": "for"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"to\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"for\".\nCụm \"a target for something\".",
         "audio": null
       },
       {
@@ -1548,8 +1548,8 @@ const HSG_TESTS_DATA = [
           "C": "feeling",
           "D": "attention"
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"feeling\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"passion\".\n\"Jackson's passion and artistry\" – các lựa chọn khác không đi cùng \"artistry\" để chỉ tài năng/đam mê nghệ thuật.",
         "audio": null
       },
       {
@@ -1568,8 +1568,8 @@ const HSG_TESTS_DATA = [
           "C": "b-e-d-a-c",
           "D": "c- e-d-b-a"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"e-d-c-a-b\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"c- e-d-b-a\".\nc (giới thiệu Serbia) → e (lịch sử văn hóa) → d (thủ đô Belgrade) → b (truyền thống, ẩm thực, thiên nhiên) → a (kết: tiếp tục phát triển).",
         "audio": null
       },
       {
@@ -1589,7 +1589,7 @@ const HSG_TESTS_DATA = [
           "D": "c-d-a-b-e"
         },
         "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"c-e-b-d-a\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là B: \"c-e-b-d-a\".\nc (làm nóng lò) → e (rửa, châm lỗ) → b (xoa dầu, muối) → d (nướng) → a (để nguội, thêm topping).",
         "audio": null
       },
       {
@@ -1609,7 +1609,7 @@ const HSG_TESTS_DATA = [
           "D": "a-e-c-d-b"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"a-e-d-c-b\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"a-e-d-c-b\".\na (giới thiệu) → e (mở đầu vở kịch) → d (giằng xé vì báo thù) → c (\"To be or not to be\") → b (kết thúc bi kịch). Phương án D (a-e-c-d-b) cũng tương đối hợp lý.",
         "audio": null
       },
       {
@@ -1628,8 +1628,8 @@ const HSG_TESTS_DATA = [
           "C": "a – c – e – b – d",
           "D": "a – e – c – d – b"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"e – d – c – b – a\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"d – e – c – a – b\".\nd (đa văn hóa phổ biến trên thế giới) → e (ví dụ ở các nước phương Tây) → c (còn ở Việt Nam thì sao?) → a (nguồn gốc 54 dân tộc) → b (đang phát triển mạnh).",
         "audio": null
       },
       {
@@ -1648,8 +1648,8 @@ const HSG_TESTS_DATA = [
           "C": "d–c–a–f–c–e–b",
           "D": "d–a–f–e–c–b"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"d–e–c–a–f–b\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"d–a–f–e–c–b\".\nd (nhiều người nghĩ học xong là hết) → a (However, thực tế học là quá trình không điểm dừng) → f (quá trình suốt đời này...) → e (học liên tục giúp tư duy cởi mở) → c (thời đại số, thế giới thay đổi) → b (người học suốt đời không bị tụt hậu).",
         "audio": null
       },
       {
@@ -1668,8 +1668,8 @@ const HSG_TESTS_DATA = [
           "C": "Demand for handmade items falls",
           "D": "With the demand for handmade items to fall"
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"Demand for handmade items falls\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"The demand for handmade items falling\".\nCấu trúc độc lập (absolute phrase) \"The demand for handmade items falling, ...\"; C tạo lỗi nối hai mệnh đề bằng dấu phẩy, B và D sai ngữ pháp/nghĩa.",
         "audio": null
       },
       {
@@ -1688,8 +1688,8 @@ const HSG_TESTS_DATA = [
           "C": "Whether consumers value authenticity",
           "D": "It is clear that consumers value authenticity"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"That consumers value authenticity is clear\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"It is clear that consumers value authenticity\".\nLưu ý: cả A và D đều là câu hoàn chỉnh nên ghép với \", some luxury brands...\" đều thành lỗi nối câu bằng dấu phẩy; B, C là mệnh đề cụt. D đọc tự nhiên hơn về nghĩa.",
         "audio": null
       },
       {
@@ -1709,7 +1709,7 @@ const HSG_TESTS_DATA = [
           "D": "In contrast, young people still prefer working in big cities."
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"Consequently, the cultural heritage of these regions is being rediscovered by international \naudiences.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"Consequently, the cultural heritage of these regions is being rediscovered by international audiences.\".\nCâu kết đoạn nêu hệ quả tích cực của sự hợp tác: \"Consequently, the cultural heritage... is being rediscovered by international audiences.\"",
         "audio": null
       },
       {
@@ -1729,7 +1729,7 @@ const HSG_TESTS_DATA = [
           "D": "Although artisans are pressured to produce items quickly"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"That artisans are pressured to produce items quickly\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"That artisans are pressured to produce items quickly\".\nMệnh đề danh từ làm chủ ngữ: \"That artisans are pressured to produce items quickly can sometimes lead to...\"",
         "audio": null
       },
       {
@@ -1749,7 +1749,7 @@ const HSG_TESTS_DATA = [
           "D": "These potential risks considered"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"Given these potential risks\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"Given these potential risks\".\n\"Given these potential risks, we must ensure...\" (xét đến những rủi ro này).",
         "audio": null
       },
       {
@@ -1768,8 +1768,8 @@ const HSG_TESTS_DATA = [
           "C": "the effects that an anthropological fieldwork has on local communities",
           "D": "the problems with conducting anthropological fieldwork"
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"the effects that an anthropological fieldwork has on local communities\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"the problems with conducting anthropological fieldwork\".\nToàn bài nói về những khó khăn khi làm điền dã nhân học (vị thế, điều kiện sống, tính khách quan của phương pháp).",
         "audio": null
       },
       {
@@ -1788,8 +1788,8 @@ const HSG_TESTS_DATA = [
           "C": "they want local people to behave naturally around them.",
           "D": "they need time to become accustomed to the conditions"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"they can try out a range of different research methodologies\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"they want local people to behave naturally around them.\".\nĐoạn 1: ở lại đủ lâu \"for their presence to be considered 'natural' by the permanent residents\".",
         "audio": null
       },
       {
@@ -1809,7 +1809,7 @@ const HSG_TESTS_DATA = [
           "D": "They do not study the language and culture of the region before their arrival."
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"They do culturally unacceptable things without realizing it.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"They do culturally unacceptable things without realizing it.\".\nĐoạn 2: \"They ask tactless questions and inadvertently break rules regarding how things are usually done.\"",
         "audio": null
       },
       {
@@ -1828,8 +1828,8 @@ const HSG_TESTS_DATA = [
           "C": "range or extent",
           "D": "secret or mystery"
         },
-        "answer": "D",
-        "explanation": "Đáp án đúng là **D**.\n- Phương án **D**: *\"secret or mystery\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"range or extent\".\n\"the gamut of practices\" = toàn bộ phạm vi các tập quán (range or extent).",
         "audio": null
       },
       {
@@ -1848,8 +1848,8 @@ const HSG_TESTS_DATA = [
           "C": "failure to meet expectations",
           "D": "never being left alone"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"poor sanitary conditions\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"never being left alone\".\nĐoạn 3: khó thích nghi \"to societies where being alone is considered pitiful\" – tức là không bao giờ được ở một mình.",
         "audio": null
       },
       {
@@ -1868,8 +1868,8 @@ const HSG_TESTS_DATA = [
           "C": "middle-class Europeans find field research more difficult than researchers from other \nbackgrounds.",
           "D": "anthropological texts tend to exaggerate the difficult conditions that researchers experience."
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"middle-class Europeans find field research more difficult than researchers from other \nbackgrounds.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"the fieldworker’s emotions and mood prejudice the research.\".\nCâu cuối đoạn 3: cần người rất tận tâm mới làm nghiên cứu không bị ảnh hưởng bởi những khó chịu cá nhân → cảm xúc của người nghiên cứu có thể làm sai lệch kết quả.",
         "audio": null
       },
       {
@@ -1888,8 +1888,8 @@ const HSG_TESTS_DATA = [
           "C": "(3)",
           "D": "(4)"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"(1)\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"(2)\".\nCâu định nghĩa emic/etic phải đứng ngay sau \"These can be classified as emic or etic.\", tức vị trí (2).",
         "audio": null
       },
       {
@@ -1908,8 +1908,8 @@ const HSG_TESTS_DATA = [
           "C": "to show the dangers of researchers trying to lessen their impact on a community",
           "D": "to show how a researcher’s choice of methodology can influence the validity of his findings."
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"to highlight why it is important that researchers minimize their impact on a community.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"to show the dangers of researchers trying to lessen their impact on a community\".\nLee cố không tác động (không cho thức ăn) nhưng lại gây thù địch → cho thấy nguy cơ khi nhà nghiên cứu cố giảm tác động của mình. D (lựa chọn phương pháp ảnh hưởng độ tin cậy) cũng có thể được tranh luận.",
         "audio": null
       },
       {
@@ -1928,8 +1928,8 @@ const HSG_TESTS_DATA = [
           "C": "It eradicates the problem of research subjects altering their behaviour towards researchers.",
           "D": "It takes longer to perform this type of research effectively."
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"It eradicates the problem of research subjects altering their behaviour towards researchers.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"It requires the researcher to become actively involved in the daily lives of those being studied.\".\n\"participant observation requires that the anthropologist not only observes the culture, but participates in it too\".",
         "audio": null
       },
       {
@@ -1948,8 +1948,8 @@ const HSG_TESTS_DATA = [
           "C": "It aims to involve the subjects in both information gathering and analysis.",
           "D": "It is the reverse of the participant observation technique."
         },
-        "answer": "D",
-        "explanation": "Đáp án đúng là **D**.\n- Phương án **D**: *\"It is the reverse of the participant observation technique.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"It does not require a researcher to be present.\".\nBài không nói phương pháp này không cần nhà nghiên cứu có mặt; A, C, D đều đúng theo đoạn cuối (\"the process is turned on its head\").",
         "audio": null
       },
       {
@@ -1969,7 +1969,7 @@ const HSG_TESTS_DATA = [
           "D": "Paragraph 2"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"Paragraph 5\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"Paragraph 5\".\nĐoạn 5: \"It's about raising their awareness of the environment...\". Lưu ý đoạn 1 cũng có ý tương tự (\"get us thinking about the environment\").",
         "audio": null
       },
       {
@@ -1988,8 +1988,8 @@ const HSG_TESTS_DATA = [
           "C": "He wanted to encourage young people to clean up their area.",
           "D": "He was trying to draw attention to the way resources are wasted."
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"He was trying to raise money for environmental causes.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"He was trying to draw attention to the way resources are wasted.\".\nBán vé số đã cào để trẻ em suy nghĩ về giá trị đồ vật: \"the material you throw away is often worth more than the product...\".",
         "audio": null
       },
       {
@@ -2008,8 +2008,8 @@ const HSG_TESTS_DATA = [
           "C": "felt that his activities would be more appropriate elsewhere.",
           "D": "were worried that people would see this as a waste of public money."
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"felt that his activities would be more appropriate elsewhere.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"were concerned that he might attract negative publicity.\".\n\"they were understandably wary that I might give people the impression that our National Parks are filthy\".",
         "audio": null
       },
       {
@@ -2029,7 +2029,7 @@ const HSG_TESTS_DATA = [
           "D": "gets pleasure from explaining the meaning of his art."
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"clearly enjoys the performance aspect of his work.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"clearly enjoys the performance aspect of his work.\".\n\"Steve's in his element as he adopts the role of lively, gesticulating artiste\".",
         "audio": null
       },
       {
@@ -2048,8 +2048,8 @@ const HSG_TESTS_DATA = [
           "C": "realised that she has begun to understand modern art.",
           "D": "no longer feels so negative about the problem of litter."
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"feels angry that their work will not be preserved.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"realised that she has begun to understand modern art.\".\nĐoạn cuối: tác giả \"succumbed to garbage fever\", tiếc khi tháo tác phẩm, \"my first venture into the world of modern art\" → gần nhất với C. Không phương án nào khớp hoàn toàn; D cũng có thể được hiểu từ \"garbage fever\".",
         "audio": null
       },
       {
@@ -2068,8 +2068,8 @@ const HSG_TESTS_DATA = [
           "C": "demonstrate that there has long been a link between art and ecology.",
           "D": "underline her view that the work Steve does is actually of great value."
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"demonstrate that there has long been a link between art and ecology.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"underline her view that the work Steve does is actually of great value.\".\nTrích John Muir (\"everything matters\") để trả lời câu \"Who cares about a few crisp packets?\" → khẳng định việc Steve làm (với những rác nhỏ) là có giá trị.",
         "audio": null
       },
       {
@@ -2088,8 +2088,8 @@ const HSG_TESTS_DATA = [
           "C": "shouldered",
           "D": "jostled"
         },
-        "answer": "D",
-        "explanation": "Đáp án đúng là **D**.\n- Phương án **D**: *\"jostled\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"hurried\".\n\"chivvied back onto the coaches\" = bị giục quay lại xe (hurried).",
         "audio": null
       },
       {
@@ -2108,8 +2108,8 @@ const HSG_TESTS_DATA = [
           "C": "the park",
           "D": "the view"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"the waste\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"his work\".\nTrong đoạn 5, \"it\" (\"what the kids made of it\", \"It's about raising their awareness\") chỉ tác phẩm của Steve.",
         "audio": null
       }
     ]
@@ -2384,7 +2384,7 @@ const HSG_TESTS_DATA = [
           "D": "while"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"then\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"then\".\n\"But if you did, then you might be surprised...\" – \"then\" mở đầu mệnh đề kết quả của câu điều kiện.",
         "audio": null
       },
       {
@@ -2404,7 +2404,7 @@ const HSG_TESTS_DATA = [
           "D": "means"
         },
         "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"medium\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là B: \"medium\".\n\"an unfamiliar medium\" – opera là một loại hình/phương tiện nghệ thuật xa lạ.",
         "audio": null
       },
       {
@@ -2423,8 +2423,8 @@ const HSG_TESTS_DATA = [
           "C": "indifference",
           "D": "disillusionment"
         },
-        "answer": "D",
-        "explanation": "Đáp án đúng là **D**.\n- Phương án **D**: *\"disillusionment\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"resistance\".\n\"an extreme negative reaction, but that resistance is a great challenge\" – sự phản kháng.",
         "audio": null
       },
       {
@@ -2444,7 +2444,7 @@ const HSG_TESTS_DATA = [
           "D": "included"
         },
         "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"involved\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là C: \"involved\".\n\"the skill that is involved in the art forms\" – kỹ năng cần có trong các loại hình nghệ thuật.",
         "audio": null
       },
       {
@@ -2464,7 +2464,7 @@ const HSG_TESTS_DATA = [
           "D": "design"
         },
         "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"monopoly\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là B: \"monopoly\".\nCụm \"have a monopoly on something\" – độc quyền.",
         "audio": null
       },
       {
@@ -2483,8 +2483,8 @@ const HSG_TESTS_DATA = [
           "C": "struggled",
           "D": "achieved"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"performed\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"struggled\".\n\"children who have previously struggled elsewhere in their school life\" – trẻ từng gặp khó khăn ở các môn khác.",
         "audio": null
       },
       {
@@ -2503,8 +2503,8 @@ const HSG_TESTS_DATA = [
           "C": "spill the beans",
           "D": "breathe new life into"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"have all the makings of\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"breathe new life into\".\n\"breathe new life into such an old-fashioned form\" – thổi sức sống mới vào hình thức nhật ký cũ.",
         "audio": null
       },
       {
@@ -2523,8 +2523,8 @@ const HSG_TESTS_DATA = [
           "C": "takes",
           "D": "gives"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"appeals\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"takes\".\nThành ngữ \"take someone's fancy\" – làm ai thích thú.",
         "audio": null
       },
       {
@@ -2543,8 +2543,8 @@ const HSG_TESTS_DATA = [
           "C": "rather than",
           "D": "apart from"
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"rather than\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"apart from\".\n\"no ambitions apart from to show films...\" ≈ \"other than\" (không có tham vọng gì ngoài việc...).",
         "audio": null
       },
       {
@@ -2564,7 +2564,7 @@ const HSG_TESTS_DATA = [
           "D": "play"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"serve\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"serve\".\nCụm \"serve a purpose\".",
         "audio": null
       },
       {
@@ -2583,8 +2583,8 @@ const HSG_TESTS_DATA = [
           "C": "newsworthy",
           "D": "newsless"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"newsy\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"newsworthy\".\n\"not newsworthy enough to warrant coverage by mass media\" – không đủ giá trị đưa tin.",
         "audio": null
       },
       {
@@ -2604,7 +2604,7 @@ const HSG_TESTS_DATA = [
           "D": "feasibility"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"potential\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"potential\".\n\"its potential is only now becoming apparent\" – tiềm năng.",
         "audio": null
       },
       {
@@ -2623,8 +2623,8 @@ const HSG_TESTS_DATA = [
           "C": "c – a – e – b – d",
           "D": "d – e – c – a – b"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"e – d – a – c – b\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"b – a – e – d – c\".\nThư mời: b (mời phỏng vấn) → a (thời gian, hình thức) → … → c (mong được gặp). Thứ tự lý tưởng là b-a-d-e-c nhưng không có; B (b-a-e-d-c) là phương án gần nhất và duy nhất mở đầu đúng.",
         "audio": null
       },
       {
@@ -2643,8 +2643,8 @@ const HSG_TESTS_DATA = [
           "C": "b-e-d-a-c",
           "D": "c- e-d-b-a"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"c-e-b-d-a\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"c- e-d-b-a\".\nc (giới thiệu ngô) → e (nguồn gốc) → d (đa dạng món ăn) → b (\"Beyond its culinary uses\" – công dụng khác) → a (kết luận).",
         "audio": null
       },
       {
@@ -2663,8 +2663,8 @@ const HSG_TESTS_DATA = [
           "C": "f-e-d-c-b-a",
           "D": "e-a-b-d-c-f"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"a-b-d-c-f-e\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"f-e-b-a-c-d\".\nf (giới thiệu đàn guitar) → e (các loại) → b (vai trò trong âm nhạc; \"shares similarities to other instruments\") → a (\"It consists of strings...\") → c (học chơi đàn) → d (kết luận).",
         "audio": null
       },
       {
@@ -2684,7 +2684,7 @@ const HSG_TESTS_DATA = [
           "D": "f-b-a-c-e-d"
         },
         "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"f-b-a-d-e-c\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là C: \"f-b-a-d-e-c\".\nf (tôi xem một cảnh phim) → b (cảnh có một thanh niên và một cậu bé) → a (phát tờ rơi) → d (trông mệt mỏi) → e (cậu bé không nhìn người qua đường) → c (\"And most of the passers-by neither look at the boy...\"). D (f-b-a-c-e-d) cũng có thể chấp nhận.",
         "audio": null
       },
       {
@@ -2703,8 +2703,8 @@ const HSG_TESTS_DATA = [
           "C": "c-d-a-b-e-f",
           "D": "a-c-b-d-f-e"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"e-d-f-c-b-a\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"a-b-d-c-f-e\".\na (luận điểm) → b (For instance) → d (Furthermore) → c (While it can be expensive...) → f (On the other hand...) → e (Nevertheless... – kết luận).",
         "audio": null
       },
       {
@@ -2723,8 +2723,8 @@ const HSG_TESTS_DATA = [
           "C": "As a direct consequence, customary practices are increasingly perceived as impediments \nto individual and career advancement.",
           "D": "Notwithstanding these apprehensions, the majority of the population has effectively \ndiscarded ancestral habits in favor of a technologically-driven existence."
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"Extended periods of empirical observation indicate a broad acceptance of these transitions \namong the youth.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"Nevertheless, such a transformation is seldom without friction, frequently involving the gradual decay of core communal principles.\".\nCâu sau nói \"this transition signifies a profound loss\" → cần câu nói về sự chuyển đổi gây xung đột, mất mát giá trị (B). A trái nghĩa; C, D không dẫn tới \"loss\".",
         "audio": null
       },
       {
@@ -2743,8 +2743,8 @@ const HSG_TESTS_DATA = [
           "C": "Economic pressures are exerted on traditional lifestyles",
           "D": "With economic pressures to exert on traditional lifestyles"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"Because economic pressures being exerted on traditional lifestyles\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"Economic pressures being exerted on traditional lifestyles\".\nCấu trúc độc lập (absolute phrase) \"Economic pressures being exerted on traditional lifestyles, many communities find...\"; C tạo lỗi nối câu bằng dấu phẩy.",
         "audio": null
       },
       {
@@ -2764,7 +2764,7 @@ const HSG_TESTS_DATA = [
           "D": "It is a fundamental pillar that existence precedes essence"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"That existence precedes essence is a fundamental pillar of this school of thought\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"That existence precedes essence is a fundamental pillar of this school of thought\".\nMệnh đề danh từ làm chủ ngữ: \"That existence precedes essence is a fundamental pillar of this school of thought.\"",
         "audio": null
       },
       {
@@ -2783,8 +2783,8 @@ const HSG_TESTS_DATA = [
           "C": "By observing only the history of cultural adaptation",
           "D": "Only cultural adaptation by observing its history"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"Only by observing the history of cultural adaptation\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"By observing only the history of cultural adaptation\".\nMệnh đề chính \"we can observe\" không đảo ngữ nên không thể mở đầu bằng \"Only by...\" (A). C \"By observing only the history of cultural adaptation\" đúng ngữ pháp.",
         "audio": null
       },
       {
@@ -2803,8 +2803,8 @@ const HSG_TESTS_DATA = [
           "C": "Not only such a perspective would preserve historical values",
           "D": "Preserve historical values would such a perspective not only"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"Such a perspective would preserve historical values not only\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"Not only would such a perspective preserve historical values\".\nĐảo ngữ \"Not only would such a perspective preserve historical values, but it would also...\".",
         "audio": null
       },
       {
@@ -2823,8 +2823,8 @@ const HSG_TESTS_DATA = [
           "C": "Realm",
           "D": "specialty"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"jurisdiction\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"Realm\".\n\"the province of shamans...\" = lĩnh vực của ai đó → realm. \"specialty\" (D) cũng gần nghĩa.",
         "audio": null
       },
       {
@@ -2843,8 +2843,8 @@ const HSG_TESTS_DATA = [
           "C": "To illustrate the dearth of empirical erudition amidst primitive civilisations",
           "D": "To yield a celebrated background for rainmaking ventures"
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"To illustrate the dearth of empirical erudition amidst primitive civilisations\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"To yield a celebrated background for rainmaking ventures\".\nNhắc đến thầy cúng, phù thủy, tu sĩ để cung cấp bối cảnh lịch sử cho các nỗ lực tạo mưa.",
         "audio": null
       },
       {
@@ -2863,8 +2863,8 @@ const HSG_TESTS_DATA = [
           "C": "the genesis of water droplets from water vapour",
           "D": "the resistance of water vapour to supersaturation"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"the diminution of air temperatures inside a cloud\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"the genesis of water droplets from water vapour\".\nĐoạn về condensation: hơi nước \"will begin to condense into tiny microscopic droplets\" – sự hình thành giọt nước từ hơi nước.",
         "audio": null
       },
       {
@@ -2883,8 +2883,8 @@ const HSG_TESTS_DATA = [
           "C": "Water droplets must become sufficiently dense to overcome air resistance.",
           "D": "Water droplets must have something on which to affix themselves."
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"Air temperatures must depreciate to a critical level.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"Water droplets must have something on which to affix themselves.\".\n\"these water droplets must first have something to coalesce around\".",
         "audio": null
       },
       {
@@ -2903,8 +2903,8 @@ const HSG_TESTS_DATA = [
           "C": "expedite coalescence",
           "D": "facilitate condensation"
         },
-        "answer": "D",
-        "explanation": "Đáp án đúng là **D**.\n- Phương án **D**: *\"facilitate condensation\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"expedite coalescence\".\nSilver iodide được thả vào \"in an attempt to initiate coalescence\".",
         "audio": null
       },
       {
@@ -2923,8 +2923,8 @@ const HSG_TESTS_DATA = [
           "C": "sanctuary",
           "D": "usefulness"
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"sanctuary\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"usefulness\".\n\"efficacy\" = hiệu quả, tính hữu dụng.",
         "audio": null
       },
       {
@@ -2944,7 +2944,7 @@ const HSG_TESTS_DATA = [
           "D": "The overheads of cloud seeding are exorbitant to be viable."
         },
         "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"Cloud seeding does not always work.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là B: \"Cloud seeding does not always work.\".\n\"it is often impossible to tell whether greater amounts of precipitation occur...\"; chỉ hiệu quả khi mây đã bão hòa.",
         "audio": null
       },
       {
@@ -2964,7 +2964,7 @@ const HSG_TESTS_DATA = [
           "D": "They hanker after a more effective component than silver iodide."
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"Silver iodide introduces poisons into the environment.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"Silver iodide introduces poisons into the environment.\".\nSilver iodide \"can be toxic to vegetation and wildlife\"; các nước tìm vật liệu \"more environmentally friendly\".",
         "audio": null
       },
       {
@@ -2983,8 +2983,8 @@ const HSG_TESTS_DATA = [
           "C": "The formidable stature of religious epitomes in primitive civilisations was primarily due to their \nallegations to restrain the rain.",
           "D": "The greatness of primeval societies was grounded in the adroitness of ethereal leaders to create \nrain."
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"In primitive civilisations, authority epitomes dodged explicit assertions about constraining the \nrains.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"The formidable stature of religious epitomes in primitive civilisations was primarily due to their allegations to restrain the rain.\".\nCâu gốc: quyền lực của những người này dựa trên việc họ tự nhận có thể ra lệnh cho mưa → C (dù từ \"restrain\" chưa chính xác, đây là phương án gần nhất).",
         "audio": null
       },
       {
@@ -3003,8 +3003,8 @@ const HSG_TESTS_DATA = [
           "C": "upheavals",
           "D": "uprisings"
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"upheavals\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"updraughts\".\n\"upward breaths of wind\" = luồng gió thổi lên (updraughts).",
         "audio": null
       },
       {
@@ -3024,7 +3024,7 @@ const HSG_TESTS_DATA = [
           "D": "To Be Successful? Stop Being So Negative"
         },
         "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"To Be Successful? Quit Being So Positive\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là B: \"To Be Successful? Quit Being So Positive\".\nLuận điểm chính: chỉ tập trung vào mặt tích cực là sai lầm → \"To Be Successful? Quit Being So Positive\".",
         "audio": null
       },
       {
@@ -3044,7 +3044,7 @@ const HSG_TESTS_DATA = [
           "D": "ignoring negatives goes against the natural balance to all things"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"focusing on positives can make the worse become the worst\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"focusing on positives can make the worse become the worst\".\n\"a recipe for disaster\" = chắc chắn dẫn đến thảm họa; A gần nhất (làm tình hình tệ đi). Các phương án đều diễn đạt chưa tốt; đề nghị giáo viên xem lại.",
         "audio": null
       },
       {
@@ -3063,8 +3063,8 @@ const HSG_TESTS_DATA = [
           "C": "hard times and turnabouts",
           "D": "happiness and sadness"
         },
-        "answer": "D",
-        "explanation": "Đáp án đúng là **D**.\n- Phương án **D**: *\"happiness and sadness\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"hard times and turnabouts\".\nLưu ý: trong bài, \"the two\" chỉ Apple và Steve Jobs, không có phương án nào đúng. C (hard times and turnabouts) là phương án duy nhất liên quan đến đoạn này.",
         "audio": null
       },
       {
@@ -3084,7 +3084,7 @@ const HSG_TESTS_DATA = [
           "D": "interventions he made in his own introspection"
         },
         "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"hardships he faced with during his professional life\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là B: \"hardships he faced with during his professional life\".\n\"bricks to the head\" = những cú sốc/khó khăn (bị sa thải, mất vợ) mà tác giả gặp.",
         "audio": null
       },
       {
@@ -3103,8 +3103,8 @@ const HSG_TESTS_DATA = [
           "C": "He made Apple the most valuable company in the world.",
           "D": "He considered being fired from Apple the best lesson learnt."
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"He made Apple the most valuable company in the world.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"He founded NeXT and Pixar to be able to return to Apple.\".\nBài không nói Jobs lập NeXT và Pixar \"để\" quay lại Apple. A, C, D đều có trong bài.",
         "audio": null
       },
       {
@@ -3124,7 +3124,7 @@ const HSG_TESTS_DATA = [
           "D": "To earn happiness, one has to experience the feeling of sadness."
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"Only when you admit the negative as part of your life, you can proceed.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"Only when you admit the negative as part of your life, you can proceed.\".\nPhải đối diện với mặt tiêu cực mới vượt qua được và tiến lên.",
         "audio": null
       },
       {
@@ -3143,8 +3143,8 @@ const HSG_TESTS_DATA = [
           "C": "push negative thoughts out of one's mind",
           "D": "stay away from possible dangers"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"clear one's mind from worries\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"push negative thoughts out of one's mind\".\n\"filter your consciousness and disallow negative thoughts\" = gạt suy nghĩ tiêu cực ra khỏi đầu.",
         "audio": null
       },
       {
@@ -3163,8 +3163,8 @@ const HSG_TESTS_DATA = [
           "C": "persuasive",
           "D": "argumentative"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"preventive\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"persuasive\".\nTác giả dùng câu chuyện của Jobs và của chính mình để thuyết phục người đọc → persuasive.",
         "audio": null
       }
     ]
@@ -3438,8 +3438,8 @@ const HSG_TESTS_DATA = [
           "C": "more unsparing",
           "D": "sterner"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"more unrelenting\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"sterner\".\n\"a reaction against sterner times when children weren't praised enough\" – thời kỳ nghiêm khắc hơn. \"grimmer\" (A) cũng có thể chấp nhận.",
         "audio": null
       },
       {
@@ -3458,8 +3458,8 @@ const HSG_TESTS_DATA = [
           "C": "culminated in",
           "D": "resulted from"
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"culminated in\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"consequent upon\".\n\"it also seems to be consequent upon a fear...\" = là hệ quả của nỗi sợ. B (owing to) cũng gần nghĩa; C, D sai cấu trúc sau \"to be\".",
         "audio": null
       },
       {
@@ -3478,8 +3478,8 @@ const HSG_TESTS_DATA = [
           "C": "consecutive",
           "D": "continual"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"concurrent\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"continual\".\n\"experiencing continual failure\" – thất bại liên tục, lặp đi lặp lại nhiều năm.",
         "audio": null
       },
       {
@@ -3498,8 +3498,8 @@ const HSG_TESTS_DATA = [
           "C": "In like manner",
           "D": "In similar fashion"
         },
-        "answer": "D",
-        "explanation": "Đáp án đúng là **D**.\n- Phương án **D**: *\"In similar fashion\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"By the same token\".\n\"By the same token\" = tương tự như vậy. Lưu ý: \"In like manner\" (C) và \"In similar fashion\" (D) cũng mang nghĩa \"tương tự\" – câu có nhiều hơn một đáp án chấp nhận được.",
         "audio": null
       },
       {
@@ -3518,8 +3518,8 @@ const HSG_TESTS_DATA = [
           "C": "spanners in the works",
           "D": "stumbling blocks"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"obstacle courses\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"stumbling blocks\".\n\"Life is full of stumbling blocks\" – trở ngại. Các thành ngữ khác (flies in the ointment, spanners in the works) mang nghĩa hẹp hơn.",
         "audio": null
       },
       {
@@ -3539,7 +3539,7 @@ const HSG_TESTS_DATA = [
           "D": "without regard to"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"in the face of\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"in the face of\".\n\"reached the top in the face of ruthless competition\" – bất chấp. Lưu ý: \"in the teeth of\" (B) cũng đúng nghĩa và hay đi với \"competition\".",
         "audio": null
       },
       {
@@ -3558,8 +3558,8 @@ const HSG_TESTS_DATA = [
           "C": "most effectively",
           "D": "the most effectively"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"most effective\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"the most effective\".\n\"one of the most effective ways\" – so sánh nhất cần \"the\".",
         "audio": null
       },
       {
@@ -3578,8 +3578,8 @@ const HSG_TESTS_DATA = [
           "C": "For instance",
           "D": "In contrast"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"Therefore\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"For instance\".\nCâu sau là ví dụ minh họa cho chế độ ăn cân bằng → \"For instance\".",
         "audio": null
       },
       {
@@ -3599,7 +3599,7 @@ const HSG_TESTS_DATA = [
           "D": "a healthily way"
         },
         "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"a healthy way\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là C: \"a healthy way\".\n\"live in a healthy way\".",
         "audio": null
       },
       {
@@ -3618,8 +3618,8 @@ const HSG_TESTS_DATA = [
           "C": "living quality",
           "D": "life’s quality"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"life of quality\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"quality of life\".\nCụm cố định \"quality of life\".",
         "audio": null
       },
       {
@@ -3639,7 +3639,7 @@ const HSG_TESTS_DATA = [
           "D": "doing"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"making\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"making\".\n\"make changes\".",
         "audio": null
       },
       {
@@ -3658,8 +3658,8 @@ const HSG_TESTS_DATA = [
           "C": "In no time",
           "D": "In conclusion"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"In addition\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"In conclusion\".\nĐoạn kết: \"In conclusion, take the time to plan your meals...\".",
         "audio": null
       },
       {
@@ -3679,7 +3679,7 @@ const HSG_TESTS_DATA = [
           "D": "a-c-b-d-f-e"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"a-b-d-c-f-e\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"a-b-d-c-f-e\".\na (luận điểm) → b (For example) → d (Furthermore) → c (While it may seem overwhelming...) → f (On the other hand...) → e (Nevertheless... – kết).",
         "audio": null
       },
       {
@@ -3698,8 +3698,8 @@ const HSG_TESTS_DATA = [
           "C": "d – e – b – c – a",
           "D": "a – b – c – e – d"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"e – a – d – b – c\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"d – e – b – c – a\".\nd (giới thiệu chuyến du thuyền) → e (Not only... but also) → b (Moreover, cabin) → c (tổng kết trải nghiệm) → a (Book now – lời kêu gọi).",
         "audio": null
       },
       {
@@ -3719,7 +3719,7 @@ const HSG_TESTS_DATA = [
           "D": "c – a – d – e – b"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"b – d – a – c – e\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"b – d – a – c – e\".\nb (quan điểm) → d (học kỹ năng, kinh nghiệm) → a (tự hào) → c (so với việc làm có lương) → e (\"also\" – lợi ích về sau). B (b-d-e-c-a) cũng có thể được tranh luận.",
         "audio": null
       },
       {
@@ -3738,8 +3738,8 @@ const HSG_TESTS_DATA = [
           "C": "b-c-a-d",
           "D": "c-a-d-b"
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"b-c-a-d\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"c-b-d-a\".\nc (AI phát triển nhanh) → b (ban đầu... nay...) → d (machine learning) → a (tương lai và vấn đề đạo đức).",
         "audio": null
       },
       {
@@ -3758,8 +3758,8 @@ const HSG_TESTS_DATA = [
           "C": "b-c-a-d-e",
           "D": "d-b-a-c-e"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"c-a-d-b-e\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"b-d-c-a-e\".\nb (bắt đầu sự nghiệp) → d (rèn luyện kỹ năng) → c (điểm mạnh) → a (thử thách và thành tựu) → e (In conclusion).",
         "audio": null
       },
       {
@@ -3779,7 +3779,7 @@ const HSG_TESTS_DATA = [
           "D": "when implementation pressures were intensifyingly"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"as implementation pressures intensified\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"as implementation pressures intensified\".\n\"as implementation pressures intensified\" – mệnh đề thời gian đúng ngữ pháp; B, C, D sai cấu trúc/từ loại.",
         "audio": null
       },
       {
@@ -3798,8 +3798,8 @@ const HSG_TESTS_DATA = [
           "C": "having characterized fragmentation and inconsistent",
           "D": "that characterizes fragmenting inconsistently"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"which is characterizing fragmentation inconsistently\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"characterized by fragmentation and inconsistency\".\n\"a policy landscape characterized by fragmentation and inconsistency\" – phân từ II rút gọn mệnh đề quan hệ.",
         "audio": null
       },
       {
@@ -3819,7 +3819,7 @@ const HSG_TESTS_DATA = [
           "D": "with mitigation costs being premise-deferred"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"on the premise that mitigation costs can be deferred\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"on the premise that mitigation costs can be deferred\".\n\"on the premise that mitigation costs can be deferred\" – với lý lẽ rằng chi phí có thể hoãn lại.",
         "audio": null
       },
       {
@@ -3839,7 +3839,7 @@ const HSG_TESTS_DATA = [
           "D": "that skeptically incomprehends mutually"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"of mutual incomprehension and skepticism\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"of mutual incomprehension and skepticism\".\n\"fostering a climate of mutual incomprehension and skepticism\".",
         "audio": null
       },
       {
@@ -3858,8 +3858,8 @@ const HSG_TESTS_DATA = [
           "C": "being grounded scientific evidence to accountability",
           "D": "grounds scientifically evidential accountability socially"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"grounds scientific evidence with societal accountability\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"is grounded in scientific evidence and societal accountability\".\n\"ensuring that climate policy is grounded in scientific evidence and societal accountability\".",
         "audio": null
       },
       {
@@ -3878,8 +3878,8 @@ const HSG_TESTS_DATA = [
           "C": "Plastic pollution is a severe issue requiring multiple solutions.",
           "D": "Recycling has completely solved the plastic waste problem."
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"Governments are solely responsible for solving plastic pollution.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"Plastic pollution is a severe issue requiring multiple solutions.\".\nBài nêu mức độ nghiêm trọng và nhiều giải pháp (chính sách, doanh nghiệp, cá nhân, công nghệ).",
         "audio": null
       },
       {
@@ -3898,8 +3898,8 @@ const HSG_TESTS_DATA = [
           "C": "ignore",
           "D": "abandon"
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"ignore\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"support\".\n\"advocate for\" = ủng hộ (support).",
         "audio": null
       },
       {
@@ -3918,8 +3918,8 @@ const HSG_TESTS_DATA = [
           "C": "can eventually impact humans",
           "D": "have no real consequences"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"affect only small marine creatures\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"can eventually impact humans\".\n\"move up the food chain, potentially affecting human health\".",
         "audio": null
       },
       {
@@ -3938,8 +3938,8 @@ const HSG_TESTS_DATA = [
           "C": "expensive",
           "D": "temporary"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"harmful\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"long-lasting\".\n\"sustainable packaging\" – bao bì bền vững, dùng lâu dài; các phương án khác sai nghĩa.",
         "audio": null
       },
       {
@@ -3958,8 +3958,8 @@ const HSG_TESTS_DATA = [
           "C": "[III]",
           "D": "[IV]"
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"[III]\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"[II]\".\nCâu chèn nói về hạt vi nhựa di chuyển và tích tụ → đặt sau câu \"breaks down into microplastics...\", tức vị trí [II], trước \"They then move up the food chain\".",
         "audio": null
       },
       {
@@ -3979,7 +3979,7 @@ const HSG_TESTS_DATA = [
           "D": "Plastic is widely used in daily life."
         },
         "answer": "D",
-        "explanation": "Đáp án đúng là **D**.\n- Phương án **D**: *\"Plastic is widely used in daily life.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là D: \"Plastic is widely used in daily life.\".\n\"challenges remain due to the high production of plastic and its widespread use in everyday life\".",
         "audio": null
       },
       {
@@ -3998,8 +3998,8 @@ const HSG_TESTS_DATA = [
           "C": "accumulate",
           "D": "regenerate"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"disintegrate\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"regenerate\".\n\"decompose\" (phân hủy) trái nghĩa gần nhất là \"regenerate\" (tái tạo). A, B là từ đồng nghĩa; C (accumulate – tích tụ) cũng có thể được coi là trái nghĩa.",
         "audio": null
       },
       {
@@ -4018,8 +4018,8 @@ const HSG_TESTS_DATA = [
           "C": "Show that plastic cannot be replaced.",
           "D": "Prove that all plastics are biodegradable."
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"Argue that plastic pollution is not a real issue.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"Suggest an alternative to traditional plastic.\".\nNhựa gốc thực vật \"decompose faster and have less environmental impact\" → gợi ý phương án thay thế.",
         "audio": null
       },
       {
@@ -4038,8 +4038,8 @@ const HSG_TESTS_DATA = [
           "C": "Some regulations help, but challenges remain.",
           "D": "Only a few countries have laws on plastic use."
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"They are ineffective in reducing pollution.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"Some regulations help, but challenges remain.\".\nChính phủ đã ban hành lệnh cấm, \"However, challenges remain\".",
         "audio": null
       },
       {
@@ -4059,7 +4059,7 @@ const HSG_TESTS_DATA = [
           "D": "Compare plastic pollution to other environmental problems."
         },
         "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"Explain different aspects of plastic pollution and solutions.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là C: \"Explain different aspects of plastic pollution and solutions.\".\nBài giải thích nhiều khía cạnh của ô nhiễm nhựa và các giải pháp.",
         "audio": null
       },
       {
@@ -4070,7 +4070,7 @@ const HSG_TESTS_DATA = [
         "category": "Reading",
         "instruction": "Đọc bài văn học thuật bên trái và trả lời các câu hỏi phân tích, suy luận, từ vựng và tóm tắt.",
         "passageTitle": "Bài Đọc Hiểu 2 (Reading Passage 2 - Nâng Cao) - Đề 4",
-        "passage": "Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best \nanswer to each of the following questions. \nThe book of the century \nA classic of our times or an escapist yarn? Although its popularity is unparalleled, some intellectuals \ndismiss The Lord of the Rings as boyish fantasy. Andrew O'Hehir defends Tolkien's ‘true myth’ as a \nmodern masterpiece, and attempts to discover the secret of its success. \nIn January 1997, reporter Susan Jeffreys of the London Sunday Times informed a colleague that J.R.R. \nTolkien's epic fantasy The Lord of the Rings had been voted the greatest book of the 20th century in a readers' \npoll conducted by Britain's Channel 4 and the Waterstone's bookstore chain. Her colleague responded: \n\"What? Has it? Oh dear. Dear oh dear oh dear.\" \nAttitudes in America are arguably more relaxed about this kind of thing. No one from the American educated \nclasses expressed much dismay when a 1999 poll of American on-line bookshop Amazon.com customers \nchose The Lord of the Rings as the greatest book not merely of the century but of the millennium. Tolkien's \nbook is so deeply ingrained in popular culture, after all, that a great many of today's American academics and \njournalists probably still have those dog-eared paperbacks they read avidly in eighth grade with their \nhallucinatory mid-1970s cover art, stashed somewhere in the attic. \nFurthermore, members of the U.S. intelligentsia fully expect to have their tastes ignored, if not openly \nderided, by the public at large. To some American intellectuals it seems gratifying, even touching, that so \nmany millions of readers will happily devour a work as complicated as The Lord of the Rings. Whatever one \nmay make of it, it's a more challenging read than Gone With the Wind (runner-up in the Amazon survey), not \nto mention Harry Potter and the Sorcerer's Stone (fifth place). \nHugely ambitious in scope, The Lord of the Rings occupies an uncomfortable position in 20th century \nliterature. Tolkien's epic poses a stern challenge to modern literature and its defenders. (Tolkien on his critics: \n\"Some who have read the book, or at any rate have reviewed it. have found it boring, absurd, or contemptible; \nand I have no cause to complain, since I have similar opinions of their works, or of the kinds of writing that \nthey evidently prefer.\") Yet The Lord of the Rings has enjoyed massive and enduring popularity. It would \nseem that Tolkien's work supplied something that was missing among the formal innovations of 20th century \nfiction, something for which readers were ravenous. But what was it, and why was it important? \nAnswering this question properly would probably require a book rather than an article. But it seems that the \ncrux of the matter lies in Tolkien's wholehearted rejection of modernity and modernism. This is what so \npowerfully attracts some readers, and just as powerfully repels others. In his book J.R.R. Tolkien: Author of \nthe Century, T.A. Shippey expands on this notion by arguing that Tolkien saw his realm of Middle-earth not \nas fiction or invention, but as the recovery of something genuine that had become buried beneath fragments \nof fairy tale and nursery rhyme. \n\"However fanciful Tolkien's creation of Middle-earth was,\" Shippey writes, \"he did not think that he was \nentirely making it up. He was 'reconstructing', he was harmonising contradictions in his source-texts, \nsometimes he was supplying entirely new concepts (like hobbits), but he was also reaching back to an \nimaginative world which he believed had once really existed, at least in a collective imagination.\" \nThe book is also deeply grounded in Tolkien's linguistic expertise - he invented whole languages for his \ncharacters. Sometimes he became so absorbed in the creation of languages, in fact, that he put the story itself \naside for months or years at a time, believing he could not continue until some quandary or inconsistency in \nhis invented realm had been resolved. But Tolkien's immense intellect and erudition is not the source of his \nsuccess; without his storytelling gift, The Lord of the Rings would be little more than a curiosity. And this \ngift seems to stem straight from his refusal to break from classical and traditional forms. \nTolkien himself often spoke of his work as something 'found' or 'discovered', something whose existence was \nindependent of him. It's wise to tread lightly in this sort of interpretation, but it seems clear that he believed \nhis work to be something given, something revealed, which contained a kind of truth beyond measure. As a \nresult, his details have the weight of reality, linguistic and otherwise, and because of this his great sweep of \nstory feels real as well: you might say that his imaginary castles are built with a certain amount of genuine \nstone. Other writers' fantasy worlds are made up. Tolkien's is inherited.",
+        "passage": "Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best \nanswer to each of the following questions. \nThe book of the century \nA classic of our times or an escapist yarn? Although its popularity is unparalleled, some intellectuals \ndismiss The Lord of the Rings as boyish fantasy. Andrew O'Hehir defends Tolkien's ‘true myth’ as a \nmodern masterpiece, and attempts to discover the secret of its success. \nIn January 1997, reporter Susan Jeffreys of the London Sunday Times informed a colleague that J.R.R. Tolkien's epic fantasy The Lord of the Rings had been voted the greatest book of the 20th century in a readers' \npoll conducted by Britain's Channel 4 and the Waterstone's bookstore chain. Her colleague responded: \n\"What? Has it? Oh dear. Dear oh dear oh dear.\" \nAttitudes in America are arguably more relaxed about this kind of thing. No one from the American educated \nclasses expressed much dismay when a 1999 poll of American on-line bookshop Amazon.com customers \nchose The Lord of the Rings as the greatest book not merely of the century but of the millennium. Tolkien's \nbook is so deeply ingrained in popular culture, after all, that a great many of today's American academics and \njournalists probably still have those dog-eared paperbacks they read avidly in eighth grade with their \nhallucinatory mid-1970s cover art, stashed somewhere in the attic. \nFurthermore, members of the U.S. intelligentsia fully expect to have their tastes ignored, if not openly \nderided, by the public at large. To some American intellectuals it seems gratifying, even touching, that so \nmany millions of readers will happily devour a work as complicated as The Lord of the Rings. Whatever one \nmay make of it, it's a more challenging read than Gone With the Wind (runner-up in the Amazon survey), not \nto mention Harry Potter and the Sorcerer's Stone (fifth place). \nHugely ambitious in scope, The Lord of the Rings occupies an uncomfortable position in 20th century \nliterature. Tolkien's epic poses a stern challenge to modern literature and its defenders. (Tolkien on his critics: \n\"Some who have read the book, or at any rate have reviewed it. have found it boring, absurd, or contemptible; \nand I have no cause to complain, since I have similar opinions of their works, or of the kinds of writing that \nthey evidently prefer.\") Yet The Lord of the Rings has enjoyed massive and enduring popularity. It would \nseem that Tolkien's work supplied something that was missing among the formal innovations of 20th century \nfiction, something for which readers were ravenous. But what was it, and why was it important? \nAnswering this question properly would probably require a book rather than an article. But it seems that the \ncrux of the matter lies in Tolkien's wholehearted rejection of modernity and modernism. This is what so \npowerfully attracts some readers, and just as powerfully repels others. In his book J.R.R. Tolkien: Author of \nthe Century, T.A. Shippey expands on this notion by arguing that Tolkien saw his realm of Middle-earth not \nas fiction or invention, but as the recovery of something genuine that had become buried beneath fragments \nof fairy tale and nursery rhyme. \n\"However fanciful Tolkien's creation of Middle-earth was,\" Shippey writes, \"he did not think that he was \nentirely making it up. He was 'reconstructing', he was harmonising contradictions in his source-texts, \nsometimes he was supplying entirely new concepts (like hobbits), but he was also reaching back to an \nimaginative world which he believed had once really existed, at least in a collective imagination.\" \nThe book is also deeply grounded in Tolkien's linguistic expertise - he invented whole languages for his \ncharacters. Sometimes he became so absorbed in the creation of languages, in fact, that he put the story itself \naside for months or years at a time, believing he could not continue until some quandary or inconsistency in \nhis invented realm had been resolved. But Tolkien's immense intellect and erudition is not the source of his \nsuccess; without his storytelling gift, The Lord of the Rings would be little more than a curiosity. And this \ngift seems to stem straight from his refusal to break from classical and traditional forms. \nTolkien himself often spoke of his work as something 'found' or 'discovered', something whose existence was \nindependent of him. It's wise to tread lightly in this sort of interpretation, but it seems clear that he believed \nhis work to be something given, something revealed, which contained a kind of truth beyond measure. As a \nresult, his details have the weight of reality, linguistic and otherwise, and because of this his great sweep of \nstory feels real as well: you might say that his imaginary castles are built with a certain amount of genuine \nstone. Other writers' fantasy worlds are made up. Tolkien's is inherited.",
         "question": "When The Lord of the Rings was voted the greatest book of the 20th century, ______",
         "options": {
           "A": "many Americans were annoyed.",
@@ -4078,8 +4078,8 @@ const HSG_TESTS_DATA = [
           "C": "some people found the fact shocking.",
           "D": "American academics disagreed."
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"some people didn't believe it.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"some people found the fact shocking.\".\nPhản ứng \"What? Has it? Oh dear. Dear oh dear oh dear.\" thể hiện sự sửng sốt, thất vọng; đoạn sau đối chiếu \"No one... expressed much dismay\".",
         "audio": null
       },
       {
@@ -4090,7 +4090,7 @@ const HSG_TESTS_DATA = [
         "category": "Reading",
         "instruction": "Đọc bài văn học thuật bên trái và trả lời các câu hỏi phân tích, suy luận, từ vựng và tóm tắt.",
         "passageTitle": "Bài Đọc Hiểu 2 (Reading Passage 2 - Nâng Cao) - Đề 4",
-        "passage": "Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best \nanswer to each of the following questions. \nThe book of the century \nA classic of our times or an escapist yarn? Although its popularity is unparalleled, some intellectuals \ndismiss The Lord of the Rings as boyish fantasy. Andrew O'Hehir defends Tolkien's ‘true myth’ as a \nmodern masterpiece, and attempts to discover the secret of its success. \nIn January 1997, reporter Susan Jeffreys of the London Sunday Times informed a colleague that J.R.R. \nTolkien's epic fantasy The Lord of the Rings had been voted the greatest book of the 20th century in a readers' \npoll conducted by Britain's Channel 4 and the Waterstone's bookstore chain. Her colleague responded: \n\"What? Has it? Oh dear. Dear oh dear oh dear.\" \nAttitudes in America are arguably more relaxed about this kind of thing. No one from the American educated \nclasses expressed much dismay when a 1999 poll of American on-line bookshop Amazon.com customers \nchose The Lord of the Rings as the greatest book not merely of the century but of the millennium. Tolkien's \nbook is so deeply ingrained in popular culture, after all, that a great many of today's American academics and \njournalists probably still have those dog-eared paperbacks they read avidly in eighth grade with their \nhallucinatory mid-1970s cover art, stashed somewhere in the attic. \nFurthermore, members of the U.S. intelligentsia fully expect to have their tastes ignored, if not openly \nderided, by the public at large. To some American intellectuals it seems gratifying, even touching, that so \nmany millions of readers will happily devour a work as complicated as The Lord of the Rings. Whatever one \nmay make of it, it's a more challenging read than Gone With the Wind (runner-up in the Amazon survey), not \nto mention Harry Potter and the Sorcerer's Stone (fifth place). \nHugely ambitious in scope, The Lord of the Rings occupies an uncomfortable position in 20th century \nliterature. Tolkien's epic poses a stern challenge to modern literature and its defenders. (Tolkien on his critics: \n\"Some who have read the book, or at any rate have reviewed it. have found it boring, absurd, or contemptible; \nand I have no cause to complain, since I have similar opinions of their works, or of the kinds of writing that \nthey evidently prefer.\") Yet The Lord of the Rings has enjoyed massive and enduring popularity. It would \nseem that Tolkien's work supplied something that was missing among the formal innovations of 20th century \nfiction, something for which readers were ravenous. But what was it, and why was it important? \nAnswering this question properly would probably require a book rather than an article. But it seems that the \ncrux of the matter lies in Tolkien's wholehearted rejection of modernity and modernism. This is what so \npowerfully attracts some readers, and just as powerfully repels others. In his book J.R.R. Tolkien: Author of \nthe Century, T.A. Shippey expands on this notion by arguing that Tolkien saw his realm of Middle-earth not \nas fiction or invention, but as the recovery of something genuine that had become buried beneath fragments \nof fairy tale and nursery rhyme. \n\"However fanciful Tolkien's creation of Middle-earth was,\" Shippey writes, \"he did not think that he was \nentirely making it up. He was 'reconstructing', he was harmonising contradictions in his source-texts, \nsometimes he was supplying entirely new concepts (like hobbits), but he was also reaching back to an \nimaginative world which he believed had once really existed, at least in a collective imagination.\" \nThe book is also deeply grounded in Tolkien's linguistic expertise - he invented whole languages for his \ncharacters. Sometimes he became so absorbed in the creation of languages, in fact, that he put the story itself \naside for months or years at a time, believing he could not continue until some quandary or inconsistency in \nhis invented realm had been resolved. But Tolkien's immense intellect and erudition is not the source of his \nsuccess; without his storytelling gift, The Lord of the Rings would be little more than a curiosity. And this \ngift seems to stem straight from his refusal to break from classical and traditional forms. \nTolkien himself often spoke of his work as something 'found' or 'discovered', something whose existence was \nindependent of him. It's wise to tread lightly in this sort of interpretation, but it seems clear that he believed \nhis work to be something given, something revealed, which contained a kind of truth beyond measure. As a \nresult, his details have the weight of reality, linguistic and otherwise, and because of this his great sweep of \nstory feels real as well: you might say that his imaginary castles are built with a certain amount of genuine \nstone. Other writers' fantasy worlds are made up. Tolkien's is inherited.",
+        "passage": "Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best \nanswer to each of the following questions. \nThe book of the century \nA classic of our times or an escapist yarn? Although its popularity is unparalleled, some intellectuals \ndismiss The Lord of the Rings as boyish fantasy. Andrew O'Hehir defends Tolkien's ‘true myth’ as a \nmodern masterpiece, and attempts to discover the secret of its success. \nIn January 1997, reporter Susan Jeffreys of the London Sunday Times informed a colleague that J.R.R. Tolkien's epic fantasy The Lord of the Rings had been voted the greatest book of the 20th century in a readers' \npoll conducted by Britain's Channel 4 and the Waterstone's bookstore chain. Her colleague responded: \n\"What? Has it? Oh dear. Dear oh dear oh dear.\" \nAttitudes in America are arguably more relaxed about this kind of thing. No one from the American educated \nclasses expressed much dismay when a 1999 poll of American on-line bookshop Amazon.com customers \nchose The Lord of the Rings as the greatest book not merely of the century but of the millennium. Tolkien's \nbook is so deeply ingrained in popular culture, after all, that a great many of today's American academics and \njournalists probably still have those dog-eared paperbacks they read avidly in eighth grade with their \nhallucinatory mid-1970s cover art, stashed somewhere in the attic. \nFurthermore, members of the U.S. intelligentsia fully expect to have their tastes ignored, if not openly \nderided, by the public at large. To some American intellectuals it seems gratifying, even touching, that so \nmany millions of readers will happily devour a work as complicated as The Lord of the Rings. Whatever one \nmay make of it, it's a more challenging read than Gone With the Wind (runner-up in the Amazon survey), not \nto mention Harry Potter and the Sorcerer's Stone (fifth place). \nHugely ambitious in scope, The Lord of the Rings occupies an uncomfortable position in 20th century \nliterature. Tolkien's epic poses a stern challenge to modern literature and its defenders. (Tolkien on his critics: \n\"Some who have read the book, or at any rate have reviewed it. have found it boring, absurd, or contemptible; \nand I have no cause to complain, since I have similar opinions of their works, or of the kinds of writing that \nthey evidently prefer.\") Yet The Lord of the Rings has enjoyed massive and enduring popularity. It would \nseem that Tolkien's work supplied something that was missing among the formal innovations of 20th century \nfiction, something for which readers were ravenous. But what was it, and why was it important? \nAnswering this question properly would probably require a book rather than an article. But it seems that the \ncrux of the matter lies in Tolkien's wholehearted rejection of modernity and modernism. This is what so \npowerfully attracts some readers, and just as powerfully repels others. In his book J.R.R. Tolkien: Author of \nthe Century, T.A. Shippey expands on this notion by arguing that Tolkien saw his realm of Middle-earth not \nas fiction or invention, but as the recovery of something genuine that had become buried beneath fragments \nof fairy tale and nursery rhyme. \n\"However fanciful Tolkien's creation of Middle-earth was,\" Shippey writes, \"he did not think that he was \nentirely making it up. He was 'reconstructing', he was harmonising contradictions in his source-texts, \nsometimes he was supplying entirely new concepts (like hobbits), but he was also reaching back to an \nimaginative world which he believed had once really existed, at least in a collective imagination.\" \nThe book is also deeply grounded in Tolkien's linguistic expertise - he invented whole languages for his \ncharacters. Sometimes he became so absorbed in the creation of languages, in fact, that he put the story itself \naside for months or years at a time, believing he could not continue until some quandary or inconsistency in \nhis invented realm had been resolved. But Tolkien's immense intellect and erudition is not the source of his \nsuccess; without his storytelling gift, The Lord of the Rings would be little more than a curiosity. And this \ngift seems to stem straight from his refusal to break from classical and traditional forms. \nTolkien himself often spoke of his work as something 'found' or 'discovered', something whose existence was \nindependent of him. It's wise to tread lightly in this sort of interpretation, but it seems clear that he believed \nhis work to be something given, something revealed, which contained a kind of truth beyond measure. As a \nresult, his details have the weight of reality, linguistic and otherwise, and because of this his great sweep of \nstory feels real as well: you might say that his imaginary castles are built with a certain amount of genuine \nstone. Other writers' fantasy worlds are made up. Tolkien's is inherited.",
         "question": "It is implied in the second paragraph that The Lord of the Rings",
         "options": {
           "A": "is more popular in the States than in the UK.",
@@ -4098,8 +4098,8 @@ const HSG_TESTS_DATA = [
           "C": "is mainly appreciated by academics and journalists.",
           "D": "is mostly read by school children."
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"is more popular in the States than in the UK.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"is mostly read by school children.\".\nĐoạn 2: nhiều học giả Mỹ đọc sách này \"avidly in eighth grade\" → sách thường được đọc khi còn đi học. Không phương án nào khớp hoàn toàn; đề nghị giáo viên xem lại.",
         "audio": null
       },
       {
@@ -4110,7 +4110,7 @@ const HSG_TESTS_DATA = [
         "category": "Reading",
         "instruction": "Đọc bài văn học thuật bên trái và trả lời các câu hỏi phân tích, suy luận, từ vựng và tóm tắt.",
         "passageTitle": "Bài Đọc Hiểu 2 (Reading Passage 2 - Nâng Cao) - Đề 4",
-        "passage": "Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best \nanswer to each of the following questions. \nThe book of the century \nA classic of our times or an escapist yarn? Although its popularity is unparalleled, some intellectuals \ndismiss The Lord of the Rings as boyish fantasy. Andrew O'Hehir defends Tolkien's ‘true myth’ as a \nmodern masterpiece, and attempts to discover the secret of its success. \nIn January 1997, reporter Susan Jeffreys of the London Sunday Times informed a colleague that J.R.R. \nTolkien's epic fantasy The Lord of the Rings had been voted the greatest book of the 20th century in a readers' \npoll conducted by Britain's Channel 4 and the Waterstone's bookstore chain. Her colleague responded: \n\"What? Has it? Oh dear. Dear oh dear oh dear.\" \nAttitudes in America are arguably more relaxed about this kind of thing. No one from the American educated \nclasses expressed much dismay when a 1999 poll of American on-line bookshop Amazon.com customers \nchose The Lord of the Rings as the greatest book not merely of the century but of the millennium. Tolkien's \nbook is so deeply ingrained in popular culture, after all, that a great many of today's American academics and \njournalists probably still have those dog-eared paperbacks they read avidly in eighth grade with their \nhallucinatory mid-1970s cover art, stashed somewhere in the attic. \nFurthermore, members of the U.S. intelligentsia fully expect to have their tastes ignored, if not openly \nderided, by the public at large. To some American intellectuals it seems gratifying, even touching, that so \nmany millions of readers will happily devour a work as complicated as The Lord of the Rings. Whatever one \nmay make of it, it's a more challenging read than Gone With the Wind (runner-up in the Amazon survey), not \nto mention Harry Potter and the Sorcerer's Stone (fifth place). \nHugely ambitious in scope, The Lord of the Rings occupies an uncomfortable position in 20th century \nliterature. Tolkien's epic poses a stern challenge to modern literature and its defenders. (Tolkien on his critics: \n\"Some who have read the book, or at any rate have reviewed it. have found it boring, absurd, or contemptible; \nand I have no cause to complain, since I have similar opinions of their works, or of the kinds of writing that \nthey evidently prefer.\") Yet The Lord of the Rings has enjoyed massive and enduring popularity. It would \nseem that Tolkien's work supplied something that was missing among the formal innovations of 20th century \nfiction, something for which readers were ravenous. But what was it, and why was it important? \nAnswering this question properly would probably require a book rather than an article. But it seems that the \ncrux of the matter lies in Tolkien's wholehearted rejection of modernity and modernism. This is what so \npowerfully attracts some readers, and just as powerfully repels others. In his book J.R.R. Tolkien: Author of \nthe Century, T.A. Shippey expands on this notion by arguing that Tolkien saw his realm of Middle-earth not \nas fiction or invention, but as the recovery of something genuine that had become buried beneath fragments \nof fairy tale and nursery rhyme. \n\"However fanciful Tolkien's creation of Middle-earth was,\" Shippey writes, \"he did not think that he was \nentirely making it up. He was 'reconstructing', he was harmonising contradictions in his source-texts, \nsometimes he was supplying entirely new concepts (like hobbits), but he was also reaching back to an \nimaginative world which he believed had once really existed, at least in a collective imagination.\" \nThe book is also deeply grounded in Tolkien's linguistic expertise - he invented whole languages for his \ncharacters. Sometimes he became so absorbed in the creation of languages, in fact, that he put the story itself \naside for months or years at a time, believing he could not continue until some quandary or inconsistency in \nhis invented realm had been resolved. But Tolkien's immense intellect and erudition is not the source of his \nsuccess; without his storytelling gift, The Lord of the Rings would be little more than a curiosity. And this \ngift seems to stem straight from his refusal to break from classical and traditional forms. \nTolkien himself often spoke of his work as something 'found' or 'discovered', something whose existence was \nindependent of him. It's wise to tread lightly in this sort of interpretation, but it seems clear that he believed \nhis work to be something given, something revealed, which contained a kind of truth beyond measure. As a \nresult, his details have the weight of reality, linguistic and otherwise, and because of this his great sweep of \nstory feels real as well: you might say that his imaginary castles are built with a certain amount of genuine \nstone. Other writers' fantasy worlds are made up. Tolkien's is inherited.",
+        "passage": "Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best \nanswer to each of the following questions. \nThe book of the century \nA classic of our times or an escapist yarn? Although its popularity is unparalleled, some intellectuals \ndismiss The Lord of the Rings as boyish fantasy. Andrew O'Hehir defends Tolkien's ‘true myth’ as a \nmodern masterpiece, and attempts to discover the secret of its success. \nIn January 1997, reporter Susan Jeffreys of the London Sunday Times informed a colleague that J.R.R. Tolkien's epic fantasy The Lord of the Rings had been voted the greatest book of the 20th century in a readers' \npoll conducted by Britain's Channel 4 and the Waterstone's bookstore chain. Her colleague responded: \n\"What? Has it? Oh dear. Dear oh dear oh dear.\" \nAttitudes in America are arguably more relaxed about this kind of thing. No one from the American educated \nclasses expressed much dismay when a 1999 poll of American on-line bookshop Amazon.com customers \nchose The Lord of the Rings as the greatest book not merely of the century but of the millennium. Tolkien's \nbook is so deeply ingrained in popular culture, after all, that a great many of today's American academics and \njournalists probably still have those dog-eared paperbacks they read avidly in eighth grade with their \nhallucinatory mid-1970s cover art, stashed somewhere in the attic. \nFurthermore, members of the U.S. intelligentsia fully expect to have their tastes ignored, if not openly \nderided, by the public at large. To some American intellectuals it seems gratifying, even touching, that so \nmany millions of readers will happily devour a work as complicated as The Lord of the Rings. Whatever one \nmay make of it, it's a more challenging read than Gone With the Wind (runner-up in the Amazon survey), not \nto mention Harry Potter and the Sorcerer's Stone (fifth place). \nHugely ambitious in scope, The Lord of the Rings occupies an uncomfortable position in 20th century \nliterature. Tolkien's epic poses a stern challenge to modern literature and its defenders. (Tolkien on his critics: \n\"Some who have read the book, or at any rate have reviewed it. have found it boring, absurd, or contemptible; \nand I have no cause to complain, since I have similar opinions of their works, or of the kinds of writing that \nthey evidently prefer.\") Yet The Lord of the Rings has enjoyed massive and enduring popularity. It would \nseem that Tolkien's work supplied something that was missing among the formal innovations of 20th century \nfiction, something for which readers were ravenous. But what was it, and why was it important? \nAnswering this question properly would probably require a book rather than an article. But it seems that the \ncrux of the matter lies in Tolkien's wholehearted rejection of modernity and modernism. This is what so \npowerfully attracts some readers, and just as powerfully repels others. In his book J.R.R. Tolkien: Author of \nthe Century, T.A. Shippey expands on this notion by arguing that Tolkien saw his realm of Middle-earth not \nas fiction or invention, but as the recovery of something genuine that had become buried beneath fragments \nof fairy tale and nursery rhyme. \n\"However fanciful Tolkien's creation of Middle-earth was,\" Shippey writes, \"he did not think that he was \nentirely making it up. He was 'reconstructing', he was harmonising contradictions in his source-texts, \nsometimes he was supplying entirely new concepts (like hobbits), but he was also reaching back to an \nimaginative world which he believed had once really existed, at least in a collective imagination.\" \nThe book is also deeply grounded in Tolkien's linguistic expertise - he invented whole languages for his \ncharacters. Sometimes he became so absorbed in the creation of languages, in fact, that he put the story itself \naside for months or years at a time, believing he could not continue until some quandary or inconsistency in \nhis invented realm had been resolved. But Tolkien's immense intellect and erudition is not the source of his \nsuccess; without his storytelling gift, The Lord of the Rings would be little more than a curiosity. And this \ngift seems to stem straight from his refusal to break from classical and traditional forms. \nTolkien himself often spoke of his work as something 'found' or 'discovered', something whose existence was \nindependent of him. It's wise to tread lightly in this sort of interpretation, but it seems clear that he believed \nhis work to be something given, something revealed, which contained a kind of truth beyond measure. As a \nresult, his details have the weight of reality, linguistic and otherwise, and because of this his great sweep of \nstory feels real as well: you might say that his imaginary castles are built with a certain amount of genuine \nstone. Other writers' fantasy worlds are made up. Tolkien's is inherited.",
         "question": "The word \"gratifying\" in paragraph 3 is closest in meaning to ______",
         "options": {
           "A": "horrifying",
@@ -4118,8 +4118,8 @@ const HSG_TESTS_DATA = [
           "C": "pleasing",
           "D": "depressing"
         },
-        "answer": "D",
-        "explanation": "Đáp án đúng là **D**.\n- Phương án **D**: *\"depressing\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"pleasing\".\n\"gratifying\" = làm hài lòng (pleasing).",
         "audio": null
       },
       {
@@ -4130,7 +4130,7 @@ const HSG_TESTS_DATA = [
         "category": "Reading",
         "instruction": "Đọc bài văn học thuật bên trái và trả lời các câu hỏi phân tích, suy luận, từ vựng và tóm tắt.",
         "passageTitle": "Bài Đọc Hiểu 2 (Reading Passage 2 - Nâng Cao) - Đề 4",
-        "passage": "Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best \nanswer to each of the following questions. \nThe book of the century \nA classic of our times or an escapist yarn? Although its popularity is unparalleled, some intellectuals \ndismiss The Lord of the Rings as boyish fantasy. Andrew O'Hehir defends Tolkien's ‘true myth’ as a \nmodern masterpiece, and attempts to discover the secret of its success. \nIn January 1997, reporter Susan Jeffreys of the London Sunday Times informed a colleague that J.R.R. \nTolkien's epic fantasy The Lord of the Rings had been voted the greatest book of the 20th century in a readers' \npoll conducted by Britain's Channel 4 and the Waterstone's bookstore chain. Her colleague responded: \n\"What? Has it? Oh dear. Dear oh dear oh dear.\" \nAttitudes in America are arguably more relaxed about this kind of thing. No one from the American educated \nclasses expressed much dismay when a 1999 poll of American on-line bookshop Amazon.com customers \nchose The Lord of the Rings as the greatest book not merely of the century but of the millennium. Tolkien's \nbook is so deeply ingrained in popular culture, after all, that a great many of today's American academics and \njournalists probably still have those dog-eared paperbacks they read avidly in eighth grade with their \nhallucinatory mid-1970s cover art, stashed somewhere in the attic. \nFurthermore, members of the U.S. intelligentsia fully expect to have their tastes ignored, if not openly \nderided, by the public at large. To some American intellectuals it seems gratifying, even touching, that so \nmany millions of readers will happily devour a work as complicated as The Lord of the Rings. Whatever one \nmay make of it, it's a more challenging read than Gone With the Wind (runner-up in the Amazon survey), not \nto mention Harry Potter and the Sorcerer's Stone (fifth place). \nHugely ambitious in scope, The Lord of the Rings occupies an uncomfortable position in 20th century \nliterature. Tolkien's epic poses a stern challenge to modern literature and its defenders. (Tolkien on his critics: \n\"Some who have read the book, or at any rate have reviewed it. have found it boring, absurd, or contemptible; \nand I have no cause to complain, since I have similar opinions of their works, or of the kinds of writing that \nthey evidently prefer.\") Yet The Lord of the Rings has enjoyed massive and enduring popularity. It would \nseem that Tolkien's work supplied something that was missing among the formal innovations of 20th century \nfiction, something for which readers were ravenous. But what was it, and why was it important? \nAnswering this question properly would probably require a book rather than an article. But it seems that the \ncrux of the matter lies in Tolkien's wholehearted rejection of modernity and modernism. This is what so \npowerfully attracts some readers, and just as powerfully repels others. In his book J.R.R. Tolkien: Author of \nthe Century, T.A. Shippey expands on this notion by arguing that Tolkien saw his realm of Middle-earth not \nas fiction or invention, but as the recovery of something genuine that had become buried beneath fragments \nof fairy tale and nursery rhyme. \n\"However fanciful Tolkien's creation of Middle-earth was,\" Shippey writes, \"he did not think that he was \nentirely making it up. He was 'reconstructing', he was harmonising contradictions in his source-texts, \nsometimes he was supplying entirely new concepts (like hobbits), but he was also reaching back to an \nimaginative world which he believed had once really existed, at least in a collective imagination.\" \nThe book is also deeply grounded in Tolkien's linguistic expertise - he invented whole languages for his \ncharacters. Sometimes he became so absorbed in the creation of languages, in fact, that he put the story itself \naside for months or years at a time, believing he could not continue until some quandary or inconsistency in \nhis invented realm had been resolved. But Tolkien's immense intellect and erudition is not the source of his \nsuccess; without his storytelling gift, The Lord of the Rings would be little more than a curiosity. And this \ngift seems to stem straight from his refusal to break from classical and traditional forms. \nTolkien himself often spoke of his work as something 'found' or 'discovered', something whose existence was \nindependent of him. It's wise to tread lightly in this sort of interpretation, but it seems clear that he believed \nhis work to be something given, something revealed, which contained a kind of truth beyond measure. As a \nresult, his details have the weight of reality, linguistic and otherwise, and because of this his great sweep of \nstory feels real as well: you might say that his imaginary castles are built with a certain amount of genuine \nstone. Other writers' fantasy worlds are made up. Tolkien's is inherited.",
+        "passage": "Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best \nanswer to each of the following questions. \nThe book of the century \nA classic of our times or an escapist yarn? Although its popularity is unparalleled, some intellectuals \ndismiss The Lord of the Rings as boyish fantasy. Andrew O'Hehir defends Tolkien's ‘true myth’ as a \nmodern masterpiece, and attempts to discover the secret of its success. \nIn January 1997, reporter Susan Jeffreys of the London Sunday Times informed a colleague that J.R.R. Tolkien's epic fantasy The Lord of the Rings had been voted the greatest book of the 20th century in a readers' \npoll conducted by Britain's Channel 4 and the Waterstone's bookstore chain. Her colleague responded: \n\"What? Has it? Oh dear. Dear oh dear oh dear.\" \nAttitudes in America are arguably more relaxed about this kind of thing. No one from the American educated \nclasses expressed much dismay when a 1999 poll of American on-line bookshop Amazon.com customers \nchose The Lord of the Rings as the greatest book not merely of the century but of the millennium. Tolkien's \nbook is so deeply ingrained in popular culture, after all, that a great many of today's American academics and \njournalists probably still have those dog-eared paperbacks they read avidly in eighth grade with their \nhallucinatory mid-1970s cover art, stashed somewhere in the attic. \nFurthermore, members of the U.S. intelligentsia fully expect to have their tastes ignored, if not openly \nderided, by the public at large. To some American intellectuals it seems gratifying, even touching, that so \nmany millions of readers will happily devour a work as complicated as The Lord of the Rings. Whatever one \nmay make of it, it's a more challenging read than Gone With the Wind (runner-up in the Amazon survey), not \nto mention Harry Potter and the Sorcerer's Stone (fifth place). \nHugely ambitious in scope, The Lord of the Rings occupies an uncomfortable position in 20th century \nliterature. Tolkien's epic poses a stern challenge to modern literature and its defenders. (Tolkien on his critics: \n\"Some who have read the book, or at any rate have reviewed it. have found it boring, absurd, or contemptible; \nand I have no cause to complain, since I have similar opinions of their works, or of the kinds of writing that \nthey evidently prefer.\") Yet The Lord of the Rings has enjoyed massive and enduring popularity. It would \nseem that Tolkien's work supplied something that was missing among the formal innovations of 20th century \nfiction, something for which readers were ravenous. But what was it, and why was it important? \nAnswering this question properly would probably require a book rather than an article. But it seems that the \ncrux of the matter lies in Tolkien's wholehearted rejection of modernity and modernism. This is what so \npowerfully attracts some readers, and just as powerfully repels others. In his book J.R.R. Tolkien: Author of \nthe Century, T.A. Shippey expands on this notion by arguing that Tolkien saw his realm of Middle-earth not \nas fiction or invention, but as the recovery of something genuine that had become buried beneath fragments \nof fairy tale and nursery rhyme. \n\"However fanciful Tolkien's creation of Middle-earth was,\" Shippey writes, \"he did not think that he was \nentirely making it up. He was 'reconstructing', he was harmonising contradictions in his source-texts, \nsometimes he was supplying entirely new concepts (like hobbits), but he was also reaching back to an \nimaginative world which he believed had once really existed, at least in a collective imagination.\" \nThe book is also deeply grounded in Tolkien's linguistic expertise - he invented whole languages for his \ncharacters. Sometimes he became so absorbed in the creation of languages, in fact, that he put the story itself \naside for months or years at a time, believing he could not continue until some quandary or inconsistency in \nhis invented realm had been resolved. But Tolkien's immense intellect and erudition is not the source of his \nsuccess; without his storytelling gift, The Lord of the Rings would be little more than a curiosity. And this \ngift seems to stem straight from his refusal to break from classical and traditional forms. \nTolkien himself often spoke of his work as something 'found' or 'discovered', something whose existence was \nindependent of him. It's wise to tread lightly in this sort of interpretation, but it seems clear that he believed \nhis work to be something given, something revealed, which contained a kind of truth beyond measure. As a \nresult, his details have the weight of reality, linguistic and otherwise, and because of this his great sweep of \nstory feels real as well: you might say that his imaginary castles are built with a certain amount of genuine \nstone. Other writers' fantasy worlds are made up. Tolkien's is inherited.",
         "question": "What does the writer mean in the underlined parts in paragraph 3: “ ... so many millions of readers \nwill happily devour a work as complicated as ....”?",
         "options": {
           "A": "never read this book because it is so complicated",
@@ -4139,7 +4139,7 @@ const HSG_TESTS_DATA = [
           "D": "be willing to put this book down due to its complication."
         },
         "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"be willing to read this book, despite the fact that it is very difficult.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là B: \"be willing to read this book, despite the fact that it is very difficult.\".\n\"happily devour a work as complicated as...\" = sẵn sàng đọc say mê dù sách rất khó.",
         "audio": null
       },
       {
@@ -4150,7 +4150,7 @@ const HSG_TESTS_DATA = [
         "category": "Reading",
         "instruction": "Đọc bài văn học thuật bên trái và trả lời các câu hỏi phân tích, suy luận, từ vựng và tóm tắt.",
         "passageTitle": "Bài Đọc Hiểu 2 (Reading Passage 2 - Nâng Cao) - Đề 4",
-        "passage": "Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best \nanswer to each of the following questions. \nThe book of the century \nA classic of our times or an escapist yarn? Although its popularity is unparalleled, some intellectuals \ndismiss The Lord of the Rings as boyish fantasy. Andrew O'Hehir defends Tolkien's ‘true myth’ as a \nmodern masterpiece, and attempts to discover the secret of its success. \nIn January 1997, reporter Susan Jeffreys of the London Sunday Times informed a colleague that J.R.R. \nTolkien's epic fantasy The Lord of the Rings had been voted the greatest book of the 20th century in a readers' \npoll conducted by Britain's Channel 4 and the Waterstone's bookstore chain. Her colleague responded: \n\"What? Has it? Oh dear. Dear oh dear oh dear.\" \nAttitudes in America are arguably more relaxed about this kind of thing. No one from the American educated \nclasses expressed much dismay when a 1999 poll of American on-line bookshop Amazon.com customers \nchose The Lord of the Rings as the greatest book not merely of the century but of the millennium. Tolkien's \nbook is so deeply ingrained in popular culture, after all, that a great many of today's American academics and \njournalists probably still have those dog-eared paperbacks they read avidly in eighth grade with their \nhallucinatory mid-1970s cover art, stashed somewhere in the attic. \nFurthermore, members of the U.S. intelligentsia fully expect to have their tastes ignored, if not openly \nderided, by the public at large. To some American intellectuals it seems gratifying, even touching, that so \nmany millions of readers will happily devour a work as complicated as The Lord of the Rings. Whatever one \nmay make of it, it's a more challenging read than Gone With the Wind (runner-up in the Amazon survey), not \nto mention Harry Potter and the Sorcerer's Stone (fifth place). \nHugely ambitious in scope, The Lord of the Rings occupies an uncomfortable position in 20th century \nliterature. Tolkien's epic poses a stern challenge to modern literature and its defenders. (Tolkien on his critics: \n\"Some who have read the book, or at any rate have reviewed it. have found it boring, absurd, or contemptible; \nand I have no cause to complain, since I have similar opinions of their works, or of the kinds of writing that \nthey evidently prefer.\") Yet The Lord of the Rings has enjoyed massive and enduring popularity. It would \nseem that Tolkien's work supplied something that was missing among the formal innovations of 20th century \nfiction, something for which readers were ravenous. But what was it, and why was it important? \nAnswering this question properly would probably require a book rather than an article. But it seems that the \ncrux of the matter lies in Tolkien's wholehearted rejection of modernity and modernism. This is what so \npowerfully attracts some readers, and just as powerfully repels others. In his book J.R.R. Tolkien: Author of \nthe Century, T.A. Shippey expands on this notion by arguing that Tolkien saw his realm of Middle-earth not \nas fiction or invention, but as the recovery of something genuine that had become buried beneath fragments \nof fairy tale and nursery rhyme. \n\"However fanciful Tolkien's creation of Middle-earth was,\" Shippey writes, \"he did not think that he was \nentirely making it up. He was 'reconstructing', he was harmonising contradictions in his source-texts, \nsometimes he was supplying entirely new concepts (like hobbits), but he was also reaching back to an \nimaginative world which he believed had once really existed, at least in a collective imagination.\" \nThe book is also deeply grounded in Tolkien's linguistic expertise - he invented whole languages for his \ncharacters. Sometimes he became so absorbed in the creation of languages, in fact, that he put the story itself \naside for months or years at a time, believing he could not continue until some quandary or inconsistency in \nhis invented realm had been resolved. But Tolkien's immense intellect and erudition is not the source of his \nsuccess; without his storytelling gift, The Lord of the Rings would be little more than a curiosity. And this \ngift seems to stem straight from his refusal to break from classical and traditional forms. \nTolkien himself often spoke of his work as something 'found' or 'discovered', something whose existence was \nindependent of him. It's wise to tread lightly in this sort of interpretation, but it seems clear that he believed \nhis work to be something given, something revealed, which contained a kind of truth beyond measure. As a \nresult, his details have the weight of reality, linguistic and otherwise, and because of this his great sweep of \nstory feels real as well: you might say that his imaginary castles are built with a certain amount of genuine \nstone. Other writers' fantasy worlds are made up. Tolkien's is inherited.",
+        "passage": "Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best \nanswer to each of the following questions. \nThe book of the century \nA classic of our times or an escapist yarn? Although its popularity is unparalleled, some intellectuals \ndismiss The Lord of the Rings as boyish fantasy. Andrew O'Hehir defends Tolkien's ‘true myth’ as a \nmodern masterpiece, and attempts to discover the secret of its success. \nIn January 1997, reporter Susan Jeffreys of the London Sunday Times informed a colleague that J.R.R. Tolkien's epic fantasy The Lord of the Rings had been voted the greatest book of the 20th century in a readers' \npoll conducted by Britain's Channel 4 and the Waterstone's bookstore chain. Her colleague responded: \n\"What? Has it? Oh dear. Dear oh dear oh dear.\" \nAttitudes in America are arguably more relaxed about this kind of thing. No one from the American educated \nclasses expressed much dismay when a 1999 poll of American on-line bookshop Amazon.com customers \nchose The Lord of the Rings as the greatest book not merely of the century but of the millennium. Tolkien's \nbook is so deeply ingrained in popular culture, after all, that a great many of today's American academics and \njournalists probably still have those dog-eared paperbacks they read avidly in eighth grade with their \nhallucinatory mid-1970s cover art, stashed somewhere in the attic. \nFurthermore, members of the U.S. intelligentsia fully expect to have their tastes ignored, if not openly \nderided, by the public at large. To some American intellectuals it seems gratifying, even touching, that so \nmany millions of readers will happily devour a work as complicated as The Lord of the Rings. Whatever one \nmay make of it, it's a more challenging read than Gone With the Wind (runner-up in the Amazon survey), not \nto mention Harry Potter and the Sorcerer's Stone (fifth place). \nHugely ambitious in scope, The Lord of the Rings occupies an uncomfortable position in 20th century \nliterature. Tolkien's epic poses a stern challenge to modern literature and its defenders. (Tolkien on his critics: \n\"Some who have read the book, or at any rate have reviewed it. have found it boring, absurd, or contemptible; \nand I have no cause to complain, since I have similar opinions of their works, or of the kinds of writing that \nthey evidently prefer.\") Yet The Lord of the Rings has enjoyed massive and enduring popularity. It would \nseem that Tolkien's work supplied something that was missing among the formal innovations of 20th century \nfiction, something for which readers were ravenous. But what was it, and why was it important? \nAnswering this question properly would probably require a book rather than an article. But it seems that the \ncrux of the matter lies in Tolkien's wholehearted rejection of modernity and modernism. This is what so \npowerfully attracts some readers, and just as powerfully repels others. In his book J.R.R. Tolkien: Author of \nthe Century, T.A. Shippey expands on this notion by arguing that Tolkien saw his realm of Middle-earth not \nas fiction or invention, but as the recovery of something genuine that had become buried beneath fragments \nof fairy tale and nursery rhyme. \n\"However fanciful Tolkien's creation of Middle-earth was,\" Shippey writes, \"he did not think that he was \nentirely making it up. He was 'reconstructing', he was harmonising contradictions in his source-texts, \nsometimes he was supplying entirely new concepts (like hobbits), but he was also reaching back to an \nimaginative world which he believed had once really existed, at least in a collective imagination.\" \nThe book is also deeply grounded in Tolkien's linguistic expertise - he invented whole languages for his \ncharacters. Sometimes he became so absorbed in the creation of languages, in fact, that he put the story itself \naside for months or years at a time, believing he could not continue until some quandary or inconsistency in \nhis invented realm had been resolved. But Tolkien's immense intellect and erudition is not the source of his \nsuccess; without his storytelling gift, The Lord of the Rings would be little more than a curiosity. And this \ngift seems to stem straight from his refusal to break from classical and traditional forms. \nTolkien himself often spoke of his work as something 'found' or 'discovered', something whose existence was \nindependent of him. It's wise to tread lightly in this sort of interpretation, but it seems clear that he believed \nhis work to be something given, something revealed, which contained a kind of truth beyond measure. As a \nresult, his details have the weight of reality, linguistic and otherwise, and because of this his great sweep of \nstory feels real as well: you might say that his imaginary castles are built with a certain amount of genuine \nstone. Other writers' fantasy worlds are made up. Tolkien's is inherited.",
         "question": "What do we learn about Gone With the Wind?",
         "options": {
           "A": "It was once more popular than The Lord of the Rings.",
@@ -4158,8 +4158,8 @@ const HSG_TESTS_DATA = [
           "C": "It was voted one place behind The Lord of the Rings.",
           "D": "It is more touching than The Lord of the Rings."
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"It was once more popular than The Lord of the Rings.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"It was voted one place behind The Lord of the Rings.\".\n\"Gone With the Wind (runner-up in the Amazon survey)\" – xếp ngay sau.",
         "audio": null
       },
       {
@@ -4170,7 +4170,7 @@ const HSG_TESTS_DATA = [
         "category": "Reading",
         "instruction": "Đọc bài văn học thuật bên trái và trả lời các câu hỏi phân tích, suy luận, từ vựng và tóm tắt.",
         "passageTitle": "Bài Đọc Hiểu 2 (Reading Passage 2 - Nâng Cao) - Đề 4",
-        "passage": "Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best \nanswer to each of the following questions. \nThe book of the century \nA classic of our times or an escapist yarn? Although its popularity is unparalleled, some intellectuals \ndismiss The Lord of the Rings as boyish fantasy. Andrew O'Hehir defends Tolkien's ‘true myth’ as a \nmodern masterpiece, and attempts to discover the secret of its success. \nIn January 1997, reporter Susan Jeffreys of the London Sunday Times informed a colleague that J.R.R. \nTolkien's epic fantasy The Lord of the Rings had been voted the greatest book of the 20th century in a readers' \npoll conducted by Britain's Channel 4 and the Waterstone's bookstore chain. Her colleague responded: \n\"What? Has it? Oh dear. Dear oh dear oh dear.\" \nAttitudes in America are arguably more relaxed about this kind of thing. No one from the American educated \nclasses expressed much dismay when a 1999 poll of American on-line bookshop Amazon.com customers \nchose The Lord of the Rings as the greatest book not merely of the century but of the millennium. Tolkien's \nbook is so deeply ingrained in popular culture, after all, that a great many of today's American academics and \njournalists probably still have those dog-eared paperbacks they read avidly in eighth grade with their \nhallucinatory mid-1970s cover art, stashed somewhere in the attic. \nFurthermore, members of the U.S. intelligentsia fully expect to have their tastes ignored, if not openly \nderided, by the public at large. To some American intellectuals it seems gratifying, even touching, that so \nmany millions of readers will happily devour a work as complicated as The Lord of the Rings. Whatever one \nmay make of it, it's a more challenging read than Gone With the Wind (runner-up in the Amazon survey), not \nto mention Harry Potter and the Sorcerer's Stone (fifth place). \nHugely ambitious in scope, The Lord of the Rings occupies an uncomfortable position in 20th century \nliterature. Tolkien's epic poses a stern challenge to modern literature and its defenders. (Tolkien on his critics: \n\"Some who have read the book, or at any rate have reviewed it. have found it boring, absurd, or contemptible; \nand I have no cause to complain, since I have similar opinions of their works, or of the kinds of writing that \nthey evidently prefer.\") Yet The Lord of the Rings has enjoyed massive and enduring popularity. It would \nseem that Tolkien's work supplied something that was missing among the formal innovations of 20th century \nfiction, something for which readers were ravenous. But what was it, and why was it important? \nAnswering this question properly would probably require a book rather than an article. But it seems that the \ncrux of the matter lies in Tolkien's wholehearted rejection of modernity and modernism. This is what so \npowerfully attracts some readers, and just as powerfully repels others. In his book J.R.R. Tolkien: Author of \nthe Century, T.A. Shippey expands on this notion by arguing that Tolkien saw his realm of Middle-earth not \nas fiction or invention, but as the recovery of something genuine that had become buried beneath fragments \nof fairy tale and nursery rhyme. \n\"However fanciful Tolkien's creation of Middle-earth was,\" Shippey writes, \"he did not think that he was \nentirely making it up. He was 'reconstructing', he was harmonising contradictions in his source-texts, \nsometimes he was supplying entirely new concepts (like hobbits), but he was also reaching back to an \nimaginative world which he believed had once really existed, at least in a collective imagination.\" \nThe book is also deeply grounded in Tolkien's linguistic expertise - he invented whole languages for his \ncharacters. Sometimes he became so absorbed in the creation of languages, in fact, that he put the story itself \naside for months or years at a time, believing he could not continue until some quandary or inconsistency in \nhis invented realm had been resolved. But Tolkien's immense intellect and erudition is not the source of his \nsuccess; without his storytelling gift, The Lord of the Rings would be little more than a curiosity. And this \ngift seems to stem straight from his refusal to break from classical and traditional forms. \nTolkien himself often spoke of his work as something 'found' or 'discovered', something whose existence was \nindependent of him. It's wise to tread lightly in this sort of interpretation, but it seems clear that he believed \nhis work to be something given, something revealed, which contained a kind of truth beyond measure. As a \nresult, his details have the weight of reality, linguistic and otherwise, and because of this his great sweep of \nstory feels real as well: you might say that his imaginary castles are built with a certain amount of genuine \nstone. Other writers' fantasy worlds are made up. Tolkien's is inherited.",
+        "passage": "Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best \nanswer to each of the following questions. \nThe book of the century \nA classic of our times or an escapist yarn? Although its popularity is unparalleled, some intellectuals \ndismiss The Lord of the Rings as boyish fantasy. Andrew O'Hehir defends Tolkien's ‘true myth’ as a \nmodern masterpiece, and attempts to discover the secret of its success. \nIn January 1997, reporter Susan Jeffreys of the London Sunday Times informed a colleague that J.R.R. Tolkien's epic fantasy The Lord of the Rings had been voted the greatest book of the 20th century in a readers' \npoll conducted by Britain's Channel 4 and the Waterstone's bookstore chain. Her colleague responded: \n\"What? Has it? Oh dear. Dear oh dear oh dear.\" \nAttitudes in America are arguably more relaxed about this kind of thing. No one from the American educated \nclasses expressed much dismay when a 1999 poll of American on-line bookshop Amazon.com customers \nchose The Lord of the Rings as the greatest book not merely of the century but of the millennium. Tolkien's \nbook is so deeply ingrained in popular culture, after all, that a great many of today's American academics and \njournalists probably still have those dog-eared paperbacks they read avidly in eighth grade with their \nhallucinatory mid-1970s cover art, stashed somewhere in the attic. \nFurthermore, members of the U.S. intelligentsia fully expect to have their tastes ignored, if not openly \nderided, by the public at large. To some American intellectuals it seems gratifying, even touching, that so \nmany millions of readers will happily devour a work as complicated as The Lord of the Rings. Whatever one \nmay make of it, it's a more challenging read than Gone With the Wind (runner-up in the Amazon survey), not \nto mention Harry Potter and the Sorcerer's Stone (fifth place). \nHugely ambitious in scope, The Lord of the Rings occupies an uncomfortable position in 20th century \nliterature. Tolkien's epic poses a stern challenge to modern literature and its defenders. (Tolkien on his critics: \n\"Some who have read the book, or at any rate have reviewed it. have found it boring, absurd, or contemptible; \nand I have no cause to complain, since I have similar opinions of their works, or of the kinds of writing that \nthey evidently prefer.\") Yet The Lord of the Rings has enjoyed massive and enduring popularity. It would \nseem that Tolkien's work supplied something that was missing among the formal innovations of 20th century \nfiction, something for which readers were ravenous. But what was it, and why was it important? \nAnswering this question properly would probably require a book rather than an article. But it seems that the \ncrux of the matter lies in Tolkien's wholehearted rejection of modernity and modernism. This is what so \npowerfully attracts some readers, and just as powerfully repels others. In his book J.R.R. Tolkien: Author of \nthe Century, T.A. Shippey expands on this notion by arguing that Tolkien saw his realm of Middle-earth not \nas fiction or invention, but as the recovery of something genuine that had become buried beneath fragments \nof fairy tale and nursery rhyme. \n\"However fanciful Tolkien's creation of Middle-earth was,\" Shippey writes, \"he did not think that he was \nentirely making it up. He was 'reconstructing', he was harmonising contradictions in his source-texts, \nsometimes he was supplying entirely new concepts (like hobbits), but he was also reaching back to an \nimaginative world which he believed had once really existed, at least in a collective imagination.\" \nThe book is also deeply grounded in Tolkien's linguistic expertise - he invented whole languages for his \ncharacters. Sometimes he became so absorbed in the creation of languages, in fact, that he put the story itself \naside for months or years at a time, believing he could not continue until some quandary or inconsistency in \nhis invented realm had been resolved. But Tolkien's immense intellect and erudition is not the source of his \nsuccess; without his storytelling gift, The Lord of the Rings would be little more than a curiosity. And this \ngift seems to stem straight from his refusal to break from classical and traditional forms. \nTolkien himself often spoke of his work as something 'found' or 'discovered', something whose existence was \nindependent of him. It's wise to tread lightly in this sort of interpretation, but it seems clear that he believed \nhis work to be something given, something revealed, which contained a kind of truth beyond measure. As a \nresult, his details have the weight of reality, linguistic and otherwise, and because of this his great sweep of \nstory feels real as well: you might say that his imaginary castles are built with a certain amount of genuine \nstone. Other writers' fantasy worlds are made up. Tolkien's is inherited.",
         "question": "What was Tolkien's reaction to criticism of The Lord of the Rings?",
         "options": {
           "A": "He felt it was unjustified.",
@@ -4179,7 +4179,7 @@ const HSG_TESTS_DATA = [
           "D": "He partly agreed with it."
         },
         "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"He wasn't bothered by it.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là B: \"He wasn't bothered by it.\".\n\"I have no cause to complain, since I have similar opinions of their works\" – không bận tâm.",
         "audio": null
       },
       {
@@ -4190,7 +4190,7 @@ const HSG_TESTS_DATA = [
         "category": "Reading",
         "instruction": "Đọc bài văn học thuật bên trái và trả lời các câu hỏi phân tích, suy luận, từ vựng và tóm tắt.",
         "passageTitle": "Bài Đọc Hiểu 2 (Reading Passage 2 - Nâng Cao) - Đề 4",
-        "passage": "Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best \nanswer to each of the following questions. \nThe book of the century \nA classic of our times or an escapist yarn? Although its popularity is unparalleled, some intellectuals \ndismiss The Lord of the Rings as boyish fantasy. Andrew O'Hehir defends Tolkien's ‘true myth’ as a \nmodern masterpiece, and attempts to discover the secret of its success. \nIn January 1997, reporter Susan Jeffreys of the London Sunday Times informed a colleague that J.R.R. \nTolkien's epic fantasy The Lord of the Rings had been voted the greatest book of the 20th century in a readers' \npoll conducted by Britain's Channel 4 and the Waterstone's bookstore chain. Her colleague responded: \n\"What? Has it? Oh dear. Dear oh dear oh dear.\" \nAttitudes in America are arguably more relaxed about this kind of thing. No one from the American educated \nclasses expressed much dismay when a 1999 poll of American on-line bookshop Amazon.com customers \nchose The Lord of the Rings as the greatest book not merely of the century but of the millennium. Tolkien's \nbook is so deeply ingrained in popular culture, after all, that a great many of today's American academics and \njournalists probably still have those dog-eared paperbacks they read avidly in eighth grade with their \nhallucinatory mid-1970s cover art, stashed somewhere in the attic. \nFurthermore, members of the U.S. intelligentsia fully expect to have their tastes ignored, if not openly \nderided, by the public at large. To some American intellectuals it seems gratifying, even touching, that so \nmany millions of readers will happily devour a work as complicated as The Lord of the Rings. Whatever one \nmay make of it, it's a more challenging read than Gone With the Wind (runner-up in the Amazon survey), not \nto mention Harry Potter and the Sorcerer's Stone (fifth place). \nHugely ambitious in scope, The Lord of the Rings occupies an uncomfortable position in 20th century \nliterature. Tolkien's epic poses a stern challenge to modern literature and its defenders. (Tolkien on his critics: \n\"Some who have read the book, or at any rate have reviewed it. have found it boring, absurd, or contemptible; \nand I have no cause to complain, since I have similar opinions of their works, or of the kinds of writing that \nthey evidently prefer.\") Yet The Lord of the Rings has enjoyed massive and enduring popularity. It would \nseem that Tolkien's work supplied something that was missing among the formal innovations of 20th century \nfiction, something for which readers were ravenous. But what was it, and why was it important? \nAnswering this question properly would probably require a book rather than an article. But it seems that the \ncrux of the matter lies in Tolkien's wholehearted rejection of modernity and modernism. This is what so \npowerfully attracts some readers, and just as powerfully repels others. In his book J.R.R. Tolkien: Author of \nthe Century, T.A. Shippey expands on this notion by arguing that Tolkien saw his realm of Middle-earth not \nas fiction or invention, but as the recovery of something genuine that had become buried beneath fragments \nof fairy tale and nursery rhyme. \n\"However fanciful Tolkien's creation of Middle-earth was,\" Shippey writes, \"he did not think that he was \nentirely making it up. He was 'reconstructing', he was harmonising contradictions in his source-texts, \nsometimes he was supplying entirely new concepts (like hobbits), but he was also reaching back to an \nimaginative world which he believed had once really existed, at least in a collective imagination.\" \nThe book is also deeply grounded in Tolkien's linguistic expertise - he invented whole languages for his \ncharacters. Sometimes he became so absorbed in the creation of languages, in fact, that he put the story itself \naside for months or years at a time, believing he could not continue until some quandary or inconsistency in \nhis invented realm had been resolved. But Tolkien's immense intellect and erudition is not the source of his \nsuccess; without his storytelling gift, The Lord of the Rings would be little more than a curiosity. And this \ngift seems to stem straight from his refusal to break from classical and traditional forms. \nTolkien himself often spoke of his work as something 'found' or 'discovered', something whose existence was \nindependent of him. It's wise to tread lightly in this sort of interpretation, but it seems clear that he believed \nhis work to be something given, something revealed, which contained a kind of truth beyond measure. As a \nresult, his details have the weight of reality, linguistic and otherwise, and because of this his great sweep of \nstory feels real as well: you might say that his imaginary castles are built with a certain amount of genuine \nstone. Other writers' fantasy worlds are made up. Tolkien's is inherited.",
+        "passage": "Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best \nanswer to each of the following questions. \nThe book of the century \nA classic of our times or an escapist yarn? Although its popularity is unparalleled, some intellectuals \ndismiss The Lord of the Rings as boyish fantasy. Andrew O'Hehir defends Tolkien's ‘true myth’ as a \nmodern masterpiece, and attempts to discover the secret of its success. \nIn January 1997, reporter Susan Jeffreys of the London Sunday Times informed a colleague that J.R.R. Tolkien's epic fantasy The Lord of the Rings had been voted the greatest book of the 20th century in a readers' \npoll conducted by Britain's Channel 4 and the Waterstone's bookstore chain. Her colleague responded: \n\"What? Has it? Oh dear. Dear oh dear oh dear.\" \nAttitudes in America are arguably more relaxed about this kind of thing. No one from the American educated \nclasses expressed much dismay when a 1999 poll of American on-line bookshop Amazon.com customers \nchose The Lord of the Rings as the greatest book not merely of the century but of the millennium. Tolkien's \nbook is so deeply ingrained in popular culture, after all, that a great many of today's American academics and \njournalists probably still have those dog-eared paperbacks they read avidly in eighth grade with their \nhallucinatory mid-1970s cover art, stashed somewhere in the attic. \nFurthermore, members of the U.S. intelligentsia fully expect to have their tastes ignored, if not openly \nderided, by the public at large. To some American intellectuals it seems gratifying, even touching, that so \nmany millions of readers will happily devour a work as complicated as The Lord of the Rings. Whatever one \nmay make of it, it's a more challenging read than Gone With the Wind (runner-up in the Amazon survey), not \nto mention Harry Potter and the Sorcerer's Stone (fifth place). \nHugely ambitious in scope, The Lord of the Rings occupies an uncomfortable position in 20th century \nliterature. Tolkien's epic poses a stern challenge to modern literature and its defenders. (Tolkien on his critics: \n\"Some who have read the book, or at any rate have reviewed it. have found it boring, absurd, or contemptible; \nand I have no cause to complain, since I have similar opinions of their works, or of the kinds of writing that \nthey evidently prefer.\") Yet The Lord of the Rings has enjoyed massive and enduring popularity. It would \nseem that Tolkien's work supplied something that was missing among the formal innovations of 20th century \nfiction, something for which readers were ravenous. But what was it, and why was it important? \nAnswering this question properly would probably require a book rather than an article. But it seems that the \ncrux of the matter lies in Tolkien's wholehearted rejection of modernity and modernism. This is what so \npowerfully attracts some readers, and just as powerfully repels others. In his book J.R.R. Tolkien: Author of \nthe Century, T.A. Shippey expands on this notion by arguing that Tolkien saw his realm of Middle-earth not \nas fiction or invention, but as the recovery of something genuine that had become buried beneath fragments \nof fairy tale and nursery rhyme. \n\"However fanciful Tolkien's creation of Middle-earth was,\" Shippey writes, \"he did not think that he was \nentirely making it up. He was 'reconstructing', he was harmonising contradictions in his source-texts, \nsometimes he was supplying entirely new concepts (like hobbits), but he was also reaching back to an \nimaginative world which he believed had once really existed, at least in a collective imagination.\" \nThe book is also deeply grounded in Tolkien's linguistic expertise - he invented whole languages for his \ncharacters. Sometimes he became so absorbed in the creation of languages, in fact, that he put the story itself \naside for months or years at a time, believing he could not continue until some quandary or inconsistency in \nhis invented realm had been resolved. But Tolkien's immense intellect and erudition is not the source of his \nsuccess; without his storytelling gift, The Lord of the Rings would be little more than a curiosity. And this \ngift seems to stem straight from his refusal to break from classical and traditional forms. \nTolkien himself often spoke of his work as something 'found' or 'discovered', something whose existence was \nindependent of him. It's wise to tread lightly in this sort of interpretation, but it seems clear that he believed \nhis work to be something given, something revealed, which contained a kind of truth beyond measure. As a \nresult, his details have the weight of reality, linguistic and otherwise, and because of this his great sweep of \nstory feels real as well: you might say that his imaginary castles are built with a certain amount of genuine \nstone. Other writers' fantasy worlds are made up. Tolkien's is inherited.",
         "question": "According to Shippey, Tolkien believed that the world he described ______",
         "options": {
           "A": "was full of unresolved contradictions.",
@@ -4199,7 +4199,7 @@ const HSG_TESTS_DATA = [
           "D": "was as incredible as his sources."
         },
         "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"was imaginative but not pure fantasy.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là C: \"was imaginative but not pure fantasy.\".\n\"he did not think that he was entirely making it up... a world which he believed had once really existed\".",
         "audio": null
       },
       {
@@ -4210,7 +4210,7 @@ const HSG_TESTS_DATA = [
         "category": "Reading",
         "instruction": "Đọc bài văn học thuật bên trái và trả lời các câu hỏi phân tích, suy luận, từ vựng và tóm tắt.",
         "passageTitle": "Bài Đọc Hiểu 2 (Reading Passage 2 - Nâng Cao) - Đề 4",
-        "passage": "Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best \nanswer to each of the following questions. \nThe book of the century \nA classic of our times or an escapist yarn? Although its popularity is unparalleled, some intellectuals \ndismiss The Lord of the Rings as boyish fantasy. Andrew O'Hehir defends Tolkien's ‘true myth’ as a \nmodern masterpiece, and attempts to discover the secret of its success. \nIn January 1997, reporter Susan Jeffreys of the London Sunday Times informed a colleague that J.R.R. \nTolkien's epic fantasy The Lord of the Rings had been voted the greatest book of the 20th century in a readers' \npoll conducted by Britain's Channel 4 and the Waterstone's bookstore chain. Her colleague responded: \n\"What? Has it? Oh dear. Dear oh dear oh dear.\" \nAttitudes in America are arguably more relaxed about this kind of thing. No one from the American educated \nclasses expressed much dismay when a 1999 poll of American on-line bookshop Amazon.com customers \nchose The Lord of the Rings as the greatest book not merely of the century but of the millennium. Tolkien's \nbook is so deeply ingrained in popular culture, after all, that a great many of today's American academics and \njournalists probably still have those dog-eared paperbacks they read avidly in eighth grade with their \nhallucinatory mid-1970s cover art, stashed somewhere in the attic. \nFurthermore, members of the U.S. intelligentsia fully expect to have their tastes ignored, if not openly \nderided, by the public at large. To some American intellectuals it seems gratifying, even touching, that so \nmany millions of readers will happily devour a work as complicated as The Lord of the Rings. Whatever one \nmay make of it, it's a more challenging read than Gone With the Wind (runner-up in the Amazon survey), not \nto mention Harry Potter and the Sorcerer's Stone (fifth place). \nHugely ambitious in scope, The Lord of the Rings occupies an uncomfortable position in 20th century \nliterature. Tolkien's epic poses a stern challenge to modern literature and its defenders. (Tolkien on his critics: \n\"Some who have read the book, or at any rate have reviewed it. have found it boring, absurd, or contemptible; \nand I have no cause to complain, since I have similar opinions of their works, or of the kinds of writing that \nthey evidently prefer.\") Yet The Lord of the Rings has enjoyed massive and enduring popularity. It would \nseem that Tolkien's work supplied something that was missing among the formal innovations of 20th century \nfiction, something for which readers were ravenous. But what was it, and why was it important? \nAnswering this question properly would probably require a book rather than an article. But it seems that the \ncrux of the matter lies in Tolkien's wholehearted rejection of modernity and modernism. This is what so \npowerfully attracts some readers, and just as powerfully repels others. In his book J.R.R. Tolkien: Author of \nthe Century, T.A. Shippey expands on this notion by arguing that Tolkien saw his realm of Middle-earth not \nas fiction or invention, but as the recovery of something genuine that had become buried beneath fragments \nof fairy tale and nursery rhyme. \n\"However fanciful Tolkien's creation of Middle-earth was,\" Shippey writes, \"he did not think that he was \nentirely making it up. He was 'reconstructing', he was harmonising contradictions in his source-texts, \nsometimes he was supplying entirely new concepts (like hobbits), but he was also reaching back to an \nimaginative world which he believed had once really existed, at least in a collective imagination.\" \nThe book is also deeply grounded in Tolkien's linguistic expertise - he invented whole languages for his \ncharacters. Sometimes he became so absorbed in the creation of languages, in fact, that he put the story itself \naside for months or years at a time, believing he could not continue until some quandary or inconsistency in \nhis invented realm had been resolved. But Tolkien's immense intellect and erudition is not the source of his \nsuccess; without his storytelling gift, The Lord of the Rings would be little more than a curiosity. And this \ngift seems to stem straight from his refusal to break from classical and traditional forms. \nTolkien himself often spoke of his work as something 'found' or 'discovered', something whose existence was \nindependent of him. It's wise to tread lightly in this sort of interpretation, but it seems clear that he believed \nhis work to be something given, something revealed, which contained a kind of truth beyond measure. As a \nresult, his details have the weight of reality, linguistic and otherwise, and because of this his great sweep of \nstory feels real as well: you might say that his imaginary castles are built with a certain amount of genuine \nstone. Other writers' fantasy worlds are made up. Tolkien's is inherited.",
+        "passage": "Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best \nanswer to each of the following questions. \nThe book of the century \nA classic of our times or an escapist yarn? Although its popularity is unparalleled, some intellectuals \ndismiss The Lord of the Rings as boyish fantasy. Andrew O'Hehir defends Tolkien's ‘true myth’ as a \nmodern masterpiece, and attempts to discover the secret of its success. \nIn January 1997, reporter Susan Jeffreys of the London Sunday Times informed a colleague that J.R.R. Tolkien's epic fantasy The Lord of the Rings had been voted the greatest book of the 20th century in a readers' \npoll conducted by Britain's Channel 4 and the Waterstone's bookstore chain. Her colleague responded: \n\"What? Has it? Oh dear. Dear oh dear oh dear.\" \nAttitudes in America are arguably more relaxed about this kind of thing. No one from the American educated \nclasses expressed much dismay when a 1999 poll of American on-line bookshop Amazon.com customers \nchose The Lord of the Rings as the greatest book not merely of the century but of the millennium. Tolkien's \nbook is so deeply ingrained in popular culture, after all, that a great many of today's American academics and \njournalists probably still have those dog-eared paperbacks they read avidly in eighth grade with their \nhallucinatory mid-1970s cover art, stashed somewhere in the attic. \nFurthermore, members of the U.S. intelligentsia fully expect to have their tastes ignored, if not openly \nderided, by the public at large. To some American intellectuals it seems gratifying, even touching, that so \nmany millions of readers will happily devour a work as complicated as The Lord of the Rings. Whatever one \nmay make of it, it's a more challenging read than Gone With the Wind (runner-up in the Amazon survey), not \nto mention Harry Potter and the Sorcerer's Stone (fifth place). \nHugely ambitious in scope, The Lord of the Rings occupies an uncomfortable position in 20th century \nliterature. Tolkien's epic poses a stern challenge to modern literature and its defenders. (Tolkien on his critics: \n\"Some who have read the book, or at any rate have reviewed it. have found it boring, absurd, or contemptible; \nand I have no cause to complain, since I have similar opinions of their works, or of the kinds of writing that \nthey evidently prefer.\") Yet The Lord of the Rings has enjoyed massive and enduring popularity. It would \nseem that Tolkien's work supplied something that was missing among the formal innovations of 20th century \nfiction, something for which readers were ravenous. But what was it, and why was it important? \nAnswering this question properly would probably require a book rather than an article. But it seems that the \ncrux of the matter lies in Tolkien's wholehearted rejection of modernity and modernism. This is what so \npowerfully attracts some readers, and just as powerfully repels others. In his book J.R.R. Tolkien: Author of \nthe Century, T.A. Shippey expands on this notion by arguing that Tolkien saw his realm of Middle-earth not \nas fiction or invention, but as the recovery of something genuine that had become buried beneath fragments \nof fairy tale and nursery rhyme. \n\"However fanciful Tolkien's creation of Middle-earth was,\" Shippey writes, \"he did not think that he was \nentirely making it up. He was 'reconstructing', he was harmonising contradictions in his source-texts, \nsometimes he was supplying entirely new concepts (like hobbits), but he was also reaching back to an \nimaginative world which he believed had once really existed, at least in a collective imagination.\" \nThe book is also deeply grounded in Tolkien's linguistic expertise - he invented whole languages for his \ncharacters. Sometimes he became so absorbed in the creation of languages, in fact, that he put the story itself \naside for months or years at a time, believing he could not continue until some quandary or inconsistency in \nhis invented realm had been resolved. But Tolkien's immense intellect and erudition is not the source of his \nsuccess; without his storytelling gift, The Lord of the Rings would be little more than a curiosity. And this \ngift seems to stem straight from his refusal to break from classical and traditional forms. \nTolkien himself often spoke of his work as something 'found' or 'discovered', something whose existence was \nindependent of him. It's wise to tread lightly in this sort of interpretation, but it seems clear that he believed \nhis work to be something given, something revealed, which contained a kind of truth beyond measure. As a \nresult, his details have the weight of reality, linguistic and otherwise, and because of this his great sweep of \nstory feels real as well: you might say that his imaginary castles are built with a certain amount of genuine \nstone. Other writers' fantasy worlds are made up. Tolkien's is inherited.",
         "question": "According to the writer of the article, the details in Tolkien's work",
         "options": {
           "A": "are sometimes rather difficult to follow.",
@@ -4219,7 +4219,7 @@ const HSG_TESTS_DATA = [
           "D": "can be interpreted in many different ways."
         },
         "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"make the story seem more realistic.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là B: \"make the story seem more realistic.\".\n\"his details have the weight of reality... his great sweep of story feels real as well\".",
         "audio": null
       }
     ]
@@ -4489,7 +4489,7 @@ const HSG_TESTS_DATA = [
           "D": "In contrast to"
         },
         "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"Contrary to\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là B: \"Contrary to\".\n\"Contrary to popular belief\" – trái với suy nghĩ thông thường.",
         "audio": null
       },
       {
@@ -4509,7 +4509,7 @@ const HSG_TESTS_DATA = [
           "D": "excellency"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"expertise\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"expertise\".\n\"a minimal level of technical expertise\" – chuyên môn kỹ thuật.",
         "audio": null
       },
       {
@@ -4528,8 +4528,8 @@ const HSG_TESTS_DATA = [
           "C": "put in",
           "D": "come with"
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"put in\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"run on\".\n\"the hardware and software that the website will run on\" – website chạy trên phần cứng/phần mềm nào.",
         "audio": null
       },
       {
@@ -4548,8 +4548,8 @@ const HSG_TESTS_DATA = [
           "C": "in-service",
           "D": "in-depth"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"up-market\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"in-depth\".\n\"in-depth knowledge\" – kiến thức chuyên sâu. (Câu trong PDF gốc bị thiếu chữ: \"before one can create requiring...\".)",
         "audio": null
       },
       {
@@ -4568,8 +4568,8 @@ const HSG_TESTS_DATA = [
           "C": "increasingly",
           "D": "invariably"
         },
-        "answer": "D",
-        "explanation": "Đáp án đúng là **D**.\n- Phương án **D**: *\"invariably\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"constantly\".\n\"a constantly growing set of new technologies\" – không ngừng tăng. \"continually\" (B) cũng chấp nhận được.",
         "audio": null
       },
       {
@@ -4588,8 +4588,8 @@ const HSG_TESTS_DATA = [
           "C": "illusive",
           "D": "virtual"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"fancy\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"virtual\".\n\"virtual reality\" – thực tế ảo.",
         "audio": null
       },
       {
@@ -4608,8 +4608,8 @@ const HSG_TESTS_DATA = [
           "C": "irreproachable",
           "D": "irreverent"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"irreconcilable\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"irreversible\".\n\"irreversible environmental damage\" – thiệt hại không thể đảo ngược.",
         "audio": null
       },
       {
@@ -4629,7 +4629,7 @@ const HSG_TESTS_DATA = [
           "D": "Furthermore"
         },
         "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"Thus\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là C: \"Thus\".\nQuan hệ nguyên nhân – kết quả: rừng hấp thụ CO2, \"Thus\" mất rừng sẽ làm tăng khí độc hại.",
         "audio": null
       },
       {
@@ -4648,8 +4648,8 @@ const HSG_TESTS_DATA = [
           "C": "with",
           "D": "about"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"for\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"with\".\nCụm \"have no contact with somebody/something\".",
         "audio": null
       },
       {
@@ -4668,8 +4668,8 @@ const HSG_TESTS_DATA = [
           "C": "congestion",
           "D": "protection"
         },
-        "answer": "D",
-        "explanation": "Đáp án đúng là **D**.\n- Phương án **D**: *\"protection\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"production\".\n\"the production of precipitation\" – rừng tạo ra mưa (giải thích ở các câu sau).",
         "audio": null
       },
       {
@@ -4689,7 +4689,7 @@ const HSG_TESTS_DATA = [
           "D": "dispel"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"discharge\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"discharge\".\n\"plants discharge moisture into the atmosphere\" – thải hơi ẩm ra khí quyển.",
         "audio": null
       },
       {
@@ -4708,8 +4708,8 @@ const HSG_TESTS_DATA = [
           "C": "unprecedentedly",
           "D": "ungratefully"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"unflinchingly\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"unprecedentedly\".\n\"at an unprecedentedly rapid rate\" – với tốc độ nhanh chưa từng có.",
         "audio": null
       },
       {
@@ -4729,7 +4729,7 @@ const HSG_TESTS_DATA = [
           "D": "c – d – b – a – e"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"c – e – d – a – b\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"c – e – d – a – b\".\nc (hai nhà tiên phong) → e (ảnh hưởng của phát hiện của \"họ\") → d (Gilbert) → a (\"Prior to him\") → b (\"However, he is less well known...\").",
         "audio": null
       },
       {
@@ -4748,8 +4748,8 @@ const HSG_TESTS_DATA = [
           "C": "c – a – e – d – b",
           "D": "c – b – a – e – d"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"a – b – e – d – c\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"c – a – e – d – b\".\nc (giới thiệu ngôi làng) → a (pin mặt trời) → e (Moreover, cấm nhựa dùng một lần) → d (Apart from waste control...) → b (tổng kết).",
         "audio": null
       },
       {
@@ -4769,7 +4769,7 @@ const HSG_TESTS_DATA = [
           "D": "d – c – a – b"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"c – d – a – b\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"c – d – a – b\".\nc (ưu điểm) → d (ví dụ doanh nghiệp đa quốc gia) → a (While... thách thức) → b (số liệu khảo sát minh họa thách thức).",
         "audio": null
       },
       {
@@ -4788,8 +4788,8 @@ const HSG_TESTS_DATA = [
           "C": "b – d – a – c",
           "D": "a – c – b – d"
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"b – d – a – c\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"c – a – b – d\".\nc (câu hỏi: đại học có đáng không?) → a (ý kiến Bộ trưởng: cần bằng cấp) → b (Still, không phải ai cũng tin...) → d (đại học không phải con đường duy nhất).",
         "audio": null
       },
       {
@@ -4808,8 +4808,8 @@ const HSG_TESTS_DATA = [
           "C": "d – e – b – a – c",
           "D": "d – b – c – e – a"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"d – a – c – b – e\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"d – b – c – e – a\".\nd (bất lợi thứ nhất: áp lực hạ tầng) → b (tắc đường) → c (In addition, ô nhiễm) → e (bất lợi khác: vấn đề xã hội) → a (nhà ở, khu ổ chuột).",
         "audio": null
       },
       {
@@ -4829,7 +4829,7 @@ const HSG_TESTS_DATA = [
           "D": "At an early stage when developing"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"At the initial stages of development\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"At the initial stages of development\".\n\"At the initial stages of development, researchers primarily concentrated on...\". D sai (phân từ treo); B, C ít tự nhiên hơn.",
         "audio": null
       },
       {
@@ -4848,8 +4848,8 @@ const HSG_TESTS_DATA = [
           "C": "a fundamental reassessing of research priorities was occurred among scientists",
           "D": "research priorities, fundamentally reassessed, were emerging"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"research priorities underwent a fundamental re-evaluating by the scientific community\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"the scientific community initiated a fundamental reassessment of its research priorities\".\nCụm phân từ \"Confronted with...\" phải có chủ ngữ là \"the scientific community\"; C sai bị động (\"was occurred\").",
         "audio": null
       },
       {
@@ -4869,7 +4869,7 @@ const HSG_TESTS_DATA = [
           "D": "with potential risks presupposed mitigating in retrospect"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"on the presumption that potential risks could be mitigated retrospectively\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"on the presumption that potential risks could be mitigated retrospectively\".\n\"on the presumption that potential risks could be mitigated retrospectively\".",
         "audio": null
       },
       {
@@ -4889,7 +4889,7 @@ const HSG_TESTS_DATA = [
           "D": "in which ethics were routine subordinations"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"in which ethical considerations were routinely subordinated\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"in which ethical considerations were routinely subordinated\".\n\"a professional culture in which ethical considerations were routinely subordinated\".",
         "audio": null
       },
       {
@@ -4908,8 +4908,8 @@ const HSG_TESTS_DATA = [
           "C": "aligning fundamental human values with social responsibility",
           "D": "aligns fundamental human values in a socially responsible manner"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"is aligned toward fundamental values and responsibilities socially\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"aligns with fundamental human values and social responsibility\".\n\"ensuring that AI development aligns with fundamental human values and social responsibility\".",
         "audio": null
       },
       {
@@ -4929,7 +4929,7 @@ const HSG_TESTS_DATA = [
           "D": "(IV)"
         },
         "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"(II)\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là B: \"(II)\".\nCâu chèn (doanh số xe đạp tăng 50%) minh họa cho câu \"biking has enjoyed a rise in popularity\" → vị trí (II).",
         "audio": null
       },
       {
@@ -4949,7 +4949,7 @@ const HSG_TESTS_DATA = [
           "D": "lingering"
         },
         "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"growing\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là C: \"growing\".\n\"waning\" (suy giảm) trái nghĩa với \"growing\".",
         "audio": null
       },
       {
@@ -4969,7 +4969,7 @@ const HSG_TESTS_DATA = [
           "D": "fear"
         },
         "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"biking\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là B: \"biking\".\n\"persuade those people to stick with it\" – \"it\" chỉ việc đạp xe.",
         "audio": null
       },
       {
@@ -4988,8 +4988,8 @@ const HSG_TESTS_DATA = [
           "C": "The availability of public transportation options",
           "D": "The cheapness of biking compared to driving"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"The need for improved bike network quality\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"The availability of public transportation options\".\nBa yếu tố được nêu: hiệu quả (mạng lưới), an toàn, chi phí; không nhắc đến phương tiện công cộng.",
         "audio": null
       },
       {
@@ -5008,8 +5008,8 @@ const HSG_TESTS_DATA = [
           "C": "The costs of driving a car can be six times higher than those involved in riding bikes.",
           "D": "Prapavessis hopes that bikes will remain popular even after the COVID-19 pandemic."
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"The costs of driving a car can be six times higher than those involved in riding bikes.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"On \"slow streets\", no means of transport including bikes could safely share the same road.\".\nBài nói \"slow streets\" giúp xe đạp và các phương tiện khác \"could move safely on the same road\" → A sai.",
         "audio": null
       },
       {
@@ -5029,7 +5029,7 @@ const HSG_TESTS_DATA = [
           "D": "These approaches cause real behavioral modifications by showing regular cyclists that the community \nappreciates their choices."
         },
         "answer": "D",
-        "explanation": "Đáp án đúng là **D**.\n- Phương án **D**: *\"These approaches cause real behavioral modifications by showing regular cyclists that the community \nappreciates their choices.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là D: \"These approaches cause real behavioral modifications by showing regular cyclists that the community appreciates their choices.\".\nGiữ đúng nghĩa: các chiến lược tạo thay đổi hành vi thật sự vì cho người đạp xe thấy xã hội trân trọng lựa chọn của họ.",
         "audio": null
       },
       {
@@ -5049,7 +5049,7 @@ const HSG_TESTS_DATA = [
           "D": "Paragraph 4"
         },
         "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"Paragraph 2\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là B: \"Paragraph 2\".\nVí dụ Paris và Rome nằm ở đoạn 2 (đoạn về Tabitha Combs).",
         "audio": null
       },
       {
@@ -5068,8 +5068,8 @@ const HSG_TESTS_DATA = [
           "C": "Cities have developed some monetary policies for bike commuters since the COVID-19 pandemic so that \ncycling gains in popularity.",
           "D": "Biking has become much more popular during COVID-19, but its future prospect remains in question for \na number of obstacles."
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"The rise of biking during the pandemic is mainly because urbanites avoid public transport, which may not \ncontinue after COVID-19.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"A significant increase in biking during COVID-19 has prompted cities to make necessary changes to develop lasting cycling habits.\".\nBài nói về sự gia tăng đạp xe thời COVID và các thay đổi của thành phố nhằm duy trì thói quen này lâu dài. D cũng có thể được tranh luận.",
         "audio": null
       },
       {
@@ -5088,8 +5088,8 @@ const HSG_TESTS_DATA = [
           "C": "To demonstrate that the Earth passed through similar stages to those of most planets.",
           "D": "To give an example of exploration of the terrestrial planets."
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"To contrast the evolution of the Earth with that of other planets.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"To demonstrate that the Earth passed through similar stages to those of most planets.\".\nĐoạn 1: Trái Đất đã trải qua 4 giai đoạn và \"All terrestrial planets pass through these same stages\" → Trái Đất là ví dụ điển hình.",
         "audio": null
       },
       {
@@ -5108,8 +5108,8 @@ const HSG_TESTS_DATA = [
           "C": "The liquid core of the Earth was created when the planet first formed because the heat was so high \nand there was little cooling.",
           "D": "The cooling caused the Earth to form much more quickly as it met with the intense heat of the new \nplanet."
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"The liquid core of the Earth was created when the planet first formed because the heat was so high \nand there was little cooling.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"The Earth may have been liquid because the heat collected faster than it dissipated if the formation took place quickly.\".\n\"If Earth formed rapidly, this heat would have accumulated much more rapidly than it could leak away, and Earth was probably molten.\"",
         "audio": null
       },
       {
@@ -5128,8 +5128,8 @@ const HSG_TESTS_DATA = [
           "C": "frozen very hard",
           "D": "washed very clean"
         },
-        "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"melted into liquid\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"broken into small parts\".\n\"pulverized\" = nghiền vụn (broken into small parts).",
         "audio": null
       },
       {
@@ -5149,7 +5149,7 @@ const HSG_TESTS_DATA = [
           "D": "It floods the planet's crust."
         },
         "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"It generates intense heat.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là B: \"It generates intense heat.\".\nPhân rã phóng xạ \"releases heat\" giúp làm tan chảy Trái Đất.",
         "audio": null
       },
       {
@@ -5168,8 +5168,8 @@ const HSG_TESTS_DATA = [
           "C": "Earthquakes shifted the continents.",
           "D": "Molten rock and lava flooded the basins."
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"Earthquakes shifted the continents.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"Rain filled the craters made by meteorites.\".\n\"water fell as rain, filling the deepest basins to produce the first oceans\" – các lòng chảo do thiên thạch tạo ra.",
         "audio": null
       },
       {
@@ -5189,7 +5189,7 @@ const HSG_TESTS_DATA = [
           "D": "Erosion"
         },
         "answer": "A",
-        "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"Flooding\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "explanation": "Đáp án đúng là A: \"Flooding\".\n\"The third stage, flooding\" – sau giai đoạn thứ hai (cratering).",
         "audio": null
       },
       {
@@ -5208,8 +5208,8 @@ const HSG_TESTS_DATA = [
           "C": "She does not express an opinion about life on other planets.",
           "D": "She thinks that there is probably life on other planets."
         },
-        "answer": "D",
-        "explanation": "Đáp án đúng là **D**.\n- Phương án **D**: *\"She thinks that there is probably life on other planets.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"She is certain that no life exists on any planet except Earth.\".\n\"this process seems to be totally missing from other worlds in our solar system\" → tác giả cho rằng không có sự sống ở nơi khác (B), dù \"certain\" là hơi mạnh so với \"seems\".",
         "audio": null
       },
       {
@@ -5228,8 +5228,8 @@ const HSG_TESTS_DATA = [
           "C": "3",
           "D": "4"
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"2\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"4\".\nCâu chèn về xói mòn đặt trước \"Almost all traces... destroyed by the active crust and erosion\" → vị trí [4].",
         "audio": null
       },
       {
@@ -5248,8 +5248,8 @@ const HSG_TESTS_DATA = [
           "C": "All of the fundamental processes on terrestrial planets have occurred on Earth.",
           "D": "There is evidence of extensive cratering both on Earth and on all other planets."
         },
-        "answer": "C",
-        "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"All of the fundamental processes on terrestrial planets have occurred on Earth.\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"Life on Earth has affected the evolution in a number of important ways.\".\nBài nói \"No one is sure how the presence of living matter has affected the evolution of Earth\" → B không phải lý do.",
         "audio": null
       },
       {
@@ -5268,8 +5268,8 @@ const HSG_TESTS_DATA = [
           "C": "1-3-4",
           "D": "2-5-6 \nAnswer Choices \n1. All rocky planets go through different stages in their evolution because of variations in composition. \n2. In spite of several unique features, the Earth is a good example of how a planet proceeds through the \nstages. \n3. Fewer meteorites fall to Earth now than in the earlier stages of the planet's evolutionary history. \n4. About three quarters of the surface of the Earth is submerged by the water in its oceans. \n5. Differentiation and cratering are early stages that are influenced by in-falling meteorites. \n6. The final stages of flooding and surface evolution help to shape the appearance of the planets."
         },
-        "answer": "B",
-        "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"3-5-6\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"2-5-6 Answer Choices 1. All rocky planets go through different stages in their evolution because of variations in composition. 2. In spite of several unique features, the Earth is a good example of how a planet proceeds through the stages. 3. Fewer meteorites fall to Earth now than in the earlier stages of the planet's evolutionary history. 4. About three quarters of the surface of the Earth is submerged by the water in its oceans. 5. Differentiation and cratering are early stages that are influenced by in-falling meteorites. 6. The final stages of flooding and surface evolution help to shape the appearance of the planets.\".\nÝ chính: (2) Trái Đất là ví dụ tốt dù có đặc điểm riêng; (5) hai giai đoạn đầu; (6) hai giai đoạn sau. Các ý 1, 3, 4 sai hoặc chỉ là chi tiết.",
         "audio": null
       }
     ]

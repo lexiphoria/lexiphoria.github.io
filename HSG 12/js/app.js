@@ -198,12 +198,16 @@
     passages.forEach((p, idx) => {
       const first = p.qNums[0];
       const last = p.qNums[p.qNums.length - 1];
+      const fullTitle = p.title.replace(` - Đề ${currentTest.id}`, '');
+      // Short label from the English part, e.g. "Đoạn văn điền từ (Guided Cloze)" -> "Guided Cloze"
+      const shortTitle = (fullTitle.match(/\(([^)]+)\)/) || [])[1] || fullTitle;
       const tabBtn = document.createElement('button');
       tabBtn.type = 'button';
       tabBtn.className = 'passage-tab';
       tabBtn.setAttribute('role', 'tab');
+      tabBtn.title = fullTitle;
       tabBtn.innerHTML = '<span></span><span class="passage-tab-range"></span>';
-      tabBtn.firstChild.textContent = p.title.replace(` - Đề ${currentTest.id}`, '');
+      tabBtn.firstChild.textContent = shortTitle;
       tabBtn.lastChild.textContent = first === last ? `· Câu ${first}` : `· Câu ${first}–${last}`;
       tabBtn.onclick = () => showPassage(idx);
       tabsContainer.appendChild(tabBtn);

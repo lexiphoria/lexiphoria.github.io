@@ -1290,6 +1290,36 @@ body {
   }
 }
 
+/* Phone: keep the sticky timer bar on one line */
+@media (max-width: 600px) {
+  .quiz-topbar {
+    padding: 0.5rem 0.75rem;
+  }
+  .quiz-topbar-content {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+  }
+  .quiz-info-group {
+    gap: 0.5rem;
+    min-width: 0;
+  }
+  .timer-box {
+    font-size: 0.95rem;
+    padding: 0.3rem 0.55rem;
+  }
+  .progress-info {
+    font-size: 0.78rem;
+  }
+  .quiz-topbar .btn-primary {
+    padding: 0.45rem 0.8rem !important;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+  .question-card {
+    scroll-margin-top: 4.5rem;
+  }
+}
+
 /* Modal Styling */
 .modal-backdrop {
   position: fixed;

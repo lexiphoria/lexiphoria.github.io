@@ -18,7 +18,7 @@
 | **DPS-1** | **Resolving Reference & Substitution** *(Giải mã Quy chiếu & Thay thế)* | Nhận diện và truy vết quan hệ hồi chỉ (Anaphora), khứ chỉ (Cataphora), và các cụm *This/These/Such + Summary Noun* để liên kết khoảng trống với tiền ngữ. | Halliday & Hasan (1976); Nguyễn Hòa (2000, Ch. 2); Paltridge (2018). |
 | **DPS-2** | **Tracking Lexical Cohesion Chains** *(Truy vết Chuỗi Liên kết Từ vựng)* | Lần theo mạng lưới từ vựng (đồng nghĩa, bao hàm, thành phần, kết hợp từ) để duy trì tính nhất quán chủ đề qua khoảng trống. | Halliday & Hasan (1976); Nguyễn Hòa (2000, Ch. 2); Hoey (1991). |
 | **DPS-3** | **Analyzing Information Flow (Theme-Rheme)** *(Phân tích Dòng chảy Thông tin Đề - Thuyết)* | Xác định vị trí Đề (Theme - Thông tin đã biết) và Thuyết (Rheme - Thông tin mới); kiểm tra tính liên tục theo mô hình Linear hoặc Constant Theme. | Nguyễn Hòa (2000, Ch. 7); Paltridge (2018); Daneš (1974). |
-| **DPS-4** | **Identifying Discourse & Coherence Relations** *(Nhận diện Quan hệ Diễn ngôn Logic)* | Phân tích quan hệ ngữ nghĩa ngầm hoặc rõ giữa mệnh đề trước và sau khoảng trống (Nhượng bộ, Nhân quả, Khai triển, Trình tự). | Nguyễn Hòa (2000, Ch. 2); Mann & Thompson (1988); Paltridge (2018). |
+| **DPS-4** | **Identifying Discourse Relations & Markers** *(Nhận diện Quan hệ & Chỉ tố Diễn ngôn)* | Phân tích hệ thống chỉ tố tường minh (Discourse Markers theo Fraser 1999) và quan hệ logic ngầm (Covert Relations theo RST) giữa mệnh đề trước và sau khoảng trống. | Nguyễn Hòa (2000, Ch. 2); Fraser (1999); Mann & Thompson (1988); Paltridge (2018). |
 | **DPS-5** | **Predicting & Verifying Global Macrostructure** *(Dự đoán Tiên nghiệm & Kiểm chứng Toàn cục)* | Kích hoạt lược đồ nhận thức (Schema), cấu trúc thể loại (Genre moves) để phỏng đoán câu khuyết và kiểm định tính mạch lạc toàn cục của văn bản. | Nguyễn Hòa (2000, Ch. 3, 4, 8); Brown & Yule (1983); Swales (1990). |
 
 ---
@@ -36,7 +36,7 @@
 
 [TUẦN 4-5] Giai đoạn 3: Dòng chảy Thông tin & Cấu trúc Logic (Information Flow & Logic)
  ├── Buổi 5: Cấu trúc Đề - Thuyết & Nguyên lý Given-to-New (DPS-3)
- └── Buổi 6: Quan hệ Diễn ngôn & Bản đồ Logic Văn bản (DPS-4)
+ └── Buổi 6: Chỉ tố Diễn ngôn, Quan hệ Logic & Bản đồ Văn bản (DPS-4)
 
 [TUẦN 6-7] Giai đoạn 4: Cấu trúc Vĩ mô & Kỹ thuật Suy luận (Macrostructure & Inferencing)
  ├── Buổi 7: Khung Chủ đề, Biên giới Đoạn & Kỹ thuật Staging

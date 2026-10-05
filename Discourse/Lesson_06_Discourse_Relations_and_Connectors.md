@@ -1,48 +1,55 @@
-# BUỔI 6: QUAN HỆ DIỄN NGÔN & BẢN ĐỒ LOGIC VĂN BẢN
-## (DISCOURSE RELATIONS, RHETORICAL STRUCTURE & LOGICAL CONNECTORS)
+# BUỔI 6: CHỈ TỐ DIỄN NGÔN, QUAN HỆ LOGIC & BẢN ĐỒ VĂN BẢN
+## (DISCOURSE MARKERS, COHERENCE RELATIONS & LOGICAL CONNECTORS)
 
 ---
 
 ### I. MỤC TIÊU SƯ PHẠM (LEARNING OBJECTIVES)
 1. **Kiến thức:**
-   * Nắm vững hệ thống Quan hệ Diễn ngôn Logic theo Nguyễn Hòa (2000, Ch. 2, tr. 38-42) và Thuyết Cấu trúc Tu từ (Rhetorical Structure Theory - RST của Mann & Thompson):
-     * Phân biệt giữa **Liên kết Tường minh (Overt Connectors)**: *however, therefore, furthermore, in contrast* và **Liên kết Ngầm định (Covert Coherence Relations)** không có từ nối.
-     * 5 nhóm quan hệ logic cơ bản:
-       1. *Adversative / Concessive* (Tương phản / Nhượng bộ)
-       2. *Causal / Resultative* (Nguyên nhân / Kết quả)
-       3. *Elaborative / Exemplifying* (Khai triển chi tiết / Minh họa)
-       4. *Additive / Clarification* (Bổ sung / Làm rõ)
-       5. *Condition / Exception* (Điều kiện / Ngoại lệ)
+   * Nắm vững Thuyết Chỉ tố Diễn ngôn (Discourse Markers - DMs) theo Bruce Fraser (1999), Deborah Schiffrin (1987) và PGS. TS. Nguyễn Hòa (2000, Ch. 2, tr. 38-42):
+     * Bản chất của DMs: Là các biểu thức ngôn ngữ báo hiệu quan hệ diễn ngôn giữa phân đoạn chứa nó ($S_2$) với thông điệp diễn ngôn đứng trước ($S_1$).
+     * 4 nhóm chức năng cốt lõi của Discourse Markers (Fraser 1999):
+       1. *Contrastive Markers (CDMs):* Tương phản, nghịch đối, bác bỏ (*however, nevertheless, on the contrary, by contrast, conversely*).
+       2. *Elaborative Markers (EDMs):* Khai triển, bổ sung, làm rõ (*furthermore, moreover, in particular, specifically, namely, that is to say, indeed*).
+       3. *Inferential Markers (IDMs):* Suy luận, nhân quả, mục đích (*consequently, therefore, thus, as a result, hence, accordingly*).
+       4. *Topic-relating Markers (TDMs):* Chuyển dịch chủ đề, định vị khung bàn luận (*with regard to, in terms of, turning now to*).
+   * Phân biệt giữa **Liên kết Tường minh (Overt Connectors / DMs)** và **Liên kết Ngầm định (Covert Coherence Relations)** không có từ nối (theo Thuyết Cấu trúc Tu từ RST của Mann & Thompson).
 2. **Kỹ năng:**
-   * Xây dựng kỹ năng **Relation Tagging (Gán nhãn quan hệ logic)** trước khi nhìn vào 4 phương án trắc nghiệm.
+   * Xây dựng kỹ năng **Relation Tagging (Gán nhãn quan hệ logic)** độc lập với 4 phương án trắc nghiệm.
+   * Phân biệt sắc thái ngữ dụng (Pragmatic Nuance) của các chỉ tố hay gây nhầm lẫn trong đề thi HSG (ví dụ: *On the contrary* vs. *In contrast*).
 
 ---
 
 ### II. CHẨN ĐOÁN LỖI NGƯỜI HỌC (LEARNER CORPUS AUDIT)
-* Học sinh thường bị phụ thuộc quá mức vào các liên từ bề mặt. Khi một đoạn văn không có các từ nối quen thuộc như *Because, So, But*, học sinh không nhận diện được mối quan hệ nhân quả hay tương phản ngầm, dẫn đến việc chọn một câu có nội dung đi ngược lại hướng lập luận của tác giả.
+* **Lỗi phụ thuộc liên từ bề mặt & Mù quan hệ ngầm:** Khi đoạn văn không có các từ nối quen thuộc như *Because, So, But*, học sinh không nhận diện được quan hệ logic ngầm, dẫn đến việc chọn câu đi ngược lại hướng lập luận của tác giả (**ERR-4: Discourse Relation Clash**).
+* **Lỗi ngộ nhận sắc thái chỉ tố (Discourse Marker Fallacy):**
+  * Nhầm lẫn giữa *On the contrary* và *In contrast*:
+    * *On the contrary:* Dùng để **bác bỏ một mệnh đề phủ định hoặc ngộ nhận** vừa nêu trước đó (*"It wasn't a failure; on the contrary, it was a triumph."*).
+    * *In contrast / By contrast:* Dùng để **đối chiếu sự khác biệt hai chiều** giữa hai thực thể độc lập (*"Country A invests in solar; in contrast, Country B relies on coal."*).
+  * Đề thi HSG Quốc gia và HSG Đà Nẵng thường cài cắm *On the contrary* vào ngữ cảnh đối chiếu thông thường để bẫy thí sinh học vẹt nghĩa tiếng Việt ("trái lại").
 
 ---
 
-### III. BẢN ĐỒ QUAN HỆ DIỄN NGÔN (DISCOURSE RELATION TAXONOMY)
+### III. HỆ THỐNG PHÂN LOẠI CHỈ TỐ DIỄN NGÔN (DISCOURSE MARKER TAXONOMY)
+*(Tổng hợp từ Fraser 1999; Schiffrin 1987; Nguyễn Hòa 2000, Ch. 2)*
 
-| Trục Quan Hệ | Tín Hiệu Tường Minh (Overt) | Bản Chất Ngữ Nghĩa Ngầm (Covert Logic) |
+| Nhóm Chỉ Tố (Category) | Tín Hiệu Tường Minh (Overt DMs) | Bản Chất Ngữ Nghĩa Ngầm & Chức Năng Diễn Ngôn |
 | :--- | :--- | :--- |
-| **Contrast / Concession** | *However, nevertheless, conversely, whereas, despite this* | Mệnh đề $Q$ phủ định hoặc làm bất ngờ một kỳ vọng sinh ra từ mệnh đề $P$. |
-| **Cause / Consequence** | *Consequently, as a result, hence, thus, thereby* | Sự kiện $P$ là điều kiện đủ hoặc nguyên nhân trực tiếp dẫn tới sự kiện $Q$. |
-| **Elaboration / Detail** | *Specifically, that is to say, in particular, namely* | Mệnh đề $Q$ cung cấp thêm thông tin vi mô cho khái niệm vĩ mô ở $P$. |
-| **Exemplification** | *For instance, to illustrate, such as, a case in point* | Mệnh đề $Q$ đưa ra một thực thể/sự việc cụ thể để chứng minh mệnh đề $P$. |
+| **Contrastive (CDMs)**<br>*(Tương phản / Nghịch đối)* | *However, nevertheless, nonetheless, whereas, conversely, by contrast, on the contrary, despite this* | Báo hiệu mệnh đề $S_2$ đi ngược lại kỳ vọng, phản bác hoặc thu hẹp tính đúng đắn của mệnh đề $S_1$. |
+| **Inferential (IDMs)**<br>*(Suy luận / Nhân quả)* | *Consequently, as a result, therefore, thus, hence, accordingly, thereby, to this end* | Báo hiệu mệnh đề $S_2$ là hệ quả tất yếu, kết luận logic hoặc mục đích hành động xuất phát từ $S_1$. |
+| **Elaborative (EDMs)**<br>*(Khai triển / Bổ sung)* | *Furthermore, moreover, in addition, specifically, in particular, namely, that is to say, indeed, in fact* | Mệnh đề $S_2$ cung cấp chi tiết vi mô, bằng chứng phụ trợ hoặc tái khẳng định/làm sáng tỏ ý tưởng ở $S_1$. |
+| **Exemplifying**<br>*(Minh họa thực tế)* | *For instance, for example, to illustrate, a case in point is* | Mệnh đề $S_2$ đưa ra một thực thể/nghiên cứu thực tế cụ thể nhằm bảo vệ luận điểm vĩ mô ở $S_1$. |
 
 ---
 
 ### IV. TIẾN TRÌNH GIẢNG DẠY 90 PHÚT
 
-| Thời Lượng | Pha Giảng Dạy | Nội Dung Thao Tác |
+| Thời Lượng | Pha Giảng Dạy | Nội Dung Thao Tác Giảng Viên & Học Sinh |
 | :---: | :--- | :--- |
-| **10 phút** | **Warm-up:** Đoán nhãn quan hệ logic: Cho 3 cặp câu không có từ nối. Học sinh xác định quan hệ ngầm giữa chúng (+, -, =, $\rightarrow$). |
-| **25 phút** | **Presentation:** Hệ thống hóa 5 trục quan hệ logic. Hướng dẫn kỹ thuật 3 bước: Tóm tắt Mệnh đề $P$ (trước gap) $\rightarrow$ Tóm tắt Mệnh đề $Q$ (sau gap) $\rightarrow$ Suy ra Nhãn quan hệ của khoảng trống. |
-| **30 phút** | **Guided Practice:** Luyện giải bài đọc HSG: Học sinh không chọn đáp án ngay mà phải viết nhãn quan hệ (VD: *[Adversative]*) vào lề giấy trước khi khoanh đáp án. |
-| **20 phút** | **Peer Review & Debate:** 2 học sinh tranh luận về một câu hỏi khó trong đề HSG: Tại sao khoảng trống ở đây là *Concession* chứ không thể là *Addition*? |
-| **5 phút** | **Wrap-up:** Tổng kết: *"Logic diễn ngôn quyết định đáp án, không phải cảm giác ngữ pháp."* |
+| **10 phút** | **Warm-up: Đoán Nhãn Logic Không Từ Nối** | Chiếu 3 cặp câu không có từ nối. Học sinh xác định quan hệ ngầm giữa chúng bằng ký hiệu toán học ($[ + ]$, $[ - ]$, $[ = ]$, $[ \rightarrow ]$). |
+| **25 phút** | **Presentation: Ma Trận Chỉ Tố Diễn Ngôn (Fraser 1999)** | Giảng giải 4 nhóm DMs và sắc thái bẫy học thuật (*On the contrary vs. In contrast; Furthermore vs. In fact*). Hướng dẫn quy trình 3 bước gán nhãn: Tóm tắt $P$ (trước gap) $\rightarrow$ Tóm tắt $Q$ (sau gap) $\rightarrow$ Định vị Nhóm Chỉ tố bắt buộc. |
+| **30 phút** | **Guided Practice: Relation Tagging** | Học sinh luyện giải 4 bài đọc gapped text HSG: Bắt buộc viết nhãn logic và chỉ tố dự kiến (VD: *[CDM: Adversative]* hoặc *[IDM: Result]*) vào lề đề thi trước khi nhìn 4 phương án. |
+| **20 phút** | **Peer Debate: Phá Bẫy Sắc Thái DMs** | Tranh luận 2 câu hỏi khó trong đề thi: Vì sao câu này chọn *Nevertheless* mà không chọn *Furthermore* dù cả hai đều mang nghĩa kết nối học thuật? |
+| **5 phút** | **Wrap-up** | Khắc sâu: *"Chỉ tố diễn ngôn là tín hiệu giao thông của văn bản; đi ngược chiều chỉ tố chắc chắn rơi vào bẫy!"* |
 
 ---
 
@@ -52,15 +59,17 @@
 > *"Advocates of remote employment frequently emphasize the elimination of daily commuting and the enhancement of personal schedule autonomy. [ \_\_\_\_ (Gap 6) \_\_\_\_ ]. Prolonged isolation and the erosion of clear boundaries between professional duties and private life often induce acute psychological burnout."*
 
 **Phương án lựa chọn:**
-* (A) *Furthermore, companies save substantial overhead expenses by reducing office lease spaces.*
+* (A) *Furthermore, corporate enterprises save substantial overhead expenses by reducing office lease spaces.*
 * (B) *Nevertheless, these perceived advantages can be swiftly overshadowed by unintended socio-emotional repercussions.*
-* (C) *Many employees purchase ergonomic desks and specialized equipment for home offices.*
-* (D) *Consequently, city traffic congestion has declined noticeably during morning peak hours.*
+* (C) *Many telecommuting employees purchase ergonomic desks and specialized equipment for home offices.*
+* (D) *Consequently, municipal transport authorities have recorded notable traffic volume contractions during morning peak hours.*
 
 **Phân tích Diễn ngôn:**
-* **Mệnh đề trước gap ($P$):** Nêu các mặt tích cực của làm việc từ xa (*elimination of commute, enhancement of autonomy* $ightarrow$ Positive $+ benefit$).
-* **Mệnh đề sau gap ($Q$):** Nêu mặt tiêu cực nặng nề (*isolation, erosion of boundaries, psychological burnout* $ightarrow$ Negative $- drawback$).
-* **Quan hệ Diễn ngôn bắt buộc:** Phải là một bản lề **Adversative / Turn-around (Chuyển hướng nghịch đối)** kết nối từ mặt tích cực sang mặt tiêu cực.
-* Phương án (A) là *Addition* (+ benefit tiếp); phương án (C) là chi tiết vụn vặt; phương án (D) là *Result* (+ lợi ích giao thông).
-* Chỉ có **(B)** chứa liên từ nghịch đối **Nevertheless** và khái niệm cầu nối: *"these perceived advantages* (nối về $P$) *can be overshadowed by unintended socio-emotional repercussions* (mở đường cho $Q$)".
-* $ightarrow$ **Đáp án chuẩn xác: (B)**.
+* **Mệnh đề trước gap ($P$):** Nêu các ưu điểm của làm việc từ xa (*elimination of commute, autonomy* $\rightarrow$ Positive $[ + ]$).
+* **Mệnh đề sau gap ($Q$):** Nêu các hệ lụy tâm lý tiêu cực (*prolonged isolation, erosion of boundaries, psychological burnout* $\rightarrow$ Negative $[ - ]$).
+* **Phép toán Diễn ngôn:** Cần một **Contrastive Discourse Marker (CDM)** đóng vai trò bản lề chuyển hướng từ $[ + ]$ sang $[ - ]$.
+* **Loại trừ bẫy:**
+  * (A) dùng *Furthermore* (Elaborative Marker - bổ sung tiếp mặt tích cực $[ + ]$) $\rightarrow$ Phạm lỗi **ERR-4 (Discourse Relation Clash)**.
+  * (D) dùng *Consequently* (Inferential Marker - hệ quả tích cực về giao thông) $\rightarrow$ Phạm lỗi **ERR-4**.
+  * (C) chỉ là chi tiết vụn vặt về mua bàn ghế, không có chức năng diễn ngôn.
+* **Đáp án chuẩn xác:** **(B)** (Chứa Contrastive Marker **Nevertheless** chuẩn mực, kết hợp cụm hồi chỉ *these perceived advantages* và cụm dẫn đường *socio-emotional repercussions*).

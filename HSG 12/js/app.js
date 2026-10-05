@@ -242,7 +242,9 @@
     lines.forEach((line, i) => {
       const isItem = /^[a-hA-H]\.\s/.test(line) || /^\(\d{1,2}\)\s*[A-Z]/.test(line);
       const last = blocks[blocks.length - 1];
-      const prevEnded = !last || /[.!?:]["'”’]?$/.test(prevLine);
+      // Ignore inline markup ([/u], [/b], a trailing [IV]) when checking how the previous line ended
+      const prevPlain = prevLine.replace(/\[\/?[ub]\]/g, '').replace(/\s*\[(?:I|II|III|IV)\]$/, '');
+      const prevEnded = !last || /[.!?:]["'”’]?$/.test(prevPlain);
       // Headings: ALL CAPS, or a short standalone line followed by a new sentence ("The Video Loggers")
       const isTitle = (line.length < 100 && /[A-Z]{3}/.test(line) && line === line.toUpperCase()) ||
         (!isItem && prevEnded && line.length <= 60 && !/[.,;:?]["'”’]?$/.test(line) &&
@@ -271,11 +273,23 @@
       const el = document.createElement('p');
       el.className = `passage-${block.type}`;
 
-      // Turn "(14)" gap markers into badges that jump to their question
-      block.text.split(/(\(\s?\d{1,2}\s?\))/).forEach(part => {
+      // Inline markup: "(14)" gap markers become badges that jump to their question;
+      // [u]...[/u] underlines and [b]...[/b] bolds text that questions refer to;
+      // [I]–[IV] mark sentence-insertion positions
+      block.text.split(/(\(\s?\d{1,2}\s?\)|\[u\][\s\S]*?\[\/u\]|\[b\][\s\S]*?\[\/b\]|\[(?:I|II|III|IV)\])/).forEach(part => {
         const m = part.match(/^\(\s?(\d{1,2})\s?\)$/);
         const num = m ? parseInt(m[1], 10) : NaN;
-        if (gapNums.has(num)) {
+        const styled = part.match(/^\[(u|b)\]([\s\S]*)\[\/\1\]$/);
+        if (styled) {
+          const tag = document.createElement(styled[1] === 'u' ? 'u' : 'strong');
+          tag.textContent = styled[2];
+          el.appendChild(tag);
+        } else if (/^\[(I|II|III|IV)\]$/.test(part)) {
+          const marker = document.createElement('span');
+          marker.className = 'passage-marker';
+          marker.textContent = part;
+          el.appendChild(marker);
+        } else if (gapNums.has(num)) {
           const gap = document.createElement('span');
           gap.className = 'passage-gap';
           gap.dataset.num = num;

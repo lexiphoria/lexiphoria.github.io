@@ -3183,7 +3183,7 @@ const HSG_TESTS_DATA = [
         "num": 1,
         "section": "Phần Nghe 1 (Listening Part 1)",
         "category": "Listening",
-        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất. Quét mã QR đính kèm để nghe file âm thanh.",
+        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất (sử dụng trình phát âm thanh bên dưới).",
         "passageTitle": "",
         "passage": "",
         "question": "These sessions with a counselor are ______.",
@@ -3195,6 +3195,7 @@ const HSG_TESTS_DATA = [
         "answer": "B",
         "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"available to any students\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/Part-1-T4.mp3",
           "qrImage": "assets/qr/page_27_img_1.png",
           "driveUrl": "https://drive.google.com/file/d/10E4N8LRtTAOjQBy4Z7fO4LyD7l28-O5w/view?usp=drive_link",
           "title": "Listening Part 1 - Counselor Session"
@@ -3206,7 +3207,7 @@ const HSG_TESTS_DATA = [
         "num": 2,
         "section": "Phần Nghe 1 (Listening Part 1)",
         "category": "Listening",
-        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất. Quét mã QR đính kèm để nghe file âm thanh.",
+        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất (sử dụng trình phát âm thanh bên dưới).",
         "passageTitle": "",
         "passage": "",
         "question": "The counselor says that new students have to ______.",
@@ -3218,6 +3219,7 @@ const HSG_TESTS_DATA = [
         "answer": "A",
         "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"spend more time on the college premises\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/Part-1-T4.mp3",
           "qrImage": "assets/qr/page_27_img_1.png",
           "driveUrl": "https://drive.google.com/file/d/10E4N8LRtTAOjQBy4Z7fO4LyD7l28-O5w/view?usp=drive_link",
           "title": "Listening Part 1 - Counselor Session"
@@ -3229,7 +3231,7 @@ const HSG_TESTS_DATA = [
         "num": 3,
         "section": "Phần Nghe 1 (Listening Part 1)",
         "category": "Listening",
-        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất. Quét mã QR đính kèm để nghe file âm thanh.",
+        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất (sử dụng trình phát âm thanh bên dưới).",
         "passageTitle": "",
         "passage": "",
         "question": "John complains that the resource center ______.",
@@ -3241,6 +3243,7 @@ const HSG_TESTS_DATA = [
         "answer": "C",
         "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"gets too crowded\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/Part-1-T4.mp3",
           "qrImage": "assets/qr/page_27_img_1.png",
           "driveUrl": "https://drive.google.com/file/d/10E4N8LRtTAOjQBy4Z7fO4LyD7l28-O5w/view?usp=drive_link",
           "title": "Listening Part 1 - Counselor Session"
@@ -3252,7 +3255,7 @@ const HSG_TESTS_DATA = [
         "num": 4,
         "section": "Phần Nghe 1 (Listening Part 1)",
         "category": "Listening",
-        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất. Quét mã QR đính kèm để nghe file âm thanh.",
+        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất (sử dụng trình phát âm thanh bên dưới).",
         "passageTitle": "",
         "passage": "",
         "question": "The counselor suggests to John that ______.",
@@ -3264,6 +3267,7 @@ const HSG_TESTS_DATA = [
         "answer": "B",
         "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"he needs to study all the time\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/Part-1-T4.mp3",
           "qrImage": "assets/qr/page_27_img_1.png",
           "driveUrl": "https://drive.google.com/file/d/10E4N8LRtTAOjQBy4Z7fO4LyD7l28-O5w/view?usp=drive_link",
           "title": "Listening Part 1 - Counselor Session"
@@ -3275,7 +3279,7 @@ const HSG_TESTS_DATA = [
         "num": 5,
         "section": "Phần Nghe 1 (Listening Part 1)",
         "category": "Listening",
-        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất. Quét mã QR đính kèm để nghe file âm thanh.",
+        "instruction": "Lắng nghe các tình huống và chọn đáp án chính xác nhất (sử dụng trình phát âm thanh bên dưới).",
         "passageTitle": "",
         "passage": "",
         "question": "Before being able to help John, the counselor needs to ______.",
@@ -3287,6 +3291,7 @@ const HSG_TESTS_DATA = [
         "answer": "C",
         "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"get more information from him\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/Part-1-T4.mp3",
           "qrImage": "assets/qr/page_27_img_1.png",
           "driveUrl": "https://drive.google.com/file/d/10E4N8LRtTAOjQBy4Z7fO4LyD7l28-O5w/view?usp=drive_link",
           "title": "Listening Part 1 - Counselor Session"
@@ -3311,6 +3316,7 @@ const HSG_TESTS_DATA = [
         "answer": "B",
         "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"encountering hostility at some point\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CNN.mp3",
           "qrImage": "assets/qr/page_27_img_2.png",
           "driveUrl": "https://drive.google.com/file/d/1f1lg89RePmfOyVr34SwvmjEC0uuPhmZo/view?usp=drive_link",
           "title": "Listening Part 2 - Mystery Shoppers (Carla & Robert)"
@@ -3335,6 +3341,7 @@ const HSG_TESTS_DATA = [
         "answer": "A",
         "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"anxious to dispel any false assumptions about the work\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CNN.mp3",
           "qrImage": "assets/qr/page_27_img_2.png",
           "driveUrl": "https://drive.google.com/file/d/1f1lg89RePmfOyVr34SwvmjEC0uuPhmZo/view?usp=drive_link",
           "title": "Listening Part 2 - Mystery Shoppers (Carla & Robert)"
@@ -3359,6 +3366,7 @@ const HSG_TESTS_DATA = [
         "answer": "C",
         "explanation": "Đáp án đúng là **C**.\n- Phương án **C**: *\"has become much more discerning about what constitutes good service\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CNN.mp3",
           "qrImage": "assets/qr/page_27_img_2.png",
           "driveUrl": "https://drive.google.com/file/d/1f1lg89RePmfOyVr34SwvmjEC0uuPhmZo/view?usp=drive_link",
           "title": "Listening Part 2 - Mystery Shoppers (Carla & Robert)"
@@ -3383,6 +3391,7 @@ const HSG_TESTS_DATA = [
         "answer": "B",
         "explanation": "Đáp án đúng là **B**.\n- Phương án **B**: *\"the intrusiveness of any background music\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CNN.mp3",
           "qrImage": "assets/qr/page_27_img_2.png",
           "driveUrl": "https://drive.google.com/file/d/1f1lg89RePmfOyVr34SwvmjEC0uuPhmZo/view?usp=drive_link",
           "title": "Listening Part 2 - Mystery Shoppers (Carla & Robert)"
@@ -3407,6 +3416,7 @@ const HSG_TESTS_DATA = [
         "answer": "A",
         "explanation": "Đáp án đúng là **A**.\n- Phương án **A**: *\"has usually acquired in-depth knowledge of the business they are observing\"* là phương án chuẩn xác nhất theo ngữ cảnh bài học và cấu trúc ngữ pháp thi HSG.\n- Phân tích ngữ cảnh: Hãy đối chiếu thông tin trong bài đọc/bài nghe và các quy tắc từ vựng/ngữ pháp chuyên sâu tương ứng.",
         "audio": {
+          "src": "assets/audio/CNN.mp3",
           "qrImage": "assets/qr/page_27_img_2.png",
           "driveUrl": "https://drive.google.com/file/d/1f1lg89RePmfOyVr34SwvmjEC0uuPhmZo/view?usp=drive_link",
           "title": "Listening Part 2 - Mystery Shoppers (Carla & Robert)"

@@ -49,7 +49,7 @@
   function parseQueryParams() {
     const params = new URLSearchParams(window.location.search);
     const t = parseInt(params.get('test'), 10);
-    if (!isNaN(t) && t >= 1 && t <= 5) {
+    if (!isNaN(t) && t >= 1 && typeof HSG_TESTS_DATA !== 'undefined' && t <= HSG_TESTS_DATA.length) {
       testId = t;
     }
     const m = params.get('mode');

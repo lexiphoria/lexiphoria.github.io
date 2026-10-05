@@ -5273,6 +5273,1061 @@ const HSG_TESTS_DATA = [
         "audio": null
       }
     ]
+  },
+  {
+    "id": 6,
+    "title": "Practice Test 6",
+    "fullTitle": "Đề Thi Học Sinh Giỏi Lớp 12 - Practice Test 6",
+    "description": "Đề biên soạn theo ma trận 50 câu từ ngữ liệu đề đề xuất Duyên hải Bắc Bộ 2018 (THPT Chuyên Quốc Học Huế): nghe về nghệ thuật Bali và những người bạn tưởng tượng, điền từ, sắp xếp câu, điền mệnh đề và hai bài đọc hiểu về phối cảnh trong hội họa và biệt ngữ (jargon).",
+    "timeLimit": 60,
+    "totalQuestions": 50,
+    "questions": [
+      {
+        "id": "t6_q1",
+        "testId": 6,
+        "num": 1,
+        "section": "Phần Nghe 1 (Listening Part 1)",
+        "category": "Listening",
+        "instruction": "Nghe bài giảng về lịch sử nghệ thuật trên đảo Bali và chọn đáp án đúng nhất (sử dụng trình phát âm thanh bên dưới).",
+        "passageTitle": "",
+        "passage": "",
+        "question": "According to the lecture, the first inhabitants of Bali, who arrived around 3000 BC, probably came from",
+        "options": {
+          "A": "India.",
+          "B": "China.",
+          "C": "Japan."
+        },
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"China\".\nGiảng viên: \"They probably originally came from China\". Nhật Bản là chủ đề của bài giảng tuần trước, còn Ấn Độ gắn với đạo Hindu du nhập sau này.",
+        "audio": {
+          "src": "assets/audio/QHH-Part1.mp3",
+          "qrImage": "",
+          "driveUrl": "",
+          "title": "Listening Part 1 - Art in Bali (DHBB 2018 - Quốc Học Huế)"
+        }
+      },
+      {
+        "id": "t6_q2",
+        "testId": 6,
+        "num": 2,
+        "section": "Phần Nghe 1 (Listening Part 1)",
+        "category": "Listening",
+        "instruction": "Nghe bài giảng về lịch sử nghệ thuật trên đảo Bali và chọn đáp án đúng nhất (sử dụng trình phát âm thanh bên dưới).",
+        "passageTitle": "",
+        "passage": "",
+        "question": "When Hinduism was introduced in the 14th century, Balinese artists worked in the service of",
+        "options": {
+          "A": "foreign merchants.",
+          "B": "the ruling families.",
+          "C": "Hindu priests."
+        },
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"the ruling families\".\n\"sculptors, poets, priests and painters worked together in the service of the ruling families\" – tu sĩ là người cùng làm việc, không phải người được phục vụ.",
+        "audio": {
+          "src": "assets/audio/QHH-Part1.mp3",
+          "qrImage": "",
+          "driveUrl": "",
+          "title": "Listening Part 1 - Art in Bali (DHBB 2018 - Quốc Học Huế)"
+        }
+      },
+      {
+        "id": "t6_q3",
+        "testId": 6,
+        "num": 3,
+        "section": "Phần Nghe 1 (Listening Part 1)",
+        "category": "Listening",
+        "instruction": "Nghe bài giảng về lịch sử nghệ thuật trên đảo Bali và chọn đáp án đúng nhất (sử dụng trình phát âm thanh bên dưới).",
+        "passageTitle": "",
+        "passage": "",
+        "question": "After Bali became a Dutch colony in 1906, art became a way for the Balinese people to",
+        "options": {
+          "A": "fight against colonisation.",
+          "B": "trade with Dutch merchants.",
+          "C": "keep the old royal families in power."
+        },
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"fight against colonisation\".\nNghệ thuật trở thành \"a tool accessible to everyone in the fight of the Balinese people against colonisation\".",
+        "audio": {
+          "src": "assets/audio/QHH-Part1.mp3",
+          "qrImage": "",
+          "driveUrl": "",
+          "title": "Listening Part 1 - Art in Bali (DHBB 2018 - Quốc Học Huế)"
+        }
+      },
+      {
+        "id": "t6_q4",
+        "testId": 6,
+        "num": 4,
+        "section": "Phần Nghe 1 (Listening Part 1)",
+        "category": "Listening",
+        "instruction": "Nghe bài giảng về lịch sử nghệ thuật trên đảo Bali và chọn đáp án đúng nhất (sử dụng trình phát âm thanh bên dưới).",
+        "passageTitle": "",
+        "passage": "",
+        "question": "What transformed Balinese art in the 1920s?",
+        "options": {
+          "A": "Local artists returning from Europe",
+          "B": "The arrival of tourism on the island",
+          "C": "The opening of the first art school"
+        },
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"The arrival of tourism on the island\".\n\"in the 1920s... Balinese art underwent another vast transformation with the advent of tourism to the island\" – du khách và họa sĩ nước ngoài mang tới chất liệu, kỹ thuật mới.",
+        "audio": {
+          "src": "assets/audio/QHH-Part1.mp3",
+          "qrImage": "",
+          "driveUrl": "",
+          "title": "Listening Part 1 - Art in Bali (DHBB 2018 - Quốc Học Huế)"
+        }
+      },
+      {
+        "id": "t6_q5",
+        "testId": 6,
+        "num": 5,
+        "section": "Phần Nghe 1 (Listening Part 1)",
+        "category": "Listening",
+        "instruction": "Nghe bài giảng về lịch sử nghệ thuật trên đảo Bali và chọn đáp án đúng nhất (sử dụng trình phát âm thanh bên dưới).",
+        "passageTitle": "",
+        "passage": "",
+        "question": "After independence in 1945, Balinese painters began to focus on",
+        "options": {
+          "A": "the epic stories of Hinduism.",
+          "B": "portraits of national leaders.",
+          "C": "scenes of everyday life."
+        },
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"scenes of everyday life\".\n\"the traditional narrative paintings started to give way to scenes showing the everyday life of the Balinese people – harvests, market scenes and daily tasks\".",
+        "audio": {
+          "src": "assets/audio/QHH-Part1.mp3",
+          "qrImage": "",
+          "driveUrl": "",
+          "title": "Listening Part 1 - Art in Bali (DHBB 2018 - Quốc Học Huế)"
+        }
+      },
+      {
+        "id": "t6_q6",
+        "testId": 6,
+        "num": 6,
+        "section": "Phần Nghe 2 (Listening Part 2)",
+        "category": "Listening",
+        "instruction": "Nghe cuộc thảo luận trên radio về những người bạn tưởng tượng của trẻ em và chọn đáp án phù hợp nhất.",
+        "passageTitle": "",
+        "passage": "",
+        "question": "In the incident that Liz describes,",
+        "options": {
+          "A": "her daughter asked her to stop the car.",
+          "B": "she had to interrupt the journey twice.",
+          "C": "she got angry with her daughter.",
+          "D": "her daughter wanted to get out of the car."
+        },
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"she had to interrupt the journey twice\".\nLiz phải dừng xe để \"đuổi\" Tytner xuống, rồi lại \"turn back and go through the rigmarole of pulling over and opening the door\" để đón cậu bạn tưởng tượng → dừng xe hai lần.",
+        "audio": {
+          "src": "assets/audio/QHH-Part2.mp3",
+          "qrImage": "",
+          "driveUrl": "",
+          "title": "Listening Part 2 - Imaginary Friends (DHBB 2018 - Quốc Học Huế)"
+        }
+      },
+      {
+        "id": "t6_q7",
+        "testId": 6,
+        "num": 7,
+        "section": "Phần Nghe 2 (Listening Part 2)",
+        "category": "Listening",
+        "instruction": "Nghe cuộc thảo luận trên radio về những người bạn tưởng tượng của trẻ em và chọn đáp án phù hợp nhất.",
+        "passageTitle": "",
+        "passage": "",
+        "question": "What does the presenter say about the latest research into imaginary friends?",
+        "options": {
+          "A": "It contradicts other research on the subject.",
+          "B": "It shows that the number of children who have them is increasing.",
+          "C": "It indicates that negative attitudes towards them are wrong.",
+          "D": "It focuses on the effect they have on parents."
+        },
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"It indicates that negative attitudes towards them are wrong\".\nNghiên cứu cho thấy bạn tưởng tượng \"far from being a cause for concern, should be welcomed\" và sẽ \"help reverse misconceptions\" → quan niệm tiêu cực là sai.",
+        "audio": {
+          "src": "assets/audio/QHH-Part2.mp3",
+          "qrImage": "",
+          "driveUrl": "",
+          "title": "Listening Part 2 - Imaginary Friends (DHBB 2018 - Quốc Học Huế)"
+        }
+      },
+      {
+        "id": "t6_q8",
+        "testId": 6,
+        "num": 8,
+        "section": "Phần Nghe 2 (Listening Part 2)",
+        "category": "Listening",
+        "instruction": "Nghe cuộc thảo luận trên radio về những người bạn tưởng tượng của trẻ em và chọn đáp án phù hợp nhất.",
+        "passageTitle": "",
+        "passage": "",
+        "question": "How did Liz feel when her daughter had an imaginary friend?",
+        "options": {
+          "A": "always confident that it was only a temporary situation",
+          "B": "occasionally worried about the friend’s importance to her daughter",
+          "C": "slightly confused as to how she should respond sometimes",
+          "D": "highly impressed by her daughter’s inventiveness"
+        },
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"always confident that it was only a temporary situation\".\nLiz: \"I never fretted about it... I knew she would grow out of it.\"",
+        "audio": {
+          "src": "assets/audio/QHH-Part2.mp3",
+          "qrImage": "",
+          "driveUrl": "",
+          "title": "Listening Part 2 - Imaginary Friends (DHBB 2018 - Quốc Học Huế)"
+        }
+      },
+      {
+        "id": "t6_q9",
+        "testId": 6,
+        "num": 9,
+        "section": "Phần Nghe 2 (Listening Part 2)",
+        "category": "Listening",
+        "instruction": "Nghe cuộc thảo luận trên radio về những người bạn tưởng tượng của trẻ em và chọn đáp án phù hợp nhất.",
+        "passageTitle": "",
+        "passage": "",
+        "question": "Karen says that one reason why children have imaginary friends is that",
+        "options": {
+          "A": "they are having serious problems with their real friends.",
+          "B": "they can tell imaginary friends what to do.",
+          "C": "they want something that they cannot be given.",
+          "D": "they want something that other children haven’t got."
+        },
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"they want something that they cannot be given\".\n\"Sometimes it is about wish fulfilment; children who cannot have a pet, for example, will invent one.\"",
+        "audio": {
+          "src": "assets/audio/QHH-Part2.mp3",
+          "qrImage": "",
+          "driveUrl": "",
+          "title": "Listening Part 2 - Imaginary Friends (DHBB 2018 - Quốc Học Huế)"
+        }
+      },
+      {
+        "id": "t6_q10",
+        "testId": 6,
+        "num": 10,
+        "section": "Phần Nghe 2 (Listening Part 2)",
+        "category": "Listening",
+        "instruction": "Nghe cuộc thảo luận trên radio về những người bạn tưởng tượng của trẻ em và chọn đáp án phù hợp nhất.",
+        "passageTitle": "",
+        "passage": "",
+        "question": "Karen says that the teenager who had invented a superhero is an example of",
+        "options": {
+          "A": "a very untypical teenager.",
+          "B": "a problem that imaginary friends can cause.",
+          "C": "something she had not expected to discover.",
+          "D": "how children change as they get older."
+        },
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"something she had not expected to discover\".\n\"my most surprising finding is that children don’t always stop having these made-up playmates...\" rồi đưa ví dụ cậu thiếu niên với siêu anh hùng.",
+        "audio": {
+          "src": "assets/audio/QHH-Part2.mp3",
+          "qrImage": "",
+          "driveUrl": "",
+          "title": "Listening Part 2 - Imaginary Friends (DHBB 2018 - Quốc Học Huế)"
+        }
+      },
+      {
+        "id": "t6_q11",
+        "testId": 6,
+        "num": 11,
+        "section": "Điền Từ Đoạn Văn (Guided Cloze Test)",
+        "category": "Cloze",
+        "instruction": "Đọc đoạn văn và chọn phương án thích hợp nhất để điền vào mỗi chỗ trống.",
+        "passageTitle": "Đoạn văn điền từ (Guided Cloze) - Đề 6",
+        "passage": "Read the following passage and decide which answer (A, B, C, or D) best fits each gap.\nALL IN THE STARS\nFirst-time visitors to India are likely to be impressed by how profoundly astrology influences almost every (11) _________ of life on the subcontinent. In fact, the belief that the motions of remote heavenly bodies can affect events on Earth is so (12) _________ that several Indian universities offer courses in the subject. It is not, therefore, surprising that many people will (13) _________ an astrologer before they take any important step. For example, Indian marriages are arranged with the aid of an astrologer, who will cast the horoscopes of the bride and groom, and also work out the best date for the wedding to take place. A few years ago in Delhi, thousands of couples rushed to get married on a particularly auspicious day, with the result that priests, brass bands and wedding photographers were in short supply.\nThe role of astrology is not (14) _________ only to the social aspects of Indian life. Few people conduct business without resorting to their astrologer. Major films are only released on auspicious dates. Even affairs of state are not exempt from its influence: when India (15) _________ her independence from Britain in 1947, the (16) _________ of power was carefully timed to take place after a particularly inauspicious period had passed.",
+        "question": "",
+        "options": {
+          "A": "division",
+          "B": "facet",
+          "C": "angle",
+          "D": "sector"
+        },
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"facet\".\n\"every facet of life\" = mọi khía cạnh của cuộc sống.",
+        "audio": null
+      },
+      {
+        "id": "t6_q12",
+        "testId": 6,
+        "num": 12,
+        "section": "Điền Từ Đoạn Văn (Guided Cloze Test)",
+        "category": "Cloze",
+        "instruction": "Đọc đoạn văn và chọn phương án thích hợp nhất để điền vào mỗi chỗ trống.",
+        "passageTitle": "Đoạn văn điền từ (Guided Cloze) - Đề 6",
+        "passage": "Read the following passage and decide which answer (A, B, C, or D) best fits each gap.\nALL IN THE STARS\nFirst-time visitors to India are likely to be impressed by how profoundly astrology influences almost every (11) _________ of life on the subcontinent. In fact, the belief that the motions of remote heavenly bodies can affect events on Earth is so (12) _________ that several Indian universities offer courses in the subject. It is not, therefore, surprising that many people will (13) _________ an astrologer before they take any important step. For example, Indian marriages are arranged with the aid of an astrologer, who will cast the horoscopes of the bride and groom, and also work out the best date for the wedding to take place. A few years ago in Delhi, thousands of couples rushed to get married on a particularly auspicious day, with the result that priests, brass bands and wedding photographers were in short supply.\nThe role of astrology is not (14) _________ only to the social aspects of Indian life. Few people conduct business without resorting to their astrologer. Major films are only released on auspicious dates. Even affairs of state are not exempt from its influence: when India (15) _________ her independence from Britain in 1947, the (16) _________ of power was carefully timed to take place after a particularly inauspicious period had passed.",
+        "question": "",
+        "options": {
+          "A": "widespread",
+          "B": "overwhelming",
+          "C": "intensive",
+          "D": "capacious"
+        },
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"widespread\".\nNiềm tin \"so widespread that...\" – phổ biến rộng rãi đến mức các trường đại học mở khóa học.",
+        "audio": null
+      },
+      {
+        "id": "t6_q13",
+        "testId": 6,
+        "num": 13,
+        "section": "Điền Từ Đoạn Văn (Guided Cloze Test)",
+        "category": "Cloze",
+        "instruction": "Đọc đoạn văn và chọn phương án thích hợp nhất để điền vào mỗi chỗ trống.",
+        "passageTitle": "Đoạn văn điền từ (Guided Cloze) - Đề 6",
+        "passage": "Read the following passage and decide which answer (A, B, C, or D) best fits each gap.\nALL IN THE STARS\nFirst-time visitors to India are likely to be impressed by how profoundly astrology influences almost every (11) _________ of life on the subcontinent. In fact, the belief that the motions of remote heavenly bodies can affect events on Earth is so (12) _________ that several Indian universities offer courses in the subject. It is not, therefore, surprising that many people will (13) _________ an astrologer before they take any important step. For example, Indian marriages are arranged with the aid of an astrologer, who will cast the horoscopes of the bride and groom, and also work out the best date for the wedding to take place. A few years ago in Delhi, thousands of couples rushed to get married on a particularly auspicious day, with the result that priests, brass bands and wedding photographers were in short supply.\nThe role of astrology is not (14) _________ only to the social aspects of Indian life. Few people conduct business without resorting to their astrologer. Major films are only released on auspicious dates. Even affairs of state are not exempt from its influence: when India (15) _________ her independence from Britain in 1947, the (16) _________ of power was carefully timed to take place after a particularly inauspicious period had passed.",
+        "question": "",
+        "options": {
+          "A": "interrogate",
+          "B": "confer",
+          "C": "interview",
+          "D": "consult"
+        },
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"consult\".\n\"consult an astrologer\" = hỏi ý kiến chiêm tinh gia; \"confer\" phải đi với \"with\".",
+        "audio": null
+      },
+      {
+        "id": "t6_q14",
+        "testId": 6,
+        "num": 14,
+        "section": "Điền Từ Đoạn Văn (Guided Cloze Test)",
+        "category": "Cloze",
+        "instruction": "Đọc đoạn văn và chọn phương án thích hợp nhất để điền vào mỗi chỗ trống.",
+        "passageTitle": "Đoạn văn điền từ (Guided Cloze) - Đề 6",
+        "passage": "Read the following passage and decide which answer (A, B, C, or D) best fits each gap.\nALL IN THE STARS\nFirst-time visitors to India are likely to be impressed by how profoundly astrology influences almost every (11) _________ of life on the subcontinent. In fact, the belief that the motions of remote heavenly bodies can affect events on Earth is so (12) _________ that several Indian universities offer courses in the subject. It is not, therefore, surprising that many people will (13) _________ an astrologer before they take any important step. For example, Indian marriages are arranged with the aid of an astrologer, who will cast the horoscopes of the bride and groom, and also work out the best date for the wedding to take place. A few years ago in Delhi, thousands of couples rushed to get married on a particularly auspicious day, with the result that priests, brass bands and wedding photographers were in short supply.\nThe role of astrology is not (14) _________ only to the social aspects of Indian life. Few people conduct business without resorting to their astrologer. Major films are only released on auspicious dates. Even affairs of state are not exempt from its influence: when India (15) _________ her independence from Britain in 1947, the (16) _________ of power was carefully timed to take place after a particularly inauspicious period had passed.",
+        "question": "",
+        "options": {
+          "A": "demarcated",
+          "B": "bound",
+          "C": "confined",
+          "D": "restrained"
+        },
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"confined\".\n\"be confined to\" = chỉ giới hạn trong.",
+        "audio": null
+      },
+      {
+        "id": "t6_q15",
+        "testId": 6,
+        "num": 15,
+        "section": "Điền Từ Đoạn Văn (Guided Cloze Test)",
+        "category": "Cloze",
+        "instruction": "Đọc đoạn văn và chọn phương án thích hợp nhất để điền vào mỗi chỗ trống.",
+        "passageTitle": "Đoạn văn điền từ (Guided Cloze) - Đề 6",
+        "passage": "Read the following passage and decide which answer (A, B, C, or D) best fits each gap.\nALL IN THE STARS\nFirst-time visitors to India are likely to be impressed by how profoundly astrology influences almost every (11) _________ of life on the subcontinent. In fact, the belief that the motions of remote heavenly bodies can affect events on Earth is so (12) _________ that several Indian universities offer courses in the subject. It is not, therefore, surprising that many people will (13) _________ an astrologer before they take any important step. For example, Indian marriages are arranged with the aid of an astrologer, who will cast the horoscopes of the bride and groom, and also work out the best date for the wedding to take place. A few years ago in Delhi, thousands of couples rushed to get married on a particularly auspicious day, with the result that priests, brass bands and wedding photographers were in short supply.\nThe role of astrology is not (14) _________ only to the social aspects of Indian life. Few people conduct business without resorting to their astrologer. Major films are only released on auspicious dates. Even affairs of state are not exempt from its influence: when India (15) _________ her independence from Britain in 1947, the (16) _________ of power was carefully timed to take place after a particularly inauspicious period had passed.",
+        "question": "",
+        "options": {
+          "A": "grabbed",
+          "B": "procured",
+          "C": "gained",
+          "D": "captured"
+        },
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"gained\".\nCụm \"gain independence\" = giành độc lập.",
+        "audio": null
+      },
+      {
+        "id": "t6_q16",
+        "testId": 6,
+        "num": 16,
+        "section": "Điền Từ Đoạn Văn (Guided Cloze Test)",
+        "category": "Cloze",
+        "instruction": "Đọc đoạn văn và chọn phương án thích hợp nhất để điền vào mỗi chỗ trống.",
+        "passageTitle": "Đoạn văn điền từ (Guided Cloze) - Đề 6",
+        "passage": "Read the following passage and decide which answer (A, B, C, or D) best fits each gap.\nALL IN THE STARS\nFirst-time visitors to India are likely to be impressed by how profoundly astrology influences almost every (11) _________ of life on the subcontinent. In fact, the belief that the motions of remote heavenly bodies can affect events on Earth is so (12) _________ that several Indian universities offer courses in the subject. It is not, therefore, surprising that many people will (13) _________ an astrologer before they take any important step. For example, Indian marriages are arranged with the aid of an astrologer, who will cast the horoscopes of the bride and groom, and also work out the best date for the wedding to take place. A few years ago in Delhi, thousands of couples rushed to get married on a particularly auspicious day, with the result that priests, brass bands and wedding photographers were in short supply.\nThe role of astrology is not (14) _________ only to the social aspects of Indian life. Few people conduct business without resorting to their astrologer. Major films are only released on auspicious dates. Even affairs of state are not exempt from its influence: when India (15) _________ her independence from Britain in 1947, the (16) _________ of power was carefully timed to take place after a particularly inauspicious period had passed.",
+        "question": "",
+        "options": {
+          "A": "delivery",
+          "B": "inheritance",
+          "C": "succession",
+          "D": "transfer"
+        },
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"transfer\".\nCụm \"the transfer of power\" = sự chuyển giao quyền lực.",
+        "audio": null
+      },
+      {
+        "id": "t6_q17",
+        "testId": 6,
+        "num": 17,
+        "section": "Điền Từ Đoạn Văn 2 (Cloze Test 2)",
+        "category": "Cloze",
+        "instruction": "Đọc đoạn văn và chọn phương án thích hợp nhất để điền vào mỗi chỗ trống.",
+        "passageTitle": "Đoạn văn điền từ 2 (Cloze Test 2) - Đề 6",
+        "passage": "Read the following passage and decide which answer (A, B, C, or D) best fits each gap.\nA STING IN THE TALE\nA scorpion stung Peter Marks on the back of his right leg, (17) _________ below the knee, then continued up that leg and down the other, he believes, before getting him again in the shin. It wasn’t (18) _________ he was expecting on a flight from Chicago to Vermont. Marks, a 46-year-old builder, was aboard the United Airlines flight on the second leg of his trip home from San Francisco, where he and his wife Helena had been visiting their sons. He awoke (19) _________ a nap shortly before landing and noticed something strange.\n“My leg felt like it was asleep, but that was isolated to one spot, and it felt as (20) _________ it was being jabbed with a sharp piece of plastic or something.” The second sting came after the plane had landed and the Markses were waiting for their bags at the luggage carousel. Peter rolled up his cuff to investigate, and the scorpion fell out.\n“It felt like a shock, a tingly thing. Someone screamed, ‘It’s a scorpion!’” Peter recalled. Another passenger stepped on the 5-centimetre arachnid, and (21) _________ else suggested Marks seek medical help. “The airlines tell you that you can’t bring water on a plane,” Helena Marks said, “but the scorpion did make it aboard.” A United spokesperson said the incident “is something that we will look into. We’re very sorry for what happened. Our customers’ safety and security is our number one priority.”\n(22) _________ incidents are not unheard of. An American Airlines flight was delayed for an hour in Toronto on Sunday after a passenger was stung by a scorpion that had made its way on board. Paramedics treated the man when the flight landed.",
+        "question": "",
+        "options": {
+          "A": "only",
+          "B": "just",
+          "C": "even",
+          "D": "still"
+        },
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"just\".\n\"just below the knee\" = ngay dưới đầu gối.",
+        "audio": null
+      },
+      {
+        "id": "t6_q18",
+        "testId": 6,
+        "num": 18,
+        "section": "Điền Từ Đoạn Văn 2 (Cloze Test 2)",
+        "category": "Cloze",
+        "instruction": "Đọc đoạn văn và chọn phương án thích hợp nhất để điền vào mỗi chỗ trống.",
+        "passageTitle": "Đoạn văn điền từ 2 (Cloze Test 2) - Đề 6",
+        "passage": "Read the following passage and decide which answer (A, B, C, or D) best fits each gap.\nA STING IN THE TALE\nA scorpion stung Peter Marks on the back of his right leg, (17) _________ below the knee, then continued up that leg and down the other, he believes, before getting him again in the shin. It wasn’t (18) _________ he was expecting on a flight from Chicago to Vermont. Marks, a 46-year-old builder, was aboard the United Airlines flight on the second leg of his trip home from San Francisco, where he and his wife Helena had been visiting their sons. He awoke (19) _________ a nap shortly before landing and noticed something strange.\n“My leg felt like it was asleep, but that was isolated to one spot, and it felt as (20) _________ it was being jabbed with a sharp piece of plastic or something.” The second sting came after the plane had landed and the Markses were waiting for their bags at the luggage carousel. Peter rolled up his cuff to investigate, and the scorpion fell out.\n“It felt like a shock, a tingly thing. Someone screamed, ‘It’s a scorpion!’” Peter recalled. Another passenger stepped on the 5-centimetre arachnid, and (21) _________ else suggested Marks seek medical help. “The airlines tell you that you can’t bring water on a plane,” Helena Marks said, “but the scorpion did make it aboard.” A United spokesperson said the incident “is something that we will look into. We’re very sorry for what happened. Our customers’ safety and security is our number one priority.”\n(22) _________ incidents are not unheard of. An American Airlines flight was delayed for an hour in Toronto on Sunday after a passenger was stung by a scorpion that had made its way on board. Paramedics treated the man when the flight landed.",
+        "question": "",
+        "options": {
+          "A": "that",
+          "B": "which",
+          "C": "what",
+          "D": "how"
+        },
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"what\".\n\"It wasn’t what he was expecting\" – mệnh đề danh từ với \"what\" (= the thing that).",
+        "audio": null
+      },
+      {
+        "id": "t6_q19",
+        "testId": 6,
+        "num": 19,
+        "section": "Điền Từ Đoạn Văn 2 (Cloze Test 2)",
+        "category": "Cloze",
+        "instruction": "Đọc đoạn văn và chọn phương án thích hợp nhất để điền vào mỗi chỗ trống.",
+        "passageTitle": "Đoạn văn điền từ 2 (Cloze Test 2) - Đề 6",
+        "passage": "Read the following passage and decide which answer (A, B, C, or D) best fits each gap.\nA STING IN THE TALE\nA scorpion stung Peter Marks on the back of his right leg, (17) _________ below the knee, then continued up that leg and down the other, he believes, before getting him again in the shin. It wasn’t (18) _________ he was expecting on a flight from Chicago to Vermont. Marks, a 46-year-old builder, was aboard the United Airlines flight on the second leg of his trip home from San Francisco, where he and his wife Helena had been visiting their sons. He awoke (19) _________ a nap shortly before landing and noticed something strange.\n“My leg felt like it was asleep, but that was isolated to one spot, and it felt as (20) _________ it was being jabbed with a sharp piece of plastic or something.” The second sting came after the plane had landed and the Markses were waiting for their bags at the luggage carousel. Peter rolled up his cuff to investigate, and the scorpion fell out.\n“It felt like a shock, a tingly thing. Someone screamed, ‘It’s a scorpion!’” Peter recalled. Another passenger stepped on the 5-centimetre arachnid, and (21) _________ else suggested Marks seek medical help. “The airlines tell you that you can’t bring water on a plane,” Helena Marks said, “but the scorpion did make it aboard.” A United spokesperson said the incident “is something that we will look into. We’re very sorry for what happened. Our customers’ safety and security is our number one priority.”\n(22) _________ incidents are not unheard of. An American Airlines flight was delayed for an hour in Toronto on Sunday after a passenger was stung by a scorpion that had made its way on board. Paramedics treated the man when the flight landed.",
+        "question": "",
+        "options": {
+          "A": "from",
+          "B": "off",
+          "C": "out",
+          "D": "of"
+        },
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"from\".\n\"awake from a nap\" = tỉnh dậy sau giấc ngủ ngắn.",
+        "audio": null
+      },
+      {
+        "id": "t6_q20",
+        "testId": 6,
+        "num": 20,
+        "section": "Điền Từ Đoạn Văn 2 (Cloze Test 2)",
+        "category": "Cloze",
+        "instruction": "Đọc đoạn văn và chọn phương án thích hợp nhất để điền vào mỗi chỗ trống.",
+        "passageTitle": "Đoạn văn điền từ 2 (Cloze Test 2) - Đề 6",
+        "passage": "Read the following passage and decide which answer (A, B, C, or D) best fits each gap.\nA STING IN THE TALE\nA scorpion stung Peter Marks on the back of his right leg, (17) _________ below the knee, then continued up that leg and down the other, he believes, before getting him again in the shin. It wasn’t (18) _________ he was expecting on a flight from Chicago to Vermont. Marks, a 46-year-old builder, was aboard the United Airlines flight on the second leg of his trip home from San Francisco, where he and his wife Helena had been visiting their sons. He awoke (19) _________ a nap shortly before landing and noticed something strange.\n“My leg felt like it was asleep, but that was isolated to one spot, and it felt as (20) _________ it was being jabbed with a sharp piece of plastic or something.” The second sting came after the plane had landed and the Markses were waiting for their bags at the luggage carousel. Peter rolled up his cuff to investigate, and the scorpion fell out.\n“It felt like a shock, a tingly thing. Someone screamed, ‘It’s a scorpion!’” Peter recalled. Another passenger stepped on the 5-centimetre arachnid, and (21) _________ else suggested Marks seek medical help. “The airlines tell you that you can’t bring water on a plane,” Helena Marks said, “but the scorpion did make it aboard.” A United spokesperson said the incident “is something that we will look into. We’re very sorry for what happened. Our customers’ safety and security is our number one priority.”\n(22) _________ incidents are not unheard of. An American Airlines flight was delayed for an hour in Toronto on Sunday after a passenger was stung by a scorpion that had made its way on board. Paramedics treated the man when the flight landed.",
+        "question": "",
+        "options": {
+          "A": "when",
+          "B": "so",
+          "C": "well",
+          "D": "if"
+        },
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"if\".\n\"as if + mệnh đề\" = như thể.",
+        "audio": null
+      },
+      {
+        "id": "t6_q21",
+        "testId": 6,
+        "num": 21,
+        "section": "Điền Từ Đoạn Văn 2 (Cloze Test 2)",
+        "category": "Cloze",
+        "instruction": "Đọc đoạn văn và chọn phương án thích hợp nhất để điền vào mỗi chỗ trống.",
+        "passageTitle": "Đoạn văn điền từ 2 (Cloze Test 2) - Đề 6",
+        "passage": "Read the following passage and decide which answer (A, B, C, or D) best fits each gap.\nA STING IN THE TALE\nA scorpion stung Peter Marks on the back of his right leg, (17) _________ below the knee, then continued up that leg and down the other, he believes, before getting him again in the shin. It wasn’t (18) _________ he was expecting on a flight from Chicago to Vermont. Marks, a 46-year-old builder, was aboard the United Airlines flight on the second leg of his trip home from San Francisco, where he and his wife Helena had been visiting their sons. He awoke (19) _________ a nap shortly before landing and noticed something strange.\n“My leg felt like it was asleep, but that was isolated to one spot, and it felt as (20) _________ it was being jabbed with a sharp piece of plastic or something.” The second sting came after the plane had landed and the Markses were waiting for their bags at the luggage carousel. Peter rolled up his cuff to investigate, and the scorpion fell out.\n“It felt like a shock, a tingly thing. Someone screamed, ‘It’s a scorpion!’” Peter recalled. Another passenger stepped on the 5-centimetre arachnid, and (21) _________ else suggested Marks seek medical help. “The airlines tell you that you can’t bring water on a plane,” Helena Marks said, “but the scorpion did make it aboard.” A United spokesperson said the incident “is something that we will look into. We’re very sorry for what happened. Our customers’ safety and security is our number one priority.”\n(22) _________ incidents are not unheard of. An American Airlines flight was delayed for an hour in Toronto on Sunday after a passenger was stung by a scorpion that had made its way on board. Paramedics treated the man when the flight landed.",
+        "question": "",
+        "options": {
+          "A": "anyone",
+          "B": "nobody",
+          "C": "someone",
+          "D": "one"
+        },
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"someone\".\n\"someone else suggested...\" – một người khác (câu khẳng định); \"anyone else\" dùng trong câu phủ định/nghi vấn.",
+        "audio": null
+      },
+      {
+        "id": "t6_q22",
+        "testId": 6,
+        "num": 22,
+        "section": "Điền Từ Đoạn Văn 2 (Cloze Test 2)",
+        "category": "Cloze",
+        "instruction": "Đọc đoạn văn và chọn phương án thích hợp nhất để điền vào mỗi chỗ trống.",
+        "passageTitle": "Đoạn văn điền từ 2 (Cloze Test 2) - Đề 6",
+        "passage": "Read the following passage and decide which answer (A, B, C, or D) best fits each gap.\nA STING IN THE TALE\nA scorpion stung Peter Marks on the back of his right leg, (17) _________ below the knee, then continued up that leg and down the other, he believes, before getting him again in the shin. It wasn’t (18) _________ he was expecting on a flight from Chicago to Vermont. Marks, a 46-year-old builder, was aboard the United Airlines flight on the second leg of his trip home from San Francisco, where he and his wife Helena had been visiting their sons. He awoke (19) _________ a nap shortly before landing and noticed something strange.\n“My leg felt like it was asleep, but that was isolated to one spot, and it felt as (20) _________ it was being jabbed with a sharp piece of plastic or something.” The second sting came after the plane had landed and the Markses were waiting for their bags at the luggage carousel. Peter rolled up his cuff to investigate, and the scorpion fell out.\n“It felt like a shock, a tingly thing. Someone screamed, ‘It’s a scorpion!’” Peter recalled. Another passenger stepped on the 5-centimetre arachnid, and (21) _________ else suggested Marks seek medical help. “The airlines tell you that you can’t bring water on a plane,” Helena Marks said, “but the scorpion did make it aboard.” A United spokesperson said the incident “is something that we will look into. We’re very sorry for what happened. Our customers’ safety and security is our number one priority.”\n(22) _________ incidents are not unheard of. An American Airlines flight was delayed for an hour in Toronto on Sunday after a passenger was stung by a scorpion that had made its way on board. Paramedics treated the man when the flight landed.",
+        "question": "",
+        "options": {
+          "A": "So",
+          "B": "Such",
+          "C": "Much",
+          "D": "Same"
+        },
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"Such\".\n\"Such incidents are not unheard of\" = những sự việc như thế không phải là hiếm.",
+        "audio": null
+      },
+      {
+        "id": "t6_q23",
+        "testId": 6,
+        "num": 23,
+        "section": "Sắp Xếp Trật Tự Câu & Lời Thoại (Sentence Arrangement)",
+        "category": "Arrangement",
+        "instruction": "Chọn phương án sắp xếp các câu/lời thoại thành đoạn văn hoặc hội thoại logic.",
+        "passageTitle": "",
+        "passage": "",
+        "question": "a. Really? I’ve never been there. Is it worth a visit?\nb. Guess what? I spent the whole weekend at the new art museum downtown.\nc. Absolutely. The exhibition of Balinese paintings alone is worth the ticket.\nd. Then why don’t we go together next Saturday, if you don’t mind going again?\ne. Not at all – I’d love to see it a second time.",
+        "options": {
+          "A": "b – c – a – e – d",
+          "B": "a – b – d – c – e",
+          "C": "b – a – c – d – e",
+          "D": "b – d – a – c – e"
+        },
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"b – a – c – d – e\".\nb (khoe đã đi bảo tàng) → a (hỏi có đáng đi không) → c (khẳng định, nêu lý do) → d (rủ đi cùng) → e (đồng ý).",
+        "audio": null
+      },
+      {
+        "id": "t6_q24",
+        "testId": 6,
+        "num": 24,
+        "section": "Sắp Xếp Trật Tự Câu & Lời Thoại (Sentence Arrangement)",
+        "category": "Arrangement",
+        "instruction": "Chọn phương án sắp xếp các câu/lời thoại thành đoạn văn hoặc hội thoại logic.",
+        "passageTitle": "",
+        "passage": "",
+        "question": "Dear Mr Lake,\na. I am writing to ask about the opening hours of the reading room during the renovation.\nb. However, I read in yesterday’s newspaper that the building will be partly closed from next month.\nc. As a regular reader, I usually spend three afternoons a week there working on my history project.\nd. I would therefore be grateful if you could tell me which areas will still be accessible.\ne. Thank you in advance for your help.\nYours sincerely,\nAnna Price",
+        "options": {
+          "A": "a – c – b – d – e",
+          "B": "c – a – d – b – e",
+          "C": "a – b – c – d – e",
+          "D": "c – b – a – e – d"
+        },
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"a – c – b – d – e\".\na (mục đích thư) → c (bối cảnh: hay đến phòng đọc – \"there\" chỉ phòng đọc ở câu a) → b (\"However\", tin đóng cửa) → d (\"therefore\", lời đề nghị) → e (cảm ơn).",
+        "audio": null
+      },
+      {
+        "id": "t6_q25",
+        "testId": 6,
+        "num": 25,
+        "section": "Sắp Xếp Trật Tự Câu & Lời Thoại (Sentence Arrangement)",
+        "category": "Arrangement",
+        "instruction": "Chọn phương án sắp xếp các câu/lời thoại thành đoạn văn hoặc hội thoại logic.",
+        "passageTitle": "",
+        "passage": "",
+        "question": "a. For example, a child who cannot have a pet may invent an imaginary pony that follows her everywhere.\nb. Many parents worry when their child talks to a friend that nobody else can see.\nc. In fact, psychologists say that imaginary friends are a normal and healthy part of growing up.\nd. Children create them for many reasons, one of which is wish fulfilment.\ne. Therefore, instead of feeling anxious, parents should simply play along.",
+        "options": {
+          "A": "c – b – a – d – e",
+          "B": "b – d – c – a – e",
+          "C": "b – a – d – c – e",
+          "D": "b – c – d – a – e"
+        },
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"b – c – d – a – e\".\nb (nỗi lo của cha mẹ) → c (\"In fact\", ý kiến chuyên gia) → d (lý do: wish fulfilment) → a (\"For example\", ví dụ cho wish fulfilment) → e (\"Therefore\", lời khuyên).",
+        "audio": null
+      },
+      {
+        "id": "t6_q26",
+        "testId": 6,
+        "num": 26,
+        "section": "Sắp Xếp Trật Tự Câu & Lời Thoại (Sentence Arrangement)",
+        "category": "Arrangement",
+        "instruction": "Chọn phương án sắp xếp các câu/lời thoại thành đoạn văn hoặc hội thoại logic.",
+        "passageTitle": "",
+        "passage": "",
+        "question": "a. Over the past few decades, he has led expeditions across some of the most remote areas on Earth.\nb. Technically, however, many of these expeditions could be described as failures.\nc. Ranulph Fiennes is one of the most famous explorers of our time.\nd. For him, coming home safely matters more than breaking a record.\ne. Nevertheless, thanks to careful planning, nobody has ever died on one of his journeys.",
+        "options": {
+          "A": "c – b – a – e – d",
+          "B": "c – a – b – e – d",
+          "C": "a – c – e – b – d",
+          "D": "c – a – e – b – d"
+        },
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"c – a – b – e – d\".\nc (giới thiệu nhà thám hiểm) → a (các chuyến đi) → b (\"however\", nhiều chuyến thất bại) → e (\"Nevertheless\", không ai thiệt mạng) → d (kết: an toàn quan trọng hơn kỷ lục).",
+        "audio": null
+      },
+      {
+        "id": "t6_q27",
+        "testId": 6,
+        "num": 27,
+        "section": "Sắp Xếp Trật Tự Câu & Lời Thoại (Sentence Arrangement)",
+        "category": "Arrangement",
+        "instruction": "Chọn phương án sắp xếp các câu/lời thoại thành đoạn văn hoặc hội thoại logic.",
+        "passageTitle": "",
+        "passage": "",
+        "question": "a. Such vocabulary allows them to communicate quickly and precisely with colleagues.\nb. However, almost every profession depends on it.\nc. Problems only arise when experts use it with people outside their field.\nd. Most people think of jargon as confusing language that should be avoided.\ne. In such cases, jargon becomes a barrier rather than a tool.\nf. Doctors, lawyers and computer programmers, for example, all have their own special vocabulary.",
+        "options": {
+          "A": "d – f – b – a – c – e",
+          "B": "d – b – a – f – e – c",
+          "C": "d – b – f – a – c – e",
+          "D": "b – d – f – a – e – c"
+        },
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"d – b – f – a – c – e\".\nd (quan niệm phổ biến) → b (\"However\", nghề nào cũng cần) → f (ví dụ các nghề) → a (\"Such vocabulary\", lợi ích) → c (vấn đề nảy sinh khi...) → e (\"In such cases\", hệ quả).",
+        "audio": null
+      },
+      {
+        "id": "t6_q28",
+        "testId": 6,
+        "num": 28,
+        "section": "Điền Khuyết Mệnh Đề (Text Completion)",
+        "category": "Completion",
+        "instruction": "Đọc đoạn văn và chọn mệnh đề/cụm từ đúng nhất để hoàn chỉnh văn bản.",
+        "passageTitle": "Đoạn văn điền khuyết (Text Completion) - Đề 6",
+        "passage": "Read the following passage and mark the letter A, B, C, or D to indicate the option that best fits each of the numbered blanks.\nTHE NEW BRITISH LIBRARY\n(28) _________, the new British Library was supposed to open in 1990. However, the project has been delayed by political infighting, poor planning and financial problems. The most recent setback came in June when inspectors discovered that 60 miles of new metal shelving (29) _________. That would postpone the opening of the project’s first phase for another two years. “Things have gone from bad to worse,” said Brian Lake, secretary of the Regular Readers, (30) _________. “It is a grand national project that has become a great scandal.”\nIt sounded like a splendid idea (31) _________. Sophisticated electronic equipment would help keep the library’s irreplaceable stock at an optimal temperature and humidity. A computer-controlled delivery system would provide books to readers within minutes of a request rather than days. And to serve other needs of the reading public, the library would also include exhibition galleries, a restaurant and a conference hall.\nThat was the plan, anyway. The start of construction was delayed until 1982 by arguments about planning and by a change of government. Four years later, members of the cabinet ordered a progress report and discovered that the committee (32) _________ hadn’t met in four years.",
+        "question": "",
+        "options": {
+          "A": "It was originally commissioned 14 years ago",
+          "B": "Having originally commissioned 14 years ago",
+          "C": "Originally commissioned 14 years ago",
+          "D": "To be originally commissioned 14 years ago"
+        },
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"Originally commissioned 14 years ago\".\nMệnh đề phân từ bị động rút gọn \"Originally commissioned 14 years ago, the new British Library...\" (thư viện được đặt hàng xây dựng). A tạo lỗi nối câu bằng dấu phẩy; B sai thể (chủ động).",
+        "audio": null
+      },
+      {
+        "id": "t6_q29",
+        "testId": 6,
+        "num": 29,
+        "section": "Điền Khuyết Mệnh Đề (Text Completion)",
+        "category": "Completion",
+        "instruction": "Đọc đoạn văn và chọn mệnh đề/cụm từ đúng nhất để hoàn chỉnh văn bản.",
+        "passageTitle": "Đoạn văn điền khuyết (Text Completion) - Đề 6",
+        "passage": "Read the following passage and mark the letter A, B, C, or D to indicate the option that best fits each of the numbered blanks.\nTHE NEW BRITISH LIBRARY\n(28) _________, the new British Library was supposed to open in 1990. However, the project has been delayed by political infighting, poor planning and financial problems. The most recent setback came in June when inspectors discovered that 60 miles of new metal shelving (29) _________. That would postpone the opening of the project’s first phase for another two years. “Things have gone from bad to worse,” said Brian Lake, secretary of the Regular Readers, (30) _________. “It is a grand national project that has become a great scandal.”\nIt sounded like a splendid idea (31) _________. Sophisticated electronic equipment would help keep the library’s irreplaceable stock at an optimal temperature and humidity. A computer-controlled delivery system would provide books to readers within minutes of a request rather than days. And to serve other needs of the reading public, the library would also include exhibition galleries, a restaurant and a conference hall.\nThat was the plan, anyway. The start of construction was delayed until 1982 by arguments about planning and by a change of government. Four years later, members of the cabinet ordered a progress report and discovered that the committee (32) _________ hadn’t met in four years.",
+        "question": "",
+        "options": {
+          "A": "had started to rust and needed to be replaced",
+          "B": "had started to rust and needed to replace",
+          "C": "having started to rust and needing to replace",
+          "D": "had started rusting and needed replacing them"
+        },
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"had started to rust and needed to be replaced\".\nKệ sắt phải \"được thay\" → động từ nguyên mẫu bị động \"needed to be replaced\". C thiếu động từ chính; D thừa tân ngữ \"them\".",
+        "audio": null
+      },
+      {
+        "id": "t6_q30",
+        "testId": 6,
+        "num": 30,
+        "section": "Điền Khuyết Mệnh Đề (Text Completion)",
+        "category": "Completion",
+        "instruction": "Đọc đoạn văn và chọn mệnh đề/cụm từ đúng nhất để hoàn chỉnh văn bản.",
+        "passageTitle": "Đoạn văn điền khuyết (Text Completion) - Đề 6",
+        "passage": "Read the following passage and mark the letter A, B, C, or D to indicate the option that best fits each of the numbered blanks.\nTHE NEW BRITISH LIBRARY\n(28) _________, the new British Library was supposed to open in 1990. However, the project has been delayed by political infighting, poor planning and financial problems. The most recent setback came in June when inspectors discovered that 60 miles of new metal shelving (29) _________. That would postpone the opening of the project’s first phase for another two years. “Things have gone from bad to worse,” said Brian Lake, secretary of the Regular Readers, (30) _________. “It is a grand national project that has become a great scandal.”\nIt sounded like a splendid idea (31) _________. Sophisticated electronic equipment would help keep the library’s irreplaceable stock at an optimal temperature and humidity. A computer-controlled delivery system would provide books to readers within minutes of a request rather than days. And to serve other needs of the reading public, the library would also include exhibition galleries, a restaurant and a conference hall.\nThat was the plan, anyway. The start of construction was delayed until 1982 by arguments about planning and by a change of government. Four years later, members of the cabinet ordered a progress report and discovered that the committee (32) _________ hadn’t met in four years.",
+        "question": "",
+        "options": {
+          "A": "which association of writers and scholars are not happy with plans for the new library",
+          "B": "an association of writers and scholars are not happy with plans for the new library",
+          "C": "associating writers and scholars who are not happy with plans for the new library",
+          "D": "an association of writers and scholars who are not happy with plans for the new library"
+        },
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"an association of writers and scholars who are not happy with plans for the new library\".\nCụm đồng vị ngữ giải thích \"the Regular Readers\": \"an association of writers and scholars who are not happy with plans for the new library\".",
+        "audio": null
+      },
+      {
+        "id": "t6_q31",
+        "testId": 6,
+        "num": 31,
+        "section": "Điền Khuyết Mệnh Đề (Text Completion)",
+        "category": "Completion",
+        "instruction": "Đọc đoạn văn và chọn mệnh đề/cụm từ đúng nhất để hoàn chỉnh văn bản.",
+        "passageTitle": "Đoạn văn điền khuyết (Text Completion) - Đề 6",
+        "passage": "Read the following passage and mark the letter A, B, C, or D to indicate the option that best fits each of the numbered blanks.\nTHE NEW BRITISH LIBRARY\n(28) _________, the new British Library was supposed to open in 1990. However, the project has been delayed by political infighting, poor planning and financial problems. The most recent setback came in June when inspectors discovered that 60 miles of new metal shelving (29) _________. That would postpone the opening of the project’s first phase for another two years. “Things have gone from bad to worse,” said Brian Lake, secretary of the Regular Readers, (30) _________. “It is a grand national project that has become a great scandal.”\nIt sounded like a splendid idea (31) _________. Sophisticated electronic equipment would help keep the library’s irreplaceable stock at an optimal temperature and humidity. A computer-controlled delivery system would provide books to readers within minutes of a request rather than days. And to serve other needs of the reading public, the library would also include exhibition galleries, a restaurant and a conference hall.\nThat was the plan, anyway. The start of construction was delayed until 1982 by arguments about planning and by a change of government. Four years later, members of the cabinet ordered a progress report and discovered that the committee (32) _________ hadn’t met in four years.",
+        "question": "",
+        "options": {
+          "A": "which the government unveiled its 164-million project in 1978",
+          "B": "when the government unveiled its 164-million project in 1978",
+          "C": "the government unveiling its 164-million project in 1978",
+          "D": "that the government had unveiled it its 164-million project in 1978"
+        },
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"when the government unveiled its 164-million project in 1978\".\nMệnh đề thời gian \"when the government unveiled its 164-million project in 1978\". A sai vì \"which\" không thể làm trạng ngữ khi mệnh đề đã có đủ tân ngữ \"its project\".",
+        "audio": null
+      },
+      {
+        "id": "t6_q32",
+        "testId": 6,
+        "num": 32,
+        "section": "Điền Khuyết Mệnh Đề (Text Completion)",
+        "category": "Completion",
+        "instruction": "Đọc đoạn văn và chọn mệnh đề/cụm từ đúng nhất để hoàn chỉnh văn bản.",
+        "passageTitle": "Đoạn văn điền khuyết (Text Completion) - Đề 6",
+        "passage": "Read the following passage and mark the letter A, B, C, or D to indicate the option that best fits each of the numbered blanks.\nTHE NEW BRITISH LIBRARY\n(28) _________, the new British Library was supposed to open in 1990. However, the project has been delayed by political infighting, poor planning and financial problems. The most recent setback came in June when inspectors discovered that 60 miles of new metal shelving (29) _________. That would postpone the opening of the project’s first phase for another two years. “Things have gone from bad to worse,” said Brian Lake, secretary of the Regular Readers, (30) _________. “It is a grand national project that has become a great scandal.”\nIt sounded like a splendid idea (31) _________. Sophisticated electronic equipment would help keep the library’s irreplaceable stock at an optimal temperature and humidity. A computer-controlled delivery system would provide books to readers within minutes of a request rather than days. And to serve other needs of the reading public, the library would also include exhibition galleries, a restaurant and a conference hall.\nThat was the plan, anyway. The start of construction was delayed until 1982 by arguments about planning and by a change of government. Four years later, members of the cabinet ordered a progress report and discovered that the committee (32) _________ hadn’t met in four years.",
+        "question": "",
+        "options": {
+          "A": "responsible for supervising the project",
+          "B": "was responsible for supervising the project",
+          "C": "responsible for supervision the project",
+          "D": "who responsible for supervising the project"
+        },
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"responsible for supervising the project\".\nTính từ rút gọn mệnh đề quan hệ: \"the committee (which was) responsible for supervising the project hadn’t met...\". Sau giới từ \"for\" dùng V-ing (supervising).",
+        "audio": null
+      },
+      {
+        "id": "t6_q33",
+        "testId": 6,
+        "num": 33,
+        "section": "Đọc Hiểu 1 (Reading Comprehension 1)",
+        "category": "Reading",
+        "instruction": "Đọc đoạn văn chuyên sâu bên trái và trả lời các câu hỏi đọc hiểu tương ứng.",
+        "passageTitle": "Bài Đọc Hiểu 1 (Reading Passage 1) - Đề 6",
+        "passage": "Read the following passage and choose the best option A, B, C, or D to answer each of the following questions.\nThe medieval artists didn’t know about perspective; they didn’t want to make their people look like real, individual people in a real, individual scene. They wanted to show the truth, the eternal quality of their religious stories. So these artists didn’t need to know about perspective.\nIn the European Renaissance period, artists wanted to show the importance of the individual person and his or her possessions and surroundings. A flat medieval style couldn’t show this level of reality and the artists needed a new technique. It was the Italian artist Brunelleschi who discovered the technique of perspective drawing. At first the artists of the Renaissance only had single-point perspective. Later they realized that they could have two-point perspective and still later multi-point perspective.\nWith two-point perspective they could turn an object like a building at an angle to the picture and draw two sides of it. The technique of perspective which seems so natural to us now is an invented technique, a part of the “grammar of painting”. Like all bits of grammar there are exceptions about perspective. For example, only vertical and horizontal surfaces seem to meet on eye level. Sloping roof tops don’t meet on eye level.\nFor 500 years, artists in Europe made use of perspective drawing in their pictures. Nevertheless, there are a range of priorities that artists take in displaying individual styles. Crivelli wanted to show depth in his picture and he used a simple single-point perspective. Cezanne always talked about space and volume. Van Gogh, like some of the other painters of the Impressionist period, was interested in Japanese prints. And Japanese artists until this century were always very strong designers of “flat” pictures. Picasso certainly made pictures which have volume and depth. However, he wanted to keep our eyes on the surface and to remind us that his paintings are paintings and not illusions.\nIt is technically easy to give an illusion of depth. However, a strong two-dimensional design is just as important as a feeling of depth, and perhaps more important.",
+        "question": "The passage mainly discusses",
+        "options": {
+          "A": "the difference between medieval and Renaissance art.",
+          "B": "how the technique of perspective influenced modern art.",
+          "C": "the discovery of the technique of perspective.",
+          "D": "the contribution of Renaissance artists."
+        },
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"how the technique of perspective influenced modern art\".\nBài theo dõi kỹ thuật phối cảnh từ khi ra đời đến cách các họa sĩ sau này (Cezanne, Van Gogh, Picasso) sử dụng hoặc rời xa nó; A, C, D chỉ là từng phần nhỏ của bài.",
+        "audio": null
+      },
+      {
+        "id": "t6_q34",
+        "testId": 6,
+        "num": 34,
+        "section": "Đọc Hiểu 1 (Reading Comprehension 1)",
+        "category": "Reading",
+        "instruction": "Đọc đoạn văn chuyên sâu bên trái và trả lời các câu hỏi đọc hiểu tương ứng.",
+        "passageTitle": "Bài Đọc Hiểu 1 (Reading Passage 1) - Đề 6",
+        "passage": "Read the following passage and choose the best option A, B, C, or D to answer each of the following questions.\nThe medieval artists didn’t know about perspective; they didn’t want to make their people look like real, individual people in a real, individual scene. They wanted to show the truth, the eternal quality of their religious stories. So these artists didn’t need to know about perspective.\nIn the European Renaissance period, artists wanted to show the importance of the individual person and his or her possessions and surroundings. A flat medieval style couldn’t show this level of reality and the artists needed a new technique. It was the Italian artist Brunelleschi who discovered the technique of perspective drawing. At first the artists of the Renaissance only had single-point perspective. Later they realized that they could have two-point perspective and still later multi-point perspective.\nWith two-point perspective they could turn an object like a building at an angle to the picture and draw two sides of it. The technique of perspective which seems so natural to us now is an invented technique, a part of the “grammar of painting”. Like all bits of grammar there are exceptions about perspective. For example, only vertical and horizontal surfaces seem to meet on eye level. Sloping roof tops don’t meet on eye level.\nFor 500 years, artists in Europe made use of perspective drawing in their pictures. Nevertheless, there are a range of priorities that artists take in displaying individual styles. Crivelli wanted to show depth in his picture and he used a simple single-point perspective. Cezanne always talked about space and volume. Van Gogh, like some of the other painters of the Impressionist period, was interested in Japanese prints. And Japanese artists until this century were always very strong designers of “flat” pictures. Picasso certainly made pictures which have volume and depth. However, he wanted to keep our eyes on the surface and to remind us that his paintings are paintings and not illusions.\nIt is technically easy to give an illusion of depth. However, a strong two-dimensional design is just as important as a feeling of depth, and perhaps more important.",
+        "question": "The word “eternal” in paragraph 1 is closest in meaning to",
+        "options": {
+          "A": "timeless",
+          "B": "infinite",
+          "C": "frequent",
+          "D": "constant"
+        },
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"timeless\".\n\"the eternal quality of their religious stories\" – giá trị vượt thời gian (timeless).",
+        "audio": null
+      },
+      {
+        "id": "t6_q35",
+        "testId": 6,
+        "num": 35,
+        "section": "Đọc Hiểu 1 (Reading Comprehension 1)",
+        "category": "Reading",
+        "instruction": "Đọc đoạn văn chuyên sâu bên trái và trả lời các câu hỏi đọc hiểu tương ứng.",
+        "passageTitle": "Bài Đọc Hiểu 1 (Reading Passage 1) - Đề 6",
+        "passage": "Read the following passage and choose the best option A, B, C, or D to answer each of the following questions.\nThe medieval artists didn’t know about perspective; they didn’t want to make their people look like real, individual people in a real, individual scene. They wanted to show the truth, the eternal quality of their religious stories. So these artists didn’t need to know about perspective.\nIn the European Renaissance period, artists wanted to show the importance of the individual person and his or her possessions and surroundings. A flat medieval style couldn’t show this level of reality and the artists needed a new technique. It was the Italian artist Brunelleschi who discovered the technique of perspective drawing. At first the artists of the Renaissance only had single-point perspective. Later they realized that they could have two-point perspective and still later multi-point perspective.\nWith two-point perspective they could turn an object like a building at an angle to the picture and draw two sides of it. The technique of perspective which seems so natural to us now is an invented technique, a part of the “grammar of painting”. Like all bits of grammar there are exceptions about perspective. For example, only vertical and horizontal surfaces seem to meet on eye level. Sloping roof tops don’t meet on eye level.\nFor 500 years, artists in Europe made use of perspective drawing in their pictures. Nevertheless, there are a range of priorities that artists take in displaying individual styles. Crivelli wanted to show depth in his picture and he used a simple single-point perspective. Cezanne always talked about space and volume. Van Gogh, like some of the other painters of the Impressionist period, was interested in Japanese prints. And Japanese artists until this century were always very strong designers of “flat” pictures. Picasso certainly made pictures which have volume and depth. However, he wanted to keep our eyes on the surface and to remind us that his paintings are paintings and not illusions.\nIt is technically easy to give an illusion of depth. However, a strong two-dimensional design is just as important as a feeling of depth, and perhaps more important.",
+        "question": "According to the passage, what was the main concern for medieval artists?",
+        "options": {
+          "A": "The individual person and his or her possessions and surroundings",
+          "B": "Real people in real scenes",
+          "C": "The eternal, timeless truth of the earth",
+          "D": "The themes of religious stories"
+        },
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"The themes of religious stories\".\n\"They wanted to show the truth, the eternal quality of their religious stories.\" A là mối quan tâm của họa sĩ Phục Hưng; B bị phủ định trong câu đầu.",
+        "audio": null
+      },
+      {
+        "id": "t6_q36",
+        "testId": 6,
+        "num": 36,
+        "section": "Đọc Hiểu 1 (Reading Comprehension 1)",
+        "category": "Reading",
+        "instruction": "Đọc đoạn văn chuyên sâu bên trái và trả lời các câu hỏi đọc hiểu tương ứng.",
+        "passageTitle": "Bài Đọc Hiểu 1 (Reading Passage 1) - Đề 6",
+        "passage": "Read the following passage and choose the best option A, B, C, or D to answer each of the following questions.\nThe medieval artists didn’t know about perspective; they didn’t want to make their people look like real, individual people in a real, individual scene. They wanted to show the truth, the eternal quality of their religious stories. So these artists didn’t need to know about perspective.\nIn the European Renaissance period, artists wanted to show the importance of the individual person and his or her possessions and surroundings. A flat medieval style couldn’t show this level of reality and the artists needed a new technique. It was the Italian artist Brunelleschi who discovered the technique of perspective drawing. At first the artists of the Renaissance only had single-point perspective. Later they realized that they could have two-point perspective and still later multi-point perspective.\nWith two-point perspective they could turn an object like a building at an angle to the picture and draw two sides of it. The technique of perspective which seems so natural to us now is an invented technique, a part of the “grammar of painting”. Like all bits of grammar there are exceptions about perspective. For example, only vertical and horizontal surfaces seem to meet on eye level. Sloping roof tops don’t meet on eye level.\nFor 500 years, artists in Europe made use of perspective drawing in their pictures. Nevertheless, there are a range of priorities that artists take in displaying individual styles. Crivelli wanted to show depth in his picture and he used a simple single-point perspective. Cezanne always talked about space and volume. Van Gogh, like some of the other painters of the Impressionist period, was interested in Japanese prints. And Japanese artists until this century were always very strong designers of “flat” pictures. Picasso certainly made pictures which have volume and depth. However, he wanted to keep our eyes on the surface and to remind us that his paintings are paintings and not illusions.\nIt is technically easy to give an illusion of depth. However, a strong two-dimensional design is just as important as a feeling of depth, and perhaps more important.",
+        "question": "The word “it” in “draw two sides of it” (paragraph 3) refers to",
+        "options": {
+          "A": "the picture",
+          "B": "perspective",
+          "C": "angle",
+          "D": "the object"
+        },
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"the object\".\n\"turn an object like a building at an angle to the picture and draw two sides of it\" – vẽ hai mặt của vật thể.",
+        "audio": null
+      },
+      {
+        "id": "t6_q37",
+        "testId": 6,
+        "num": 37,
+        "section": "Đọc Hiểu 1 (Reading Comprehension 1)",
+        "category": "Reading",
+        "instruction": "Đọc đoạn văn chuyên sâu bên trái và trả lời các câu hỏi đọc hiểu tương ứng.",
+        "passageTitle": "Bài Đọc Hiểu 1 (Reading Passage 1) - Đề 6",
+        "passage": "Read the following passage and choose the best option A, B, C, or D to answer each of the following questions.\nThe medieval artists didn’t know about perspective; they didn’t want to make their people look like real, individual people in a real, individual scene. They wanted to show the truth, the eternal quality of their religious stories. So these artists didn’t need to know about perspective.\nIn the European Renaissance period, artists wanted to show the importance of the individual person and his or her possessions and surroundings. A flat medieval style couldn’t show this level of reality and the artists needed a new technique. It was the Italian artist Brunelleschi who discovered the technique of perspective drawing. At first the artists of the Renaissance only had single-point perspective. Later they realized that they could have two-point perspective and still later multi-point perspective.\nWith two-point perspective they could turn an object like a building at an angle to the picture and draw two sides of it. The technique of perspective which seems so natural to us now is an invented technique, a part of the “grammar of painting”. Like all bits of grammar there are exceptions about perspective. For example, only vertical and horizontal surfaces seem to meet on eye level. Sloping roof tops don’t meet on eye level.\nFor 500 years, artists in Europe made use of perspective drawing in their pictures. Nevertheless, there are a range of priorities that artists take in displaying individual styles. Crivelli wanted to show depth in his picture and he used a simple single-point perspective. Cezanne always talked about space and volume. Van Gogh, like some of the other painters of the Impressionist period, was interested in Japanese prints. And Japanese artists until this century were always very strong designers of “flat” pictures. Picasso certainly made pictures which have volume and depth. However, he wanted to keep our eyes on the surface and to remind us that his paintings are paintings and not illusions.\nIt is technically easy to give an illusion of depth. However, a strong two-dimensional design is just as important as a feeling of depth, and perhaps more important.",
+        "question": "The word “grammar” in paragraph 3 is closest in meaning to",
+        "options": {
+          "A": "construction",
+          "B": "grammatical rules",
+          "C": "rules and regulations",
+          "D": "tones and volume"
+        },
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"rules and regulations\".\n\"the grammar of painting\" dùng theo nghĩa bóng: hệ thống quy tắc của hội họa (rules and regulations), không phải quy tắc ngữ pháp thật.",
+        "audio": null
+      },
+      {
+        "id": "t6_q38",
+        "testId": 6,
+        "num": 38,
+        "section": "Đọc Hiểu 1 (Reading Comprehension 1)",
+        "category": "Reading",
+        "instruction": "Đọc đoạn văn chuyên sâu bên trái và trả lời các câu hỏi đọc hiểu tương ứng.",
+        "passageTitle": "Bài Đọc Hiểu 1 (Reading Passage 1) - Đề 6",
+        "passage": "Read the following passage and choose the best option A, B, C, or D to answer each of the following questions.\nThe medieval artists didn’t know about perspective; they didn’t want to make their people look like real, individual people in a real, individual scene. They wanted to show the truth, the eternal quality of their religious stories. So these artists didn’t need to know about perspective.\nIn the European Renaissance period, artists wanted to show the importance of the individual person and his or her possessions and surroundings. A flat medieval style couldn’t show this level of reality and the artists needed a new technique. It was the Italian artist Brunelleschi who discovered the technique of perspective drawing. At first the artists of the Renaissance only had single-point perspective. Later they realized that they could have two-point perspective and still later multi-point perspective.\nWith two-point perspective they could turn an object like a building at an angle to the picture and draw two sides of it. The technique of perspective which seems so natural to us now is an invented technique, a part of the “grammar of painting”. Like all bits of grammar there are exceptions about perspective. For example, only vertical and horizontal surfaces seem to meet on eye level. Sloping roof tops don’t meet on eye level.\nFor 500 years, artists in Europe made use of perspective drawing in their pictures. Nevertheless, there are a range of priorities that artists take in displaying individual styles. Crivelli wanted to show depth in his picture and he used a simple single-point perspective. Cezanne always talked about space and volume. Van Gogh, like some of the other painters of the Impressionist period, was interested in Japanese prints. And Japanese artists until this century were always very strong designers of “flat” pictures. Picasso certainly made pictures which have volume and depth. However, he wanted to keep our eyes on the surface and to remind us that his paintings are paintings and not illusions.\nIt is technically easy to give an illusion of depth. However, a strong two-dimensional design is just as important as a feeling of depth, and perhaps more important.",
+        "question": "The author gives the example in the last two sentences of paragraph 3 in order to",
+        "options": {
+          "A": "explain how perspective works in painting.",
+          "B": "support two-point perspective.",
+          "C": "illustrate that there are exceptions about perspective.",
+          "D": "point out that the technique of perspective, though it seems so natural, is an invented technique."
+        },
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"illustrate that there are exceptions about perspective\".\nCâu trước: \"Like all bits of grammar there are exceptions about perspective. For example...\" → ví dụ minh họa cho các ngoại lệ.",
+        "audio": null
+      },
+      {
+        "id": "t6_q39",
+        "testId": 6,
+        "num": 39,
+        "section": "Đọc Hiểu 1 (Reading Comprehension 1)",
+        "category": "Reading",
+        "instruction": "Đọc đoạn văn chuyên sâu bên trái và trả lời các câu hỏi đọc hiểu tương ứng.",
+        "passageTitle": "Bài Đọc Hiểu 1 (Reading Passage 1) - Đề 6",
+        "passage": "Read the following passage and choose the best option A, B, C, or D to answer each of the following questions.\nThe medieval artists didn’t know about perspective; they didn’t want to make their people look like real, individual people in a real, individual scene. They wanted to show the truth, the eternal quality of their religious stories. So these artists didn’t need to know about perspective.\nIn the European Renaissance period, artists wanted to show the importance of the individual person and his or her possessions and surroundings. A flat medieval style couldn’t show this level of reality and the artists needed a new technique. It was the Italian artist Brunelleschi who discovered the technique of perspective drawing. At first the artists of the Renaissance only had single-point perspective. Later they realized that they could have two-point perspective and still later multi-point perspective.\nWith two-point perspective they could turn an object like a building at an angle to the picture and draw two sides of it. The technique of perspective which seems so natural to us now is an invented technique, a part of the “grammar of painting”. Like all bits of grammar there are exceptions about perspective. For example, only vertical and horizontal surfaces seem to meet on eye level. Sloping roof tops don’t meet on eye level.\nFor 500 years, artists in Europe made use of perspective drawing in their pictures. Nevertheless, there are a range of priorities that artists take in displaying individual styles. Crivelli wanted to show depth in his picture and he used a simple single-point perspective. Cezanne always talked about space and volume. Van Gogh, like some of the other painters of the Impressionist period, was interested in Japanese prints. And Japanese artists until this century were always very strong designers of “flat” pictures. Picasso certainly made pictures which have volume and depth. However, he wanted to keep our eyes on the surface and to remind us that his paintings are paintings and not illusions.\nIt is technically easy to give an illusion of depth. However, a strong two-dimensional design is just as important as a feeling of depth, and perhaps more important.",
+        "question": "The word “illusion” in the last paragraph is closest in meaning to",
+        "options": {
+          "A": "deception",
+          "B": "photograph",
+          "C": "decoration",
+          "D": "illustration"
+        },
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"deception\".\n\"an illusion of depth\" = ảo giác về chiều sâu, đánh lừa thị giác (deception).",
+        "audio": null
+      },
+      {
+        "id": "t6_q40",
+        "testId": 6,
+        "num": 40,
+        "section": "Đọc Hiểu 1 (Reading Comprehension 1)",
+        "category": "Reading",
+        "instruction": "Đọc đoạn văn chuyên sâu bên trái và trả lời các câu hỏi đọc hiểu tương ứng.",
+        "passageTitle": "Bài Đọc Hiểu 1 (Reading Passage 1) - Đề 6",
+        "passage": "Read the following passage and choose the best option A, B, C, or D to answer each of the following questions.\nThe medieval artists didn’t know about perspective; they didn’t want to make their people look like real, individual people in a real, individual scene. They wanted to show the truth, the eternal quality of their religious stories. So these artists didn’t need to know about perspective.\nIn the European Renaissance period, artists wanted to show the importance of the individual person and his or her possessions and surroundings. A flat medieval style couldn’t show this level of reality and the artists needed a new technique. It was the Italian artist Brunelleschi who discovered the technique of perspective drawing. At first the artists of the Renaissance only had single-point perspective. Later they realized that they could have two-point perspective and still later multi-point perspective.\nWith two-point perspective they could turn an object like a building at an angle to the picture and draw two sides of it. The technique of perspective which seems so natural to us now is an invented technique, a part of the “grammar of painting”. Like all bits of grammar there are exceptions about perspective. For example, only vertical and horizontal surfaces seem to meet on eye level. Sloping roof tops don’t meet on eye level.\nFor 500 years, artists in Europe made use of perspective drawing in their pictures. Nevertheless, there are a range of priorities that artists take in displaying individual styles. Crivelli wanted to show depth in his picture and he used a simple single-point perspective. Cezanne always talked about space and volume. Van Gogh, like some of the other painters of the Impressionist period, was interested in Japanese prints. And Japanese artists until this century were always very strong designers of “flat” pictures. Picasso certainly made pictures which have volume and depth. However, he wanted to keep our eyes on the surface and to remind us that his paintings are paintings and not illusions.\nIt is technically easy to give an illusion of depth. However, a strong two-dimensional design is just as important as a feeling of depth, and perhaps more important.",
+        "question": "It can be inferred from the passage that Renaissance artists",
+        "options": {
+          "A": "embraced the medieval style of eternal truth.",
+          "B": "needed to develop a new approach towards painting to show a new level of reality.",
+          "C": "were inspired by vertical and horizontal surfaces in inventing the technique of perspective.",
+          "D": "saw two-dimensional design as more important than a feeling of depth."
+        },
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"needed to develop a new approach towards painting to show a new level of reality\".\n\"A flat medieval style couldn’t show this level of reality and the artists needed a new technique.\"",
+        "audio": null
+      },
+      {
+        "id": "t6_q41",
+        "testId": 6,
+        "num": 41,
+        "section": "Đọc Hiểu 2 (Reading Comprehension 2 - Nâng Cao)",
+        "category": "Reading",
+        "instruction": "Đọc bài văn học thuật bên trái và trả lời các câu hỏi phân tích, suy luận, từ vựng và tóm tắt.",
+        "passageTitle": "Bài Đọc Hiểu 2 (Reading Passage 2 - Nâng Cao) - Đề 6",
+        "passage": "Read the following passage and mark the letter A, B, C or D to indicate the best answer to each of the following questions.\nJARGON\nA. Jargon is a loaded word. One dictionary defines it, neatly and neutrally, as ‘the technical vocabulary or idiom of a special activity or group’, but this sense is almost completely overshadowed by another: ‘obscure and often pretentious language marked by a roundabout way of expression and use of long words’. For most people, it is this second sense which is at the front of their minds when they think about jargon. Jargon is said to be a bad use of language, something to be avoided at all costs. No one ever describes it in positive terms (‘that was a delightful piece of rousing jargon’). Nor does one usually admit to using it oneself: the myth is that jargon is something only other people employ.\nB. The reality, however, is that everyone uses jargon. It is an essential part of the network of occupations and pursuits that make up society. All jobs present an element of jargon, which workers learn as they develop their expertise. All hobbies require mastery of a jargon. Each social grouping has its jargon. The phenomenon turns out to be universal – and valuable. It is the jargon element which, in a job, can promote economy and precision of expression, and thus help make life easier for the workers. It is also the chief linguistic element which shows professional awareness (‘know-how’) and social togetherness (‘shop-talk’).\nC. When we have learned to command it, jargon is something we readily take pleasure in, whether the subject area is motorcycles, knitting, cricket, baseball or computers. It can add pace, variety and humour to speech – as when, with an important event approaching, we might slip into NASA-speak, and talk about countdown, all systems go, and lift-off. We enjoy the mutual showing-off which stems from a fluent use of terminology, and we enjoy the in-jokes which shared linguistic experience permits. Moreover, we are jealous of this knowledge. We are quick to demean anyone who tries to be part of our group without being prepared to take on its jargon.\nD. If jargon is so essential a part of our lives, why then has it had such a bad press? The most important reason stems from the way jargon can exclude as well as include. We may not be too concerned if we find ourselves faced with an impenetrable wall of jargon when the subject matter has little perceived relevance to our everyday lives, as in the case of hydrology, say, or linguistics. But when the subject matter is one where we feel implicated, and think we have a right to know, and the speaker uses words which make it hard for us to understand, then we start to complain; and if we suspect that the obfuscation is deliberate policy, we unreservedly condemn, labelling it gobbledegook and calling down public derision upon it.\nE. No area is exempt, but the fields of advertising, politics and defence have been especially criticised in recent years by the various campaigns for Plain English. In these domains, the extent to which people are prepared to use jargon to hide realities is a ready source of amusement, disbelief and horror. A lie is a lie, which can be only temporarily hidden by calling it an ‘inoperative statement’ or ‘an instance of plausible deniability’. Nor can a nuclear plant explosion be suppressed for long behind such phrases as ‘energetic disassembly’, ‘abnormal evolution’ or ‘plant transient’.\nF. While condemning unnecessary or obscuring jargon in others, we should not forget to look out for it in ourselves. It is so easy to ‘slip into’ jargon, without realizing that our own listeners or readers do not understand. It is also temptingly easy to slip some jargon into our expression, to ensure that others do not understand. And it is just as easy to begin using jargon which we ourselves do not understand. The motivation to do such apparently perverse things is not difficult to grasp. People like to be ‘in’, to be part of an intellectual or technical elite; and the use of jargon, whether understood or not, is a badge of membership. Jargon, also, can provide a lazy way into a group or an easy way of hiding uncertainties and inadequacies: when terminology slips plausibly from the tongue, it is not essential for the brain to keep up. Indeed some people have developed this skill to professional levels. And certainly, faced with a telling or awkward question, and the need to say something acceptable in public, slipping into jargon becomes a simple way out, and can soon become a bad habit.",
+        "question": "Which is the most suitable heading for paragraph B?",
+        "options": {
+          "A": "The benefits of simple language",
+          "B": "Differing interpretations",
+          "C": "A necessary tool",
+          "D": "Publicising new words"
+        },
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"A necessary tool\".\nĐoạn B: \"everyone uses jargon. It is an essential part of...\" và nó giúp công việc chính xác, hiệu quả → công cụ cần thiết.",
+        "audio": null
+      },
+      {
+        "id": "t6_q42",
+        "testId": 6,
+        "num": 42,
+        "section": "Đọc Hiểu 2 (Reading Comprehension 2 - Nâng Cao)",
+        "category": "Reading",
+        "instruction": "Đọc bài văn học thuật bên trái và trả lời các câu hỏi phân tích, suy luận, từ vựng và tóm tắt.",
+        "passageTitle": "Bài Đọc Hiểu 2 (Reading Passage 2 - Nâng Cao) - Đề 6",
+        "passage": "Read the following passage and mark the letter A, B, C or D to indicate the best answer to each of the following questions.\nJARGON\nA. Jargon is a loaded word. One dictionary defines it, neatly and neutrally, as ‘the technical vocabulary or idiom of a special activity or group’, but this sense is almost completely overshadowed by another: ‘obscure and often pretentious language marked by a roundabout way of expression and use of long words’. For most people, it is this second sense which is at the front of their minds when they think about jargon. Jargon is said to be a bad use of language, something to be avoided at all costs. No one ever describes it in positive terms (‘that was a delightful piece of rousing jargon’). Nor does one usually admit to using it oneself: the myth is that jargon is something only other people employ.\nB. The reality, however, is that everyone uses jargon. It is an essential part of the network of occupations and pursuits that make up society. All jobs present an element of jargon, which workers learn as they develop their expertise. All hobbies require mastery of a jargon. Each social grouping has its jargon. The phenomenon turns out to be universal – and valuable. It is the jargon element which, in a job, can promote economy and precision of expression, and thus help make life easier for the workers. It is also the chief linguistic element which shows professional awareness (‘know-how’) and social togetherness (‘shop-talk’).\nC. When we have learned to command it, jargon is something we readily take pleasure in, whether the subject area is motorcycles, knitting, cricket, baseball or computers. It can add pace, variety and humour to speech – as when, with an important event approaching, we might slip into NASA-speak, and talk about countdown, all systems go, and lift-off. We enjoy the mutual showing-off which stems from a fluent use of terminology, and we enjoy the in-jokes which shared linguistic experience permits. Moreover, we are jealous of this knowledge. We are quick to demean anyone who tries to be part of our group without being prepared to take on its jargon.\nD. If jargon is so essential a part of our lives, why then has it had such a bad press? The most important reason stems from the way jargon can exclude as well as include. We may not be too concerned if we find ourselves faced with an impenetrable wall of jargon when the subject matter has little perceived relevance to our everyday lives, as in the case of hydrology, say, or linguistics. But when the subject matter is one where we feel implicated, and think we have a right to know, and the speaker uses words which make it hard for us to understand, then we start to complain; and if we suspect that the obfuscation is deliberate policy, we unreservedly condemn, labelling it gobbledegook and calling down public derision upon it.\nE. No area is exempt, but the fields of advertising, politics and defence have been especially criticised in recent years by the various campaigns for Plain English. In these domains, the extent to which people are prepared to use jargon to hide realities is a ready source of amusement, disbelief and horror. A lie is a lie, which can be only temporarily hidden by calling it an ‘inoperative statement’ or ‘an instance of plausible deniability’. Nor can a nuclear plant explosion be suppressed for long behind such phrases as ‘energetic disassembly’, ‘abnormal evolution’ or ‘plant transient’.\nF. While condemning unnecessary or obscuring jargon in others, we should not forget to look out for it in ourselves. It is so easy to ‘slip into’ jargon, without realizing that our own listeners or readers do not understand. It is also temptingly easy to slip some jargon into our expression, to ensure that others do not understand. And it is just as easy to begin using jargon which we ourselves do not understand. The motivation to do such apparently perverse things is not difficult to grasp. People like to be ‘in’, to be part of an intellectual or technical elite; and the use of jargon, whether understood or not, is a badge of membership. Jargon, also, can provide a lazy way into a group or an easy way of hiding uncertainties and inadequacies: when terminology slips plausibly from the tongue, it is not essential for the brain to keep up. Indeed some people have developed this skill to professional levels. And certainly, faced with a telling or awkward question, and the need to say something acceptable in public, slipping into jargon becomes a simple way out, and can soon become a bad habit.",
+        "question": "Which is the most suitable heading for paragraph C?",
+        "options": {
+          "A": "Playing with words",
+          "B": "A lasting way of concealing disasters",
+          "C": "The worst offenders",
+          "D": "Feeling shut out"
+        },
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"Playing with words\".\nĐoạn C nói về niềm vui khi dùng biệt ngữ: thêm \"pace, variety and humour\", \"in-jokes\", \"mutual showing-off\" → chơi đùa với từ ngữ.",
+        "audio": null
+      },
+      {
+        "id": "t6_q43",
+        "testId": 6,
+        "num": 43,
+        "section": "Đọc Hiểu 2 (Reading Comprehension 2 - Nâng Cao)",
+        "category": "Reading",
+        "instruction": "Đọc bài văn học thuật bên trái và trả lời các câu hỏi phân tích, suy luận, từ vựng và tóm tắt.",
+        "passageTitle": "Bài Đọc Hiểu 2 (Reading Passage 2 - Nâng Cao) - Đề 6",
+        "passage": "Read the following passage and mark the letter A, B, C or D to indicate the best answer to each of the following questions.\nJARGON\nA. Jargon is a loaded word. One dictionary defines it, neatly and neutrally, as ‘the technical vocabulary or idiom of a special activity or group’, but this sense is almost completely overshadowed by another: ‘obscure and often pretentious language marked by a roundabout way of expression and use of long words’. For most people, it is this second sense which is at the front of their minds when they think about jargon. Jargon is said to be a bad use of language, something to be avoided at all costs. No one ever describes it in positive terms (‘that was a delightful piece of rousing jargon’). Nor does one usually admit to using it oneself: the myth is that jargon is something only other people employ.\nB. The reality, however, is that everyone uses jargon. It is an essential part of the network of occupations and pursuits that make up society. All jobs present an element of jargon, which workers learn as they develop their expertise. All hobbies require mastery of a jargon. Each social grouping has its jargon. The phenomenon turns out to be universal – and valuable. It is the jargon element which, in a job, can promote economy and precision of expression, and thus help make life easier for the workers. It is also the chief linguistic element which shows professional awareness (‘know-how’) and social togetherness (‘shop-talk’).\nC. When we have learned to command it, jargon is something we readily take pleasure in, whether the subject area is motorcycles, knitting, cricket, baseball or computers. It can add pace, variety and humour to speech – as when, with an important event approaching, we might slip into NASA-speak, and talk about countdown, all systems go, and lift-off. We enjoy the mutual showing-off which stems from a fluent use of terminology, and we enjoy the in-jokes which shared linguistic experience permits. Moreover, we are jealous of this knowledge. We are quick to demean anyone who tries to be part of our group without being prepared to take on its jargon.\nD. If jargon is so essential a part of our lives, why then has it had such a bad press? The most important reason stems from the way jargon can exclude as well as include. We may not be too concerned if we find ourselves faced with an impenetrable wall of jargon when the subject matter has little perceived relevance to our everyday lives, as in the case of hydrology, say, or linguistics. But when the subject matter is one where we feel implicated, and think we have a right to know, and the speaker uses words which make it hard for us to understand, then we start to complain; and if we suspect that the obfuscation is deliberate policy, we unreservedly condemn, labelling it gobbledegook and calling down public derision upon it.\nE. No area is exempt, but the fields of advertising, politics and defence have been especially criticised in recent years by the various campaigns for Plain English. In these domains, the extent to which people are prepared to use jargon to hide realities is a ready source of amusement, disbelief and horror. A lie is a lie, which can be only temporarily hidden by calling it an ‘inoperative statement’ or ‘an instance of plausible deniability’. Nor can a nuclear plant explosion be suppressed for long behind such phrases as ‘energetic disassembly’, ‘abnormal evolution’ or ‘plant transient’.\nF. While condemning unnecessary or obscuring jargon in others, we should not forget to look out for it in ourselves. It is so easy to ‘slip into’ jargon, without realizing that our own listeners or readers do not understand. It is also temptingly easy to slip some jargon into our expression, to ensure that others do not understand. And it is just as easy to begin using jargon which we ourselves do not understand. The motivation to do such apparently perverse things is not difficult to grasp. People like to be ‘in’, to be part of an intellectual or technical elite; and the use of jargon, whether understood or not, is a badge of membership. Jargon, also, can provide a lazy way into a group or an easy way of hiding uncertainties and inadequacies: when terminology slips plausibly from the tongue, it is not essential for the brain to keep up. Indeed some people have developed this skill to professional levels. And certainly, faced with a telling or awkward question, and the need to say something acceptable in public, slipping into jargon becomes a simple way out, and can soon become a bad habit.",
+        "question": "Which is the most suitable heading for paragraph D?",
+        "options": {
+          "A": "A deceptively attractive option",
+          "B": "The benefits of simple language",
+          "C": "Playing with words",
+          "D": "Feeling shut out"
+        },
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"Feeling shut out\".\nĐoạn D: \"jargon can exclude as well as include... an impenetrable wall of jargon\" → cảm giác bị gạt ra ngoài.",
+        "audio": null
+      },
+      {
+        "id": "t6_q44",
+        "testId": 6,
+        "num": 44,
+        "section": "Đọc Hiểu 2 (Reading Comprehension 2 - Nâng Cao)",
+        "category": "Reading",
+        "instruction": "Đọc bài văn học thuật bên trái và trả lời các câu hỏi phân tích, suy luận, từ vựng và tóm tắt.",
+        "passageTitle": "Bài Đọc Hiểu 2 (Reading Passage 2 - Nâng Cao) - Đề 6",
+        "passage": "Read the following passage and mark the letter A, B, C or D to indicate the best answer to each of the following questions.\nJARGON\nA. Jargon is a loaded word. One dictionary defines it, neatly and neutrally, as ‘the technical vocabulary or idiom of a special activity or group’, but this sense is almost completely overshadowed by another: ‘obscure and often pretentious language marked by a roundabout way of expression and use of long words’. For most people, it is this second sense which is at the front of their minds when they think about jargon. Jargon is said to be a bad use of language, something to be avoided at all costs. No one ever describes it in positive terms (‘that was a delightful piece of rousing jargon’). Nor does one usually admit to using it oneself: the myth is that jargon is something only other people employ.\nB. The reality, however, is that everyone uses jargon. It is an essential part of the network of occupations and pursuits that make up society. All jobs present an element of jargon, which workers learn as they develop their expertise. All hobbies require mastery of a jargon. Each social grouping has its jargon. The phenomenon turns out to be universal – and valuable. It is the jargon element which, in a job, can promote economy and precision of expression, and thus help make life easier for the workers. It is also the chief linguistic element which shows professional awareness (‘know-how’) and social togetherness (‘shop-talk’).\nC. When we have learned to command it, jargon is something we readily take pleasure in, whether the subject area is motorcycles, knitting, cricket, baseball or computers. It can add pace, variety and humour to speech – as when, with an important event approaching, we might slip into NASA-speak, and talk about countdown, all systems go, and lift-off. We enjoy the mutual showing-off which stems from a fluent use of terminology, and we enjoy the in-jokes which shared linguistic experience permits. Moreover, we are jealous of this knowledge. We are quick to demean anyone who tries to be part of our group without being prepared to take on its jargon.\nD. If jargon is so essential a part of our lives, why then has it had such a bad press? The most important reason stems from the way jargon can exclude as well as include. We may not be too concerned if we find ourselves faced with an impenetrable wall of jargon when the subject matter has little perceived relevance to our everyday lives, as in the case of hydrology, say, or linguistics. But when the subject matter is one where we feel implicated, and think we have a right to know, and the speaker uses words which make it hard for us to understand, then we start to complain; and if we suspect that the obfuscation is deliberate policy, we unreservedly condemn, labelling it gobbledegook and calling down public derision upon it.\nE. No area is exempt, but the fields of advertising, politics and defence have been especially criticised in recent years by the various campaigns for Plain English. In these domains, the extent to which people are prepared to use jargon to hide realities is a ready source of amusement, disbelief and horror. A lie is a lie, which can be only temporarily hidden by calling it an ‘inoperative statement’ or ‘an instance of plausible deniability’. Nor can a nuclear plant explosion be suppressed for long behind such phrases as ‘energetic disassembly’, ‘abnormal evolution’ or ‘plant transient’.\nF. While condemning unnecessary or obscuring jargon in others, we should not forget to look out for it in ourselves. It is so easy to ‘slip into’ jargon, without realizing that our own listeners or readers do not understand. It is also temptingly easy to slip some jargon into our expression, to ensure that others do not understand. And it is just as easy to begin using jargon which we ourselves do not understand. The motivation to do such apparently perverse things is not difficult to grasp. People like to be ‘in’, to be part of an intellectual or technical elite; and the use of jargon, whether understood or not, is a badge of membership. Jargon, also, can provide a lazy way into a group or an easy way of hiding uncertainties and inadequacies: when terminology slips plausibly from the tongue, it is not essential for the brain to keep up. Indeed some people have developed this skill to professional levels. And certainly, faced with a telling or awkward question, and the need to say something acceptable in public, slipping into jargon becomes a simple way out, and can soon become a bad habit.",
+        "question": "Which is the most suitable heading for paragraph E?",
+        "options": {
+          "A": "A lasting way of concealing disasters",
+          "B": "The worst offenders",
+          "C": "A necessary tool",
+          "D": "Publicising new words"
+        },
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"The worst offenders\".\nĐoạn E: quảng cáo, chính trị, quốc phòng \"have been especially criticised\" → những lĩnh vực vi phạm nặng nhất. A sai vì bài nói biệt ngữ chỉ che giấu được \"temporarily\".",
+        "audio": null
+      },
+      {
+        "id": "t6_q45",
+        "testId": 6,
+        "num": 45,
+        "section": "Đọc Hiểu 2 (Reading Comprehension 2 - Nâng Cao)",
+        "category": "Reading",
+        "instruction": "Đọc bài văn học thuật bên trái và trả lời các câu hỏi phân tích, suy luận, từ vựng và tóm tắt.",
+        "passageTitle": "Bài Đọc Hiểu 2 (Reading Passage 2 - Nâng Cao) - Đề 6",
+        "passage": "Read the following passage and mark the letter A, B, C or D to indicate the best answer to each of the following questions.\nJARGON\nA. Jargon is a loaded word. One dictionary defines it, neatly and neutrally, as ‘the technical vocabulary or idiom of a special activity or group’, but this sense is almost completely overshadowed by another: ‘obscure and often pretentious language marked by a roundabout way of expression and use of long words’. For most people, it is this second sense which is at the front of their minds when they think about jargon. Jargon is said to be a bad use of language, something to be avoided at all costs. No one ever describes it in positive terms (‘that was a delightful piece of rousing jargon’). Nor does one usually admit to using it oneself: the myth is that jargon is something only other people employ.\nB. The reality, however, is that everyone uses jargon. It is an essential part of the network of occupations and pursuits that make up society. All jobs present an element of jargon, which workers learn as they develop their expertise. All hobbies require mastery of a jargon. Each social grouping has its jargon. The phenomenon turns out to be universal – and valuable. It is the jargon element which, in a job, can promote economy and precision of expression, and thus help make life easier for the workers. It is also the chief linguistic element which shows professional awareness (‘know-how’) and social togetherness (‘shop-talk’).\nC. When we have learned to command it, jargon is something we readily take pleasure in, whether the subject area is motorcycles, knitting, cricket, baseball or computers. It can add pace, variety and humour to speech – as when, with an important event approaching, we might slip into NASA-speak, and talk about countdown, all systems go, and lift-off. We enjoy the mutual showing-off which stems from a fluent use of terminology, and we enjoy the in-jokes which shared linguistic experience permits. Moreover, we are jealous of this knowledge. We are quick to demean anyone who tries to be part of our group without being prepared to take on its jargon.\nD. If jargon is so essential a part of our lives, why then has it had such a bad press? The most important reason stems from the way jargon can exclude as well as include. We may not be too concerned if we find ourselves faced with an impenetrable wall of jargon when the subject matter has little perceived relevance to our everyday lives, as in the case of hydrology, say, or linguistics. But when the subject matter is one where we feel implicated, and think we have a right to know, and the speaker uses words which make it hard for us to understand, then we start to complain; and if we suspect that the obfuscation is deliberate policy, we unreservedly condemn, labelling it gobbledegook and calling down public derision upon it.\nE. No area is exempt, but the fields of advertising, politics and defence have been especially criticised in recent years by the various campaigns for Plain English. In these domains, the extent to which people are prepared to use jargon to hide realities is a ready source of amusement, disbelief and horror. A lie is a lie, which can be only temporarily hidden by calling it an ‘inoperative statement’ or ‘an instance of plausible deniability’. Nor can a nuclear plant explosion be suppressed for long behind such phrases as ‘energetic disassembly’, ‘abnormal evolution’ or ‘plant transient’.\nF. While condemning unnecessary or obscuring jargon in others, we should not forget to look out for it in ourselves. It is so easy to ‘slip into’ jargon, without realizing that our own listeners or readers do not understand. It is also temptingly easy to slip some jargon into our expression, to ensure that others do not understand. And it is just as easy to begin using jargon which we ourselves do not understand. The motivation to do such apparently perverse things is not difficult to grasp. People like to be ‘in’, to be part of an intellectual or technical elite; and the use of jargon, whether understood or not, is a badge of membership. Jargon, also, can provide a lazy way into a group or an easy way of hiding uncertainties and inadequacies: when terminology slips plausibly from the tongue, it is not essential for the brain to keep up. Indeed some people have developed this skill to professional levels. And certainly, faced with a telling or awkward question, and the need to say something acceptable in public, slipping into jargon becomes a simple way out, and can soon become a bad habit.",
+        "question": "Which is the most suitable heading for paragraph F?",
+        "options": {
+          "A": "Feeling shut out",
+          "B": "Differing interpretations",
+          "C": "The benefits of simple language",
+          "D": "A deceptively attractive option"
+        },
+        "answer": "D",
+        "explanation": "Đáp án đúng là D: \"A deceptively attractive option\".\nĐoạn F: \"It is so easy to slip into jargon\", \"temptingly easy\", nhưng dễ thành \"a bad habit\" → lựa chọn hấp dẫn một cách đánh lừa.",
+        "audio": null
+      },
+      {
+        "id": "t6_q46",
+        "testId": 6,
+        "num": 46,
+        "section": "Đọc Hiểu 2 (Reading Comprehension 2 - Nâng Cao)",
+        "category": "Reading",
+        "instruction": "Đọc bài văn học thuật bên trái và trả lời các câu hỏi phân tích, suy luận, từ vựng và tóm tắt.",
+        "passageTitle": "Bài Đọc Hiểu 2 (Reading Passage 2 - Nâng Cao) - Đề 6",
+        "passage": "Read the following passage and mark the letter A, B, C or D to indicate the best answer to each of the following questions.\nJARGON\nA. Jargon is a loaded word. One dictionary defines it, neatly and neutrally, as ‘the technical vocabulary or idiom of a special activity or group’, but this sense is almost completely overshadowed by another: ‘obscure and often pretentious language marked by a roundabout way of expression and use of long words’. For most people, it is this second sense which is at the front of their minds when they think about jargon. Jargon is said to be a bad use of language, something to be avoided at all costs. No one ever describes it in positive terms (‘that was a delightful piece of rousing jargon’). Nor does one usually admit to using it oneself: the myth is that jargon is something only other people employ.\nB. The reality, however, is that everyone uses jargon. It is an essential part of the network of occupations and pursuits that make up society. All jobs present an element of jargon, which workers learn as they develop their expertise. All hobbies require mastery of a jargon. Each social grouping has its jargon. The phenomenon turns out to be universal – and valuable. It is the jargon element which, in a job, can promote economy and precision of expression, and thus help make life easier for the workers. It is also the chief linguistic element which shows professional awareness (‘know-how’) and social togetherness (‘shop-talk’).\nC. When we have learned to command it, jargon is something we readily take pleasure in, whether the subject area is motorcycles, knitting, cricket, baseball or computers. It can add pace, variety and humour to speech – as when, with an important event approaching, we might slip into NASA-speak, and talk about countdown, all systems go, and lift-off. We enjoy the mutual showing-off which stems from a fluent use of terminology, and we enjoy the in-jokes which shared linguistic experience permits. Moreover, we are jealous of this knowledge. We are quick to demean anyone who tries to be part of our group without being prepared to take on its jargon.\nD. If jargon is so essential a part of our lives, why then has it had such a bad press? The most important reason stems from the way jargon can exclude as well as include. We may not be too concerned if we find ourselves faced with an impenetrable wall of jargon when the subject matter has little perceived relevance to our everyday lives, as in the case of hydrology, say, or linguistics. But when the subject matter is one where we feel implicated, and think we have a right to know, and the speaker uses words which make it hard for us to understand, then we start to complain; and if we suspect that the obfuscation is deliberate policy, we unreservedly condemn, labelling it gobbledegook and calling down public derision upon it.\nE. No area is exempt, but the fields of advertising, politics and defence have been especially criticised in recent years by the various campaigns for Plain English. In these domains, the extent to which people are prepared to use jargon to hide realities is a ready source of amusement, disbelief and horror. A lie is a lie, which can be only temporarily hidden by calling it an ‘inoperative statement’ or ‘an instance of plausible deniability’. Nor can a nuclear plant explosion be suppressed for long behind such phrases as ‘energetic disassembly’, ‘abnormal evolution’ or ‘plant transient’.\nF. While condemning unnecessary or obscuring jargon in others, we should not forget to look out for it in ourselves. It is so easy to ‘slip into’ jargon, without realizing that our own listeners or readers do not understand. It is also temptingly easy to slip some jargon into our expression, to ensure that others do not understand. And it is just as easy to begin using jargon which we ourselves do not understand. The motivation to do such apparently perverse things is not difficult to grasp. People like to be ‘in’, to be part of an intellectual or technical elite; and the use of jargon, whether understood or not, is a badge of membership. Jargon, also, can provide a lazy way into a group or an easy way of hiding uncertainties and inadequacies: when terminology slips plausibly from the tongue, it is not essential for the brain to keep up. Indeed some people have developed this skill to professional levels. And certainly, faced with a telling or awkward question, and the need to say something acceptable in public, slipping into jargon becomes a simple way out, and can soon become a bad habit.",
+        "question": "According to the passage, using shared jargon when talking about a hobby can add an element of ______ to the conversation.",
+        "options": {
+          "A": "judgement",
+          "B": "humour",
+          "C": "contempt",
+          "D": "know-how"
+        },
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"humour\".\nĐoạn C: jargon \"can add pace, variety and humour to speech\".",
+        "audio": null
+      },
+      {
+        "id": "t6_q47",
+        "testId": 6,
+        "num": 47,
+        "section": "Đọc Hiểu 2 (Reading Comprehension 2 - Nâng Cao)",
+        "category": "Reading",
+        "instruction": "Đọc bài văn học thuật bên trái và trả lời các câu hỏi phân tích, suy luận, từ vựng và tóm tắt.",
+        "passageTitle": "Bài Đọc Hiểu 2 (Reading Passage 2 - Nâng Cao) - Đề 6",
+        "passage": "Read the following passage and mark the letter A, B, C or D to indicate the best answer to each of the following questions.\nJARGON\nA. Jargon is a loaded word. One dictionary defines it, neatly and neutrally, as ‘the technical vocabulary or idiom of a special activity or group’, but this sense is almost completely overshadowed by another: ‘obscure and often pretentious language marked by a roundabout way of expression and use of long words’. For most people, it is this second sense which is at the front of their minds when they think about jargon. Jargon is said to be a bad use of language, something to be avoided at all costs. No one ever describes it in positive terms (‘that was a delightful piece of rousing jargon’). Nor does one usually admit to using it oneself: the myth is that jargon is something only other people employ.\nB. The reality, however, is that everyone uses jargon. It is an essential part of the network of occupations and pursuits that make up society. All jobs present an element of jargon, which workers learn as they develop their expertise. All hobbies require mastery of a jargon. Each social grouping has its jargon. The phenomenon turns out to be universal – and valuable. It is the jargon element which, in a job, can promote economy and precision of expression, and thus help make life easier for the workers. It is also the chief linguistic element which shows professional awareness (‘know-how’) and social togetherness (‘shop-talk’).\nC. When we have learned to command it, jargon is something we readily take pleasure in, whether the subject area is motorcycles, knitting, cricket, baseball or computers. It can add pace, variety and humour to speech – as when, with an important event approaching, we might slip into NASA-speak, and talk about countdown, all systems go, and lift-off. We enjoy the mutual showing-off which stems from a fluent use of terminology, and we enjoy the in-jokes which shared linguistic experience permits. Moreover, we are jealous of this knowledge. We are quick to demean anyone who tries to be part of our group without being prepared to take on its jargon.\nD. If jargon is so essential a part of our lives, why then has it had such a bad press? The most important reason stems from the way jargon can exclude as well as include. We may not be too concerned if we find ourselves faced with an impenetrable wall of jargon when the subject matter has little perceived relevance to our everyday lives, as in the case of hydrology, say, or linguistics. But when the subject matter is one where we feel implicated, and think we have a right to know, and the speaker uses words which make it hard for us to understand, then we start to complain; and if we suspect that the obfuscation is deliberate policy, we unreservedly condemn, labelling it gobbledegook and calling down public derision upon it.\nE. No area is exempt, but the fields of advertising, politics and defence have been especially criticised in recent years by the various campaigns for Plain English. In these domains, the extent to which people are prepared to use jargon to hide realities is a ready source of amusement, disbelief and horror. A lie is a lie, which can be only temporarily hidden by calling it an ‘inoperative statement’ or ‘an instance of plausible deniability’. Nor can a nuclear plant explosion be suppressed for long behind such phrases as ‘energetic disassembly’, ‘abnormal evolution’ or ‘plant transient’.\nF. While condemning unnecessary or obscuring jargon in others, we should not forget to look out for it in ourselves. It is so easy to ‘slip into’ jargon, without realizing that our own listeners or readers do not understand. It is also temptingly easy to slip some jargon into our expression, to ensure that others do not understand. And it is just as easy to begin using jargon which we ourselves do not understand. The motivation to do such apparently perverse things is not difficult to grasp. People like to be ‘in’, to be part of an intellectual or technical elite; and the use of jargon, whether understood or not, is a badge of membership. Jargon, also, can provide a lazy way into a group or an easy way of hiding uncertainties and inadequacies: when terminology slips plausibly from the tongue, it is not essential for the brain to keep up. Indeed some people have developed this skill to professional levels. And certainly, faced with a telling or awkward question, and the need to say something acceptable in public, slipping into jargon becomes a simple way out, and can soon become a bad habit.",
+        "question": "At work, jargon leads to greater ______ in the way colleagues communicate.",
+        "options": {
+          "A": "feeling",
+          "B": "jokes",
+          "C": "efficiency",
+          "D": "pleasure"
+        },
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"efficiency\".\nĐoạn B: jargon \"can promote economy and precision of expression, and thus help make life easier for the workers\" → hiệu quả.",
+        "audio": null
+      },
+      {
+        "id": "t6_q48",
+        "testId": 6,
+        "num": 48,
+        "section": "Đọc Hiểu 2 (Reading Comprehension 2 - Nâng Cao)",
+        "category": "Reading",
+        "instruction": "Đọc bài văn học thuật bên trái và trả lời các câu hỏi phân tích, suy luận, từ vựng và tóm tắt.",
+        "passageTitle": "Bài Đọc Hiểu 2 (Reading Passage 2 - Nâng Cao) - Đề 6",
+        "passage": "Read the following passage and mark the letter A, B, C or D to indicate the best answer to each of the following questions.\nJARGON\nA. Jargon is a loaded word. One dictionary defines it, neatly and neutrally, as ‘the technical vocabulary or idiom of a special activity or group’, but this sense is almost completely overshadowed by another: ‘obscure and often pretentious language marked by a roundabout way of expression and use of long words’. For most people, it is this second sense which is at the front of their minds when they think about jargon. Jargon is said to be a bad use of language, something to be avoided at all costs. No one ever describes it in positive terms (‘that was a delightful piece of rousing jargon’). Nor does one usually admit to using it oneself: the myth is that jargon is something only other people employ.\nB. The reality, however, is that everyone uses jargon. It is an essential part of the network of occupations and pursuits that make up society. All jobs present an element of jargon, which workers learn as they develop their expertise. All hobbies require mastery of a jargon. Each social grouping has its jargon. The phenomenon turns out to be universal – and valuable. It is the jargon element which, in a job, can promote economy and precision of expression, and thus help make life easier for the workers. It is also the chief linguistic element which shows professional awareness (‘know-how’) and social togetherness (‘shop-talk’).\nC. When we have learned to command it, jargon is something we readily take pleasure in, whether the subject area is motorcycles, knitting, cricket, baseball or computers. It can add pace, variety and humour to speech – as when, with an important event approaching, we might slip into NASA-speak, and talk about countdown, all systems go, and lift-off. We enjoy the mutual showing-off which stems from a fluent use of terminology, and we enjoy the in-jokes which shared linguistic experience permits. Moreover, we are jealous of this knowledge. We are quick to demean anyone who tries to be part of our group without being prepared to take on its jargon.\nD. If jargon is so essential a part of our lives, why then has it had such a bad press? The most important reason stems from the way jargon can exclude as well as include. We may not be too concerned if we find ourselves faced with an impenetrable wall of jargon when the subject matter has little perceived relevance to our everyday lives, as in the case of hydrology, say, or linguistics. But when the subject matter is one where we feel implicated, and think we have a right to know, and the speaker uses words which make it hard for us to understand, then we start to complain; and if we suspect that the obfuscation is deliberate policy, we unreservedly condemn, labelling it gobbledegook and calling down public derision upon it.\nE. No area is exempt, but the fields of advertising, politics and defence have been especially criticised in recent years by the various campaigns for Plain English. In these domains, the extent to which people are prepared to use jargon to hide realities is a ready source of amusement, disbelief and horror. A lie is a lie, which can be only temporarily hidden by calling it an ‘inoperative statement’ or ‘an instance of plausible deniability’. Nor can a nuclear plant explosion be suppressed for long behind such phrases as ‘energetic disassembly’, ‘abnormal evolution’ or ‘plant transient’.\nF. While condemning unnecessary or obscuring jargon in others, we should not forget to look out for it in ourselves. It is so easy to ‘slip into’ jargon, without realizing that our own listeners or readers do not understand. It is also temptingly easy to slip some jargon into our expression, to ensure that others do not understand. And it is just as easy to begin using jargon which we ourselves do not understand. The motivation to do such apparently perverse things is not difficult to grasp. People like to be ‘in’, to be part of an intellectual or technical elite; and the use of jargon, whether understood or not, is a badge of membership. Jargon, also, can provide a lazy way into a group or an easy way of hiding uncertainties and inadequacies: when terminology slips plausibly from the tongue, it is not essential for the brain to keep up. Indeed some people have developed this skill to professional levels. And certainly, faced with a telling or awkward question, and the need to say something acceptable in public, slipping into jargon becomes a simple way out, and can soon become a bad habit.",
+        "question": "Colleagues can bond better when they take part in ______ during moments of relaxation.",
+        "options": {
+          "A": "shop-talk",
+          "B": "know-how",
+          "C": "judgement",
+          "D": "possessiveness"
+        },
+        "answer": "A",
+        "explanation": "Đáp án đúng là A: \"shop-talk\".\nĐoạn B: jargon thể hiện \"social togetherness (‘shop-talk’)\" – chuyện nghề giúp gắn kết.",
+        "audio": null
+      },
+      {
+        "id": "t6_q49",
+        "testId": 6,
+        "num": 49,
+        "section": "Đọc Hiểu 2 (Reading Comprehension 2 - Nâng Cao)",
+        "category": "Reading",
+        "instruction": "Đọc bài văn học thuật bên trái và trả lời các câu hỏi phân tích, suy luận, từ vựng và tóm tắt.",
+        "passageTitle": "Bài Đọc Hiểu 2 (Reading Passage 2 - Nâng Cao) - Đề 6",
+        "passage": "Read the following passage and mark the letter A, B, C or D to indicate the best answer to each of the following questions.\nJARGON\nA. Jargon is a loaded word. One dictionary defines it, neatly and neutrally, as ‘the technical vocabulary or idiom of a special activity or group’, but this sense is almost completely overshadowed by another: ‘obscure and often pretentious language marked by a roundabout way of expression and use of long words’. For most people, it is this second sense which is at the front of their minds when they think about jargon. Jargon is said to be a bad use of language, something to be avoided at all costs. No one ever describes it in positive terms (‘that was a delightful piece of rousing jargon’). Nor does one usually admit to using it oneself: the myth is that jargon is something only other people employ.\nB. The reality, however, is that everyone uses jargon. It is an essential part of the network of occupations and pursuits that make up society. All jobs present an element of jargon, which workers learn as they develop their expertise. All hobbies require mastery of a jargon. Each social grouping has its jargon. The phenomenon turns out to be universal – and valuable. It is the jargon element which, in a job, can promote economy and precision of expression, and thus help make life easier for the workers. It is also the chief linguistic element which shows professional awareness (‘know-how’) and social togetherness (‘shop-talk’).\nC. When we have learned to command it, jargon is something we readily take pleasure in, whether the subject area is motorcycles, knitting, cricket, baseball or computers. It can add pace, variety and humour to speech – as when, with an important event approaching, we might slip into NASA-speak, and talk about countdown, all systems go, and lift-off. We enjoy the mutual showing-off which stems from a fluent use of terminology, and we enjoy the in-jokes which shared linguistic experience permits. Moreover, we are jealous of this knowledge. We are quick to demean anyone who tries to be part of our group without being prepared to take on its jargon.\nD. If jargon is so essential a part of our lives, why then has it had such a bad press? The most important reason stems from the way jargon can exclude as well as include. We may not be too concerned if we find ourselves faced with an impenetrable wall of jargon when the subject matter has little perceived relevance to our everyday lives, as in the case of hydrology, say, or linguistics. But when the subject matter is one where we feel implicated, and think we have a right to know, and the speaker uses words which make it hard for us to understand, then we start to complain; and if we suspect that the obfuscation is deliberate policy, we unreservedly condemn, labelling it gobbledegook and calling down public derision upon it.\nE. No area is exempt, but the fields of advertising, politics and defence have been especially criticised in recent years by the various campaigns for Plain English. In these domains, the extent to which people are prepared to use jargon to hide realities is a ready source of amusement, disbelief and horror. A lie is a lie, which can be only temporarily hidden by calling it an ‘inoperative statement’ or ‘an instance of plausible deniability’. Nor can a nuclear plant explosion be suppressed for long behind such phrases as ‘energetic disassembly’, ‘abnormal evolution’ or ‘plant transient’.\nF. While condemning unnecessary or obscuring jargon in others, we should not forget to look out for it in ourselves. It is so easy to ‘slip into’ jargon, without realizing that our own listeners or readers do not understand. It is also temptingly easy to slip some jargon into our expression, to ensure that others do not understand. And it is just as easy to begin using jargon which we ourselves do not understand. The motivation to do such apparently perverse things is not difficult to grasp. People like to be ‘in’, to be part of an intellectual or technical elite; and the use of jargon, whether understood or not, is a badge of membership. Jargon, also, can provide a lazy way into a group or an easy way of hiding uncertainties and inadequacies: when terminology slips plausibly from the tongue, it is not essential for the brain to keep up. Indeed some people have developed this skill to professional levels. And certainly, faced with a telling or awkward question, and the need to say something acceptable in public, slipping into jargon becomes a simple way out, and can soon become a bad habit.",
+        "question": "Members of a group often show a certain ______ towards the special language of their field.",
+        "options": {
+          "A": "contempt",
+          "B": "efficiency",
+          "C": "possessiveness",
+          "D": "humour"
+        },
+        "answer": "C",
+        "explanation": "Đáp án đúng là C: \"possessiveness\".\nĐoạn C: \"we are jealous of this knowledge\" → tính chiếm hữu, giữ gìn vốn biệt ngữ của nhóm.",
+        "audio": null
+      },
+      {
+        "id": "t6_q50",
+        "testId": 6,
+        "num": 50,
+        "section": "Đọc Hiểu 2 (Reading Comprehension 2 - Nâng Cao)",
+        "category": "Reading",
+        "instruction": "Đọc bài văn học thuật bên trái và trả lời các câu hỏi phân tích, suy luận, từ vựng và tóm tắt.",
+        "passageTitle": "Bài Đọc Hiểu 2 (Reading Passage 2 - Nâng Cao) - Đề 6",
+        "passage": "Read the following passage and mark the letter A, B, C or D to indicate the best answer to each of the following questions.\nJARGON\nA. Jargon is a loaded word. One dictionary defines it, neatly and neutrally, as ‘the technical vocabulary or idiom of a special activity or group’, but this sense is almost completely overshadowed by another: ‘obscure and often pretentious language marked by a roundabout way of expression and use of long words’. For most people, it is this second sense which is at the front of their minds when they think about jargon. Jargon is said to be a bad use of language, something to be avoided at all costs. No one ever describes it in positive terms (‘that was a delightful piece of rousing jargon’). Nor does one usually admit to using it oneself: the myth is that jargon is something only other people employ.\nB. The reality, however, is that everyone uses jargon. It is an essential part of the network of occupations and pursuits that make up society. All jobs present an element of jargon, which workers learn as they develop their expertise. All hobbies require mastery of a jargon. Each social grouping has its jargon. The phenomenon turns out to be universal – and valuable. It is the jargon element which, in a job, can promote economy and precision of expression, and thus help make life easier for the workers. It is also the chief linguistic element which shows professional awareness (‘know-how’) and social togetherness (‘shop-talk’).\nC. When we have learned to command it, jargon is something we readily take pleasure in, whether the subject area is motorcycles, knitting, cricket, baseball or computers. It can add pace, variety and humour to speech – as when, with an important event approaching, we might slip into NASA-speak, and talk about countdown, all systems go, and lift-off. We enjoy the mutual showing-off which stems from a fluent use of terminology, and we enjoy the in-jokes which shared linguistic experience permits. Moreover, we are jealous of this knowledge. We are quick to demean anyone who tries to be part of our group without being prepared to take on its jargon.\nD. If jargon is so essential a part of our lives, why then has it had such a bad press? The most important reason stems from the way jargon can exclude as well as include. We may not be too concerned if we find ourselves faced with an impenetrable wall of jargon when the subject matter has little perceived relevance to our everyday lives, as in the case of hydrology, say, or linguistics. But when the subject matter is one where we feel implicated, and think we have a right to know, and the speaker uses words which make it hard for us to understand, then we start to complain; and if we suspect that the obfuscation is deliberate policy, we unreservedly condemn, labelling it gobbledegook and calling down public derision upon it.\nE. No area is exempt, but the fields of advertising, politics and defence have been especially criticised in recent years by the various campaigns for Plain English. In these domains, the extent to which people are prepared to use jargon to hide realities is a ready source of amusement, disbelief and horror. A lie is a lie, which can be only temporarily hidden by calling it an ‘inoperative statement’ or ‘an instance of plausible deniability’. Nor can a nuclear plant explosion be suppressed for long behind such phrases as ‘energetic disassembly’, ‘abnormal evolution’ or ‘plant transient’.\nF. While condemning unnecessary or obscuring jargon in others, we should not forget to look out for it in ourselves. It is so easy to ‘slip into’ jargon, without realizing that our own listeners or readers do not understand. It is also temptingly easy to slip some jargon into our expression, to ensure that others do not understand. And it is just as easy to begin using jargon which we ourselves do not understand. The motivation to do such apparently perverse things is not difficult to grasp. People like to be ‘in’, to be part of an intellectual or technical elite; and the use of jargon, whether understood or not, is a badge of membership. Jargon, also, can provide a lazy way into a group or an easy way of hiding uncertainties and inadequacies: when terminology slips plausibly from the tongue, it is not essential for the brain to keep up. Indeed some people have developed this skill to professional levels. And certainly, faced with a telling or awkward question, and the need to say something acceptable in public, slipping into jargon becomes a simple way out, and can soon become a bad habit.",
+        "question": "Newcomers who are not prepared to learn a group’s jargon are often regarded with",
+        "options": {
+          "A": "pleasure.",
+          "B": "contempt.",
+          "C": "feeling.",
+          "D": "efficiency."
+        },
+        "answer": "B",
+        "explanation": "Đáp án đúng là B: \"contempt\".\nĐoạn C: \"We are quick to demean anyone who tries to be part of our group without being prepared to take on its jargon\" → coi thường.",
+        "audio": null
+      }
+    ]
   }
 ];
 

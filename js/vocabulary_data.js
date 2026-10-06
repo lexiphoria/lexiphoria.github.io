@@ -2781,7 +2781,608 @@ const vocabularyData = {
         "exampleTranslation": "Một cơn lốc xoáy dữ dội đã bật gốc cây cối khỏi mặt đất và giật tung các mái nhà."
     }
   ],
-  ourFuture: [],
+  ourFuture: [
+  {
+    "word": "appliance",
+    "type": "n",
+    "ipa": "/əˈplaɪ.əns/",
+    "meaning": "thiết bị, dụng cụ (thường trong gia đình)",
+    "example": "Modern households rely on smart appliances to save energy.",
+    "exampleTranslation": "Các hộ gia đình hiện đại dựa vào các thiết bị thông minh để tiết kiệm năng lượng."
+  },
+  {
+    "word": "asteroid",
+    "type": "n",
+    "ipa": "/ˈæs.tər.ɔɪd/",
+    "meaning": "tiểu hành tinh",
+    "example": "Astronomers track asteroids to prevent potential collisions with Earth.",
+    "exampleTranslation": "Các nhà thiên văn học theo dõi các tiểu hành tinh để ngăn ngừa các vụ va chạm tiềm tàng với Trái Đất."
+  },
+  {
+    "word": "assortment",
+    "type": "n",
+    "ipa": "/əˈsɔːt.mənt/",
+    "meaning": "sự tổng hợp, tập hợp đủ loại",
+    "example": "The laboratory contains an assortment of high-tech testing tools.",
+    "exampleTranslation": "Phòng thí nghiệm chứa một tập hợp đủ loại công cụ thử nghiệm công nghệ cao."
+  },
+  {
+    "word": "access to the internet",
+    "type": "phrase",
+    "ipa": "/ˈæk.ses tuː ði ˈɪn.tə.net/",
+    "meaning": "truy cập mạng, kết nối internet",
+    "example": "High-speed access to the internet enables remote research and collaboration.",
+    "exampleTranslation": "Việc truy cập internet tốc độ cao tạo điều kiện cho việc nghiên cứu và hợp tác từ xa."
+  },
+  {
+    "word": "authenticity",
+    "type": "n",
+    "ipa": "/ˌɔː.θenˈtɪs.ə.ti/",
+    "meaning": "tính xác thực, độ tin cậy",
+    "example": "Cryptographic signatures verify the authenticity of digital documents.",
+    "exampleTranslation": "Chữ ký mã hóa xác minh tính xác thực của các tài liệu kỹ thuật số."
+  },
+  {
+    "word": "back up",
+    "type": "v",
+    "ipa": "/bæk ʌp/",
+    "meaning": "sao lưu dữ liệu",
+    "example": "Engineers regularly back up important databases to prevent data loss.",
+    "exampleTranslation": "Các kỹ sư thường xuyên sao lưu các cơ sở dữ liệu quan trọng để ngăn ngừa mất dữ liệu."
+  },
+  {
+    "word": "burn a CD",
+    "type": "phrase",
+    "ipa": "/bɜːn ə ˌsiːˈdiː/",
+    "meaning": "ghi đĩa, ghi dữ liệu vào đĩa CD",
+    "example": "People used to burn a CD to share software before cloud storage emerged.",
+    "exampleTranslation": "Mọi người từng ghi đĩa CD để chia sẻ phần mềm trước khi lưu trữ đám mây xuất hiện."
+  },
+  {
+    "word": "breakthrough",
+    "type": "n",
+    "ipa": "/ˈbreɪk.θruː/",
+    "meaning": "bước đột phá, thành tựu quan trọng",
+    "example": "The discovery of quantum computing is a monumental technological breakthrough.",
+    "exampleTranslation": "Phát hiện về điện toán lượng tử là một bước đột phá công nghệ mang tính lịch sử."
+  },
+  {
+    "word": "bandwidth",
+    "type": "n",
+    "ipa": "/ˈbænd.wɪtθ/",
+    "meaning": "băng thông",
+    "example": "Streaming 4K video consumes significant network bandwidth.",
+    "exampleTranslation": "Xem video trực tuyến độ phân giải 4K tiêu tốn lượng băng thông mạng đáng kể."
+  },
+  {
+    "word": "cache",
+    "type": "n",
+    "ipa": "/kæʃ/",
+    "meaning": "bộ nhớ đệm",
+    "example": "Clearing browser cache can resolve loading errors on websites.",
+    "exampleTranslation": "Xóa bộ nhớ đệm trình duyệt có thể giải quyết các lỗi tải trang web."
+  },
+  {
+    "word": "crash",
+    "type": "v",
+    "ipa": "/kræʃ/",
+    "meaning": "chết máy, sập hệ thống (máy tính)",
+    "example": "The server crashed due to an unexpected surge in user traffic.",
+    "exampleTranslation": "Máy chủ bị sập do lượng truy cập của người dùng tăng đột biến."
+  },
+  {
+    "word": "central processing unit (CPU)",
+    "type": "n",
+    "ipa": "/ˌsen.trəl ˈprəʊ.ses.ɪŋ ˈjuː.nɪt/",
+    "meaning": "bộ xử lý trung tâm của máy tính (CPU)",
+    "example": "The central processing unit (CPU) executes instructions given by computer programs.",
+    "exampleTranslation": "Bộ xử lý trung tâm (CPU) thực thi các câu lệnh do các chương trình máy tính đưa ra."
+  },
+  {
+    "word": "contribute to sth",
+    "type": "phrase",
+    "ipa": "/kənˈtrɪb.juːt tuː ˈsʌm.θɪŋ/",
+    "meaning": "góp phần vào cái gì / làm gì (= make a contribution to)",
+    "example": "Technological advancements contribute to improving medical diagnostics.",
+    "exampleTranslation": "Những tiến bộ công nghệ góp phần cải thiện chẩn đoán y khoa."
+  },
+  {
+    "word": "cybercrime",
+    "type": "n",
+    "ipa": "/ˈsaɪ.bə.kraɪm/",
+    "meaning": "tội phạm công nghệ cao, tội phạm mạng",
+    "example": "Governments around the world are cooperating to combat international cybercrime.",
+    "exampleTranslation": "Các chính phủ trên khắp thế giới đang hợp tác để đấu tranh chống tội phạm công nghệ cao quốc tế."
+  },
+  {
+    "word": "compact",
+    "type": "adj",
+    "ipa": "/kəmˈpækt/",
+    "meaning": "rắn chắc, kết đặc, nhỏ gọn",
+    "example": "Engineers designed a compact battery that delivers immense electrical power.",
+    "exampleTranslation": "Các kỹ sư đã thiết kế một cục pin nhỏ gọn kết đặc cung cấp nguồn điện năng khổng lồ."
+  },
+  {
+    "word": "counteract",
+    "type": "v",
+    "ipa": "/ˌkaʊn.tərˈækt/",
+    "meaning": "chống lại, kháng cự lại, triệt tiêu tác động",
+    "example": "New software patches were deployed to counteract zero-day vulnerabilities.",
+    "exampleTranslation": "Các bản vá phần mềm mới đã được triển khai để chống lại các lỗ hổng bảo mật zero-day."
+  },
+  {
+    "word": "co-found",
+    "type": "v",
+    "ipa": "/ˌkəʊˈfaʊnd/",
+    "meaning": "đồng sáng lập",
+    "example": "The tech visionary went on to co-found several revolutionary artificial intelligence firms.",
+    "exampleTranslation": "Nhà nhìn xa trông rộng công nghệ đã tiếp tục đồng sáng lập một số công ty trí tuệ nhân tạo mang tính cách mạng."
+  },
+  {
+    "word": "collision",
+    "type": "n",
+    "ipa": "/kəˈlɪʒ.ən/",
+    "meaning": "sự va chạm, sự xung đột",
+    "example": "Particle accelerators observe the high-energy collision of atomic particles.",
+    "exampleTranslation": "Máy gia tốc hạt quan sát sự va chạm năng lượng cao của các hạt nguyên tử."
+  },
+  {
+    "word": "cyber sickness",
+    "type": "n",
+    "ipa": "/ˈsaɪ.bə ˌsɪk.nəs/",
+    "meaning": "cảm giác mệt mỏi sau khi sử dụng máy tính quá lâu",
+    "example": "Gamers testing virtual reality headsets often report symptoms of cyber sickness.",
+    "exampleTranslation": "Những game thủ thử nghiệm kính thực tế ảo thường báo cáo các triệu chứng say thế giới ảo/mệt mỏi do thiết bị."
+  },
+  {
+    "word": "cybersecurity",
+    "type": "n",
+    "ipa": "/ˈsaɪ.bə.sɪˌkjʊə.rə.ti/",
+    "meaning": "an ninh mạng",
+    "example": "Financial institutions invest heavily in cybersecurity to protect sensitive customer data.",
+    "exampleTranslation": "Các tổ chức tài chính đầu tư mạnh vào an ninh mạng để bảo vệ dữ liệu nhạy cảm của khách hàng."
+  },
+  {
+    "word": "domain name",
+    "type": "n",
+    "ipa": "/dəʊˈmeɪn ˌneɪm/",
+    "meaning": "tên miền",
+    "example": "Choosing a memorable domain name is vital for an online brand.",
+    "exampleTranslation": "Chọn một tên miền dễ nhớ là điều sống còn đối với một thương hiệu trực tuyến."
+  },
+  {
+    "word": "drudgery",
+    "type": "n",
+    "ipa": "/ˈdrʌdʒ.ər.i/",
+    "meaning": "công việc cực nhọc, đơn điệu, vất vả",
+    "example": "Automation frees workers from repetitive and exhausting manual drudgery.",
+    "exampleTranslation": "Tự động hóa giải phóng người lao động khỏi công việc cực nhọc, lặp đi lặp lại bằng tay."
+  },
+  {
+    "word": "decipher",
+    "type": "v",
+    "ipa": "/dɪˈsaɪ.fər/",
+    "meaning": "giải mã",
+    "example": "Supercomputers took days to decipher the complex cryptographic code.",
+    "exampleTranslation": "Các siêu máy tính đã mất nhiều ngày để giải mã đoạn mã mật mã phức tạp."
+  },
+  {
+    "word": "digitization",
+    "type": "n",
+    "ipa": "/ˌdɪdʒ.ɪ.taɪˈzeɪ.ʃən/",
+    "meaning": "sự số hóa",
+    "example": "The digitization of historical archives ensures records survive for centuries.",
+    "exampleTranslation": "Sự số hóa các kho lưu trữ lịch sử đảm bảo các ghi chép tồn tại qua nhiều thế kỷ."
+  },
+  {
+    "word": "debris",
+    "type": "n",
+    "ipa": "/ˈdeb.riː/",
+    "meaning": "mảnh vụn vỡ, rác vũ trụ",
+    "example": "Thousands of pieces of space debris orbit our planet at dangerous velocities.",
+    "exampleTranslation": "Hàng ngàn mảnh vỡ vũ trụ bay quanh hành tinh chúng ta với vận tốc nguy hiểm."
+  },
+  {
+    "word": "diligent",
+    "type": "adj",
+    "ipa": "/ˈdɪl.ɪ.dʒənt/",
+    "meaning": "cẩn thận, cần cù, tỉ mỉ",
+    "example": "Diligent data analysis is required to verify groundbreaking scientific findings.",
+    "exampleTranslation": "Cần phải phân tích dữ liệu cẩn thận để xác minh những phát hiện khoa học đột phá."
+  },
+  {
+    "word": "encrypt",
+    "type": "v",
+    "ipa": "/ɪnˈkrɪpt/",
+    "meaning": "mã hóa bảo mật",
+    "example": "Messaging apps encrypt chats to safeguard conversations from unauthorized eavesdropping.",
+    "exampleTranslation": "Các ứng dụng nhắn tin mã hóa bảo mật các cuộc trò chuyện để bảo vệ khỏi việc nghe lén trái phép."
+  },
+  {
+    "word": "encode",
+    "type": "v",
+    "ipa": "/ɪnˈkəʊd/",
+    "meaning": "mã hóa định dạng, chuyển đổi tín hiệu",
+    "example": "Sensors encode physical temperature readings into digital signals.",
+    "exampleTranslation": "Các cảm biến mã hóa các chỉ số nhiệt độ vật lý thành tín hiệu số."
+  },
+  {
+    "word": "floppy disk",
+    "type": "n",
+    "ipa": "/ˈflɒp.i ˌdɪsk/",
+    "meaning": "đĩa mềm",
+    "example": "Decades ago, computers used floppy disks to transfer small documents.",
+    "exampleTranslation": "Nhiều thập kỷ trước, máy tính đã sử dụng đĩa mềm để truyền các tài liệu dung lượng nhỏ."
+  },
+  {
+    "word": "firewall",
+    "type": "n",
+    "ipa": "/ˈfaɪə.wɔːl/",
+    "meaning": "tường lửa (hệ thống bảo mật)",
+    "example": "A robust firewall blocks suspicious incoming traffic from penetrating company networks.",
+    "exampleTranslation": "Một tường lửa vững chắc ngăn chặn lưu lượng truy cập đáng ngờ xâm nhập vào mạng công ty."
+  },
+  {
+    "word": "gadget",
+    "type": "n",
+    "ipa": "/ˈɡædʒ.ɪt/",
+    "meaning": "thiết bị, dụng cụ tiện ích",
+    "example": "Tech enthusiasts queued overnight to purchase the latest wearable gadget.",
+    "exampleTranslation": "Những người đam mê công nghệ đã xếp hàng qua đêm để mua thiết bị đeo thông minh mới nhất."
+  },
+  {
+    "word": "geek",
+    "type": "n",
+    "ipa": "/ɡiːk/",
+    "meaning": "người cuồng máy tính, người đam mê công nghệ",
+    "example": "The computer geek solved the complex programming puzzle in minutes.",
+    "exampleTranslation": "Người cuồng máy tính đã giải được câu đố lập trình phức tạp chỉ trong vài phút."
+  },
+  {
+    "word": "hardware",
+    "type": "n",
+    "ipa": "/ˈhɑːd.weər/",
+    "meaning": "phần cứng (máy tính)",
+    "example": "Upgrading your hardware provides the processing speed required for modern graphics.",
+    "exampleTranslation": "Việc nâng cấp phần cứng cung cấp tốc độ xử lý cần thiết cho đồ họa hiện đại."
+  },
+  {
+    "word": "hacker",
+    "type": "n",
+    "ipa": "/ˈhæk.ər/",
+    "meaning": "tin tặc, người lấy dữ liệu máy tính trái phép",
+    "example": "A skilled hacker exploited an unpatched system flaw to infiltrate the server.",
+    "exampleTranslation": "Một tin tặc lão luyện đã khai thác một lỗ hổng hệ thống chưa vá để xâm nhập vào máy chủ."
+  },
+  {
+    "word": "hypothesize",
+    "type": "v",
+    "ipa": "/haɪˈpɒθ.ə.saɪz/",
+    "meaning": "đưa ra giả thuyết",
+    "example": "Scientists hypothesize that quantum entanglement could revolutionize space communications.",
+    "exampleTranslation": "Các nhà khoa học đưa ra giả thuyết rằng rối lượng tử có thể tạo nên cuộc cách mạng trong liên lạc không gian."
+  },
+  {
+    "word": "hybrid",
+    "type": "n",
+    "ipa": "/ˈhaɪ.brɪd/",
+    "meaning": "động cơ xe sử dụng 2 loại năng lượng (động cơ lai)",
+    "example": "Drivers switch to a hybrid to reduce fuel costs and lower emissions.",
+    "exampleTranslation": "Các tài xế chuyển sang dùng xe lai để giảm chi phí nhiên liệu và hạ thấp lượng khí thải."
+  },
+  {
+    "word": "home page",
+    "type": "n",
+    "ipa": "/ˈhəʊm ˌpeɪdʒ/",
+    "meaning": "trang chủ (trang web)",
+    "example": "Users can access all platform features directly from the home page.",
+    "exampleTranslation": "Người dùng có thể truy cập tất cả tính năng của nền tảng trực tiếp từ trang chủ."
+  },
+  {
+    "word": "wi-fi hotspot",
+    "type": "n",
+    "ipa": "/ˈwaɪ.faɪ ˌhɒt.spɒt/",
+    "meaning": "điểm phát wifi",
+    "example": "The airport provides a free wi-fi hotspot for international travelers.",
+    "exampleTranslation": "Sân bay cung cấp điểm phát wifi miễn phí cho du khách quốc tế."
+  },
+  {
+    "word": "install a program",
+    "type": "phrase",
+    "ipa": "/ɪnˈstɔːl ə ˈprəʊ.ɡræm/",
+    "meaning": "cài đặt 1 chương trình",
+    "example": "Always download from verified sources before you install a program on your PC.",
+    "exampleTranslation": "Luôn tải từ các nguồn đã xác minh trước khi bạn cài đặt một chương trình trên máy tính."
+  },
+  {
+    "word": "innovative",
+    "type": "adj",
+    "ipa": "/ˈɪn.ə.və.tɪv/",
+    "meaning": "có tính chất đổi mới, có tính chất sáng kiến",
+    "example": "The startup won an award for its innovative energy storage solution.",
+    "exampleTranslation": "Công ty khởi nghiệp đã giành giải thưởng nhờ giải pháp lưu trữ năng lượng đầy tính đổi mới sáng tạo."
+  },
+  {
+    "word": "intuitive",
+    "type": "adj",
+    "ipa": "/ɪnˈtʃuː.ɪ.tɪv/",
+    "meaning": "thuộc về trực giác, dễ dùng",
+    "example": "Good app design features an intuitive user interface that anyone can navigate.",
+    "exampleTranslation": "Thiết kế ứng dụng tốt sở hữu giao diện người dùng trực quan, dễ dùng mà ai cũng thao tác được."
+  },
+  {
+    "word": "labour-saving",
+    "type": "adj",
+    "ipa": "/ˈleɪ.bəˌseɪ.vɪŋ/",
+    "meaning": "tiết kiệm sức lao động",
+    "example": "Washing machines and robotic cleaners are indispensable labour-saving machines.",
+    "exampleTranslation": "Máy giặt và robot dọn dẹp là những cỗ máy tiết kiệm sức lao động không thể thiếu."
+  },
+  {
+    "word": "log into account",
+    "type": "phrase",
+    "ipa": "/lɒɡ ˈɪn.tuː əˈkaʊnt/",
+    "meaning": "đăng nhập tài khoản",
+    "example": "Use two-factor authentication whenever you log into account systems.",
+    "exampleTranslation": "Hãy dùng xác thực hai yếu tố bất cứ khi nào bạn đăng nhập vào hệ thống tài khoản."
+  },
+  {
+    "word": "monitor",
+    "type": "n",
+    "ipa": "/ˈmɒn.ɪ.tər/",
+    "meaning": "màn hình máy tính",
+    "example": "Graphic designers prefer a high-resolution monitor with accurate color rendering.",
+    "exampleTranslation": "Các nhà thiết kế đồ họa thích một màn hình máy tính có độ phân giải cao và màu sắc chuẩn xác."
+  },
+  {
+    "word": "mouse mat",
+    "type": "n",
+    "ipa": "/ˈmaʊs ˌmæt/",
+    "meaning": "tấm lót chuột",
+    "example": "An ergonomic mouse mat provides comfortable wrist support during long work sessions.",
+    "exampleTranslation": "Một tấm lót chuột công thái học giúp nâng đỡ cổ tay thoải mái trong suốt các phiên làm việc dài."
+  },
+  {
+    "word": "multimedia",
+    "type": "n",
+    "ipa": "/ˌmʌl.tiˈmiː.di.ə/",
+    "meaning": "đa phương tiện",
+    "example": "Interactive education blends multimedia elements including audio, animations, and text.",
+    "exampleTranslation": "Giáo dục tương tác kết hợp các yếu tố đa phương tiện gồm âm thanh, hoạt hình và văn bản."
+  },
+  {
+    "word": "mitigate",
+    "type": "v",
+    "ipa": "/ˈmɪt.ɪ.ɡeɪt/",
+    "meaning": "giảm nhẹ, làm dịu bớt",
+    "example": "Strict security firewalls help mitigate the risk of data breaches.",
+    "exampleTranslation": "Tường lửa bảo mật nghiêm ngặt giúp giảm nhẹ nguy cơ rò rỉ dữ liệu."
+  },
+  {
+    "word": "parchment paper",
+    "type": "n",
+    "ipa": "/ˈpɑːtʃ.mənt ˌpeɪ.pər/",
+    "meaning": "giấy nến",
+    "example": "Scientists used silicone-coated parchment paper in delicate laboratory drying tests.",
+    "exampleTranslation": "Các nhà khoa học đã dùng giấy nến phủ silicon trong các thử nghiệm sấy khô tinh vi trong phòng thí nghiệm."
+  },
+  {
+    "word": "prodigious",
+    "type": "adj",
+    "ipa": "/prəˈdɪdʒ.əs/",
+    "meaning": "phi thường, to lớn",
+    "example": "Supercomputers process prodigious quantities of cosmological data per second.",
+    "exampleTranslation": "Các siêu máy tính xử lý lượng dữ liệu vũ trụ học phi thường mỗi giây."
+  },
+  {
+    "word": "palmtop",
+    "type": "n",
+    "ipa": "/ˈpɑːm.tɒp/",
+    "meaning": "máy tính cầm tay",
+    "example": "Before modern smartphones, executives relied on a palmtop to manage appointments.",
+    "exampleTranslation": "Trước điện thoại thông minh hiện đại, các giám đốc điều hành đã dựa vào máy tính cầm tay để quản lý lịch hẹn."
+  },
+  {
+    "word": "peculiar",
+    "type": "adj",
+    "ipa": "/pɪˈkjuː.li.ər/",
+    "meaning": "riêng biệt, đặc biệt, kỳ lạ",
+    "example": "The telescope detected a peculiar signal pulsating from deep space.",
+    "exampleTranslation": "Kính viễn vọng phát hiện một tín hiệu kỳ lạ đặc biệt phát xung từ không gian sâu."
+  },
+  {
+    "word": "probe",
+    "type": "v",
+    "ipa": "/prəʊb/",
+    "meaning": "dò xét, thăm dò",
+    "example": "Unmanned spacecraft probe distant planetary atmospheres for signs of water.",
+    "exampleTranslation": "Tàu vũ trụ không người lái thăm dò bầu khí quyển của các hành tinh xa xôi để tìm dấu hiệu của nước."
+  },
+  {
+    "word": "provocative",
+    "type": "adj",
+    "ipa": "/prəˈvɒk.ə.tɪv/",
+    "meaning": "gây tranh cãi, kích thích tư duy",
+    "example": "The philosopher delivered a provocative talk on ethics in artificial intelligence.",
+    "exampleTranslation": "Nhà triết học đã có bài diễn thuyết gây tranh cãi và kích thích tư duy về đạo đức trong trí tuệ nhân tạo."
+  },
+  {
+    "word": "peripheral",
+    "type": "adj",
+    "ipa": "/pəˈrɪf.ər.əl/",
+    "meaning": "thuộc về chu vi, ngoại biên (thiết bị ngoại vi)",
+    "example": "Printers and scanners are typical peripheral devices connected to a desktop.",
+    "exampleTranslation": "Máy in và máy quét là các thiết bị ngoại vi điển hình được kết nối với máy tính để bàn."
+  },
+  {
+    "word": "reign",
+    "type": "v",
+    "ipa": "/reɪn/",
+    "meaning": "thống trị, ngự trị",
+    "example": "Silicon Valley companies continue to reign over the global digital economy.",
+    "exampleTranslation": "Các công ty Thung lũng Silicon tiếp tục ngự trị trên nền kinh tế kỹ thuật số toàn cầu."
+  },
+  {
+    "word": "revolutionary",
+    "type": "adj",
+    "ipa": "/ˌrev.əˈluː.ʃən.ər.i/",
+    "meaning": "mang tính cách mạng",
+    "example": "CRISPR gene editing is a revolutionary tool in biomedical engineering.",
+    "exampleTranslation": "Kỹ thuật chỉnh sửa gen CRISPR là một công cụ mang tính cách mạng trong kỹ thuật y sinh."
+  },
+  {
+    "word": "speculate",
+    "type": "v",
+    "ipa": "/ˈspek.jə.leɪt/",
+    "meaning": "suy đoán, ức đoán",
+    "example": "Astrophysicists speculate on the existence of wormholes across galaxies.",
+    "exampleTranslation": "Các nhà vật lý thiên văn suy đoán về sự tồn tại của các lỗ sâu qua các thiên hà."
+  },
+  {
+    "word": "synonymous",
+    "type": "adj",
+    "ipa": "/sɪˈnɒn.ɪ.məs/",
+    "meaning": "phổ biến, nổi tiếng vì (đồng nghĩa với)",
+    "example": "The brand name has become synonymous with internet search technology.",
+    "exampleTranslation": "Tên thương hiệu này đã trở nên đồng nghĩa và gắn liền với công nghệ tìm kiếm internet."
+  },
+  {
+    "word": "siphon off",
+    "type": "v",
+    "ipa": "/ˈsaɪ.fən ɒf/",
+    "meaning": "ăn cắp, chiếm đoạt bất hợp pháp một cách từ từ",
+    "example": "Malicious spyware was programmed to siphon off banking credentials unnoticed.",
+    "exampleTranslation": "Phần mềm gián điệp độc hại được lập trình để chiếm đoạt thông tin ngân hàng một cách từ từ mà không bị phát hiện."
+  },
+  {
+    "word": "scribble",
+    "type": "v",
+    "ipa": "/ˈskrɪb.əl/",
+    "meaning": "viết nghệch ngoạc",
+    "example": "The programmer used a stylus to scribble quick architecture diagrams on the tablet.",
+    "exampleTranslation": "Lập trình viên đã dùng bút cảm ứng để vẽ nghệch ngoạc các sơ đồ kiến trúc nhanh trên máy tính bảng."
+  },
+  {
+    "word": "scheduled maintenance",
+    "type": "n",
+    "ipa": "/ˈʃedʒ.uːld ˈmeɪn.tən.əns/",
+    "meaning": "bảo trì định kỳ",
+    "example": "The cloud platform was offline for two hours due to scheduled maintenance.",
+    "exampleTranslation": "Nền tảng đám mây đã ngừng hoạt động trong hai giờ do hoạt động bảo trì định kỳ."
+  },
+  {
+    "word": "search engine",
+    "type": "n",
+    "ipa": "/ˈsɜːtʃ ˌen.dʒɪn/",
+    "meaning": "công cụ tìm kiếm, máy truy tìm dữ liệu",
+    "example": "A search engine indexes billions of web pages to return relevant results quickly.",
+    "exampleTranslation": "Một công cụ tìm kiếm lập chỉ mục hàng tỷ trang web để trả về kết quả liên quan nhanh chóng."
+  },
+  {
+    "word": "technical failure",
+    "type": "n",
+    "ipa": "/ˈtek.nɪ.kəl ˈfeɪ.ljər/",
+    "meaning": "lỗi kĩ thuật, sự cố kỹ thuật",
+    "example": "The rocket launch was delayed due to a sudden technical failure in the propulsion system.",
+    "exampleTranslation": "Vụ phóng tên lửa đã bị hoãn do sự cố kỹ thuật đột ngột trong hệ thống đẩy."
+  },
+  {
+    "word": "computer freezes",
+    "type": "phrase",
+    "ipa": "/kəmˈpjuː.tər ˈfriː.zɪz/",
+    "meaning": "máy đơ, ngừng hoạt động (locks up)",
+    "example": "When too many demanding applications run at once, the computer freezes.",
+    "exampleTranslation": "Khi có quá nhiều ứng dụng nặng cùng chạy, máy tính sẽ bị đơ."
+  },
+  {
+    "word": "transform",
+    "type": "v",
+    "ipa": "/trænsˈfɔːm/",
+    "meaning": "thay đổi / biến đổi sâu sắc",
+    "example": "Artificial intelligence has the power to transform how humans work and communicate.",
+    "exampleTranslation": "Trí tuệ nhân tạo có sức mạnh biến đổi sâu sắc cách con người làm việc và giao tiếp."
+  },
+  {
+    "word": "template",
+    "type": "n",
+    "ipa": "/ˈtem.pleɪt/",
+    "meaning": "mẫu, khuôn mẫu định sẵn",
+    "example": "The web designer created a responsive template suitable for tech blogs.",
+    "exampleTranslation": "Nhà thiết kế web đã tạo ra một bản mẫu có tính tương thích cao phù hợp cho blog công nghệ."
+  },
+  {
+    "word": "tech-savvy",
+    "type": "adj",
+    "ipa": "/ˌtek ˈsæv.i/",
+    "meaning": "giỏi về công nghệ, am hiểu công nghệ",
+    "example": "Tech-savvy teenagers easily configure intricate software and automated scripts.",
+    "exampleTranslation": "Những thanh thiếu niên giỏi công nghệ có thể dễ dàng cấu hình phần mềm phức tạp và kịch bản tự động."
+  },
+  {
+    "word": "technophile",
+    "type": "n",
+    "ipa": "/ˈtek.nəʊ.faɪl/",
+    "meaning": "những người thích công nghệ mới",
+    "example": "As an enthusiastic technophile, he purchases every new gadget released on the market.",
+    "exampleTranslation": "Là một người đam mê công nghệ nhiệt thành, anh ấy mua mọi thiết bị mới ra mắt trên thị trường."
+  },
+  {
+    "word": "toolbar",
+    "type": "n",
+    "ipa": "/ˈtuːl.bɑːr/",
+    "meaning": "thanh công cụ",
+    "example": "You can customize the toolbar to add shortcuts for your most frequent actions.",
+    "exampleTranslation": "Bạn có thể tùy chỉnh thanh công cụ để thêm phím tắt cho những thao tác thường dùng nhất."
+  },
+  {
+    "word": "upgrade",
+    "type": "v",
+    "ipa": "/ʌpˈɡreɪd/",
+    "meaning": "nâng cấp",
+    "example": "Companies should regularly upgrade their operating systems to prevent security breaches.",
+    "exampleTranslation": "Các công ty nên thường xuyên nâng cấp hệ điều hành để ngăn ngừa các cuộc tấn công bảo mật."
+  },
+  {
+    "word": "ubiquitous",
+    "type": "adj",
+    "ipa": "/juːˈbɪk.wɪ.təs/",
+    "meaning": "thường gặp, có mặt ở khắp nơi",
+    "example": "Smartphones and wireless internet have become ubiquitous in contemporary society.",
+    "exampleTranslation": "Điện thoại thông minh và mạng không dây đã trở nên phổ biến ở khắp mọi nơi trong xã hội đương đại."
+  },
+  {
+    "word": "validate",
+    "type": "v",
+    "ipa": "/ˈvæl.ɪ.deɪt/",
+    "meaning": "công nhận, xác thực",
+    "example": "Peer-reviewed experiments validate the accuracy of the computational simulation.",
+    "exampleTranslation": "Các thí nghiệm bình duyệt đã công nhận và xác thực độ chính xác của mô phỏng điện toán."
+  },
+  {
+    "word": "viral",
+    "type": "adj",
+    "ipa": "/ˈvaɪə.rəl/",
+    "meaning": "có sức lan tỏa mạnh mẽ",
+    "example": "The AI demo video went viral across social media, amassing millions of views overnight.",
+    "exampleTranslation": "Video trình diễn AI đã lan tỏa mạnh mẽ trên mạng xã hội, thu hút hàng triệu lượt xem chỉ sau một đêm."
+  },
+  {
+    "word": "viable",
+    "type": "adj",
+    "ipa": "/ˈvaɪ.ə.bəl/",
+    "meaning": "tồn tại, có sẵn, khả thi",
+    "example": "Renewable energy has proven to be a commercially viable alternative to fossil fuels.",
+    "exampleTranslation": "Năng lượng tái tạo đã chứng minh là một giải pháp khả thi và có thể duy trì về mặt thương mại thay thế nhiên liệu hóa thạch."
+  },
+  {
+    "word": "wacky",
+    "type": "adj",
+    "ipa": "/ˈwæk.i/",
+    "meaning": "dở người, chập mạch, lập dị",
+    "example": "The inventor was famous for dreaming up wacky contraptions that amused everyone.",
+    "exampleTranslation": "Nhà phát minh nổi tiếng vì nghĩ ra những cỗ máy lập dị, quái lạ khiến ai nấy đều thích thú."
+  }
+],
   phrasalVerbs: [
         {
             "word": "break down",

@@ -80,12 +80,15 @@
           <span id="environment-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
         </div>
 
-        <!-- Topic 4: OUR FUTURE (Locked) -->
-        <div class="topic-card locked" data-topic="ourFuture" onclick="showLockedAlert('OUR FUTURE')">
+        <!-- Topic 4: OUR FUTURE (Active) -->
+        <div class="topic-card" data-topic="ourFuture" onclick="selectTopic('ourFuture')">
           <span class="topic-icon">🚀</span>
           <h3 class="topic-title">OUR FUTURE</h3>
-          <p class="topic-meta">Các từ vựng khoa học công nghệ, nghề nghiệp tương lai.</p>
-          <span class="lock-badge">🔒 Coming soon</span>
+          <p class="topic-meta">75 Từ vựng về khoa học, công nghệ và tương lai số.</p>
+          <div class="topic-progress-container">
+            <div id="future-progress-fill" class="topic-progress-fill"></div>
+          </div>
+          <span id="future-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
         </div>
       </div>
 
@@ -498,8 +501,8 @@
   <canvas id="confetti-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1000; display: none;"></canvas>
 
   <!-- Script data file -->
-  <script src="js/vocabulary_data.js?v=1.0.5"></script>
-  <script src="js/vocabulary_extras.js?v=1.0.1"></script>
+  <script src="js/vocabulary_data.js?v=1.0.6"></script>
+  <script src="js/vocabulary_extras.js?v=1.0.2"></script>
 
   <!-- Main Game logic script -->
   <script>
@@ -1496,6 +1499,6 @@
   </script>
 
   <!-- Boss Battle mode (Đánh Boss Từ Khó) -->
-  <script src="js/boss_battle.js?v=1.0.1"></script>
+  <script src="js/boss_battle.js?v=1.0.2"></script>
 </body>
 </html>

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Immersion Town – Làng quê &amp; Phố cổ Hội An</title>
-    <meta name="description" content="Trò chơi nhập vai luyện giao tiếp tiếng Anh với bốn du khách tại làng quê sinh thái và Phố cổ Hội An.">
+    <title>Immersion Town – Local Host Hội An 2026</title>
+    <meta name="description" content="Trò chơi nhập vai pixel: bạn là Local Host đón du khách ở Phố cổ Hội An, khám phá từ vựng quanh phố và giao tiếp tiếng Anh.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -16,226 +16,66 @@
     <header class="topbar">
         <a class="home-link" href="../index.html">← Trang chủ</a>
         <div class="hud" aria-label="Tiến độ">
-            <span class="hud-item" title="Điểm kinh nghiệm">⭐ <b id="hud-xp">0</b> XP</span>
-            <span class="hud-item" title="Số lượt liên tiếp trả lời đúng ngay lần đầu">🔥 <b id="hud-combo">0</b></span>
-            <span class="hud-item" title="Trà Đá: dùng để mở gợi ý nghĩa từ">🍵 <b id="hud-energy">3</b></span>
+            <span class="hud-item" title="Cultural Host XP">⭐ <b id="hud-xp">0</b><small> XP</small></span>
+            <span class="hud-item" title="Pin máy dịch câu (Phrase Translator). Nhặt Battery Pack hoặc sạc ở trạm năng lượng mặt trời.">🔋 <b id="hud-battery">3/5</b></span>
+            <span class="hud-item" title="Booklets ngữ pháp đã tìm">📘 <b id="hud-booklets">0/5</b></span>
             <button id="btn-sound" class="hud-btn" type="button" aria-pressed="true" title="Bật/tắt tự đọc lời thoại">🔊</button>
         </div>
     </header>
 
     <main class="container">
-        <!-- Bản đồ và danh sách điểm hẹn -->
-        <section id="view-map">
-            <div class="hero">
-                <span class="hero-tag">★ ROLE-PLAY ENGLISH ★</span>
-                <h1>Immersion Town</h1>
-                <p>Làng quê sinh thái &amp; Phố cổ Hội An 2026. Chạm vào một địa điểm để gặp du khách và trò chuyện bằng tiếng Anh.</p>
+        <div class="game-head">
+            <h1>Immersion Town</h1>
+            <p>Bạn là <b>Local Host</b>, đại sứ hiếu khách của Phố cổ Hội An 2026. Đi dạo, chạm vào mọi thứ để khám phá từ vựng và giúp du khách bằng tiếng Anh.</p>
+        </div>
+
+        <section class="stage" aria-label="Trò chơi">
+            <div id="frame" class="frame">
+                <canvas id="world" aria-label="Bản đồ Hội An. Dùng phím mũi tên hoặc chạm để di chuyển, chạm vật thể để khám phá từ."></canvas>
+                <div id="map-banner" class="map-banner" aria-live="polite"></div>
+                <div id="toasts" class="toasts" aria-live="polite"></div>
+                <div id="word-card" class="word-card" role="dialog" aria-label="Thẻ từ vựng" hidden></div>
+                <div id="loading" class="loading">Đang tải Hội An…</div>
+                <div id="dialog" class="dialog" role="dialog" aria-label="Hội thoại" hidden></div>
             </div>
 
-            <div class="map">
-                <svg class="map-art" viewBox="0 0 640 360" shape-rendering="crispEdges" role="img" aria-label="Bản đồ làng quê và Phố cổ Hội An với bốn điểm hẹn">
-                    <defs>
-                        <pattern id="p-grass" width="16" height="16" patternUnits="userSpaceOnUse">
-                            <rect width="16" height="16" fill="#7cc576" />
-                            <rect x="3" y="4" width="2" height="2" fill="#5fae5a" />
-                            <rect x="11" y="11" width="2" height="2" fill="#5fae5a" />
-                            <rect x="12" y="3" width="2" height="2" fill="#95d68e" />
-                        </pattern>
-                        <pattern id="p-cobble" width="16" height="16" patternUnits="userSpaceOnUse">
-                            <rect width="16" height="16" fill="#a7b6bd" />
-                            <rect x="1" y="1" width="6" height="6" fill="#cfd8dc" />
-                            <rect x="9" y="1" width="6" height="6" fill="#b8c5cb" />
-                            <rect x="1" y="9" width="6" height="6" fill="#b8c5cb" />
-                            <rect x="9" y="9" width="6" height="6" fill="#cfd8dc" />
-                        </pattern>
-                        <pattern id="p-paddy" width="12" height="12" patternUnits="userSpaceOnUse">
-                            <rect width="12" height="12" fill="#66bb6a" />
-                            <rect x="2" y="1" width="2" height="6" fill="#43a047" />
-                            <rect x="8" y="6" width="2" height="6" fill="#43a047" />
-                        </pattern>
-                        <pattern id="p-ripe" width="12" height="12" patternUnits="userSpaceOnUse">
-                            <rect width="12" height="12" fill="#FFC107" />
-                            <rect x="2" y="1" width="2" height="6" fill="#f9a825" />
-                            <rect x="8" y="6" width="2" height="6" fill="#f9a825" />
-                        </pattern>
-                        <pattern id="p-water" width="32" height="16" patternUnits="userSpaceOnUse">
-                            <rect width="32" height="16" fill="#00838F" />
-                            <rect x="4" y="4" width="8" height="2" fill="#26a6b0" />
-                            <rect x="20" y="11" width="8" height="2" fill="#26a6b0" />
-                        </pattern>
-                        <pattern id="p-roof" width="8" height="8" patternUnits="userSpaceOnUse">
-                            <rect width="8" height="8" fill="#A64B2A" />
-                            <rect y="6" width="8" height="2" fill="#7f3a20" />
-                            <rect x="3" width="2" height="6" fill="#8f4024" />
-                        </pattern>
-                    </defs>
-
-                    <!-- Nền cỏ -->
-                    <rect width="640" height="360" fill="url(#p-grass)" />
-
-                    <!-- Ruộng lúa xanh và lúa chín OCOP -->
-                    <rect x="400" y="0" width="120" height="96" fill="url(#p-paddy)" />
-                    <rect x="524" y="0" width="116" height="96" fill="url(#p-ripe)" />
-                    <rect x="520" y="0" width="4" height="96" fill="#8D6E63" />
-                    <rect x="400" y="46" width="240" height="4" fill="#8D6E63" />
-                    <rect x="400" y="96" width="240" height="4" fill="#8D6E63" />
-
-                    <!-- Đường đá và vạch xe điện -->
-                    <rect x="0" y="184" width="640" height="28" fill="url(#p-cobble)" />
-                    <rect x="304" y="0" width="28" height="300" fill="url(#p-cobble)" />
-                    <rect x="0" y="197" width="304" height="3" fill="#1565C0" opacity=".55" />
-                    <rect x="332" y="197" width="308" height="3" fill="#1565C0" opacity=".55" />
-
-                    <!-- Sông Hoài -->
-                    <rect x="0" y="296" width="640" height="4" fill="#78909C" />
-                    <rect x="0" y="300" width="640" height="60" fill="url(#p-water)" />
-
-                    <!-- Cây xanh nhỏ -->
-                    <rect x="254" y="44" width="4" height="12" fill="#6d4c41" />
-                    <circle cx="256" cy="38" r="12" fill="#388e3c" />
-                    <rect x="366" y="126" width="4" height="12" fill="#6d4c41" />
-                    <circle cx="368" cy="120" r="12" fill="#388e3c" />
-                    <rect x="256" y="148" width="4" height="12" fill="#6d4c41" />
-                    <circle cx="258" cy="142" r="11" fill="#43a047" />
-
-                    <!-- Cây đa làng -->
-                    <ellipse cx="112" cy="162" rx="62" ry="9" fill="#4e9a48" />
-                    <rect x="100" y="104" width="22" height="58" fill="#6d4c41" />
-                    <rect x="92" y="152" width="8" height="10" fill="#6d4c41" />
-                    <rect x="122" y="152" width="8" height="10" fill="#6d4c41" />
-                    <circle cx="111" cy="78" r="56" fill="#2e7d32" />
-                    <circle cx="74" cy="88" r="32" fill="#388e3c" />
-                    <circle cx="150" cy="86" r="32" fill="#388e3c" />
-                    <circle cx="110" cy="56" r="34" fill="#43a047" />
-                    <rect x="84" y="112" width="3" height="28" fill="#5d4037" />
-                    <rect x="140" y="110" width="3" height="32" fill="#5d4037" />
-
-                    <!-- Trạm sạc xe điện có mái pin mặt trời -->
-                    <rect x="170" y="120" width="40" height="6" fill="#0d47a1" />
-                    <rect x="172" y="126" width="3" height="38" fill="#78909C" />
-                    <rect x="205" y="126" width="3" height="38" fill="#78909C" />
-                    <rect x="181" y="132" width="16" height="32" fill="#1565C0" />
-                    <rect x="184" y="136" width="10" height="8" fill="#e3f2fd" />
-                    <rect x="187" y="147" width="4" height="10" fill="#FFC107" />
-                    <rect x="214" y="152" width="22" height="6" fill="#26a69a" />
-                    <rect x="231" y="142" width="3" height="10" fill="#37474f" />
-                    <rect x="212" y="158" width="6" height="6" fill="#263238" />
-                    <rect x="230" y="158" width="6" height="6" fill="#263238" />
-
-                    <!-- Quán cà phê view đồng lúa & OCOP -->
-                    <rect x="444" y="112" width="104" height="16" fill="url(#p-roof)" />
-                    <rect x="456" y="114" width="36" height="10" fill="#1565C0" />
-                    <rect x="500" y="114" width="36" height="10" fill="#1565C0" />
-                    <rect x="473" y="114" width="2" height="10" fill="#90caf9" />
-                    <rect x="517" y="114" width="2" height="10" fill="#90caf9" />
-                    <rect x="452" y="128" width="88" height="42" fill="#8D6E63" />
-                    <rect x="468" y="130" width="56" height="8" fill="#FFC107" />
-                    <text x="496" y="136.5" font-size="6.5" text-anchor="middle" fill="#4e342e" font-family="monospace" font-weight="700">OCOP CAFE</text>
-                    <rect x="460" y="142" width="20" height="13" fill="#fff59d" />
-                    <rect x="512" y="142" width="20" height="13" fill="#fff59d" />
-                    <rect x="489" y="146" width="14" height="24" fill="#4e342e" />
-                    <rect x="562" y="148" width="4" height="22" fill="#5d4037" />
-                    <rect x="550" y="142" width="28" height="6" fill="#E91E63" />
-                    <rect x="554" y="166" width="20" height="4" fill="#8D6E63" />
-
-                    <!-- Phố cổ Hội An: nhà vàng, mái ngói, hoa giấy và tiệm may áo dài -->
-                    <rect x="24" y="240" width="72" height="52" fill="#FBC02D" />
-                    <rect x="18" y="226" width="84" height="16" fill="url(#p-roof)" />
-                    <rect x="34" y="252" width="14" height="16" fill="#2e7d32" />
-                    <rect x="72" y="252" width="14" height="16" fill="#2e7d32" />
-                    <rect x="52" y="266" width="16" height="26" fill="#6d4c41" />
-
-                    <rect x="104" y="236" width="80" height="56" fill="#fdd835" />
-                    <rect x="98" y="222" width="92" height="16" fill="url(#p-roof)" />
-                    <rect x="116" y="241" width="56" height="10" fill="#c62828" />
-                    <text x="144" y="248.5" font-size="7" text-anchor="middle" fill="#fff" font-family="monospace" font-weight="700">ÁO DÀI</text>
-                    <rect x="110" y="256" width="24" height="26" fill="#fff8e1" />
-                    <rect x="119" y="258" width="6" height="4" fill="#ffcc80" />
-                    <rect x="118" y="262" width="8" height="20" fill="#E91E63" />
-                    <rect x="138" y="262" width="12" height="30" fill="#6d4c41" />
-                    <rect x="154" y="256" width="24" height="26" fill="#fff8e1" />
-                    <rect x="163" y="258" width="6" height="4" fill="#ffcc80" />
-                    <rect x="162" y="262" width="8" height="20" fill="#1565C0" />
-
-                    <rect x="192" y="240" width="72" height="52" fill="#FBC02D" />
-                    <rect x="186" y="226" width="84" height="16" fill="url(#p-roof)" />
-                    <rect x="202" y="252" width="14" height="16" fill="#2e7d32" />
-                    <rect x="240" y="252" width="14" height="16" fill="#2e7d32" />
-                    <rect x="220" y="266" width="16" height="26" fill="#6d4c41" />
-
-                    <rect x="16" y="222" width="8" height="8" fill="#E91E63" />
-                    <rect x="22" y="230" width="6" height="6" fill="#f48fb1" />
-                    <rect x="94" y="220" width="8" height="8" fill="#E91E63" />
-                    <rect x="186" y="220" width="8" height="8" fill="#E91E63" />
-                    <rect x="192" y="228" width="6" height="6" fill="#f48fb1" />
-                    <rect x="264" y="224" width="8" height="8" fill="#E91E63" />
-                    <rect x="258" y="232" width="6" height="6" fill="#f48fb1" />
-
-                    <!-- Xưởng lồng đèn thủ công -->
-                    <rect x="414" y="242" width="182" height="50" fill="#d7ccc8" />
-                    <rect x="398" y="228" width="212" height="14" fill="#8D6E63" />
-                    <rect x="398" y="234" width="212" height="2" fill="#a1887f" />
-                    <rect x="408" y="242" width="6" height="50" fill="#5d4037" />
-                    <rect x="502" y="242" width="6" height="50" fill="#5d4037" />
-                    <rect x="596" y="242" width="6" height="50" fill="#5d4037" />
-                    <rect x="404" y="244" width="200" height="2" fill="#3e2723" />
-                    <rect x="422" y="246" width="10" height="12" fill="#FF6F00" />
-                    <rect x="442" y="246" width="10" height="12" fill="#E91E63" />
-                    <rect x="462" y="246" width="10" height="12" fill="#FBC02D" />
-                    <rect x="482" y="246" width="10" height="12" fill="#c62828" />
-                    <rect x="518" y="246" width="10" height="12" fill="#FF6F00" />
-                    <rect x="538" y="246" width="10" height="12" fill="#1565C0" />
-                    <rect x="558" y="246" width="10" height="12" fill="#E91E63" />
-                    <rect x="578" y="246" width="10" height="12" fill="#FBC02D" />
-                    <rect x="440" y="278" width="124" height="8" fill="#8D6E63" />
-                    <rect x="452" y="266" width="12" height="12" fill="none" stroke="#c8a165" stroke-width="2" />
-                    <rect x="476" y="266" width="12" height="12" fill="#ffab40" />
-                    <rect x="536" y="266" width="12" height="12" fill="none" stroke="#c8a165" stroke-width="2" />
-
-                    <!-- Cầu mái ngói bắc qua sông -->
-                    <rect x="298" y="298" width="40" height="62" fill="#8D6E63" />
-                    <rect x="294" y="306" width="48" height="38" fill="url(#p-roof)" />
-
-                    <!-- Hoa đăng và thuyền điện trên sông Hoài -->
-                    <rect x="40" y="324" width="8" height="8" fill="#FF6F00" />
-                    <rect x="42" y="326" width="4" height="4" fill="#fff59d" />
-                    <rect x="112" y="340" width="8" height="8" fill="#FF6F00" />
-                    <rect x="114" y="342" width="4" height="4" fill="#fff59d" />
-                    <rect x="186" y="318" width="8" height="8" fill="#E91E63" />
-                    <rect x="188" y="320" width="4" height="4" fill="#fff59d" />
-                    <rect x="384" y="336" width="8" height="8" fill="#FF6F00" />
-                    <rect x="386" y="338" width="4" height="4" fill="#fff59d" />
-                    <rect x="600" y="320" width="8" height="8" fill="#FF6F00" />
-                    <rect x="602" y="322" width="4" height="4" fill="#fff59d" />
-                    <rect x="470" y="324" width="72" height="12" fill="#6d4c41" />
-                    <rect x="478" y="314" width="52" height="5" fill="#1565C0" />
-                    <rect x="482" y="319" width="3" height="5" fill="#3e2723" />
-                    <rect x="524" y="319" width="3" height="5" fill="#3e2723" />
-                </svg>
-                <div id="hotspots" class="hotspots"></div>
-            </div>
-
-            <div id="map-summary" class="map-summary" aria-live="polite"></div>
-
-            <h2 class="section-title">Các điểm hẹn</h2>
-            <div id="spot-list" class="spot-list"></div>
-
-            <section class="how" aria-labelledby="how-title">
-                <h2 id="how-title" class="section-title">Cách chơi</h2>
-                <ul>
-                    <li>Mỗi cuộc trò chuyện có 3 lượt: ghép cụm từ hoặc chọn đáp án, viết câu trả lời, và nói.</li>
-                    <li>Trả lời đúng ngay lần đầu để nhận đủ XP và tăng 🔥 combo. Làm lại vẫn được một nửa số XP.</li>
-                    <li>🍵 Trà Đá dùng để mở gợi ý nghĩa từ ở lượt viết. Hoàn thành một du khách được thưởng thêm Trà Đá.</li>
-                    <li>Lượt nói cần micro và trình duyệt Chrome hoặc Edge. Nếu không nói được, chọn <b>⌨️ Gõ câu trả lời</b>, vẫn được tính điểm.</li>
-                </ul>
-                <button id="btn-reset" class="link-btn" type="button" hidden>↺ Chơi lại từ đầu</button>
-            </section>
+            <nav class="toolbar" aria-label="Công cụ">
+                <button id="btn-quests" class="tool" type="button">🎯<span>Nhiệm vụ</span></button>
+                <button id="btn-words" class="tool" type="button">📒<span>Sổ từ</span></button>
+                <button id="btn-booklets" class="tool" type="button">📘<span>Booklets</span></button>
+                <button id="btn-boss" class="tool" type="button">⚔️<span>Boss</span><i class="badge"></i></button>
+                <button id="btn-profile" class="tool" type="button">👤<span>Hồ sơ</span></button>
+                <button id="btn-labels" class="tool" type="button" aria-pressed="true">🏷️<span>Nhãn từ</span></button>
+            </nav>
+            <p class="controls-hint">
+                <b>Đi lại:</b> chạm mặt đường hoặc phím mũi tên/WASD ·
+                <b>Khám phá từ:</b> chạm vật thể lấp lánh ✦ ·
+                <b>Nhiệm vụ:</b> chạm du khách có dấu <span class="mark">!</span> ·
+                <b>Tương tác:</b> Space/Enter
+            </p>
         </section>
 
-        <!-- Màn trò chuyện (do js/game.js dựng) -->
-        <section id="view-chat" class="chat" hidden></section>
+        <section class="legend" aria-label="Chú thích">
+            <span><i class="sw known"></i> Từ đã biết (Known)</span>
+            <span><i class="sw unknown"></i> Từ cần học (Unknown)</span>
+            <span><i class="sw seen"></i> Từ đã gặp</span>
+            <span>🔋 Battery Pack · 📘 Booklet · ⚡ Trạm sạc mặt trời (Phố Lồng Đèn)</span>
+        </section>
     </main>
 
+    <div id="sheet" class="sheet" hidden>
+        <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+            <div class="sheet-head">
+                <h2 id="sheet-title"></h2>
+                <button id="sheet-close" class="icon-btn" type="button" aria-label="Đóng">✕</button>
+            </div>
+            <div id="sheet-body" class="sheet-body"></div>
+        </div>
+    </div>
+
+    <script src="js/world.js" defer></script>
+    <script src="js/engine.js" defer></script>
+    <script src="js/core.js" defer></script>
     <script src="js/game.js" defer></script>
 </body>
 

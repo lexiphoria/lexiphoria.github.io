@@ -1,0 +1,120 @@
+{
+  "version": "3.0",
+  "description": "Sách hướng dẫn ngữ pháp (Booklets) giấu quanh bản đồ. Vị trí đặt trong js/world.js theo 'id'.",
+  "booklets": [
+    {
+      "id": "bk_passive",
+      "icon": "🏛️",
+      "title": "Câu bị động: giới thiệu di sản và sản phẩm",
+      "title_en": "The Passive Voice",
+      "where": "Phố cổ, cạnh nhà cổ Tấn Ký",
+      "rule": "Dùng câu bị động khi muốn nhấn mạnh sự vật (ngôi nhà, chiếc đèn, món ăn) hơn là người làm ra nó. Cấu trúc: S + be + V3/V-ed (+ by …).",
+      "patterns": [
+        { "form": "It is made of + chất liệu", "note": "nói chất liệu làm ra đồ vật" },
+        { "form": "It was built + thời gian", "note": "nói thời điểm xây dựng (quá khứ)" },
+        { "form": "It is served / grown / handmade + …", "note": "giới thiệu món ăn, nông sản, đồ thủ công" }
+      ],
+      "examples": [
+        { "en": "This ancient house was built more than 200 years ago.", "vi": "Ngôi nhà cổ này được xây hơn 200 năm trước." },
+        { "en": "The lantern is made of bamboo and silk.", "vi": "Chiếc đèn lồng được làm từ tre và lụa." },
+        { "en": "Cao lầu is served with herbal greens.", "vi": "Cao lầu được ăn kèm rau thơm." }
+      ],
+      "check": [
+        { "q": "The lanterns in this shop ___ by local artisans.", "options": ["are made", "make", "are making", "made"], "answer": 0, "explain": "Đèn lồng không tự làm ra mình → bị động hiện tại: are made." },
+        { "q": "Tan Ky House ___ more than 200 years ago.", "options": ["is built", "was built", "built", "has built"], "answer": 1, "explain": "Có mốc quá khứ (200 years ago) → bị động quá khứ: was built." }
+      ]
+    },
+    {
+      "id": "bk_arrange",
+      "icon": "🕔",
+      "title": "Hẹn giờ và kế hoạch",
+      "title_en": "Arrangements and Time",
+      "where": "Phố cổ, trước tiệm may áo dài",
+      "rule": "will + V để hứa hẹn, thông báo (It will be ready…). Hiện tại tiếp diễn để nói lịch đã sắp xếp (I'm leaving tomorrow). Giới từ thời gian: at + giờ, on + thứ/ngày, in + buổi (in the afternoon), by + hạn chót.",
+      "patterns": [
+        { "form": "It will be ready at / by + giờ", "note": "hẹn giờ giao hàng, trả đồ" },
+        { "form": "S + am/is/are + V-ing + thời gian tương lai", "note": "lịch đã chốt (vé, chuyến đi)" },
+        { "form": "Please come back at + giờ / this afternoon", "note": "hẹn khách quay lại" }
+      ],
+      "examples": [
+        { "en": "Your áo dài will be ready by 8 a.m. tomorrow.", "vi": "Áo dài của bạn sẽ xong trước 8 giờ sáng mai." },
+        { "en": "I'm leaving Hoi An tomorrow evening.", "vi": "Tối mai mình rời Hội An." },
+        { "en": "Please come back at 5 p.m. for your first fitting.", "vi": "Mời bạn quay lại lúc 5 giờ chiều để thử áo lần đầu." }
+      ],
+      "check": [
+        { "q": "Your dress will be ready ___ 5 p.m.", "options": ["at", "on", "in", "for"], "answer": 0, "explain": "Trước giờ cụ thể dùng at." },
+        { "q": "I ___ Hoi An tomorrow morning. My bus ticket is booked.", "options": ["leave", "am leaving", "will leaving", "left"], "answer": 1, "explain": "Kế hoạch đã sắp xếp (đã đặt vé) → hiện tại tiếp diễn: am leaving." }
+      ]
+    },
+    {
+      "id": "bk_suggest",
+      "icon": "🍜",
+      "title": "Gợi ý và mời lịch sự",
+      "title_en": "Polite Offers and Suggestions",
+      "where": "Khu ẩm thực, cạnh bảng thực đơn",
+      "rule": "Local Host hay phải mời và gợi ý cho khách. Chú ý dạng động từ đi sau mỗi cấu trúc.",
+      "patterns": [
+        { "form": "Would you like + to V / N?", "note": "mời lịch sự" },
+        { "form": "Why don't you + V?", "note": "gợi ý thân thiện" },
+        { "form": "I'd recommend + V-ing / N", "note": "khuyên dùng, giới thiệu" },
+        { "form": "How about + V-ing?", "note": "rủ rê" }
+      ],
+      "examples": [
+        { "en": "Would you like to try cao lầu?", "vi": "Bạn có muốn ăn thử cao lầu không?" },
+        { "en": "I'd recommend adding some herbal greens.", "vi": "Mình khuyên bạn cho thêm ít rau thơm." },
+        { "en": "Why don't you visit Tra Que village tomorrow?", "vi": "Sao bạn không ghé làng Trà Quế vào ngày mai?" },
+        { "en": "How about taking a night cruise?", "vi": "Hay mình đi du thuyền đêm nhé?" }
+      ],
+      "check": [
+        { "q": "I'd recommend ___ the bánh mì with the secret sauce.", "options": ["try", "trying", "to try", "tried"], "answer": 1, "explain": "recommend + V-ing." },
+        { "q": "Why don't you ___ the Japanese Covered Bridge?", "options": ["visit", "visiting", "to visit", "visited"], "answer": 0, "explain": "Why don't you + động từ nguyên mẫu không to." }
+      ]
+    },
+    {
+      "id": "bk_steps",
+      "icon": "🪜",
+      "title": "Hướng dẫn từng bước",
+      "title_en": "Giving Step-by-step Instructions",
+      "where": "Phố lồng đèn, trên bàn xưởng thủ công",
+      "rule": "Dùng câu mệnh lệnh (động từ nguyên mẫu đứng đầu câu) kèm từ nối chỉ trình tự: First → Next / Then → After that → Finally. Thêm carefully, gently để nói cách làm; Don't + V để nhắc điều cần tránh.",
+      "patterns": [
+        { "form": "First, + V …", "note": "bước đầu tiên" },
+        { "form": "Next, / Then, / After that, + V …", "note": "các bước giữa" },
+        { "form": "Finally, + V …", "note": "bước cuối" },
+        { "form": "Don't + V …", "note": "nhắc điều cần tránh" }
+      ],
+      "examples": [
+        { "en": "First, bend the bamboo sticks to make the frame.", "vi": "Đầu tiên, uốn các thanh tre để làm khung." },
+        { "en": "Next, put glue on the frame.", "vi": "Tiếp theo, quét keo lên khung." },
+        { "en": "Then, stretch the silk fabric gently.", "vi": "Sau đó, căng tấm lụa thật nhẹ tay." },
+        { "en": "Finally, add a tassel at the bottom.", "vi": "Cuối cùng, gắn tua rua ở đáy đèn." }
+      ],
+      "check": [
+        { "q": "___, add a tassel at the bottom. Your lantern is ready!", "options": ["First", "Finally", "Next", "Before"], "answer": 1, "explain": "Bước cuối cùng → Finally." },
+        { "q": "___ touch the glue until it is dry.", "options": ["Don't", "Not", "No", "Doesn't"], "answer": 0, "explain": "Câu mệnh lệnh phủ định: Don't + V." }
+      ]
+    },
+    {
+      "id": "bk_relative",
+      "icon": "🔗",
+      "title": "Mệnh đề quan hệ: giải thích thêm cho khách",
+      "title_en": "Relative Clauses: who, which, where",
+      "where": "Bến thuyền sông Hoài",
+      "rule": "Dùng who cho người, which/that cho vật, where cho nơi chốn để nối hai ý và giải thích thêm cho khách mà không phải nói nhiều câu ngắn.",
+      "patterns": [
+        { "form": "N (người) + who + V …", "note": "người làm việc gì" },
+        { "form": "N (vật) + which/that + V …", "note": "đồ vật, món ăn có đặc điểm gì" },
+        { "form": "N (nơi chốn) + where + S + V …", "note": "nơi diễn ra việc gì" }
+      ],
+      "examples": [
+        { "en": "Cao lầu is a noodle dish which is made with water from the Ba Le well.", "vi": "Cao lầu là món mì được làm bằng nước giếng Bá Lễ." },
+        { "en": "Tra Que is the village where these herbal greens are grown.", "vi": "Trà Quế là ngôi làng trồng những loại rau thơm này." },
+        { "en": "The volunteers who collect the lanterns keep the river clean.", "vi": "Những tình nguyện viên vớt hoa đăng giữ cho dòng sông sạch." }
+      ],
+      "check": [
+        { "q": "Hoi An is a town ___ old traditions are carefully protected.", "options": ["which", "who", "where", "when"], "answer": 2, "explain": "Nơi chốn (a town) + mệnh đề đủ chủ ngữ → where." },
+        { "q": "The artisan ___ made this lantern has worked here for 30 years.", "options": ["who", "which", "where", "whose"], "answer": 0, "explain": "Chỉ người (the artisan) và làm chủ ngữ → who." }
+      ]
+    }
+  ]
+}

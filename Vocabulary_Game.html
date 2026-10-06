@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/vocabulary_game.css?v=1.0.4">
+  <link rel="stylesheet" href="css/vocabulary_game.css?v=1.0.5">
   <link rel="stylesheet" href="css/boss_battle.css?v=1.0.0">
 </head>
 <body>
@@ -36,7 +36,7 @@
         <div class="stat-item">
           <span class="stat-icon">🎓</span>
           <span id="global-learned-count" class="stat-val">0/37</span>
-          <span class="stat-label">Words learned</span>
+          <span class="stat-label">Words mastered</span>
         </div>
         <div class="stat-item">
           <span class="stat-icon">🔥</span>
@@ -187,10 +187,11 @@
       </div>
 
       <!-- Filters for Flashcards -->
-      <div style="display: flex; gap: 8px; justify-content: center; margin-bottom: 20px;">
-        <button id="filter-all" class="btn-spelling-hint" style="color: #fff; background: rgba(139, 92, 246, 0.2); border-color: var(--theme-purple);" onclick="setCardFilter('all')">All</button>
-        <button id="filter-unlearned" class="btn-spelling-hint" onclick="setCardFilter('unlearned')">Not learned</button>
-        <button id="filter-learned" class="btn-spelling-hint" onclick="setCardFilter('learned')">Learned</button>
+      <div class="card-filter-row">
+        <button class="btn-spelling-hint card-filter-btn" data-filter="all" onclick="setCardFilter('all')">All</button>
+        <button class="btn-spelling-hint card-filter-btn" data-filter="review" onclick="setCardFilter('review')">🔁 Review <span id="filter-review-count"></span></button>
+        <button class="btn-spelling-hint card-filter-btn" data-filter="unlearned" onclick="setCardFilter('unlearned')">Not mastered</button>
+        <button class="btn-spelling-hint card-filter-btn" data-filter="learned" onclick="setCardFilter('learned')">✅ Mastered <span id="filter-learned-count"></span></button>
       </div>
 
       <!-- 3D Card Area -->
@@ -198,14 +199,17 @@
         <div class="flashcard" id="study-card" onclick="toggleCardFlip()">
           <!-- Card Front -->
           <div class="card-face card-front">
-            <span class="word-type" id="card-front-type">n</span>
+            <span class="card-srs-badge" id="card-srs-badge"></span>
+            <div class="word-icon" id="card-front-icon" aria-hidden="true">🏷️</div>
+            <span class="word-type" id="card-front-type">noun</span>
             <h2 class="word-term" id="card-front-word">account</h2>
             <div class="word-ipa" id="card-front-ipa">/ə'kaʊnt/</div>
-            
-            <button class="btn-speak" id="btn-card-audio" onclick="triggerSpeech(event)">
-              🔊 Listen
-            </button>
-            
+
+            <div class="audio-row" id="card-audio-row">
+              <button class="btn-speak" onclick="triggerSpeech(event, 'en-US')" title="American English">🔊 US</button>
+              <button class="btn-speak" onclick="triggerSpeech(event, 'en-GB')" title="British English">🔊 UK</button>
+            </div>
+
             <div class="card-hint">
               <span>💡 Tap the card to see the meaning and example</span>
             </div>
@@ -214,30 +218,33 @@
           <!-- Card Back -->
           <div class="card-face card-back">
             <h3 class="word-meaning" id="card-back-meaning">câu chuyện, lời tường thuật</h3>
-            
+            <p class="word-definition" id="card-back-definition"></p>
+
             <div class="example-container">
               <div class="example-title">Example:</div>
               <p class="example-en" id="card-back-example-en">She gave the police a full account of the incident.</p>
               <p class="example-vi" id="card-back-example-vi">Cô kể cho cảnh sát toàn bộ sự việc.</p>
             </div>
-            
-            <div class="card-hint">
+
+            <div class="word-relations" id="card-back-relations"></div>
+
+            <div class="card-hint card-hint-inline">
               <span>🔄 Tap to flip back</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Navigation for Flashcards -->
+      <!-- Navigation + spaced repetition rating -->
       <div class="flashcard-controls">
-        <button class="btn-nav-card" id="btn-prev-card" onclick="prevCard()">←</button>
+        <button class="btn-nav-card" id="btn-prev-card" onclick="prevCard()" aria-label="Previous card">←</button>
         <div class="flashcard-action-bar">
-          <button class="btn-learn-status btn-unlearned" id="btn-toggle-learned" onclick="toggleWordLearnedState()">
-            ⭐ Mark as learned
-          </button>
+          <button class="btn-srs btn-srs-review" id="btn-srs-review" onclick="rateCard('review')">🔁 Review</button>
+          <button class="btn-srs btn-srs-mastered" id="btn-srs-mastered" onclick="rateCard('mastered')">✅ Mastered</button>
         </div>
-        <button class="btn-nav-card" id="btn-next-card" onclick="nextCard()">→</button>
+        <button class="btn-nav-card" id="btn-next-card" onclick="nextCard()" aria-label="Next card">→</button>
       </div>
+      <p class="srs-hint">Bấm <strong>Review</strong> nếu chưa nhớ – thẻ sẽ hiện ở đầu danh sách trong lần học sau. Bấm <strong>Mastered</strong> khi đã thuộc.</p>
     </div>
 
     <!-- 4. MULTIPLE CHOICE SCREEN -->
@@ -355,7 +362,7 @@
           <summary>📜 How to Play</summary>
           <ul>
             <li>👾 Từ bạn trả lời sai ở <strong>Meaning Quiz</strong>, <strong>Sentence Completion</strong> hoặc khi <strong>Patrol</strong> (tuần tra) sẽ hóa thành boss.</li>
-            <li>⭐ Mỗi ngày, mỗi boss chỉ nhận tối đa 1 đòn. Đánh trúng vào 3 ngày khác nhau để <strong>Seal</strong> (phong ấn) vĩnh viễn – từ đó tự động được tính là <strong>Learned</strong> (đã thuộc).</li>
+            <li>⭐ Mỗi ngày, mỗi boss chỉ nhận tối đa 1 đòn. Đánh trúng vào 3 ngày khác nhau để <strong>Seal</strong> (phong ấn) vĩnh viễn – từ đó tự động được tính là <strong>Mastered</strong> (đã thuộc).</li>
             <li>⚔️ Đòn càng về sau càng khó: <strong>Pick the meaning</strong> → <strong>Pick the word</strong> → <strong>Type the word</strong> (Finishing Blow – đòn kết liễu).</li>
             <li>❤️ Bạn có 3 tim. Trả lời sai: mất 1 tim và boss hồi 1 sao. Đúng 3 câu liên tiếp: nhận <strong>Potion</strong> (bình máu) và tung đòn <strong>Critical</strong> (chí mạng).</li>
           </ul>
@@ -489,6 +496,7 @@
 
   <!-- Script data file -->
   <script src="js/vocabulary_data.js?v=1.0.3"></script>
+  <script src="js/vocabulary_extras.js?v=1.0.0"></script>
 
   <!-- Main Game logic script -->
   <script>
@@ -816,34 +824,189 @@
       }
     }
 
+    // Part-of-speech labels and icons shown on the card front
+    const WORD_TYPE_INFO = {
+      'n': { label: 'noun', icon: '🏷️' },
+      'v': { label: 'verb', icon: '🏃' },
+      'adj': { label: 'adjective', icon: '🎨' },
+      'adv': { label: 'adverb', icon: '⏱️' },
+      'phrase': { label: 'phrase', icon: '💬' },
+      'np': { label: 'noun phrase', icon: '🧩' },
+      'n.phr': { label: 'noun phrase', icon: '🧩' }
+    };
+
+    function describeWordType(type) {
+      const parts = String(type || '').split('/').map(p => p.trim()).filter(Boolean);
+      const infos = parts.map(p => WORD_TYPE_INFO[p] || { label: p, icon: '📘' });
+      if (!infos.length) return { label: '', icon: '📘' };
+      return { label: infos.map(i => i.label).join(' / '), icon: infos[0].icon };
+    }
+
+    function getReviewStore() {
+      if (!progress.review) progress.review = {}; // { 'ourLife_account': timestamp }
+      return progress.review;
+    }
+
+    function cardKey(wordData) {
+      return `${currentTopic}_${wordData.word}`;
+    }
+
+    // --- Example highlighting ---
+    // Words inside a phrase that are placeholders and should not be matched
+    const HL_SKIP = new Set(['be', 'something', 'someone', 'sth', 'sb', "one's", '(doing)']);
+    // Small words matched exactly (no stemming)
+    const HL_EXACT = new Set(['a', 'an', 'the', 'to', 'for', 'with', 'up', 'out', 'off', 'of', 'in', 'on', 'it', 'all', 'from', 'away', 'around', 'across', 'down', 'over', 'into', 'and', 'box', 'outside']);
+    const HL_IRREGULAR = {
+      make: 'mak(?:e|es|ing)|made',
+      grow: 'grow(?:s|ing|n)?|grew',
+      come: 'com(?:e|es|ing)|came',
+      overcome: 'overcom(?:e|es|ing)|overcame',
+      think: 'think(?:s|ing)?|thought',
+      get: 'get(?:s|ting)?|got|gotten',
+      go: 'go(?:es|ing|ne)?|went',
+      give: 'giv(?:e|es|ing|en)|gave',
+      take: 'tak(?:e|es|ing|en)|took',
+      break: 'break(?:s|ing)?|broke|broken',
+      bring: 'bring(?:s|ing)?|brought',
+      tell: 'tell(?:s|ing)?|told',
+      have: 'ha(?:ve|s|d|ving)',
+      do: 'do(?:es|ing|ne)?|did',
+      catch: 'catch(?:es|ing)?|caught',
+      bear: 'bear(?:s|ing)?|bore|borne',
+      pay: 'pay(?:s|ing)?|paid',
+      keep: 'keep(?:s|ing)?|kept',
+      hold: 'hold(?:s|ing)?|held',
+      find: 'find(?:s|ing)?|found',
+      lose: 'los(?:e|es|ing)|lost',
+      leave: 'leav(?:e|es|ing)|left',
+      run: 'run(?:s|ning)?|ran',
+      see: 'se(?:e|es|eing|en)|saw',
+      say: 'say(?:s|ing)?|said',
+      throw: 'throw(?:s|ing|n)?|threw',
+      fall: 'fall(?:s|ing|en)?|fell'
+    };
+
+    function escapeRegExp(text) {
+      return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    function highlightTokenPattern(token) {
+      const t = token.toLowerCase();
+      if (HL_IRREGULAR[t]) return `(?:${HL_IRREGULAR[t]})`;
+      if (HL_EXACT.has(t) || t.length <= 3) return `${escapeRegExp(t)}(?:s|ed|ing)?`;
+      // Strip an inflection, then a final e/y, so "maintaining" matches "maintain", "admire" matches "admired"
+      const stem = t.replace(/(ing|ed|es|s)$/, '').replace(/(e|y)$/, '');
+      return `${escapeRegExp(stem.length >= 3 ? stem : t)}[\\w-]*`;
+    }
+
+    function escapeHtmlText(text) {
+      // Quotes are fine: the result only goes into element text
+      return String(text || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function phraseTokens(variant) {
+      return variant.split(/\s+/)
+        .map(t => t.replace(/^["'“”]+|["'“”,.]+$/g, ''))
+        .filter(t => t && !HL_SKIP.has(t.toLowerCase()));
+    }
+
+    function highlightExample(example, word) {
+      let html = escapeHtmlText(example);
+      const raw = String(word || '');
+      // "bed and breakfast (B&B)" -> ["bed and breakfast", "B&B"]; "delicious = tasty" -> ["delicious", "tasty"]
+      const variants = raw.replace(/\([^)]*\)/g, ' ').split(/[\/=]/).map(v => v.trim()).filter(Boolean);
+      const abbreviation = raw.match(/\(([^)]+)\)/);
+      if (abbreviation) variants.push(abbreviation[1].trim());
+
+      const mark = regex => {
+        const next = html.replace(regex, m => `<mark>${m}</mark>`);
+        const changed = next !== html;
+        html = next;
+        return changed;
+      };
+
+      let matched = false;
+      variants.forEach(variant => {
+        const tokens = phraseTokens(variant);
+        if (!tokens.length) return;
+        // Allow up to two extra words between tokens ("broadened my horizons", "makes the bed")
+        const pattern = tokens.map(highlightTokenPattern).join("(?:[\\s,']+[\\w'-]+){0,2}?[\\s,']+");
+        if (mark(new RegExp(`\\b(?:${pattern})\\b`, 'gi'))) matched = true;
+      });
+
+      // Fallback for phrases that appear in a different form: highlight their content words one by one
+      if (!matched) {
+        const contentWords = variants.flatMap(phraseTokens)
+          .flatMap(t => t.split('-'))            // "Push-Pull" -> "Push", "Pull"
+          .filter(t => t && !HL_EXACT.has(t.toLowerCase()));
+        contentWords.forEach(t => mark(new RegExp(`\\b${highlightTokenPattern(t)}\\b`, 'gi')));
+      }
+      return html;
+    }
+
+    // Some phrasal-verb examples are stored with a blank; show them with the answer filled in
+    function renderExample(wordData) {
+      const example = String(wordData.example || '');
+      if (/_{3,}/.test(example) && Array.isArray(wordData.options) && wordData.answer) {
+        const answer = wordData.options[wordData.answer.charCodeAt(0) - 65];
+        if (answer) return escapeHtmlText(example).replace(/_{3,}/, `<mark>${escapeHtmlText(answer)}</mark>`);
+      }
+      return highlightExample(example, wordData.word);
+    }
+
+    function renderWordRelations(wordData) {
+      const rows = [
+        ['Synonyms', wordData.synonyms, 'syn'],
+        ['Antonyms', wordData.antonyms, 'ant'],
+        ['Collocations', wordData.collocations, 'coll']
+      ].filter(([, list]) => Array.isArray(list) && list.length);
+
+      return rows.map(([label, list, cls]) => `
+        <div class="relation-row">
+          <span class="relation-label">${label}</span>
+          <span class="relation-chips">${list.map(item => `<span class="relation-chip ${cls}">${escapeHtmlText(item)}</span>`).join('')}</span>
+        </div>`).join('');
+    }
+
     // --- Mode 1: Flashcards logic ---
     function setupFlashcardMode() {
       const fullList = vocabularyData[currentTopic];
-      
+      const review = getReviewStore();
+      const isReview = w => !!review[cardKey(w)];
+      const isMastered = w => !!progress.learned[cardKey(w)];
+
       // Apply filters
-      if (cardFilter === 'all') {
-        currentWordsList = [...fullList];
+      let list;
+      if (cardFilter === 'review') {
+        list = fullList.filter(isReview);
       } else if (cardFilter === 'unlearned') {
-        currentWordsList = fullList.filter(w => !progress.learned[`${currentTopic}_${w.word}`]);
+        list = fullList.filter(w => !isMastered(w));
       } else if (cardFilter === 'learned') {
-        currentWordsList = fullList.filter(w => !!progress.learned[`${currentTopic}_${w.word}`]);
+        list = fullList.filter(isMastered);
+      } else {
+        list = [...fullList];
       }
 
-      // Update toggle filters active styles
-      document.getElementById('filter-all').style.background = cardFilter === 'all' ? 'rgba(139, 92, 246, 0.2)' : 'rgba(255, 255, 255, 0.04)';
-      document.getElementById('filter-all').style.borderColor = cardFilter === 'all' ? 'var(--theme-purple)' : 'rgba(255, 255, 255, 0.06)';
-      document.getElementById('filter-all').style.color = cardFilter === 'all' ? '#fff' : 'var(--muted)';
-      
-      document.getElementById('filter-unlearned').style.background = cardFilter === 'unlearned' ? 'rgba(139, 92, 246, 0.2)' : 'rgba(255, 255, 255, 0.04)';
-      document.getElementById('filter-unlearned').style.borderColor = cardFilter === 'unlearned' ? 'var(--theme-purple)' : 'rgba(255, 255, 255, 0.06)';
-      document.getElementById('filter-unlearned').style.color = cardFilter === 'unlearned' ? '#fff' : 'var(--muted)';
+      // Spaced repetition: cards marked "Review" come first, oldest mark first
+      const flagged = list.filter(isReview).sort((a, b) => review[cardKey(a)] - review[cardKey(b)]);
+      currentWordsList = [...flagged, ...list.filter(w => !isReview(w))];
 
-      document.getElementById('filter-learned').style.background = cardFilter === 'learned' ? 'rgba(139, 92, 246, 0.2)' : 'rgba(255, 255, 255, 0.04)';
-      document.getElementById('filter-learned').style.borderColor = cardFilter === 'learned' ? 'var(--theme-purple)' : 'rgba(255, 255, 255, 0.06)';
-      document.getElementById('filter-learned').style.color = cardFilter === 'learned' ? '#fff' : 'var(--muted)';
+      document.querySelectorAll('.card-filter-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.filter === cardFilter);
+      });
+      updateFlashcardFilterCounts();
 
       activeCardIndex = 0;
       updateFlashcardView();
+    }
+
+    function updateFlashcardFilterCounts() {
+      const fullList = vocabularyData[currentTopic] || [];
+      const review = getReviewStore();
+      const reviewCount = fullList.filter(w => review[cardKey(w)]).length;
+      const masteredCount = fullList.filter(w => progress.learned[cardKey(w)]).length;
+      document.getElementById('filter-review-count').innerText = reviewCount ? `(${reviewCount})` : '';
+      document.getElementById('filter-learned-count').innerText = masteredCount ? `(${masteredCount})` : '';
     }
 
     function setCardFilter(filter) {
@@ -861,6 +1024,7 @@
     function updateFlashcardView() {
       const card = document.getElementById('study-card');
       card.classList.remove('flipped'); // Reset flip orientation
+      card.querySelector('.card-back').scrollTop = 0;
 
       const total = currentWordsList.length;
       document.getElementById('flash-total-count').innerText = total;
@@ -870,46 +1034,57 @@
         document.getElementById('card-front-word').innerText = "Empty";
         document.getElementById('card-front-ipa').innerText = "";
         document.getElementById('card-front-type').innerText = "";
+        document.getElementById('card-front-type').style.display = 'none';
+        document.getElementById('card-front-icon').innerText = "📭";
+        document.getElementById('card-srs-badge').innerText = "";
         document.getElementById('card-back-meaning').innerText = "Không tìm thấy từ vựng tương thích với bộ lọc.";
+        document.getElementById('card-back-definition').innerText = "";
         document.getElementById('card-back-example-en').innerText = "";
         document.getElementById('card-back-example-vi').innerText = "";
-        document.getElementById('btn-card-audio').style.display = 'none';
+        document.getElementById('card-back-relations').innerHTML = "";
+        document.getElementById('card-audio-row').style.display = 'none';
         document.getElementById('btn-prev-card').disabled = true;
         document.getElementById('btn-next-card').disabled = true;
-        document.getElementById('btn-toggle-learned').style.display = 'none';
+        document.getElementById('btn-srs-review').style.display = 'none';
+        document.getElementById('btn-srs-mastered').style.display = 'none';
         return;
       }
 
-      document.getElementById('btn-card-audio').style.display = 'inline-flex';
-      document.getElementById('btn-toggle-learned').style.display = 'inline-flex';
+      document.getElementById('card-audio-row').style.display = 'flex';
+      document.getElementById('card-front-type').style.display = '';
+      document.getElementById('btn-srs-review').style.display = 'inline-flex';
+      document.getElementById('btn-srs-mastered').style.display = 'inline-flex';
       document.getElementById('flash-current-index').innerText = activeCardIndex + 1;
 
       const wordData = currentWordsList[activeCardIndex];
-      
-      // Update DOM
+      const typeInfo = describeWordType(wordData.type);
+
+      // Front
+      document.getElementById('card-front-icon').innerText = typeInfo.icon;
+      document.getElementById('card-front-type').innerText = typeInfo.label;
       document.getElementById('card-front-word').innerText = wordData.word;
       document.getElementById('card-front-ipa').innerText = wordData.ipa;
-      document.getElementById('card-front-type').innerText = wordData.type;
-      
+
+      // Back
       document.getElementById('card-back-meaning').innerText = wordData.meaning;
-      document.getElementById('card-back-example-en').innerText = wordData.example;
+      document.getElementById('card-back-definition').innerText = wordData.definition || '';
+      document.getElementById('card-back-example-en').innerHTML = renderExample(wordData);
       document.getElementById('card-back-example-vi').innerText = wordData.exampleTranslation;
+      document.getElementById('card-back-relations').innerHTML = renderWordRelations(wordData);
 
       // Update Nav Buttons
       document.getElementById('btn-prev-card').disabled = (activeCardIndex === 0);
       document.getElementById('btn-next-card').disabled = (activeCardIndex === total - 1);
 
-      // Check learned state button styling
-      const key = `${currentTopic}_${wordData.word}`;
-      const isLearned = !!progress.learned[key];
-      const toggleBtn = document.getElementById('btn-toggle-learned');
-      if (isLearned) {
-        toggleBtn.innerText = "✓ Learned (tap to undo)";
-        toggleBtn.className = "btn-learn-status btn-mark-learned";
-      } else {
-        toggleBtn.innerText = "⭐ Mark as learned";
-        toggleBtn.className = "btn-learn-status btn-unlearned";
-      }
+      // Spaced repetition state
+      const key = cardKey(wordData);
+      const isMastered = !!progress.learned[key];
+      const isReview = !!getReviewStore()[key];
+      const badge = document.getElementById('card-srs-badge');
+      badge.innerText = isMastered ? '✅ Mastered' : (isReview ? '🔁 Review' : '');
+      badge.className = `card-srs-badge${isMastered ? ' is-mastered' : (isReview ? ' is-review' : '')}`;
+      document.getElementById('btn-srs-mastered').classList.toggle('active', isMastered);
+      document.getElementById('btn-srs-review').classList.toggle('active', isReview);
     }
 
     function prevCard() {
@@ -928,45 +1103,59 @@
       }
     }
 
-    function toggleWordLearnedState() {
+    // Spaced repetition rating: "mastered" counts the word as learned,
+    // "review" brings it to the front of the list next time flashcards open.
+    function rateCard(rating) {
       if (currentWordsList.length === 0) return;
       const wordData = currentWordsList[activeCardIndex];
-      const key = `${currentTopic}_${wordData.word}`;
-      const isLearned = !!progress.learned[key];
-      
-      if (isLearned) {
-        delete progress.learned[key];
-      } else {
-        progress.learned[key] = true;
-        // Award simple XP (1 XP per card learned)
-        progress.xp += 1;
+      const key = cardKey(wordData);
+      const review = getReviewStore();
+
+      if (rating === 'mastered') {
+        if (!progress.learned[key]) {
+          progress.learned[key] = true;
+          progress.xp += 1; // 1 XP per card mastered
+        }
+        delete review[key];
         playSound('correct');
+      } else {
+        delete progress.learned[key];
+        review[key] = Date.now();
+        playSound('click');
       }
-      
+
       saveProgress();
+      updateFlashcardFilterCounts();
       updateFlashcardView();
+
+      // Move on to the next card so students can keep rating
+      const ratedIndex = activeCardIndex;
+      setTimeout(() => {
+        if (activeCardIndex === ratedIndex && activeCardIndex < currentWordsList.length - 1) nextCard();
+      }, 450);
     }
 
-    function triggerSpeech(event) {
+    function triggerSpeech(event, lang) {
       if (event) event.stopPropagation(); // Don't trigger the card flip
       if (currentWordsList.length === 0) return;
       const wordData = currentWordsList[activeCardIndex];
-      speakWord(wordData.word);
+      speakWord(wordData.word, lang);
     }
 
-    function speakWord(text) {
+    function speakWord(text, lang = 'en-US') {
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
-        
+
         // Synonyms split if contains "/"
         const cleanText = text.split('/')[0].trim();
         const utterance = new SpeechSynthesisUtterance(cleanText);
-        utterance.lang = 'en-US';
+        utterance.lang = lang;
         utterance.rate = 0.85;
 
-        // Try to load English voice specifically
+        // Prefer a voice for the requested accent (en-US / en-GB), else any English voice
         const voices = window.speechSynthesis.getVoices();
-        const enVoice = voices.find(v => v.lang.startsWith('en-'));
+        const accentVoice = voices.find(v => v.lang.replace('_', '-').toLowerCase() === lang.toLowerCase());
+        const enVoice = accentVoice || voices.find(v => v.lang.startsWith('en'));
         if (enVoice) {
           utterance.voice = enVoice;
         }
@@ -1304,6 +1493,6 @@
   </script>
 
   <!-- Boss Battle mode (Đánh Boss Từ Khó) -->
-  <script src="js/boss_battle.js?v=1.0.0"></script>
+  <script src="js/boss_battle.js?v=1.0.1"></script>
 </body>
 </html>

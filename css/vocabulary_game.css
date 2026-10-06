@@ -642,6 +642,278 @@ h1 {
 }
 
 /* -------------------------------------------------------------
+ * Vocabulary Mastery flashcards: richer card + spaced repetition
+ * (scoped to #flashcard-screen; Exam Idioms shares this stylesheet)
+ * ------------------------------------------------------------- */
+.card-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card-filter-btn.active {
+  color: #fff;
+  background: rgba(139, 92, 246, 0.2);
+  border-color: var(--theme-purple);
+}
+
+#flashcard-screen .flashcard {
+  height: 440px;
+}
+
+#flashcard-screen .card-face {
+  -webkit-backface-visibility: hidden;
+}
+
+#flashcard-screen .card-back {
+  justify-content: flex-start;
+  overflow-y: auto;
+  padding: 26px 22px 18px;
+  scrollbar-width: thin;
+}
+
+#flashcard-screen .card-back .word-meaning {
+  margin-bottom: 8px;
+}
+
+.card-srs-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.card-srs-badge:empty {
+  display: none;
+}
+
+.card-srs-badge.is-review {
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  color: #fbbf24;
+}
+
+.card-srs-badge.is-mastered {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.45);
+  color: #34d399;
+}
+
+.word-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.3rem;
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  margin-bottom: 12px;
+}
+
+#flashcard-screen .word-type {
+  text-transform: none;
+  letter-spacing: 0.3px;
+}
+
+#flashcard-screen .word-ipa {
+  margin-bottom: 20px;
+}
+
+.audio-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.word-definition {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  line-height: 1.5;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.word-definition:empty {
+  display: none;
+}
+
+.example-en mark {
+  background: rgba(251, 191, 36, 0.18);
+  color: #fcd34d;
+  border-radius: 4px;
+  padding: 0 3px;
+  font-weight: 700;
+}
+
+.word-relations {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.word-relations:empty {
+  display: none;
+}
+
+.relation-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  text-align: left;
+}
+
+.relation-label {
+  flex: 0 0 92px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+}
+
+.relation-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.relation-chip {
+  font-size: 0.8rem;
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid;
+}
+
+.relation-chip.syn {
+  color: #6ee7b7;
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
+.relation-chip.ant {
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.35);
+}
+
+.relation-chip.coll {
+  color: #93c5fd;
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+#flashcard-screen .card-front .card-hint {
+  left: 16px;
+  right: 16px;
+  justify-content: center;
+  text-align: center;
+}
+
+#flashcard-screen .card-hint-inline {
+  position: static;
+  margin-top: 16px;
+  align-self: center;
+}
+
+#flashcard-screen .flashcard-action-bar {
+  margin-top: 0;
+  gap: 10px;
+}
+
+.btn-srs {
+  padding: 12px 20px;
+  white-space: nowrap;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid;
+  transition: all 0.2s;
+}
+
+.btn-srs:hover {
+  transform: translateY(-2px);
+}
+
+.btn-srs-review {
+  color: #fbbf24;
+  background: rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.btn-srs-review.active,
+.btn-srs-review:hover {
+  background: rgba(245, 158, 11, 0.2);
+}
+
+.btn-srs-mastered {
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.btn-srs-mastered.active,
+.btn-srs-mastered:hover {
+  background: rgba(16, 185, 129, 0.2);
+}
+
+.btn-srs.active {
+  box-shadow: 0 0 0 2px currentColor inset;
+}
+
+.srs-hint {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-top: 16px;
+}
+
+@media (max-width: 560px) {
+  #flashcard-screen .flashcard-controls {
+    flex-wrap: wrap;
+  }
+
+  #flashcard-screen .flashcard-action-bar {
+    order: 3;
+    width: 100%;
+  }
+
+  #flashcard-screen .flashcard-action-bar .btn-srs {
+    flex: 1;
+    justify-content: center;
+    padding: 12px 10px;
+  }
+
+  #flashcard-screen .btn-back {
+    white-space: nowrap;
+  }
+
+  .relation-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .relation-label {
+    flex-basis: auto;
+  }
+}
+
+/* -------------------------------------------------------------
  * Game Screen Generic Layout
  * ------------------------------------------------------------- */
 .game-play-header {

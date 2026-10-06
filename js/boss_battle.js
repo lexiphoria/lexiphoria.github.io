@@ -577,6 +577,7 @@ function resolveBossAnswer(isCorrect) {
         boss.sealed = true;
         boss.sealedAt = today;
         progress.learned[entry.key] = true;
+        if (progress.review) delete progress.review[entry.key]; // sealed words leave the flashcard review queue
         gainedXp += BOSS_XP.seal;
         log.status = 'sealed';
       } else {

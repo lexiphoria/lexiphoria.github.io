@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/vocabulary_game.css?v=1.0.4">
+  <link rel="stylesheet" href="css/boss_battle.css?v=1.0.0">
 </head>
 <body>
 
@@ -20,7 +21,7 @@
     <!-- 1. DASHBOARD SCREEN (TOPIC SELECT) -->
     <div id="dashboard-screen" class="glass-panel">
       <div class="game-header">
-        <a href="index.html" class="home-link">🏠 Quay lại Trang chủ</a>
+        <a href="index.html" class="home-link">🏠 Back to Home</a>
         <h1>Vocabulary Mastery 🎮</h1>
         <p class="subtitle">Học và làm chủ từ vựng tiếng Anh qua Flashcard 3D và các trò chơi tương tác sinh động.</p>
       </div>
@@ -30,21 +31,21 @@
         <div class="stat-item">
           <span class="stat-icon">⚡</span>
           <span id="global-xp" class="stat-val">0 XP</span>
-          <span class="stat-label">Điểm tích lũy</span>
+          <span class="stat-label">Total XP</span>
         </div>
         <div class="stat-item">
           <span class="stat-icon">🎓</span>
           <span id="global-learned-count" class="stat-val">0/37</span>
-          <span class="stat-label">Từ đã thuộc</span>
+          <span class="stat-label">Words learned</span>
         </div>
         <div class="stat-item">
           <span class="stat-icon">🔥</span>
           <span id="global-streak" class="stat-val">1</span>
-          <span class="stat-label">Ngày học liên tiếp</span>
+          <span class="stat-label">Day streak</span>
         </div>
       </div>
 
-      <h2 style="font-size: 1.3rem; margin-bottom: 20px; font-weight: 700; color: #fff;">Chọn Chủ Đề Từ Vựng</h2>
+      <h2 style="font-size: 1.3rem; margin-bottom: 20px; font-weight: 700; color: #fff;">Choose a Topic</h2>
       <div class="topics-grid topics-grid-core">
         <!-- Topic 1: OUR LIFE (Active) -->
         <div class="topic-card" data-topic="ourLife" onclick="selectTopic('ourLife')">
@@ -54,7 +55,7 @@
           <div class="topic-progress-container">
             <div id="life-progress-fill" class="topic-progress-fill"></div>
           </div>
-          <span id="life-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Tiến độ: 0%</span>
+          <span id="life-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
         </div>
 
         <!-- Topic 2: OUR SOCIETY (Active) -->
@@ -65,7 +66,7 @@
           <div class="topic-progress-container">
             <div id="society-progress-fill" class="topic-progress-fill"></div>
           </div>
-          <span id="society-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Tiến độ: 0%</span>
+          <span id="society-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
         </div>
 
         <!-- Topic 3: OUR ENVIRONMENT (Locked) -->
@@ -73,7 +74,7 @@
           <span class="topic-icon">🌳</span>
           <h3 class="topic-title">OUR ENVIRONMENT</h3>
           <p class="topic-meta">Các từ vựng về môi trường, sinh thái và bảo tồn tự nhiên.</p>
-          <span class="lock-badge">🔒 Sắp ra mắt</span>
+          <span class="lock-badge">🔒 Coming soon</span>
         </div>
 
         <!-- Topic 4: OUR FUTURE (Locked) -->
@@ -81,7 +82,7 @@
           <span class="topic-icon">🚀</span>
           <h3 class="topic-title">OUR FUTURE</h3>
           <p class="topic-meta">Các từ vựng khoa học công nghệ, nghề nghiệp tương lai.</p>
-          <span class="lock-badge">🔒 Sắp ra mắt</span>
+          <span class="lock-badge">🔒 Coming soon</span>
         </div>
       </div>
 
@@ -96,7 +97,7 @@
           <div class="topic-progress-container">
             <div id="phrasalVerbs-progress-fill" class="topic-progress-fill"></div>
           </div>
-          <span id="phrasalVerbs-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Tiến độ: 0%</span>
+          <span id="phrasalVerbs-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
         </div>
 
         <!-- Extra 2: COLLOCATIONS (Active) -->
@@ -107,7 +108,7 @@
           <div class="topic-progress-container">
             <div id="collocations-progress-fill" class="topic-progress-fill"></div>
           </div>
-          <span id="collocations-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Tiến độ: 0%</span>
+          <span id="collocations-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
         </div>
 
         <!-- Extra 3: DEMOGRAPHIC TERMS (Active) -->
@@ -118,23 +119,23 @@
           <div class="topic-progress-container">
             <div id="demographicTerms-progress-fill" class="topic-progress-fill"></div>
           </div>
-          <span id="demographicTerms-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Tiến độ: 0%</span>
+          <span id="demographicTerms-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
         </div>
       </div>
 
       <div class="reset-history-wrapper">
-        <button class="btn-danger-outline" onclick="resetAllProgress()">🗑️ Xóa lịch sử học tập</button>
+        <button class="btn-danger-outline" onclick="resetAllProgress()">🗑️ Reset progress</button>
       </div>
     </div>
 
     <!-- 2. MODE SELECTION SCREEN -->
     <div id="mode-screen" class="glass-panel" style="display: none;">
       <div class="mode-header">
-        <button class="btn-back" onclick="goToDashboard()">← Chủ Đề</button>
+        <button class="btn-back" onclick="goToDashboard()">← Topics</button>
         <span class="current-topic-badge badge-ourLife" id="mode-topic-badge">OUR LIFE</span>
       </div>
       
-      <h2 style="font-size: 1.5rem; color: #fff; font-weight: 700; margin-bottom: 8px;">Chọn Phương Thức Học</h2>
+      <h2 style="font-size: 1.5rem; color: #fff; font-weight: 700; margin-bottom: 8px;">Choose a Mode</h2>
       <p class="subtitle" style="text-align: left; margin-bottom: 25px;">Hãy lựa chọn chế độ học hoặc chơi để bắt đầu củng cố từ vựng.</p>
 
       <div class="modes-grid">
@@ -142,7 +143,7 @@
         <div class="mode-card" onclick="startMode('flashcard')">
           <div class="mode-card-icon" style="color: #a78bfa;">📇</div>
           <div class="mode-card-body">
-            <h4 class="mode-card-title">Flashcard 3D</h4>
+            <h4 class="mode-card-title">3D Flashcards</h4>
             <p class="mode-card-desc">Lật thẻ từ vựng 3D trực quan, hỗ trợ nghe phát âm chuẩn Anh - Mỹ và ghi nhận từ đã thuộc.</p>
           </div>
         </div>
@@ -151,7 +152,7 @@
         <div class="mode-card" onclick="startMode('multipleChoice')">
           <div class="mode-card-icon" style="color: #60a5fa;">📝</div>
           <div class="mode-card-body">
-            <h4 class="mode-card-title">Trắc Nghiệm Nghĩa Từ</h4>
+            <h4 class="mode-card-title">Meaning Quiz</h4>
             <p class="mode-card-desc">Rèn luyện phản xạ nhanh bằng cách chọn đúng nghĩa tiếng Việt hoặc từ thích hợp tương ứng.</p>
           </div>
         </div>
@@ -160,8 +161,18 @@
         <div class="mode-card" onclick="startMode('sentenceCompletion')">
           <div class="mode-card-icon" style="color: #f59e0b;">✍️</div>
           <div class="mode-card-body">
-            <h4 class="mode-card-title">Hoàn Thành Câu (A, B, C, D)</h4>
+            <h4 class="mode-card-title">Sentence Completion (A, B, C, D)</h4>
             <p class="mode-card-desc">Chọn đáp án đúng nhất để hoàn thành câu tiếng Anh theo ngữ cảnh đề bài.</p>
+          </div>
+        </div>
+
+        <!-- Card Mode 4: Boss Battle -->
+        <div class="mode-card mode-card-boss" onclick="startMode('bossBattle')">
+          <div class="mode-card-icon">⚔️</div>
+          <div class="mode-card-body">
+            <h4 class="mode-card-title">Boss Battle</h4>
+            <p class="mode-card-desc">Từ bạn làm sai sẽ hóa thành quái vật. Hạ mỗi con vào 3 ngày khác nhau để phong ấn vĩnh viễn.</p>
+            <span class="boss-mode-badge" id="boss-mode-badge">🔍 No bosses yet – go on patrol</span>
           </div>
         </div>
       </div>
@@ -170,16 +181,16 @@
     <!-- 3. FLASHCARD STUDY SCREEN -->
     <div id="flashcard-screen" class="glass-panel" style="display: none;">
       <div class="game-play-header">
-        <button class="btn-back" onclick="exitToModes()">← Chế Độ</button>
-        <span class="game-title-text">Chế Độ: Flashcard 3D</span>
+        <button class="btn-back" onclick="exitToModes()">← Modes</button>
+        <span class="game-title-text">3D Flashcards</span>
         <div class="card-progress-text"><span id="flash-current-index">1</span>/<span id="flash-total-count">37</span></div>
       </div>
 
       <!-- Filters for Flashcards -->
       <div style="display: flex; gap: 8px; justify-content: center; margin-bottom: 20px;">
-        <button id="filter-all" class="btn-spelling-hint" style="color: #fff; background: rgba(139, 92, 246, 0.2); border-color: var(--theme-purple);" onclick="setCardFilter('all')">Tất cả</button>
-        <button id="filter-unlearned" class="btn-spelling-hint" onclick="setCardFilter('unlearned')">Chưa thuộc</button>
-        <button id="filter-learned" class="btn-spelling-hint" onclick="setCardFilter('learned')">Đã thuộc</button>
+        <button id="filter-all" class="btn-spelling-hint" style="color: #fff; background: rgba(139, 92, 246, 0.2); border-color: var(--theme-purple);" onclick="setCardFilter('all')">All</button>
+        <button id="filter-unlearned" class="btn-spelling-hint" onclick="setCardFilter('unlearned')">Not learned</button>
+        <button id="filter-learned" class="btn-spelling-hint" onclick="setCardFilter('learned')">Learned</button>
       </div>
 
       <!-- 3D Card Area -->
@@ -192,11 +203,11 @@
             <div class="word-ipa" id="card-front-ipa">/ə'kaʊnt/</div>
             
             <button class="btn-speak" id="btn-card-audio" onclick="triggerSpeech(event)">
-              🔊 Phát Âm
+              🔊 Listen
             </button>
             
             <div class="card-hint">
-              <span>💡 Nhấp thẻ để xem nghĩa và ví dụ</span>
+              <span>💡 Tap the card to see the meaning and example</span>
             </div>
           </div>
 
@@ -205,13 +216,13 @@
             <h3 class="word-meaning" id="card-back-meaning">câu chuyện, lời tường thuật</h3>
             
             <div class="example-container">
-              <div class="example-title">Ví dụ áp dụng:</div>
+              <div class="example-title">Example:</div>
               <p class="example-en" id="card-back-example-en">She gave the police a full account of the incident.</p>
               <p class="example-vi" id="card-back-example-vi">Cô kể cho cảnh sát toàn bộ sự việc.</p>
             </div>
             
             <div class="card-hint">
-              <span>🔄 Nhấp để lật lại mặt trước</span>
+              <span>🔄 Tap to flip back</span>
             </div>
           </div>
         </div>
@@ -222,7 +233,7 @@
         <button class="btn-nav-card" id="btn-prev-card" onclick="prevCard()">←</button>
         <div class="flashcard-action-bar">
           <button class="btn-learn-status btn-unlearned" id="btn-toggle-learned" onclick="toggleWordLearnedState()">
-            ⭐ Đánh dấu đã thuộc
+            ⭐ Mark as learned
           </button>
         </div>
         <button class="btn-nav-card" id="btn-next-card" onclick="nextCard()">→</button>
@@ -232,9 +243,9 @@
     <!-- 4. MULTIPLE CHOICE SCREEN -->
     <div id="quiz-screen" class="glass-panel" style="display: none;">
       <div class="game-play-header">
-        <button class="btn-back" onclick="exitToModes()">← Chế Độ</button>
-        <span class="game-title-text" id="quiz-header-title">Trắc Nghiệm Nghĩa</span>
-        <div class="card-progress-text" id="quiz-progress-text">Câu 1/10</div>
+        <button class="btn-back" onclick="exitToModes()">← Modes</button>
+        <span class="game-title-text" id="quiz-header-title">Meaning Quiz</span>
+        <div class="card-progress-text" id="quiz-progress-text">Question 1/10</div>
       </div>
 
       <div class="game-progress-bar-container">
@@ -245,7 +256,7 @@
       <div class="quiz-question-box">
         <h3 class="quiz-question-word" id="quiz-word">achievement</h3>
         <p class="quiz-question-ipa" id="quiz-ipa">/ə'tʃi:vmənt/</p>
-        <p class="quiz-question-hint">Chọn nghĩa tiếng Việt chính xác của từ vựng trên:</p>
+        <p class="quiz-question-hint">Choose the correct Vietnamese meaning of the word above:</p>
       </div>
 
       <!-- Option buttons grid -->
@@ -255,15 +266,15 @@
 
       <!-- Explanation Box -->
       <div class="game-explanation" id="quiz-explanation-box" style="display: none;">
-        <div class="game-explanation-title">📝 Giải thích & Ví dụ:</div>
+        <div class="game-explanation-title">📝 Explanation & Example</div>
         <div class="game-explanation-content" id="quiz-explanation-content">
-          Ví dụ: "..."
+          Example: "..."
         </div>
       </div>
 
       <div class="game-footer-actions">
         <button class="btn-game-next" id="btn-quiz-next" onclick="nextQuizQuestion()" style="display: none;">
-          Tiếp tục ➔
+          Next ➔
         </button>
       </div>
     </div>
@@ -271,9 +282,9 @@
     <!-- 5. SENTENCE COMPLETION SCREEN -->
     <div id="sentence-completion-screen" class="glass-panel" style="display: none;">
       <div class="game-play-header">
-        <button class="btn-back" onclick="exitToModes()">← Chế Độ</button>
-        <span class="game-title-text">Hoàn Thành Câu</span>
-        <div class="card-progress-text" id="sentence-progress-text">Câu 1/10</div>
+        <button class="btn-back" onclick="exitToModes()">← Modes</button>
+        <span class="game-title-text">Sentence Completion</span>
+        <div class="card-progress-text" id="sentence-progress-text">Question 1/10</div>
       </div>
 
       <div class="game-progress-bar-container">
@@ -297,7 +308,7 @@
 
       <!-- Explanation Box -->
       <div class="game-explanation" id="sentence-explanation-box" style="display: none;">
-        <div class="game-explanation-title" id="sentence-feedback-title">📝 Giải thích & Dịch nghĩa:</div>
+        <div class="game-explanation-title" id="sentence-feedback-title">📝 Explanation & Translation</div>
         <div class="game-explanation-content" id="sentence-explanation-content">
           Loading explanation...
         </div>
@@ -305,39 +316,167 @@
 
       <div class="game-footer-actions">
         <button class="btn-game-next" id="btn-sentence-next" onclick="nextSentenceQuestion()" style="display: none;">
-          Tiếp tục ➔
+          Next ➔
         </button>
       </div>
     </div>
 
+    <!-- 6. BOSS BATTLE SCREEN (Đánh Boss Từ Khó) -->
+    <div id="boss-screen" class="glass-panel" style="display: none;">
+      <div class="boss-header">
+        <button class="btn-back" id="boss-back-btn" onclick="bossBack()">← Modes</button>
+        <span class="boss-header-title" id="boss-header-title">Boss Battle</span>
+        <button class="btn-boss-icon" id="boss-mute-btn" onclick="toggleBossMute()" title="Mute sound">🔊</button>
+      </div>
+
+      <!-- 6a. Lobby -->
+      <div id="boss-lobby">
+        <div class="boss-lobby-banner">
+          <div class="boss-lobby-text">
+            <span class="boss-kicker">TOPIC BOSS</span>
+            <h3 class="boss-lobby-name" id="boss-lobby-name">Daydream Fluff</h3>
+            <p class="boss-lobby-tagline" id="boss-lobby-tagline"></p>
+          </div>
+          <img class="boss-lobby-img" id="boss-lobby-img" src="assets/boss/boss_purple.webp" alt="">
+        </div>
+
+        <div class="boss-lobby-stats">
+          <div class="boss-stat"><span class="boss-stat-val" id="boss-stat-due">0</span><span class="boss-stat-label">⚔️ Ready</span></div>
+          <div class="boss-stat"><span class="boss-stat-val" id="boss-stat-wait">0</span><span class="boss-stat-label">⏳ Tomorrow</span></div>
+          <div class="boss-stat"><span class="boss-stat-val" id="boss-stat-sealed">0</span><span class="boss-stat-label">🔒 Sealed</span></div>
+        </div>
+
+        <div class="boss-lobby-actions">
+          <button class="btn-boss-fight" id="boss-fight-btn" onclick="startBossBattle('boss')">⚔️ Fight</button>
+          <button class="btn-boss-patrol" onclick="startBossBattle('patrol')">🔍 Patrol</button>
+        </div>
+
+        <details class="boss-rules">
+          <summary>📜 How to Play</summary>
+          <ul>
+            <li>👾 Từ bạn trả lời sai ở <strong>Meaning Quiz</strong>, <strong>Sentence Completion</strong> hoặc khi <strong>Patrol</strong> (tuần tra) sẽ hóa thành boss.</li>
+            <li>⭐ Mỗi ngày, mỗi boss chỉ nhận tối đa 1 đòn. Đánh trúng vào 3 ngày khác nhau để <strong>Seal</strong> (phong ấn) vĩnh viễn – từ đó tự động được tính là <strong>Learned</strong> (đã thuộc).</li>
+            <li>⚔️ Đòn càng về sau càng khó: <strong>Pick the meaning</strong> → <strong>Pick the word</strong> → <strong>Type the word</strong> (Finishing Blow – đòn kết liễu).</li>
+            <li>❤️ Bạn có 3 tim. Trả lời sai: mất 1 tim và boss hồi 1 sao. Đúng 3 câu liên tiếp: nhận <strong>Potion</strong> (bình máu) và tung đòn <strong>Critical</strong> (chí mạng).</li>
+          </ul>
+        </details>
+
+        <h4 class="boss-section-title">Hard Words</h4>
+        <div class="boss-word-list" id="boss-word-list"></div>
+      </div>
+
+      <!-- 6b. Arena -->
+      <div id="boss-arena" style="display: none;">
+        <div class="boss-stage" id="boss-stage">
+          <div class="boss-hud boss-hud-hero">
+            <div class="boss-hud-name"><span>Wizard Cat</span></div>
+            <div class="boss-hearts" id="boss-hearts" aria-label="Hearts left">❤️❤️❤️</div>
+            <div class="boss-combo" id="boss-combo"></div>
+          </div>
+          <div class="boss-hud boss-hud-enemy">
+            <div class="boss-hud-name"><span id="boss-enemy-name">Boss</span><span id="boss-hp-text">0/0</span></div>
+            <div class="boss-hp-bar" id="boss-hp-bar"></div>
+          </div>
+          <div class="boss-hero" id="boss-hero"><div class="boss-idle"><img src="assets/boss/hero_cat.webp" alt="Wizard Cat"></div></div>
+          <div class="boss-enemy" id="boss-enemy"><div class="boss-idle"><img id="boss-enemy-img" src="assets/boss/boss_purple.webp" alt=""></div></div>
+          <img class="boss-projectile" id="boss-projectile" src="assets/boss/item_star.webp" alt="">
+          <img class="boss-potion" id="boss-potion" src="assets/boss/item_potion.webp" alt="">
+        </div>
+
+        <div class="boss-question-head">
+          <span class="boss-attack-label tier-0" id="boss-attack-label"></span>
+          <span class="boss-seal" id="boss-seal"></span>
+          <span class="card-progress-text" id="boss-progress-text"></span>
+        </div>
+
+        <div class="quiz-question-box">
+          <div class="boss-q-main" id="boss-q-main"></div>
+          <div class="boss-q-sub" id="boss-q-sub"></div>
+          <p class="quiz-question-hint" id="boss-q-hint"></p>
+          <div class="boss-q-tools">
+            <button class="btn-speak" id="boss-listen-btn" onclick="speakBossWord()">🔊 Listen</button>
+          </div>
+        </div>
+
+        <div class="quiz-options-grid" id="boss-options"></div>
+
+        <div class="boss-spell" id="boss-spell" style="display: none;">
+          <input type="text" class="spelling-input" id="boss-spell-input" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type your answer..." aria-label="Type your answer" onkeydown="handleBossSpellKey(event)">
+          <div class="boss-hint-pattern" id="boss-hint-pattern"></div>
+          <div class="spelling-hints-row">
+            <button class="btn-spelling-hint" id="boss-hint-btn" onclick="showBossSpellHint()">💡 Letter hint (-5 XP)</button>
+            <button class="btn-boss-submit" id="boss-submit-btn" onclick="submitBossSpell()">⚡ Strike</button>
+          </div>
+        </div>
+
+        <div class="game-explanation" id="boss-feedback" style="display: none;" aria-live="polite">
+          <div class="game-explanation-title" id="boss-feedback-title"></div>
+          <div class="game-explanation-content" id="boss-feedback-content"></div>
+        </div>
+
+        <div class="game-footer-actions">
+          <button class="btn-game-next" id="boss-next-btn" onclick="nextBossStep()" style="display: none;">Next attack ➔</button>
+        </div>
+      </div>
+
+      <!-- 6c. Result -->
+      <div id="boss-result" class="results-screen-content" style="display: none;">
+        <img class="boss-result-img" id="boss-result-img" src="assets/boss/item_gift.webp" alt="">
+        <h2 class="boss-result-title" id="boss-result-title"></h2>
+        <p class="subtitle" id="boss-result-subtitle"></p>
+
+        <div class="results-stats-row">
+          <div class="res-stat-card">
+            <span class="res-stat-val" id="boss-res-correct">0/0</span>
+            <span class="res-stat-label">Hits</span>
+          </div>
+          <div class="res-stat-card">
+            <span class="res-stat-val xp-gain" id="boss-res-xp">+0</span>
+            <span class="res-stat-label">XP earned</span>
+          </div>
+          <div class="res-stat-card">
+            <span class="res-stat-val" id="boss-res-third">0</span>
+            <span class="res-stat-label" id="boss-res-third-label">Sealed</span>
+          </div>
+        </div>
+
+        <div class="boss-result-list" id="boss-result-list"></div>
+
+        <div class="results-buttons">
+          <button class="btn-res btn-res-primary" id="boss-again-btn" onclick="startBossBattle('boss')">⚔️ Fight again</button>
+          <button class="btn-res btn-res-secondary" onclick="backToBossLobby()">🏰 Boss Lobby</button>
+          <button class="btn-res btn-res-secondary" onclick="leaveBossToModes()">📋 Other modes</button>
+        </div>
+      </div>
+    </div>
 
     <!-- 7. GAME RESULTS SCREEN -->
     <div id="results-screen" class="glass-panel" style="display: none;">
       <div class="results-screen-content">
         <span class="trophy-illustration" id="results-emoji">🏆</span>
-        <h2 class="result-title" id="results-title">Hoàn thành thử thách!</h2>
+        <h2 class="result-title" id="results-title">Challenge complete!</h2>
         <p class="subtitle" id="results-subtitle">Bạn đã hoàn thành xuất sắc lượt ôn tập từ vựng.</p>
 
         <div class="results-stats-row">
           <div class="res-stat-card">
             <span class="res-stat-val" id="res-score-correct">10/10</span>
-            <span class="res-stat-label">Chính xác</span>
+            <span class="res-stat-label">Correct</span>
           </div>
           <div class="res-stat-card">
             <span class="res-stat-val xp-gain" id="res-score-xp">+100</span>
-            <span class="res-stat-label">XP Tích lũy</span>
+            <span class="res-stat-label">XP earned</span>
           </div>
         </div>
 
         <div class="results-buttons">
           <button class="btn-res btn-res-primary" id="btn-res-replay" onclick="replayCurrentMode()">
-            🔄 Luyện tập lại
+            🔄 Practice again
           </button>
           <button class="btn-res btn-res-secondary" onclick="exitToModes()">
-            📋 Xem chế độ khác
+            📋 Other modes
           </button>
           <button class="btn-res btn-res-secondary" onclick="goToDashboard()">
-            🏠 Về trang chủ Game
+            🏠 Back to Topics
           </button>
         </div>
       </div>
@@ -525,7 +664,7 @@
           if (fillEl && textEl) {
             const pct = Math.round((learnedCount / count) * 100);
             fillEl.style.width = `${pct}%`;
-            textEl.innerText = `Tiến độ: ${pct}% (${learnedCount}/${count})`;
+            textEl.innerText = `Progress: ${pct}% (${learnedCount}/${count})`;
           }
         }
       });
@@ -535,6 +674,7 @@
       
       document.getElementById('global-learned-count').innerText = `${totalLearnedCount}/${totalWords}`;
       document.getElementById('global-streak').innerText = `${progress.streak}`;
+      refreshBossBadges();
     }
 
     function checkStreak() {
@@ -601,6 +741,7 @@
       
       const badge = document.getElementById('mode-topic-badge');
       badge.className = `current-topic-badge badge-${topic}`;
+      refreshBossBadges();
 
       document.getElementById('dashboard-screen').style.display = 'none';
       document.getElementById('mode-screen').style.display = 'block';
@@ -610,6 +751,7 @@
       playSound('click');
       document.getElementById('mode-screen').style.display = 'none';
       document.getElementById('results-screen').style.display = 'none';
+      document.getElementById('boss-screen').style.display = 'none';
       document.getElementById('dashboard-screen').style.display = 'block';
       updateDashboardStats();
     }
@@ -623,7 +765,9 @@
         document.getElementById('sentence-completion-screen').style.display = 'none';
       }
       document.getElementById('results-screen').style.display = 'none';
+      document.getElementById('boss-screen').style.display = 'none';
       document.getElementById('mode-screen').style.display = 'block';
+      refreshBossBadges();
     }
 
     function startMode(mode) {
@@ -667,6 +811,8 @@
       } else if (mode === 'sentenceCompletion') {
         setupSentenceCompletionMode();
         document.getElementById('sentence-completion-screen').style.display = 'block';
+      } else if (mode === 'bossBattle') {
+        openBossLobby();
       }
     }
 
@@ -721,7 +867,7 @@
 
       if (total === 0) {
         document.getElementById('flash-current-index').innerText = 0;
-        document.getElementById('card-front-word').innerText = "Trống";
+        document.getElementById('card-front-word').innerText = "Empty";
         document.getElementById('card-front-ipa').innerText = "";
         document.getElementById('card-front-type').innerText = "";
         document.getElementById('card-back-meaning').innerText = "Không tìm thấy từ vựng tương thích với bộ lọc.";
@@ -758,10 +904,10 @@
       const isLearned = !!progress.learned[key];
       const toggleBtn = document.getElementById('btn-toggle-learned');
       if (isLearned) {
-        toggleBtn.innerText = "✓ Đã thuộc (Bỏ đánh dấu)";
+        toggleBtn.innerText = "✓ Learned (tap to undo)";
         toggleBtn.className = "btn-learn-status btn-mark-learned";
       } else {
-        toggleBtn.innerText = "⭐ Đánh dấu đã thuộc";
+        toggleBtn.innerText = "⭐ Mark as learned";
         toggleBtn.className = "btn-learn-status btn-unlearned";
       }
     }
@@ -848,7 +994,7 @@
       document.getElementById('btn-quiz-next').style.display = 'none';
 
       const qTotal = quizQuestionList.length;
-      document.getElementById('quiz-progress-text').innerText = `Câu ${currentQuestionIndex + 1}/${qTotal}`;
+      document.getElementById('quiz-progress-text').innerText = `Question ${currentQuestionIndex + 1}/${qTotal}`;
       document.getElementById('quiz-progress-fill').style.width = `${((currentQuestionIndex + 1) / qTotal) * 100}%`;
 
       const qWord = quizQuestionList[currentQuestionIndex];
@@ -895,7 +1041,8 @@
       } else {
         selectedBtn.classList.add('wrong');
         playSound('wrong');
-        
+        recordHardWord(currentTopic, qWord.word); // becomes a boss in Boss Battle mode
+
         // Highlight correct one
         buttons.forEach(btn => {
           if (btn.innerText === qWord.meaning) {
@@ -906,7 +1053,7 @@
 
       // Display Explanation
       const expContent = document.getElementById('quiz-explanation-content');
-      expContent.innerHTML = `<strong>Ví dụ:</strong> ${qWord.example}<br><em>Dịch nghĩa: ${qWord.exampleTranslation}</em>`;
+      expContent.innerHTML = `<strong>Example:</strong> ${qWord.example}<br><em>Translation: ${qWord.exampleTranslation}</em>`;
       document.getElementById('quiz-explanation-box').style.display = 'block';
 
       document.getElementById('btn-quiz-next').style.display = 'inline-flex';
@@ -941,7 +1088,7 @@
       document.getElementById('btn-sentence-next').style.display = 'none';
 
       const qTotal = quizQuestionList.length;
-      document.getElementById('sentence-progress-text').innerText = `Câu ${currentQuestionIndex + 1}/${qTotal}`;
+      document.getElementById('sentence-progress-text').innerText = `Question ${currentQuestionIndex + 1}/${qTotal}`;
       document.getElementById('sentence-progress-fill').style.width = `${((currentQuestionIndex + 1) / qTotal) * 100}%`;
 
       const qWord = quizQuestionList[currentQuestionIndex];
@@ -1021,7 +1168,8 @@
       } else {
         selectedBtn.classList.add('wrong');
         playSound('wrong');
-        
+        recordHardWord(currentTopic, qWord.word); // becomes a boss in Boss Battle mode
+
         // Highlight correct button
         buttons.forEach(btn => {
           // Extract text without the label
@@ -1034,11 +1182,11 @@
 
       // Display Explanation
       const expContent = document.getElementById('sentence-explanation-content');
-      let explanationHtml = `<strong>Đáp án đúng:</strong> ${correctOption}<br>`;
+      let explanationHtml = `<strong>Correct answer:</strong> ${correctOption}<br>`;
       if (qWord.meaning) {
-        explanationHtml += `<strong>Ý nghĩa từ vựng:</strong> ${qWord.meaning}<br>`;
+        explanationHtml += `<strong>Meaning:</strong> ${qWord.meaning}<br>`;
       }
-      explanationHtml += `<strong>Dịch nghĩa câu:</strong> ${qWord.exampleTranslation}`;
+      explanationHtml += `<strong>Translation:</strong> ${qWord.exampleTranslation}`;
       
       expContent.innerHTML = explanationHtml;
       document.getElementById('sentence-explanation-box').style.display = 'block';
@@ -1074,7 +1222,7 @@
       }
 
       document.getElementById('results-emoji').innerText = correctCount >= Math.floor(total * 0.8) ? '🏆' : '📚';
-      document.getElementById('results-title').innerText = correctCount === total ? 'Hoàn hảo 100%!' : 'Hoàn thành thử thách!';
+      document.getElementById('results-title').innerText = correctCount === total ? 'Perfect 100%!' : 'Challenge complete!';
       document.getElementById('results-subtitle').innerText = `Bạn đã trả lời đúng ${correctCount} trên tổng số ${total} câu hỏi.`;
 
       document.getElementById('res-score-correct').innerText = `${correctCount}/${total}`;
@@ -1153,5 +1301,8 @@
       requestAnimationFrame(updateConfetti);
     }
   </script>
+
+  <!-- Boss Battle mode (Đánh Boss Từ Khó) -->
+  <script src="js/boss_battle.js?v=1.0.0"></script>
 </body>
 </html>

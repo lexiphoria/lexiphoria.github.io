@@ -1024,6 +1024,7 @@
     }
 
     function checkQuizAnswer(selectedOption, selectedBtn) {
+      if (selectedBtn.classList.contains('locked')) return; // already answered
       const qWord = quizQuestionList[currentQuestionIndex];
       const buttons = document.querySelectorAll('.quiz-option-btn');
       
@@ -1145,6 +1146,7 @@
       options.forEach((optText, index) => {
         const btn = document.createElement('button');
         btn.className = 'quiz-option-btn';
+        btn.dataset.value = optText;
         btn.innerHTML = `<span class="option-label" style="font-weight: 800; color: #fbbf24; margin-right: 10px;">${labels[index]}.</span>${optText}`;
         btn.onclick = () => checkSentenceAnswer(optText, correctOptionText, btn);
         optionsGrid.appendChild(btn);
@@ -1152,6 +1154,7 @@
     }
 
     function checkSentenceAnswer(selectedOption, correctOption, selectedBtn) {
+      if (selectedBtn.classList.contains('locked')) return; // already answered
       const qWord = quizQuestionList[currentQuestionIndex];
       const buttons = document.querySelectorAll('#sentence-options .quiz-option-btn');
       
@@ -1172,9 +1175,7 @@
 
         // Highlight correct button
         buttons.forEach(btn => {
-          // Extract text without the label
-          const btnText = btn.innerText.substring(3).trim();
-          if (btnText.toLowerCase() === correctOption.trim().toLowerCase()) {
+          if (btn.dataset.value.trim().toLowerCase() === correctOption.trim().toLowerCase()) {
             btn.classList.add('correct');
           }
         });

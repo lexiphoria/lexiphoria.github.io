@@ -1779,7 +1779,1008 @@ const vocabularyData = {
       exampleTranslation: "Anh ấy cuối cùng cũng vượt qua được nỗi sợ bay."
     }
   ],
-  ourEnvironment: [],
+  ourEnvironment: [
+    {
+        "word": "adapt to sth",
+        "type": "phrase",
+        "ipa": "/əˈdæpt tuː ˈsʌm.θɪŋ/",
+        "meaning": "thích nghi với cái gì đó",
+        "example": "Many wildlife species struggle to adapt to rapid climate changes.",
+        "exampleTranslation": "Nhiều loài động vật hoang dã gặp khó khăn trong việc thích nghi với sự biến đổi khí hậu nhanh chóng."
+    },
+    {
+        "word": "attribute sth to sth",
+        "type": "phrase",
+        "ipa": "/əˈtrɪb.juːt ˈsʌm.θɪŋ tuː ˈsʌm.θɪŋ/",
+        "meaning": "cho rằng cái gì là kết quả của cái gì; quy cho là do",
+        "example": "Scientists attribute the surge in global temperatures to greenhouse gas emissions.",
+        "exampleTranslation": "Các nhà khoa học cho rằng sự gia tăng nhiệt độ toàn cầu là do khí thải nhà kính."
+    },
+    {
+        "word": "alarming",
+        "type": "adj",
+        "ipa": "/əˈlɑː.mɪŋ/",
+        "meaning": "đáng báo động, gây lo ngại",
+        "example": "The Arctic ice cap is melting at an alarming rate.",
+        "exampleTranslation": "Tảng băng ở Bắc Cực đang tan chảy với tốc độ đáng báo động."
+    },
+    {
+        "word": "artificial",
+        "type": "adj",
+        "ipa": "/ˌɑː.tɪˈfɪʃ.əl/",
+        "meaning": "nhân tạo",
+        "example": "Marine biologists built an artificial reef to restore local fish populations.",
+        "exampleTranslation": "Các nhà sinh vật biển đã xây dựng một rạn san hô nhân tạo để khôi phục quần thể cá địa phương."
+    },
+    {
+        "word": "as a consequence of sth",
+        "type": "phrase",
+        "ipa": "/æz ə ˈkɒn.sɪ.kwəns ɒv ˈsʌm.θɪŋ/",
+        "meaning": "do hệ quả của cái gì đó",
+        "example": "Severe droughts occurred across the region as a consequence of deforestation.",
+        "exampleTranslation": "Hạn hán nghiêm trọng đã xảy ra trên toàn khu vực như một hệ quả của nạn phá rừng."
+    },
+    {
+        "word": "raise one's awareness",
+        "type": "phrase",
+        "ipa": "/reɪz wʌnz əˈweə.nəs/",
+        "meaning": "nâng cao nhận thức của ai đó",
+        "example": "Youth campaigns aim to raise community awareness about marine plastic pollution.",
+        "exampleTranslation": "Các chiến dịch thanh niên nhằm nâng cao nhận thức cộng đồng về ô nhiễm nhựa đại dương."
+    },
+    {
+        "word": "put a ban on sth",
+        "type": "phrase",
+        "ipa": "/pʊt ə bæn ɒn ˈsʌm.θɪŋ/",
+        "meaning": "ban hành lệnh cấm đoán cái gì",
+        "example": "Several countries decided to put a ban on single-use plastics.",
+        "exampleTranslation": "Nhiều quốc gia đã quyết định ban hành lệnh cấm đối với đồ nhựa dùng một lần."
+    },
+    {
+        "word": "barren",
+        "type": "adj",
+        "ipa": "/ˈbær.ən/",
+        "meaning": "(đất đai) cằn cỗi, khô cằn, không thể trồng trọt",
+        "example": "Decades of overgrazing left the hills barren and prone to landslides.",
+        "exampleTranslation": "Hàng thập kỷ chăn thả quá mức đã khiến các sườn đồi cằn cỗi và dễ bị sạt lở."
+    },
+    {
+        "word": "bode",
+        "type": "v",
+        "ipa": "/bəʊd/",
+        "meaning": "là điềm báo cho một kết quả nào đó (bode well/ill)",
+        "example": "The prolonged lack of rain does not bode well for this year's harvest.",
+        "exampleTranslation": "Tình trạng thiếu mưa kéo dài không báo trước điềm lành cho vụ thu hoạch năm nay."
+    },
+    {
+        "word": "danger",
+        "type": "n",
+        "ipa": "/ˈdeɪn.dʒər/",
+        "meaning": "sự nguy hiểm, mối nguy",
+        "example": "Rising sea levels pose an immediate danger to coastal settlements.",
+        "exampleTranslation": "Mực nước biển dâng cao gây ra mối nguy hiểm trước mắt cho các khu dân cư ven biển."
+    },
+    {
+        "word": "boycott",
+        "type": "v",
+        "ipa": "/ˈbɔɪ.kɒt/",
+        "meaning": "tẩy chay",
+        "example": "Eco-conscious consumers boycotted brands that test products on animals.",
+        "exampleTranslation": "Những người tiêu dùng quan tâm đến môi trường đã tẩy chay các thương hiệu thử nghiệm sản phẩm trên động vật."
+    },
+    {
+        "word": "chase",
+        "type": "v",
+        "ipa": "/tʃeɪs/",
+        "meaning": "đuổi theo, săn đuổi",
+        "example": "Predators often chase weaker prey across open savannahs.",
+        "exampleTranslation": "Động vật săn mồi thường đuổi theo con mồi yếu hơn trên những đồng cỏ xavan rộng lớn."
+    },
+    {
+        "word": "callous",
+        "type": "adj",
+        "ipa": "/ˈkæl.əs/",
+        "meaning": "nhẫn tâm, vô cảm, tàn nhẫn",
+        "example": "Poaching rare rhinos for ivory is a callous act that must be severely punished.",
+        "exampleTranslation": "Săn trộm tê giác quý hiếm để lấy ngà là một hành vi tàn nhẫn cần phải bị trừng phạt nghiêm khắc."
+    },
+    {
+        "word": "comprehensive",
+        "type": "adj",
+        "ipa": "/ˌkɒm.prɪˈhen.sɪv/",
+        "meaning": "toàn diện, bao quát",
+        "example": "The ministry proposed a comprehensive climate change mitigation plan.",
+        "exampleTranslation": "Bộ đã đề xuất một kế hoạch giảm thiểu biến đổi khí hậu toàn diện."
+    },
+    {
+        "word": "contaminated",
+        "type": "adj",
+        "ipa": "/kənˈtæm.ɪ.neɪ.tɪd/",
+        "meaning": "bị ô nhiễm, bị nhiễm độc",
+        "example": "The river water was contaminated by toxic chemical runoff from nearby factories.",
+        "exampleTranslation": "Nước sông đã bị ô nhiễm bởi dòng hóa chất độc hại từ các nhà máy lân cận."
+    },
+    {
+        "word": "die out",
+        "type": "phrase",
+        "ipa": "/daɪ aʊt/",
+        "meaning": "tuyệt chủng, biến mất hoàn toàn",
+        "example": "Many endemic amphibians will die out unless their rainforest habitat is preserved.",
+        "exampleTranslation": "Nhiều loài lưỡng cư đặc hữu sẽ tuyệt chủng trừ khi sinh cảnh rừng mưa của chúng được bảo tồn."
+    },
+    {
+        "word": "degrade",
+        "type": "v",
+        "ipa": "/dɪˈɡreɪd/",
+        "meaning": "làm suy giảm chất lượng, làm thoái hóa",
+        "example": "Chemical fertilizers gradually degrade soil fertility over generations.",
+        "exampleTranslation": "Phân bón hóa học dần dần làm suy giảm độ phì nhiêu của đất qua nhiều thế hệ."
+    },
+    {
+        "word": "imperil",
+        "type": "v",
+        "ipa": "/ɪmˈper.əl/",
+        "meaning": "gây nguy hiểm, đe dọa",
+        "example": "Offshore drilling projects imperil fragile marine ecosystems.",
+        "exampleTranslation": "Các dự án khoan ngoài khơi đe dọa các hệ sinh thái biển mỏng manh."
+    },
+    {
+        "word": "endangered",
+        "type": "adj",
+        "ipa": "/ɪnˈdeɪn.dʒəd/",
+        "meaning": "đang gặp nguy hiểm, có nguy cơ tuyệt chủng",
+        "example": "The snow leopard is officially listed as an endangered species.",
+        "exampleTranslation": "Báo tuyết được chính thức liệt vào danh sách các loài có nguy cơ tuyệt chủng."
+    },
+    {
+        "word": "burden",
+        "type": "n",
+        "ipa": "/ˈbɜː.dən/",
+        "meaning": "gánh nặng",
+        "example": "Managing municipal solid waste places a heavy financial burden on cities.",
+        "exampleTranslation": "Việc xử lý rác thải sinh hoạt đặt ra gánh nặng tài chính lớn cho các đô thị."
+    },
+    {
+        "word": "cloning",
+        "type": "n",
+        "ipa": "/ˈkləʊ.nɪŋ/",
+        "meaning": "nhân bản",
+        "example": "Scientists explored animal cloning as a last resort to save critically endangered beasts.",
+        "exampleTranslation": "Các nhà khoa học đã nghiên cứu phương pháp nhân bản động vật như một giải pháp cuối cùng để cứu những loài cực kỳ nguy cấp."
+    },
+    {
+        "word": "decimate",
+        "type": "v",
+        "ipa": "/ˈdes.ɪ.meɪt/",
+        "meaning": "tàn phá, tiêu diệt một phần lớn",
+        "example": "Widespread wildfires decimated millions of hectares of Australian bushland.",
+        "exampleTranslation": "Cháy rừng trên diện rộng đã tàn phá hàng triệu héc-ta vùng bụi rậm của nước Úc."
+    },
+    {
+        "word": "dismal",
+        "type": "adj",
+        "ipa": "/ˈdɪz.məl/",
+        "meaning": "ảm đạm, thảm hại, u ám",
+        "example": "The latest environmental report painted a dismal picture of global biodiversity loss.",
+        "exampleTranslation": "Báo cáo môi trường mới nhất đã vẽ nên một bức tranh ảm đạm về sự mất mát đa dạng sinh học toàn cầu."
+    },
+    {
+        "word": "disturbance",
+        "type": "n",
+        "ipa": "/dɪˈstɜː.bəns/",
+        "meaning": "sự xáo trộn, sự làm gián đoạn",
+        "example": "Noise from marine construction causes serious disturbance to migrating whales.",
+        "exampleTranslation": "Tiếng ồn từ hoạt động thi công trên biển gây ra sự xáo trộn nghiêm trọng cho cá voi đang di cư."
+    },
+    {
+        "word": "do/cause sb harm",
+        "type": "phrase",
+        "ipa": "/duː / kɔːz ˈsʌm.bə.di hɑːm/",
+        "meaning": "gây hại cho ai đó",
+        "example": "Breathing polluted air for prolonged periods can cause children severe harm.",
+        "exampleTranslation": "Hít thở không khí ô nhiễm trong thời gian dài có thể gây hại nghiêm trọng cho trẻ em."
+    },
+    {
+        "word": "drive sth to the verge of",
+        "type": "phrase",
+        "ipa": "/draɪv ˈsʌm.θɪŋ tuː ðə vɜːdʒ ɒv/",
+        "meaning": "đẩy cái gì đó đến bờ vực của...",
+        "example": "Overhunting drove the dodo bird to the verge of extinction.",
+        "exampleTranslation": "Việc săn bắt quá mức đã đẩy loài chim dodo đến bờ vực tuyệt chủng."
+    },
+    {
+        "word": "exotic",
+        "type": "adj",
+        "ipa": "/ɪɡˈzɒt.ɪk/",
+        "meaning": "ngoại lai, kỳ lạ",
+        "example": "Introducing exotic plant species can severely disrupt indigenous ecosystems.",
+        "exampleTranslation": "Việc du nhập các loài thực vật ngoại lai có thể phá vỡ nghiêm trọng các hệ sinh thái bản địa."
+    },
+    {
+        "word": "exploit",
+        "type": "v",
+        "ipa": "/ɪkˈsplɔɪt/",
+        "meaning": "khai thác, bóc lột (tài nguyên)",
+        "example": "Corporations should not unsustainably exploit natural resources for short-term profit.",
+        "exampleTranslation": "Các tập đoàn không nên khai thác tài nguyên thiên nhiên thiếu bền vững vì lợi nhuận ngắn hạn."
+    },
+    {
+        "word": "escape from",
+        "type": "phrase",
+        "ipa": "/ɪˈskeɪp frɒm/",
+        "meaning": "trốn thoát khỏi",
+        "example": "Many wildlife creatures managed to escape from the advancing blaze.",
+        "exampleTranslation": "Nhiều loài sinh vật hoang dã đã cố gắng thoát khỏi ngọn lửa đang lan tới."
+    },
+    {
+        "word": "face up to",
+        "type": "phrase",
+        "ipa": "/feɪs ʌp tuː/",
+        "meaning": "đối mặt với (một thực tế khó khăn)",
+        "example": "Governments must face up to the devastating reality of global warming.",
+        "exampleTranslation": "Chính phủ các nước phải đối mặt với thực tế tàn khốc của sự nóng lên toàn cầu."
+    },
+    {
+        "word": "ferocious",
+        "type": "adj",
+        "ipa": "/fəˈrəʊ.ʃəs/",
+        "meaning": "hung dữ, tàn bạo, dữ dội",
+        "example": "A ferocious storm battered coastal villages throughout the night.",
+        "exampleTranslation": "Một cơn bão dữ dội đã quần thảo các làng chài ven biển suốt đêm."
+    },
+    {
+        "word": "food chain",
+        "type": "np",
+        "ipa": "/ˈfuːd tʃeɪn/",
+        "meaning": "chuỗi thức ăn",
+        "example": "Microplastics ingested by plankton quickly enter the marine food chain.",
+        "exampleTranslation": "Hạt vi nhựa mà các sinh vật phù du nuốt phải sẽ nhanh chóng đi vào chuỗi thức ăn đại dương."
+    },
+    {
+        "word": "flora and fauna",
+        "type": "np",
+        "ipa": "/ˌflɔː.rə ænd ˈfɔː.nə/",
+        "meaning": "hệ thực vật và động vật",
+        "example": "The national park boasts a rich diversity of native flora and fauna.",
+        "exampleTranslation": "Vườn quốc gia tự hào sở hữu một hệ động thực vật bản địa vô cùng phong phú."
+    },
+    {
+        "word": "gratification",
+        "type": "n",
+        "ipa": "/ˌɡræt.ɪ.fɪˈkeɪ.ʃən/",
+        "meaning": "sự hài lòng, sự thỏa mãn",
+        "example": "Instant gratification from fast fashion leads to tons of discarded clothing.",
+        "exampleTranslation": "Sự thỏa mãn tức thì từ thời trang nhanh dẫn đến hàng tấn quần áo bị thải bỏ."
+    },
+    {
+        "word": "give rise to",
+        "type": "phrase",
+        "ipa": "/ɡɪv raɪz tuː/",
+        "meaning": "gây ra, dẫn đến",
+        "example": "Unplanned urbanization can give rise to severe air and water pollution.",
+        "exampleTranslation": "Đô thị hóa thiếu quy hoạch có thể dẫn đến tình trạng ô nhiễm không khí và nguồn nước nghiêm trọng."
+    },
+    {
+        "word": "inundate",
+        "type": "v",
+        "ipa": "/ˈɪn.ʌn.deɪt/",
+        "meaning": "làm ngập lụt, tràn ngập",
+        "example": "Rising sea levels threaten to inundate low-lying coastal plains.",
+        "exampleTranslation": "Mực nước biển dâng đe dọa làm ngập lụt các vùng đồng bằng trũng ven biển."
+    },
+    {
+        "word": "ignite",
+        "type": "v",
+        "ipa": "/ɪɡˈnaɪt/",
+        "meaning": "châm ngòi, đốt cháy, làm bùng phát",
+        "example": "A single stray spark can ignite an enormous forest fire during dry seasons.",
+        "exampleTranslation": "Một tia lửa nhỏ cũng có thể châm ngòi cho một trận cháy rừng khổng lồ vào mùa khô."
+    },
+    {
+        "word": "inconsequential",
+        "type": "adj",
+        "ipa": "/ɪnˌkɒn.sɪˈkwen.ʃəl/",
+        "meaning": "không quan trọng, tầm thường",
+        "example": "No individual eco-friendly action is inconsequential in combating climate change.",
+        "exampleTranslation": "Không có hành động bảo vệ môi trường nào của mỗi cá nhân là tầm thường trong cuộc chiến chống biến đổi khí hậu."
+    },
+    {
+        "word": "jeopardize",
+        "type": "v",
+        "ipa": "/ˈdʒep.ə.daɪz/",
+        "meaning": "gây nguy hiểm cho, đe dọa, liều lĩnh hủy hoại",
+        "example": "Toxic waste spills jeopardize the health of nearby communities.",
+        "exampleTranslation": "Các vụ tràn chất thải độc hại đe dọa trực tiếp sức khỏe của các cộng đồng lân cận."
+    },
+    {
+        "word": "harness",
+        "type": "v",
+        "ipa": "/ˈhɑː.nəs/",
+        "meaning": "khai thác, tận dụng (nguồn năng lượng)",
+        "example": "Engineers developed cutting-edge turbines to harness wind and wave energy.",
+        "exampleTranslation": "Các kỹ sư đã phát triển các tua-bin tiên tiến để khai thác năng lượng gió và sóng biển."
+    },
+    {
+        "word": "landscape",
+        "type": "n",
+        "ipa": "/ˈlænd.skeɪp/",
+        "meaning": "cảnh quan, phong cảnh",
+        "example": "Open-cast mining completely altered the pristine mountain landscape.",
+        "exampleTranslation": "Khai thác mỏ lộ thiên đã làm biến đổi hoàn toàn cảnh quan núi non nguyên sơ."
+    },
+    {
+        "word": "looming",
+        "type": "adj",
+        "ipa": "/ˈluː.mɪŋ/",
+        "meaning": "lờ mờ xuất hiện, đe dọa sắp xảy ra",
+        "example": "A looming water crisis threatens millions of residents in arid regions.",
+        "exampleTranslation": "Khủng hoảng nguồn nước đang cận kề đe dọa cuộc sống của hàng triệu cư dân vùng khô hạn."
+    },
+    {
+        "word": "make way for",
+        "type": "phrase",
+        "ipa": "/meɪk weɪ fɔːr/",
+        "meaning": "dọn đường cho, nhường chỗ cho",
+        "example": "Ancient woodlands were cut down to make way for commercial palm oil plantations.",
+        "exampleTranslation": "Những cánh rừng cổ thụ đã bị đốn hạ để nhường chỗ cho các đồn điền cọ dầu thương mại."
+    },
+    {
+        "word": "magnitude",
+        "type": "n",
+        "ipa": "/ˈmæɡ.nɪ.tʃuːd/",
+        "meaning": "tầm quan trọng, độ lớn, quy mô",
+        "example": "Few people comprehend the true magnitude of global warming.",
+        "exampleTranslation": "Ít người hiểu được hết quy mô và tầm nghiêm trọng thực sự của sự nóng lên toàn cầu."
+    },
+    {
+        "word": "notorious",
+        "type": "adj",
+        "ipa": "/nəʊˈtɔː.ri.əs/",
+        "meaning": "khét tiếng, tai tiếng (theo nghĩa xấu)",
+        "example": "The factory became notorious for illegally discharging untreated effluent into the river.",
+        "exampleTranslation": "Nhà máy này đã trở nên khét tiếng vì xả trái phép nước thải chưa qua xử lý ra dòng sông."
+    },
+    {
+        "word": "organism",
+        "type": "n",
+        "ipa": "/ˈɔː.ɡən.ɪ.zəm/",
+        "meaning": "sinh vật",
+        "example": "Every living organism plays a specific ecological role in maintaining environmental balance.",
+        "exampleTranslation": "Mỗi sinh vật sống đều đóng một vai trò sinh thái nhất định trong việc duy trì cân bằng môi trường."
+    },
+    {
+        "word": "on the brink of sth",
+        "type": "phrase",
+        "ipa": "/ɒn ðə brɪŋk ɒv ˈsʌm.θɪŋ/",
+        "meaning": "trên bờ vực của cái gì",
+        "example": "Several rare coral species are now on the brink of extinction.",
+        "exampleTranslation": "Một số loài san hô quý hiếm hiện đang đứng trên bờ vực tuyệt chủng."
+    },
+    {
+        "word": "pose a threat to sb/sth",
+        "type": "phrase",
+        "ipa": "/pəʊz ə θret tuː/",
+        "meaning": "gây ra mối đe dọa cho ai/cái gì",
+        "example": "Plastic waste and oil leaks pose a grave threat to marine life.",
+        "exampleTranslation": "Rác thải nhựa và các vụ rò rỉ dầu gây ra mối đe dọa nghiêm trọng cho sinh vật biển."
+    },
+    {
+        "word": "perilously",
+        "type": "adv",
+        "ipa": "/ˈper.əl.əs.li/",
+        "meaning": "một cách nguy hiểm, hiểm nghèo",
+        "example": "Water reserves in the reservoir dropped perilously close to zero.",
+        "exampleTranslation": "Nguồn nước dự trữ trong hồ chứa đã giảm xuống mức nguy hiểm gần như cạn kiệt."
+    },
+    {
+        "word": "predator",
+        "type": "n",
+        "ipa": "/ˈpred.ə.tər/",
+        "meaning": "động vật săn mồi",
+        "example": "Apex predators like wolves maintain healthy herbivore populations in natural parks.",
+        "exampleTranslation": "Các loài săn mồi đầu bảng như chó sói giúp duy trì số lượng động vật ăn cỏ ở mức cân bằng trong công viên tự nhiên."
+    },
+    {
+        "word": "prey on",
+        "type": "phrase",
+        "ipa": "/preɪ ɒn/",
+        "meaning": "săn bắt (con mồi)",
+        "example": "Barn owls actively prey on rodents during nighttime hunts.",
+        "exampleTranslation": "Cú lợn thường săn bắt các loài gặm nhấm trong các chuyến đi săn ban đêm."
+    },
+    {
+        "word": "proponent",
+        "type": "n",
+        "ipa": "/prəˈpəʊ.nənt/",
+        "meaning": "người ủng hộ, người đề xướng",
+        "example": "Proponents of renewable energy advocate for phasing out coal power plants.",
+        "exampleTranslation": "Những người ủng hộ năng lượng tái tạo kêu gọi loại bỏ dần các nhà máy nhiệt điện than."
+    },
+    {
+        "word": "premise",
+        "type": "n",
+        "ipa": "/ˈprem.ɪs/",
+        "meaning": "tiền đề, giả định",
+        "example": "The conservation project rests on the premise that local communities must benefit directly.",
+        "exampleTranslation": "Dự án bảo tồn dựa trên tiền đề rằng các cộng đồng địa phương phải được hưởng lợi trực tiếp."
+    },
+    {
+        "word": "pioneer",
+        "type": "n",
+        "ipa": "/ˌpaɪəˈnɪər/",
+        "meaning": "người tiên phong",
+        "example": "Rachel Carson was an environmental pioneer whose writings inspired modern ecological awareness.",
+        "exampleTranslation": "Rachel Carson là người tiên phong về môi trường với các tác phẩm khơi gợi nhận thức sinh thái hiện đại."
+    },
+    {
+        "word": "purify",
+        "type": "v",
+        "ipa": "/ˈpjʊə.rɪ.faɪ/",
+        "meaning": "làm sạch, thanh lọc",
+        "example": "Mangrove forests naturally purify coastal water by filtering out silt and heavy metals.",
+        "exampleTranslation": "Rừng ngập mặn làm sạch nguồn nước ven biển một cách tự nhiên bằng cách lọc bùn và kim loại nặng."
+    },
+    {
+        "word": "plunging",
+        "type": "adj",
+        "ipa": "/ˈplʌn.dʒɪŋ/",
+        "meaning": "giảm mạnh, lao dốc",
+        "example": "Plunging fish stocks have alarmed marine biologists across the globe.",
+        "exampleTranslation": "Trữ lượng cá đang lao dốc mạnh đã khiến các nhà sinh vật biển trên thế giới gióng lên hồi chuông cảnh báo."
+    },
+    {
+        "word": "replenish",
+        "type": "v",
+        "ipa": "/rɪˈplen.ɪʃ/",
+        "meaning": "bổ sung, làm đầy lại",
+        "example": "Seasonal monsoons replenish underground aquifers after long dry seasons.",
+        "exampleTranslation": "Mùa gió mùa giúp bổ sung lại các tầng chứa nước ngầm sau những đợt khô hạn kéo dài."
+    },
+    {
+        "word": "roam",
+        "type": "v",
+        "ipa": "/rəʊm/",
+        "meaning": "đi lang thang, rong ruổi",
+        "example": "Elephants need vast stretches of protected wilderness to roam freely.",
+        "exampleTranslation": "Voi cần những dải đất hoang dã rộng lớn được bảo vệ để có thể tự do lang thang."
+    },
+    {
+        "word": "shred",
+        "type": "v",
+        "ipa": "/ʃred/",
+        "meaning": "xé vụn, cắt nhỏ",
+        "example": "Recycling plants shred plastic bottles into tiny pellets for remanufacturing.",
+        "exampleTranslation": "Các nhà máy tái chế cắt nhỏ chai nhựa thành các hạt vụn để tái sản xuất."
+    },
+    {
+        "word": "set fire to",
+        "type": "phrase",
+        "ipa": "/set ˈfaɪər tuː/",
+        "meaning": "châm lửa đốt",
+        "example": "Farmers illegally set fire to dried brushwood, accidentally sparking a raging wildfire.",
+        "exampleTranslation": "Nông dân châm lửa đốt cành khô trái phép, vô tình gây ra một vụ cháy rừng dữ dội."
+    },
+    {
+        "word": "substantial",
+        "type": "adj",
+        "ipa": "/səbˈstæn.ʃəl/",
+        "meaning": "đáng kể, lớn lao",
+        "example": "Investing in solar power can lead to substantial reductions in carbon emissions.",
+        "exampleTranslation": "Đầu tư vào năng lượng mặt trời có thể mang lại sự cắt giảm đáng kể lượng khí thải carbon."
+    },
+    {
+        "word": "solar power",
+        "type": "np",
+        "ipa": "/ˌsəʊ.lə ˈpaʊ.ər/",
+        "meaning": "năng lượng mặt trời",
+        "example": "Installing rooftop solar power systems lowers utility bills and protects the planet.",
+        "exampleTranslation": "Lắp đặt hệ thống năng lượng mặt trời trên mái nhà giúp giảm hóa đơn tiền điện và bảo vệ hành tinh."
+    },
+    {
+        "word": "territory",
+        "type": "n",
+        "ipa": "/ˈter.ɪ.tər.i/",
+        "meaning": "lãnh thổ, địa bàn",
+        "example": "Tigers patrol and aggressively mark their territory to deter rival predators.",
+        "exampleTranslation": "Hổ đi tuần tra và đánh dấu lãnh thổ quyết liệt để ngăn chặn các con săn mồi cạnh tranh."
+    },
+    {
+        "word": "thrive",
+        "type": "v",
+        "ipa": "/θraɪv/",
+        "meaning": "phát triển mạnh mẽ, thịnh vượng",
+        "example": "Certain resilient weeds thrive even in degraded and nutrient-poor soils.",
+        "exampleTranslation": "Một số loài cỏ dại có sức sống dẻo dai vẫn phát triển mạnh mẽ ngay cả trên đất thoái hóa nghèo dinh dưỡng."
+    },
+    {
+        "word": "wreak havoc on",
+        "type": "phrase",
+        "ipa": "/riːk ˈhæv.ək ɒn/",
+        "meaning": "gây thiệt hại nghiêm trọng cho, tàn phá",
+        "example": "Prolonged droughts wreak havoc on regional agriculture and food security.",
+        "exampleTranslation": "Hạn hán kéo dài gây thiệt hại nghiêm trọng cho nền nông nghiệp và an ninh lương thực khu vực."
+    },
+    {
+        "word": "absorb",
+        "type": "v",
+        "ipa": "/əbˈzɔːb/",
+        "meaning": "hấp thụ, hút",
+        "example": "Oceans absorb nearly a quarter of all human-generated carbon emissions.",
+        "exampleTranslation": "Các đại dương hấp thụ gần một phần tư tổng lượng khí thải carbon do con người tạo ra."
+    },
+    {
+        "word": "alternative",
+        "type": "n",
+        "ipa": "/ɒlˈtɜː.nə.tɪv/",
+        "meaning": "sự thay thế, phương án thay thế",
+        "example": "Biofuels offer a greener alternative to traditional petroleum products.",
+        "exampleTranslation": "Nhiên liệu sinh học cung cấp một giải pháp thay thế xanh hơn cho các sản phẩm xăng dầu truyền thống."
+    },
+    {
+        "word": "biodiversity",
+        "type": "n",
+        "ipa": "/ˌbaɪ.əʊ.daɪˈvɜː.sə.ti/",
+        "meaning": "đa dạng sinh học",
+        "example": "Tropical rainforests harbor the greatest biodiversity of any terrestrial biome.",
+        "exampleTranslation": "Rừng mưa nhiệt đới lưu giữ mức độ đa dạng sinh học cao nhất trong số các quần xã sinh vật trên cạn."
+    },
+    {
+        "word": "cliff",
+        "type": "n",
+        "ipa": "/klɪf/",
+        "meaning": "vách đá",
+        "example": "Colonies of seabirds nest safely along sheer coastal cliffs.",
+        "exampleTranslation": "Các đàn chim biển làm tổ an toàn dọc theo những vách đá ven biển dốc đứng."
+    },
+    {
+        "word": "claw",
+        "type": "n",
+        "ipa": "/klɔː/",
+        "meaning": "móng vuốt",
+        "example": "Eagles use sharp curved claws to seize slippery fish from water surfaces.",
+        "exampleTranslation": "Đại bàng sử dụng móng vuốt cong nhọn để quắp lấy những con cá trơn trượt trên mặt nước."
+    },
+    {
+        "word": "crest",
+        "type": "n",
+        "ipa": "/krest/",
+        "meaning": "đỉnh, chỏm (đồi, sóng)",
+        "example": "Massive waves reached the crest of the sea wall during the tropical typhoon.",
+        "exampleTranslation": "Những con sóng khổng lồ đã chạm đến đỉnh của bờ kè chắn sóng trong trận bão nhiệt đới."
+    },
+    {
+        "word": "creature",
+        "type": "n",
+        "ipa": "/ˈkriː.tʃər/",
+        "meaning": "sinh vật, loài vật",
+        "example": "Deep-sea creatures have adapted to survive in extreme darkness and pressure.",
+        "exampleTranslation": "Các sinh vật dưới biển sâu đã thích nghi để tồn tại trong bóng tối và áp suất cùng cực."
+    },
+    {
+        "word": "crude oil",
+        "type": "np",
+        "ipa": "/ˌkruːd ˈɔɪl/",
+        "meaning": "dầu thô",
+        "example": "Accidental tanker spills of crude oil cause catastrophic harm to marine ecosystems.",
+        "exampleTranslation": "Các sự cố tràn dầu thô từ tàu chở dầu gây ra tác hại thảm khốc cho các hệ sinh thái biển."
+    },
+    {
+        "word": "destruction",
+        "type": "n",
+        "ipa": "/dɪˈstrʌk.ʃən/",
+        "meaning": "sự phá hủy, sự tàn phá",
+        "example": "The rapid destruction of wetlands increases the danger of downstream flooding.",
+        "exampleTranslation": "Sự phá hủy nhanh chóng các vùng đất ngập nước làm tăng nguy cơ ngập lụt ở hạ lưu."
+    },
+    {
+        "word": "discharge",
+        "type": "v",
+        "ipa": "/dɪsˈtʃɑːdʒ/",
+        "meaning": "thải ra, xả ra (khí, nước thải)",
+        "example": "The factory was heavily fined for discharging toxic effluents directly into the river.",
+        "exampleTranslation": "Nhà máy đã bị phạt nặng vì xả trực tiếp nước thải độc hại ra dòng sông."
+    },
+    {
+        "word": "emission",
+        "type": "n",
+        "ipa": "/iˈmɪʃ.ən/",
+        "meaning": "sự phát thải, khí thải",
+        "example": "Switching to electric vehicles plays a key role in reducing carbon emissions.",
+        "exampleTranslation": "Chuyển sang xe điện đóng vai trò chủ chốt trong việc giảm lượng khí phát thải carbon."
+    },
+    {
+        "word": "ecology",
+        "type": "n",
+        "ipa": "/iˈkɒl.ə.dʒi/",
+        "meaning": "sinh thái học, hệ sinh thái",
+        "example": "Pollution can irreparably harm the delicate ecology of coral reefs.",
+        "exampleTranslation": "Ô nhiễm có thể làm tổn hại không thể phục hồi hệ sinh thái mong manh của các rạn san hô."
+    },
+    {
+        "word": "enormous",
+        "type": "adj",
+        "ipa": "/ɪˈnɔː.məs/",
+        "meaning": "khổng lồ, to lớn",
+        "example": "The volcanic eruption released an enormous cloud of ash and sulfur into the atmosphere.",
+        "exampleTranslation": "Vụ phun trào núi lửa đã giải phóng một đám mây tro bụi và lưu huỳnh khổng lồ vào bầu khí quyển."
+    },
+    {
+        "word": "erosion",
+        "type": "n",
+        "ipa": "/ɪˈrəʊ.ʒən/",
+        "meaning": "sự xói mòn (đất, bờ biển)",
+        "example": "Planting deep-rooted trees along riverbanks helps prevent severe soil erosion.",
+        "exampleTranslation": "Trồng cây rễ sâu dọc theo bờ sông giúp ngăn chặn sự xói mòn đất nghiêm trọng."
+    },
+    {
+        "word": "evolve",
+        "type": "v",
+        "ipa": "/ɪˈvɒlv/",
+        "meaning": "tiến hóa, phát triển qua thời gian",
+        "example": "Certain desert flora evolved specialized leaves to minimize water transpiration.",
+        "exampleTranslation": "Một số thực vật sa mạc đã tiến hóa những chiếc lá đặc biệt để giảm thiểu sự thoát hơi nước."
+    },
+    {
+        "word": "famine",
+        "type": "n",
+        "ipa": "/ˈfæm.ɪn/",
+        "meaning": "nạn đói",
+        "example": "Prolonged crop failures caused by severe drought can trigger widespread famine.",
+        "exampleTranslation": "Mất mùa kéo dài do hạn hán nghiêm trọng có thể châm ngòi cho nạn đói trên diện rộng."
+    },
+    {
+        "word": "flock",
+        "type": "n",
+        "ipa": "/flɒk/",
+        "meaning": "bầy, đàn (chim, cừu)",
+        "example": "A huge flock of migratory birds rested in the wetlands before flying south.",
+        "exampleTranslation": "Một đàn chim di cư khổng lồ đã dừng chân nghỉ tại vùng đất ngập nước trước khi bay về phương nam."
+    },
+    {
+        "word": "fossil fuel",
+        "type": "np",
+        "ipa": "/ˈfɒs.əl ˌfjuː.əl/",
+        "meaning": "nhiên liệu hóa thạch",
+        "example": "Burning fossil fuels is the primary driver of anthropogenic climate change.",
+        "exampleTranslation": "Việc đốt nhiên liệu hóa thạch là nguyên nhân chính thúc đẩy biến đổi khí hậu do con người gây ra."
+    },
+    {
+        "word": "illegal",
+        "type": "adj",
+        "ipa": "/ɪˈliː.ɡəl/",
+        "meaning": "bất hợp pháp, trái phép",
+        "example": "Rangers patrol the sanctuary continuously to crack down on illegal logging and poaching.",
+        "exampleTranslation": "Kiểm lâm tuần tra khu bảo tồn liên tục để ngăn chặn việc khai thác gỗ và săn trộm bất hợp pháp."
+    },
+    {
+        "word": "make compost",
+        "type": "phrase",
+        "ipa": "/meɪk ˈkɒm.pɒst/",
+        "meaning": "làm phân compost, ủ phân hữu cơ",
+        "example": "Households can make compost from fruit peels and garden cuttings to enrich their soil.",
+        "exampleTranslation": "Các hộ gia đình có thể làm phân compost từ vỏ trái cây và cành lá trong vườn để làm giàu đất."
+    },
+    {
+        "word": "make use of",
+        "type": "phrase",
+        "ipa": "/meɪk juːz ɒv/",
+        "meaning": "tận dụng, sử dụng",
+        "example": "Modern green buildings make use of natural airflow and sunlight to conserve energy.",
+        "exampleTranslation": "Các tòa nhà xanh hiện đại tận dụng luồng không khí tự nhiên và ánh nắng mặt trời để tiết kiệm năng lượng."
+    },
+    {
+        "word": "make up",
+        "type": "phrase",
+        "ipa": "/meɪk ʌp/",
+        "meaning": "cấu thành, chiếm tỉ lệ",
+        "example": "Renewable sources now make up over thirty percent of the national power supply.",
+        "exampleTranslation": "Các nguồn năng lượng tái tạo hiện cấu thành hơn 30% tổng nguồn cung cấp điện quốc gia."
+    },
+    {
+        "word": "parallel",
+        "type": "adj",
+        "ipa": "/ˈpær.ə.lel/",
+        "meaning": "song song, tương đồng",
+        "example": "Environmental degradation and economic instability often run in parallel.",
+        "exampleTranslation": "Sự suy thoái môi trường và bất ổn kinh tế thường diễn ra song song với nhau."
+    },
+    {
+        "word": "pesticide",
+        "type": "n",
+        "ipa": "/ˈpes.tɪ.saɪd/",
+        "meaning": "thuốc trừ sâu",
+        "example": "Excessive pesticide spraying threatens vital pollinator populations such as bees.",
+        "exampleTranslation": "Phun thuốc trừ sâu quá mức đe dọa các quần thể thụ phấn thiết yếu như loài ong."
+    },
+    {
+        "word": "poisonous",
+        "type": "adj",
+        "ipa": "/ˈpɔɪ.zən.əs/",
+        "meaning": "có độc, độc hại",
+        "example": "Industrial smokestacks released poisonous gases directly into the surrounding atmosphere.",
+        "exampleTranslation": "Các ống khói công nghiệp đã xả các loại khí độc hại trực tiếp vào bầu không khí xung quanh."
+    },
+    {
+        "word": "pollutant",
+        "type": "n",
+        "ipa": "/pəˈluː.tənt/",
+        "meaning": "chất gây ô nhiễm",
+        "example": "Vehicle exhaust emissions contain harmful chemical pollutants like nitrogen oxides.",
+        "exampleTranslation": "Khí thải từ các phương tiện giao thông chứa các chất gây ô nhiễm hóa học có hại như oxit nitơ."
+    },
+    {
+        "word": "reforestation",
+        "type": "n",
+        "ipa": "/ˌriː.fɒr.ɪˈsteɪ.ʃən/",
+        "meaning": "sự trồng rừng tái tạo, sự tái tạo rừng",
+        "example": "Large-scale reforestation projects help capture carbon dioxide and restore natural habitats.",
+        "exampleTranslation": "Các dự án trồng rừng tái tạo quy mô lớn giúp hấp thu khí CO2 và phục hồi sinh cảnh tự nhiên."
+    },
+    {
+        "word": "reconstruction",
+        "type": "n",
+        "ipa": "/ˌriː.kənˈstrʌk.ʃən/",
+        "meaning": "sự tái thiết, sự xây dựng lại",
+        "example": "After the catastrophic tsunami, international aid funded the reconstruction of coastal defenses.",
+        "exampleTranslation": "Sau trận sóng thần thảm khốc, viện trợ quốc tế đã tài trợ cho công cuộc tái thiết các tuyến đê biển phòng hộ."
+    },
+    {
+        "word": "rainfall",
+        "type": "n",
+        "ipa": "/ˈreɪn.fɔːl/",
+        "meaning": "lượng mưa",
+        "example": "Unusually heavy rainfall triggered severe flooding across low-lying valleys.",
+        "exampleTranslation": "Lượng mưa lớn bất thường đã gây ra lũ lụt nghiêm trọng trên khắp các thung lũng trũng thấp."
+    },
+    {
+        "word": "recycle",
+        "type": "v",
+        "ipa": "/ˌriːˈsaɪ.kəl/",
+        "meaning": "tái chế",
+        "example": "Citizens are encouraged to separate domestic waste and recycle paper and plastics.",
+        "exampleTranslation": "Người dân được khuyến khích phân loại rác thải sinh hoạt và tái chế giấy cùng đồ nhựa."
+    },
+    {
+        "word": "renew",
+        "type": "v",
+        "ipa": "/rɪˈnjuː/",
+        "meaning": "phục hồi, làm mới, tái sinh",
+        "example": "Proper conservation efforts allow damaged ecosystems to renew themselves over time.",
+        "exampleTranslation": "Các nỗ lực bảo tồn đúng đắn giúp các hệ sinh thái bị tổn hại tự phục hồi theo thời gian."
+    },
+    {
+        "word": "run out of sth",
+        "type": "phrase",
+        "ipa": "/rʌn aʊt ɒv ˈsʌm.θɪŋ/",
+        "meaning": "cạn kiệt cái gì",
+        "example": "Without radical shifts in consumption, cities may run out of fresh groundwater.",
+        "exampleTranslation": "Nếu không có sự thay đổi triệt để trong tiêu dùng, các thành phố có thể cạn kiệt nguồn nước ngầm sạch."
+    },
+    {
+        "word": "run on sth",
+        "type": "phrase",
+        "ipa": "/rʌn ɒn ˈsʌm.θɪŋ/",
+        "meaning": "chạy bằng nguyên liệu gì, hoạt động nhờ cái gì",
+        "example": "The public transit fleet was upgraded so that all buses run on clean electricity.",
+        "exampleTranslation": "Đội xe buýt công cộng đã được nâng cấp để tất cả các xe đều chạy bằng điện sạch."
+    },
+    {
+        "word": "stretch",
+        "type": "n",
+        "ipa": "/stretʃ/",
+        "meaning": "dải đất, khoảng đất trải dài",
+        "example": "A scenic stretch of coastal dunes was designated as an ecological reserve.",
+        "exampleTranslation": "Một dải cồn cát ven biển tuyệt đẹp đã được quy hoạch thành khu bảo tồn sinh thái."
+    },
+    {
+        "word": "tame",
+        "type": "v",
+        "ipa": "/teɪm/",
+        "meaning": "thuần hóa, chế ngự",
+        "example": "Humans have attempted to tame wild rivers by constructing dams and levees.",
+        "exampleTranslation": "Con người đã cố gắng chế ngự những dòng sông hoang dã bằng cách xây dựng các con đập và đê điều."
+    },
+    {
+        "word": "wipe out",
+        "type": "phrase",
+        "ipa": "/waɪp aʊt/",
+        "meaning": "xóa sổ, tiêu diệt hoàn toàn",
+        "example": "A single catastrophic oil spill can wipe out entire marine populations.",
+        "exampleTranslation": "Một sự cố tràn dầu thảm khốc duy nhất cũng có thể xóa sổ toàn bộ các quần thể sinh vật biển."
+    },
+    {
+        "word": "waterway",
+        "type": "n",
+        "ipa": "/ˈwɔː.tə.weɪ/",
+        "meaning": "đường thủy, luồng nước",
+        "example": "Industrial waste dumping choked the city's ancient waterways with sludge.",
+        "exampleTranslation": "Việc xả thải công nghiệp đã làm tắc nghẽn các tuyến đường thủy cổ kính của thành phố bởi bùn thải."
+    },
+    {
+        "word": "accumulate",
+        "type": "v",
+        "ipa": "/əˈkjuː.mjə.leɪt/",
+        "meaning": "tích lũy, tích tụ",
+        "example": "Toxic heavy metals tend to accumulate inside the tissues of predatory fish.",
+        "exampleTranslation": "Các kim loại nặng độc hại có xu hướng tích tụ bên trong các mô của loài cá săn mồi."
+    },
+    {
+        "word": "accelerate",
+        "type": "v",
+        "ipa": "/əkˈsel.ə.reɪt/",
+        "meaning": "tăng tốc, thúc đẩy nhanh",
+        "example": "Deforestation in the Amazon can significantly accelerate global climate instability.",
+        "exampleTranslation": "Nạn phá rừng ở Amazon có thể đẩy nhanh đáng kể sự bất ổn của khí hậu toàn cầu."
+    },
+    {
+        "word": "combat",
+        "type": "v",
+        "ipa": "/ˈkɒm.bæt/",
+        "meaning": "chống lại, đấu tranh ngăn chặn",
+        "example": "Nations must unite to combat desertification and land degradation.",
+        "exampleTranslation": "Các quốc gia phải đoàn kết để chống lại nạn sa mạc hóa và suy thoái đất đai."
+    },
+    {
+        "word": "catastrophic",
+        "type": "adj",
+        "ipa": "/ˌkæt.əˈstrɒf.ɪk/",
+        "meaning": "thảm khốc, gây tai họa lớn",
+        "example": "Unchecked global warming could have catastrophic impacts on worldwide food supplies.",
+        "exampleTranslation": "Sự ấm lên toàn cầu không được kiểm soát có thể gây ra những hậu quả thảm khốc đối với nguồn cung lương thực thế giới."
+    },
+    {
+        "word": "clear up",
+        "type": "phrase",
+        "ipa": "/klɪər ʌp/",
+        "meaning": "(thời tiết) trở nên quang đãng, tạnh ráo",
+        "example": "We hope the persistent rainy skies will clear up before rescue teams arrive.",
+        "exampleTranslation": "Chúng tôi hy vọng bầu trời mưa dầm dề sẽ quang đãng trở lại trước khi các đội cứu hộ đến."
+    },
+    {
+        "word": "deflect",
+        "type": "v",
+        "ipa": "/dɪˈflekt/",
+        "meaning": "làm chệch hướng, đổi chiều",
+        "example": "Coastal barrier islands help deflect punishing ocean storm surges.",
+        "exampleTranslation": "Các đảo chắn sóng ven biển giúp làm chệch hướng những đợt triều cường bão táp nguy hiểm từ đại dương."
+    },
+    {
+        "word": "demise",
+        "type": "n",
+        "ipa": "/dɪˈmaɪz/",
+        "meaning": "sự chấm dứt, cái chết, sự sụp đổ",
+        "example": "Habitat loss brought about the demise of many unique island bird species.",
+        "exampleTranslation": "Mất môi trường sống đã dẫn đến sự chấm dứt của nhiều loài chim đảo độc đáo."
+    },
+    {
+        "word": "disperse",
+        "type": "v",
+        "ipa": "/dɪˈspɜːs/",
+        "meaning": "phân tán, giải tán, phát tán",
+        "example": "Gusty winds help disperse dense layers of city smog across surrounding hills.",
+        "exampleTranslation": "Những cơn gió giật giúp phân tán các lớp khói bụi dày đặc của thành phố qua các ngọn đồi xung quanh."
+    },
+    {
+        "word": "extreme weather",
+        "type": "np",
+        "ipa": "/ɪkˌstriːm ˈweð.ər/",
+        "meaning": "thời tiết cực đoan",
+        "example": "Events of extreme weather such as heatwaves and super typhoons are becoming more frequent.",
+        "exampleTranslation": "Các hiện tượng thời tiết cực đoan như đợt nắng nóng và siêu bão đang xảy ra thường xuyên hơn."
+    },
+    {
+        "word": "flash flood",
+        "type": "np",
+        "ipa": "/ˈflæʃ flʌd/",
+        "meaning": "lũ quét",
+        "example": "A sudden downpour in the highlands triggered a deadly flash flood overnight.",
+        "exampleTranslation": "Trận mưa rào bất ngờ ở vùng cao đã gây ra một trận lũ quét kinh hoàng trong đêm."
+    },
+    {
+        "word": "feel it in one's bones",
+        "type": "idiom",
+        "ipa": "/fiːl ɪt ɪn wʌnz bəʊnz/",
+        "meaning": "có linh cảm sâu sắc, cảm nhận rõ rệt",
+        "example": "Elderly farmers said they could feel it in their bones that a fierce storm was brewing.",
+        "exampleTranslation": "Những người nông dân lớn tuổi nói rằng họ cảm nhận rõ trong người rằng một cơn bão dữ dội đang hình thành."
+    },
+    {
+        "word": "landslide",
+        "type": "n",
+        "ipa": "/ˈlænd.slaɪd/",
+        "meaning": "sạt lở đất",
+        "example": "Torrential monsoon rains triggered a massive landslide that blocked the mountain pass.",
+        "exampleTranslation": "Mưa gió mùa như trút nước đã gây ra một vụ sạt lở đất lớn làm tắc nghẽn con đèo."
+    },
+    {
+        "word": "inevitable",
+        "type": "adj",
+        "ipa": "/ɪˈnev.ɪ.tə.bəl/",
+        "meaning": "không thể tránh khỏi",
+        "example": "Without aggressive carbon reductions, higher sea levels are practically inevitable.",
+        "exampleTranslation": "Nếu không giảm mạnh lượng carbon, mực nước biển dâng cao gần như là điều không thể tránh khỏi."
+    },
+    {
+        "word": "let up",
+        "type": "phrase",
+        "ipa": "/let ʌp/",
+        "meaning": "(mưa, bão) giảm dần, ngớt đi",
+        "example": "Rescuers waited anxiously for the torrential rain to let up before deploying boats.",
+        "exampleTranslation": "Các nhân viên cứu hộ lo lắng chờ cơn mưa như trút nước ngớt đi trước khi triển khai thuyền cứu nạn."
+    },
+    {
+        "word": "heatwave",
+        "type": "n",
+        "ipa": "/ˈhiːt.weɪv/",
+        "meaning": "đợt nóng, đợt nắng nóng gay gắt",
+        "example": "A record-breaking summer heatwave caused power outages across major cities.",
+        "exampleTranslation": "Đợt nắng nóng kỷ lục vào mùa hè đã làm mất điện trên diện rộng ở các thành phố lớn."
+    },
+    {
+        "word": "muddy",
+        "type": "adj",
+        "ipa": "/ˈmʌd.i/",
+        "meaning": "lầy lội, nhiều bùn",
+        "example": "The dirt paths turned into slippery muddy tracks after days of constant drizzle.",
+        "exampleTranslation": "Những con đường đất đã biến thành các vệt bùn lầy lội trơn trượt sau nhiều ngày mưa phùn liên tục."
+    },
+    {
+        "word": "prolonged",
+        "type": "adj",
+        "ipa": "/prəˈlɒŋd/",
+        "meaning": "kéo dài",
+        "example": "Prolonged droughts dry out groundwater wells and ruin agricultural harvests.",
+        "exampleTranslation": "Hạn hán kéo dài làm cạn kiệt các giếng nước ngầm và phá hủy các vụ mùa nông nghiệp."
+    },
+    {
+        "word": "radical",
+        "type": "adj",
+        "ipa": "/ˈræd.ɪ.kəl/",
+        "meaning": "triệt để, căn bản",
+        "example": "Halting the ecological crisis requires radical structural reforms in energy policy.",
+        "exampleTranslation": "Ngăn chặn khủng hoảng sinh thái đòi hỏi những cải cách cơ cấu triệt để trong chính sách năng lượng."
+    },
+    {
+        "word": "renewable",
+        "type": "adj",
+        "ipa": "/rɪˈnjuː.ə.bəl/",
+        "meaning": "có thể tái tạo",
+        "example": "Shifting toward renewable energy sources reduces our dependency on imported oil.",
+        "exampleTranslation": "Chuyển sang các nguồn năng lượng có thể tái tạo giúp giảm bớt sự phụ thuộc của chúng ta vào dầu mỏ nhập khẩu."
+    },
+    {
+        "word": "batter",
+        "type": "v",
+        "ipa": "/ˈbæt.ər/",
+        "meaning": "tàn phá dữ dội, đập liên hồi",
+        "example": "Gigantic typhoon waves continued to batter the coastal seawall through the night.",
+        "exampleTranslation": "Những con sóng bão khổng lồ tiếp tục đập liên hồi và tàn phá bức tường chắn sóng ven biển suốt đêm."
+    },
+    {
+        "word": "tsunami",
+        "type": "n",
+        "ipa": "/tsuːˈnɑː.mi/",
+        "meaning": "sóng thần",
+        "example": "An undersea earthquake unleashed a deadly tsunami that struck coastal towns.",
+        "exampleTranslation": "Một trận động đất dưới đáy biển đã giải phóng một đợt sóng thần kinh hoàng ập vào các thị trấn ven biển."
+    },
+    {
+        "word": "temperate",
+        "type": "adj",
+        "ipa": "/ˈtem.pər.ət/",
+        "meaning": "ôn đới (khí hậu ôn hòa)",
+        "example": "Temperate rainforests receive abundant moisture without experiencing extreme temperature swings.",
+        "exampleTranslation": "Rừng mưa ôn đới nhận được lượng ẩm dồi dào mà không phải trải qua những đợt biến đổi nhiệt độ cực đoan."
+    },
+    {
+        "word": "violent",
+        "type": "adj",
+        "ipa": "/ˈvaɪə.lənt/",
+        "meaning": "mãnh liệt, dữ dội, bạo lực",
+        "example": "A violent cyclone tore uprooted trees from the ground and ripped roofs off buildings.",
+        "exampleTranslation": "Một cơn lốc xoáy dữ dội đã bật gốc cây cối khỏi mặt đất và giật tung các mái nhà."
+    }
+  ],
   ourFuture: [],
   phrasalVerbs: [
         {

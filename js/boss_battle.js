@@ -22,7 +22,8 @@ const BOSS_PROFILES = {
   ourSociety: { name: 'Muddle Monster', img: 'boss_teal' },
   demographicTerms: { name: 'Tangle Beast', img: 'boss_blue' },
   phrasalVerbs: { name: 'Mix-up Devil', img: 'boss_red' },
-  collocations: { name: 'Repeat-o-saurus', img: 'boss_dino' }
+  collocations: { name: 'Repeat-o-saurus', img: 'boss_dino' },
+  ourEnvironment: { name: 'Smog Titan', img: 'boss_green' }
 };
 const BOSS_PATROL_PROFILE = { name: 'Wandering Gremlin', img: 'boss_green' };
 

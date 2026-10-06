@@ -1180,7 +1180,7 @@ const vocabularyData = {
       word: "get away from it all",
       type: "phrase",
       ipa: "/ɡet əˈweɪ frəm ɪt ɔːl/",
-      meaning: "nghĩa ngơi thư giãn",
+      meaning: "nghỉ ngơi thư giãn",
       example: "We booked a cabin in the forest to get away from it all.",
       exampleTranslation: "Chúng tôi đã đặt một căn nhà gỗ trong rừng để nghỉ ngơi thư giãn."
     },
@@ -1726,9 +1726,9 @@ const vocabularyData = {
       word: "name-calling",
       type: "n",
       ipa: "/ˈneɪm ˌkɔːlɪŋ/",
-      meaning: "bôi nhọ",
+      meaning: "gọi tên miệt thị, chửi bới",
       example: "Name-calling can hurt people's feelings.",
-      exampleTranslation: "Bôi nhọ có thể làm tổn thương người khác."
+      exampleTranslation: "Việc gọi tên miệt thị có thể làm tổn thương cảm xúc của người khác."
     },
     {
       word: "norm",

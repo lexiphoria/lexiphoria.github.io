@@ -160,6 +160,13 @@ h1 {
   margin-bottom: 35px;
 }
 
+/* Core topics grid: 4 main topics laid out 2x2 */
+@media (min-width: 500px) {
+  .topics-grid-core {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .topic-card {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.05);

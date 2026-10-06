@@ -519,6 +519,11 @@ body {
   box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.04);
 }
 
+.char-bg-amber {
+  background: rgba(245, 158, 11, 0.14);
+  border: 1px solid rgba(245, 158, 11, 0.28);
+}
+
 .tip {
   margin-top: 26px;
   background: #ffffffcc;

@@ -1,0 +1,414 @@
+{
+  "version": "2.0",
+  "game_module": "Immersion Town - Peaceful Village & Hoi An Ancient Town (2026 Edition)",
+  "description": "Kịch bản hội thoại chuẩn hóa cho 4 NPC (Mark, Emma, Sarah, David) trong game nhập vai ngôn ngữ 2D kết hợp bối cảnh nông thôn hiện đại và Phố cổ Hội An.",
+  "npcs": [
+    {
+      "id": "npc_mark",
+      "name": "Mark",
+      "role": "Phượt thủ Mỹ / Eco-Backpacker",
+      "avatar": "assets/images/npcs/mark.png",
+      "location_id": "spot-banyan-ev",
+      "location_name": "Cây Đa Làng & Trạm Sạc Xe Điện (EV Charging Station)",
+      "topic": "Giao thông xanh & Văn hóa hòa quyện (Green Mobility & Tradition meets Modernity)",
+      "target_vocabulary": [
+        {
+          "word": "EV charging station",
+          "phonetic": "/ˌiːˈviː ˈtʃɑː.dʒɪŋ ˌsteɪ.ʃən/",
+          "type": "noun phrase",
+          "meaning": "Trạm sạc xe điện"
+        },
+        {
+          "word": "landmark",
+          "phonetic": "/ˈlænd.mɑːk/",
+          "type": "noun",
+          "meaning": "Biểu tượng văn hóa / Địa danh nổi tiếng"
+        },
+        {
+          "word": "sustainable",
+          "phonetic": "/səˈsteɪ.nə.bəl/",
+          "type": "adjective",
+          "meaning": "Bền vững / Thân thiện với môi trường"
+        },
+        {
+          "word": "tradition",
+          "phonetic": "/trəˈdɪʃ.ən/",
+          "type": "noun",
+          "meaning": "Truyền thống"
+        },
+        {
+          "word": "modernity",
+          "phonetic": "/məˈdɜː.nə.ti/",
+          "type": "noun",
+          "meaning": "Sự hiện đại"
+        }
+      ],
+      "dialogue_flow": [
+        {
+          "turn": 1,
+          "speaker": "Mark",
+          "npc_text": "Hi there! My rental electric scooter is running low on battery. Is there an EV charging station nearby?",
+          "highlight_term": "EV charging station",
+          "interaction_type": "phrase_builder",
+          "phrase_blocks": [
+            "Yes, right here!",
+            "It's located",
+            "next to the historic",
+            "banyan tree."
+          ],
+          "correct_response": "Yes, right here! It's located next to the historic banyan tree.",
+          "audio_file": "assets/audio/mark_turn1.mp3",
+          "reward": { "xp": 15, "combo": 1 }
+        },
+        {
+          "turn": 2,
+          "speaker": "Mark",
+          "npc_text": "A high-tech charger next to a 100-year-old tree? That's an amazing contrast! Is this tree a famous local landmark?",
+          "highlight_term": "landmark",
+          "interaction_type": "typing",
+          "typing_hints": [
+            "sustainable",
+            "history",
+            "green space"
+          ],
+          "helper_prompt": {
+            "term": "landmark",
+            "definition": "Địa danh / Biểu tượng văn hóa nổi tiếng của địa phương",
+            "energy_cost": 1
+          },
+          "sample_correct_response": "Yes! It represents our village history, but today we also use it as a green space for sustainable tourism.",
+          "audio_file": "assets/audio/mark_turn2.mp3",
+          "reward": { "xp": 20, "combo": 2 }
+        },
+        {
+          "turn": 3,
+          "speaker": "Mark",
+          "npc_text": "I love how this village balances tradition and modernity! How do I start charging my scooter?",
+          "highlight_term": "tradition & modernity",
+          "interaction_type": "speaking",
+          "expected_keywords": [
+            "scan",
+            "VietQR",
+            "app",
+            "free"
+          ],
+          "target_speech": "Just scan the VietQR code on the charger with your app. It's completely free for tourists!",
+          "audio_file": "assets/audio/mark_turn3.mp3",
+          "reward": {
+            "xp": 25,
+            "combo": 3,
+            "tea_helper_bonus": 1,
+            "vocab_unlock": "Green Infrastructure Set"
+          }
+        }
+      ]
+    },
+    {
+      "id": "npc_emma",
+      "name": "Emma",
+      "role": "Vlogger du lịch / Digital Nomad",
+      "avatar": "assets/images/npcs/emma.png",
+      "location_id": "spot-ocop-cafe",
+      "location_name": "OCOP & Paddy Field View Cafe (Cà Phê View Đồng Lúa)",
+      "topic": "Nông sản OCOP, Truy xuất nguồn gốc & Lối sống Du mục kỹ thuật số (Organic Produce, Traceability & Digital Nomad)",
+      "target_vocabulary": [
+        {
+          "word": "digital nomad",
+          "phonetic": "/ˈdɪdʒ.ɪ.təl ˈnəʊ.mæd/",
+          "type": "noun phrase",
+          "meaning": "Người du mục kỹ thuật số (vừa du lịch vừa làm việc từ xa)"
+        },
+        {
+          "word": "specialty product",
+          "phonetic": "/ˈspeʃ.əl.ti ˈprɒd.ʌkt/",
+          "type": "noun phrase",
+          "meaning": "Sản phẩm đặc sản (OCOP)"
+        },
+        {
+          "word": "eco-friendly packaging",
+          "phonetic": "/ˈiː.kəʊˌfrend.li ˈpæk.ɪ.dʒɪŋ/",
+          "type": "noun phrase",
+          "meaning": "Bao bì thân thiện với môi trường"
+        },
+        {
+          "word": "traceability",
+          "phonetic": "/ˌtreɪ.səˈbɪl.ə.ti/",
+          "type": "noun",
+          "meaning": "Khả năng truy xuất nguồn gốc (qua mã QR)"
+        }
+      ],
+      "dialogue_flow": [
+        {
+          "turn": 1,
+          "speaker": "Emma",
+          "npc_text": "Hey! What a breathtaking paddy field view! Do you have high-speed Wi-Fi here? I'm working as a digital nomad today.",
+          "highlight_term": "digital nomad",
+          "interaction_type": "multiple_choice",
+          "options": [
+            {
+              "id": "opt_1",
+              "text": "Welcome! We have fast Wi-Fi and solar-powered outlets at every table. What drink would you like to order?",
+              "is_correct": true
+            },
+            {
+              "id": "opt_2",
+              "text": "Sorry, we don't have internet. Only tea is served.",
+              "is_correct": false
+            }
+          ],
+          "audio_file": "assets/audio/emma_turn1.mp3",
+          "reward": { "xp": 20, "combo": 1 }
+        },
+        {
+          "turn": 2,
+          "speaker": "Emma",
+          "npc_text": "An iced coconut coffee, please! By the way, what are these beautifully packaged jars on the display shelf? Are they local specialty products?",
+          "highlight_term": "specialty products",
+          "interaction_type": "typing",
+          "typing_hints": [
+            "organic lotus tea",
+            "dried fruits",
+            "eco-friendly packaging"
+          ],
+          "helper_prompt": {
+            "term": "specialty product",
+            "definition": "Sản phẩm đặc sản địa phương được chứng nhận chất lượng (OCOP)",
+            "energy_cost": 1
+          },
+          "sample_correct_response": "Yes! Those are our village's OCOP organic lotus tea and dried fruits with eco-friendly packaging.",
+          "audio_file": "assets/audio/emma_turn2.mp3",
+          "reward": { "xp": 25, "combo": 2 }
+        },
+        {
+          "turn": 3,
+          "speaker": "Emma",
+          "npc_text": "Oh, there's a QR code printed on the box! Does it allow traceability of the ingredients?",
+          "highlight_term": "traceability",
+          "interaction_type": "speaking",
+          "expected_keywords": [
+            "scan",
+            "see",
+            "organic farm",
+            "harvested",
+            "lotus"
+          ],
+          "target_speech": "Exactly! You can scan it to see which organic farm in our village harvested the lotus.",
+          "audio_file": "assets/audio/emma_turn3.mp3",
+          "reward": {
+            "xp": 30,
+            "combo": 3,
+            "tea_helper_bonus": 1,
+            "badge_unlock": "Local OCOP Ambassador"
+          }
+        }
+      ]
+    },
+    {
+      "id": "npc_sarah",
+      "name": "Sarah",
+      "role": "Du khách Đức / Đam mê Thời trang & Văn hóa",
+      "avatar": "assets/images/npcs/sarah.png",
+      "location_id": "spot-hoian-tailor",
+      "location_name": "Tiệm May Áo Dài Lấy Ngay Hoi An (Hoi An Express Tailor Shop)",
+      "topic": "May đo Áo Dài & Chất liệu Lụa Tơ tằm (Custom Tailoring & Mulberry Silk)",
+      "target_vocabulary": [
+        {
+          "word": "custom-tailored",
+          "phonetic": "/ˈkʌs.təm ˈteɪ.ləd/",
+          "type": "adjective",
+          "meaning": "May đo theo yêu cầu riêng"
+        },
+        {
+          "word": "silk fabric",
+          "phonetic": "/sɪlk ˈfæb.rɪk/",
+          "type": "noun phrase",
+          "meaning": "Vải lụa tơ tằm"
+        },
+        {
+          "word": "measurements",
+          "phonetic": "/ˈmeʒ.ə.mənts/",
+          "type": "noun",
+          "meaning": "Số đo cơ thể"
+        },
+        {
+          "word": "fitting",
+          "phonetic": "/ˈfɪt.ɪŋ/",
+          "type": "noun",
+          "meaning": "Buổi thử đồ / Lần thử áo"
+        },
+        {
+          "word": "alteration",
+          "phonetic": "/ˌɒl.təˈreɪ.ʃən/",
+          "type": "noun",
+          "meaning": "Sự chỉnh sửa trang phục"
+        }
+      ],
+      "dialogue_flow": [
+        {
+          "turn": 1,
+          "speaker": "Sarah",
+          "npc_text": "Hello! I am leaving Hoi An tomorrow evening. Is it really possible to get a custom-tailored Ao Dai made in less than 24 hours?",
+          "highlight_term": "custom-tailored",
+          "interaction_type": "phrase_builder",
+          "phrase_blocks": [
+            "Yes, absolutely!",
+            "Hoi An is famous for",
+            "express tailoring",
+            "services."
+          ],
+          "correct_response": "Yes, absolutely! Hoi An is famous for express tailoring services.",
+          "audio_file": "assets/audio/sarah_turn1.mp3",
+          "reward": { "xp": 20, "combo": 1 }
+        },
+        {
+          "turn": 2,
+          "speaker": "Sarah",
+          "npc_text": "That's wonderful! What type of silk fabric do you recommend for a lightweight summer Ao Dai?",
+          "highlight_term": "silk fabric",
+          "interaction_type": "typing",
+          "typing_hints": [
+            "Mulberry silk",
+            "breathable",
+            "soft"
+          ],
+          "helper_prompt": {
+            "term": "silk fabric",
+            "definition": "Vải lụa tơ tằm tự nhiên nhẹ mát, thích hợp may áo truyền thống",
+            "energy_cost": 1
+          },
+          "sample_correct_response": "I recommend natural Mulberry silk fabric because it's soft, breathable, and elegant.",
+          "audio_file": "assets/audio/sarah_turn2.mp3",
+          "reward": { "xp": 25, "combo": 2 }
+        },
+        {
+          "turn": 3,
+          "speaker": "Sarah",
+          "npc_text": "I love this yellow silk! When should I come back for my first fitting after taking my measurements?",
+          "highlight_term": "measurements & fitting",
+          "interaction_type": "speaking",
+          "expected_keywords": [
+            "take",
+            "measurements",
+            "come back",
+            "evening",
+            "fitting"
+          ],
+          "target_speech": "We will take your measurements now, and you can come back this evening for your first fitting!",
+          "audio_file": "assets/audio/sarah_turn3.mp3",
+          "reward": {
+            "xp": 30,
+            "combo": 3,
+            "tea_helper_bonus": 1,
+            "badge_unlock": "Hoi An Fashion Host"
+          }
+        }
+      ]
+    },
+    {
+      "id": "npc_david",
+      "name": "Professor David",
+      "role": "Nhà nghiên cứu Văn hóa Úc",
+      "avatar": "assets/images/npcs/david.png",
+      "location_id": "spot-lantern-workshop",
+      "location_name": "Xưởng Làm Lồng Đèn Thủ Công Sông Hoài (Hoi An Lantern & Eco-Wish Workshop)",
+      "topic": "Nghệ thuật Lồng đèn Dân gian & Hoa đăng Sinh thái (Lantern Craftsmanship & Eco-Wish Ceremony)",
+      "target_vocabulary": [
+        {
+          "word": "bamboo frame",
+          "phonetic": "/bæmˈbuː freɪm/",
+          "type": "noun phrase",
+          "meaning": "Khung tre vót tay"
+        },
+        {
+          "word": "craftsmanship",
+          "phonetic": "/ˈkrɑːfts.mən.ʃɪp/",
+          "type": "noun",
+          "meaning": "Tay nghề thủ công tinh xảo"
+        },
+        {
+          "word": "biodegradable",
+          "phonetic": "/ˌbaɪ.əʊ.dɪˈɡreɪ.də.bəl/",
+          "type": "adjective",
+          "meaning": "Phân hủy sinh học (thân thiện với sông hồ)"
+        },
+        {
+          "word": "souvenir",
+          "phonetic": "/ˌsuː.vənˈɪər/",
+          "type": "noun",
+          "meaning": "Quà lưu niệm"
+        },
+        {
+          "word": "wishing ceremony",
+          "phonetic": "/ˈwɪʃ.ɪŋ ˈser.ɪ.mə.ni/",
+          "type": "noun phrase",
+          "meaning": "Lễ nghi thả hoa đăng cầu nguyện"
+        }
+      ],
+      "dialogue_flow": [
+        {
+          "turn": 1,
+          "speaker": "David",
+          "npc_text": "Good day! I admire the traditional craftsmanship of these lanterns. Can tourists learn how to assemble a folding lantern here?",
+          "highlight_term": "craftsmanship",
+          "interaction_type": "multiple_choice",
+          "options": [
+            {
+              "id": "opt_1",
+              "text": "Welcome! Our master artisan will guide you to shape the bamboo frame and stretch the silk fabric.",
+              "is_correct": true
+            },
+            {
+              "id": "opt_2",
+              "text": "Sorry, these are only for display and not for making.",
+              "is_correct": false
+            }
+          ],
+          "audio_file": "assets/audio/david_turn1.mp3",
+          "reward": { "xp": 20, "combo": 1 }
+        },
+        {
+          "turn": 2,
+          "speaker": "David",
+          "npc_text": "Fascinating! I plan to join the night wishing ceremony on Hoai River. Are these floating lanterns eco-friendly?",
+          "highlight_term": "wishing ceremony",
+          "interaction_type": "typing",
+          "typing_hints": [
+            "biodegradable paper",
+            "protect river",
+            "eco-friendly"
+          ],
+          "helper_prompt": {
+            "term": "biodegradable",
+            "definition": "Có khả năng phân hủy sinh học tự nhiên, không gây ô nhiễm nguồn nước",
+            "energy_cost": 1
+          },
+          "sample_correct_response": "Yes! All our river lanterns are made of biodegradable paper and bamboo to protect Hoai River.",
+          "audio_file": "assets/audio/david_turn2.mp3",
+          "reward": { "xp": 25, "combo": 2 }
+        },
+        {
+          "turn": 3,
+          "speaker": "David",
+          "npc_text": "That is wonderful environmental care! Can I fold this silk lantern flat to pack into my suitcase as a souvenir?",
+          "highlight_term": "souvenir",
+          "interaction_type": "speaking",
+          "expected_keywords": [
+            "fold",
+            "flat",
+            "pack",
+            "suitcase",
+            "souvenir"
+          ],
+          "target_speech": "Yes, you can easily fold it flat to pack into your suitcase as a unique souvenir!",
+          "audio_file": "assets/audio/david_turn3.mp3",
+          "reward": {
+            "xp": 35,
+            "combo": 3,
+            "tea_helper_bonus": 1,
+            "badge_unlock": "Cultural Heritage Guardian"
+          }
+        }
+      ]
+    }
+  ]
+}

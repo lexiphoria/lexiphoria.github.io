@@ -1,0 +1,618 @@
+{
+  "version": "5.0",
+  "game_module": "Immersion Town – Hội An 2026: Local Host Edition (tranh Đông Hồ)",
+  "description": "RPG góc nghiêng 3/4 trên 4 bản đồ Tiled (data/maps/*.tmx); vị trí NPC đặt trong lớp Objects của bản đồ. Người học đóng vai Local Host đón du khách nước ngoài; người Việt (Chú Minh, Bác Tư) nói tiếng Việt, người học phiên dịch sang tiếng Anh. \"speaker\" tham chiếu \"characters\"; \"target_vocabulary\" tham chiếu id trong data/lexicon.json; từ khoá có nhiều cách nói được ngăn bằng dấu |.",
+  "default_title": "Local Host tập sự",
+  "default_title_en": "Trainee Local Host",
+  "final_title": "Local OCOP Ambassador",
+  "characters": {
+    "mark": { "name": "Mark", "role": "Phượt thủ sinh thái người Mỹ", "lang": "en", "voice": ["en-US"], "pitch": 0.95, "sprite": "assets/npc/mark.webp", "face": "assets/npc/mark_face.webp", "greet": "Hi there! 👋", "role_en": "American eco-backpacker" },
+    "sarah": { "name": "Sarah", "role": "Du khách Anh, mê trải nghiệm văn hoá", "lang": "en", "voice": ["en-GB", "en-US"], "pitch": 1.05, "sprite": "assets/npc/sarah.webp", "face": "assets/npc/sarah_face.webp", "greet": "Excuse me! Can you help me?", "role_en": "British tourist who loves cultural experiences" },
+    "minh": { "name": "Chú Minh", "role": "Chủ tiệm may áo dài", "lang": "vi", "sprite": "assets/chars/tailor.webp", "face": "assets/chars/tailor_face.webp", "greet": "Chào cháu! Giúp chú với!", "role_en": "Owner of the áo dài tailor shop" },
+    "emma": { "name": "Emma", "role": "Vlogger du lịch người Đức", "lang": "en", "voice": ["en-GB", "en-US"], "pitch": 1.1, "sprite": "assets/npc/emma.webp", "face": "assets/npc/emma_face.webp", "greet": "Hallo! These lanterns are so pretty!", "role_en": "German travel vlogger" },
+    "david": { "name": "Professor David", "role": "Nhà nghiên cứu di sản người Úc", "lang": "en", "voice": ["en-AU", "en-GB", "en-US"], "pitch": 0.9, "sprite": "assets/npc/david.webp", "face": "assets/npc/david_face.webp", "greet": "Good evening!", "role_en": "Australian heritage researcher" },
+    "tu": { "name": "Bác Tư", "role": "Người bán hoa đăng ở bến sông", "lang": "vi", "sprite": "assets/chars/lantern_man.webp", "face": "assets/chars/lantern_man_face.webp", "greet": "Mua hoa đăng không cháu?", "role_en": "Flower-lantern seller at the river pier" },
+    "hoa": {
+      "name": "Cô Hoa",
+      "role": "Chủ quán Cà phê Đồng Lúa OCOP",
+      "lang": "vi",
+      "sprite": "assets/chars/ocop_lady.webp",
+      "face": "assets/chars/ocop_lady_face.webp",
+      "greet": "Uống trà sen không cháu?",
+      "chat": { "vi": "Trà sen của cô là sản phẩm OCOP, quét mã QR trên hũ là biết trà trồng ở đâu. Khách nước ngoài hỏi thì cháu giới thiệu giúp cô nha!", "en": "This lotus tea is an OCOP product. Scan the QR code on the jar to see its traceability.", "audio_file": "assets/audio/chat_hoa.mp3" },
+      "role_en": "Owner of the Rice Field OCOP Café"
+    },
+    "vendor": {
+      "name": "Cô Ba",
+      "role": "Người bán hàng rong gánh quang gánh",
+      "lang": "vi",
+      "sprite": "assets/chars/pole_vendor.webp",
+      "face": "assets/chars/pole_vendor_face.webp",
+      "greet": "Bánh đây, bánh nóng đây!",
+      "chat": { "vi": "Cô gánh hàng rong ở phố cổ hơn hai mươi năm rồi. Đòn gánh này là hình ảnh quen thuộc của Hội An đó cháu.", "en": "She is a street vendor. She carries her food on a carrying pole, a familiar image of Hoi An.", "audio_file": "assets/audio/chat_vendor.mp3" },
+      "role_en": "Street vendor with a carrying pole"
+    },
+    "ambassador": { "name": "Lớp trưởng", "role": "Điều phối Đêm hội di sản", "lang": "vi", "sprite": "assets/chars/classmate_girl.webp", "greet": "Chào mừng tới Đêm hội!", "role_en": "Heritage Night coordinator", "name_en": "Class Monitor", "greet_en": "Welcome to the Heritage Night!" }
+  },
+  "quests": [
+    {
+      "id": "q_ev",
+      "icon": "⚡",
+      "title": "Bãi Xe Điện Ngoại Vi",
+      "title_en": "Outer EV Hub",
+      "zone": "ev",
+      "npc": "mark",
+      "card": "assets/scenes/ev_hub.webp",
+      "topic": "Giao thông xanh, trạm sạc xe điện và quy định phố đi bộ",
+      "topic_en": "Green transport, EV charging and walking-street rules",
+      "mission": "Mark vừa tới bãi xe điện ngoài phố cổ. Bạn giúp Mark sạc xe, giải thích quy định phố đi bộ và chỉ đường vào trung tâm bằng xe điện công cộng.",
+      "mission_en": "Mark has just arrived at the EV hub outside the old town. Help him charge his scooter, explain the walking-street rules and show him how to reach the centre by electric shuttle.",
+      "objectives": ["Chỉ chỗ sạc xe điện", "Giải thích quy định phố đi bộ", "Chỉ đường vào phố cổ", "Nói về lợi ích của giao thông xanh"],
+      "objectives_en": ["Show where to charge an EV", "Explain the walking-street rules", "Give directions to the old town", "Talk about the benefits of green transport"],
+      "target_vocabulary": ["ev-charging-station", "electric-scooter", "pedestrian-zone", "electric-shuttle", "qr-code"],
+      "turns": [
+        {
+          "speaker": "mark",
+          "text": "Hi there! My electric scooter is almost out of battery. Is there an EV charging station around here?",
+          "vi": "Chào bạn! Xe scooter điện của mình sắp hết pin. Quanh đây có trạm sạc xe điện không?",
+          "audio_file": "assets/audio/q_ev_t1.mp3",
+          "interaction_type": "multiple_choice",
+          "options": [
+            { "text": "Yes, right here! Just scan the VietQR code on the charger to start charging.", "is_correct": true },
+            { "text": "Sorry, electric scooters are not allowed in Vietnam.", "is_correct": false, "why": "Câu này sai sự thật và không giúp được khách.", "why_en": "This is not true and does not help the visitor." },
+            { "text": "You should buy some petrol at the gas station.", "is_correct": false, "why": "Xe điện cần trạm sạc, không dùng xăng.", "why_en": "An electric scooter needs a charging station, not petrol." }
+          ],
+          "reward": { "xp": 20 }
+        },
+        {
+          "speaker": "mark",
+          "text": "Awesome! After that, can I ride my scooter into the old town?",
+          "vi": "Tuyệt! Sạc xong mình chạy xe vào phố cổ được không?",
+          "audio_file": "assets/audio/q_ev_t2.mp3",
+          "interaction_type": "phrase_builder",
+          "phrase_blocks": ["Sorry, the old town", "is a pedestrian zone,", "so you need to park", "your scooter here."],
+          "correct_response": "Sorry, the old town is a pedestrian zone, so you need to park your scooter here.",
+          "reward": { "xp": 20 }
+        },
+        {
+          "speaker": "mark",
+          "text": "No problem. Then how do I get to the Japanese Covered Bridge?",
+          "vi": "Không sao. Vậy mình tới Chùa Cầu bằng cách nào?",
+          "audio_file": "assets/audio/q_ev_t3.mp3",
+          "interaction_type": "typing",
+          "typing_hints": ["electric shuttle", "walk", "minutes", "take"],
+          "helper_prompt": { "term": "electric shuttle", "definition": "xe điện chở khách chạy vòng quanh khu phố", "energy_cost": 1 },
+          "sample_correct_response": "You can take the electric shuttle from here, or walk for about ten minutes.",
+          "reward": { "xp": 25 }
+        },
+        {
+          "speaker": "mark",
+          "text": "Why does Hoi An keep motorbikes out of the old town?",
+          "vi": "Sao Hội An lại không cho xe máy vào phố cổ?",
+          "audio_file": "assets/audio/q_ev_t4.mp3",
+          "interaction_type": "speaking",
+          "expected_keywords": ["quiet", "clean|pollution", "protect", "ancient houses|houses|heritage"],
+          "target_speech": "It keeps the streets quiet and the air clean, and it helps protect the ancient houses.",
+          "reward": { "xp": 30 }
+        },
+        {
+          "speaker": "mark",
+          "text": "That's so sustainable! Can I pay for the charger with my phone?",
+          "vi": "Bền vững thật! Mình trả tiền sạc bằng điện thoại được không?",
+          "audio_file": "assets/audio/q_ev_t5.mp3",
+          "interaction_type": "multiple_choice",
+          "options": [
+            { "text": "Yes. Open your banking app and scan the QR code. It only takes a few seconds.", "is_correct": true },
+            { "text": "No, you can only pay with gold.", "is_correct": false, "why": "Câu này không thực tế.", "why_en": "This is not realistic." },
+            { "text": "Phones don't work in Hoi An.", "is_correct": false, "why": "Câu này sai và không giúp khách.", "why_en": "This is wrong and does not help the visitor." }
+          ],
+          "reward": { "xp": 20 }
+        }
+      ],
+      "rewards": { "xp": 40, "title": "Green Mobility Guide", "outfit": "indigo", "tea": 1 },
+      "finale": { "title": "Cắm sạc cho xe của Mark", "title_en": "Plug in Mark's scooter", "text": "Mark đã biết cách sạc. Bạn giúp anh ấy cắm dây sạc vào trạm nhé!", "text_en": "Mark knows how to charge now. Help him plug the cable into the station!", "button": "🔌 Cắm sạc", "button_en": "🔌 Plug in" }
+    },
+    {
+      "id": "q_tailor",
+      "icon": "🧵",
+      "title": "Tiệm May Áo Dài Lấy Ngay",
+      "title_en": "Express Tailor Shop",
+      "npc": "sarah",
+      "topic": "Trang phục, chọn chất liệu, lấy số đo và may đo theo yêu cầu",
+      "topic_en": "Clothing, choosing fabric, taking measurements and made-to-measure tailoring",
+      "mission": "Chú Minh không nói được tiếng Anh. Bạn làm Local Host giúp Sarah trao đổi số đo vai và eo, chọn lụa tơ tằm và hẹn giờ lấy áo dài trong ngày.",
+      "mission_en": "Chú Minh does not speak English. As the Local Host, help Sarah give her shoulder and waist measurements, choose mulberry silk and arrange a same-day pick-up time for her áo dài.",
+      "objectives": ["Hỏi số đo vai và eo", "Tư vấn chất liệu lụa tơ tằm", "Hẹn giờ thử áo và lấy áo"],
+      "objectives_en": ["Ask for shoulder and waist measurements", "Recommend mulberry silk", "Arrange the fitting and pick-up time"],
+      "target_vocabulary": ["custom-tailored", "silk-fabric", "measurements", "fitting", "alteration"],
+      "turns": [
+        {
+          "speaker": "sarah",
+          "text": "Hi! I'd love a custom-tailored áo dài, but I'm leaving Hoi An tomorrow evening. Is that possible?",
+          "vi": "Chào bạn! Mình rất muốn may đo một chiếc áo dài, nhưng tối mai mình rời Hội An rồi. Có kịp không?",
+          "audio_file": "assets/audio/q_tailor_t1.mp3",
+          "interaction_type": "multiple_choice",
+          "options": [
+            { "text": "Yes! Mr. Minh can make it in one day, so you'll have it before you leave.", "is_correct": true },
+            { "text": "No. An áo dài always takes two weeks to make.", "is_correct": false, "why": "Tiệm may lấy ngay ở Hội An may được trong ngày. Local Host nên giúp khách tìm giải pháp.", "why_en": "Express tailors in Hoi An can make clothes in a day. A Local Host should help the visitor find a solution." },
+            { "text": "You should buy a T-shirt at the airport instead.", "is_correct": false, "why": "Câu này không trả lời điều khách cần.", "why_en": "This does not answer what the visitor needs." }
+          ],
+          "reward": { "xp": 20 }
+        },
+        {
+          "speaker": "minh",
+          "text": "Cháu hỏi giúp chú số đo vai và eo của khách nhé.",
+          "audio_file": "assets/audio/q_tailor_t2.mp3",
+          "prompt": "Chú Minh nhờ bạn nói với Sarah:",
+          "interaction_type": "phrase_builder",
+          "phrase_blocks": ["Mr. Minh needs", "to take your measurements", "for your shoulders", "and waist."],
+          "correct_response": "Mr. Minh needs to take your measurements for your shoulders and waist.",
+          "reward": { "xp": 20 },
+          "prompt_en": "Chú Minh asks you to tell Sarah:"
+        },
+        {
+          "speaker": "sarah",
+          "text": "Sure! My shoulders are 38 centimetres and my waist is 68. Which silk fabric is best for hot weather?",
+          "vi": "Được thôi! Vai mình 38 cm, eo 68 cm. Loại vải lụa nào hợp với thời tiết nóng nhất?",
+          "audio_file": "assets/audio/q_tailor_t3.mp3",
+          "interaction_type": "typing",
+          "typing_hints": ["Mulberry silk", "soft", "breathable", "cool"],
+          "helper_prompt": { "term": "breathable", "definition": "thoáng khí, mặc không bị bí nóng", "energy_cost": 1 },
+          "sample_correct_response": "I recommend Mulberry silk because it is soft, light and breathable in hot weather.",
+          "reward": { "xp": 25 }
+        },
+        {
+          "speaker": "minh",
+          "text": "Chiều nay khách quay lại thử áo lần đầu nhé. Chỗ nào chưa vừa thì chú sửa ngay.",
+          "audio_file": "assets/audio/q_tailor_t4.mp3",
+          "prompt": "Chú Minh nhờ bạn nói với Sarah:",
+          "interaction_type": "speaking",
+          "expected_keywords": ["come back", "afternoon", "fitting", "alteration|alter|fix"],
+          "target_speech": "Please come back this afternoon for your first fitting. If anything doesn't fit, Mr. Minh will do the alterations right away.",
+          "reward": { "xp": 30 },
+          "prompt_en": "Chú Minh asks you to tell Sarah:"
+        },
+        {
+          "speaker": "sarah",
+          "text": "Perfect! And when will my áo dài be ready to take home?",
+          "vi": "Tuyệt! Thế khi nào áo dài của mình xong để mang về?",
+          "audio_file": "assets/audio/q_tailor_t5.mp3",
+          "interaction_type": "phrase_builder",
+          "phrase_blocks": ["It will be ready", "tomorrow at 8 a.m.,", "before you leave", "Hoi An."],
+          "correct_response": "It will be ready tomorrow at 8 a.m., before you leave Hoi An.",
+          "reward": { "xp": 25 }
+        }
+      ],
+      "rewards": { "xp": 40, "title": "Hoi An Fashion Host", "outfit": "gold", "tea": 1 },
+      "finale": { "title": "Treo chiếc áo dài vừa may", "title_en": "Hang up the new áo dài", "text": "Chú Minh đã may xong áo cho Sarah. Bạn treo áo lên giá trước tiệm để Sarah thử nhé!", "text_en": "Chú Minh has finished Sarah's áo dài. Hang it on the rack in front of the shop so she can try it on!", "button": "👘 Treo áo", "button_en": "👘 Hang it up" },
+      "zone": "street",
+      "card": "assets/scenes/street.webp"
+    },
+    {
+      "id": "q_lantern",
+      "icon": "🏮",
+      "title": "Xưởng Làm Lồng Đèn Thủ Công",
+      "title_en": "Handicraft Lantern Workshop",
+      "npc": "emma",
+      "topic": "Nghệ thuật dân gian, thủ công mỹ nghệ và quà lưu niệm",
+      "topic_en": "Folk art, handicrafts and souvenirs",
+      "mission": "Emma muốn tự tay làm một chiếc đèn lồng để mang về nước. Bạn hướng dẫn Emma từng bước dán vải lụa lên khung tre.",
+      "mission_en": "Emma wants to make her own lantern to take home. Guide her step by step as she glues silk onto a bamboo frame.",
+      "objectives": ["Giới thiệu lớp làm đèn lồng", "Hướng dẫn làm khung tre", "Hướng dẫn dán và căng lụa", "Gợi ý cách mang đèn về nước"],
+      "objectives_en": ["Introduce the lantern-making class", "Explain how to make the bamboo frame", "Explain how to glue and stretch the silk", "Suggest how to take the lantern home"],
+      "target_vocabulary": ["bamboo-frame", "craftsmanship", "folding-lantern", "souvenir", "workshop"],
+      "turns": [
+        {
+          "speaker": "emma",
+          "text": "Wow, look at all these lanterns! Can I make one myself in this workshop?",
+          "vi": "Ôi, nhìn bao nhiêu là đèn lồng! Mình có thể tự làm một chiếc ở xưởng này không?",
+          "audio_file": "assets/audio/q_lantern_t1.mp3",
+          "interaction_type": "multiple_choice",
+          "options": [
+            { "text": "Of course! Today you can make a folding lantern with a bamboo frame and silk.", "is_correct": true },
+            { "text": "Sorry, tourists can only look at the lanterns.", "is_correct": false, "why": "Xưởng có lớp thực hành cho du khách; câu này làm khách mất hứng.", "why_en": "The workshop runs hands-on classes for visitors; this reply would disappoint her." },
+            { "text": "Lanterns are only sold at the airport.", "is_correct": false, "why": "Câu này không đúng và không trả lời câu hỏi của khách.", "why_en": "This is not true and does not answer her question." }
+          ],
+          "reward": { "xp": 20 }
+        },
+        {
+          "speaker": "emma",
+          "text": "Great! So what do I do first?",
+          "vi": "Tuyệt! Vậy đầu tiên mình làm gì?",
+          "audio_file": "assets/audio/q_lantern_t2.mp3",
+          "interaction_type": "phrase_builder",
+          "phrase_blocks": ["First,", "bend the bamboo sticks", "and tie them together", "to make the frame."],
+          "correct_response": "First, bend the bamboo sticks and tie them together to make the frame.",
+          "reward": { "xp": 20 }
+        },
+        {
+          "speaker": "emma",
+          "text": "Done! My bamboo frame looks like a little cage. What's next?",
+          "vi": "Xong rồi! Khung tre của mình trông như một cái lồng nhỏ. Tiếp theo là gì?",
+          "audio_file": "assets/audio/q_lantern_t3.mp3",
+          "interaction_type": "typing",
+          "typing_hints": ["Next", "glue", "silk fabric", "stretch"],
+          "helper_prompt": { "term": "stretch", "definition": "kéo căng (tấm vải) cho phẳng", "energy_cost": 1 },
+          "sample_correct_response": "Next, put some glue on the frame and stretch the silk fabric over it carefully.",
+          "reward": { "xp": 25 }
+        },
+        {
+          "speaker": "emma",
+          "text": "It's beautiful! But I'm flying home on Sunday. How can I carry it in my suitcase?",
+          "vi": "Đẹp quá! Nhưng chủ nhật mình bay về rồi. Làm sao mang nó trong vali được?",
+          "audio_file": "assets/audio/q_lantern_t4.mp3",
+          "interaction_type": "speaking",
+          "expected_keywords": ["fold", "flat", "suitcase", "souvenir"],
+          "target_speech": "It's a folding lantern, so you can fold it flat and put it in your suitcase as a souvenir.",
+          "reward": { "xp": 30 }
+        },
+        {
+          "speaker": "emma",
+          "text": "Amazing craftsmanship! Why are Hoi An lanterns so special?",
+          "vi": "Tay nghề thật tuyệt! Vì sao đèn lồng Hội An đặc biệt vậy?",
+          "audio_file": "assets/audio/q_lantern_t5.mp3",
+          "interaction_type": "multiple_choice",
+          "options": [
+            { "text": "They are handmade by local artisans, and the craft has been passed down for generations.", "is_correct": true },
+            { "text": "They are made by machines in big factories.", "is_correct": false, "why": "Đèn lồng Hội An nổi tiếng chính vì được làm thủ công.", "why_en": "Hoi An lanterns are famous precisely because they are handmade." },
+            { "text": "Because they are the cheapest lanterns in the world.", "is_correct": false, "why": "Câu này không nói được giá trị văn hoá của nghề làm đèn.", "why_en": "This misses the cultural value of lantern making." }
+          ],
+          "reward": { "xp": 20 }
+        }
+      ],
+      "rewards": { "xp": 40, "title": "Lantern Craft Guide", "tea": 1 },
+      "finale": { "title": "Treo chiếc đèn Emma vừa làm", "title_en": "Hang Emma's new lantern", "text": "Chiếc đèn lụa đầu tay của Emma đã xong. Bạn giúp cô ấy treo đèn lên dây đèn trước xưởng nhé!", "text_en": "Emma's first silk lantern is finished. Help her hang it on the lantern string outside the workshop!", "button": "🏮 Treo đèn", "button_en": "🏮 Hang the lantern" },
+      "zone": "street",
+      "card": "assets/scenes/street.webp"
+    },
+    {
+      "id": "q_cruise",
+      "icon": "🛶",
+      "title": "Thả Hoa Đăng Đêm Sông Hoài",
+      "title_en": "Wishing Lantern Eco-Cruise",
+      "npc": "david",
+      "topic": "Du thuyền đêm, phong tục ước nguyện và bảo vệ môi trường",
+      "topic_en": "Night cruises, wishing customs and protecting the environment",
+      "mission": "Đi cùng Professor David trên chuyến thuyền điện đêm sông Hoài, giải thích ý nghĩa thả hoa đăng và vì sao hoa đăng làm từ giấy phân huỷ sinh học.",
+      "mission_en": "Join Professor David on the night electric-boat cruise on the Hoai River. Explain the meaning of releasing flower lanterns and why they are made of biodegradable paper.",
+      "objectives": ["Giới thiệu thuyền điện sinh thái", "Hướng dẫn nghi thức thả hoa đăng", "Giải thích hoa đăng phân huỷ sinh học", "Nói về bảo tồn di sản"],
+      "objectives_en": ["Introduce the eco electric boat", "Explain the lantern-release ritual", "Explain biodegradable lanterns", "Talk about heritage preservation"],
+      "target_vocabulary": ["biodegradable-lantern", "night-cruise", "wishing-ceremony", "heritage-preservation"],
+      "turns": [
+        {
+          "speaker": "david",
+          "text": "Good evening! This boat is so quiet. Is it really electric?",
+          "vi": "Chào buổi tối! Con thuyền này êm quá. Có thật là chạy điện không?",
+          "audio_file": "assets/audio/q_cruise_t1.mp3",
+          "interaction_type": "multiple_choice",
+          "options": [
+            { "text": "Yes! It's an eco-electric boat, so there's no engine noise and no oil in the river.", "is_correct": true },
+            { "text": "No, it has a big diesel engine.", "is_correct": false, "why": "Đây là thuyền điện sinh thái, không dùng động cơ dầu.", "why_en": "This is an eco electric boat; it has no diesel engine." },
+            { "text": "I don't know. Ask someone else.", "is_correct": false, "why": "Local Host nên chủ động giải thích cho khách.", "why_en": "A Local Host should take the lead and explain." }
+          ],
+          "reward": { "xp": 20 }
+        },
+        {
+          "speaker": "david",
+          "text": "Lovely. What do people do during the wishing ceremony?",
+          "vi": "Tuyệt. Mọi người làm gì trong nghi thức thả hoa đăng?",
+          "audio_file": "assets/audio/q_cruise_t2.mp3",
+          "interaction_type": "phrase_builder",
+          "phrase_blocks": ["You light the candle,", "make a wish,", "and gently place the lantern", "on the river."],
+          "correct_response": "You light the candle, make a wish, and gently place the lantern on the river.",
+          "reward": { "xp": 20 }
+        },
+        {
+          "speaker": "david",
+          "text": "But won't hundreds of paper lanterns pollute the Hoai River?",
+          "vi": "Nhưng hàng trăm chiếc hoa đăng giấy có làm ô nhiễm sông Hoài không?",
+          "audio_file": "assets/audio/q_cruise_t3.mp3",
+          "interaction_type": "typing",
+          "typing_hints": ["biodegradable", "paper", "break down", "protect"],
+          "helper_prompt": { "term": "biodegradable", "definition": "có thể tự phân huỷ trong tự nhiên, không gây ô nhiễm", "energy_cost": 1 },
+          "sample_correct_response": "No, these are biodegradable lanterns. The paper breaks down naturally, so they protect the river.",
+          "reward": { "xp": 25 }
+        },
+        {
+          "speaker": "tu",
+          "text": "Cháu nói với khách: tối nào cũng có tình nguyện viên vớt hoa đăng để sông luôn sạch.",
+          "audio_file": "assets/audio/q_cruise_t4.mp3",
+          "prompt": "Bác Tư nhờ bạn nói với Professor David:",
+          "interaction_type": "speaking",
+          "expected_keywords": ["volunteers|volunteer", "collect", "lanterns", "clean"],
+          "target_speech": "Every night, volunteers collect the lanterns to keep the river clean.",
+          "reward": { "xp": 30 },
+          "prompt_en": "Bác Tư asks you to tell Professor David:"
+        },
+        {
+          "speaker": "david",
+          "text": "Hoi An really cares about heritage preservation. Why is this town so important?",
+          "vi": "Hội An thật sự coi trọng việc bảo tồn di sản. Vì sao thị trấn này quan trọng đến vậy?",
+          "audio_file": "assets/audio/q_cruise_t5.mp3",
+          "interaction_type": "multiple_choice",
+          "options": [
+            { "text": "Hoi An Ancient Town is a UNESCO World Heritage Site, so we protect its old houses, river and traditions.", "is_correct": true },
+            { "text": "It was built last year for tourists.", "is_correct": false, "why": "Phố cổ Hội An có lịch sử hàng trăm năm và là Di sản Thế giới từ năm 1999.", "why_en": "Hoi An Ancient Town is centuries old and has been a World Heritage Site since 1999." },
+            { "text": "Because it has the biggest shopping mall in Vietnam.", "is_correct": false, "why": "Câu này không liên quan đến giá trị di sản.", "why_en": "This has nothing to do with heritage value." }
+          ],
+          "reward": { "xp": 25 }
+        }
+      ],
+      "rewards": { "xp": 40, "title": "Green River Guardian", "tea": 2 },
+      "finale": { "title": "Thả hoa đăng ước nguyện", "title_en": "Release a wishing lantern", "text": "Thuyền đã ra giữa sông. Bạn và Professor David cùng thả một chiếc hoa đăng phân huỷ sinh học và ước nguyện nhé!", "text_en": "The boat is out on the river. Release a biodegradable flower lantern with Professor David and make a wish!", "button": "🪷 Thả hoa đăng", "button_en": "🪷 Release the lantern" },
+      "zone": "river",
+      "card": "assets/scenes/river.webp",
+      "time": "sunset"
+    }
+  ],
+  "side_quests": [
+    {
+      "id": "q_hoa",
+      "icon": "🍵",
+      "title": "Trà Sen Của Cô Hoa",
+      "title_en": "Cô Hoa's Lotus Tea",
+      "npc": "hoa",
+      "visitor": "mark",
+      "zone": "ev",
+      "card": "assets/scenes/ev_hub.webp",
+      "requires": "q_ev",
+      "topic": "Phiên dịch về đặc sản OCOP và truy xuất nguồn gốc",
+      "topic_en": "Interpreting about an OCOP speciality and traceability",
+      "mission": "Mark đang nghỉ chân ở quán Cà phê Đồng Lúa và tò mò về ly trà sen. Cô Hoa không nói được tiếng Anh, bạn phiên dịch giúp cô.",
+      "mission_en": "Mark is resting at the Rice Field Café and is curious about his lotus tea. Cô Hoa doesn't speak English, so you interpret for her.",
+      "objectives": ["Đáp lại câu hỏi của khách", "Phiên dịch lời Cô Hoa về trà sen", "Hướng dẫn quét mã QR truy xuất nguồn gốc"],
+      "objectives_en": ["Respond to the visitor's question", "Interpret what Cô Hoa says about lotus tea", "Explain how to scan the QR code for traceability"],
+      "target_vocabulary": ["lotus-tea", "ocop-product", "qr-code", "traceability"],
+      "rewards": { "xp": 30 },
+      "turns": [
+        {
+          "speaker": "mark",
+          "text": "Wow, this tea smells like flowers! What is it?",
+          "audio_file": "assets/audio/q_hoa_t1.mp3",
+          "vi": "Ồ, trà này thơm mùi hoa! Đây là trà gì vậy?",
+          "interaction_type": "multiple_choice",
+          "options": [
+            { "text": "Good question! Let me ask the owner for you.", "is_correct": true },
+            { "text": "I don't know. Sorry.", "is_correct": false, "why": "Local Host nên chủ động hỏi giúp khách.", "why_en": "A Local Host should offer to ask for the visitor." },
+            { "text": "It's just coffee.", "is_correct": false, "why": "Đây là trà sen, không phải cà phê.", "why_en": "It's lotus tea, not coffee." }
+          ],
+          "reward": { "xp": 10 }
+        },
+        {
+          "speaker": "hoa",
+          "text": "Cháu nói với khách giúp cô: đây là trà sen OCOP của Hội An, ướp bằng hoa sen tươi.",
+          "audio_file": "assets/audio/q_hoa_t2.mp3",
+          "prompt": "Cô Hoa nhờ bạn nói với Mark:",
+          "prompt_en": "Cô Hoa asks you to tell Mark:",
+          "interaction_type": "speaking",
+          "expected_keywords": ["lotus tea", "OCOP", "Hoi An|local", "fresh|flowers|lotus flowers"],
+          "target_speech": "This is OCOP lotus tea from Hoi An. It is made with fresh lotus flowers.",
+          "reward": { "xp": 20 }
+        },
+        {
+          "speaker": "hoa",
+          "text": "Khách muốn mua thì một hũ 150 nghìn. Quét mã QR trên hũ là biết trà trồng ở đâu.",
+          "audio_file": "assets/audio/q_hoa_t3.mp3",
+          "prompt": "Mark muốn mua một hũ. Cô Hoa nhờ bạn nói:",
+          "prompt_en": "Mark wants to buy a jar. Cô Hoa asks you to say:",
+          "interaction_type": "typing",
+          "typing_hints": ["150,000 dong", "scan", "QR code", "jar"],
+          "helper_prompt": { "term": "traceability", "definition": "truy xuất nguồn gốc (biết sản phẩm được làm ở đâu, bởi ai)", "energy_cost": 1 },
+          "sample_correct_response": "A jar costs 150,000 dong. Scan the QR code on the jar to see where the tea is grown.",
+          "reward": { "xp": 25 }
+        }
+      ]
+    },
+    {
+      "id": "q_vendor",
+      "icon": "🧺",
+      "title": "Gánh Hàng Rong Của Cô Ba",
+      "title_en": "Cô Ba's Street Snacks",
+      "npc": "vendor",
+      "visitor": "sarah",
+      "zone": "street",
+      "card": "assets/scenes/street.webp",
+      "requires": "q_tailor",
+      "topic": "Phiên dịch về hàng rong, đòn gánh và mua bán",
+      "topic_en": "Interpreting about street food, the carrying pole and shopping",
+      "mission": "Sarah mặc chiếc áo dài mới dạo vườn phố và tò mò về gánh hàng của Cô Ba. Bạn phiên dịch giúp hai người.",
+      "mission_en": "Wearing her new áo dài, Sarah is strolling in the garden and is curious about Cô Ba's carrying pole. Interpret for them.",
+      "objectives": ["Đáp lại câu hỏi của Sarah", "Phiên dịch về gánh hàng rong", "Phiên dịch giá và lời mời ăn thử"],
+      "objectives_en": ["Answer Sarah's question", "Interpret about the street vendor's carrying pole", "Interpret the price and the invitation to try"],
+      "target_vocabulary": ["street-vendor", "carrying-pole", "bamboo"],
+      "rewards": { "xp": 30 },
+      "turns": [
+        {
+          "speaker": "sarah",
+          "text": "Look at that lady! What is she carrying on her shoulder?",
+          "audio_file": "assets/audio/q_vendor_t1.mp3",
+          "vi": "Nhìn cô kia kìa! Cô ấy gánh gì trên vai vậy?",
+          "interaction_type": "multiple_choice",
+          "options": [
+            { "text": "That's a carrying pole. Let me ask her what she is selling.", "is_correct": true },
+            { "text": "It's a scooter for carrying food.", "is_correct": false, "why": "Cô Ba gánh hàng bằng đòn gánh tre, không phải xe.", "why_en": "Cô Ba uses a bamboo carrying pole, not a scooter." },
+            { "text": "Please don't talk to street vendors.", "is_correct": false, "why": "Local Host nên giúp khách tìm hiểu văn hoá địa phương.", "why_en": "A Local Host should help visitors discover local culture." }
+          ],
+          "reward": { "xp": 10 }
+        },
+        {
+          "speaker": "vendor",
+          "text": "Cô bán bánh ít lá gai với chè bắp, gánh bằng đòn gánh tre như người Hội An xưa.",
+          "audio_file": "assets/audio/q_vendor_t2.mp3",
+          "prompt": "Cô Ba nhờ bạn nói với Sarah:",
+          "prompt_en": "Cô Ba asks you to tell Sarah:",
+          "interaction_type": "speaking",
+          "expected_keywords": ["street vendor|sells|snacks", "carrying pole|pole", "bamboo", "traditional|old|Hoi An"],
+          "target_speech": "She is a street vendor. She sells local snacks and carries them on a bamboo carrying pole, the traditional way in Hoi An.",
+          "reward": { "xp": 20 }
+        },
+        {
+          "speaker": "vendor",
+          "text": "Hai mươi nghìn một phần. Cháu mời cô ấy ăn thử đi, ngon lắm!",
+          "audio_file": "assets/audio/q_vendor_t3.mp3",
+          "prompt": "Sarah hỏi giá. Cô Ba nhờ bạn nói:",
+          "prompt_en": "Sarah asks about the price. Cô Ba asks you to say:",
+          "interaction_type": "typing",
+          "typing_hints": ["20,000 dong", "try", "delicious"],
+          "helper_prompt": { "term": "sweet corn soup", "definition": "chè bắp", "energy_cost": 1 },
+          "sample_correct_response": "It's 20,000 dong for one. Please try it, it's delicious!",
+          "reward": { "xp": 25 }
+        }
+      ]
+    }
+  ],
+  "ceremony": {
+    "id": "q_ceremony",
+    "icon": "🏮",
+    "title": "Lễ Trao Danh Hiệu Đêm Hội",
+    "title_en": "Heritage Night Award Ceremony",
+    "npc": "ambassador",
+    "visitor": "ambassador",
+    "zone": "festival",
+    "card": "assets/scenes/festival.webp",
+    "topic": "Đáp lại lời cảm ơn và phát biểu tổng kết",
+    "topic_en": "Responding to thanks and giving a closing speech",
+    "mission": "Cả 4 vị khách bạn giúp hôm nay đã đến Đêm hội để cảm ơn bạn. Hãy đáp lại lời cảm ơn thật lịch sự, rồi phát biểu ngắn trước khi nhận danh hiệu.",
+    "mission_en": "All 4 visitors you helped today have come to the Heritage Night to thank you. Respond politely, then give a short speech before you receive your title.",
+    "objectives": ["Đáp lại lời cảm ơn của Mark, Sarah, Emma và Professor David", "Phát biểu 2–3 câu: điều bạn thích nhất ở Hội An hôm nay"],
+    "objectives_en": ["Respond to thanks from Mark, Sarah, Emma and Professor David", "Give a 2–3 sentence speech: what you enjoyed most about Hoi An today"],
+    "target_vocabulary": ["wishing-ceremony", "heritage-preservation", "world-heritage-site"],
+    "rewards": { "xp": 100 },
+    "turns": [
+      {
+        "speaker": "mark",
+        "text": "Thanks to you, my scooter is fully charged, and I found the best lotus tea in town!",
+        "audio_file": "assets/audio/q_ceremony_t1.mp3",
+        "vi": "Nhờ bạn mà xe mình sạc đầy, lại còn tìm được trà sen ngon nhất phố!",
+        "interaction_type": "multiple_choice",
+        "options": [
+          { "text": "You're welcome, Mark! I'm really glad I could help.", "is_correct": true },
+          { "text": "No problem. Now please pay me for my help.", "is_correct": false, "why": "Câu này thiếu lịch sự; Local Host giúp khách vì lòng hiếu khách.", "why_en": "This is impolite; a Local Host helps out of hospitality." },
+          { "text": "Yes, I know. I am the best guide in Hoi An.", "is_correct": false, "why": "Câu này khoe khoang. Hãy đáp lại lời cảm ơn thật khiêm tốn.", "why_en": "This sounds boastful. Accept thanks modestly." }
+        ],
+        "reward": { "xp": 10 }
+      },
+      {
+        "speaker": "sarah",
+        "text": "Look, I'm wearing my new áo dài! Thank you for helping me talk to Mr. Minh.",
+        "audio_file": "assets/audio/q_ceremony_t2.mp3",
+        "vi": "Nhìn này, mình đang mặc áo dài mới! Cảm ơn bạn đã giúp mình nói chuyện với chú Minh.",
+        "interaction_type": "multiple_choice",
+        "options": [
+          { "text": "You look wonderful in it! It was my pleasure.", "is_correct": true },
+          { "text": "Áo dài is only for Vietnamese people.", "is_correct": false, "why": "Câu này không đúng và làm khách buồn; du khách mặc áo dài là tôn trọng văn hoá.", "why_en": "Not true, and it would upset her; visitors wearing áo dài show respect for the culture." },
+          { "text": "It was too expensive for you.", "is_correct": false, "why": "Câu này bất lịch sự với khách.", "why_en": "This is rude to the visitor." }
+        ],
+        "reward": { "xp": 10 }
+      },
+      {
+        "speaker": "emma",
+        "text": "My followers love the video of my silk lantern. You were a great teacher!",
+        "audio_file": "assets/audio/q_ceremony_t3.mp3",
+        "vi": "Người theo dõi mình rất thích video chiếc đèn lụa. Bạn là người thầy tuyệt vời!",
+        "interaction_type": "multiple_choice",
+        "options": [
+          { "text": "Thank you! I'm so happy you enjoyed making it.", "is_correct": true },
+          { "text": "Please delete the video. It is not good.", "is_correct": false, "why": "Câu này làm khách mất hứng.", "why_en": "This would spoil her joy." },
+          { "text": "Lanterns are boring.", "is_correct": false, "why": "Câu này không thể hiện niềm tự hào về nghề truyền thống.", "why_en": "This shows no pride in a traditional craft." }
+        ],
+        "reward": { "xp": 10 }
+      },
+      {
+        "speaker": "david",
+        "text": "Releasing that lantern on the Hoai River was magical. Thank you for explaining the tradition.",
+        "audio_file": "assets/audio/q_ceremony_t4.mp3",
+        "vi": "Thả hoa đăng trên sông Hoài thật kỳ diệu. Cảm ơn bạn đã giải thích phong tục.",
+        "interaction_type": "multiple_choice",
+        "options": [
+          { "text": "My pleasure, Professor. I hope you come back to Hoi An soon!", "is_correct": true },
+          { "text": "The tradition is not important anymore.", "is_correct": false, "why": "Câu này sai; thả hoa đăng là một phần di sản Hội An.", "why_en": "Not true; releasing lanterns is part of Hoi An's heritage." },
+          { "text": "Next time, throw plastic lanterns into the river.", "is_correct": false, "why": "Đèn nhựa gây ô nhiễm sông.", "why_en": "Plastic lanterns pollute the river." }
+        ],
+        "reward": { "xp": 10 }
+      },
+      {
+        "speaker": "ambassador",
+        "lang": "en",
+        "audio_file": "assets/audio/q_ceremony_t5.mp3",
+        "text": "Before we give you the title, please tell everyone: what did you enjoy most about Hoi An today?",
+        "vi": "Trước khi trao danh hiệu, bạn hãy nói với mọi người: hôm nay bạn thích nhất điều gì ở Hội An?",
+        "prompt": "Phát biểu 2–3 câu bằng tiếng Anh, dùng các từ đã học hôm nay.",
+        "prompt_en": "Give a short 2–3 sentence speech in English, using words you learned today.",
+        "interaction_type": "speaking",
+        "expected_keywords": ["enjoy|enjoyed|love|loved|like|liked", "lantern|lanterns", "áo dài|ao dai|silk|tailor", "river|boat|cruise", "walking street|old town|heritage|ancient", "help|helped|helping|visitors|tourists"],
+        "need": 3,
+        "min_words": 15,
+        "min_similarity": 0,
+        "target_speech": "I really enjoyed helping visitors in the old town today. I loved the silk lanterns and the áo dài, and releasing a lantern on the Hoai River was magical.",
+        "reward": { "xp": 40 }
+      }
+    ]
+  },
+  "bosses": [
+    {
+      "id": "b_words",
+      "name": "Forgetful Phantom",
+      "name_vi": "Bóng Ma Quên Từ",
+      "source": "lexicon",
+      "description": "Bóng ma lấy cắp những từ bạn còn chưa chắc. Câu hỏi được chọn từ danh sách Unknown của chính bạn.",
+      "description_en": "This phantom steals the words you are still unsure about. Its questions come from your own Unknown list.",
+      "img": "../assets/boss/boss_purple.webp",
+      "hp": 6,
+      "hearts": 3,
+      "unlock_quests": 1,
+      "rewards": { "xp": 60, "title": "Word Keeper", "tea": 1 },
+      "level": "B1"
+    },
+    {
+      "id": "b_phrasal",
+      "name": "Phrasal Ghost of the Old Town",
+      "name_vi": "Hồn Ma Cụm Từ Phố Cổ",
+      "level": "B1",
+      "source": "phrasal",
+      "description": "Cụm động từ và kết hợp từ hay dùng khi đón khách (pick up, try on, set off, make a wish…), lấy từ chính các cuộc hội thoại trong game.",
+      "description_en": "Phrasal verbs and collocations for hosting visitors (pick up, try on, set off, make a wish…), taken from the conversations in the game.",
+      "img": "../assets/boss/boss_green.webp",
+      "hp": 6,
+      "hearts": 3,
+      "unlock_quests": 2,
+      "rewards": { "xp": 80, "title": "Phrase Pathfinder", "tea": 1 }
+    },
+    {
+      "id": "b_idioms",
+      "name": "Idiom Ghost of the Covered Bridge",
+      "name_vi": "Hồn Ma Thành Ngữ Chùa Cầu",
+      "source": "idioms",
+      "description": "Thành ngữ, cụm động từ và kết hợp từ trích từ đề thi (Exam Idioms trên Portal).",
+      "description_en": "Idioms, phrasal verbs and collocations taken from exam papers (Exam Idioms on the Portal).",
+      "img": "../assets/boss/boss_teal.webp",
+      "hp": 6,
+      "hearts": 3,
+      "unlock_quests": 3,
+      "rewards": { "xp": 80, "title": "Idiom Ghostbuster", "tea": 1 },
+      "advanced": true,
+      "level": "C1"
+    },
+    {
+      "id": "b_text",
+      "name": "Text Completion Typhoon",
+      "name_vi": "Bão Điền Câu Sông Hoài",
+      "source": "text_completion",
+      "description": "Điền cụm/mệnh đề vào đoạn văn theo định dạng đề tốt nghiệp THPT (Text Completion trên Portal).",
+      "description_en": "Fill phrases and clauses into passages in the national graduation exam format (Text Completion on the Portal).",
+      "img": "../assets/boss/boss_red.webp",
+      "hp": 6,
+      "hearts": 3,
+      "unlock_quests": 4,
+      "rewards": { "xp": 100, "title": "Typhoon Tamer", "tea": 1 },
+      "advanced": true,
+      "level": "THPT"
+    }
+  ],
+  "outfits": [
+    { "id": "white", "color": "white", "name": "Trắng Local Host", "name_en": "Local Host White", "how": "Có sẵn", "how_en": "Available from the start" },
+    { "id": "indigo", "color": "indigo", "name": "Xanh chàm Green Mobility", "name_en": "Green Mobility Indigo", "how": "Hoàn thành nhiệm vụ Bãi Xe Điện Ngoại Vi", "how_en": "Complete the Outer EV Hub mission" },
+    { "id": "gold", "color": "gold", "name": "Vàng lụa Hội An", "name_en": "Hoi An Silk Gold", "how": "Hoàn thành nhiệm vụ Tiệm May Áo Dài", "how_en": "Complete the Express Tailor Shop mission" },
+    { "id": "red", "color": "red", "name": "Đỏ đèn lồng", "name_en": "Lantern Red", "how": "Làm đúng hết phần kiểm tra của 5 Booklet ngữ pháp", "how_en": "Pass the quick check in all 5 grammar Booklets" }
+  ]
+}

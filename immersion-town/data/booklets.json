@@ -1,13 +1,14 @@
 {
   "version": "3.0",
-  "description": "Sách hướng dẫn ngữ pháp (Booklets) giấu quanh bản đồ. Vị trí đặt trong js/world.js theo 'id'.",
+  "description": "Sách hướng dẫn ngữ pháp (Booklets) giấu trên 4 bản đồ. Vị trí đặt trong data/maps/*.tmx (đối tượng collectible, name = 'id').",
   "booklets": [
     {
       "id": "bk_passive",
       "icon": "🏛️",
       "title": "Câu bị động: giới thiệu di sản và sản phẩm",
       "title_en": "The Passive Voice",
-      "where": "Phố cổ, cạnh nhà cổ Tấn Ký",
+      "where": "Phố đi bộ, trước Nhà cổ Tấn Ký",
+      "where_en": "Walking Street, in front of Tan Ky Ancient House",
       "rule": "Dùng câu bị động khi muốn nhấn mạnh sự vật (ngôi nhà, chiếc đèn, món ăn) hơn là người làm ra nó. Cấu trúc: S + be + V3/V-ed (+ by …).",
       "patterns": [
         { "form": "It is made of + chất liệu", "note": "nói chất liệu làm ra đồ vật" },
@@ -29,7 +30,8 @@
       "icon": "🕔",
       "title": "Hẹn giờ và kế hoạch",
       "title_en": "Arrangements and Time",
-      "where": "Phố cổ, trước tiệm may áo dài",
+      "where": "Phố đi bộ, đầu ngõ giữa Tiệm May và quầy Quà OCOP",
+      "where_en": "Walking Street, at the alley between the Tailor Shop and the OCOP gift shop",
       "rule": "will + V để hứa hẹn, thông báo (It will be ready…). Hiện tại tiếp diễn để nói lịch đã sắp xếp (I'm leaving tomorrow). Giới từ thời gian: at + giờ, on + thứ/ngày, in + buổi (in the afternoon), by + hạn chót.",
       "patterns": [
         { "form": "It will be ready at / by + giờ", "note": "hẹn giờ giao hàng, trả đồ" },
@@ -51,7 +53,8 @@
       "icon": "🍜",
       "title": "Gợi ý và mời lịch sự",
       "title_en": "Polite Offers and Suggestions",
-      "where": "Khu ẩm thực, cạnh bảng thực đơn",
+      "where": "Bãi xe điện, sau quán Cà phê Đồng Lúa OCOP",
+      "where_en": "Outer EV Hub, behind the Rice Field OCOP Café",
       "rule": "Local Host hay phải mời và gợi ý cho khách. Chú ý dạng động từ đi sau mỗi cấu trúc.",
       "patterns": [
         { "form": "Would you like + to V / N?", "note": "mời lịch sự" },
@@ -75,7 +78,8 @@
       "icon": "🪜",
       "title": "Hướng dẫn từng bước",
       "title_en": "Giving Step-by-step Instructions",
-      "where": "Phố lồng đèn, trên bàn xưởng thủ công",
+      "where": "Phố đi bộ, giữa Xưởng Lồng Đèn và Nhà cổ Phùng Hưng",
+      "where_en": "Walking Street, between the Lantern Workshop and Phung Hung Ancient House",
       "rule": "Dùng câu mệnh lệnh (động từ nguyên mẫu đứng đầu câu) kèm từ nối chỉ trình tự: First → Next / Then → After that → Finally. Thêm carefully, gently để nói cách làm; Don't + V để nhắc điều cần tránh.",
       "patterns": [
         { "form": "First, + V …", "note": "bước đầu tiên" },
@@ -99,7 +103,8 @@
       "icon": "🔗",
       "title": "Mệnh đề quan hệ: giải thích thêm cho khách",
       "title_en": "Relative Clauses: who, which, where",
-      "where": "Bến thuyền sông Hoài",
+      "where": "Bến sông Hoài, cạnh bảng Night Cruise",
+      "where_en": "Hoai River Pier, next to the Night Cruise sign",
       "rule": "Dùng who cho người, which/that cho vật, where cho nơi chốn để nối hai ý và giải thích thêm cho khách mà không phải nói nhiều câu ngắn.",
       "patterns": [
         { "form": "N (người) + who + V …", "note": "người làm việc gì" },

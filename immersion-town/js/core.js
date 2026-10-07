@@ -3,32 +3,39 @@
   'use strict';
 
   const IT = (window.IT = window.IT || {});
-  const STORE_KEY = 'immersionTown.v3';
-  const BATTERY_MAX = 5;
-  const BATTERY_START = 3;
+  const STORE_KEY = 'immersionTown.v5';
+  const TEA_MAX = 5;      // Trà Đá Helper: số cốc tối đa
+  const TEA_START = 3;
 
   /* ---------- Tiến độ ---------- */
 
   function defaults() {
     return {
       xp: 0,
-      battery: BATTERY_START,
-      map: 'day',
-      pos: null,
+      tea: TEA_START,
+      pos: null,       // { map, x, y }: vị trí trên bản đồ Tiled
+      name: '',
+      avatar: 'boy',   // Local Host nam (đồng phục) hoặc nữ (áo dài)
+      lang: 'en',      // ngôn ngữ chỉ dẫn: 'en' (mặc định) hoặc 'vi'
+      zonesSeen: {},
       soundOn: true,
       labels: true,
       words: {},       // id → { seen, pokes, unk, miss, streak, status: 'unknown' | 'known' | undefined }
       poked: {},       // khoá điểm chạm đã khám phá
-      collected: {},   // Battery Pack và Booklet đã nhặt
+      met: {},         // người địa phương / Đại sứ đã trò chuyện
+      collected: {},   // cốc Trà Đá và Booklet đã nhặt
       bookletChecks: {},
       quests: {},      // id → { done, voice, typed, firstTry, turns }
       bosses: {},      // id → { wins, tries }
-      outfits: ['host'],
-      outfit: 'host',
+      outfits: ['white'],
+      outfit: 'white', // màu trang phục: white, indigo, gold, red
       titles: [],
       title: null,
-      solarAt: 0,
-      stats: { pokes: 0, translations: 0, linesSeen: 0, firstTry: 0, retries: 0, voice: 0, typed: 0, bossRight: 0, bossWrong: 0, reviews: 0, packs: 0 },
+      questRun: {},    // lượt đang làm dở của từng nhiệm vụ: id → { step, xp, voice, typed, firstTry }
+      clock: 0,        // giờ trong ngày (0 sáng … 4 tối); tự tăng theo số nhiệm vụ đã xong
+      stallUsed: 0,    // số ly đã đổi ở quầy Trà Đá (mỗi nhiệm vụ chính xong được 1 ly)
+      stallWait: 0,    // trả lời sai ở quầy thì chờ tới thời điểm này
+      stats: { pokes: 0, translations: 0, linesSeen: 0, firstTry: 0, retries: 0, voice: 0, typed: 0, bossRight: 0, bossWrong: 0, reviews: 0, teas: 0 },
     };
   }
 
@@ -44,20 +51,20 @@
   }
 
   const store = {
-    BATTERY_MAX,
+    TEA_MAX,
     data: load(),
     save() {
       try { localStorage.setItem(STORE_KEY, JSON.stringify(this.data)); } catch (e) { /* bỏ qua */ }
     },
     reset() {
-      const keep = { soundOn: this.data.soundOn, labels: this.data.labels };
+      const keep = { soundOn: this.data.soundOn, labels: this.data.labels, name: this.data.name, avatar: this.data.avatar, lang: this.data.lang };
       this.data = Object.assign(defaults(), keep);
       this.save();
     },
-    addBattery(n) {
-      const before = this.data.battery;
-      this.data.battery = Math.min(BATTERY_MAX, before + n);
-      return this.data.battery - before;
+    addTea(n) {
+      const before = this.data.tea;
+      this.data.tea = Math.min(TEA_MAX, before + n);
+      return this.data.tea - before;
     },
 
     /* --- Học tập thích ứng: theo dõi từ vựng --- */
@@ -133,25 +140,27 @@
     const unknown = words.filter((w) => w.status === 'unknown').length;
     const traits = [];
     const tips = [];
-    if (s.pokes >= 12 && s.pokes >= turns * 2) traits.push(['🧭', 'Nhà thám hiểm', 'Bạn thích chạm và khám phá mọi thứ quanh phố.']);
-    if (turns >= 5 && s.pokes < turns) traits.push(['🤝', 'Người kết nối', 'Bạn tập trung trò chuyện và làm nhiệm vụ.']);
+    // Chỉ dẫn theo ngôn ngữ người chơi chọn (EN/VI)
+    const L = (vi, en) => (d.lang === 'vi' ? vi : en);
+    if (s.pokes >= 12 && s.pokes >= turns * 2) traits.push(['🧭', L('Nhà thám hiểm', 'Explorer'), L('Bạn thích chạm và khám phá mọi thứ quanh phố.', 'You love tapping and exploring everything around town.')]);
+    if (turns >= 5 && s.pokes < turns) traits.push(['🤝', L('Người kết nối', 'Connector'), L('Bạn tập trung trò chuyện và làm nhiệm vụ.', 'You focus on talking to people and completing missions.')]);
     if (s.linesSeen >= 4 && s.translations / s.linesSeen >= 0.5) {
-      traits.push(['🔋', 'Hay dùng máy dịch', 'Bạn dịch hơn một nửa số câu thoại.']);
-      tips.push('Thử chạm vào từng từ được tô sáng thay vì dịch cả câu: vừa tiết kiệm pin, vừa nhớ từ lâu hơn.');
+      traits.push(['☕', L('Hay dùng máy dịch', 'Translator fan'), L('Bạn dịch hơn một nửa số câu thoại.', 'You translate more than half of the lines.')]);
+      tips.push(L('Thử chạm vào từng từ được tô sáng thay vì dịch cả câu: vừa tiết kiệm Trà Đá, vừa nhớ từ lâu hơn.', 'Try tapping single highlighted words instead of translating whole lines: it saves Trà Đá and helps you remember words longer.'));
     } else if (s.linesSeen >= 6 && s.translations / s.linesSeen < 0.15) {
-      traits.push(['💪', 'Tự lực', 'Bạn hiếm khi cần dịch cả câu.']);
+      traits.push(['💪', L('Tự lực', 'Independent'), L('Bạn hiếm khi cần dịch cả câu.', 'You rarely need to translate whole lines.')]);
     }
-    if (s.voice >= 2 && s.voice >= s.typed) traits.push(['🎙️', 'Diễn giả', 'Bạn chọn nói thay vì gõ ở phần lớn lượt nói.']);
-    if (s.typed >= 2 && s.typed > s.voice) tips.push('Bạn hay gõ thay vì nói. Hãy thử nói ở lượt tiếp theo (Chrome/Edge có micro).');
+    if (s.voice >= 2 && s.voice >= s.typed) traits.push(['🎙️', L('Diễn giả', 'Speaker'), L('Bạn chọn nói thay vì gõ ở phần lớn lượt nói.', 'You choose to speak rather than type in most speaking turns.')]);
+    if (s.typed >= 2 && s.typed > s.voice) tips.push(L('Bạn hay gõ thay vì nói. Hãy thử nói ở lượt tiếp theo (Chrome/Edge có micro).', 'You often type instead of speaking. Try speaking next time (Chrome/Edge with a microphone).'));
     if (turns >= 4) {
       const ratio = s.firstTry / turns;
-      if (ratio >= 0.75) traits.push(['🎯', 'Chính xác', `Đúng ngay lần đầu ${Math.round(ratio * 100)}% số lượt.`]);
-      else if (ratio < 0.5) tips.push('Bạn hay phải làm lại. Đọc Booklet ngữ pháp liên quan trước khi nhận nhiệm vụ.');
+      if (ratio >= 0.75) traits.push(['🎯', L('Chính xác', 'Accurate'), L(`Đúng ngay lần đầu ${Math.round(ratio * 100)}% số lượt.`, `Right on the first try in ${Math.round(ratio * 100)}% of turns.`)]);
+      else if (ratio < 0.5) tips.push(L('Bạn hay phải làm lại. Đọc Booklet ngữ pháp liên quan trước khi nhận nhiệm vụ.', 'You often need a second try. Read the related grammar Booklet before starting a mission.'));
     }
-    if (unknown >= 5) tips.push(`Bạn có ${unknown} từ Unknown. Mở Sổ từ → "Ôn 5 từ ưu tiên" hoặc đấu Bóng Ma Quên Từ.`);
+    if (unknown >= 5) tips.push(L(`Bạn có ${unknown} từ Unknown. Mở Sổ từ → "Ôn 5 từ ưu tiên" hoặc đấu Bóng Ma Quên Từ.`, `You have ${unknown} Unknown words. Open the Word Book → "Review 5 priority words", or fight the Forgetful Phantom.`));
     const booklets = Object.keys(d.collected).filter((k) => k.startsWith('bk_')).length;
-    if (booklets < totals.booklets) tips.push(`Còn ${totals.booklets - booklets} Booklet ngữ pháp giấu quanh phố. Đi dạo và tìm biểu tượng sách màu xanh.`);
-    if (!traits.length && !tips.length) tips.push('Hãy chơi thêm một lúc để hệ thống phân tích phong cách học của bạn.');
+    if (booklets < totals.booklets) tips.push(L(`Còn ${totals.booklets - booklets} Booklet ngữ pháp giấu trên các khu phố. Đi dạo và tìm cuốn sách xanh có gáy đỏ.`, `${totals.booklets - booklets} grammar Booklet(s) are still hidden around town. Look for a green book with a red spine.`));
+    if (!traits.length && !tips.length) tips.push(L('Hãy chơi thêm một lúc để hệ thống phân tích phong cách học của bạn.', 'Play a little longer so the game can analyse your learning style.'));
     return { traits, tips, known, unknown, discovered: words.length, turns };
   }
 
@@ -205,6 +214,78 @@
   }
 
   const firstAlt = (k) => k.split('|')[0];
+
+  /* ---------- Chấm câu viết / câu nói ---------- */
+
+  // Từ chức năng: không tính khi xét lặp từ và độ khớp câu mẫu, nhưng một câu thật phải có vài từ này
+  const STOP = new Set(('a an the and or but so to of in on at for from with by as is am are be been was were it its this that these those '
+    + 'there here i you he she we they me him her us them my your our their his do does did can will would should could may might must '
+    + 'not no yes very too also just then than if because about into over up down out off some any all each every one').split(' ').map(stem));
+  const VERB_BASES = ('be have do can could will would shall should may might must need want like love go come take make get give put keep help '
+    + 'protect walk ride drive park charge pay scan open close use try buy sell cost see look watch show find follow turn cross stop wait stay '
+    + 'leave arrive visit enjoy recommend suggest choose pick fit measure sew alter fix change wear dress feel think know believe hope wish '
+    + 'release float light collect clean pollute break decompose dissolve burn carry fold pack glue stick stretch cut bend tie paint decorate '
+    + 'build hang place set add start begin finish end let ask tell say speak talk call explain guide lead bring send book reserve rent cycle '
+    + 'sail row swim travel explore learn teach practise practice check plan meet join celebrate remember forget save reduce recycle preserve '
+    + 'last grow plant serve eat drink taste cook order smell sound seem become allow ban run move sit stand return mean happen include '
+    + 'contain offer provide prepare film record share post smile thank welcome hold pull push lift drop shine glow drift flow live work '
+    + 'cover dry mix wrap stitch design shape attach sign promise').split(' ');
+  const IRREGULAR = ('is am are was were been being has had does did done went gone came took taken made got gotten gave given kept saw seen '
+    + 'found thought knew known brought bought sold told said spoke spoken wore worn felt left met paid set let cut built sent spent stood '
+    + 'sat ran broke broken chose chosen rode ridden drove driven ate eaten drank drunk began begun hung lit taught caught held lost grew '
+    + 'grown swam flew flown became fell fallen wrote written read').split(' ');
+  // Dạng rút gọn (đã bỏ dấu nháy khi chuẩn hoá): it's → its, don't → dont, you'll → youll …
+  const CONTRACTIONS = new Set(('im youre theyre its thats theres heres whats lets dont doesnt didnt cant wont isnt arent wasnt werent '
+    + 'ill youll itll theyll shell ive youve weve theyve id youd hed shed itd couldnt wouldnt shouldnt mustnt').split(' '));
+  const VERBS = new Set();
+  VERB_BASES.forEach((v) => {
+    const ing = v.endsWith('e') && !v.endsWith('ee') ? `${v.slice(0, -1)}ing` : `${v}ing`;
+    const ed = v.endsWith('e') ? `${v}d` : /[^aeiou]y$/.test(v) ? `${v.slice(0, -1)}ied` : `${v}ed`;
+    [v, `${v}s`, `${v}es`, ing, ed, `${v}${v.slice(-1)}ing`, `${v}${v.slice(-1)}ed`].forEach((f) => VERBS.add(stem(f)));
+  });
+  IRREGULAR.forEach((f) => VERBS.add(stem(f)));
+
+  // Độ khớp với câu mẫu (0–1): một nửa là tỉ lệ từ khoá dùng được, một nửa là độ trùng từ nội dung (F1) với câu mẫu
+  function similarity(tokens, sample, coverage) {
+    const content = (arr) => new Set(arr.filter((t) => t.length > 1 && !STOP.has(t)));
+    const a = content(tokens);
+    const b = content(tokensOf(sample));
+    if (!a.size || !b.size) return coverage;
+    let inter = 0;
+    a.forEach((t) => { if (b.has(t)) inter += 1; });
+    const f1 = inter ? (2 * inter) / (a.size + b.size) : 0;
+    return 0.5 * coverage + 0.5 * f1;
+  }
+
+  const SIM_PASS = 0.45;
+
+  /* Chấm một câu trả lời tự do (viết hoặc nói). Trả về { ok, reason, hits, count, need, similarity, missing }.
+     reason: 'short' (quá ngắn) · 'repeat' (lặp từ) · 'list' (chỉ liệt kê từ khoá) · 'verb' (thiếu động từ)
+             · 'keywords' (thiếu từ khoá) · 'similar' (chưa sát câu mẫu) */
+  function checkAnswer(text, { keywords = [], sample = '', need = 2, minWords = 5, minSimilarity = SIM_PASS } = {}) {
+    const words = normalize(text).split(' ').filter(Boolean);
+    const tokens = words.map(stem);
+    const kw = scoreKeywords(text, keywords);
+    const sim = similarity(tokens, sample, keywords.length ? kw.count / keywords.length : 0);
+    const missing = keywords.filter((k, i) => !kw.hits[i]).map(firstAlt);
+    const base = { hits: kw.hits, count: kw.count, need, similarity: sim, missing, words: tokens.length };
+    const fail = (reason) => ({ ...base, ok: false, reason });
+    if (tokens.length < minWords) return fail('short');
+    // Lặp từ: hai từ nội dung giống nhau liền nhau, một từ nội dung dùng từ 3 lần, một từ bất kỳ chiếm ≥ 30% câu
+    // (kiểu "the quiet the clean the …"), hoặc quá ít từ khác nhau
+    const counts = {};
+    tokens.forEach((t) => { counts[t] = (counts[t] || 0) + 1; });
+    if (tokens.some((t, i) => i && t === tokens[i - 1] && !STOP.has(t))
+      || Object.entries(counts).some(([t, c]) => (!STOP.has(t) && c >= 3) || (c >= 3 && c / tokens.length >= 0.3))
+      || new Set(tokens).size / tokens.length < 0.5) return fail('repeat');
+    // Chỉ liệt kê từ khoá: hầu hết là từ khoá, hoặc không có từ chức năng nào để nối thành câu
+    const kwTokens = new Set(keywords.flatMap((k) => k.split('|').flatMap(tokensOf)));
+    if (tokens.filter((t) => kwTokens.has(t)).length / tokens.length >= 0.75 || !tokens.some((t) => STOP.has(t))) return fail('list');
+    if (!words.some((w) => CONTRACTIONS.has(w)) && !tokens.some((t) => VERBS.has(t))) return fail('verb');
+    if (kw.count < need) return fail('keywords');
+    if (sim < minSimilarity) return fail('similar');
+    return { ...base, ok: true };
+  }
 
   /* ---------- Âm thanh ---------- */
 
@@ -352,6 +433,7 @@
     stem,
     tokensOf,
     scoreKeywords,
+    checkAnswer,
     firstAlt,
     speak,
     playLine,

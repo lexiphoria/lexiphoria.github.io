@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="16" tilewidth="64" tileheight="64" infinite="0" nextlayerid="3" nextobjectid="37">
+ <properties>
+  <property name="zone" value="river"/>
+  <property name="name" value="Bến sông Hoài"/>
+  <property name="name_en" value="Hoai River Pier"/>
+  <property name="sub" value="Chiều tà bên bến hoa đăng và Chùa Cầu"/>
+  <property name="sub_en" value="Sunset at the flower-lantern pier and the Japanese Covered Bridge"/>
+  <property name="card" value="assets/scenes/river.webp"/>
+  <property name="light" value="dusk"/>
+ </properties>
+ <tileset firstgid="1" name="hoian_dongho_tileset_64x64" tilewidth="64" tileheight="64" tilecount="72" columns="8">
+  <image source="../../assets/tiles/hoian_dongho_grid_tileset_64x64.png" width="512" height="576"/>
+  <tile id="16"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="17"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="18"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="19"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="20"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="21"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="22"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="23"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="24"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="25"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="26"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="27"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="28"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="29"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="30"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="31"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="34"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="35"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+ </tileset>
+ <layer id="1" name="Ground" width="30" height="16">
+  <data encoding="csv">
+9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,17,17,9,9,9,9,
+9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,17,17,9,9,9,9,
+33,33,33,33,33,33,33,33,33,33,33,33,33,33,33,33,33,33,33,33,33,33,33,33,17,17,4,1,4,1,
+1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,39,39,1,4,1,4,
+4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,39,39,4,1,4,1,
+1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,39,39,1,4,1,4,
+4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,17,17,4,1,4,1,
+33,33,33,33,33,33,33,33,33,33,33,33,38,38,38,38,33,33,33,33,33,33,33,33,17,17,33,33,33,33,
+19,19,19,19,19,19,19,19,19,19,19,19,38,38,38,38,19,19,19,19,19,19,19,19,17,17,19,19,19,19,
+17,17,17,17,17,17,17,17,17,17,17,17,38,38,38,38,17,17,17,17,17,17,17,17,17,17,17,17,17,17,
+17,17,17,17,17,17,17,17,17,17,17,18,38,38,38,38,17,17,17,17,17,17,17,17,17,17,17,17,18,17,
+17,17,17,17,17,17,17,18,17,17,17,17,38,38,38,38,17,17,17,17,17,17,17,17,18,17,17,17,17,17,
+17,17,17,18,17,17,17,17,17,17,17,17,38,38,38,38,17,17,17,17,18,17,17,17,17,17,17,17,17,17,
+17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,18,17,17,17,17,17,17,17,17,17,17,17,17,17,
+17,17,17,17,17,17,17,17,17,17,17,17,18,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,18,
+17,17,17,17,17,17,17,17,18,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,18,17,17,17,17
+</data>
+ </layer>
+ <objectgroup id="2" name="Objects">
+  <object id="1" name="default" type="spawn" x="960" y="77" width="64" height="64">
+   <properties>
+    <property name="kind" value="spawn"/>
+    <property name="facing" value="down"/>
+   </properties>
+  </object>
+  <object id="2" name="to_street" type="exit" x="896" y="0" width="192" height="64">
+   <properties>
+    <property name="kind" value="exit"/>
+    <property name="to" value="street"/>
+    <property name="sx" type="float" value="15.5"/>
+    <property name="sy" type="float" value="13.8"/>
+    <property name="facing" value="up"/>
+   </properties>
+  </object>
+  <object id="3" name="to_festival" type="exit" x="1856" y="128" width="64" height="320">
+   <properties>
+    <property name="kind" value="exit"/>
+    <property name="to" value="festival"/>
+    <property name="sx" type="float" value="13.5"/>
+    <property name="sy" type="float" value="12.6"/>
+    <property name="facing" value="up"/>
+   </properties>
+  </object>
+  <object id="4" name="" type="prop" x="1448" y="394" width="303" height="13">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tq_bridge"/>
+    <property name="ph" type="float" value="205"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="japanese-covered-bridge"/>
+   </properties>
+  </object>
+  <object id="5" name="" type="prop" x="1043" y="589" width="218" height="64">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="draw" value="eboat"/>
+    <property name="ph" type="float" value="96"/>
+    <property name="word" value="eco-electric-boat"/>
+    <property name="solid" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="6" name="" type="prop" x="486" y="666" width="166" height="51">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="boat"/>
+    <property name="ph" type="float" value="92"/>
+    <property name="word" value="wooden-boat"/>
+    <property name="solid" type="bool" value="false"/>
+    <property name="glow" value="0.14,0.3"/>
+   </properties>
+  </object>
+  <object id="7" name="" type="prop" x="339" y="586" width="108" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="pier_rings"/>
+    <property name="ph" type="float" value="82"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="mooring-post"/>
+   </properties>
+  </object>
+  <object id="8" name="" type="prop" x="43" y="589" width="138" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="pier_lamp"/>
+    <property name="ph" type="float" value="96"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="mooring-post"/>
+    <property name="glow" value="0.9,0.25"/>
+   </properties>
+  </object>
+  <object id="9" name="" type="prop" x="848" y="838" width="90" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="dock_tyres"/>
+    <property name="ph" type="float" value="64"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="pier"/>
+   </properties>
+  </object>
+  <object id="10" name="" type="prop" x="338" y="432" width="35" height="16">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="pot_flower_red"/>
+    <property name="ph" type="float" value="54"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="potted-plant"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="11" name="" type="prop" x="422" y="781" width="51" height="26">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="lotus"/>
+    <property name="ph" type="float" value="56"/>
+    <property name="word" value="biodegradable-lantern"/>
+    <property name="solid" type="bool" value="false"/>
+    <property name="floating" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="12" name="" type="prop" x="1254" y="742" width="51" height="26">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="lotus"/>
+    <property name="ph" type="float" value="56"/>
+    <property name="word" value="candle"/>
+    <property name="solid" type="bool" value="false"/>
+    <property name="floating" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="13" name="" type="prop" x="1370" y="870" width="51" height="26">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="lotus"/>
+    <property name="ph" type="float" value="56"/>
+    <property name="word" value="biodegradable-lantern"/>
+    <property name="solid" type="bool" value="false"/>
+    <property name="floating" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="14" name="" type="prop" x="230" y="678" width="51" height="26">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="lotus"/>
+    <property name="ph" type="float" value="56"/>
+    <property name="word" value="candle"/>
+    <property name="solid" type="bool" value="false"/>
+    <property name="floating" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="15" name="" type="prop" x="1728" y="781" width="51" height="26">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="lotus"/>
+    <property name="ph" type="float" value="56"/>
+    <property name="word" value="biodegradable-lantern"/>
+    <property name="solid" type="bool" value="false"/>
+    <property name="floating" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="16" name="" type="prop" x="678" y="909" width="51" height="26">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="lotus"/>
+    <property name="ph" type="float" value="56"/>
+    <property name="word" value="biodegradable-lantern"/>
+    <property name="solid" type="bool" value="false"/>
+    <property name="floating" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="17" name="" type="prop" x="698" y="419" width="58" height="26">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="draw" value="cruiseSign"/>
+    <property name="ph" type="float" value="118"/>
+    <property name="word" value="night-cruise"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="18" name="" type="prop" x="160" y="426" width="19" height="16">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tq_lamp"/>
+    <property name="ph" type="float" value="150"/>
+    <property name="word" value="silk-lantern"/>
+    <property name="solid" type="bool" value="true"/>
+    <property name="glow" value="0.2,0.4;0.68,0.25"/>
+   </properties>
+  </object>
+  <object id="19" name="" type="prop" x="525" y="426" width="19" height="16">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tq_lamp"/>
+    <property name="ph" type="float" value="150"/>
+    <property name="word" value="silk-lantern"/>
+    <property name="solid" type="bool" value="true"/>
+    <property name="glow" value="0.2,0.4;0.68,0.25"/>
+   </properties>
+  </object>
+  <object id="20" name="" type="prop" x="1184" y="426" width="19" height="16">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tq_lamp"/>
+    <property name="ph" type="float" value="150"/>
+    <property name="word" value="silk-lantern"/>
+    <property name="solid" type="bool" value="true"/>
+    <property name="glow" value="0.2,0.4;0.68,0.25"/>
+   </properties>
+  </object>
+  <object id="21" name="" type="prop" x="1382" y="426" width="19" height="16">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tq_lamp"/>
+    <property name="ph" type="float" value="150"/>
+    <property name="word" value="silk-lantern"/>
+    <property name="solid" type="bool" value="true"/>
+    <property name="glow" value="0.2,0.4;0.68,0.25"/>
+   </properties>
+  </object>
+  <object id="22" name="" type="prop" x="105" y="704" width="84" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tq_boat"/>
+    <property name="ph" type="float" value="44"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="wooden-boat"/>
+   </properties>
+  </object>
+  <object id="23" name="" type="tree" x="96" y="115" width="38" height="22">
+   <properties>
+    <property name="kind" value="tree"/>
+    <property name="variant" value="areca"/>
+   </properties>
+  </object>
+  <object id="24" name="" type="tree" x="435" y="115" width="38" height="22">
+   <properties>
+    <property name="kind" value="tree"/>
+    <property name="variant" value="areca"/>
+   </properties>
+  </object>
+  <object id="25" name="" type="tree" x="1126" y="115" width="38" height="22">
+   <properties>
+    <property name="kind" value="tree"/>
+    <property name="variant" value="areca"/>
+   </properties>
+  </object>
+  <object id="26" name="" type="tree" x="1395" y="109" width="38" height="22">
+   <properties>
+    <property name="kind" value="tree"/>
+    <property name="variant" value="banyan"/>
+   </properties>
+  </object>
+  <object id="27" name="" type="tree" x="1728" y="410" width="38" height="22">
+   <properties>
+    <property name="kind" value="tree"/>
+    <property name="variant" value="bougainvillea"/>
+   </properties>
+  </object>
+  <object id="28" name="" type="prop" x="256" y="426" width="77" height="22">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="draw" value="bench"/>
+    <property name="ph" type="float" value="40"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="29" name="" type="spot" x="0" y="512" width="768" height="64">
+   <properties>
+    <property name="kind" value="spot"/>
+    <property name="word" value="riverbank"/>
+   </properties>
+  </object>
+  <object id="30" name="" type="spot" x="1088" y="806" width="192" height="102">
+   <properties>
+    <property name="kind" value="spot"/>
+    <property name="word" value="reflection"/>
+   </properties>
+  </object>
+  <object id="31" name="david" type="npc" x="870" y="602" width="64" height="64">
+   <properties>
+    <property name="kind" value="npc"/>
+    <property name="facing" value="up"/>
+    <property name="until" value="all"/>
+   </properties>
+  </object>
+  <object id="32" name="q_cruise" type="finale" x="896" y="851" width="320" height="83">
+   <properties>
+    <property name="kind" value="finale"/>
+    <property name="act" value="release"/>
+   </properties>
+  </object>
+  <object id="33" name="tu" type="npc" x="960" y="486" width="64" height="64">
+   <properties>
+    <property name="kind" value="npc"/>
+    <property name="facing" value="down"/>
+   </properties>
+  </object>
+  <object id="34" name="tea_5" type="collectible" x="96" y="269" width="64" height="64">
+   <properties>
+    <property name="kind" value="collectible"/>
+    <property name="type" value="tea"/>
+   </properties>
+  </object>
+  <object id="35" name="tea_6" type="collectible" x="1760" y="320" width="64" height="64">
+   <properties>
+    <property name="kind" value="collectible"/>
+    <property name="type" value="tea"/>
+   </properties>
+  </object>
+  <object id="36" name="bk_relative" type="collectible" x="672" y="320" width="64" height="64">
+   <properties>
+    <property name="kind" value="collectible"/>
+    <property name="type" value="booklet"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -1,81 +1,90 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Immersion Town – Local Host Hội An 2026</title>
-    <meta name="description" content="Trò chơi nhập vai pixel: bạn là Local Host đón du khách ở Phố cổ Hội An, khám phá từ vựng quanh phố và giao tiếp tiếng Anh.">
+    <meta name="description" content="Trò chơi nhập vai góc nghiêng 3/4 phong cách tranh Đông Hồ: bạn là Local Host dạo phố cổ Hội An, khám phá từ vựng và giúp du khách bằng tiếng Anh.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800&family=Playfair+Display:wght@800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <!-- Chữ mặc định là tiếng Anh; js/game.js đổi sang tiếng Việt theo khoá data-i18n* khi bấm nút EN/VI -->
     <header class="topbar">
-        <a class="home-link" href="../index.html">← Trang chủ</a>
-        <div class="hud" aria-label="Tiến độ">
-            <span class="hud-item" title="Cultural Host XP">⭐ <b id="hud-xp">0</b><small> XP</small></span>
-            <span class="hud-item" title="Pin máy dịch câu (Phrase Translator). Nhặt Battery Pack hoặc sạc ở trạm năng lượng mặt trời.">🔋 <b id="hud-battery">3/5</b></span>
-            <span class="hud-item" title="Booklets ngữ pháp đã tìm">📘 <b id="hud-booklets">0/5</b></span>
-            <button id="btn-sound" class="hud-btn" type="button" aria-pressed="true" title="Bật/tắt tự đọc lời thoại">🔊</button>
+        <a class="home-link" href="../index.html" data-i18n="home">← Home</a>
+        <div class="hud" aria-label="Progress" data-i18n-aria="hud">
+            <div class="trada-widget dongho-panel" title="Trà Đá Helper: spend cups to translate a whole line or open a hint. Refill by finding iced teas, mastering Booklets, beating Bosses or visiting the iced-tea stall." data-i18n-title="teaTip">
+                <span class="trada-title">☕ Trà Đá Helper:</span>
+                <div class="trada-cups" id="tea-cups"></div>
+            </div>
+            <span class="hud-item dongho-panel" title="Cultural Host XP">⭐ <b id="hud-xp">0</b><small> XP</small></span>
+            <span class="hud-item dongho-panel" title="Grammar Booklets found" data-i18n-title="bookletsTip">📘 <b id="hud-booklets">0/5</b></span>
+            <span class="hud-item dongho-panel" title="Heritage Night gate lanterns: each completed mission lights one" data-i18n-title="lanternsTip">🏮 <b id="hud-lanterns">0/4</b></span>
+            <button id="btn-lang" class="hud-btn lang-btn dongho-panel" type="button" title="Switch instruction language (EN/VI)" data-i18n-title="langTip">EN</button>
+            <button id="btn-sound" class="hud-btn dongho-panel" type="button" aria-pressed="true" title="Turn voice-over on or off" data-i18n-title="soundTip">🔊</button>
         </div>
     </header>
 
     <main class="container">
-        <div class="game-head">
-            <h1>Immersion Town</h1>
-            <p>Bạn là <b>Local Host</b>, đại sứ hiếu khách của Phố cổ Hội An 2026. Đi dạo, chạm vào mọi thứ để khám phá từ vựng và giúp du khách bằng tiếng Anh.</p>
-        </div>
-
-        <section class="stage" aria-label="Trò chơi">
-            <div id="frame" class="frame">
-                <canvas id="world" aria-label="Bản đồ Hội An. Dùng phím mũi tên hoặc chạm để di chuyển, chạm vật thể để khám phá từ."></canvas>
-                <div id="map-banner" class="map-banner" aria-live="polite"></div>
-                <div id="toasts" class="toasts" aria-live="polite"></div>
-                <div id="word-card" class="word-card" role="dialog" aria-label="Thẻ từ vựng" hidden></div>
-                <div id="loading" class="loading">Đang tải Hội An…</div>
-                <div id="dialog" class="dialog" role="dialog" aria-label="Hội thoại" hidden></div>
+        <section class="stage" aria-label="Game" data-i18n-aria="game">
+            <div id="frame" class="parallax-viewport">
+                <div class="view">
+                    <canvas id="world" aria-label="Top-down map of Hoi An ancient town. Use the arrow keys or tap the ground to walk in 4 directions; tap sparkling things to look up words." data-i18n-aria="world"></canvas>
+                    <!-- Lớp 5: vân xơ giấy điệp cố định -->
+                    <div class="layer-paper-grain-overlay" aria-hidden="true"></div>
+                    <div id="zone-chip" class="zone-chip dongho-panel" aria-live="polite"></div>
+                    <div id="toasts" class="toasts" aria-live="polite"></div>
+                    <div id="paper-blur" class="paper-blur dongho-backdrop-blur" aria-hidden="true"></div>
+                    <div id="postcard" class="postcard" hidden></div>
+                    <div id="word-card" class="vocab-card dongho-panel" role="dialog" aria-label="Word lookup" data-i18n-aria="wordCard" hidden></div>
+                    <div class="touch-pad" aria-label="Touch controls" data-i18n-aria="pad">
+                        <div class="pad-dirs">
+                            <button class="pad-btn up" type="button" data-hold="up" aria-label="Walk up" data-i18n-aria="up">▲</button>
+                            <button class="pad-btn left" type="button" data-hold="left" aria-label="Walk left" data-i18n-aria="left">◄</button>
+                            <button class="pad-btn right" type="button" data-hold="right" aria-label="Walk right" data-i18n-aria="right">►</button>
+                            <button class="pad-btn down" type="button" data-hold="down" aria-label="Walk down" data-i18n-aria="down">▼</button>
+                        </div>
+                        <button id="btn-talk" class="pad-btn talk" type="button" aria-label="Talk or look up the nearest thing" data-i18n-aria="talk">💬</button>
+                    </div>
+                    <div id="title-screen" class="title-screen" hidden></div>
+                    <div id="loading" class="loading" data-i18n="loading">Loading Hoi An ancient town…</div>
+                </div>
+                <div id="dialog" class="dialogue-box dongho-panel" role="dialog" aria-label="Dialogue" data-i18n-aria="dialog" hidden></div>
             </div>
 
-            <nav class="toolbar" aria-label="Công cụ">
-                <button id="btn-quests" class="tool" type="button">🎯<span>Nhiệm vụ</span></button>
-                <button id="btn-words" class="tool" type="button">📒<span>Sổ từ</span></button>
-                <button id="btn-booklets" class="tool" type="button">📘<span>Booklets</span></button>
-                <button id="btn-boss" class="tool" type="button">⚔️<span>Boss</span><i class="badge"></i></button>
-                <button id="btn-profile" class="tool" type="button">👤<span>Hồ sơ</span></button>
-                <button id="btn-labels" class="tool" type="button" aria-pressed="true">🏷️<span>Nhãn từ</span></button>
+            <nav class="toolbar" aria-label="Tools" data-i18n-aria="tools">
+                <button id="btn-quests" class="tool dongho-panel" type="button">🎯<span data-i18n="quests">Missions</span></button>
+                <button id="btn-words" class="tool dongho-panel" type="button">📒<span data-i18n="words">Word Book</span></button>
+                <button id="btn-booklets" class="tool dongho-panel" type="button">📘<span>Booklets</span></button>
+                <button id="btn-boss" class="tool dongho-panel" type="button">⚔️<span>Boss</span><i class="badge"></i></button>
+                <button id="btn-profile" class="tool dongho-panel" type="button">👤<span data-i18n="profile">Profile</span></button>
+                <button id="btn-labels" class="tool dongho-panel" type="button" aria-pressed="true">🏷️<span data-i18n="labels">Labels</span></button>
             </nav>
-            <p class="controls-hint">
-                <b>Đi lại:</b> chạm mặt đường hoặc phím mũi tên/WASD ·
-                <b>Khám phá từ:</b> chạm vật thể lấp lánh ✦ ·
-                <b>Nhiệm vụ:</b> chạm du khách có dấu <span class="mark">!</span> ·
-                <b>Tương tác:</b> Space/Enter
+            <p class="controls-hint" data-i18n-html="hint">
+                <b>Walk:</b> arrow keys or W A S D (4 directions), or tap the ground ·
+                <b>Look up words:</b> tap sparkling things ✦ ·
+                <b>Missions:</b> walk up to visitors with a red <span class="seal">!</span> seal ·
+                <b>Interact:</b> Space/Enter
             </p>
-        </section>
-
-        <section class="legend" aria-label="Chú thích">
-            <span><i class="sw known"></i> Từ đã biết (Known)</span>
-            <span><i class="sw unknown"></i> Từ cần học (Unknown)</span>
-            <span><i class="sw seen"></i> Từ đã gặp</span>
-            <span>🔋 Battery Pack · 📘 Booklet · ⚡ Trạm sạc mặt trời (Phố Lồng Đèn)</span>
         </section>
     </main>
 
     <div id="sheet" class="sheet" hidden>
-        <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+        <div class="sheet-panel dongho-panel" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
             <div class="sheet-head">
                 <h2 id="sheet-title"></h2>
-                <button id="sheet-close" class="icon-btn" type="button" aria-label="Đóng">✕</button>
+                <button id="sheet-close" class="close-btn" type="button" aria-label="Close" data-i18n-aria="close">✕</button>
             </div>
             <div id="sheet-body" class="sheet-body"></div>
         </div>
     </div>
 
-    <script src="js/world.js" defer></script>
-    <script src="js/engine.js" defer></script>
     <script src="js/core.js" defer></script>
+    <script src="js/town.js" defer></script>
     <script src="js/game.js" defer></script>
 </body>
 

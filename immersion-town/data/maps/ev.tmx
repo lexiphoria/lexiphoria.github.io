@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="26" height="14" tilewidth="64" tileheight="64" infinite="0" nextlayerid="3" nextobjectid="57">
+ <properties>
+  <property name="zone" value="ev"/>
+  <property name="name" value="Bãi xe điện ngoại vi"/>
+  <property name="name_en" value="Outer EV Hub"/>
+  <property name="sub" value="Cửa ngõ xanh ngoài phố đi bộ"/>
+  <property name="sub_en" value="The green gateway outside the walking zone"/>
+  <property name="card" value="assets/scenes/ev_hub.webp"/>
+  <property name="light" value="day"/>
+ </properties>
+ <tileset firstgid="1" name="hoian_dongho_tileset_64x64" tilewidth="64" tileheight="64" tilecount="72" columns="8">
+  <image source="../../assets/tiles/hoian_dongho_grid_tileset_64x64.png" width="512" height="576"/>
+  <tile id="16"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="17"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="18"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="19"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="20"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="21"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="22"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="23"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="24"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="25"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="26"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="27"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="28"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="29"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="30"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="31"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="34"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+  <tile id="35"><properties><property name="collides" type="bool" value="true"/></properties></tile>
+ </tileset>
+ <layer id="1" name="Ground" width="26" height="14">
+  <data encoding="csv">
+35,35,35,35,35,35,35,35,33,33,33,33,33,33,33,33,33,33,33,33,34,34,34,34,34,34,
+36,36,36,36,36,36,36,36,2,2,2,2,2,2,2,2,2,2,2,2,33,33,33,33,33,33,
+35,35,35,35,35,35,35,35,2,2,2,2,2,2,2,2,2,2,2,2,33,33,33,33,33,33,
+36,36,36,36,36,36,36,36,2,3,2,3,2,3,2,3,2,3,2,2,33,33,33,33,33,33,
+35,35,35,35,35,35,35,35,2,3,2,3,2,3,2,3,2,3,2,2,33,33,33,33,33,33,
+33,33,33,33,33,33,33,33,2,3,2,3,2,3,2,3,2,3,2,2,33,33,33,33,33,33,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,4,1,4,1,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,4,1,4,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,4,1,4,1,
+9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,
+35,35,36,35,35,36,35,35,36,35,35,36,35,37,10,10,10,10,10,10,10,10,34,34,34,34,
+35,36,35,35,36,35,35,36,35,35,36,35,35,37,10,10,10,10,10,10,10,10,34,34,34,34,
+36,35,35,36,35,35,36,35,35,36,35,35,36,37,10,10,10,10,10,10,10,10,34,34,34,34,
+35,35,36,35,35,36,35,35,36,35,35,36,35,37,10,10,10,10,10,10,10,10,34,34,34,34
+</data>
+ </layer>
+ <objectgroup id="2" name="Objects">
+  <object id="1" name="default" type="spawn" x="64" y="448" width="64" height="64">
+   <properties>
+    <property name="kind" value="spawn"/>
+    <property name="facing" value="right"/>
+   </properties>
+  </object>
+  <object id="2" name="to_street" type="exit" x="1600" y="384" width="64" height="192">
+   <properties>
+    <property name="kind" value="exit"/>
+    <property name="to" value="street"/>
+    <property name="sx" type="float" value="1.5"/>
+    <property name="sy" type="float" value="9"/>
+    <property name="facing" value="right"/>
+   </properties>
+  </object>
+  <object id="3" name="" type="prop" x="589" y="99" width="38" height="29">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="charger_green"/>
+    <property name="ph" type="float" value="104"/>
+    <property name="word" value="ev-charging-station"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="4" name="" type="prop" x="717" y="99" width="38" height="29">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="charger_white"/>
+    <property name="ph" type="float" value="104"/>
+    <property name="word" value="ev-charging-station"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="5" name="" type="prop" x="845" y="99" width="38" height="29">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="evCharger"/>
+    <property name="ph" type="float" value="104"/>
+    <property name="word" value="ev-charging-station"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="6" name="" type="prop" x="566" y="157" width="238" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="canopy_left"/>
+    <property name="ph" type="float" value="172"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="solar-canopy"/>
+   </properties>
+  </object>
+  <object id="7" name="" type="prop" x="785" y="157" width="186" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="canopy_right"/>
+    <property name="ph" type="float" value="171"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="solar-canopy"/>
+   </properties>
+  </object>
+  <object id="8" name="" type="prop" x="927" y="112" width="34" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="charger_box"/>
+    <property name="ph" type="float" value="64"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="solar-powered-outlet"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="9" name="" type="prop" x="992" y="230" width="64" height="26">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="scooter"/>
+    <property name="ph" type="float" value="74"/>
+    <property name="word" value="electric-scooter"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="10" name="" type="prop" x="1126" y="230" width="64" height="26">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="scooter"/>
+    <property name="ph" type="float" value="74"/>
+    <property name="word" value="electric-scooter"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="11" name="" type="prop" x="531" y="166" width="26" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="draw" value="parkingSign"/>
+    <property name="ph" type="float" value="96"/>
+    <property name="word" value="parking-space"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="12" name="" type="prop" x="1370" y="355" width="38" height="26">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="pedSign"/>
+    <property name="ph" type="float" value="118"/>
+    <property name="word" value="pedestrian-zone"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="13" name="" type="prop" x="1430" y="390" width="19" height="16">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="draw" value="bollard"/>
+    <property name="ph" type="float" value="40"/>
+    <property name="solid" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="14" name="" type="prop" x="1430" y="474" width="19" height="16">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="draw" value="bollard"/>
+    <property name="ph" type="float" value="40"/>
+    <property name="solid" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="15" name="" type="prop" x="1430" y="550" width="19" height="16">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="draw" value="bollard"/>
+    <property name="ph" type="float" value="40"/>
+    <property name="solid" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="16" name="" type="prop" x="339" y="355" width="32" height="22">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="draw" value="shuttleStop"/>
+    <property name="ph" type="float" value="126"/>
+    <property name="word" value="electric-shuttle"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="17" name="" type="prop" x="230" y="358" width="77" height="22">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="draw" value="bench"/>
+    <property name="ph" type="float" value="40"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="18" name="" type="prop" x="960" y="666" width="230" height="77">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tq_hut"/>
+    <property name="ph" type="float" value="212"/>
+    <property name="word" value="lotus-tea"/>
+    <property name="solid" type="bool" value="true"/>
+    <property name="label" value="CAFE ĐỒNG LÚA · OCOP"/>
+    <property name="labelAt" value="0.3,0.6"/>
+    <property name="glow" value="0.3,0.55"/>
+   </properties>
+  </object>
+  <object id="19" name="" type="prop" x="986" y="787" width="70" height="32">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="draw" value="table"/>
+    <property name="ph" type="float" value="46"/>
+    <property name="solid" type="bool" value="true"/>
+    <property name="on" value="[{&quot;img&quot;: &quot;ocopTea&quot;, &quot;h&quot;: 52, &quot;dx&quot;: 0, &quot;word&quot;: &quot;ocop-product&quot;, &quot;spots&quot;: [[&quot;traceability&quot;, [130, 15, 80, 85]]]}]"/>
+   </properties>
+  </object>
+  <object id="20" name="" type="prop" x="1126" y="787" width="70" height="32">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="draw" value="table"/>
+    <property name="ph" type="float" value="46"/>
+    <property name="solid" type="bool" value="true"/>
+    <property name="on" value="[{&quot;img&quot;: &quot;solarOutlet&quot;, &quot;h&quot;: 50, &quot;dx&quot;: 0, &quot;word&quot;: &quot;solar-powered-outlet&quot;}]"/>
+   </properties>
+  </object>
+  <object id="21" name="" type="tree" x="576" y="38" width="38" height="22">
+   <properties>
+    <property name="kind" value="tree"/>
+    <property name="variant" value="bamboo"/>
+   </properties>
+  </object>
+  <object id="22" name="" type="tree" x="768" y="38" width="38" height="22">
+   <properties>
+    <property name="kind" value="tree"/>
+    <property name="variant" value="bamboo"/>
+   </properties>
+  </object>
+  <object id="23" name="" type="tree" x="960" y="38" width="38" height="22">
+   <properties>
+    <property name="kind" value="tree"/>
+    <property name="variant" value="bamboo"/>
+   </properties>
+  </object>
+  <object id="24" name="" type="tree" x="1197" y="38" width="38" height="22">
+   <properties>
+    <property name="kind" value="tree"/>
+    <property name="variant" value="bamboo"/>
+   </properties>
+  </object>
+  <object id="25" name="" type="tree" x="1472" y="166" width="38" height="22">
+   <properties>
+    <property name="kind" value="tree"/>
+    <property name="variant" value="banyan"/>
+   </properties>
+  </object>
+  <object id="26" name="" type="tree" x="1357" y="685" width="38" height="22">
+   <properties>
+    <property name="kind" value="tree"/>
+    <property name="variant" value="areca"/>
+   </properties>
+  </object>
+  <object id="27" name="" type="tree" x="1549" y="787" width="38" height="22">
+   <properties>
+    <property name="kind" value="tree"/>
+    <property name="variant" value="bougainvillea"/>
+   </properties>
+  </object>
+  <object id="28" name="" type="tree" x="294" y="602" width="38" height="22">
+   <properties>
+    <property name="kind" value="tree"/>
+    <property name="variant" value="areca"/>
+   </properties>
+  </object>
+  <object id="29" name="" type="tree" x="666" y="602" width="38" height="22">
+   <properties>
+    <property name="kind" value="tree"/>
+    <property name="variant" value="areca"/>
+   </properties>
+  </object>
+  <object id="30" name="" type="prop" x="20" y="301" width="139" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="px_fence"/>
+    <property name="ph" type="float" value="46"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="fence"/>
+   </properties>
+  </object>
+  <object id="31" name="" type="prop" x="376" y="301" width="139" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="px_fence"/>
+    <property name="ph" type="float" value="46"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="fence"/>
+   </properties>
+  </object>
+  <object id="32" name="" type="prop" x="27" y="624" width="139" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="px_fence"/>
+    <property name="ph" type="float" value="46"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="fence"/>
+   </properties>
+  </object>
+  <object id="33" name="" type="prop" x="443" y="624" width="139" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="px_fence"/>
+    <property name="ph" type="float" value="46"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="fence"/>
+   </properties>
+  </object>
+  <object id="34" name="" type="prop" x="743" y="653" width="108" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="px_banana"/>
+    <property name="ph" type="float" value="150"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="banana-tree"/>
+   </properties>
+  </object>
+  <object id="35" name="" type="prop" x="1259" y="61" width="138" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="px_banana2"/>
+    <property name="ph" type="float" value="128"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="banana-tree"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="36" name="" type="prop" x="1576" y="336" width="74" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="px_bush"/>
+    <property name="ph" type="float" value="44"/>
+    <property name="quiet" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="37" name="" type="prop" x="909" y="723" width="45" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="pot_banana_red"/>
+    <property name="ph" type="float" value="72"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="potted-plant"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="38" name="" type="prop" x="1192" y="723" width="41" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="pot_flower_blue"/>
+    <property name="ph" type="float" value="58"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="potted-plant"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="39" name="" type="prop" x="897" y="858" width="36" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="planter_box"/>
+    <property name="ph" type="float" value="56"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="potted-plant"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="40" name="" type="prop" x="1347" y="854" width="45" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="bonsai"/>
+    <property name="ph" type="float" value="58"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="bonsai"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="41" name="" type="prop" x="1230" y="682" width="50" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tq_bins"/>
+    <property name="ph" type="float" value="48"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="bin"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="42" name="" type="prop" x="1453" y="723" width="89" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tq_veg"/>
+    <property name="ph" type="float" value="64"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="herbs"/>
+   </properties>
+  </object>
+  <object id="43" name="" type="prop" x="1432" y="845" width="42" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tq_herbs"/>
+    <property name="ph" type="float" value="50"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="herbs"/>
+   </properties>
+  </object>
+  <object id="44" name="" type="prop" x="300" y="787" width="117" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tq_buffalo"/>
+    <property name="ph" type="float" value="72"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="water-buffalo"/>
+   </properties>
+  </object>
+  <object id="45" name="" type="prop" x="399" y="413" width="73" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tq_cart"/>
+    <property name="ph" type="float" value="76"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="electric-shuttle"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="46" name="" type="prop" x="607" y="256" width="60" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tq_ebike"/>
+    <property name="ph" type="float" value="62"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="electric-scooter"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="47" name="" type="spot" x="0" y="0" width="512" height="320">
+   <properties>
+    <property name="kind" value="spot"/>
+    <property name="word" value="rice-paddy"/>
+   </properties>
+  </object>
+  <object id="48" name="" type="spot" x="0" y="640" width="832" height="256">
+   <properties>
+    <property name="kind" value="spot"/>
+    <property name="word" value="rice-paddy"/>
+   </properties>
+  </object>
+  <object id="49" name="ambassador" type="npc" x="141" y="442" width="64" height="64">
+   <properties>
+    <property name="kind" value="npc"/>
+    <property name="facing" value="down"/>
+    <property name="until" value="q_ev"/>
+   </properties>
+  </object>
+  <object id="50" name="mark" type="npc" x="768" y="294" width="64" height="64">
+   <properties>
+    <property name="kind" value="npc"/>
+    <property name="facing" value="down"/>
+    <property name="until" value="q_ev"/>
+   </properties>
+  </object>
+  <object id="51" name="mark" type="npc" x="1059" y="765" width="64" height="64">
+   <properties>
+    <property name="kind" value="npc"/>
+    <property name="facing" value="down"/>
+    <property name="after" value="q_ev"/>
+    <property name="until" value="all"/>
+   </properties>
+  </object>
+  <object id="52" name="q_ev" type="finale" x="877" y="90" width="122" height="134">
+   <properties>
+    <property name="kind" value="finale"/>
+    <property name="act" value="charge"/>
+   </properties>
+  </object>
+  <object id="53" name="hoa" type="npc" x="1267" y="768" width="64" height="64">
+   <properties>
+    <property name="kind" value="npc"/>
+    <property name="facing" value="down"/>
+   </properties>
+  </object>
+  <object id="54" name="tea_1" type="collectible" x="192" y="518" width="64" height="64">
+   <properties>
+    <property name="kind" value="collectible"/>
+    <property name="type" value="tea"/>
+   </properties>
+  </object>
+  <object id="55" name="tea_2" type="collectible" x="1510" y="294" width="64" height="64">
+   <properties>
+    <property name="kind" value="collectible"/>
+    <property name="type" value="tea"/>
+   </properties>
+  </object>
+  <object id="56" name="bk_suggest" type="collectible" x="922" y="858" width="64" height="64">
+   <properties>
+    <property name="kind" value="collectible"/>
+    <property name="type" value="booklet"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -309,7 +309,7 @@ def festival_map():
     # Nhà cổ quanh quảng trường (tranh 3/4 cùng góc nhìn với Hội An Quán)
     m.obj('building', 2.0, 3.6, 4.3, 1.4, name='nha_co_2_tang', sprite='tq_house2', word='ancient-house')
     m.obj('building', 6.75, 4.0, 2.2, 1.0, name='hien_nha_co', sprite='tq_porch', word='wooden-shutters')
-    m.obj('building', 18.1, 3.9, 3.9, 1.1, name='tiem_cao_lau', sprite='tq_noodle', word='cao-lau')
+    m.obj('building', 18.1, 3.9, 3.9, 1.1, name='tiem_cao_lau', sprite='tq_noodle', word='noodle-shop')
     m.obj('building', 22.3, 3.6, 4.3, 1.4, name='nha_co_2_tang_phai', sprite='tq_house2', flip=True, word='ancient-house')
     deco(m, 'tq_qr', 12.75, 7.75, 96, word='audio-guide', solid=True)
     # Cổng Tam Quan ở lối vào phía tây (từ phố đi bộ), đi qua thì khuất dưới vòm

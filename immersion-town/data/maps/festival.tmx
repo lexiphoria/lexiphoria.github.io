@@ -101,7 +101,7 @@
    <properties>
     <property name="kind" value="building"/>
     <property name="sprite" value="tq_noodle"/>
-    <property name="word" value="cao-lau"/>
+    <property name="word" value="noodle-shop"/>
    </properties>
   </object>
   <object id="8" name="nha_co_2_tang_phai" type="building" x="1427" y="230" width="275" height="90">

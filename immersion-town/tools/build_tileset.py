@@ -9,6 +9,8 @@ Thứ tự ô (id):
   8 gạch đất nung · 9–15 biến thể · 16 nước sông Hoài · 17 nước có lá sen · 18 kè đá bờ sông · 19–23 nước biến thể
   24 tường vàng di sản · 25–31 biến thể · 32 cỏ rêu · 33 cỏ có hoa · 34 ruộng lúa xanh · 35 ruộng lúa chín
   36 đường đất · 37 sàn gỗ bến thuyền · 38 sàn gỗ biến thể · 39 cát
+  40–42 lòng đường nhựa xám ấm · 43 lòng đường có bóng bó vỉa ở mép trên
+  44–46 vỉa hè đá phiến · 47 vỉa hè có bó vỉa ở mép dưới · 48 vỉa hè có bó vỉa ở mép trên · 49–50 đá lát quảng trường
   56–71 hình thu nhỏ vật thể (để xem trước trong Tiled)
 Chạy lại:  python immersion-town/tools/build_tileset.py
 """
@@ -29,6 +31,12 @@ PAPER = (245, 230, 200)
 
 def jitter(c, rnd, amt=8):
     return tuple(max(0, min(255, v + rnd.randint(-amt, amt))) for v in c)
+
+
+def shade(c, rnd, amt=8):
+    """Đổi độ sáng đều cả 3 kênh (không làm lệch sắc màu như jitter)."""
+    k = rnd.randint(-amt, amt)
+    return tuple(max(0, min(255, v + k)) for v in c)
 
 
 def speckle(d, rnd, box, color, n):
@@ -58,15 +66,94 @@ def stone_tile(seed):
     return im
 
 
-def asphalt_tile(seed, line=False):
+ROAD = (157, 142, 121)        # nhựa đường xám ấm như tranh bãi sạc xe điện phố cổ
+ROAD_DARK = (140, 126, 106)
+ROAD_LIGHT = (172, 158, 136)
+SLABS = [(116, 104, 89), (110, 99, 86), (122, 110, 94), (106, 98, 86)]   # đá phiến vỉa hè xám nâu
+PLAZA = [(152, 140, 121), (158, 146, 126), (146, 135, 117)]             # đá lát quảng trường, sáng hơn
+KERB_TOP = (156, 144, 124)
+KERB_FACE = (92, 84, 73)
+
+
+def asphalt_tile(seed, line=False, cracks=1, shade=False):
+    """Nhựa đường: nền xám ấm, lấm tấm sạn, vài nét mực ngắn làm vết nứt.
+    line: vạch sơn ô đỗ ở mép trái; shade: dải tối ở mép trên (bóng bó vỉa hè phía bắc)."""
     rnd = random.Random(seed)
-    im = Image.new('RGB', (T, T), (95, 91, 85))
+    im = Image.new('RGB', (T, T), ROAD)
     d = ImageDraw.Draw(im)
-    speckle(d, rnd, (0, 0, T, T), (80, 77, 72), 40)
-    speckle(d, rnd, (0, 0, T, T), (112, 108, 101), 30)
+    speckle(d, rnd, (0, 0, T, T), ROAD_DARK, 46)
+    speckle(d, rnd, (0, 0, T, T), ROAD_LIGHT, 34)
+    for _ in range(cracks):  # vết nứt: đường gấp khúc mảnh
+        x, y = rnd.randint(8, 44), rnd.randint(16 if shade else 8, 54)
+        pts = [(x, y)]
+        for _ in range(3):
+            x, y = x + rnd.randint(3, 7), y + rnd.randint(-3, 3)
+            pts.append((x, y))
+        d.line(pts, fill=(96, 86, 72), width=1)
+    if shade:
+        d.rectangle([0, 0, T, 9], fill=(117, 107, 94))
+        for x in range(0, T, 8):
+            d.line([x, 10, x + 4, 10 + rnd.randint(0, 2)], fill=(117, 107, 94), width=2)
     if line:
-        d.rectangle([0, 0, 4, T], fill=PAPER)
+        d.rectangle([0, 0, 4, T], fill=(236, 228, 210))
         d.line([5, 0, 5, T], fill=INK, width=1)
+    return im
+
+
+def slab_row(d, rnd, y0, y1, colors, cuts_pool, moss=0.15):
+    """Một hàng đá phiến từ y0 tới y1: đường mạch mực, viền sáng phía trên, đôi vết nứt và rêu."""
+    cuts = rnd.choice(cuts_pool)
+    xs = [0] + cuts + [T]
+    for i in range(len(xs) - 1):
+        x0, x1 = xs[i], xs[i + 1]
+        col = shade(rnd.choice(colors), rnd, 6)
+        d.rectangle([x0, y0, x1, y1], fill=col)
+        d.line([x0 + 3, y0 + 2, x1 - 4, y0 + 2], fill=tuple(min(255, v + 26) for v in col), width=1)
+        speckle(d, rnd, (x0 + 2, y0 + 4, x1 - 2, y1 - 2), tuple(v - 14 for v in col), 3)
+        if rnd.random() < moss:
+            mx = rnd.randint(x0 + 2, max(x0 + 3, x1 - 12))
+            d.ellipse([mx, y1 - 7, mx + 10, y1 - 2], fill=(96, 110, 66))
+        if rnd.random() < 0.15 and x1 - x0 > 18:
+            cx = rnd.randint(x0 + 6, x1 - 8)
+            d.line([cx, y0 + 5, cx + rnd.randint(-4, 4), y0 + (y1 - y0) // 2], fill=(70, 62, 54), width=1)
+        d.line([x0, y0, x0, y1], fill=INK, width=2)
+    d.line([0, y0, T, y0], fill=INK, width=2)
+
+
+def slab_tile(seed, kerb=None, plaza=False):
+    """Vỉa hè lát đá phiến chữ nhật so le (tranh mẫu phố cổ).
+    kerb='s': bó vỉa ở mép dưới, thấy cả mặt đứng (vỉa hè nằm phía bắc lòng đường);
+    kerb='n': bó vỉa ở mép trên (vỉa hè nằm phía nam lòng đường);
+    plaza: đá lát quảng trường, tấm vuông lớn và sáng hơn."""
+    rnd = random.Random(seed)
+    im = Image.new('RGB', (T, T), (70, 64, 56))
+    d = ImageDraw.Draw(im)
+    top, bottom = (10, T) if kerb == 'n' else (0, 46 if kerb == 's' else T)
+    if plaza:
+        rows = [(top, top + (bottom - top) // 2), (top + (bottom - top) // 2, bottom)]
+        pool = [[32], [28], [36]]
+        colors = PLAZA
+    else:
+        h = (bottom - top) / 2
+        rows = [(round(top + h * i), round(top + h * (i + 1))) for i in range(2)]
+        pool = [[24], [40], [30], [20, 46], [36]]
+        colors = SLABS
+    for y0, y1 in rows:
+        slab_row(d, rnd, y0, y1, colors, pool, moss=0.04 if plaza else 0.08)
+    if kerb == 's':
+        d.rectangle([0, 46, T, 53], fill=KERB_TOP)
+        d.rectangle([0, 54, T, T], fill=KERB_FACE)
+        d.line([0, 46, T, 46], fill=INK, width=2)
+        d.line([0, 54, T, 54], fill=INK, width=1)
+        d.line([0, T - 1, T, T - 1], fill=INK, width=2)
+        for x in (0, 32):
+            d.line([x, 46, x, T], fill=INK, width=1)
+    elif kerb == 'n':
+        d.rectangle([0, 0, T, 9], fill=KERB_TOP)
+        d.line([0, 0, T, 0], fill=INK, width=2)
+        d.line([0, 9, T, 9], fill=INK, width=2)
+        for x in (0, 32):
+            d.line([x, 0, x, 9], fill=INK, width=1)
     return im
 
 
@@ -225,6 +312,18 @@ def main():
     tiles[37] = wood_tile(55)
     tiles[38] = wood_tile(56)
     tiles[39] = sand_tile(57)
+    # Lòng đường nhựa, vỉa hè đá phiến và bó vỉa (theo tranh mẫu bãi sạc xe điện phố cổ, 08/10/2026)
+    tiles[40] = asphalt_tile(60)
+    tiles[41] = asphalt_tile(61, cracks=0)
+    tiles[42] = asphalt_tile(62, cracks=0)
+    tiles[43] = asphalt_tile(63, shade=True, cracks=0)
+    tiles[44] = slab_tile(64)
+    tiles[45] = slab_tile(65)
+    tiles[46] = slab_tile(66)
+    tiles[47] = slab_tile(67, kerb='s')
+    tiles[48] = slab_tile(68, kerb='n')
+    tiles[49] = slab_tile(69, plaza=True)
+    tiles[50] = slab_tile(70, plaza=True)
     for i, name in zip(range(56, 64), ['ev_charger', 'pedestrian_sign', 'lotus_lantern', 'scooter', 'solar_outlet', 'ocop_tea', 'silk_roll', 'iced_tea']):
         tiles[i] = item_thumb(name)
     sheet = Image.new('RGB', (8 * T, 9 * T), PAPER)

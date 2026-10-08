@@ -27,6 +27,10 @@ WATER, WATER_LOTUS, EMBANK = 16, 17, 18
 WALL = 24
 GRASS, GRASS_FLOWER, PADDY, PADDY_RIPE, DIRT, WOOD, WOOD2, SAND = 32, 33, 34, 35, 36, 37, 38, 39
 COLLIDES = list(range(16, 24)) + list(range(24, 32)) + [34, 35]
+# Mặt đường theo tranh mẫu phố cổ (08/10/2026): lòng đường nhựa xám ấm, vỉa hè đá phiến có bó vỉa, quảng trường lát đá
+ROAD1, ROAD2, ROAD3, ROAD_SHADE = 40, 41, 42, 43
+SLAB1, SLAB2, SLAB3, CURB_S, CURB_N = 44, 45, 46, 47, 48
+PLAZA1, PLAZA2 = 49, 50
 
 
 class Map:
@@ -81,6 +85,9 @@ class Map:
 
 
 checker = lambda a, b: (lambda i, j: a if (i + j) % 2 else b)  # noqa: E731
+road = lambda i, j: (ROAD1, ROAD2, ROAD3, ROAD2, ROAD3, ROAD2, ROAD3)[(i * 5 + j * 3) % 7]  # noqa: E731  (ít ô có vết nứt)
+slab = lambda i, j: (SLAB1, SLAB2, SLAB3)[(i * 2 + j) % 3]  # noqa: E731
+plaza = lambda i, j: PLAZA1 if (i * 3 + j) % 2 else PLAZA2  # noqa: E731
 DECO = ROOT / 'assets' / 'deco'
 
 
@@ -135,11 +142,11 @@ def ev_map():
     for x in (9, 11, 13, 15, 17):
         m.rect(x, 3, 1, 3, ASPH_LINE)
     m.rect(0, 6, 22, 3, ASPH)
-    m.rect(22, 6, 4, 3, checker(PAVE, PAVE2))
-    m.rect(0, 9, 26, 1, BRICK)
+    m.rect(22, 6, 4, 3, slab)
+    m.rect(0, 9, 26, 1, CURB_N)
     m.rect(0, 10, 13, 4, lambda i, j: PADDY if (i + j) % 3 else PADDY_RIPE)
     m.rect(13, 10, 1, 4, DIRT)
-    m.rect(14, 10, 8, 4, BRICK2)
+    m.rect(14, 10, 8, 4, plaza)
     m.rect(22, 10, 4, 4, GRASS_FLOWER)
     m.rect(20, 0, 6, 1, GRASS_FLOWER)
 
@@ -206,17 +213,20 @@ def ev_map():
 
 
 def street_map():
-    m = Map('street', 56, 16, BRICK, {'zone': 'street', 'name': 'Phố đi bộ', 'name_en': 'Walking Street', 'sub': 'Lõi di sản: tiệm may, quà OCOP, nhà cổ, xưởng đèn lồng và dãy hàng quán bánh mì, cao lầu, cơm gà, cà phê', 'sub_en': 'The heritage core: tailor shop, OCOP gifts, ancient houses, a lantern workshop and a row of bánh mì, cao lầu, chicken rice and coffee shops', 'card': 'assets/scenes/street.webp', 'light': 'day'})
+    m = Map('street', 56, 16, GRASS, {'zone': 'street', 'name': 'Phố đi bộ', 'name_en': 'Walking Street', 'sub': 'Lõi di sản: tiệm may, quà OCOP, nhà cổ, xưởng đèn lồng và dãy hàng quán bánh mì, cao lầu, cơm gà, cà phê', 'sub_en': 'The heritage core: tailor shop, OCOP gifts, ancient houses, a lantern workshop and a row of bánh mì, cao lầu, chicken rice and coffee shops', 'card': 'assets/scenes/street.webp', 'light': 'day'})
     m.rect(0, 0, 56, 2, lambda i, j: GRASS_FLOWER if (i * 7 + j) % 5 == 0 else GRASS)
+    m.rect(0, 2, 56, 6, lambda i, j: GRASS_FLOWER if (i * 7 + j) % 5 == 0 else GRASS)   # vườn sau dãy nhà
     for x in (0, 6, 7, 13, 19, 25, 31, 37, 43, 49, 55):
-        m.rect(x, 2, 1, 6, checker(PAVE, PAVE2))
-    m.rect(0, 8, 56, 3, checker(PAVE, PAVE2))
-    m.rect(0, 11, 56, 1, BRICK2)
+        m.rect(x, 2, 1, 6, slab)       # ngõ giữa các nhà lát đá phiến, dẫn ra vườn sau
+    m.rect(0, 8, 56, 1, CURB_S)        # vỉa hè trước cửa nhà, bó vỉa ở mép dưới
+    m.rect(0, 9, 56, 1, ROAD_SHADE)    # lòng đường nhựa (dải bóng bó vỉa)
+    m.rect(0, 10, 56, 1, road)
+    m.rect(0, 11, 56, 1, CURB_N)       # vỉa hè phía vườn
     m.rect(0, 12, 56, 4, lambda i, j: GRASS_FLOWER if (i * 3 + j) % 7 == 0 else GRASS)
-    m.rect(15, 12, 2, 4, checker(PAVE, PAVE2))
-    m.rect(2, 13, 11, 1, BRICK)
-    m.rect(19, 13, 11, 1, BRICK)
-    m.rect(33, 13, 21, 1, BRICK)
+    m.rect(15, 12, 2, 4, slab)
+    m.rect(2, 13, 11, 1, slab)
+    m.rect(19, 13, 11, 1, slab)
+    m.rect(33, 13, 21, 1, slab)
 
     m.obj('spawn', 1.5, 9, name='default', facing='right')
     m.obj('exit', 0, 8, 1, 3, name='to_ev', to='ev', sx=23.5, sy=7, facing='left')
@@ -298,16 +308,17 @@ def street_map():
 
 def river_map():
     m = Map('river', 30, 16, PAVE, {'zone': 'river', 'name': 'Bến sông Hoài', 'name_en': 'Hoai River Pier', 'sub': 'Chiều tà bên bến hoa đăng và Chùa Cầu', 'sub_en': 'Sunset at the flower-lantern pier and the Japanese Covered Bridge', 'card': 'assets/scenes/river.webp', 'light': 'dusk'})
-    m.rect(0, 0, 24, 2, BRICK)
-    m.rect(0, 2, 24, 5, checker(PAVE, PAVE2))
-    m.rect(0, 2, 24, 1, GRASS)
+    m.rect(0, 0, 24, 2, road)          # đường Bạch Đằng ven sông
+    m.rect(0, 2, 24, 1, CURB_N)
+    m.rect(0, 3, 24, 4, slab)          # đường dạo ven sông lát đá phiến
     m.rect(0, 7, 30, 1, GRASS)
     m.rect(0, 8, 30, 1, EMBANK)
     m.rect(0, 9, 30, 7, lambda i, j: WATER_LOTUS if (i * 5 + j * 3) % 17 == 0 else WATER)
     m.rect(24, 0, 2, 9, WATER)
     m.rect(24, 3, 2, 3, WOOD2)
-    m.rect(26, 0, 4, 2, BRICK)
-    m.rect(26, 2, 4, 5, checker(PAVE, PAVE2))
+    m.rect(26, 0, 4, 2, road)
+    m.rect(26, 2, 4, 1, CURB_N)
+    m.rect(26, 3, 4, 4, slab)
     m.rect(12, 7, 4, 6, WOOD)
 
     m.obj('spawn', 15, 1.2, name='default', facing='down')
@@ -351,14 +362,19 @@ def river_map():
 
 
 def festival_map():
-    m = Map('festival', 28, 14, BRICK, {'zone': 'festival', 'name': 'Quảng trường Hội An Quán', 'name_en': 'Assembly Hall Square',
+    m = Map('festival', 28, 14, PLAZA1, {'zone': 'festival', 'name': 'Quảng trường Hội An Quán', 'name_en': 'Assembly Hall Square',
                                         'sub': 'Hội An Quán (đấu Boss) và quầy Trà Đá. Tối nay nơi đây có Đêm hội di sản', 'sub_en': 'Hoi An Assembly Hall (Boss arena) and the iced-tea stall. Tonight: the Heritage Night',
                                         'name_night': 'Đêm hội di sản', 'name_night_en': 'Heritage Night',
                                         'sub_night': 'Lễ trao danh hiệu Local Host dưới ánh đèn lồng', 'sub_night_en': 'The Local Host award ceremony under the lanterns',
                                         'card': 'assets/scenes/festival.webp', 'light': 'night'})
     m.rect(0, 0, 28, 3, lambda i, j: GRASS_FLOWER if (i + j) % 6 == 0 else GRASS)
-    m.rect(0, 8, 28, 3, checker(PAVE, PAVE2))
-    m.rect(12, 11, 4, 3, checker(PAVE, PAVE2))
+    m.rect(0, 3, 28, 4, plaza)         # sân lát đá trước dãy nhà và Hội An Quán
+    m.rect(0, 7, 28, 1, CURB_S)
+    m.rect(0, 8, 28, 1, ROAD_SHADE)    # đường phố nối từ phố đi bộ chạy ngang quảng trường
+    m.rect(0, 9, 28, 2, road)
+    m.rect(0, 11, 28, 3, plaza)
+    m.rect(0, 11, 12, 1, CURB_N)
+    m.rect(16, 11, 12, 1, CURB_N)
 
     m.obj('spawn', 1.5, 9, name='default', facing='right')
     m.obj('exit', 0, 8, 1, 3, name='to_street', to='street', sx=53.6, sy=9, facing='left')

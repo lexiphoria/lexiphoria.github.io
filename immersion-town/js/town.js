@@ -18,7 +18,7 @@
   const CHAR_H = 124;    // chiều cao vẽ nhân vật chính
 
   const IMAGES = {
-    tiles: 'assets/tiles/hoian_dongho_grid_tileset_64x64.png',
+    tiles: 'assets/tiles/hoian_dongho_grid_tileset_64x64.png?v=20261008b',
     fTailor: 'assets/facades/tailor.webp',
     fWorkshop: 'assets/facades/workshop.webp',
     fHall: 'assets/facades/hoi_an_quan.webp',

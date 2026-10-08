@@ -178,3 +178,32 @@ def contact_sheet(images, path, cols=6, cw=260, ch=260, bg=(36, 70, 60)):
         sheet.paste(t, (x, y), t)
         d.text((x, y + ch - 22), name, fill=(255, 255, 255))
     sheet.save(path, quality=88)
+
+
+def grabcut(sheet, rect, fg_rects=(), bg_below=None):
+    """Tách vật khỏi tranh cảnh (nền không phẳng) bằng GrabCut của OpenCV.
+    rect: khung chứa vật; fg_rects: các khung chắc chắn là vật (bánh xe, đuôi xe) để GrabCut không cắt hụt;
+    bg_below: từ hàng y này trở xuống, điểm có màu gạch lát (bão hoà vừa, không quá tối) coi là nền."""
+    import cv2
+    rgb = np.asarray(sheet.convert('RGB'))
+    bgr = cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR)
+    mask = np.full(rgb.shape[:2], cv2.GC_BGD, np.uint8)
+    x0, y0, x1, y1 = rect
+    mask[y0:y1, x0:x1] = cv2.GC_PR_FGD
+    if bg_below is not None:
+        hsv_ = cv2.cvtColor(bgr, cv2.COLOR_BGR2HSV)
+        pave = (np.arange(rgb.shape[0])[:, None] > bg_below) & (hsv_[..., 1] > 30) & (hsv_[..., 2] > 70) & (hsv_[..., 2] < 200)
+        mask[pave & (mask == cv2.GC_PR_FGD)] = cv2.GC_BGD
+    for fx0, fy0, fx1, fy1 in fg_rects:
+        mask[fy0:fy1, fx0:fx1] = cv2.GC_FGD
+    bgd, fgd = np.zeros((1, 65), np.float64), np.zeros((1, 65), np.float64)
+    cv2.grabCut(bgr, mask, None, bgd, fgd, 8, cv2.GC_INIT_WITH_MASK)
+    fg = (mask == cv2.GC_FGD) | (mask == cv2.GC_PR_FGD)
+    lab, n = ndimage.label(fg)
+    if n > 1:
+        sizes = ndimage.sum(np.ones_like(lab), lab, index=np.arange(1, n + 1))
+        fg = lab == (np.argmax(sizes) + 1)
+    fg = ndimage.binary_opening(fg, np.ones((3, 3)))
+    alpha = np.clip(ndimage.gaussian_filter(fg.astype(float), 0.7), 0, 1)
+    img = Image.fromarray(np.dstack([rgb, (alpha * 255).astype(np.uint8)]), 'RGBA')
+    return img.crop(img.getbbox())

@@ -1,6 +1,6 @@
 """Tách công trình nhìn thẳng, hàng quán, khách tham quan và chi tiết mới (tờ ngày 08/10/2026 trong Game Asset).
 
-  assets/deco/   nhà và vật: hàng quán (bánh mì, cao lầu, cơm gà, cà phê), nhà cổ 2 tầng, Chùa Cầu mặt bên,
+  assets/deco/   nhà và vật: hàng quán (bánh mì, cao lầu, cơm gà, cà phê), nhà cổ 2 tầng, Chùa Cầu mặt bên, ô tô điện,
                  quầy hàng, bàn ghế tre, xe đạp, chum vại, chậu cây, cây đa, bụi hoa giấy, hoa đăng, thuyền giấy,
                  xích lô có người đạp, các nhóm khách đứng ngắm phố
   assets/chars/  dải khung đi bộ cho khách tham quan đi lại (walk_*.webp): ô 0 nhìn thẳng, rồi các ô đi sang trái,
@@ -148,6 +148,11 @@ if __name__ == '__main__':
                 im = fill_under_bridge(im)
             cutlib.save_webp(im, DECO / f'{name}.webp')
             made.append((name, im))
+    # Ô tô điện trắng đang cắm sạc ở trạm sạc (tranh poster "Phố cổ Hội An 2026"): nền là tranh cảnh nên dùng GrabCut
+    car = cutlib.grabcut(source('Thiết kế chưa có tên (8).png'), (455, 700, 800, 884), bg_below=852,
+                         fg_rects=[(520, 740, 760, 840), (700, 765, 785, 838), (466, 800, 502, 855), (584, 822, 624, 880), (734, 852, 774, 875)])
+    cutlib.save_webp(car, DECO / 'ev_car.webp')
+    made.append(('ev_car', car))
     cutlib.contact_sheet(made, S / 'frontal_contact.jpg', cols=7)
     walk = []
     for who, (prefix, kind, front, left, right) in WALK.items():

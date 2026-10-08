@@ -139,7 +139,7 @@ def ev_map():
     m = Map('ev', 26, 14, GRASS, {'zone': 'ev', 'name': 'Bãi xe điện ngoại vi', 'name_en': 'Outer EV Hub', 'sub': 'Cửa ngõ xanh ngoài phố đi bộ', 'sub_en': 'The green gateway outside the walking zone', 'card': 'assets/scenes/ev_hub.webp', 'light': 'day'})
     m.rect(0, 0, 8, 5, lambda i, j: PADDY_RIPE if j % 2 else PADDY)
     m.rect(8, 1, 12, 5, ASPH)
-    for x in (9, 11, 13, 15, 17):
+    for x in (9, 12, 15, 17):           # ô đỗ: ô tô điện (rộng 3 ô), chỗ Mark đứng, 2 xe scooter điện
         m.rect(x, 3, 1, 3, ASPH_LINE)
     m.rect(0, 6, 22, 3, ASPH)
     m.rect(22, 6, 4, 3, slab)
@@ -194,10 +194,10 @@ def ev_map():
     # Làng rau Trà Quế bên quán: luống rau, rau thơm
     deco(m, 'tq_veg', 23.4, 11.6, 64, word='herbs')
     deco(m, 'tq_herbs', 22.7, 13.5, 50, word='herbs')
-    # Trâu trên ruộng, xe điện du lịch ở trạm đưa đón, xe đạp điện trong ô đỗ
+    # Trâu trên ruộng, xe điện du lịch ở trạm đưa đón, ô tô điện đang cắm sạc ở ô đỗ dưới trụ sạc đầu tiên
     deco(m, 'tq_buffalo', 5.6, 12.6, 72, word='water-buffalo')
     deco(m, 'tq_cart', 6.8, 6.75, 76, word='electric-shuttle', solid=True)
-    deco(m, 'tq_ebike', 9.95, 4.3, 62, word='electric-scooter', solid=True)
+    deco(m, 'ev_car', 10.5, 5.25, 88, word='electric-car', solid=True, foot=0.55)
     m.obj('spot', 0, 0, 8, 5, word='rice-paddy')
     m.obj('spot', 0, 10, 13, 4, word='rice-paddy')
     m.obj('npc', 2.2, 6.9, name='ambassador', facing='down', until='q_ev')

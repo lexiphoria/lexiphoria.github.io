@@ -1216,6 +1216,7 @@ const vocabularyData = {
       example: "The car pulled up at the hotel entrance.",
       exampleTranslation: "Chiếc xe dừng lại trước cổng khách sạn."
     },
+    {
         "word": "academic performance",
       "type": "n",
       "ipa": "/ˌæk.əˈdem.ɪk pəˈfɔː.məns/",
@@ -1223,6 +1224,7 @@ const vocabularyData = {
       "example": "Consistent study habits correlate with outstanding academic performance.",
       "exampleTranslation": "Thói quen học tập đều đặn có liên quan tới kết quả học tập xuất sắc."
 },
+    {
         "word": "lifelong learning",
       "type": "n",
       "ipa": "/ˌlaɪf.lɒŋ ˈlɜː.nɪŋ/",
@@ -1230,6 +1232,7 @@ const vocabularyData = {
       "example": "Lifelong learning is essential to remain adaptable in modern careers.",
       "exampleTranslation": "Học tập suốt đời là điều thiết yếu để duy trì khả năng thích ứng trong sự nghiệp hiện đại."
 },
+    {
         "word": "higher education",
       "type": "n",
       "ipa": "/ˌhaɪ.ər edʒ.ʊˈkeɪ.ʃən/",
@@ -1237,6 +1240,7 @@ const vocabularyData = {
       "example": "A degree in higher education unlocks greater professional opportunities.",
       "exampleTranslation": "Bằng cấp giáo dục đại học mở ra những cơ hội nghề nghiệp lớn hơn."
 },
+    {
         "word": "candidate",
       "type": "n",
       "ipa": "/ˈkæn.dɪ.dət/",
@@ -1244,6 +1248,7 @@ const vocabularyData = {
       "example": "The hiring panel selected the candidate with the strongest leadership skills.",
       "exampleTranslation": "Hội đồng tuyển dụng đã chọn ứng viên có kỹ năng lãnh đạo xuất sắc nhất."
 },
+    {
         "word": "expertise",
       "type": "n",
       "ipa": "/ˌek.spɜːˈtiːz/",
@@ -1251,6 +1256,7 @@ const vocabularyData = {
       "example": "She acquired extensive technical expertise through years of laboratory practice.",
       "exampleTranslation": "Cô ấy đã tích lũy chuyên môn kỹ thuật sâu rộng qua nhiều năm thực hành trong phòng thí nghiệm."
 },
+    {
         "word": "enroll in a course",
       "type": "phrase",
       "ipa": "/ɪnˈrəʊl ɪn ə kɔːs/",
@@ -1258,6 +1264,7 @@ const vocabularyData = {
       "example": "Working adults often enroll in a course to enhance their digital capabilities.",
       "exampleTranslation": "Người đi làm thường ghi danh một khóa học để nâng cao kỹ năng số."
 },
+    {
         "word": "pursue higher education",
       "type": "phrase",
       "ipa": "/pəˈsjuː ˌhaɪ.ər edʒ.ʊˈkeɪ.ʃən/",
@@ -1265,6 +1272,7 @@ const vocabularyData = {
       "example": "Many ambitious youths leave their hometowns to pursue higher education.",
       "exampleTranslation": "Nhiều thanh niên giàu hoài bão rời quê hương để theo đuổi học vấn đại học."
 },
+    {
         "word": "meet requirements",
       "type": "phrase",
       "ipa": "/miːt rɪˈkwaɪə.mənts/",
@@ -1272,6 +1280,7 @@ const vocabularyData = {
       "example": "Candidates must meet all strict language requirements before admission.",
       "exampleTranslation": "Ứng viên phải đáp ứng mọi yêu cầu ngôn ngữ nghiêm ngặt trước khi nhập học."
 },
+    {
         "word": "drop out of",
       "type": "v",
       "ipa": "/drɒp aʊt ɒv/",
@@ -1279,6 +1288,7 @@ const vocabularyData = {
       "example": "Financial strain forced him to drop out of university during his junior year.",
       "exampleTranslation": "Áp lực tài chính buộc anh ấy phải bỏ học đại học giữa chừng vào năm thứ ba."
 },
+    {
         "word": "focus on",
       "type": "v",
       "ipa": "/ˈfəʊ.kəs ɒn/",
@@ -1286,6 +1296,7 @@ const vocabularyData = {
       "example": "Students should focus on problem-solving strategies rather than pure memorization.",
       "exampleTranslation": "Học sinh nên tập trung vào các chiến lược giải quyết vấn đề hơn là ghi nhớ máy móc."
 },
+    {
         "word": "turn into",
       "type": "v",
       "ipa": "/tɜːn ˈɪn.tuː/",
@@ -1293,6 +1304,7 @@ const vocabularyData = {
       "example": "With consistent dedication, daily practice will turn into natural fluency.",
       "exampleTranslation": "Với sự tận tụy bền bỉ, luyện tập hàng ngày sẽ chuyển hóa thành sự lưu loát tự nhiên."
 },
+    {
         "word": "companionship",
       "type": "n",
       "ipa": "/kəmˈpæn.jən.ʃɪp/",
@@ -1300,6 +1312,7 @@ const vocabularyData = {
       "example": "Lifelong companionship provides comfort and emotional resilience in difficult times.",
       "exampleTranslation": "Tình bạn đồng hành cả đời mang lại sự an ủi và khả năng phục hồi cảm xúc trong những lúc khó khăn."
 },
+    {
         "word": "acquaintance",
       "type": "n",
       "ipa": "/əˈkweɪn.təns/",
@@ -1307,6 +1320,7 @@ const vocabularyData = {
       "example": "He has a wide circle of casual acquaintances across the industry.",
       "exampleTranslation": "Anh ấy có một vòng tròn rộng lớn các người quen xã giao trong ngành."
 },
+    {
         "word": "bump into",
       "type": "v",
       "ipa": "/bʌmp ˈɪn.tuː/",
@@ -1314,6 +1328,7 @@ const vocabularyData = {
       "example": "I was thrilled to bump into an old schoolmate at the bookstore.",
       "exampleTranslation": "Tôi rất vui khi tình cờ gặp lại một người bạn học cũ tại hiệu sách."
 },
+    {
         "word": "look up to",
       "type": "v",
       "ipa": "/lʊk ʌp tuː/",
@@ -1321,6 +1336,7 @@ const vocabularyData = {
       "example": "Young athletes look up to their coaches as inspiring mentors.",
       "exampleTranslation": "Các vận động viên trẻ ngưỡng mộ huấn luyện viên của mình như những người thầy truyền cảm hứng."
 },
+    {
         "word": "hang out with",
       "type": "v",
       "ipa": "/hæŋ aʊt wɪð/",
@@ -1328,6 +1344,7 @@ const vocabularyData = {
       "example": "Teens often hang out with peers at local cafes during weekend afternoons.",
       "exampleTranslation": "Thanh thiếu niên thường đi chơi cùng bạn bè ở các quán cà phê địa phương vào chiều cuối tuần."
 },
+    {
         "word": "working environment",
       "type": "n",
       "ipa": "/ˈwɜː.kɪŋ ɪnˌvaɪ.rən.mənt/",
@@ -1335,6 +1352,7 @@ const vocabularyData = {
       "example": "A supportive working environment boosts morale and productivity.",
       "exampleTranslation": "Một môi trường làm việc cởi mở hỗ trợ sẽ nâng cao tinh thần và năng suất."
 },
+    {
         "word": "souvenir",
       "type": "n",
       "ipa": "/ˌsuː.vəˈnɪər/",
@@ -1342,6 +1360,7 @@ const vocabularyData = {
       "example": "She brought back handcrafted wooden figurines as souvenirs from her journey.",
       "exampleTranslation": "Cô ấy đã mang về các bức tượng gỗ thủ công làm quà lưu niệm từ chuyến hành trình."
 },
+    {
         "word": "overseas",
       "type": "adj",
       "ipa": "/ˌəʊ.vəˈsiːz/",
@@ -1349,6 +1368,7 @@ const vocabularyData = {
       "example": "Living in an overseas environment fosters independence and cultural adaptability.",
       "exampleTranslation": "Sống trong môi trường ở nước ngoài bồi dưỡng tính tự lập và khả năng thích ứng văn hóa."
 },
+    {
         "word": "overseas trip",
       "type": "n",
       "ipa": "/ˌəʊ.vəˈsiːz trɪp/",
@@ -1356,6 +1376,7 @@ const vocabularyData = {
       "example": "Their family saved for three years to embark on an exciting overseas trip.",
       "exampleTranslation": "Gia đình họ đã tiết kiệm ba năm để bắt đầu một chuyến đi nước ngoài đầy hào hứng."
 },
+    {
         "word": "set off",
       "type": "v",
       "ipa": "/set ɒf/",
@@ -1363,6 +1384,7 @@ const vocabularyData = {
       "example": "The travelers set off at dawn to beat the morning traffic.",
       "exampleTranslation": "Những người lữ hành khởi hành lúc rạng đông để tránh tắc đường buổi sáng."
 },
+    {
         "word": "set out",
       "type": "v",
       "ipa": "/set aʊt/",
@@ -1370,6 +1392,7 @@ const vocabularyData = {
       "example": "The backpackers set out with eager spirits to explore the highlands.",
       "exampleTranslation": "Các bạn trẻ du lịch bụi khởi hành với tinh thần háo hức khám phá vùng cao."
 },
+    {
         "word": "check in",
       "type": "v",
       "ipa": "/tʃek ɪn/",
@@ -1377,6 +1400,7 @@ const vocabularyData = {
       "example": "You can check in online 24 hours prior to your scheduled flight.",
       "exampleTranslation": "Bạn có thể làm thủ tục trực tuyến 24 giờ trước chuyến bay đã lên lịch."
 },
+    {
         "word": "check out",
       "type": "v",
       "ipa": "/tʃek aʊt/",
@@ -1384,6 +1408,7 @@ const vocabularyData = {
       "example": "Guests must check out before noon or request late departure.",
       "exampleTranslation": "Du khách phải trả phòng trước buổi trưa hoặc yêu cầu rời muộn."
 },
+    {
         "word": "show around",
       "type": "v",
       "ipa": "/ʃəʊ əˈraʊnd/",
@@ -1391,6 +1416,7 @@ const vocabularyData = {
       "example": "I would love to show you around my hometown when you visit.",
       "exampleTranslation": "Tôi rất vui lòng được dẫn bạn đi tham quan quanh quê hương tôi khi bạn ghé thăm."
 },
+    {
         "word": "informative",
       "type": "adj",
       "ipa": "/ɪnˈfɔː.mə.tɪv/",
@@ -1398,6 +1424,7 @@ const vocabularyData = {
       "example": "The science podcast provides deeply informative insights into astronomy.",
       "exampleTranslation": "Kênh podcast khoa học cung cấp những kiến thức vô cùng bổ ích về thiên văn học."
 },
+    {
         "word": "ambiguous",
       "type": "adj",
       "ipa": "/æmˈbɪɡ.ju.əs/",
@@ -1405,6 +1432,7 @@ const vocabularyData = {
       "example": "Avoid ambiguous wording in instructions to prevent misunderstandings.",
       "exampleTranslation": "Tránh dùng câu chữ mơ hồ trong lời hướng dẫn để ngăn ngừa hiểu lầm."
 },
+    {
         "word": "point out",
       "type": "v",
       "ipa": "/pɔɪnt aʊt/",
@@ -1412,6 +1440,7 @@ const vocabularyData = {
       "example": "The editor pointed out several inconsistencies in the second chapter.",
       "exampleTranslation": "Biên tập viên đã chỉ ra một vài điểm không đồng nhất trong chương thứ hai."
 },
+    {
         "word": "filter out",
       "type": "v",
       "ipa": "/ˈfɪl.tər aʊt/",
@@ -1419,6 +1448,7 @@ const vocabularyData = {
       "example": "Smart readers learn to filter out unverified rumors on social media.",
       "exampleTranslation": "Người đọc thông thái biết cách lọc bớt những tin đồn chưa được kiểm chứng trên mạng xã hội."
 },
+    {
         "word": "in the long run",
       "type": "phrase",
       "ipa": "/ɪn ðə lɒŋ rʌn/",
@@ -1988,6 +2018,7 @@ const vocabularyData = {
       example: "He finally managed to overcome his fear of flying.",
       exampleTranslation: "Anh ấy cuối cùng cũng vượt qua được nỗi sợ bay."
     },
+    {
         "word": "commitment",
       "type": "n",
       "ipa": "/kəˈmɪt.mənt/",
@@ -1995,6 +2026,7 @@ const vocabularyData = {
       "example": "Civic commitment strengthens democratic governance and community welfare.",
       "exampleTranslation": "Sự cam kết công dân củng cố việc quản trị dân chủ và phúc lợi cộng đồng."
 },
+    {
         "word": "mutual respect",
       "type": "n",
       "ipa": "/ˌmjuː.tʃu.əl rɪˈspekt/",
@@ -2002,6 +2034,7 @@ const vocabularyData = {
       "example": "Social cohesion relies on mutual respect among diverse ethnic groups.",
       "exampleTranslation": "Sự gắn kết xã hội dựa trên sự tôn trọng lẫn nhau giữa các nhóm sắc tộc đa dạng."
 },
+    {
         "word": "cultural heritage",
       "type": "n",
       "ipa": "/ˌkʌl.tʃər.əl ˈher.ɪ.tɪdʒ/",
@@ -2009,6 +2042,7 @@ const vocabularyData = {
       "example": "Folk music traditions represent an irreplaceable treasure of national cultural heritage.",
       "exampleTranslation": "Truyền thống âm nhạc dân gian đại diện cho một kho báu không thể thay thế của di sản văn hóa dân tộc."
 },
+    {
         "word": "make a commitment to",
       "type": "phrase",
       "ipa": "/meɪk ə kəˈmɪt.mənt tuː/",
@@ -2016,6 +2050,7 @@ const vocabularyData = {
       "example": "Town residents make a commitment to keeping public parks clean.",
       "exampleTranslation": "Người dân trong thị trấn đưa ra cam kết giữ gìn các công viên công cộng sạch sẽ."
 },
+    {
         "word": "raise public awareness",
       "type": "phrase",
       "ipa": "/reɪz ˈpʌb.lɪk əˈweə.nəs/",
@@ -2023,6 +2058,7 @@ const vocabularyData = {
       "example": "Workshops raise public awareness about mental health support resources.",
       "exampleTranslation": "Các buổi hội thảo nâng cao nhận thức cộng đồng về các nguồn lực hỗ trợ sức khỏe tinh thần."
 },
+    {
         "word": "build strong relationships",
       "type": "phrase",
       "ipa": "/bɪld strɒŋ rɪˈleɪ.ʃən.ʃɪps/",
@@ -2030,6 +2066,7 @@ const vocabularyData = {
       "example": "Voluntary work helps individuals build strong relationships across neighborhoods.",
       "exampleTranslation": "Công việc tình nguyện giúp các cá nhân xây dựng những mối quan hệ bền vững khắp các khu phố."
 },
+    {
         "word": "mutual understanding",
       "type": "n",
       "ipa": "/ˌmjuː.tʃu.əl ˌʌn.dəˈstæn.dɪŋ/",
@@ -2037,6 +2074,7 @@ const vocabularyData = {
       "example": "Constructive civic debates deepen mutual understanding among opposing factions.",
       "exampleTranslation": "Các cuộc tranh luận công dân mang tính xây dựng làm sâu sắc thêm sự thấu hiểu lẫn nhau giữa các phe phái đối lập."
 },
+    {
         "word": "employment opportunities",
       "type": "n",
       "ipa": "/ɪmˈplɔɪ.mənt ˌɒp.əˈtjuː.nə.tiz/",
@@ -2044,6 +2082,7 @@ const vocabularyData = {
       "example": "Industrial expansion creates thousands of employment opportunities for local workers.",
       "exampleTranslation": "Sự mở rộng công nghiệp tạo ra hàng ngàn cơ hội việc làm cho lao động địa phương."
 },
+    {
         "word": "private sector",
       "type": "n",
       "ipa": "/ˌpraɪ.vət ˈsek.tər/",
@@ -2051,6 +2090,7 @@ const vocabularyData = {
       "example": "The private sector accounts for a substantial share of national innovation.",
       "exampleTranslation": "Khu vực kinh tế tư nhân chiếm một thị phần đáng kể trong đổi mới sáng tạo quốc gia."
 },
+    {
         "word": "tax relief",
       "type": "n",
       "ipa": "/tæks rɪˈliːf/",
@@ -2058,6 +2098,7 @@ const vocabularyData = {
       "example": "Small family businesses praised the newly enacted government tax relief.",
       "exampleTranslation": "Các doanh nghiệp gia đình nhỏ khen ngợi chính sách miễn giảm thuế mới được chính phủ ban hành."
 },
+    {
         "word": "unemployment",
       "type": "n",
       "ipa": "/ˌʌn.ɪmˈplɔɪ.mənt/",
@@ -2065,6 +2106,7 @@ const vocabularyData = {
       "example": "Policymakers implement stimulus programs to reduce youth unemployment.",
       "exampleTranslation": "Các nhà hoạch định chính sách triển khai các chương trình kích cầu để giảm thất nghiệp ở giới trẻ."
 },
+    {
         "word": "entrepreneur",
       "type": "n",
       "ipa": "/ˌɒn.trə.prəˈnɜːr/",
@@ -2072,6 +2114,7 @@ const vocabularyData = {
       "example": "A resilient entrepreneur embraces calculated risks to scale new ventures.",
       "exampleTranslation": "Một doanh nhân kiên cường chấp nhận những rủi ro có tính toán để mở rộng quy mô các dự án mới."
 },
+    {
         "word": "domestic industry",
       "type": "n",
       "ipa": "/dəˌmes.tɪk ˈɪn.də.stri/",
@@ -2079,6 +2122,7 @@ const vocabularyData = {
       "example": "Tariffs shield nascent domestic industry from predatory foreign trade practices.",
       "exampleTranslation": "Thuế quan bảo vệ ngành công nghiệp non trẻ trong nước khỏi những thủ đoạn thương mại thù địch từ nước ngoài."
 },
+    {
         "word": "capture value",
       "type": "phrase",
       "ipa": "/ˈkæp.tʃər ˈvæl.juː/",
@@ -2086,6 +2130,7 @@ const vocabularyData = {
       "example": "Agile companies capture value by turning consumer insights into customized services.",
       "exampleTranslation": "Các công ty nhanh nhạy thu giữ giá trị bằng cách biến hiểu biết về người tiêu dùng thành các dịch vụ tùy chỉnh."
 },
+    {
         "word": "competitive market",
       "type": "n",
       "ipa": "/kəmˈpet.ɪ.tɪv ˈmɑː.kɪt/",
@@ -2093,6 +2138,7 @@ const vocabularyData = {
       "example": "In a fiercely competitive market, branding and quality define longevity.",
       "exampleTranslation": "Trong một thị trường cạnh tranh gay gắt, thương hiệu và chất lượng định đoạt sự trường tồn."
 },
+    {
         "word": "trade defence capacity",
       "type": "n",
       "ipa": "/treɪd dɪˈfens kəˌpæs.ə.ti/",
@@ -2100,6 +2146,7 @@ const vocabularyData = {
       "example": "The ministry bolstered trade defence capacity to combat illegal tariff evasion.",
       "exampleTranslation": "Bộ đã củng cố năng lực phòng vệ thương mại để chống lại hành vi trốn thuế bất hợp pháp."
 },
+    {
         "word": "step up",
       "type": "v",
       "ipa": "/step ʌp/",
@@ -2107,6 +2154,7 @@ const vocabularyData = {
       "example": "Government departments must step up oversight on market price volatility.",
       "exampleTranslation": "Các ban ngành chính phủ phải đẩy mạnh việc giám sát sự biến động giá cả thị trường."
 },
+    {
         "word": "set up",
       "type": "v",
       "ipa": "/set ʌp/",
@@ -2114,6 +2162,7 @@ const vocabularyData = {
       "example": "The young entrepreneurs joined forces to set up an e-commerce platform.",
       "exampleTranslation": "Các doanh nhân trẻ đã bắt tay nhau để thành lập một nền tảng thương mại điện tử."
 },
+    {
         "word": "congestion",
       "type": "n",
       "ipa": "/kənˈdʒes.tʃən/",
@@ -2121,6 +2170,7 @@ const vocabularyData = {
       "example": "Urban authorities introduced congestion charges to discourage private car use.",
       "exampleTranslation": "Chính quyền đô thị đã áp dụng phí chống ùn tắc để hạn chế việc dùng ô tô cá nhân."
 },
+    {
         "word": "pedestrian",
       "type": "n",
       "ipa": "/pəˈdes.tri.ən/",
@@ -2128,6 +2178,7 @@ const vocabularyData = {
       "example": "Pedestrians must always cross busy avenues at designated zebra crossings.",
       "exampleTranslation": "Người đi bộ luôn phải băng qua các đại lộ đông đúc tại vạch kẻ đường được chỉ định."
 },
+    {
         "word": "junction",
       "type": "n",
       "ipa": "/ˈdʒʌŋk.ʃən/",
@@ -2135,6 +2186,7 @@ const vocabularyData = {
       "example": "Installing roundabouts at the central junction eased traffic flow substantially.",
       "exampleTranslation": "Việc lắp đặt vòng xuyến tại nút giao trung tâm đã giúp lưu thông phương tiện dễ dàng hơn đáng kể."
 },
+    {
         "word": "urban",
       "type": "adj",
       "ipa": "/ˈɜː.bən/",
@@ -2142,6 +2194,7 @@ const vocabularyData = {
       "example": "Urban planning must balance green architecture with rapid population growth.",
       "exampleTranslation": "Quy hoạch đô thị phải cân bằng giữa kiến trúc xanh và sự gia tăng dân số nhanh chóng."
 },
+    {
         "word": "rural",
       "type": "adj",
       "ipa": "/ˈrʊə.rəl/",
@@ -2149,6 +2202,7 @@ const vocabularyData = {
       "example": "Upgraded telecommunication links bridge the lifestyle divide in rural communities.",
       "exampleTranslation": "Các kết nối viễn thông được nâng cấp giúp thu hẹp khoảng cách đời sống tại các cộng đồng nông thôn."
 },
+    {
         "word": "infrastructure",
       "type": "n",
       "ipa": "/ˈɪn.frəˌstrʌk.tʃər/",
@@ -2156,6 +2210,7 @@ const vocabularyData = {
       "example": "Heavy public investment in transport infrastructure underpins regional growth.",
       "exampleTranslation": "Đầu tư công mạnh mẽ vào cơ sở hạ tầng giao thông là nền tảng cho tăng trưởng khu vực."
 },
+    {
         "word": "traffic congestion",
       "type": "n",
       "ipa": "/ˈtræf.ɪk kənˈdʒes.tʃən/",
@@ -2163,6 +2218,7 @@ const vocabularyData = {
       "example": "Expanding metro rail lines helps mega-cities solve chronic traffic congestion.",
       "exampleTranslation": "Mở rộng các tuyến đường sắt đô thị giúp các siêu đô thị giải quyết tình trạng kẹt xe kinh niên."
 },
+    {
         "word": "public transport system",
       "type": "n",
       "ipa": "/ˈpʌb.lɪk ˈtræns.pɔːt ˌsɪs.təm/",
@@ -2170,6 +2226,7 @@ const vocabularyData = {
       "example": "A reliable public transport system cuts carbon emissions and eases road stress.",
       "exampleTranslation": "Một hệ thống giao thông công cộng đáng tin cậy giúp giảm khí thải carbon và giảm áp lực đường bộ."
 },
+    {
         "word": "densely populated area",
       "type": "n",
       "ipa": "/ˌdens.li ˈpɒp.jə.leɪ.tɪd ˈeə.ri.ə/",
@@ -2177,6 +2234,7 @@ const vocabularyData = {
       "example": "Noise regulations are strictly enforced in every densely populated area.",
       "exampleTranslation": "Các quy định về tiếng ồn được thực thi nghiêm ngặt tại mọi khu vực đông đúc dân cư."
 },
+    {
         "word": "pedestrian zone",
       "type": "n",
       "ipa": "/pəˈdes.tri.ən zəʊn/",
@@ -2184,6 +2242,7 @@ const vocabularyData = {
       "example": "Turning commercial boulevards into a pedestrian zone stimulates local retail businesses.",
       "exampleTranslation": "Biến các đại lộ thương mại thành khu phố đi bộ kích thích các doanh nghiệp bán lẻ địa phương."
 },
+    {
         "word": "slow down",
       "type": "v",
       "ipa": "/sləʊ daʊn/",
@@ -2191,6 +2250,7 @@ const vocabularyData = {
       "example": "Motorists are required by law to slow down when driving past school gates.",
       "exampleTranslation": "Tài xế được luật pháp yêu cầu phải giảm tốc độ khi lái xe ngang qua cổng trường học."
 },
+    {
         "word": "pull over",
       "type": "v",
       "ipa": "/pʊl ˈəʊ.vər/",
@@ -2198,6 +2258,7 @@ const vocabularyData = {
       "example": "Emergency sirens forced all approaching cars to pull over safely.",
       "exampleTranslation": "Tiếng còi báo động khẩn cấp buộc mọi xe đang tới phải tấp vào lề một cách an toàn."
 },
+    {
         "word": "hold up",
       "type": "v",
       "ipa": "/həʊld ʌp/",
@@ -2205,6 +2266,7 @@ const vocabularyData = {
       "example": "A sudden multivehicle collision held up morning highway traffic for hours.",
       "exampleTranslation": "Một vụ va chạm liên hoàn bất ngờ đã gây đình trệ giao thông cao tốc buổi sáng suốt nhiều giờ."
 },
+    {
         "word": "heritage",
       "type": "n",
       "ipa": "/ˈher.ɪ.tɪdʒ/",
@@ -2212,6 +2274,7 @@ const vocabularyData = {
       "example": "Ancient temples stand as monuments to the spiritual heritage of civilizations.",
       "exampleTranslation": "Các ngôi đền cổ sừng sững như những đài tưởng niệm cho di sản tâm linh của các nền văn minh."
 },
+    {
         "word": "tourist attraction",
       "type": "n",
       "ipa": "/ˈtʊə.rɪst əˌtræk.ʃən/",
@@ -2219,6 +2282,7 @@ const vocabularyData = {
       "example": "The floating market remains a uniquely vibrant tourist attraction in the delta.",
       "exampleTranslation": "Chợ nổi vẫn là một điểm thu hút du khách sôi động độc đáo ở vùng đồng bằng."
 },
+    {
         "word": "preserve cultural heritage",
       "type": "phrase",
       "ipa": "/prɪˈzɜːv ˌkʌl.tʃər.əl ˈher.ɪ.tɪdʒ/",
@@ -2226,6 +2290,7 @@ const vocabularyData = {
       "example": "Restoration projects preserve cultural heritage for the enrichment of future generations.",
       "exampleTranslation": "Các dự án trùng tu bảo tồn di sản văn hóa nhằm làm giàu tri thức cho các thế hệ tương lai."
 },
+    {
         "word": "major tourist attraction",
       "type": "n",
       "ipa": "/ˈmeɪ.dʒər ˈtʊə.rɪst əˌtræk.ʃən/",
@@ -2233,6 +2298,7 @@ const vocabularyData = {
       "example": "Ha Long Bay ranks as a major tourist attraction recognized worldwide.",
       "exampleTranslation": "Vịnh Hạ Long được xếp vào hàng điểm đến du lịch trọng điểm được công nhận trên toàn thế giới."
 },
+    {
         "word": "promote local tourism",
       "type": "phrase",
       "ipa": "/prəˈməʊt ˈləʊ.kəl ˈtʊə.rɪ.zəm/",
@@ -2240,6 +2306,7 @@ const vocabularyData = {
       "example": "Cultural food festivals actively promote local tourism and regional craftsmanship.",
       "exampleTranslation": "Các lễ hội ẩm thực văn hóa tích cực quảng bá du lịch địa phương và nghề thủ công vùng miền."
 },
+    {
         "word": "tabloid",
       "type": "n",
       "ipa": "/ˈtæb.lɔɪd/",
@@ -2247,6 +2314,7 @@ const vocabularyData = {
       "example": "Tabloids thrive on dramatic rumors rather than sober investigative facts.",
       "exampleTranslation": "Báo lá cải sống nhờ những tin đồn giật gân hơn là các sự thật điều tra điềm tĩnh."
 },
+    {
         "word": "critic",
       "type": "n",
       "ipa": "/ˈkrɪt.ɪk/",
@@ -2254,6 +2322,7 @@ const vocabularyData = {
       "example": "Literary critics offered high praise for the author's nuanced social commentary.",
       "exampleTranslation": "Các nhà phê bình văn học đã dành lời khen ngợi cao cho góc nhìn bình luận xã hội tinh tế của tác giả."
 },
+    {
         "word": "sensationalism",
       "type": "n",
       "ipa": "/senˈseɪ.ʃən.əl.ɪ.zəm/",
@@ -2261,6 +2330,7 @@ const vocabularyData = {
       "example": "Media ethics watchdogs condemn sensationalism in reporting criminal proceedings.",
       "exampleTranslation": "Các tổ chức giám sát đạo đức truyền thông lên án xu hướng giật gân trong việc đưa tin về các vụ án hình sự."
 },
+    {
         "word": "mass media",
       "type": "n",
       "ipa": "/ˌmæs ˈmiː.di.ə/",
@@ -2268,6 +2338,7 @@ const vocabularyData = {
       "example": "Mass media wields profound influence over public sentiment during elections.",
       "exampleTranslation": "Truyền thông đại chúng nắm giữ tầm ảnh hưởng sâu rộng đối với cảm quan của công chúng trong suốt các kỳ bầu cử."
 },
+    {
         "word": "exaggerate the truth",
       "type": "phrase",
       "ipa": "/ɪɡˈzædʒ.ə.reɪt ðə truːθ/",
@@ -2275,6 +2346,7 @@ const vocabularyData = {
       "example": "Tabloid reporters often exaggerate the truth to lure readers into clicking links.",
       "exampleTranslation": "Các phóng viên báo lá cải thường phóng đại sự thật để nhử người đọc bấm vào các đường liên kết."
 },
+    {
         "word": "release official announcement",
       "type": "phrase",
       "ipa": "/rɪˈliːs əˈfɪʃ.əl əˈnaʊns.mənt/",
@@ -2282,6 +2354,7 @@ const vocabularyData = {
       "example": "The committee will release an official announcement regarding the policy updates tomorrow.",
       "exampleTranslation": "Ủy ban sẽ phát hành một thông báo chính thức liên quan đến các cập nhật chính sách vào ngày mai."
 },
+    {
         "word": "broaden readership",
       "type": "phrase",
       "ipa": "/ˈbrɔː.dən ˈriː.də.ʃɪp/",
@@ -2289,6 +2362,7 @@ const vocabularyData = {
       "example": "Publishers launch digital interactive magazines to broaden readership among youth.",
       "exampleTranslation": "Các nhà xuất bản ra mắt tạp chí tương tác kỹ thuật số để mở rộng độc giả trong giới trẻ."
 },
+    {
         "word": "cover up",
       "type": "v",
       "ipa": "/ˈkʌv.ər ʌp/",
@@ -2296,6 +2370,7 @@ const vocabularyData = {
       "example": "Officials were prosecuted after failing to cover up an environmental scandal.",
       "exampleTranslation": "Các quan chức đã bị truy tố sau khi thất bại trong việc bao che một vụ bê bối môi trường."
 },
+    {
         "word": "bridge the gap",
       "type": "phrase",
       "ipa": "/brɪdʒ ðə ɡæp/",
@@ -2303,6 +2378,7 @@ const vocabularyData = {
       "example": "Subsidized public education serves to bridge the gap between social classes.",
       "exampleTranslation": "Giáo dục công lập được trợ cấp có vai trò rút ngắn khoảng cách giữa các tầng lớp xã hội."
 },
+    {
         "word": "play an integral role in",
       "type": "phrase",
       "ipa": "/pleɪ ən ˈɪn.tɪ.ɡrəl rəʊl ɪn/",
@@ -3312,6 +3388,7 @@ const vocabularyData = {
         "example": "A violent cyclone tore uprooted trees from the ground and ripped roofs off buildings.",
         "exampleTranslation": "Một cơn lốc xoáy dữ dội đã bật gốc cây cối khỏi mặt đất và giật tung các mái nhà."
     },
+    {
         "word": "low-carbon future",
       "type": "n",
       "ipa": "/ˌləʊ ˈkɑː.bən ˌfjuː.tʃər/",
@@ -3319,6 +3396,7 @@ const vocabularyData = {
       "example": "Transitioning to clean public transit is critical for building a low-carbon future.",
       "exampleTranslation": "Chuyển đổi sang giao thông công cộng sạch là yếu tố then chốt để xây dựng tương lai phát thải thấp."
 },
+    {
         "word": "net zero",
       "type": "n",
       "ipa": "/ˌnet ˈzɪə.rəʊ/",
@@ -3326,6 +3404,7 @@ const vocabularyData = {
       "example": "Global industrial sectors have committed to achieving net zero by 2050.",
       "exampleTranslation": "Các ngành công nghiệp toàn cầu đã cam kết đạt mức phát thải ròng bằng 0 trước năm 2050."
 },
+    {
         "word": "endangered species",
       "type": "n",
       "ipa": "/ɪnˌdeɪn.dʒəd ˈspiː.ʃiːz/",
@@ -3333,6 +3412,7 @@ const vocabularyData = {
       "example": "National wildlife sanctuaries protect endangered species from illegal hunting.",
       "exampleTranslation": "Các khu bảo tồn động vật hoang dã quốc gia bảo vệ các loài nguy cấp khỏi nạn săn bắt trái phép."
 },
+    {
         "word": "renewable energy",
       "type": "n",
       "ipa": "/rɪˌnjuː.ə.bəl ˈen.ə.dʒi/",
@@ -3340,6 +3420,7 @@ const vocabularyData = {
       "example": "Wind farms and solar installations supply clean renewable energy to urban power grids.",
       "exampleTranslation": "Các trang trại gió và nhà máy điện mặt trời cung cấp năng lượng tái tạo sạch cho lưới điện đô thị."
 },
+    {
         "word": "ecosystem",
       "type": "n",
       "ipa": "/ˈiː.kəʊˌsɪs.təm/",
@@ -3347,6 +3428,7 @@ const vocabularyData = {
       "example": "Coral reefs provide shelter for an extraordinarily rich marine ecosystem.",
       "exampleTranslation": "Các rạn san hô cung cấp nơi trú ngụ cho một hệ sinh thái biển vô cùng phong phú."
 },
+    {
         "word": "adaptation",
       "type": "n",
       "ipa": "/ˌæd.æpˈteɪ.ʃən/",
@@ -3354,6 +3436,7 @@ const vocabularyData = {
       "example": "Agricultural scientists develop drought-resistant crops as an adaptation to climate shocks.",
       "exampleTranslation": "Các nhà khoa học nông nghiệp phát triển giống cây chịu hạn như một sự thích ứng với các cú sốc khí hậu."
 },
+    {
         "word": "raise environmental awareness",
       "type": "phrase",
       "ipa": "/reɪz ɪnˌvaɪ.rənˈmen.təl əˈweə.nəs/",
@@ -3361,6 +3444,7 @@ const vocabularyData = {
       "example": "Youth eco-clubs organize tree-planting days to raise environmental awareness.",
       "exampleTranslation": "Các câu lạc bộ sinh thái thanh niên tổ chức ngày hội trồng cây để nâng cao nhận thức bảo vệ môi trường."
 },
+    {
         "word": "environmental protection",
       "type": "n",
       "ipa": "/ɪnˌvaɪ.rənˈmen.təl prəˈtek.ʃən/",
@@ -3368,6 +3452,7 @@ const vocabularyData = {
       "example": "Stringent penalties are enforced to guarantee rigorous environmental protection.",
       "exampleTranslation": "Các mức phạt nghiêm khắc được thực thi để đảm bảo sự bảo vệ môi trường chặt chẽ."
 },
+    {
         "word": "waste disposal",
       "type": "n",
       "ipa": "/weɪst dɪˈspəʊ.zəl/",
@@ -3375,6 +3460,7 @@ const vocabularyData = {
       "example": "Modern municipal plants apply green incineration for sanitary waste disposal.",
       "exampleTranslation": "Các nhà máy thành phố hiện đại áp dụng thiêu hủy xanh để xử lý rác thải hợp vệ sinh."
 },
+    {
         "word": "combat climate change",
       "type": "phrase",
       "ipa": "/ˈkɒm.bæt ˈklaɪ.mət tʃeɪndʒ/",
@@ -3382,6 +3468,7 @@ const vocabularyData = {
       "example": "Phasing out coal burning is a paramount measure to combat climate change.",
       "exampleTranslation": "Loại bỏ dần việc đốt than là biện pháp tối quan trọng để chống biến đổi khí hậu."
 },
+    {
         "word": "sustainable expansion",
       "type": "n",
       "ipa": "/səˈsteɪ.nə.bəl ɪkˈspæn.ʃən/",
@@ -3389,6 +3476,7 @@ const vocabularyData = {
       "example": "Ecotourism developers focus on sustainable expansion that respects wild habitats.",
       "exampleTranslation": "Các nhà phát triển du lịch sinh thái tập trung vào sự mở rộng bền vững tôn trọng các môi trường hoang dã."
 },
+    {
         "word": "give off",
       "type": "v",
       "ipa": "/ɡɪv ɒf/",
@@ -3396,6 +3484,7 @@ const vocabularyData = {
       "example": "Smoldering peat bogs give off thick plumes of carbon monoxide.",
       "exampleTranslation": "Các bãi than bùn âm ỉ cháy tỏa ra những cột khói carbon monoxide dày đặc."
 },
+    {
         "word": "clean up",
       "type": "v",
       "ipa": "/kliːn ʌp/",
@@ -3403,6 +3492,7 @@ const vocabularyData = {
       "example": "Communities mobilize hundreds of volunteers to clean up contaminated coastlines.",
       "exampleTranslation": "Cộng đồng huy động hàng trăm tình nguyện viên để làm sạch các bờ biển bị ô nhiễm."
 },
+    {
         "word": "cut down",
       "type": "v",
       "ipa": "/kʌt daʊn/",
@@ -3410,6 +3500,7 @@ const vocabularyData = {
       "example": "Logging companies were fined for illegally cutting down virgin rainforests.",
       "exampleTranslation": "Các công ty lâm nghiệp đã bị phạt vì chặt hạ trái phép các khu rừng mưa nguyên sinh."
 },
+    {
         "word": "habitat",
       "type": "n",
       "ipa": "/ˈhæb.ɪ.tæt/",
@@ -3417,6 +3508,7 @@ const vocabularyData = {
       "example": "Mangrove forests create a vital habitat for juvenile fish and migratory birds.",
       "exampleTranslation": "Rừng ngập mặn tạo ra một môi trường sống quan trọng cho cá con và các loài chim di cư."
 },
+    {
         "word": "conservation",
       "type": "n",
       "ipa": "/ˌkɒn.səˈveɪ.ʃən/",
@@ -3424,6 +3516,7 @@ const vocabularyData = {
       "example": "International conservation programs have helped mountain gorilla numbers rebound.",
       "exampleTranslation": "Các chương trình bảo tồn quốc tế đã giúp số lượng khỉ đột núi phục hồi trở lại."
 },
+    {
         "word": "extinct",
       "type": "adj",
       "ipa": "/ɪkˈstɪŋkt/",
@@ -3431,6 +3524,7 @@ const vocabularyData = {
       "example": "The dodo bird became extinct in the seventeenth century following human arrival.",
       "exampleTranslation": "Chim dodo đã tuyệt chủng vào thế kỷ XVII sau khi con người đặt chân tới."
 },
+    {
         "word": "in danger of extinction",
       "type": "phrase",
       "ipa": "/ɪn ˈdeɪn.dʒər ɒv ɪkˈstɪŋk.ʃən/",
@@ -3438,6 +3532,7 @@ const vocabularyData = {
       "example": "Over a third of amphibian species are in danger of extinction worldwide.",
       "exampleTranslation": "Hơn một phần ba các loài lưỡng cư đang trong nguy cơ bị tuyệt chủng trên toàn cầu."
 },
+    {
         "word": "loss of natural habitat",
       "type": "n",
       "ipa": "/lɒs ɒv ˈnætʃ.ər.əl ˈhæb.ɪ.tæt/",
@@ -3445,6 +3540,7 @@ const vocabularyData = {
       "example": "Agricultural expansion is the foremost cause of the loss of natural habitat.",
       "exampleTranslation": "Sự mở rộng nông nghiệp là nguyên nhân hàng đầu dẫn đến sự mất đi môi trường sống tự nhiên."
 },
+    {
         "word": "wildlife conservation",
       "type": "n",
       "ipa": "/ˈwaɪld.laɪf ˌkɒn.səˈveɪ.ʃən/",
@@ -3452,6 +3548,7 @@ const vocabularyData = {
       "example": "Rangers dedicate their lives to wildlife conservation and anti-poaching operations.",
       "exampleTranslation": "Các kiểm lâm viên cống hiến cuộc đời mình cho sự bảo tồn động vật hoang dã và các hoạt động chống săn trộm."
 },
+    {
         "word": "natural ecosystem",
       "type": "n",
       "ipa": "/ˈnætʃ.ər.əl ˈiː.kəʊˌsɪs.təm/",
@@ -3459,6 +3556,7 @@ const vocabularyData = {
       "example": "Introducing non-native predators quickly destabilizes a pristine natural ecosystem.",
       "exampleTranslation": "Đưa các loài săn mồi ngoại lai vào sẽ nhanh chóng gây bất ổn cho một hệ sinh thái tự nhiên nguyên sơ."
 },
+    {
         "word": "clear out",
       "type": "v",
       "ipa": "/klɪər aʊt/",
@@ -3466,6 +3564,7 @@ const vocabularyData = {
       "example": "Commercial ranches clear out thousands of acres of tropical forest for pasture.",
       "exampleTranslation": "Các trang trại thương mại phát quang hàng ngàn mẫu rừng nhiệt đới để làm đồng cỏ."
 },
+    {
         "word": "at an alarming rate",
       "type": "phrase",
       "ipa": "/æt ən əˈlɑː.mɪŋ reɪt/",
@@ -4075,6 +4174,7 @@ const vocabularyData = {
     "example": "The inventor was famous for dreaming up wacky contraptions that amused everyone.",
     "exampleTranslation": "Nhà phát minh nổi tiếng vì nghĩ ra những cỗ máy lập dị, quái lạ khiến ai nấy đều thích thú."
   },
+    {
         "word": "innovation",
       "type": "n",
       "ipa": "/ˌɪn.əˈveɪ.ʃən/",
@@ -4082,6 +4182,7 @@ const vocabularyData = {
       "example": "Technological innovation fuels the creation of next-generation renewable fuels.",
       "exampleTranslation": "Đổi mới công nghệ thúc đẩy việc tạo ra các loại nhiên liệu tái tạo thế hệ mới."
 },
+    {
         "word": "scientific breakthrough",
       "type": "n",
       "ipa": "/ˌsaɪənˈtɪf.ɪk ˈbreɪk.θruː/",
@@ -4089,6 +4190,7 @@ const vocabularyData = {
       "example": "Nuclear fusion ignition was heralded as a monumental scientific breakthrough.",
       "exampleTranslation": "Sự kích hoạt nhiệt hạch hạt nhân được ca ngợi là một đột phá khoa học mang tính lịch sử."
 },
+    {
         "word": "artificial intelligence (AI)",
       "type": "n",
       "ipa": "/ˌɑː.tɪˈfɪʃ.əl ɪnˈtel.ɪ.dʒəns/",
@@ -4096,6 +4198,7 @@ const vocabularyData = {
       "example": "Artificial Intelligence (AI) algorithms can synthesize molecular structures in seconds.",
       "exampleTranslation": "Các thuật toán Trí tuệ nhân tạo (AI) có thể tổng hợp cấu trúc phân tử chỉ trong vài giây."
 },
+    {
         "word": "automation",
       "type": "n",
       "ipa": "/ˌɔː.təˈmeɪ.ʃən/",
@@ -4103,6 +4206,7 @@ const vocabularyData = {
       "example": "Robotic automation in factories streamlines output while minimizing physical fatigue.",
       "exampleTranslation": "Tự động hóa bằng robot trong các nhà máy tinh gọn sản lượng đồng thời giảm thiểu mệt mỏi thể chất."
 },
+    {
         "word": "advanced materials",
       "type": "n",
       "ipa": "/ədˌvɑːnst məˈtɪə.ri.əlz/",
@@ -4110,6 +4214,7 @@ const vocabularyData = {
       "example": "Nanotech-engineered advanced materials enable ultra-lightweight aerospace design.",
       "exampleTranslation": "Vật liệu tiên tiến chế tạo từ công nghệ nano cho phép thiết kế hàng không vũ trụ siêu nhẹ."
 },
+    {
         "word": "obsolete",
       "type": "adj",
       "ipa": "/ˈɒb.sə.liːt/",
@@ -4117,6 +4222,7 @@ const vocabularyData = {
       "example": "Rapid algorithmic advances render older programming models obsolete within years.",
       "exampleTranslation": "Những bước tiến thuật toán nhanh chóng khiến các mô hình lập trình cũ trở nên lỗi thời chỉ sau vài năm."
 },
+    {
         "word": "revolutionary changes",
       "type": "n",
       "ipa": "/ˌrev.əˈluː.ʃən.ər.i ˈtʃeɪn.dʒɪz/",
@@ -4124,6 +4230,7 @@ const vocabularyData = {
       "example": "Quantum computing promises revolutionary changes to cryptography and encryption.",
       "exampleTranslation": "Điện toán lượng tử hứa hẹn những thay đổi mang tính cách mạng đối với mật mã học và mã hóa."
 },
+    {
         "word": "adapt to change",
       "type": "phrase",
       "ipa": "/əˈdæpt tuː tʃeɪndʒ/",
@@ -4131,6 +4238,7 @@ const vocabularyData = {
       "example": "High-tech enterprises must adapt to change constantly to preserve market leadership.",
       "exampleTranslation": "Các doanh nghiệp công nghệ cao phải liên tục thích ứng với sự thay đổi để duy trì vị thế dẫn đầu thị trường."
 },
+    {
         "word": "do research",
       "type": "phrase",
       "ipa": "/duː rɪˈsɜːtʃ/",
@@ -4138,6 +4246,7 @@ const vocabularyData = {
       "example": "Biomedical teams do research to uncover the neural mechanisms of memory.",
       "exampleTranslation": "Các nhóm y sinh tiến hành nghiên cứu để khám phá các cơ chế thần kinh của trí nhớ."
 },
+    {
         "word": "digital transformation",
       "type": "n",
       "ipa": "/ˌdɪdʒ.ɪ.təl ˌtræns.fəˈmeɪ.ʃən/",
@@ -4145,6 +4254,7 @@ const vocabularyData = {
       "example": "Government ministries accelerate digital transformation to provide seamless citizen services.",
       "exampleTranslation": "Các bộ ngành chính phủ đẩy nhanh chuyển đổi số để cung cấp dịch vụ liền mạch cho người dân."
 },
+    {
         "word": "leapfrog ahead",
       "type": "phrase",
       "ipa": "/ˈliːp.frɒɡ əˈhed/",
@@ -4152,6 +4262,7 @@ const vocabularyData = {
       "example": "By adopting satellite internet, remote provinces leapfrog ahead into the digital era.",
       "exampleTranslation": "Bằng cách áp dụng internet vệ tinh, các tỉnh vùng sâu vùng xa đi tắt đón đầu bước vào kỷ nguyên số."
 },
+    {
         "word": "dream up",
       "type": "v",
       "ipa": "/driːm ʌp/",
@@ -4159,6 +4270,7 @@ const vocabularyData = {
       "example": "Visionaries gather at tech incubators to dream up futuristic space habitats.",
       "exampleTranslation": "Những người có tầm nhìn quy tụ tại các vườn ươm công nghệ để ấp ủ những môi trường sống không gian tương lai."
 },
+    {
         "word": "carry out",
       "type": "v",
       "ipa": "/ˈkær.i aʊt/",
@@ -4166,6 +4278,7 @@ const vocabularyData = {
       "example": "Aerospace engineers carry out simulated wind tunnel tests on hypersonic drones.",
       "exampleTranslation": "Các kỹ sư hàng không vũ trụ tiến hành các thử nghiệm mô phỏng hầm gió trên máy bay không người lái siêu thanh."
 },
+    {
         "word": "move beyond",
       "type": "v",
       "ipa": "/muːv bɪˈjɒnd/",
@@ -4173,6 +4286,7 @@ const vocabularyData = {
       "example": "Pioneering labs move beyond conventional silicon chips toward optical computing.",
       "exampleTranslation": "Các phòng thí nghiệm tiên phong chuyển dịch vượt khỏi các chip silicon truyền thống hướng tới điện toán quang học."
 },
+    {
         "word": "a double-edged sword",
       "type": "phrase",
       "ipa": "/ə ˌdʌb.əl.edʒd ˈsɔːd/",
@@ -4180,6 +4294,7 @@ const vocabularyData = {
       "example": "Autonomous machine systems are a double-edged sword that warrants strict ethical oversight.",
       "exampleTranslation": "Các hệ thống máy móc tự hành là con dao hai lưỡi cần có sự giám sát đạo đức nghiêm ngặt."
 },
+    {
         "word": "pave the way for",
       "type": "phrase",
       "ipa": "/peɪv ðə weɪ fɔːr/",

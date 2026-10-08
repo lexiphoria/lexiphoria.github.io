@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Đang chuyển sang Lexiphoria…</title>
+    <style>
+        body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+               background: #F5E6C8; color: #1A1A1A; font-family: 'Segoe UI', Tahoma, sans-serif; padding: 16px; text-align: center; }
+    </style>
+    <script>
+        // Nhận tiến độ học tập chuyển từ địa chỉ cũ hayuongsting.github.io (xem repo hayuongsting.github.io, tệp 404.html).
+        // Chỉ nhập một lần cho mỗi trình duyệt và không ghi đè dữ liệu đã có ở địa chỉ mới.
+        (function () {
+            var FLAG = '__lexiphoria_imported_from_hayuongsting';
+            var params = new URLSearchParams(location.hash.slice(1));
+            history.replaceState(null, '', location.pathname);
+
+            var to = params.get('to') || '/';
+            if (to.charAt(0) !== '/' || to.charAt(1) === '/' || to.charAt(1) === '\\') to = '/';
+
+            try {
+                var raw = params.get('data');
+                if (raw && !localStorage.getItem(FLAG)) {
+                    var data = JSON.parse(raw);
+                    Object.keys(data).forEach(function (k) {
+                        if (localStorage.getItem(k) === null) localStorage.setItem(k, data[k]);
+                    });
+                    localStorage.setItem(FLAG, new Date().toISOString());
+                }
+            } catch (e) { /* dữ liệu hỏng hoặc trình duyệt chặn lưu trữ: vẫn chuyển trang */ }
+
+            location.replace(to);
+        })();
+    </script>
+</head>
+
+<body>
+    <p>Đang chuyển tiến độ học tập sang địa chỉ mới… Nếu trang không tự chuyển, <a href="/">bấm vào đây</a>.</p>
+</body>
+
+</html>

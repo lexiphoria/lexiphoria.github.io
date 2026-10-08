@@ -71,7 +71,6 @@
   let quest = null;
   let battle = null;
   let preferTyping = false;
-  let postcardTimer = null;
   let reopenSheet = null;
   let lastPhase = null;
   const calledOut = new Set(); // người địa phương đã rao trong lượt chơi này
@@ -132,7 +131,6 @@
   // Tên khu theo giờ: Quảng trường Hội An Quán ban ngày thành Đêm hội di sản khi trời tối
   const nightKey = (zone, key) => (phase() === 'night' && zone[`${key}_night`] ? `${key}_night` : key);
   const zoneName = (zone) => tx(zone, nightKey(zone, 'name'));
-  const zoneSub = (zone) => tx(zone, nightKey(zone, 'sub'));
 
   function toast(text) {
     const box = $('#toasts');
@@ -153,14 +151,14 @@
   // Tạm dừng nhân vật và làm mờ nền giấy phía sau khi có khung thoại, thẻ từ hoặc bảng
   function syncPause() {
     if (!engine) return;
-    const open = !$('#dialog').hidden || !$('#word-card').hidden || !$('#sheet').hidden || !$('#postcard').hidden || !$('#title-screen').hidden;
+    const open = !$('#dialog').hidden || !$('#word-card').hidden || !$('#sheet').hidden || !$('#title-screen').hidden;
     engine.paused = open;
     engine.keys.clear();
     if (open) {
       engine.player.path = [];
       engine.player.onArrive = null;
     }
-    $('#paper-blur').classList.toggle('show', !$('#dialog').hidden || !$('#word-card').hidden || !$('#postcard').hidden);
+    $('#paper-blur').classList.toggle('show', !$('#dialog').hidden || !$('#word-card').hidden);
   }
 
   // Tờ sprite của Local Host: nam 4 hàng × 4 khung, nữ 3 khung (trước, nghiêng, sau)
@@ -236,29 +234,11 @@
     return true;
   }
 
-  /* ---------- Khu phố & bưu thiếp giới thiệu ---------- */
+  /* ---------- Khu phố ---------- */
 
-  function onZone(zone) {
+  // Vào khu mới: không báo tên địa điểm cho người chơi, chỉ cập nhật giờ trong ngày
+  function onZone() {
     updateChip();
-    if (d().zonesSeen[zone.id] || !$('#title-screen').hidden) return;
-    d().zonesSeen[zone.id] = true;
-    save();
-    showPostcard(zone);
-  }
-
-  function showPostcard(zone) {
-    const card = $('#postcard');
-    card.replaceChildren(
-      el('div', { class: 'postcard-inner dongho-panel' },
-        el('img', { src: zone.card, alt: zoneName(zone) }),
-        el('div', { class: 'postcard-text' },
-          el('p', { class: 'postcard-name' }, zoneName(zone)),
-          el('p', {}, zoneSub(zone)),
-          el('button', { class: 'btn-action', type: 'button', onclick: hidePostcard }, L('Vào khu ➔', 'Enter ➔')))));
-    card.hidden = false;
-    syncPause();
-    clearTimeout(postcardTimer);
-    postcardTimer = setTimeout(hidePostcard, 3500);
   }
 
   // Hành trình hôm nay: mỗi nhiệm vụ chính thắp một đèn trên cổng Đêm hội
@@ -271,7 +251,7 @@
 
   function updateChip() {
     if (!engine || !engine.zone) return;
-    $('#zone-chip').textContent = `📍 ${zoneName(engine.zone)} · ${L(...PHASE_LABEL[phase()])}`;
+    $('#zone-chip').textContent = L(...PHASE_LABEL[phase()]);
   }
 
   // Giờ thay đổi (xong nhiệm vụ chính, hoặc chờ tới hoàng hôn): báo tin, đổi ánh sáng, thả hoa đăng buổi tối
@@ -283,12 +263,6 @@
     }
     lastPhase = ph;
     updateChip();
-  }
-
-  function hidePostcard() {
-    clearTimeout(postcardTimer);
-    $('#postcard').hidden = true;
-    syncPause();
   }
 
   /* ---------- Poke & Prod: thẻ từ (Tra cứu từ vựng Đông Hồ) ---------- */
@@ -1125,7 +1099,7 @@
     openSheet(L('📜 Giấy chứng nhận Local Host', '📜 Local Host Certificate'),
       el('div', { class: 'certificate dongho-panel' },
         el('img', { src: 'assets/items/certificate.webp', alt: '', class: 'cert-icon' }),
-        el('p', { class: 'cert-kicker' }, 'IMMERSION TOWN · HỘI AN 2026'),
+        el('p', { class: 'cert-kicker' }, 'IMMERSION TOWN'),
         el('p', { class: 'cert-title' }, 'CERTIFICATE'),
         el('p', {}, L('Chứng nhận', 'This certifies that')),
         nameLine,
@@ -1674,7 +1648,6 @@
     }, label));
     $('#title-screen').replaceChildren(
       el('div', { class: 'title-card dongho-panel' },
-        el('p', { class: 'title-kicker' }, L('PHỐ CỔ HỘI AN 2026', 'HOI AN ANCIENT TOWN 2026')),
         el('h1', { class: 'title-logo dongho-ink-text' }, 'Immersion Town'),
         el('p', { class: 'title-sub' }, L('Bạn là Local Host, đại sứ hiếu khách của phố cổ. Dạo phố, chạm vào mọi thứ để khám phá từ vựng và giúp du khách bằng tiếng Anh.', 'You are a Local Host, the ancient town’s hospitality ambassador. Explore the streets, tap everything to discover new words and help visitors in English.')),
         el('div', { class: 'lang-row', role: 'group', 'aria-label': L('Ngôn ngữ chỉ dẫn', 'Instruction language') }, el('span', {}, L('🌐 Chỉ dẫn:', '🌐 Instructions:')), langs),
@@ -1852,7 +1825,7 @@
     const unknown = store.priorityList().filter((id) => LEX[id]);
     const known = Object.keys(d().words).filter((id) => LEX[id] && store.wordState(id) === 'known');
     return `<div class="report">
-<p class="kicker">IMMERSION TOWN · HỘI AN 2026</p>
+<p class="kicker">IMMERSION TOWN</p>
 <h2>${L('Báo cáo học tập', 'Learning report')}</h2>
 <p class="meta"><b>${L('Học sinh', 'Student')}:</b> ${esc(playerName())} · <b>${L('Thời điểm', 'Date')}:</b> ${esc(date)}</p>
 <p class="meta"><b>${L('Danh hiệu', 'Title')}:</b> ${esc(d().title || tx(DATA, 'default_title'))} · <b>XP:</b> ${d().xp} · <b>${L('Nhiệm vụ', 'Missions')}:</b> ${questsDone()}/${DATA.quests.length} · <b>Booklets:</b> ${bookletCount()}/${BOOKLETS.length} · <b>${L('Lễ trao danh hiệu', 'Award ceremony')}:</b> ${d().ceremony ? '✓' : '–'}</p>
@@ -2075,7 +2048,6 @@ ${table([L('Từ', 'Word'), L('Nghĩa', 'Meaning'), L('Lần gắn Unknown', 'Ta
     // Chạm vào khung tranh thì đóng thẻ từ (chạy trước khi engine xử lý cú chạm)
     $('#paper-blur').addEventListener('click', () => {
       if (!$('#word-card').hidden) closeWordCard();
-      else if (!$('#postcard').hidden) hidePostcard();
     });
     $('#btn-lang').addEventListener('click', () => {
       setLang(viUI() ? 'en' : 'vi');
@@ -2114,7 +2086,6 @@ ${table([L('Từ', 'Word'), L('Nghĩa', 'Meaning'), L('Lần gắn Unknown', 'Ta
       if (e.key !== 'Escape') return;
       if (!$('#sheet').hidden) closeSheet();
       else if (!$('#word-card').hidden) closeWordCard();
-      else if (!$('#postcard').hidden) hidePostcard();
       else if (!$('#dialog').hidden) closeQuest();
     });
   }

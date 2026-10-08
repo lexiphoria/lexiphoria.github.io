@@ -124,6 +124,16 @@ WALK_OPTS = {'guide': {'bg_tol': 0.1, 'pockets': False, 'ground': 0.93}}
 WALK_COLOR = {'guide': (200, 96, 132)}
 
 
+def blank_plate(im, box):
+    """Xoá chữ trên biển số (không gắn nhãn địa danh, năm lên xe): tô lòng biển bằng màu xanh của chính biển."""
+    a = np.asarray(im).copy()
+    x0, y0, x1, y1 = box
+    region = a[y0:y1, x0:x1, :3].astype(int)
+    dark = region.sum(axis=2) < 330            # điểm nền xanh của biển (chữ màu kem sáng hơn)
+    a[y0:y1, x0:x1, :3] = np.median(region[dark], axis=0).astype(np.uint8)
+    return Image.fromarray(a, 'RGBA')
+
+
 def walk_strip(sheet, kind, front, left, right, color=None, **opts):
     cut = lambda box: cutlib.cutout(sheet, box, kind, keep_largest=True, **opts)  # noqa: E731
     f = cut(front)
@@ -155,6 +165,7 @@ if __name__ == '__main__':
     # Ô tô điện trắng đang cắm sạc ở trạm sạc (tranh poster "Phố cổ Hội An 2026"): nền là tranh cảnh nên dùng GrabCut
     car = cutlib.grabcut(source('Thiết kế chưa có tên (8).png'), (455, 700, 800, 884), bg_below=852,
                          fg_rects=[(520, 740, 760, 840), (700, 765, 785, 838), (466, 800, 502, 855), (584, 822, 624, 880), (734, 852, 774, 875)])
+    car = blank_plate(car, (248, 112, 294, 125))
     cutlib.save_webp(car, DECO / 'ev_car.webp')
     made.append(('ev_car', car))
     cutlib.contact_sheet(made, S / 'frontal_contact.jpg', cols=7)

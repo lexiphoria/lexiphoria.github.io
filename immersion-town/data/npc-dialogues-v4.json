@@ -1,6 +1,6 @@
 {
   "version": "5.0",
-  "game_module": "Immersion Town – Hội An 2026: Local Host Edition (tranh Đông Hồ)",
+  "game_module": "Immersion Town – Local Host Edition (tranh Đông Hồ)",
   "description": "RPG góc nghiêng 3/4 trên 4 bản đồ Tiled (data/maps/*.tmx); vị trí NPC đặt trong lớp Objects của bản đồ. Người học đóng vai Local Host đón du khách nước ngoài; người Việt (Chú Minh, Bác Tư) nói tiếng Việt, người học phiên dịch sang tiếng Anh. \"speaker\" tham chiếu \"characters\"; \"target_vocabulary\" tham chiếu id trong data/lexicon.json; từ khoá có nhiều cách nói được ngăn bằng dấu |.",
   "default_title": "Local Host tập sự",
   "default_title_en": "Trainee Local Host",

@@ -8,6 +8,8 @@
   // State
   let testId = 1;
   let mode = 'exam'; // 'practice' or 'exam'
+  let currentSection = 'listening'; // 'listening' (1-10) or 'reading' (11-50)
+  let passageSyncEnabled = true;
   let currentTest = null;
   let userAnswers = {};
   let flagged = new Set();
@@ -56,7 +58,69 @@
     if (m === 'practice' || m === 'exam') {
       mode = m;
     }
+    const s = params.get('section');
+    if (s === 'listening' || s === 'reading') {
+      currentSection = s;
+    }
   }
+
+  // Switch between Listening and Reading & Language sections
+  function switchSection(section, shouldScroll = true) {
+    currentSection = section;
+
+    // Update section tabs in header
+    const tabListening = document.getElementById('tabListening');
+    const tabReading = document.getElementById('tabReading');
+    if (tabListening) tabListening.classList.toggle('active', section === 'listening');
+    if (tabReading) tabReading.classList.toggle('active', section === 'reading');
+
+    // Update main container layout classes
+    const mainContainer = document.getElementById('quizMainContainer');
+    if (mainContainer) {
+      mainContainer.classList.toggle('section-mode-listening', section === 'listening');
+      mainContainer.classList.toggle('section-mode-reading', section === 'reading');
+    }
+
+    // Toggle question stream wrappers
+    const listeningWrapper = document.getElementById('listeningQuestionsWrapper');
+    const readingWrapper = document.getElementById('readingQuestionsWrapper');
+    if (listeningWrapper) listeningWrapper.style.display = section === 'listening' ? 'flex' : 'none';
+    if (readingWrapper) readingWrapper.style.display = section === 'reading' ? 'flex' : 'none';
+
+    // Toggle reading passage pane
+    const passagePane = document.getElementById('passagePane');
+    if (passagePane) {
+      passagePane.style.display = section === 'listening' ? 'none' : 'flex';
+    }
+
+    // Update palette group highlighting
+    const palListening = document.getElementById('palGroupListening');
+    const palReading = document.getElementById('palGroupReading');
+    if (palListening) palListening.classList.toggle('active', section === 'listening');
+    if (palReading) palReading.classList.toggle('active', section === 'reading');
+
+    // Set active question for the new section
+    if (section === 'listening') {
+      const curQ = currentTest.questions.find(q => q.id === currentQid);
+      if (!curQ || curQ.num > 10) {
+        const firstL = currentTest.questions.find(q => q.num <= 10);
+        if (firstL) setCurrentQuestion(firstL.id);
+      }
+    } else {
+      const curQ = currentTest.questions.find(q => q.id === currentQid);
+      if (!curQ || curQ.num <= 10) {
+        const firstR = currentTest.questions.find(q => q.num > 10);
+        if (firstR) setCurrentQuestion(firstR.id);
+      } else {
+        syncPassageToQuestion(curQ.id);
+      }
+    }
+
+    if (shouldScroll) {
+      window.scrollQuestionsTop();
+    }
+  }
+  window.switchSection = switchSection;
 
   // Load Test
   function loadTest(id) {
@@ -69,6 +133,7 @@
     flagged.clear();
     isSubmitted = false;
     timeRemaining = (currentTest.timeLimit || 60) * 60;
+    currentSection = 'listening';
 
     // Load cached progress if in practice mode
     if (mode === 'practice') {
@@ -85,6 +150,7 @@
     renderQuestions();
     renderPalette();
     updateStats();
+    switchSection(currentSection, false);
 
     currentQid = null;
     navLock = false;
@@ -120,7 +186,7 @@
     if (testSelect) {
       testSelect.value = currentTest.id;
       testSelect.onchange = (e) => {
-        window.location.search = `?test=${e.target.value}&mode=${mode}`;
+        window.location.search = `?test=${e.target.value}&mode=${mode}&section=${currentSection}`;
       };
     }
   }
@@ -157,15 +223,15 @@
     timerInterval = setInterval(updateTimer, 1000);
   }
 
-  // Passage Pane Rendering
+  // Passage Pane Rendering (Văn bản đọc hiểu cuộn theo câu hỏi)
   function renderPassagePane() {
     const pane = document.getElementById('passagePane');
     if (!pane) return;
 
-    // Find all unique passages in this test, with the question numbers they cover
+    // Find all unique passages in this test (from questions 11-50)
     const passagesMap = new Map();
     currentTest.questions.forEach(q => {
-      if (!q.passage) return;
+      if (!q.passage || q.num <= 10) return;
       if (!passagesMap.has(q.passageTitle)) {
         passagesMap.set(q.passageTitle, {
           title: q.passageTitle,
@@ -184,11 +250,22 @@
       return;
     }
 
-    pane.style.display = '';
     pane.innerHTML = `
       <div class="passage-pane-header">
-        <h3>📄 Văn Bản / Bài Đọc Hiểu</h3>
-        <span class="passage-pane-hint">Split-Screen View</span>
+        <div class="passage-pane-header-top">
+          <div class="passage-live-badge" id="passageLiveBadge">
+            <span class="live-dot"></span>
+            <span id="passageLiveBadgeText">Đang làm: Câu 11</span>
+          </div>
+          <button type="button" id="passageSyncToggleBtn" class="btn-sync-toggle active" onclick="window.togglePassageSync()" title="Bật/Tắt tự động cuộn đoạn văn theo câu hỏi">
+            <span class="sync-icon">🔄</span>
+            <span class="sync-text">Cuộn theo câu</span>
+          </button>
+        </div>
+        <div class="passage-title-row">
+          <h3 id="passageMainTitle">Đoạn văn bài đọc</h3>
+          <span class="passage-range-tag" id="passageRangeTag">Câu 11 – 16</span>
+        </div>
       </div>
       <div id="passageTabs" class="passage-tabs" role="tablist"></div>
       <div id="passageContent" class="passage-content"></div>
@@ -199,7 +276,7 @@
       const first = p.qNums[0];
       const last = p.qNums[p.qNums.length - 1];
       const fullTitle = p.title.replace(` - Đề ${currentTest.id}`, '');
-      // Short label from the English part, e.g. "Đoạn văn điền từ (Guided Cloze)" -> "Guided Cloze"
+      // Short label from English name in brackets
       const shortTitle = (fullTitle.match(/\(([^)]+)\)/) || [])[1] || fullTitle;
       const tabBtn = document.createElement('button');
       tabBtn.type = 'button';
@@ -209,12 +286,30 @@
       tabBtn.innerHTML = '<span></span><span class="passage-tab-range"></span>';
       tabBtn.firstChild.textContent = shortTitle;
       tabBtn.lastChild.textContent = first === last ? `· Câu ${first}` : `· Câu ${first}–${last}`;
-      tabBtn.onclick = () => showPassage(idx);
+      tabBtn.onclick = () => {
+        showPassage(idx);
+        const firstQ = currentTest.questions.find(item => item.num === first);
+        if (firstQ) scrollToQuestion(firstQ.id);
+      };
       tabsContainer.appendChild(tabBtn);
     });
 
     showPassage(0);
   }
+
+  // Toggle Auto-Scroll Passage with Question
+  window.togglePassageSync = function() {
+    passageSyncEnabled = !passageSyncEnabled;
+    const btn = document.getElementById('passageSyncToggleBtn');
+    if (btn) {
+      btn.classList.toggle('active', passageSyncEnabled);
+      const textSpan = btn.querySelector('.sync-text');
+      if (textSpan) textSpan.textContent = passageSyncEnabled ? 'Cuộn theo câu' : 'Cuộn tự do';
+    }
+    if (passageSyncEnabled && currentQid) {
+      syncPassageToQuestion(currentQid, true);
+    }
+  };
 
   function showPassage(idx) {
     const p = passages[idx];
@@ -227,9 +322,43 @@
       b.setAttribute('aria-selected', i === idx ? 'true' : 'false');
     });
 
+    const fullTitle = p.title.replace(` - Đề ${currentTest.id}`, '');
+    const mainTitleEl = document.getElementById('passageMainTitle');
+    if (mainTitleEl) mainTitleEl.textContent = fullTitle;
+
+    const rangeEl = document.getElementById('passageRangeTag');
+    if (rangeEl && p.qNums.length) {
+      const first = p.qNums[0];
+      const last = p.qNums[p.qNums.length - 1];
+      rangeEl.textContent = first === last ? `Câu ${first}` : `Câu ${first} – ${last}`;
+    }
+
     contentContainer.replaceChildren(...buildPassageBlocks(p));
     contentContainer.scrollTop = 0;
     highlightPassageGap();
+  }
+
+  function showEmptyPassage(q) {
+    const contentContainer = document.getElementById('passageContent');
+    if (!contentContainer) return;
+    activePassageIdx = -1;
+    document.querySelectorAll('#passageTabs .passage-tab').forEach(b => b.classList.remove('active'));
+
+    const mainTitleEl = document.getElementById('passageMainTitle');
+    if (mainTitleEl) mainTitleEl.textContent = 'Phần Câu Hỏi Độc Lập';
+
+    const rangeEl = document.getElementById('passageRangeTag');
+    if (rangeEl) rangeEl.textContent = `Câu ${q ? q.num : '22 – 26'}`;
+
+    contentContainer.innerHTML = `
+      <div class="passage-empty-card">
+        <div class="empty-icon">🧩</div>
+        <h4>Câu Hỏi Sắp Xếp Trật Tự &amp; Hội Thoại</h4>
+        <div class="empty-badge">Câu 22 – 26 • Trắc nghiệm độc lập</div>
+        <p>Các câu hỏi phần này không sử dụng bài đọc dài. Mỗi câu có tập hợp các câu văn riêng biệt (a, b, c, d...) cần được sắp xếp theo logic chuẩn.</p>
+        <div class="empty-tip">💡 Gợi ý: Hãy đọc kỹ liên từ nối (for example, however, therefore) và đại từ chỉ định để tìm câu mở đầu phù hợp!</div>
+      </div>
+    `;
   }
 
   // Passages come from a PDF and are hard-wrapped: rejoin wrapped lines into paragraphs
@@ -268,10 +397,17 @@
 
   function buildPassageBlocks(p) {
     const gapNums = new Set(p.qNums);
+    const isReadingComp = (p.title || '').toLowerCase().includes('reading') || (p.title || '').toLowerCase().includes('đọc hiểu');
+    let paraIndex = 0;
 
     return reflowPassage(p.content).map(block => {
       const el = document.createElement('p');
       el.className = `passage-${block.type}`;
+
+      if (block.type === 'para' && isReadingComp) {
+        paraIndex++;
+        el.setAttribute('data-para', `¶ ${paraIndex}`);
+      }
 
       // Inline markup: "(14)" gap markers become badges that jump to their question;
       // [u]...[/u] underlines and [b]...[/b] bolds text that questions refer to;
@@ -297,7 +433,10 @@
           gap.title = `Đi tới câu ${num}`;
           gap.onclick = () => {
             const q = currentTest.questions.find(item => item.num === num);
-            if (q) scrollToQuestion(q.id);
+            if (q) {
+              if (currentSection !== 'reading') switchSection('reading', false);
+              scrollToQuestion(q.id);
+            }
           };
           el.appendChild(gap);
         } else if (part) {
@@ -308,30 +447,95 @@
     });
   }
 
-  // Mark the current question's gap in the passage and bring it into view
-  function highlightPassageGap() {
+  // Synchronize passage view to the active question (cuộn theo câu hỏi, tới câu nào hiện bài đọc đó)
+  function syncPassageToQuestion(qid, forceScroll = false) {
+    const q = currentTest.questions.find(item => item.id === qid);
+    if (!q || q.num <= 10) return;
+
+    // Update live badge in header
+    const liveBadge = document.getElementById('passageLiveBadgeText');
+    if (liveBadge) {
+      liveBadge.textContent = `Đang làm: Câu ${q.num}`;
+    }
+
+    // If question has no passage (e.g. Q22-26 Sentence Arrangement)
+    if (!q.passage) {
+      showEmptyPassage(q);
+      return;
+    }
+
+    // Question belongs to a passage
+    const passageIdx = passages.findIndex(p => p.title === q.passageTitle);
+    if (passageIdx !== -1) {
+      if (passageIdx !== activePassageIdx) {
+        showPassage(passageIdx);
+      }
+    }
+
     const content = document.getElementById('passageContent');
     if (!content) return;
 
-    const q = currentTest.questions.find(item => item.id === currentQid);
+    // Highlight gap badge if cloze test
     let activeGap = null;
     content.querySelectorAll('.passage-gap').forEach(gap => {
-      const isActive = !!q && Number(gap.dataset.num) === q.num;
+      const isActive = Number(gap.dataset.num) === q.num;
       gap.classList.toggle('active', isActive);
+      gap.classList.toggle('active-focus', isActive);
       if (isActive) activeGap = gap;
     });
 
+    // Remove previous paragraph highlights
+    content.querySelectorAll('.passage-para.highlight-focus').forEach(el => el.classList.remove('highlight-focus'));
+
+    if (!passageSyncEnabled && !forceScroll) return;
+
     if (activeGap) {
       const gapTop = activeGap.offsetTop;
-      if (gapTop < content.scrollTop || gapTop > content.scrollTop + content.clientHeight - 40) {
-        // Instant on purpose: a smooth scroll here would interrupt the questions column's scroll
-        content.scrollTop = gapTop - content.clientHeight / 3;
+      content.scrollTo({
+        top: Math.max(0, gapTop - 110),
+        behavior: 'smooth'
+      });
+    } else {
+      // Reading comprehension: check if question stem mentions specific paragraph
+      const qText = (q.question || '').toLowerCase();
+      const paraMatch = qText.match(/(?:paragraph|đoạn)\s*(\d+)/i) || qText.match(/(\d+)(?:st|nd|rd|th)\s+paragraph/i);
+      const paras = content.querySelectorAll('.passage-para');
+      if (paraMatch && paras.length) {
+        const pNum = parseInt(paraMatch[1], 10);
+        if (pNum >= 1 && pNum <= paras.length) {
+          const targetPara = paras[pNum - 1];
+          targetPara.classList.add('highlight-focus');
+          content.scrollTo({
+            top: Math.max(0, targetPara.offsetTop - 70),
+            behavior: 'smooth'
+          });
+          return;
+        }
+      }
+
+      // Proportional smooth scroll based on question index within this passage
+      const currentPassage = passages[activePassageIdx];
+      if (currentPassage && currentPassage.qNums.length > 1) {
+        const qIdx = currentPassage.qNums.indexOf(q.num);
+        if (qIdx !== -1) {
+          const ratio = qIdx / (currentPassage.qNums.length - 1);
+          const targetScroll = ratio * Math.max(0, content.scrollHeight - content.clientHeight);
+          content.scrollTo({
+            top: targetScroll,
+            behavior: 'smooth'
+          });
+        }
       }
     }
   }
 
-  // Undo PDF soft wraps in a question stem (a near-full-width line cut mid-sentence),
-  // keeping intentional breaks such as a./b./c. lists and letter lines
+  function highlightPassageGap() {
+    if (currentQid) {
+      syncPassageToQuestion(currentQid, false);
+    }
+  }
+
+  // Undo PDF soft wraps in a question stem
   function unwrapStem(text) {
     const lines = text.split('\n');
     let out = lines[0];
@@ -357,12 +561,44 @@
     window.speechSynthesis.speak(utterance);
   }
 
-  // Render Questions
+  // Render Questions (Chia riêng phần Listening và phần Reading & Language)
   function renderQuestions() {
     const container = document.getElementById('questionsContainer');
     if (!container) return;
 
     container.innerHTML = '';
+
+    // Create Listening Section Wrapper (Questions 1 - 10)
+    const listeningWrapper = document.createElement('div');
+    listeningWrapper.id = 'listeningQuestionsWrapper';
+    listeningWrapper.className = 'section-questions-wrapper';
+    listeningWrapper.style.display = currentSection === 'listening' ? 'flex' : 'none';
+    listeningWrapper.style.flexDirection = 'column';
+    listeningWrapper.style.gap = '1.25rem';
+
+    // Create Reading & Language Section Wrapper (Questions 11 - 50)
+    const readingWrapper = document.createElement('div');
+    readingWrapper.id = 'readingQuestionsWrapper';
+    readingWrapper.className = 'section-questions-wrapper';
+    readingWrapper.style.display = currentSection === 'reading' ? 'flex' : 'none';
+    readingWrapper.style.flexDirection = 'column';
+    readingWrapper.style.gap = '1.25rem';
+
+    // Intro Banner for Reading & Language Section
+    const readingIntro = document.createElement('div');
+    readingIntro.className = 'section-intro-card';
+    readingIntro.innerHTML = `
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
+        <div>
+          <span class="tag tag-primary">Phần 2: Reading &amp; Language</span>
+          <h3 style="margin-top:0.35rem; font-size:1.1rem; font-weight:700;">Đọc Hiểu, Điền Khuyết &amp; Sắp Xếp Câu (Câu 11 – 50)</h3>
+        </div>
+        <button type="button" class="btn btn-secondary" style="font-size:0.8rem; padding:0.35rem 0.75rem;" onclick="window.switchSection('listening')">
+          🎧 Quay lại Phần Nghe (1 – 10)
+        </button>
+      </div>
+    `;
+    readingWrapper.appendChild(readingIntro);
 
     currentTest.questions.forEach((q, index) => {
       const card = document.createElement('article');
@@ -385,7 +621,6 @@
       let audioHtml = '';
       if (q.audio) {
         if (q.audio.src) {
-          // Embedded MP3 Audio Player (Replaces QR code)
           audioHtml = `
             <div class="audio-player-box" id="audio_box_${q.id}">
               <div class="audio-player-header">
@@ -435,7 +670,6 @@
             </div>
           `;
         } else {
-          // Fallback to QR code box for tests without direct mp3 src
           audioHtml = `
             <div class="audio-qr-box">
               <div class="qr-code-wrapper">
@@ -462,7 +696,7 @@
       // Options HTML
       let optionsHtml = '';
       const selectedOpt = userAnswers[q.id];
-      
+
       for (const [key, val] of Object.entries(q.options)) {
         let optClass = 'option-item';
         if (selectedOpt === key) {
@@ -519,16 +753,40 @@
         ${explanationHtml}
       `;
 
-      container.appendChild(card);
+      if (q.num <= 10) {
+        listeningWrapper.appendChild(card);
+      } else {
+        readingWrapper.appendChild(card);
+      }
     });
+
+    // Switch section prompt card at bottom of Listening
+    const switchCard = document.createElement('div');
+    switchCard.className = 'section-switch-card';
+    switchCard.innerHTML = `
+      <div class="switch-card-icon">🎧 ➔ 📖</div>
+      <div class="switch-card-body">
+        <h4>Đã hoàn thành 10 câu phần Nghe?</h4>
+        <p>Chuyển sang làm phần Đọc hiểu &amp; Ngôn ngữ (Câu 11 – 50). Bạn vẫn có thể quay lại nghe lại bất cứ lúc nào!</p>
+      </div>
+      <button type="button" class="btn btn-primary" style="padding:0.6rem 1.25rem;" onclick="window.switchSection('reading')">
+        Chuyển Sang Phần 2: Reading &amp; Language (11 – 50) ➔
+      </button>
+    `;
+    listeningWrapper.appendChild(switchCard);
+
+    container.appendChild(listeningWrapper);
+    container.appendChild(readingWrapper);
   }
 
-  // Palette Rendering
+  // Palette Rendering (Tách riêng nhóm Listening và nhóm Reading)
   function renderPalette() {
-    const grid = document.getElementById('paletteGrid');
-    if (!grid) return;
+    const listGrid = document.getElementById('paletteListeningGrid');
+    const readGrid = document.getElementById('paletteReadingGrid');
+    if (!listGrid || !readGrid) return;
 
-    grid.innerHTML = '';
+    listGrid.innerHTML = '';
+    readGrid.innerHTML = '';
 
     currentTest.questions.forEach(q => {
       const btn = document.createElement('button');
@@ -547,15 +805,27 @@
         scrollToQuestion(q.id);
       };
 
-      grid.appendChild(btn);
+      if (q.num <= 10) {
+        listGrid.appendChild(btn);
+      } else {
+        readGrid.appendChild(btn);
+      }
     });
   }
 
   function scrollToQuestion(qid) {
+    const q = currentTest.questions.find(item => item.id === qid);
+    if (!q) return;
+
+    // Switch section if necessary
+    const targetSection = q.num <= 10 ? 'listening' : 'reading';
+    if (targetSection !== currentSection) {
+      switchSection(targetSection, false);
+    }
+
     const card = document.getElementById(`q_card_${qid}`);
     if (card) {
       navLock = true;
-      // Sync the passage first: a second scroll started later would cancel this smooth one
       setCurrentQuestion(qid);
       card.scrollIntoView({ behavior: 'smooth', block: 'start' });
       card.style.boxShadow = '0 0 20px rgba(99, 102, 241, 0.6)';
@@ -574,13 +844,12 @@
     const pbtn = document.getElementById(`palette_btn_${qid}`);
     if (pbtn) pbtn.classList.add('current');
 
-    // Keep the passage pane on the text this question belongs to
     const q = currentTest.questions.find(item => item.id === qid);
-    const idx = q && q.passage ? passages.findIndex(p => p.title === q.passageTitle) : -1;
-    if (idx !== -1 && idx !== activePassageIdx) {
-      showPassage(idx);
-    } else {
-      highlightPassageGap();
+    if (!q) return;
+
+    // If question is in reading section, synchronize passage!
+    if (q.num > 10) {
+      syncPassageToQuestion(qid);
     }
   }
 
@@ -589,7 +858,13 @@
     if (navLock) return;
     const container = document.getElementById('questionsContainer');
     if (!container) return;
-    const cards = container.querySelectorAll('.question-card');
+
+    const wrapper = currentSection === 'listening'
+      ? document.getElementById('listeningQuestionsWrapper')
+      : document.getElementById('readingQuestionsWrapper');
+    if (!wrapper) return;
+
+    const cards = wrapper.querySelectorAll('.question-card');
     if (!cards.length) return;
 
     // Desktop: the questions column scrolls itself. Mobile: the page scrolls.
@@ -744,6 +1019,27 @@
       const pct = (answeredCount / 50) * 100;
       progressBar.style.width = `${pct}%`;
     }
+
+    // Calculate section progress
+    let lCount = 0;
+    let rCount = 0;
+    Object.keys(userAnswers).forEach(qid => {
+      const q = currentTest.questions.find(item => item.id === qid);
+      if (q) {
+        if (q.num <= 10) lCount++;
+        else rCount++;
+      }
+    });
+
+    const tabL = document.getElementById('tabListeningStat');
+    if (tabL) tabL.textContent = `Câu 1 – 10 • ${lCount}/10 đã làm`;
+    const tabR = document.getElementById('tabReadingStat');
+    if (tabR) tabR.textContent = `Câu 11 – 50 • ${rCount}/40 đã làm`;
+
+    const palL = document.getElementById('palListeningCount');
+    if (palL) palL.textContent = `${lCount}/10`;
+    const palR = document.getElementById('palReadingCount');
+    if (palR) palR.textContent = `${rCount}/40`;
   }
 
   // Submit Quiz

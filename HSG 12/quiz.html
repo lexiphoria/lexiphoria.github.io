@@ -64,13 +64,34 @@
     <div style="width:100%; height:3px; background:rgba(255,255,255,0.08); margin-top:0.6rem; border-radius:2px; overflow:hidden;">
       <div id="progressBar" style="width:0%; height:100%; background:var(--accent-gradient); transition:width 0.3s ease;"></div>
     </div>
+
+    <!-- Section Navigation Tabs (Tách riêng Listening và Reading) -->
+    <div class="quiz-section-nav" id="quizSectionNav">
+      <div class="section-tabs-wrapper">
+        <button type="button" class="section-tab-btn active" id="tabListening" onclick="window.switchSection('listening')" title="Làm phần thi Nghe (Câu 1 – 10)">
+          <span class="section-tab-icon">🎧</span>
+          <span class="section-tab-text">
+            <span class="section-tab-title">Phần 1: Listening (Bài Nghe)</span>
+            <span class="section-tab-desc" id="tabListeningStat">Câu 1 – 10 • 0/10 đã làm</span>
+          </span>
+        </button>
+
+        <button type="button" class="section-tab-btn" id="tabReading" onclick="window.switchSection('reading')" title="Làm phần thi Đọc hiểu & Ngôn ngữ (Câu 11 – 50)">
+          <span class="section-tab-icon">📖</span>
+          <span class="section-tab-text">
+            <span class="section-tab-title">Phần 2: Reading &amp; Language (Đọc Hiểu)</span>
+            <span class="section-tab-desc" id="tabReadingStat">Câu 11 – 50 • 0/40 đã làm</span>
+          </span>
+        </button>
+      </div>
+    </div>
   </div>
 
   <!-- Main Quiz Container (Split Screen) -->
   <div class="quiz-wrapper">
-    <div class="quiz-main-container">
+    <div class="quiz-main-container section-mode-listening" id="quizMainContainer">
 
-      <!-- Left: Reading Passage Pane (wide, scrolls independently) -->
+      <!-- Left: Reading Passage Pane (wide, scrolls independently & synced with active question) -->
       <aside id="passagePane" class="passage-pane" aria-label="Bài đọc hiểu và văn bản"></aside>
 
       <!-- Center: Questions Stream -->
@@ -78,15 +99,36 @@
 
       <!-- Right: Sticky Palette (1-50) -->
       <aside class="palette-pane" aria-label="Bảng câu hỏi">
-        <h3>Bảng Câu Hỏi (1 – 50)</h3>
+        <div class="palette-top-header">
+          <h3>Bảng Câu Hỏi (1 – 50)</h3>
+        </div>
         <div class="palette-legend">
           <div class="legend-item"><span class="legend-dot answered"></span> Đã làm</div>
           <div class="legend-item"><span class="legend-dot flagged"></span> Gắn cờ</div>
           <div class="legend-item"><span class="legend-dot unanswered"></span> Chưa làm</div>
         </div>
-        <div id="paletteGrid" class="palette-grid"></div>
 
-        <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid var(--border-color); display:flex; flex-direction:column; gap:0.5rem;">
+        <div class="palette-sections">
+          <!-- Listening Group (1-10) -->
+          <div class="palette-group" id="palGroupListening">
+            <div class="palette-group-header" onclick="window.switchSection('listening')" title="Bấm để chuyển sang phần Nghe">
+              <span class="palette-group-title">🎧 Phần 1: Listening</span>
+              <span class="palette-group-count" id="palListeningCount">0/10</span>
+            </div>
+            <div id="paletteListeningGrid" class="palette-grid"></div>
+          </div>
+
+          <!-- Reading & Language Group (11-50) -->
+          <div class="palette-group" id="palGroupReading">
+            <div class="palette-group-header" onclick="window.switchSection('reading')" title="Bấm để chuyển sang phần Đọc & Ngôn ngữ">
+              <span class="palette-group-title">📖 Phần 2: Reading &amp; Language</span>
+              <span class="palette-group-count" id="palReadingCount">0/40</span>
+            </div>
+            <div id="paletteReadingGrid" class="palette-grid"></div>
+          </div>
+        </div>
+
+        <div style="margin-top:1.25rem; padding-top:0.85rem; border-top:1px solid var(--border-color); display:flex; flex-direction:column; gap:0.5rem;">
           <button class="btn btn-secondary" style="width:100%; font-size:0.82rem;" onclick="window.scrollQuestionsTop()">
             ⬆️ Lên đầu trang
           </button>

@@ -1360,6 +1360,13 @@
         this.hooks.onNpc(npc);
         return;
       }
+      // Tới gần một NPC (chưa đủ gần để bắt chuyện): báo cho game, ví dụ để phát lời rao tiếng Việt
+      const near = this.npcs.map((n) => [n, Math.hypot(n.x - p.x, n.y - p.y)]).filter(([, dd]) => dd < NEAR + 90).sort((a2, b2) => a2[1] - b2[1])[0];
+      const nearId = near ? near[0].id : null;
+      if (nearId !== this.nearNpc) {
+        this.nearNpc = nearId;
+        if (near && this.hooks.onNear) this.hooks.onNear(near[0]);
+      }
       if (this.autoSpot) {
         const s = this.spots.find((x) => x.key === this.autoSpot);
         if (!s || Math.hypot(s.rect[0] + s.rect[2] / 2 - p.x, s.rect[1] + s.rect[3] - p.y) > NEAR + 60) this.autoSpot = null;

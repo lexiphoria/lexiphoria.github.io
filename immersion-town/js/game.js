@@ -74,6 +74,7 @@
   let postcardTimer = null;
   let reopenSheet = null;
   let lastPhase = null;
+  const calledOut = new Set(); // người địa phương đã rao trong lượt chơi này
 
   /* ---------- Tiện ích ---------- */
 
@@ -1991,7 +1992,16 @@ ${table([L('Từ', 'Word'), L('Nghĩa', 'Meaning'), L('Lần gắn Unknown', 'Ta
       d().poked[spot.key] = true;
       pokeWord(spot.word);
     },
+    // Lời rao tiếng Việt khi tới gần cô bác (tệp trong assets/audio, thiếu thì đọc bằng giọng máy)
+    onNear(npc) {
+      const ch = charOf(npc.id);
+      if (!ch || !ch.call || calledOut.has(npc.id) || !d().soundOn) return;
+      if (!$('#dialog').hidden || !$('#word-card').hidden || !$('#sheet').hidden) return;
+      calledOut.add(npc.id);
+      C.playLine(ch.call.audio_file, ch.call.vi, { langs: ['vi-VN', 'vi'] });
+    },
     onNpc(npc) {
+      calledOut.add(npc.id);
       if (npc.id === 'ambassador') return openAmbassador();
       // Du khách đang tham gia một việc nhỏ (Mark ở quán trà, Sarah ở gánh hàng rong) thì mở việc nhỏ đó
       const favour = sideQuests().find((q) => sideOpen(q) && !isDone(q.id) && q.turns.some((t) => t.speaker === npc.id));

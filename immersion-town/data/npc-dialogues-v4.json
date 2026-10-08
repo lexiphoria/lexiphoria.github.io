@@ -8,10 +8,28 @@
   "characters": {
     "mark": { "name": "Mark", "role": "Phượt thủ sinh thái người Mỹ", "lang": "en", "voice": ["en-US"], "pitch": 0.95, "sprite": "assets/npc/mark.webp", "face": "assets/npc/mark_face.webp", "greet": "Hi there! 👋", "role_en": "American eco-backpacker" },
     "sarah": { "name": "Sarah", "role": "Du khách Anh, mê trải nghiệm văn hoá", "lang": "en", "voice": ["en-GB", "en-US"], "pitch": 1.05, "sprite": "assets/npc/sarah.webp", "face": "assets/npc/sarah_face.webp", "greet": "Excuse me! Can you help me?", "role_en": "British tourist who loves cultural experiences" },
-    "minh": { "name": "Chú Minh", "role": "Chủ tiệm may áo dài", "lang": "vi", "sprite": "assets/chars/tailor.webp", "face": "assets/chars/tailor_face.webp", "greet": "Chào cháu! Giúp chú với!", "role_en": "Owner of the áo dài tailor shop" },
+    "minh": {
+      "name": "Chú Minh",
+      "role": "Chủ tiệm may áo dài",
+      "lang": "vi",
+      "sprite": "assets/chars/tailor.webp",
+      "face": "assets/chars/tailor_face.webp",
+      "greet": "Chào cháu! Giúp chú với!",
+      "role_en": "Owner of the áo dài tailor shop",
+      "call": { "vi": "Áo dài lụa tơ tằm Hội An may lấy ngay trong ngày đây cháu ơi!", "audio_file": "assets/audio/voice_local_vendor_tailor_vn.mp3" }
+    },
     "emma": { "name": "Emma", "role": "Vlogger du lịch người Đức", "lang": "en", "voice": ["en-GB", "en-US"], "pitch": 1.1, "sprite": "assets/npc/emma.webp", "face": "assets/npc/emma_face.webp", "greet": "Hallo! These lanterns are so pretty!", "role_en": "German travel vlogger" },
     "david": { "name": "Professor David", "role": "Nhà nghiên cứu di sản người Úc", "lang": "en", "voice": ["en-AU", "en-GB", "en-US"], "pitch": 0.9, "sprite": "assets/npc/david.webp", "face": "assets/npc/david_face.webp", "greet": "Good evening!", "role_en": "Australian heritage researcher" },
-    "tu": { "name": "Bác Tư", "role": "Người bán hoa đăng ở bến sông", "lang": "vi", "sprite": "assets/chars/lantern_man.webp", "face": "assets/chars/lantern_man_face.webp", "greet": "Mua hoa đăng không cháu?", "role_en": "Flower-lantern seller at the river pier" },
+    "tu": {
+      "name": "Bác Tư",
+      "role": "Người bán hoa đăng ở bến sông",
+      "lang": "vi",
+      "sprite": "assets/chars/lantern_man.webp",
+      "face": "assets/chars/lantern_man_face.webp",
+      "greet": "Mua hoa đăng không cháu?",
+      "role_en": "Flower-lantern seller at the river pier",
+      "call": { "vi": "Hoa đăng giấy tự phân hủy thả sông Hoài cầu an đây cháu ơi!", "audio_file": "assets/audio/voice_local_vendor_lantern_vn.mp3" }
+    },
     "hoa": {
       "name": "Cô Hoa",
       "role": "Chủ quán Cà phê Đồng Lúa OCOP",
@@ -20,7 +38,8 @@
       "face": "assets/chars/ocop_lady_face.webp",
       "greet": "Uống trà sen không cháu?",
       "chat": { "vi": "Trà sen của cô là sản phẩm OCOP, quét mã QR trên hũ là biết trà trồng ở đâu. Khách nước ngoài hỏi thì cháu giới thiệu giúp cô nha!", "en": "This lotus tea is an OCOP product. Scan the QR code on the jar to see its traceability.", "audio_file": "assets/audio/chat_hoa.mp3" },
-      "role_en": "Owner of the Rice Field OCOP Café"
+      "role_en": "Owner of the Rice Field OCOP Café",
+      "call": { "vi": "Mời cháu thử trà sen hữu cơ OCOP, có mã QR truy xuất nguồn gốc nè!", "audio_file": "assets/audio/voice_local_vendor_ocop_vn.mp3" }
     },
     "vendor": {
       "name": "Cô Ba",
@@ -30,9 +49,20 @@
       "face": "assets/chars/pole_vendor_face.webp",
       "greet": "Bánh đây, bánh nóng đây!",
       "chat": { "vi": "Cô gánh hàng rong ở phố cổ hơn hai mươi năm rồi. Đòn gánh này là hình ảnh quen thuộc của Hội An đó cháu.", "en": "She is a street vendor. She carries her food on a carrying pole, a familiar image of Hoi An.", "audio_file": "assets/audio/chat_vendor.mp3" },
-      "role_en": "Street vendor with a carrying pole"
+      "role_en": "Street vendor with a carrying pole",
+      "call": { "vi": "Bánh ít lá gai, chè bắp nóng hổi đây, thanh toán VietQR nhanh gọn nha!", "audio_file": "assets/audio/voice_local_vendor_food_vn.mp3" }
     },
-    "ambassador": { "name": "Lớp trưởng", "role": "Điều phối Đêm hội di sản", "lang": "vi", "sprite": "assets/chars/classmate_girl.webp", "greet": "Chào mừng tới Đêm hội!", "role_en": "Heritage Night coordinator", "name_en": "Class Monitor", "greet_en": "Welcome to the Heritage Night!" }
+    "ambassador": {
+      "name": "Lớp trưởng",
+      "role": "Điều phối Đêm hội di sản",
+      "lang": "vi",
+      "sprite": "assets/chars/classmate_girl.webp",
+      "greet": "Chào mừng tới Đêm hội!",
+      "role_en": "Heritage Night coordinator",
+      "name_en": "Class Monitor",
+      "greet_en": "Welcome to the Heritage Night!",
+      "call": { "vi": "Dạ xin chào! Bạn cần mình hỗ trợ tra từ vựng tiếng Anh hay chỉ đường không?", "audio_file": "assets/audio/voice_local_student_host_vn.mp3" }
+    }
   },
   "quests": [
     {

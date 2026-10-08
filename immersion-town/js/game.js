@@ -2000,6 +2000,14 @@ ${table([L('Từ', 'Word'), L('Nghĩa', 'Meaning'), L('Lần gắn Unknown', 'Ta
       calledOut.add(npc.id);
       C.playLine(ch.call.audio_file, ch.call.vi, { langs: ['vi-VN', 'vi'] });
     },
+    // Lời rao của hàng quán khi đi ngang trước cửa (data/npc-dialogues-v4.json → shops), mỗi quán một lần mỗi lượt chơi
+    onShopNear(id) {
+      const sh = DATA && DATA.shops && DATA.shops[id];
+      if (!sh || !sh.call || calledOut.has(`shop:${id}`) || !d().soundOn) return;
+      if (!$('#dialog').hidden || !$('#word-card').hidden || !$('#sheet').hidden) return;
+      calledOut.add(`shop:${id}`);
+      C.playLine(sh.call.audio_file, sh.call.vi, { langs: ['vi-VN', 'vi'] });
+    },
     onNpc(npc) {
       calledOut.add(npc.id);
       if (npc.id === 'ambassador') return openAmbassador();

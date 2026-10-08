@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="26" height="14" tilewidth="64" tileheight="64" infinite="0" nextlayerid="3" nextobjectid="57">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="26" height="14" tilewidth="64" tileheight="64" infinite="0" nextlayerid="3" nextobjectid="59">
  <properties>
   <property name="zone" value="ev"/>
   <property name="name" value="Bãi xe điện ngoại vi"/>
@@ -109,7 +109,7 @@
     <property name="word" value="solar-canopy"/>
    </properties>
   </object>
-  <object id="8" name="" type="prop" x="927" y="112" width="34" height="19">
+  <object id="8" name="" type="prop" x="927" y="112" width="35" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="charger_box"/>
@@ -250,10 +250,14 @@
     <property name="variant" value="bamboo"/>
    </properties>
   </object>
-  <object id="25" name="" type="tree" x="1472" y="166" width="38" height="22">
+  <object id="25" name="" type="prop" x="1401" y="166" width="180" height="22">
    <properties>
-    <property name="kind" value="tree"/>
-    <property name="variant" value="banyan"/>
+    <property name="kind" value="prop"/>
+    <property name="img" value="banyan_big"/>
+    <property name="ph" type="float" value="182"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="banyan-tree"/>
+    <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
   <object id="26" name="" type="tree" x="1357" y="685" width="38" height="22">
@@ -262,10 +266,14 @@
     <property name="variant" value="areca"/>
    </properties>
   </object>
-  <object id="27" name="" type="tree" x="1549" y="787" width="38" height="22">
+  <object id="27" name="" type="prop" x="1514" y="790" width="109" height="19">
    <properties>
-    <property name="kind" value="tree"/>
-    <property name="variant" value="bougainvillea"/>
+    <property name="kind" value="prop"/>
+    <property name="img" value="bougain_bush_pink"/>
+    <property name="ph" type="float" value="104"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="bougainvillea"/>
+    <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
   <object id="28" name="" type="tree" x="294" y="602" width="38" height="22">
@@ -280,7 +288,27 @@
     <property name="variant" value="areca"/>
    </properties>
   </object>
-  <object id="30" name="" type="prop" x="20" y="301" width="139" height="19">
+  <object id="30" name="" type="walker" x="64" y="560" width="410" height="6">
+   <properties>
+    <property name="kind" value="walker"/>
+    <property name="who" value="guide"/>
+    <property name="speed" type="float" value="34"/>
+    <property name="start" type="float" value="0.2"/>
+    <property name="rest" type="float" value="2.5"/>
+    <property name="dir" value="right"/>
+   </properties>
+  </object>
+  <object id="31" name="" type="walker" x="800" y="605" width="544" height="6">
+   <properties>
+    <property name="kind" value="walker"/>
+    <property name="who" value="takashi"/>
+    <property name="speed" type="float" value="30"/>
+    <property name="start" type="float" value="0.6"/>
+    <property name="rest" type="float" value="2.5"/>
+    <property name="dir" value="left"/>
+   </properties>
+  </object>
+  <object id="32" name="" type="prop" x="19" y="301" width="141" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="px_fence"/>
@@ -289,7 +317,7 @@
     <property name="word" value="fence"/>
    </properties>
   </object>
-  <object id="31" name="" type="prop" x="376" y="301" width="139" height="19">
+  <object id="33" name="" type="prop" x="374" y="301" width="141" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="px_fence"/>
@@ -298,7 +326,7 @@
     <property name="word" value="fence"/>
    </properties>
   </object>
-  <object id="32" name="" type="prop" x="27" y="624" width="139" height="19">
+  <object id="34" name="" type="prop" x="26" y="624" width="141" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="px_fence"/>
@@ -307,7 +335,7 @@
     <property name="word" value="fence"/>
    </properties>
   </object>
-  <object id="33" name="" type="prop" x="443" y="624" width="139" height="19">
+  <object id="35" name="" type="prop" x="442" y="624" width="141" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="px_fence"/>
@@ -316,7 +344,7 @@
     <property name="word" value="fence"/>
    </properties>
   </object>
-  <object id="34" name="" type="prop" x="743" y="653" width="108" height="19">
+  <object id="36" name="" type="prop" x="743" y="653" width="108" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="px_banana"/>
@@ -325,7 +353,7 @@
     <property name="word" value="banana-tree"/>
    </properties>
   </object>
-  <object id="35" name="" type="prop" x="1259" y="61" width="138" height="19">
+  <object id="37" name="" type="prop" x="1259" y="61" width="137" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="px_banana2"/>
@@ -335,7 +363,7 @@
     <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="36" name="" type="prop" x="1576" y="336" width="74" height="19">
+  <object id="38" name="" type="prop" x="1576" y="336" width="74" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="px_bush"/>
@@ -343,7 +371,7 @@
     <property name="quiet" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="37" name="" type="prop" x="909" y="723" width="45" height="19">
+  <object id="39" name="" type="prop" x="909" y="723" width="45" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="pot_banana_red"/>
@@ -353,7 +381,7 @@
     <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="38" name="" type="prop" x="1192" y="723" width="41" height="19">
+  <object id="40" name="" type="prop" x="1192" y="723" width="41" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="pot_flower_blue"/>
@@ -363,7 +391,7 @@
     <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="39" name="" type="prop" x="897" y="858" width="36" height="19">
+  <object id="41" name="" type="prop" x="897" y="858" width="37" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="planter_box"/>
@@ -373,7 +401,7 @@
     <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="40" name="" type="prop" x="1347" y="854" width="45" height="19">
+  <object id="42" name="" type="prop" x="1347" y="854" width="44" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="bonsai"/>
@@ -383,7 +411,7 @@
     <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="41" name="" type="prop" x="1230" y="682" width="50" height="19">
+  <object id="43" name="" type="prop" x="1230" y="682" width="50" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="tq_bins"/>
@@ -393,7 +421,7 @@
     <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="42" name="" type="prop" x="1453" y="723" width="89" height="19">
+  <object id="44" name="" type="prop" x="1453" y="723" width="89" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="tq_veg"/>
@@ -402,7 +430,7 @@
     <property name="word" value="herbs"/>
    </properties>
   </object>
-  <object id="43" name="" type="prop" x="1432" y="845" width="42" height="19">
+  <object id="45" name="" type="prop" x="1432" y="845" width="41" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="tq_herbs"/>
@@ -411,7 +439,7 @@
     <property name="word" value="herbs"/>
    </properties>
   </object>
-  <object id="44" name="" type="prop" x="300" y="787" width="117" height="19">
+  <object id="46" name="" type="prop" x="300" y="787" width="117" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="tq_buffalo"/>
@@ -420,7 +448,7 @@
     <property name="word" value="water-buffalo"/>
    </properties>
   </object>
-  <object id="45" name="" type="prop" x="399" y="413" width="73" height="19">
+  <object id="47" name="" type="prop" x="399" y="413" width="73" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="tq_cart"/>
@@ -430,7 +458,7 @@
     <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="46" name="" type="prop" x="607" y="256" width="60" height="19">
+  <object id="48" name="" type="prop" x="607" y="256" width="59" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="tq_ebike"/>
@@ -440,33 +468,33 @@
     <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="47" name="" type="spot" x="0" y="0" width="512" height="320">
+  <object id="49" name="" type="spot" x="0" y="0" width="512" height="320">
    <properties>
     <property name="kind" value="spot"/>
     <property name="word" value="rice-paddy"/>
    </properties>
   </object>
-  <object id="48" name="" type="spot" x="0" y="640" width="832" height="256">
+  <object id="50" name="" type="spot" x="0" y="640" width="832" height="256">
    <properties>
     <property name="kind" value="spot"/>
     <property name="word" value="rice-paddy"/>
    </properties>
   </object>
-  <object id="49" name="ambassador" type="npc" x="141" y="442" width="64" height="64">
+  <object id="51" name="ambassador" type="npc" x="141" y="442" width="64" height="64">
    <properties>
     <property name="kind" value="npc"/>
     <property name="facing" value="down"/>
     <property name="until" value="q_ev"/>
    </properties>
   </object>
-  <object id="50" name="mark" type="npc" x="768" y="294" width="64" height="64">
+  <object id="52" name="mark" type="npc" x="768" y="294" width="64" height="64">
    <properties>
     <property name="kind" value="npc"/>
     <property name="facing" value="down"/>
     <property name="until" value="q_ev"/>
    </properties>
   </object>
-  <object id="51" name="mark" type="npc" x="1059" y="765" width="64" height="64">
+  <object id="53" name="mark" type="npc" x="1059" y="765" width="64" height="64">
    <properties>
     <property name="kind" value="npc"/>
     <property name="facing" value="down"/>
@@ -474,31 +502,31 @@
     <property name="until" value="all"/>
    </properties>
   </object>
-  <object id="52" name="q_ev" type="finale" x="877" y="90" width="122" height="134">
+  <object id="54" name="q_ev" type="finale" x="877" y="90" width="122" height="134">
    <properties>
     <property name="kind" value="finale"/>
     <property name="act" value="charge"/>
    </properties>
   </object>
-  <object id="53" name="hoa" type="npc" x="1267" y="768" width="64" height="64">
+  <object id="55" name="hoa" type="npc" x="1267" y="768" width="64" height="64">
    <properties>
     <property name="kind" value="npc"/>
     <property name="facing" value="down"/>
    </properties>
   </object>
-  <object id="54" name="tea_1" type="collectible" x="192" y="518" width="64" height="64">
+  <object id="56" name="tea_1" type="collectible" x="192" y="518" width="64" height="64">
    <properties>
     <property name="kind" value="collectible"/>
     <property name="type" value="tea"/>
    </properties>
   </object>
-  <object id="55" name="tea_2" type="collectible" x="1510" y="294" width="64" height="64">
+  <object id="57" name="tea_2" type="collectible" x="1510" y="294" width="64" height="64">
    <properties>
     <property name="kind" value="collectible"/>
     <property name="type" value="tea"/>
    </properties>
   </object>
-  <object id="56" name="bk_suggest" type="collectible" x="922" y="858" width="64" height="64">
+  <object id="58" name="bk_suggest" type="collectible" x="922" y="858" width="64" height="64">
    <properties>
     <property name="kind" value="collectible"/>
     <property name="type" value="booklet"/>

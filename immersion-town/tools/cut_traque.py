@@ -1,83 +1,21 @@
 """Tách vật từ tờ 'Phố cổ Hội An & Làng rau Trà Quế' (Game Asset/hoian_traque_asset_sheet_2026.png) vào assets/deco/.
 
+Dùng cutlib: xoá nền giấy loang từ mép, túi nền kín trong lòng vật, mảng đất (ground) và nước (water) vẽ sẵn
+dưới chân, viền sáng ở mép. Bảng xem trước ghi ra thư mục tạm (immersion-town-deco/tq_contact.jpg).
+
 Chạy:  python immersion-town/tools/cut_traque.py
 """
 import tempfile
 from pathlib import Path
 
-import numpy as np
-from collections import deque
 from PIL import Image
 
-
-def cutout_paper(box):
-    """Xoá nền giấy vàng nâu (H 25–55°, S 0.18–0.6, V > 0.8) loang từ mép khung; nét mực chặn lại."""
-    x0, y0, x1, y1 = box
-    a = np.asarray(SHEET.crop((x0, y0, x1, y1))).astype(float) / 255
-    h, w, _ = a.shape
-    mx, mn = a.max(axis=2), a.min(axis=2)
-    v = mx
-    s = np.where(mx > 0, (mx - mn) / np.maximum(mx, 1e-6), 0)
-    r, g, b = a[..., 0], a[..., 1], a[..., 2]
-    hue = np.degrees(np.arctan2(np.sqrt(3) * (g - b), 2 * r - g - b)) % 360
-    paper = (v > STRENGTH) & (s < 0.62) & (((hue > 22) & (hue < 58)) | (s < 0.12))
-    bg = np.zeros((h, w), bool)
-    q = deque()
-    for x in range(w):
-        for y in (0, h - 1):
-            if paper[y, x] and not bg[y, x]:
-                bg[y, x] = True
-                q.append((y, x))
-    for y in range(h):
-        for x in (0, w - 1):
-            if paper[y, x] and not bg[y, x]:
-                bg[y, x] = True
-                q.append((y, x))
-    while q:
-        y, x = q.popleft()
-        for ny, nx in ((y - 1, x), (y + 1, x), (y, x - 1), (y, x + 1)):
-            if 0 <= ny < h and 0 <= nx < w and paper[ny, nx] and not bg[ny, nx]:
-                bg[ny, nx] = True
-                q.append((ny, nx))
-    fg = ~bg
-    # Bỏ mảng nhỏ rời rạc (vệt cọ, mẩu vật bên cạnh)
-    seen = np.zeros_like(fg)
-    comps = []
-    for y in range(h):
-        for x in range(w):
-            if fg[y, x] and not seen[y, x]:
-                pts = []
-                q = deque([(y, x)])
-                seen[y, x] = True
-                while q:
-                    cy, cx = q.popleft()
-                    pts.append((cy, cx))
-                    for ny, nx in ((cy - 1, cx), (cy + 1, cx), (cy, cx - 1), (cy, cx + 1)):
-                        if 0 <= ny < h and 0 <= nx < w and fg[ny, nx] and not seen[ny, nx]:
-                            seen[ny, nx] = True
-                            q.append((ny, nx))
-                comps.append(pts)
-    big = max(len(c) for c in comps)
-    keep = np.zeros_like(fg)
-    for c in comps:
-        if len(c) >= big * KEEP_ONE.get(CURRENT, KEEP):
-            ys, xs = zip(*c)
-            keep[list(ys), list(xs)] = True
-    rgb = (a * 255).astype(np.uint8)
-    img = Image.fromarray(np.dstack([rgb, np.where(keep, 255, 0).astype(np.uint8)]), 'RGBA')
-    return img.crop(img.getbbox())
-
-
-STRENGTH = 0.8
-KEEP = 0.08
-KEEP_ONE = {'tq_noodle': 0.5, 'tq_ebike': 0.5, 'tq_cart': 0.5, 'tq_house2': 0.3}
-CURRENT = None
-
+import cutlib
 
 S = Path(tempfile.gettempdir()) / 'immersion-town-deco'  # ảnh xem trước
 (S / 'deco').mkdir(parents=True, exist_ok=True)
 GA = Path(r'C:\Users\Esther\Documents\NK 26-27\SÁNG TẠO AI\Game Asset')
-OUT = Path(r'C:\hayuongsting.github.io\immersion-town\assets\deco')
+OUT = Path(__file__).resolve().parents[1] / 'assets' / 'deco'
 K = 2752 / 2000  # toạ độ đo trên ảnh xem trước rộng 2000 px
 
 # tên: (x0, y0, x1, y1) đo trên ảnh xem trước 2000×1116
@@ -96,19 +34,29 @@ BOXES = {
     'tq_artisan': (1250, 985, 1326, 1090),
 }
 
-SHEET = Image.open(GA / 'hoian_traque_asset_sheet_2026.png').convert('RGB')
-made = {}
-for name, (x0, y0, x1, y1) in BOXES.items():
-    CURRENT = name
-    im = cutout_paper((round(x0 * K), round(y0 * K), round(x1 * K), round(y1 * K)))
-    im.save(OUT / f'{name}.webp', 'WEBP', quality=88, method=6)
-    im.save(S / 'deco' / f'{name}.png')
-    made[name] = im.size
-cols, cw, ch = 7, 230, 230
-board = Image.new('RGBA', (cols * cw, ((len(made) + cols - 1) // cols) * ch), (40, 70, 60, 255))
-for i, name in enumerate(made):
-    im = Image.open(S / 'deco' / f'{name}.png')
-    im.thumbnail((cw - 10, ch - 10))
-    board.alpha_composite(im, ((i % cols) * cw + 5, (i // cols) * ch + 5))
-board.convert('RGB').save(S / 'tq_contact.jpg', quality=85)
-print(made)
+# Tuỳ chọn riêng: ground/water = tỉ lệ chiều cao bắt đầu xoá đất/nước vẽ sẵn; keep = ngưỡng giữ mảng phụ;
+# pockets=False khi phần màu kem là thật (bảng QR).
+OPTS = {name: {'ground': 0.8} for name in BOXES}
+OPTS.update({
+    'tq_bridge': {'water': 0.45, 'ground': 0.72}, 'tq_house2': {'ground': 0.84, 'keep': 0.3},
+    'tq_hut': {'ground': 0.62, 'ground_tol': 0.3}, 'tq_gate': {'ground': 0.86}, 'tq_porch': {'ground': 0.84},
+    'tq_noodle': {'ground': 0.62, 'keep': 0.5}, 'tq_qr': {'ground': 0.88, 'pockets': False},
+    'tq_lamp': {'ground': 0.88}, 'tq_boat': {'water': 0.35}, 'tq_lotus': {'water': 0.3},
+    'tq_buffalo': {'ground': 0.7}, 'tq_cyclo': {'ground': 0.72}, 'tq_stall': {'ground': 0.84},
+    'tq_ebike': {'ground': 0.8, 'keep': 0.5}, 'tq_cart': {'ground': 0.8, 'keep': 0.5},
+    'tq_baichoi': {'ground': 0.84}, 'tq_lion': {'ground': 0.88}, 'tq_drum': {'ground': 0.88},
+    'tq_festival_people': {'ground': 0.9}, 'tq_tourists': {'ground': 0.9}, 'tq_artisan': {'ground': 0.9},
+    'tq_lanterns': {}, 'tq_bamboo': {'ground': 0.86}, 'tq_flame_tree': {'ground': 0.86},
+})
+
+if __name__ == '__main__':
+    sheet = Image.open(GA / 'hoian_traque_asset_sheet_2026.png').convert('RGB')
+    made = []
+    for name, (x0, y0, x1, y1) in BOXES.items():
+        im = cutlib.cutout(sheet, (round(x0 * K), round(y0 * K), round(x1 * K), round(y1 * K)), 'paper', **OPTS[name])
+        if (OUT / f'{name}.webp').exists():  # chỉ ghi đè ảnh game đang dùng; ảnh khác chỉ xem trước
+            cutlib.save_webp(im, OUT / f'{name}.webp')
+        im.save(S / 'deco' / f'{name}.png')
+        made.append((name, im))
+    cutlib.contact_sheet(made, S / 'tq_contact.jpg', cols=7)
+    print({name: im.size for name, im in made})

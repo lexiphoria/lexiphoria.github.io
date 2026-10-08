@@ -43,6 +43,25 @@
     cVendor: 'assets/chars/pole_vendor.webp',
     cBoy: 'assets/chars/classmate_boy.webp',
     cGirl: 'assets/chars/classmate_girl.webp',
+    wGuide: 'assets/chars/walk_guide.webp',
+    wTakashi: 'assets/chars/walk_takashi.webp',
+    wSophia: 'assets/chars/walk_sophia.webp',
+    wJohn: 'assets/chars/walk_john.webp',
+    wAnna: 'assets/chars/walk_anna.webp',
+    wLiwei: 'assets/chars/walk_liwei.webp',
+    wCyclo: 'assets/chars/walk_cyclo.webp',
+  };
+
+  // Khách tham quan đi lại (đối tượng 'walker' trong bản đồ): dải khung tools/cut_frontal.py tạo ra,
+  // ô 0 nhìn thẳng, rồi nl ô đi sang trái, rồi nr ô đi sang phải; h = chiều cao vẽ (px)
+  const WALKERS = {
+    guide: { img: 'wGuide', nl: 4, nr: 4, h: 122 },
+    takashi: { img: 'wTakashi', nl: 1, nr: 1, h: 116 },
+    sophia: { img: 'wSophia', nl: 2, nr: 2, h: 118 },
+    john: { img: 'wJohn', nl: 1, nr: 1, h: 116 },
+    anna: { img: 'wAnna', nl: 1, nr: 1, h: 110 },
+    liwei: { img: 'wLiwei', nl: 2, nr: 2, h: 114 },
+    cyclo: { img: 'wCyclo', nl: 1, nr: 1, h: 120, wheel: true },
   };
 
   // Ảnh và chiều cao vẽ của từng NPC (theo id nhân vật trong data/npc-dialogues-v4.json)
@@ -52,13 +71,26 @@
   };
 
   // Điểm chạm trên mặt tiền nhà (toạ độ trong ảnh gốc)
-  const SIGN = { fTailor: [195, 315, 115, 42], fWorkshop: [165, 248, 135, 52] };
+  const SIGN = {
+    fTailor: [195, 315, 115, 42], fWorkshop: [165, 248, 135, 52],
+    // Hàng quán và nhà cổ vẽ nhìn thẳng (assets/deco, tools/cut_frontal.py)
+    shop_banhmi: [165, 112, 160, 40], shop_caolau: [190, 106, 170, 40], shop_comga: [160, 90, 160, 36],
+    shop_cafe: [130, 150, 170, 34], house_ancient2: [440, 104, 320, 96],
+  };
   const PRESETS = {
     tailor: [['tailor-shop', SIGN.fTailor], ['yin-yang-roof-tiles', [95, 0, 350, 115]], ['bougainvillea', [20, 40, 100, 300]], ['silk-lantern', [110, 140, 295, 72]], ['wooden-shutters', [105, 365, 95, 100]], ['wooden-shutters', [310, 365, 95, 100]]],
     tanky: [['ancient-house', SIGN.fTailor], ['moss', [95, 0, 350, 115]], ['bougainvillea', [20, 40, 100, 300]], ['silk-lantern', [110, 140, 295, 72]], ['wooden-shutters', [105, 365, 95, 100]]],
     workshop: [['workshop', SIGN.fWorkshop], ['craftsmanship', [140, 360, 185, 130]], ['yin-yang-roof-tiles', [80, 0, 320, 160]], ['bougainvillea', [10, 160, 120, 160]], ['silk-lantern', [70, 270, 110, 120]], ['tassel', [285, 265, 120, 130]]],
     ocop: [['souvenir', SIGN.fWorkshop], ['folding-lantern', [140, 300, 185, 75]], ['yin-yang-roof-tiles', [80, 0, 320, 160]], ['bougainvillea', [330, 160, 125, 160]]],
     hall: [['@boss', [560, 520, 130, 185]], ['assembly-hall', [540, 385, 175, 95]], ['yin-yang-roof-tiles', [270, 30, 530, 250]], ['silk-lantern', [0, 410, 170, 160]], ['wooden-shutters', [120, 210, 120, 130]]],
+    shop_banhmi: [['banh-mi', [150, 250, 180, 110]], ['silk-lantern', [140, 165, 60, 75]], ['bougainvillea', [230, 10, 220, 140]], ['yin-yang-roof-tiles', [40, 40, 190, 70]]],
+    shop_caolau: [['cao-lau', [210, 250, 100, 50]], ['noodle-shop', SIGN.shop_caolau], ['silk-lantern', [300, 160, 130, 60]], ['yin-yang-roof-tiles', [90, 10, 330, 90]]],
+    shop_comga: [['chicken-rice', [165, 250, 170, 60]], ['silk-lantern', [140, 130, 180, 60]], ['bamboo-basket', [330, 305, 50, 55]], ['yin-yang-roof-tiles', [80, 10, 290, 80]]],
+    shop_cafe: [['coffee-shop', SIGN.shop_cafe], ['bougainvillea', [30, 0, 320, 140]], ['silk-lantern', [160, 195, 150, 60]], ['potted-plant', [80, 260, 60, 110]]],
+    ancient2: [['ancient-house', SIGN.house_ancient2], ['balcony', [410, 490, 380, 100]], ['silk-lantern', [280, 300, 500, 170]], ['wooden-shutters', [785, 815, 240, 190]], ['bougainvillea', [0, 430, 430, 320]], ['potted-plant', [300, 880, 180, 270]], ['yin-yang-roof-tiles', [400, 600, 400, 90]]],
+    banhmi_front: [['banh-mi', [222, 168, 365, 110]], ['silk-lantern', [40, 325, 730, 140]], ['yin-yang-roof-tiles', [20, 20, 770, 150]]],
+    comga_front: [['chicken-rice', [300, 240, 275, 80]], ['silk-lantern', [75, 265, 730, 170]], ['yin-yang-roof-tiles', [20, 10, 840, 200]]],
+    cafe_hoian: [['coffee-shop', [250, 460, 220, 80]], ['balcony', [90, 430, 530, 130]], ['silk-lantern', [100, 320, 520, 120]], ['yin-yang-roof-tiles', [30, 10, 680, 260]]],
   };
   const SPRITE_OF = { tailor: 'fTailor', workshop: 'fWorkshop', hall: 'fHall' };
   const TREE_WORD = { banyan: 'banyan-tree', bougainvillea: 'bougainvillea', areca: 'areca-palm', bamboo: 'bamboo' };
@@ -738,6 +770,8 @@
       this.trees = [];
       this.props = [];
       this.npcs = [];
+      this.walkers = [];
+      this.nearShop = null;
       this.items = [];
       this.spots = [];
       this.exits = [];
@@ -766,7 +800,8 @@
             const im = this.img[key];
             const s = o.w / im.width;
             const dh = im.height * s;
-            const b = { key, x: o.x, y: base - dh, w: o.w, h: dh, base, scale: s, flip: Boolean(p.flip), sign: p.sign ? String(p.sign).split('|') : null };
+            const b = { key, x: o.x, y: base - dh, w: o.w, h: dh, base, scale: s, flip: Boolean(p.flip), sign: p.sign ? String(p.sign).split('|') : null,
+              shop: p.shop || null, steam: p.steam ? String(p.steam).split(';').map((g) => g.split(',').map(Number)) : null };
             this.buildings.push(b);
             this.solids.push([o.x, o.y, o.w, o.h]);
             (PRESETS[p.preset || p.sprite] || []).forEach(([value, [sx, sy, sw, sh]]) => {
@@ -807,6 +842,15 @@
             if (p.solid) this.solids.push([o.x, o.y, o.w, o.h]);
             addSpot(p.action ? `@${p.action}` : p.word, pr.box, { main: !pr.floating && !p.quiet, word2: p.word });
             if (p.action && p.word) addSpot(p.word, [pr.box[0], pr.box[1], pr.box[2], pr.box[3] * 0.35]);
+            break;
+          }
+          case 'walker': {
+            // Khách tham quan đi qua đi lại trên đoạn [x, x + w] ở chân y + h, dừng ngắm cảnh ở hai đầu
+            const art = WALKERS[p.who];
+            if (!art || !this.img[art.img]) break;
+            const speed = p.speed || 38;
+            this.walkers.push({ art, x0: o.x, x1: o.x + o.w, x: o.x + o.w * (p.start ?? 0.5), y: base, dir: p.dir === 'left' ? -1 : 1,
+              speed, pause: 0, rest: p.rest || 2.5, dist: 0 });
             break;
           }
           case 'npc':
@@ -1257,8 +1301,25 @@
       ctx.globalCompositeOperation = 'source-over';
     }
 
+    updateWalkers(dt) {
+      this.walkers.forEach((w) => {
+        if (w.pause > 0) {
+          w.pause -= dt;
+          return;
+        }
+        w.x += w.dir * w.speed * dt;
+        w.dist += w.speed * dt;
+        if (w.x <= w.x0 || w.x >= w.x1) {
+          w.x = Math.min(w.x1, Math.max(w.x0, w.x));
+          w.dir = -w.dir;
+          w.pause = w.art.wheel ? 0.6 : w.rest; // đầu đường: đứng ngắm phố (nhìn thẳng) rồi quay lại
+        }
+      });
+    }
+
     update(dt) {
       const p = this.player;
+      this.updateWalkers(dt);
       if (this.fx) {
         this.fx.t += dt;
         if (this.fx.t > this.fx.dur) this.fx = null;
@@ -1367,6 +1428,13 @@
         this.nearNpc = nearId;
         if (near && this.hooks.onNear) this.hooks.onNear(near[0]);
       }
+      // Đi ngang trước cửa hàng quán: báo cho game để phát lời rao của quán
+      const shop = this.buildings.find((b) => b.shop && Math.abs(b.x + b.w / 2 - p.x) < b.w * 0.55 && p.y > b.base - 10 && p.y < b.base + 200);
+      const shopId = shop ? shop.shop : null;
+      if (shopId !== this.nearShop) {
+        this.nearShop = shopId;
+        if (shop && this.hooks.onShopNear) this.hooks.onShopNear(shopId);
+      }
       if (this.autoSpot) {
         const s = this.spots.find((x) => x.key === this.autoSpot);
         if (!s || Math.hypot(s.rect[0] + s.rect[2] / 2 - p.x, s.rect[1] + s.rect[3] - p.y) > NEAR + 60) this.autoSpot = null;
@@ -1461,7 +1529,8 @@
 
       // Sắp theo chiều sâu: nhà, cây, đồ vật, NPC, người chơi, vật phẩm
       const list = [];
-      this.buildings.forEach((b) => { if (vis(b.x, b.y, b.w, b.h)) list.push({ y: b.base, draw: () => this.drawBuilding(ctx, b) }); });
+      this.buildings.forEach((b) => { if (vis(b.x, b.y - 60, b.w, b.h + 60)) list.push({ y: b.base, draw: () => this.drawBuilding(ctx, b, t) }); });
+      this.walkers.forEach((w) => { if (vis(w.x - 90, w.y - 140, 180, 150)) list.push({ y: w.y, draw: () => this.drawWalker(ctx, w) }); });
       this.trees.forEach((tr) => { if (vis(tr.cx - 80, tr.base - 220, 160, 230)) list.push({ y: tr.base, draw: () => drawTree(ctx, tr.variant, tr.cx, tr.base) }); });
       this.props.forEach((pr) => { if (!pr.floating && vis(pr.box[0], pr.box[1], pr.box[2], pr.box[3])) list.push({ y: pr.base, draw: () => this.drawProp(ctx, pr, t) }); });
       this.npcs.forEach((n) => { if (vis(n.x - 60, n.y - 140, 120, 150)) list.push({ y: n.y, draw: () => this.drawNpc(ctx, n, t) }); });
@@ -1520,7 +1589,39 @@
       }
     }
 
-    drawBuilding(ctx, b) {
+    drawWalker(ctx, w) {
+      const a = w.art;
+      const im = this.img[a.img];
+      const cw = im.width / (1 + a.nl + a.nr);
+      let cell = 0; // đứng ngắm phố: nhìn thẳng
+      if (w.pause <= 0 || a.wheel) {
+        const n = w.dir < 0 ? a.nl : a.nr;
+        const step = a.wheel ? 0 : Math.floor(w.dist / 24) % n;
+        cell = w.dir < 0 ? 1 + step : 1 + a.nl + step;
+      }
+      const dh = a.h;
+      const dw = (cw / im.height) * dh;
+      const bob = w.pause <= 0 && !a.wheel ? Math.abs(Math.sin(w.dist / 10)) * 2.5 : 0;
+      shadow(ctx, w.x, w.y, a.wheel ? 64 : 20);
+      ctx.drawImage(im, cell * cw, 0, cw, im.height, w.x - dw / 2, w.y - dh - bob, dw, dh);
+    }
+
+    // Khói bếp bốc lên từ quán (thuộc tính steam = "fx,fy" theo tỉ lệ ảnh nhà, nhiều điểm cách nhau bằng ;)
+    drawSteam(ctx, b, t) {
+      b.steam.forEach(([fx, fy], k) => {
+        const sx = b.x + b.w * (b.flip ? 1 - fx : fx);
+        const sy = b.y + b.h * fy;
+        for (let i = 0; i < 4; i++) {
+          const ph = (t / 1700 + i / 4 + k * 0.37) % 1;
+          ctx.fillStyle = `rgba(255, 255, 255, ${0.5 * (1 - ph)})`;
+          ctx.beginPath();
+          ctx.arc(sx + Math.sin(ph * 6 + i + k) * 6, sy - ph * 50, 4 + ph * 11, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      });
+    }
+
+    drawBuilding(ctx, b, t = 0) {
       const im = this.img[b.key];
       if (b.flip) {
         ctx.save();
@@ -1543,9 +1644,10 @@
         ctx.fillStyle = INK;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.font = `800 ${Math.max(9, Math.round(h / 2.7))}px "Be Vietnam Pro", sans-serif`;
+        ctx.font = `800 ${Math.max(9, Math.round(h / (b.sign.length + 0.7)))}px "Be Vietnam Pro", sans-serif`;
         b.sign.forEach((line, i) => ctx.fillText(line, x + w / 2, y + h * ((i + 1) / (b.sign.length + 1)) + 1, w - 4));
       }
+      if (b.steam) this.drawSteam(ctx, b, t);
     }
 
     drawProp(ctx, pr, t) {

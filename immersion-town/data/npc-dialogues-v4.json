@@ -644,5 +644,11 @@
     { "id": "indigo", "color": "indigo", "name": "Xanh chàm Green Mobility", "name_en": "Green Mobility Indigo", "how": "Hoàn thành nhiệm vụ Bãi Xe Điện Ngoại Vi", "how_en": "Complete the Outer EV Hub mission" },
     { "id": "gold", "color": "gold", "name": "Vàng lụa Hội An", "name_en": "Hoi An Silk Gold", "how": "Hoàn thành nhiệm vụ Tiệm May Áo Dài", "how_en": "Complete the Express Tailor Shop mission" },
     { "id": "red", "color": "red", "name": "Đỏ đèn lồng", "name_en": "Lantern Red", "how": "Làm đúng hết phần kiểm tra của 5 Booklet ngữ pháp", "how_en": "Pass the quick check in all 5 grammar Booklets" }
-  ]
+  ],
+  "shops": {
+    "banhmi": {"name": "Tiệm bánh mì", "name_en": "Bánh mì shop", "call": {"vi": "Bánh mì Hội An nóng giòn mới ra lò đây, có pa tê, chả lụa, rau thơm Trà Quế nè!", "audio_file": "assets/audio/shop_banhmi_vn.mp3"}},
+    "caolau": {"name": "Quán cao lầu", "name_en": "Cao lầu noodle shop", "call": {"vi": "Cao lầu, mì Quảng nóng hổi đây! Sợi cao lầu làm bằng nước giếng Bá Lễ đó cháu ơi!", "audio_file": "assets/audio/shop_caolau_vn.mp3"}},
+    "comga": {"name": "Quán cơm gà", "name_en": "Chicken rice shop", "call": {"vi": "Cơm gà Hội An đây, gà ta xé phay trộn rau răm, hành tây thơm phức nè!", "audio_file": "assets/audio/shop_comga_vn.mp3"}},
+    "cafe": {"name": "Quán cà phê", "name_en": "Coffee shop", "call": {"vi": "Cà phê muối, cà phê dừa mát lạnh đây! Ghé ngồi nghỉ chân ngắm phố cổ nè!", "audio_file": "assets/audio/shop_cafe_vn.mp3"}}
+  }
 }

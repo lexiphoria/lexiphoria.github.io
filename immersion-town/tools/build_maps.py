@@ -1,7 +1,7 @@
 """Sinh 4 bản đồ Tiled (.tmx) cho Immersion Town – góc nhìn 3/4 từ trên xuống, ô 64×64.
 
   data/maps/ev.tmx        Bãi xe điện ngoại vi (cửa ngõ xanh, quán cà phê đồng lúa OCOP)
-  data/maps/street.tmx    Phố đi bộ lõi di sản (tiệm may, quà OCOP, nhà cổ, xưởng đèn lồng)
+  data/maps/street.tmx    Phố đi bộ lõi di sản (tiệm may, quà OCOP, nhà cổ, xưởng đèn lồng, dãy hàng quán ẩm thực)
   data/maps/river.tmx     Bến sông Hoài lúc chiều tà (bến hoa đăng, thuyền điện, Chùa Cầu)
   data/maps/festival.tmx  Quảng trường Đêm hội (Hội An Quán – cổng Boss, trạm Trà Đá, Đại sứ di sản)
 
@@ -107,6 +107,27 @@ def deco(m, img, cx, base, ph, word=None, solid=False, foot=0.3, glow=None, flip
     return w
 
 
+def tree(m, variant, x, y, ph=None):
+    """Cây tại ô (x, y) như đối tượng 'tree' cũ (khung chân 0,6×0,35 ô). Cây đa, cây bàng và bụi hoa giấy dùng tranh
+    Đông Hồ trong assets/deco (tools/cut_frontal.py) cho cùng nét với nhà cửa; cau và tre vẫn vẽ bằng mã.
+    ph: chiều cao vẽ (px), hạ xuống cho cây sát mép trên bản đồ để không bị cắt ngọn."""
+    cx, base = x + 0.3, y + 0.35
+    if variant == 'banyan':
+        deco(m, 'banyan_big', cx, base, ph or 210, word='banyan-tree', solid=True, foot=0.35)
+    elif variant == 'bang':
+        deco(m, 'tree_bang', cx, base, ph or 150, solid=True, foot=0.3)
+    elif variant == 'bougainvillea':
+        img = 'bougain_bush_red' if round(x * 10) % 2 else 'bougain_bush_pink'
+        deco(m, img, cx, base, 104, word='bougainvillea', solid=True, foot=0.3)
+    else:
+        m.obj('tree', x, y, 0.6, 0.35, variant=variant)
+
+
+def walker(m, who, x0, x1, y, speed=38, start=0.5, rest=2.5, direction='right'):
+    """Khách tham quan đi qua lại trên đoạn [x0, x1] (ô), chân ở hàng y; không chặn đường, không bắt chuyện."""
+    m.obj('walker', x0, y - 0.1, x1 - x0, 0.1, who=who, speed=speed, start=start, rest=rest, dir=direction)
+
+
 def ev_map():
     m = Map('ev', 26, 14, GRASS, {'zone': 'ev', 'name': 'Bãi xe điện ngoại vi', 'name_en': 'Outer EV Hub', 'sub': 'Cửa ngõ xanh ngoài phố đi bộ', 'sub_en': 'The green gateway outside the walking zone', 'card': 'assets/scenes/ev_hub.webp', 'light': 'day'})
     m.rect(0, 0, 8, 5, lambda i, j: PADDY_RIPE if j % 2 else PADDY)
@@ -146,8 +167,11 @@ def ev_map():
     m.obj('prop', 15.0, 10.4, 3.6, 1.2, img='tq_hut', ph=212, word='lotus-tea', solid=True, label='CAFE ĐỒNG LÚA · OCOP', labelAt='0.3,0.6', glow='0.3,0.55')
     m.obj('prop', 15.4, 12.3, 1.1, 0.5, draw='table', ph=46, solid=True, on=[{'img': 'ocopTea', 'h': 52, 'dx': 0, 'word': 'ocop-product', 'spots': [['traceability', [130, 15, 80, 85]]]}])
     m.obj('prop', 17.6, 12.3, 1.1, 0.5, draw='table', ph=46, solid=True, on=[{'img': 'solarOutlet', 'h': 50, 'dx': 0, 'word': 'solar-powered-outlet'}])
-    for x, y, v in [(9.0, 0.6, 'bamboo'), (12.0, 0.6, 'bamboo'), (15.0, 0.6, 'bamboo'), (18.7, 0.6, 'bamboo'), (23.0, 2.6, 'banyan'), (21.2, 10.7, 'areca'), (24.2, 12.3, 'bougainvillea'), (4.6, 9.4, 'areca'), (10.4, 9.4, 'areca')]:
-        m.obj('tree', x, y, 0.6, 0.35, variant=v)
+    for x, y, v, *ph in [(9.0, 0.6, 'bamboo'), (12.0, 0.6, 'bamboo'), (15.0, 0.6, 'bamboo'), (18.7, 0.6, 'bamboo'), (23.0, 2.6, 'banyan', 182), (21.2, 10.7, 'areca'), (24.2, 12.3, 'bougainvillea'), (4.6, 9.4, 'areca'), (10.4, 9.4, 'areca')]:
+        tree(m, v, x, y, *ph)
+    # Khách tham quan: hướng dẫn viên dẫn đoàn quanh trạm xe điện, du khách đi dạo trên vỉa hè
+    walker(m, 'guide', 1.0, 7.4, 8.85, speed=34, start=0.2)
+    walker(m, 'takashi', 12.5, 21.0, 9.55, speed=30, start=0.6, direction='left')
     # Hàng rào gỗ quanh đồng lúa, cây chuối ở góc ruộng
     for cx, base in ((1.4, 5.0), (6.95, 5.0), (1.5, 10.05), (8.0, 10.05)):
         deco(m, 'px_fence', cx, base, 46, word='fence')
@@ -182,27 +206,33 @@ def ev_map():
 
 
 def street_map():
-    m = Map('street', 32, 16, BRICK, {'zone': 'street', 'name': 'Phố đi bộ', 'name_en': 'Walking Street', 'sub': 'Lõi di sản: tiệm may, quà OCOP, nhà cổ, xưởng đèn lồng', 'sub_en': 'The heritage core: tailor shop, OCOP gifts, ancient houses and a lantern workshop', 'card': 'assets/scenes/street.webp', 'light': 'day'})
-    m.rect(0, 0, 32, 2, lambda i, j: GRASS_FLOWER if (i * 7 + j) % 5 == 0 else GRASS)
-    for x in (0, 6, 7, 13, 19, 25, 31):
+    m = Map('street', 56, 16, BRICK, {'zone': 'street', 'name': 'Phố đi bộ', 'name_en': 'Walking Street', 'sub': 'Lõi di sản: tiệm may, quà OCOP, nhà cổ, xưởng đèn lồng và dãy hàng quán bánh mì, cao lầu, cơm gà, cà phê', 'sub_en': 'The heritage core: tailor shop, OCOP gifts, ancient houses, a lantern workshop and a row of bánh mì, cao lầu, chicken rice and coffee shops', 'card': 'assets/scenes/street.webp', 'light': 'day'})
+    m.rect(0, 0, 56, 2, lambda i, j: GRASS_FLOWER if (i * 7 + j) % 5 == 0 else GRASS)
+    for x in (0, 6, 7, 13, 19, 25, 31, 37, 43, 49, 55):
         m.rect(x, 2, 1, 6, checker(PAVE, PAVE2))
-    m.rect(0, 8, 32, 3, checker(PAVE, PAVE2))
-    m.rect(0, 11, 32, 1, BRICK2)
-    m.rect(0, 12, 32, 4, lambda i, j: GRASS_FLOWER if (i * 3 + j) % 7 == 0 else GRASS)
+    m.rect(0, 8, 56, 3, checker(PAVE, PAVE2))
+    m.rect(0, 11, 56, 1, BRICK2)
+    m.rect(0, 12, 56, 4, lambda i, j: GRASS_FLOWER if (i * 3 + j) % 7 == 0 else GRASS)
     m.rect(15, 12, 2, 4, checker(PAVE, PAVE2))
     m.rect(2, 13, 11, 1, BRICK)
     m.rect(19, 13, 11, 1, BRICK)
+    m.rect(33, 13, 21, 1, BRICK)
 
     m.obj('spawn', 1.5, 9, name='default', facing='right')
     m.obj('exit', 0, 8, 1, 3, name='to_ev', to='ev', sx=23.5, sy=7, facing='left')
-    m.obj('exit', 31, 8, 1, 3, name='to_festival', to='festival', sx=1.5, sy=9, facing='right')
+    m.obj('exit', 55, 8, 1, 3, name='to_festival', to='festival', sx=1.5, sy=9, facing='right')
     m.obj('exit', 15, 15, 2, 1, name='to_river', to='river', sx=15, sy=1.2, facing='down')
     # Dãy nhà mặt phố (quay mặt ra đường); phía sau là ngõ, đi vào sẽ bị mái nhà che khuất
     m.obj('building', 1, 6, 5, 2, name='tailor', sprite='tailor')
     m.obj('building', 8, 6, 5, 2, name='ocop_shop', sprite='workshop', sign='QUÀ LƯU NIỆM|OCOP', preset='ocop')
-    m.obj('building', 14, 6, 5, 2, name='tan_ky', sprite='tailor', flip=True, sign='NHÀ CỔ|TẤN KÝ', preset='tanky')
+    m.obj('building', 14, 6, 5, 2, name='tan_ky', sprite='house_ancient2', sign='NHÀ CỔ|TẤN KÝ', preset='ancient2')
     m.obj('building', 20, 6, 5, 2, name='workshop', sprite='workshop')
-    m.obj('building', 26, 6, 5, 2, name='phung_hung', sprite='tailor', sign='NHÀ CỔ|PHÙNG HƯNG', preset='tanky')
+    m.obj('building', 26, 6, 5, 2, name='phung_hung', sprite='house_ancient2', flip=True, sign='NHÀ CỔ|PHÙNG HƯNG', preset='ancient2')
+    # Dãy hàng quán (tranh Hang quan.png): người bán trong quán, khói bếp, lời rao khi đi ngang (data → shops)
+    m.obj('building', 32, 6, 5, 2, name='banh_mi', sprite='shop_banhmi', sign='BÁNH MÌ', shop='banhmi', steam='0.46,0.6')
+    m.obj('building', 38, 6, 5, 2, name='cao_lau', sprite='shop_caolau', sign='CAO LẦU', shop='caolau', steam='0.64,0.6;0.44,0.66')
+    m.obj('building', 44, 6, 5, 2, name='com_ga', sprite='shop_comga', sign='CƠM GÀ', shop='comga', steam='0.47,0.62')
+    m.obj('building', 50, 6, 5, 2, name='ca_phe', sprite='shop_cafe', sign='CÀ PHÊ', shop='cafe')
     # Đồ vật trước cửa hàng
     m.obj('prop', 4.4, 8.1, 1.2, 0.45, img='workbench', ph=58, word='measuring-tape', solid=True, on=[{'img': 'fabric', 'h': 30, 'dx': -18, 'word': 'mulberry-silk'}, {'img': 'tape', 'h': 26, 'dx': 22, 'word': 'measuring-tape'}])
     m.obj('prop', 5.7, 8.15, 0.8, 0.35, img='silkRoll', ph=48, word='silk-fabric', solid=True)
@@ -210,27 +240,46 @@ def street_map():
     m.obj('prop', 18.2, 8.1, 0.5, 0.35, img='tq_qr', ph=104, word='audio-guide', solid=True)
     m.obj('prop', 23.2, 8.1, 1.2, 0.45, img='workbench', ph=58, word='workbench', solid=True, on=[{'draw': 'bambooFrame', 'h': 40, 'w': 38, 'dx': 0, 'word': 'bamboo-frame'}])
     m.obj('prop', 30.2, 8.1, 0.5, 0.35, img='tq_qr', ph=104, word='qr-code', solid=True)
-    m.obj('strings', 1, 7.4, 30, 3.6, name='lanterns', draw='lanternStrings')
+    m.obj('strings', 1, 7.4, 54, 3.6, name='lanterns', draw='lanternStrings')
     for img, cx, ph in (('pot_palm_red', 8.45, 62), ('pot_flower_blue', 14.45, 54), ('pot_flower_red', 17.55, 54),
-                        ('pot_banana', 20.45, 64), ('pot_plant_blue', 26.45, 58), ('pot_flower_clay', 29.55, 54)):
+                        ('pot_banana', 20.45, 64), ('pot_plant_blue', 26.45, 58), ('pot_flower_clay', 29.55, 54),
+                        ('pot_flower_yellow', 37.5, 62), ('palm_pot', 43.5, 96), ('pot_flower_red2', 49.5, 58)):
         deco(m, img, cx, 8.35, ph, word='potted-plant', solid=True, foot=0.25)
+    # Trước dãy hàng quán: chum vại, bàn ghế tre của quán cà phê, xe đạp dựng bên đường
+    deco(m, 'jars', 47.9, 8.4, 46, solid=True, foot=0.25)
+    deco(m, 'table_set', 52.6, 8.55, 52, word='coffee-shop', solid=True, foot=0.3)
+    deco(m, 'bicycle', 35.9, 8.45, 58, solid=True, foot=0.25)
     for cx in (14.45, 17.55):
         deco(m, 'stone_lantern', cx, 12.45, 76, word='stone-lantern', solid=True, glow='0.5,0.42')
-    for cx in (6.2, 25.2):
-        deco(m, 'arbor', cx, 14.7, 128, word='trellis')
+    deco(m, 'pergola_bougain', 6.2, 14.7, 140, word='trellis')
+    deco(m, 'pergola_vine', 25.2, 14.7, 132, word='trellis')
+    deco(m, 'pergola_bougain', 46.0, 14.7, 140, word='trellis', flip=True)
     deco(m, 'flower_bush', 2.0, 15.25, 40)
     deco(m, 'flower_bush', 29.6, 13.35, 40)
     deco(m, 'hanging_flower', 6.5, 7.95, 96)
     deco(m, 'hanging_green', 12.5, 7.95, 92, flip=True)
     # Vườn phía nam phố
-    for x, y, v in [(3.0, 12.4, 'banyan'), (8.6, 14.4, 'bougainvillea'), (12.6, 12.5, 'areca'), (19.4, 12.5, 'areca'), (27.2, 14.4, 'bougainvillea'), (29.2, 12.4, 'banyan'), (0.6, 0.4, 'bamboo'), (6.5, 0.4, 'areca'), (12.5, 0.5, 'bamboo'), (18.4, 0.4, 'areca'), (24.6, 0.5, 'bamboo'), (30.6, 0.4, 'areca')]:
-        m.obj('tree', x, y, 0.6, 0.35, variant=v)
-    m.obj('prop', 22.0, 12.6, 2.0, 0.6, img='tq_stall', ph=122, word='folding-lantern', solid=True, glow='0.2,0.4;0.82,0.42')
-    deco(m, 'tq_cyclo', 13.4, 11.55, 62, word='cyclo', solid=True)
+    for x, y, v in [(3.0, 12.4, 'banyan'), (8.6, 14.4, 'bougainvillea'), (12.6, 12.5, 'areca'), (19.4, 12.5, 'areca'), (27.2, 14.4, 'bougainvillea'), (29.2, 12.4, 'banyan'), (0.6, 0.4, 'bamboo'), (6.5, 0.4, 'areca'), (12.5, 0.5, 'bamboo'), (18.4, 0.4, 'areca'), (24.6, 0.5, 'bamboo'), (30.6, 0.4, 'areca'),
+                    (36.6, 0.5, 'bamboo'), (42.5, 0.4, 'areca'), (48.6, 0.5, 'bamboo'), (54.6, 0.4, 'areca'), (34.6, 12.5, 'areca'), (40.2, 12.4, 'banyan'), (51.6, 14.4, 'bougainvillea'), (54.2, 12.5, 'areca')]:
+        tree(m, v, x, y)
+    m.obj('prop', 22.0, 12.6, 2.0, 0.6, img='stall_front', ph=118, word='folding-lantern', solid=True, glow='0.1,0.3;0.9,0.3')
+    deco(m, 'cyclo_red', 13.5, 11.75, 98, word='cyclo', solid=True)
     deco(m, 'tq_baskets', 9.3, 14.2, 44, word='bamboo-basket')
-    deco(m, 'tq_tea_table', 19.9, 14.5, 58, word='iced-tea')
+    deco(m, 'table_set', 19.9, 14.55, 52, word='iced-tea')
+    deco(m, 'bamboo_planter', 31.9, 12.55, 72, word='bamboo', solid=True)
     m.obj('prop', 5.6, 14.6, 1.2, 0.35, draw='bench', ph=40, solid=True)
     m.obj('prop', 24.6, 14.6, 1.2, 0.35, draw='bench', ph=40, solid=True)
+    m.obj('prop', 43.0, 14.6, 1.2, 0.35, draw='bench', ph=40, solid=True)
+    # Khách tham quan: các nhóm đứng ngắm phố, khách đi dạo và xích lô chở khách chạy dọc phố
+    deco(m, 'tourists_aodai', 9.6, 11.8, 96, word='tour-group')
+    deco(m, 'tour_group', 34.9, 11.8, 100, word='tour-group')
+    deco(m, 'tourists_friends', 49.2, 11.8, 104, word='tour-group')
+    deco(m, 'tourists_family', 37.5, 15.6, 100, word='tour-group')
+    walker(m, 'sophia', 2.0, 17.5, 9.85, speed=36, start=0.3)
+    walker(m, 'john', 19.5, 40.0, 10.45, speed=32, start=0.5, direction='left')
+    walker(m, 'liwei', 32.0, 53.5, 9.6, speed=40, start=0.2)
+    walker(m, 'anna', 41.0, 54.0, 10.55, speed=24, start=0.7, direction='left')
+    walker(m, 'cyclo', 3.0, 53.0, 10.95, speed=58, start=0.15)
     m.obj('npc', 2.6, 9.3, name='sarah', facing='down', until='q_tailor')
     m.obj('npc', 11.6, 12.9, name='sarah', facing='left', after='q_tailor', until='all')
     # Hành động cuối nhiệm vụ: giá treo áo dài trước tiệm may, đèn của Emma trên dây đèn trước xưởng
@@ -264,23 +313,32 @@ def river_map():
     m.obj('spawn', 15, 1.2, name='default', facing='down')
     m.obj('exit', 14, 0, 3, 1, name='to_street', to='street', sx=15.5, sy=13.8, facing='up')
     m.obj('exit', 29, 2, 1, 5, name='to_festival', to='festival', sx=13.5, sy=12.6, facing='up')
-    # Chùa Cầu (tranh 3/4) bắc qua lạch nước; đi trên cầu thì khuất dưới mái, hiện bóng mờ
-    deco(m, 'tq_bridge', 25.0, 6.35, 205, word='japanese-covered-bridge', foot=0.2)
+    # Chùa Cầu vẽ mặt bên (nhìn thẳng như nhà phố) bắc ngang lạch nước; nước vẽ sẵn đã xoá để lộ mặt nước bản đồ.
+    # Đi trên cầu thì khuất dưới mái, hiện bóng mờ
+    deco(m, 'bridge_chuacau', 25.0, 6.05, 192, word='japanese-covered-bridge', foot=0.2)
     m.obj('prop', 16.3, 9.2, 3.4, 1.0, draw='eboat', ph=96, word='eco-electric-boat', solid=False)
     m.obj('prop', 7.6, 10.4, 2.6, 0.8, img='boat', ph=92, word='wooden-boat', solid=False, glow='0.14,0.3')
     deco(m, 'pier_rings', 6.15, 9.45, 82, word='mooring-post')
     deco(m, 'pier_lamp', 1.75, 9.5, 96, word='mooring-post', glow='0.9,0.25')
     deco(m, 'dock_tyres', 13.95, 13.4, 64, word='pier')
     deco(m, 'pot_flower_red', 5.55, 7.0, 54, word='potted-plant', solid=True, foot=0.25)
-    for x, y, w in [(6.6, 12.2, 'biodegradable-lantern'), (19.6, 11.6, 'candle'), (21.4, 13.6, 'biodegradable-lantern'), (3.6, 10.6, 'candle'), (27.0, 12.2, 'biodegradable-lantern'), (10.6, 14.2, 'biodegradable-lantern')]:
-        m.obj('prop', x, y, 0.8, 0.4, img='lotus', ph=56, word=w, solid=False, floating=True)
+    # Hoa đăng nhiều kiểu (sen, hộp đỏ, hộp vàng) và thuyền giấy thả trên sông, chỉ có từ hoàng hôn
+    for x, y, w, img, ph in [(6.6, 12.2, 'biodegradable-lantern', 'hoadang_lotus', 44), (19.6, 11.6, 'candle', 'hoadang_red', 50),
+                             (21.4, 13.6, 'biodegradable-lantern', 'hoadang_lotus2', 42), (3.6, 10.6, 'candle', 'hoadang_yellow', 50),
+                             (27.0, 12.2, 'biodegradable-lantern', 'lotus', 56), (10.6, 14.2, 'biodegradable-lantern', 'hoadang_lotus', 44),
+                             (23.6, 10.8, 'make-a-wish', 'paper_boat', 26), (8.8, 13.1, 'make-a-wish', 'paper_boat', 24),
+                             (25.6, 14.4, 'candle', 'hoadang_red', 46)]:
+        m.obj('prop', x, y, 0.8, 0.4, img=img, ph=ph, word=w, solid=False, floating=True)
     m.obj('prop', 10.9, 6.55, 0.9, 0.4, draw='cruiseSign', ph=118, word='night-cruise', solid=True)
     for x in (2.5, 8.2, 18.5, 21.6):
         m.obj('prop', x, 6.65, 0.3, 0.25, img='tq_lamp', ph=150, word='silk-lantern', solid=True, glow='0.2,0.4;0.68,0.25')
     deco(m, 'tq_boat', 2.3, 11.3, 44, word='wooden-boat')
-    for x, y, v in [(1.5, 1.8, 'areca'), (6.8, 1.8, 'areca'), (17.6, 1.8, 'areca'), (21.8, 1.7, 'banyan'), (27.0, 6.4, 'bougainvillea')]:
-        m.obj('tree', x, y, 0.6, 0.35, variant=v)
+    for x, y, v, *ph in [(1.5, 1.8, 'areca'), (6.8, 1.8, 'areca'), (17.6, 1.8, 'areca'), (21.8, 1.9, 'banyan', 160), (27.75, 6.95, 'bougainvillea')]:
+        tree(m, v, x, y, *ph)
     m.obj('prop', 4.0, 6.65, 1.2, 0.35, draw='bench', ph=40, solid=True)
+    # Khách dạo bờ sông ngắm hoàng hôn
+    walker(m, 'takashi', 1.0, 11.0, 5.2, speed=28, start=0.4)
+    walker(m, 'sophia', 16.5, 23.0, 4.4, speed=30, start=0.6, direction='left')
     m.obj('spot', 0, 8, 12, 1, word='riverbank')
     m.obj('spot', 17, 12.6, 3, 1.6, word='reflection')
     m.obj('npc', 13.6, 9.4, name='david', facing='up', until='all')
@@ -303,14 +361,17 @@ def festival_map():
     m.rect(12, 11, 4, 3, checker(PAVE, PAVE2))
 
     m.obj('spawn', 1.5, 9, name='default', facing='right')
-    m.obj('exit', 0, 8, 1, 3, name='to_street', to='street', sx=29.6, sy=9, facing='left')
+    m.obj('exit', 0, 8, 1, 3, name='to_street', to='street', sx=53.6, sy=9, facing='left')
     m.obj('exit', 12, 13, 4, 1, name='to_river', to='river', sx=27.6, sy=4, facing='left')
     m.obj('building', 10.5, 5, 7, 2.2, name='hoi_an_quan', sprite='hall')
-    # Nhà cổ quanh quảng trường (tranh 3/4 cùng góc nhìn với Hội An Quán)
-    m.obj('building', 2.0, 3.6, 4.3, 1.4, name='nha_co_2_tang', sprite='tq_house2', word='ancient-house')
-    m.obj('building', 6.75, 4.0, 2.2, 1.0, name='hien_nha_co', sprite='tq_porch', word='wooden-shutters')
-    m.obj('building', 18.1, 3.9, 3.9, 1.1, name='tiem_cao_lau', sprite='tq_noodle', word='noodle-shop')
-    m.obj('building', 22.3, 3.6, 4.3, 1.4, name='nha_co_2_tang_phai', sprite='tq_house2', flip=True, word='ancient-house')
+    # Dãy nhà phía bắc quảng trường, vẽ nhìn thẳng như phố đi bộ. Nhà lộ tường hông phải đặt bên trái Hội An Quán,
+    # nhà vẽ thẳng đặt bên phải, để cả dãy cùng hướng về quảng trường
+    m.obj('building', 1.2, 3.8, 4.6, 1.2, name='nha_co_2_tang', sprite='house_ancient2', preset='ancient2')
+    m.obj('building', 6.0, 3.9, 4.3, 1.1, name='cafe_hoi_an', sprite='cafe_hoian', shop='cafe')
+    m.obj('building', 17.8, 3.9, 4.6, 1.1, name='banh_mi_hoi_an', sprite='banhmi_front', shop='banhmi')
+    m.obj('building', 22.6, 3.9, 4.9, 1.1, name='com_ga_hoi_an', sprite='comga_front', shop='comga')
+    deco(m, 'pot_flower_yellow', 17.6, 5.35, 54, word='potted-plant', solid=True, foot=0.25)
+    deco(m, 'palm_pot', 5.95, 5.3, 84, word='potted-plant', solid=True, foot=0.25)
     deco(m, 'tq_qr', 12.75, 7.75, 96, word='audio-guide', solid=True)
     # Cổng Tam Quan ở lối vào phía tây (từ phố đi bộ), đi qua thì khuất dưới vòm
     deco(m, 'tq_gate', 1.9, 10.9, 176, word='archway', foot=0.1)
@@ -328,12 +389,16 @@ def festival_map():
     m.obj('strings', 1, 7.2, 26, 4.0, name='lanterns', draw='lanternStrings')
     m.obj('prop', 4.6, 8.0, 1.6, 0.5, img='tq_drink_cart', ph=112, word='iced-tea', action='refill', solid=True,
           label='TRÀ ĐÁ · ICED TEA', labelAt='0.5,0.3', glow='0.5,0.4')
-    m.obj('prop', 5.6, 11.6, 2.0, 0.6, img='tq_stall', ph=122, word='silk-lantern', solid=True, glow='0.2,0.4;0.82,0.42')
+    m.obj('prop', 5.6, 11.6, 2.0, 0.6, img='stall_front', ph=118, word='silk-lantern', solid=True, glow='0.1,0.3;0.9,0.3')
     m.obj('prop', 23.6, 11.6, 2.0, 0.6, img='tq_baichoi', ph=120, word='bai-choi', solid=True, glow='0.5,0.45')
     for x in (8.4, 21.8):
         m.obj('prop', x, 10.9, 0.3, 0.25, img='tq_lamp', ph=150, word='silk-lantern', solid=True, glow='0.2,0.4;0.68,0.25')
-    for x, y, v in [(1.0, 2.4, 'bougainvillea'), (26.4, 2.4, 'bougainvillea'), (6.0, 1.6, 'banyan'), (22.0, 1.6, 'banyan')]:
-        m.obj('tree', x, y, 0.6, 0.35, variant=v)
+    for x, y, v in [(1.0, 2.4, 'bougainvillea'), (26.4, 2.4, 'bougainvillea'), (5.6, 2.25, 'bang'), (21.9, 2.25, 'bang')]:
+        tree(m, v, x, y)
+    # Khách tham quan quảng trường
+    deco(m, 'tourists_family', 20.2, 13.75, 100, word='tour-group')
+    walker(m, 'anna', 2.5, 9.5, 10.6, speed=24, start=0.5)
+    walker(m, 'liwei', 17.0, 26.5, 12.75, speed=36, start=0.3, direction='left')
     m.obj('npc', 19.6, 9.3, name='ambassador', facing='down')
     m.obj('gate', 11.55, 11.2, 4.9, 0.4, name='festival_gate', word='silk-lantern')
     for x, y, who in [(16.9, 9.4, 'mark'), (17.9, 10.2, 'sarah'), (19.0, 10.6, 'emma'), (20.4, 10.2, 'david')]:

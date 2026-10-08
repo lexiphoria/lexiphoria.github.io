@@ -207,3 +207,16 @@ def grabcut(sheet, rect, fg_rects=(), bg_below=None):
     alpha = np.clip(ndimage.gaussian_filter(fg.astype(float), 0.7), 0, 1)
     img = Image.fromarray(np.dstack([rgb, (alpha * 255).astype(np.uint8)]), 'RGBA')
     return img.crop(img.getbbox())
+
+
+def recolor(frame, target):
+    """Đổi màu áo dài tím (sắc 265–330°) sang màu target, giữ độ sáng tối của nếp áo và nét mực."""
+    a = np.asarray(frame).astype(float) / 255
+    rgb = a[..., :3]
+    hue, s, v = hsv(rgb)
+    dress = (hue > 265) & (hue < 330) & (s > 0.15) & (v > 0.18) & (a[..., 3] > 0)
+    lum = rgb.mean(axis=2)
+    ratio = lum / np.median(lum[dress])
+    new = np.clip(np.array(target, float)[None, None, :] / 255 * ratio[..., None], 0, 1)
+    rgb = np.where(dress[..., None], new, rgb)
+    return Image.fromarray((np.dstack([rgb, a[..., 3]]) * 255).round().astype(np.uint8), 'RGBA')

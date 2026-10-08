@@ -11,7 +11,7 @@
 
   const AVATARS = {
     boy: { name: ['Local Host nam', 'Local Host · boy'], note: ['Đồng phục học sinh, đi được 4 hướng', 'School uniform, walks in 4 directions'] },
-    girl: { name: ['Local Host nữ', 'Local Host · girl'], note: ['Áo dài và nón lá', 'Áo dài and conical hat'] },
+    girl: { name: ['Local Host nữ', 'Local Host · girl'], note: ['Áo dài, nón lá, cờ hướng dẫn viên; đi được 4 hướng', 'Áo dài, conical hat and guide flag; walks in 4 directions'] },
   };
   const MIN_TYPED_WORDS = 5;
   const MIN_SPOKEN_WORDS = 4;
@@ -105,6 +105,8 @@
   const questsDone = () => DATA.quests.filter((q) => (d().quests[q.id] || {}).done).length;
   const bookletCount = () => BOOKLETS.filter((b) => d().collected[b.id]).length;
   const outfitById = (id) => DATA.outfits.find((o) => o.id === id);
+  // Tên trang phục theo nhân vật đang chọn (bộ mặc định của Local Host nữ là áo dài tím hướng dẫn viên)
+  const outfitName = (o) => (d().avatar === 'girl' && o.name_girl ? tx(o, 'name_girl') : tx(o, 'name'));
   const charOf = (id) => DATA.characters[id];
   const voiceOf = (ch) => ({ langs: (ch && ch.voice) || ['en-US', 'en-GB'], pitch: (ch && ch.pitch) || 1 });
   const isDone = (id) => Boolean((d().quests[id] || {}).done);
@@ -165,7 +167,7 @@
   function playerSheet(avatar = d().avatar, outfitId = d().outfit) {
     const o = outfitById(outfitId) || DATA.outfits[0];
     const kind = avatar === 'girl' ? 'girl' : 'boy';
-    return { kind, src: `assets/chars/host_${kind}_${o.color}.webp` };
+    return { kind, src: `assets/chars/host_${kind}_${o.color}.webp?v=20261009` };
   }
 
   function wear(id) {
@@ -185,8 +187,8 @@
       : el('canvas', { class: 'host-canvas', width: 150, height: 216, style: `width:${Math.round(size * 0.7)}px;height:${size}px` });
     const im = new Image();
     im.onload = () => {
-      const cw = kind === 'boy' ? im.width / 4 : kind === 'girl' ? im.width / 3 : im.width;
-      const ch = kind === 'boy' ? im.height / 4 : im.height;
+      const cw = kind === 'single' ? im.width : im.width / 4;   // Local Host nam và nữ: tờ 4 hướng × 4 khung
+      const ch = kind === 'single' ? im.height : im.height / 4;
       const ctx = c.getContext('2d');
       if (faceOnly) ctx.drawImage(im, cw * 0.14, 0, cw * 0.72, cw * 0.72, 0, 0, 120, 120);
       else ctx.drawImage(im, 0, 0, cw, ch, 0, 0, 150, 216);
@@ -952,7 +954,7 @@
       }
       if (addTitle(r.title)) items.push(el('li', {}, `${L('🏅 Danh hiệu mới', '🏅 New title')}: ${r.title}`));
       outfit = unlockOutfit(r.outfit);
-      if (outfit) items.push(el('li', {}, `${L('👘 Trang phục mới', '👘 New outfit')}: ${tx(outfit, 'name')}`));
+      if (outfit) items.push(el('li', {}, `${L('👘 Trang phục mới', '👘 New outfit')}: ${outfitName(outfit)}`));
       if (r.tea) {
         const got = store.addTea(r.tea);
         if (got) items.push(el('li', {}, `☕ +${got} Trà Đá Helper`));
@@ -982,7 +984,7 @@
       el('ul', { class: 'reward-list' }, items),
       next ? el('p', { class: 'muted' }, `${L('Nhiệm vụ tiếp theo', 'Next mission')}: ${next.icon} ${questTitle(next)} (${zoneLabel(next.zone)})`) : null,
       el('div', { class: 'action-bar' },
-        outfit ? el('button', { class: 'btn-action', type: 'button', onclick: () => { wear(outfit.id); toast(`${L('👘 Đang mặc', '👘 Wearing')}: ${tx(outfit, 'name')}`); closeQuest(); } }, `${L('Mặc', 'Wear')} ${tx(outfit, 'name')}`) : null,
+        outfit ? el('button', { class: 'btn-action', type: 'button', onclick: () => { wear(outfit.id); toast(`${L('👘 Đang mặc', '👘 Wearing')}: ${outfitName(outfit)}`); closeQuest(); } }, `${L('Mặc', 'Wear')} ${outfitName(outfit)}`) : null,
         el('button', { class: 'btn-action btn-primary', type: 'button', onclick: () => { closeQuest(); if (allDone) guideToCeremony(); } }, allDone ? L('🌙 Lên Đêm hội ➔', '🌙 Go to the Heritage Night ➔') : L('Đóng', 'Close'))));
   }
 
@@ -1324,8 +1326,8 @@
               if (outfit) save();
               done.replaceChildren(...[
                 el('p', { class: 'notice good' }, L('🎉 Bạn đã nắm vững Booklet này! +1 ☕ Trà Đá Helper', '🎉 You mastered this Booklet! +1 ☕ Trà Đá Helper')),
-                outfit ? el('p', { class: 'notice good' }, `${L('👘 Làm đúng cả 5 Booklet! Trang phục mới', '👘 All 5 Booklets mastered! New outfit')}: ${tx(outfit, 'name')}`) : null,
-                outfit ? el('button', { class: 'btn-action small', type: 'button', onclick: () => { wear(outfit.id); toast(`${L('👘 Đang mặc', '👘 Wearing')}: ${tx(outfit, 'name')}`); } }, `${L('Mặc', 'Wear')} ${tx(outfit, 'name')}`) : null,
+                outfit ? el('p', { class: 'notice good' }, `${L('👘 Làm đúng cả 5 Booklet! Trang phục mới', '👘 All 5 Booklets mastered! New outfit')}: ${outfitName(outfit)}`) : null,
+                outfit ? el('button', { class: 'btn-action small', type: 'button', onclick: () => { wear(outfit.id); toast(`${L('👘 Đang mặc', '👘 Wearing')}: ${outfitName(outfit)}`); } }, `${L('Mặc', 'Wear')} ${outfitName(outfit)}`) : null,
               ].filter(Boolean));
             } else if (correct < b.check.length) {
               done.replaceChildren(el('p', { class: 'notice' }, L('Còn câu sai. Đọc lại quy tắc rồi mở lại Booklet để làm lại nhé.', 'Some answers are wrong. Read the rule again, then reopen the Booklet to retry.')));
@@ -1539,7 +1541,7 @@
         items.push(el('li', {}, `⭐ +${r.xp || 0} Cultural Host XP`));
         if (addTitle(r.title)) items.push(el('li', {}, `${L('🏅 Danh hiệu mới', '🏅 New title')}: ${r.title}`));
         outfit = unlockOutfit(r.outfit);
-        if (outfit) items.push(el('li', {}, `${L('👘 Trang phục mới', '👘 New outfit')}: ${tx(outfit, 'name')}`));
+        if (outfit) items.push(el('li', {}, `${L('👘 Trang phục mới', '👘 New outfit')}: ${outfitName(outfit)}`));
       } else {
         d().xp += 20;
         items.push(el('li', {}, L('⭐ +20 XP (thắng lại)', '⭐ +20 XP (rematch win)')));
@@ -1562,7 +1564,7 @@
           el('ul', { class: 'reward-list' }, items))),
       win ? null : el('p', { class: 'muted' }, L('Mẹo: ôn Sổ từ hoặc đọc lại Booklet rồi quay lại khiêu chiến.', 'Tip: review your Word Book or reread a Booklet, then try again.')),
       el('div', { class: 'action-bar' },
-        outfit ? el('button', { class: 'btn-action', type: 'button', onclick: () => { wear(outfit.id); toast(`${L('👘 Đang mặc', '👘 Wearing')}: ${tx(outfit, 'name')}`); } }, `${L('Mặc', 'Wear')} ${tx(outfit, 'name')}`) : null,
+        outfit ? el('button', { class: 'btn-action', type: 'button', onclick: () => { wear(outfit.id); toast(`${L('👘 Đang mặc', '👘 Wearing')}: ${outfitName(outfit)}`); } }, `${L('Mặc', 'Wear')} ${outfitName(outfit)}`) : null,
         el('button', { class: 'btn-action', type: 'button', onclick: () => openBossLobby(true) }, L('Về Hội An Quán', 'Back to the Hall')),
         el('button', { class: 'btn-action btn-primary', type: 'button', onclick: () => startBoss(boss) }, win ? L('Đấu lại', 'Rematch') : L('Thử lại ⚔️', 'Try again ⚔️'))));
   }
@@ -1613,7 +1615,7 @@
         return el('button', {
           class: 'outfit dongho-panel' + (wearing ? ' wearing' : '') + (has ? '' : ' locked'), type: 'button', disabled: !has,
           onclick: () => { wear(o.id); openProfile(); },
-        }, spriteCanvas(sh.src, sh.kind, 110, false), el('b', {}, tx(o, 'name')), el('small', {}, wearing ? L('Đang mặc', 'Wearing') : has ? L('Chạm để mặc', 'Tap to wear') : `🔒 ${tx(o, 'how')}`));
+        }, spriteCanvas(sh.src, sh.kind, 110, false), el('b', {}, outfitName(o)), el('small', {}, wearing ? L('Đang mặc', 'Wearing') : has ? L('Chạm để mặc', 'Tap to wear') : `🔒 ${tx(o, 'how')}`));
       })),
       el('h4', {}, L('📊 Thống kê học tập', '📊 Learning stats')),
       el('div', { class: 'stats' },

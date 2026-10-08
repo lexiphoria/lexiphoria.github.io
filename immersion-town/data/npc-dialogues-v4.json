@@ -636,7 +636,7 @@
     }
   ],
   "outfits": [
-    { "id": "white", "color": "white", "name": "Trắng Local Host", "name_en": "Local Host White", "how": "Có sẵn", "how_en": "Available from the start" },
+    { "id": "white", "color": "white", "name": "Trắng Local Host", "name_en": "Local Host White", "name_girl": "Tím hướng dẫn viên", "name_girl_en": "Tour Guide Purple", "how": "Có sẵn", "how_en": "Available from the start" },
     { "id": "indigo", "color": "indigo", "name": "Xanh chàm Green Mobility", "name_en": "Green Mobility Indigo", "how": "Hoàn thành nhiệm vụ Bãi Xe Điện Ngoại Vi", "how_en": "Complete the Outer EV Hub mission" },
     { "id": "gold", "color": "gold", "name": "Vàng lụa Hội An", "name_en": "Hoi An Silk Gold", "how": "Hoàn thành nhiệm vụ Tiệm May Áo Dài", "how_en": "Complete the Express Tailor Shop mission" },
     { "id": "red", "color": "red", "name": "Đỏ đèn lồng", "name_en": "Lantern Red", "how": "Làm đúng hết phần kiểm tra của 5 Booklet ngữ pháp", "how_en": "Pass the quick check in all 5 grammar Booklets" }

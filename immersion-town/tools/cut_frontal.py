@@ -119,10 +119,12 @@ def fill_under_bridge(im, top=0.58):
 
 
 # Tờ hướng dẫn viên: màu da gần màu giấy, chỉ coi là nền các điểm thật sát màu giấy ở mép khung
-WALK_OPTS = {'guide': {'bg_tol': 0.1, 'pockets': False}}
+WALK_OPTS = {'guide': {'bg_tol': 0.1, 'pockets': False, 'ground': 0.93}}
+# Hướng dẫn viên NPC mặc áo dài hồng, để không trùng áo dài tím của Local Host nữ (nhân vật học sinh điều khiển)
+WALK_COLOR = {'guide': (200, 96, 132)}
 
 
-def walk_strip(sheet, kind, front, left, right, **opts):
+def walk_strip(sheet, kind, front, left, right, color=None, **opts):
     cut = lambda box: cutlib.cutout(sheet, box, kind, keep_largest=True, **opts)  # noqa: E731
     f = cut(front)
     lf = [cut(b) for b in left] if left != 'mirror' else None
@@ -130,6 +132,8 @@ def walk_strip(sheet, kind, front, left, right, **opts):
     lf = lf or [ImageOps.mirror(im) for im in rf]
     rf = rf or [ImageOps.mirror(im) for im in lf]
     frames = [f] + lf + rf
+    if color:
+        frames = [cutlib.recolor(im, color) for im in frames]
     scaled = [im.resize((round(im.width * WALK_H / im.height), WALK_H), Image.LANCZOS) for im in frames]
     cw = max(im.width for im in scaled) + 4
     strip = Image.new('RGBA', (cw * len(scaled), WALK_H), (0, 0, 0, 0))
@@ -156,7 +160,7 @@ if __name__ == '__main__':
     cutlib.contact_sheet(made, S / 'frontal_contact.jpg', cols=7)
     walk = []
     for who, (prefix, kind, front, left, right) in WALK.items():
-        strip, nl, nr = walk_strip(source(prefix), kind, front, left, right, **WALK_OPTS.get(who, {}))
+        strip, nl, nr = walk_strip(source(prefix), kind, front, left, right, WALK_COLOR.get(who), **WALK_OPTS.get(who, {}))
         cutlib.save_webp(strip, CHARS / f'walk_{who}.webp')
         walk.append((who, strip))
         print(f'walk_{who}: {strip.size}, 1 ô nhìn thẳng, {nl} ô sang trái, {nr} ô sang phải')

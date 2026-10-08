@@ -43,7 +43,7 @@
     cVendor: 'assets/chars/pole_vendor.webp',
     cBoy: 'assets/chars/classmate_boy.webp',
     cGirl: 'assets/chars/classmate_girl.webp',
-    wGuide: 'assets/chars/walk_guide.webp',
+    wGuide: 'assets/chars/walk_guide.webp?v=20261009',
     wTakashi: 'assets/chars/walk_takashi.webp',
     wSophia: 'assets/chars/walk_sophia.webp',
     wJohn: 'assets/chars/walk_john.webp',
@@ -1702,22 +1702,7 @@
       const im = this.playerImg;
       if (!im) return;
       shadow(ctx, p.x, p.y, 22);
-      if (this.playerKind === 'girl') {
-        // Áo dài: 3 khung (trước, nghiêng, sau); đi bộ thì nhún nhẹ
-        const cw = im.width / 3;
-        const col = p.dir === 'down' ? 0 : p.dir === 'up' ? 2 : 1;
-        const bob = p.moving ? Math.abs(Math.sin(p.phase * 1.6)) * 4 : 0;
-        const h = CHAR_H;
-        const w = (cw / im.height) * h;
-        ctx.save();
-        if (p.dir === 'left') {
-          ctx.translate(p.x * 2, 0);
-          ctx.scale(-1, 1);
-        }
-        ctx.drawImage(im, col * cw, 0, cw, im.height, p.x - w / 2, p.y - h - bob, w, h);
-        ctx.restore();
-        return;
-      }
+      // Local Host nam và nữ: tờ 4 hàng (xuống, lên, trái, phải) × 4 khung đi bộ
       const cw = im.width / 4;
       const ch = im.height / 4;
       const row = { down: 0, up: 1, left: 2, right: 3 }[p.dir];

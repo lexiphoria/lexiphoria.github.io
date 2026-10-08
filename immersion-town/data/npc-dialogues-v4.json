@@ -582,11 +582,10 @@
   "bosses": [
     {
       "id": "b_words",
-      "name": "Forgetful Phantom",
-      "name_vi": "Bóng Ma Quên Từ",
+      "name": "Word Thief",
       "source": "lexicon",
-      "description": "Bóng ma lấy cắp những từ bạn còn chưa chắc. Câu hỏi được chọn từ danh sách Unknown của chính bạn.",
-      "description_en": "This phantom steals the words you are still unsure about. Its questions come from your own Unknown list.",
+      "description": "Kẻ trộm từ lấy cắp những từ bạn còn chưa chắc. Câu hỏi được chọn từ danh sách Unknown của chính bạn.",
+      "description_en": "This thief steals the words you are still unsure about. Its questions come from your own Unknown list.",
       "img": "../assets/boss/boss_purple.webp",
       "hp": 6,
       "hearts": 3,
@@ -596,8 +595,7 @@
     },
     {
       "id": "b_phrasal",
-      "name": "Phrasal Ghost of the Old Town",
-      "name_vi": "Hồn Ma Cụm Từ Phố Cổ",
+      "name": "Phrase Ghost",
       "level": "B1",
       "source": "phrasal",
       "description": "Cụm động từ và kết hợp từ hay dùng khi đón khách (pick up, try on, set off, make a wish…), lấy từ chính các cuộc hội thoại trong game.",
@@ -610,8 +608,7 @@
     },
     {
       "id": "b_idioms",
-      "name": "Idiom Ghost of the Covered Bridge",
-      "name_vi": "Hồn Ma Thành Ngữ Chùa Cầu",
+      "name": "Idiom Ghost",
       "source": "idioms",
       "description": "Thành ngữ, cụm động từ và kết hợp từ trích từ đề thi (Exam Idioms trên Portal).",
       "description_en": "Idioms, phrasal verbs and collocations taken from exam papers (Exam Idioms on the Portal).",
@@ -625,8 +622,7 @@
     },
     {
       "id": "b_text",
-      "name": "Text Completion Typhoon",
-      "name_vi": "Bão Điền Câu Sông Hoài",
+      "name": "Typhoon",
       "source": "text_completion",
       "description": "Điền cụm/mệnh đề vào đoạn văn theo định dạng đề tốt nghiệp THPT (Text Completion trên Portal).",
       "description_en": "Fill phrases and clauses into passages in the national graduation exam format (Text Completion on the Portal).",

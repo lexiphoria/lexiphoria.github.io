@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "description": "Ngân hàng câu hỏi Boss \"Hồn Ma Cụm Từ Phố Cổ\" (mức B1): cụm động từ và kết hợp từ trong bối cảnh đón khách ở Hội An. Đáp án đúng luôn là phương án đầu tiên trong tệp này; game tự xáo trộn khi hỏi.",
+  "description": "Ngân hàng câu hỏi Boss \"Phrase Ghost\" (mức B1): cụm động từ và kết hợp từ trong bối cảnh đón khách ở Hội An. Đáp án đúng luôn là phương án đầu tiên trong tệp này; game tự xáo trộn khi hỏi.",
   "phrasal": [
     { "q": "You can ___ your áo dài this afternoon. It will be ready at 4 p.m.", "options": ["pick up", "pick out", "pick on", "pick off"], "answer": 0, "explain": "pick up: đến lấy (đồ đã đặt, đã may).", "explain_en": "pick up: collect something you ordered.", "note": "Cụm từ đón khách · Chọn đáp án đúng", "note_en": "Hosting phrases · Choose the right answer" },
     { "q": "Would you like to ___ the dress before Mr. Minh finishes the sleeves?", "options": ["try on", "try out", "put off", "take after"], "answer": 0, "explain": "try on: mặc thử quần áo.", "explain_en": "try on: put on clothes to see if they fit.", "note": "Cụm từ đón khách · Chọn đáp án đúng", "note_en": "Hosting phrases · Choose the right answer" },

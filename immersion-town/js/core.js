@@ -157,7 +157,7 @@
       if (ratio >= 0.75) traits.push(['🎯', L('Chính xác', 'Accurate'), L(`Đúng ngay lần đầu ${Math.round(ratio * 100)}% số lượt.`, `Right on the first try in ${Math.round(ratio * 100)}% of turns.`)]);
       else if (ratio < 0.5) tips.push(L('Bạn hay phải làm lại. Đọc Booklet ngữ pháp liên quan trước khi nhận nhiệm vụ.', 'You often need a second try. Read the related grammar Booklet before starting a mission.'));
     }
-    if (unknown >= 5) tips.push(L(`Bạn có ${unknown} từ Unknown. Mở Sổ từ → "Ôn 5 từ ưu tiên" hoặc đấu Bóng Ma Quên Từ.`, `You have ${unknown} Unknown words. Open the Word Book → "Review 5 priority words", or fight the Forgetful Phantom.`));
+    if (unknown >= 5) tips.push(L(`Bạn có ${unknown} từ Unknown. Mở Sổ từ → "Ôn 5 từ ưu tiên" hoặc đấu Boss Word Thief.`, `You have ${unknown} Unknown words. Open the Word Book → "Review 5 priority words", or fight the Word Thief.`));
     const booklets = Object.keys(d.collected).filter((k) => k.startsWith('bk_')).length;
     if (booklets < totals.booklets) tips.push(L(`Còn ${totals.booklets - booklets} Booklet ngữ pháp giấu trên các khu phố. Đi dạo và tìm cuốn sách xanh có gáy đỏ.`, `${totals.booklets - booklets} grammar Booklet(s) are still hidden around town. Look for a green book with a red spine.`));
     if (!traits.length && !tips.length) tips.push(L('Hãy chơi thêm một lúc để hệ thống phân tích phong cách học của bạn.', 'Play a little longer so the game can analyse your learning style.'));

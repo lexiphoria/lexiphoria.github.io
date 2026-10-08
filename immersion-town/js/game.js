@@ -964,7 +964,7 @@
     items.push(el('li', {}, L(`🎯 Đúng ngay lần đầu: ${quest.firstTry}/${q.turns.length} lượt`, `🎯 Right on the first try: ${quest.firstTry}/${q.turns.length} turns`)));
     const nowDone = questsDone();
     DATA.bosses.forEach((b) => {
-      if (doneBefore < b.unlock_quests && nowDone >= b.unlock_quests) items.push(el('li', {}, L(`⚔️ Mở khoá Boss: ${b.name_vi}. Tới Hội An Quán để khiêu chiến!`, `⚔️ Boss unlocked: ${b.name}. Challenge it at the Hoi An Assembly Hall!`)));
+      if (doneBefore < b.unlock_quests && nowDone >= b.unlock_quests) items.push(el('li', {}, L(`⚔️ Mở khoá Boss: ${b.name}. Tới Hội An Quán để khiêu chiến!`, `⚔️ Boss unlocked: ${b.name}. Challenge it at the Hoi An Assembly Hall!`)));
     });
     sideQuests().forEach((sq) => {
       if (sq.requires === q.id && first) items.push(el('li', {}, L(`🤝 Mở việc nhỏ: ${questTitle(sq)}`, `🤝 New favour: ${questTitle(sq)}`)));
@@ -1377,8 +1377,7 @@
       return el('article', { class: 'boss-card dongho-panel' + (open ? '' : ' locked') + (b.advanced ? ' advanced' : '') },
         el('img', { src: b.img, alt: '', class: 'boss-thumb' }),
         el('div', {},
-          el('h3', {}, L(b.name_vi, b.name), b.level ? el('span', { class: 'level-tag' }, b.level) : null),
-          el('p', { class: 'muted' }, L(b.name, b.name_vi)),
+          el('h3', {}, b.name, b.level ? el('span', { class: 'level-tag' }, b.level) : null),
           el('p', {}, tx(b, 'description')),
           el('p', { class: 'status' }, open
             ? (rec.wins ? L(`🏆 Đã thắng ${rec.wins} lần`, `🏆 Won ${rec.wins}×`) : L('Chưa hạ', 'Not defeated yet'))
@@ -1451,7 +1450,7 @@
   function renderBattle() {
     reopenSheet = null;
     const b = battle;
-    const bossName = L(b.boss.name_vi, b.boss.name);
+    const bossName = b.boss.name;
     const q = b.current;
     const arena = el('div', { class: 'arena' },
       el('img', { src: b.boss.img, alt: b.boss.name, class: 'boss-img' }),
@@ -1554,7 +1553,7 @@
     save();
     renderHud();
     const boss = b.boss;
-    const bossName = L(boss.name_vi, boss.name);
+    const bossName = boss.name;
     openSheet(win ? L('🏆 Chiến thắng!', '🏆 Victory!') : L('💀 Thua trận', '💀 Defeated'),
       el('div', { class: 'finish' },
         el('img', { src: boss.img, alt: '', class: 'boss-thumb' + (win ? ' defeated' : '') }),
@@ -1858,7 +1857,7 @@
 <h3>${L('Nhiệm vụ', 'Missions')}</h3>
 ${table([L('Nhiệm vụ', 'Mission'), L('Trạng thái', 'Status'), L('Đúng ngay lần đầu', 'Right first try'), L('Nói / Gõ', 'Spoken / Typed')], [...DATA.quests, ...sideQuests()].map(questRow))}
 <h3>Boss</h3>
-${table(['Boss', L('Số lần thắng', 'Wins'), L('Số lần đấu', 'Tries')], DATA.bosses.map((b) => { const r = d().bosses[b.id] || {}; return row([esc(L(b.name_vi, b.name)), r.wins || 0, r.tries || 0]); }))}
+${table(['Boss', L('Số lần thắng', 'Wins'), L('Số lần đấu', 'Tries')], DATA.bosses.map((b) => { const r = d().bosses[b.id] || {}; return row([esc(b.name), r.wins || 0, r.tries || 0]); }))}
 <h3>Booklets</h3>
 ${table(['Booklet', L('Đã tìm', 'Found'), L('Kiểm tra nhanh', 'Quick check')], BOOKLETS.map((b) => row([esc(L(b.title, b.title_en)), d().collected[b.id] ? '✓' : '–', d().bookletChecks[b.id] ? L('✓ Đúng hết', '✓ All correct') : '–'])))}
 <h3>${L('Từ vựng', 'Vocabulary')}</h3>

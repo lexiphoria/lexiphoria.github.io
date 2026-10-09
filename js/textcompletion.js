@@ -1166,8 +1166,8 @@ const ALL_EXAMS = [
           "which reshaped the city’s geography and urban outlook"
         ],
         ans: 2,
-        grammar: "Present perfect tense verb",
-        tip: "The main clause 'New bridges...' needs a main verb 'have reshaped'."
+        grammar: "Main clause predicate (Finite verb)",
+        tip: "Chủ ngữ chính 'New bridges' chưa có vị ngữ chính (finite verb), do đó vị trí này bắt buộc phải là động từ chia thì hoàn chỉnh ('have reshaped'), không thể dùng hiện tại phân từ rút gọn ('reshaping') sau dấu phẩy vì sẽ làm câu thiếu vị ngữ."
       },
       {
         num: 4,
@@ -3183,12 +3183,12 @@ const ALL_EXAMS = [
         opts: [
           "that they can quickly replace all modern medical treatments",
           "which helps you to completely forget about your past",
-          "of lacking prioritization in managing daily tasks",
+          "whether one can completely eliminate all negative emotions",
           "how consistently they are integrated into daily routines"
         ],
         ans: 3,
         grammar: "Noun clause after preposition",
-        tip: "The phrase 'lies in' is followed by an object. 'How consistently...' is a noun clause acting as the object of the preposition 'in'."
+        tip: "Cụm 'lies in' cần một tân ngữ theo sau. Mệnh đề danh từ 'how consistently...' đóng vai trò làm tân ngữ cho giới từ 'in'. Lợi ích thực sự của thiền/chánh niệm nằm ở sự duy trì đều đặn trong sinh hoạt hàng ngày, không phải ở việc thay thế điều trị y khoa hay dập tắt hoàn toàn mọi cảm xúc tiêu cực."
       }
     ]
   },

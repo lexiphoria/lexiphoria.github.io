@@ -3639,7 +3639,7 @@
     "which reshaped the city’s geography and urban outlook"
    ],
    "answer": 2,
-   "explain": "Present perfect tense verb. The main clause 'New bridges...' needs a main verb 'have reshaped'.",
+   "explain": "Main clause predicate (Finite verb). Chủ ngữ chính 'New bridges' chưa có vị ngữ chính (finite verb), do đó vị trí này bắt buộc phải là động từ chia thì hoàn chỉnh ('have reshaped'), không thể dùng hiện tại phân từ rút gọn ('reshaping') sau dấu phẩy.",
    "note": "Text Completion · Autumn sky, a new robe (Hanoi’s transformation)"
   },
   {
@@ -5159,7 +5159,7 @@
    "options": [
     "that they can quickly replace all modern medical treatments",
     "which helps you to completely forget about your past",
-    "of lacking prioritization in managing daily tasks",
+    "whether one can completely eliminate all negative emotions",
     "how consistently they are integrated into daily routines"
    ],
    "answer": 3,

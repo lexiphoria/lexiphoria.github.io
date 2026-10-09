@@ -13,6 +13,7 @@ Game (lexiphoria.github.io) ──câu học sinh──► Cloudflare Worker (gi
 * Mỗi lần gửi tối đa 10 lượt gần nhất, mỗi lượt 400 ký tự, câu trả lời tối đa 90 token; mỗi địa chỉ mạng tối đa 15 lượt/phút.
 * Game không gửi tên Local Host. Khung trò chuyện nhắc học sinh không nói tên thật, số điện thoại, tên trường.
 * Gọi AI không được (mất mạng, hết hạn mức, sai khoá): du khách trả lời bằng câu soạn sẵn, game vẫn chơi bình thường.
+* Khi lỗi, Worker trả `{"error":"model unavailable","detail":"<nhà cung cấp> <mô hình> <mã lỗi>"}` (không chứa khoá): 403 là sai khoá, 410 là mô hình đã ngừng, 429 là hết lượt.
 
 ## Cài đặt (làm trên trang Cloudflare, không cần cài phần mềm)
 
@@ -30,7 +31,7 @@ Tuỳ chọn (cũng ở *Variables and Secrets*, kiểu *Text*):
 
 | Biến | Mặc định | Ý nghĩa |
 |---|---|---|
-| `MODEL` | `meta/llama-3.3-70b-instruct` | Mô hình. Đổi mô hình: mở trang mô hình trên build.nvidia.com → *View Code*, chép đúng chuỗi `model` |
+| `MODEL` | `mistralai/mistral-large-2-instruct`, rồi `google/gemma-4-31b-it`, `nvidia/llama-3.1-nemotron-70b-instruct` | Mô hình; ghi nhiều tên cách nhau dấu phẩy để thử lần lượt. Mô hình bị ngừng thì Worker tự chuyển sang tên kế tiếp. Danh sách mô hình đang chạy: https://integrate.api.nvidia.com/v1/models |
 | `ALLOWED_ORIGINS` | `https://lexiphoria.github.io` | Các trang được gọi Worker, cách nhau dấu phẩy |
 
 ### 3. Bật trong game

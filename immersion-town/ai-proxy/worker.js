@@ -7,13 +7,15 @@
    Biến môi trường (Cloudflare → Worker → Settings → Variables and Secrets):
      PROVIDER         'nvidia' (mặc định khi có NVIDIA_API_KEY) hoặc 'workers-ai'
      NVIDIA_API_KEY   khoá build.nvidia.com (kiểu Secret)
-     MODEL            tên mô hình; mặc định theo nhà cung cấp (xem DEFAULT_MODEL)
+     MODEL            tên mô hình, có thể ghi nhiều tên cách nhau dấu phẩy; mặc định xem DEFAULT_MODELS
      ALLOWED_ORIGINS  các trang được gọi, cách nhau dấu phẩy; mặc định https://lexiphoria.github.io
    Với 'workers-ai' cần thêm binding Workers AI tên AI (Settings → Bindings). Hướng dẫn: ai-proxy/README.md */
 
-const DEFAULT_MODEL = {
-  nvidia: 'meta/llama-3.3-70b-instruct',
-  'workers-ai': '@cf/meta/llama-4-scout-17b-16e-instruct',
+// Thử lần lượt: mô hình bị nhà cung cấp ngừng hoặc báo lỗi thì chuyển sang mô hình kế tiếp
+// (meta/llama-3.3-70b-instruct trên NVIDIA đã ngừng từ 26/08/2026)
+const DEFAULT_MODELS = {
+  nvidia: ['mistralai/mistral-large-2-instruct', 'google/gemma-4-31b-it', 'nvidia/llama-3.1-nemotron-70b-instruct'],
+  'workers-ai': ['@cf/meta/llama-4-scout-17b-16e-instruct', '@cf/google/gemma-3-12b-it'],
 };
 const NVIDIA_URL = 'https://integrate.api.nvidia.com/v1/chat/completions';
 const MAX_MESSAGES = 10;      // chỉ gửi 10 lượt gần nhất
@@ -99,23 +101,54 @@ function tidy(text) {
   return t;
 }
 
-async function askModel(env, messages) {
-  const provider = env.PROVIDER || (env.NVIDIA_API_KEY ? 'nvidia' : 'workers-ai');
-  const model = env.MODEL || DEFAULT_MODEL[provider];
-  if (provider === 'nvidia') {
-    const res = await fetch(NVIDIA_URL, {
-      method: 'POST',
-      headers: { Authorization: `Bearer ${env.NVIDIA_API_KEY}`, 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify({ model, messages, max_tokens: MAX_TOKENS, temperature: 0.7, top_p: 0.9, stream: false }),
-      signal: AbortSignal.timeout(15000),
-    });
-    if (!res.ok) throw new Error(`nvidia ${res.status}`);
-    const data = await res.json();
-    return { text: data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content, model };
+// Mô hình không nhận vai trò "system" (một số bản Gemma): gộp lời dặn vào đầu câu hỏi đầu tiên của học sinh
+function mergeSystem(messages) {
+  const [sys, ...rest] = messages;
+  const i = rest.findIndex((m) => m.role === 'user');
+  return rest.map((m, j) => (j === i ? { role: 'user', content: `${sys.content}\n\n${m.content}` } : m));
+}
+
+async function askNvidia(env, models, messages) {
+  const call = (model, msgs) => fetch(NVIDIA_URL, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${env.NVIDIA_API_KEY}`, 'Content-Type': 'application/json', Accept: 'application/json' },
+    body: JSON.stringify({ model, messages: msgs, max_tokens: MAX_TOKENS, temperature: 0.7, top_p: 0.9, stream: false }),
+    signal: AbortSignal.timeout(15000),
+  });
+  let last = 'no model';
+  for (const model of models) {
+    let res = await call(model, messages);
+    if (res.status === 400) res = await call(model, mergeSystem(messages));
+    if (res.ok) {
+      const data = await res.json();
+      const msg = data.choices && data.choices[0] && data.choices[0].message;
+      return { text: msg && msg.content, model };
+    }
+    last = `${model} ${res.status}`;
+    // Mô hình bị ngừng / không hỗ trợ thì thử mô hình kế tiếp; sai khoá, hết lượt, lỗi máy chủ thì dừng
+    if (![400, 404, 410, 422].includes(res.status)) break;
   }
-  if (!env.AI) throw new Error('missing Workers AI binding');
-  const out = await env.AI.run(model, { messages, max_tokens: MAX_TOKENS, temperature: 0.7 });
-  return { text: typeof out.response === 'string' ? out.response : out.response && out.response.text, model };
+  throw new Error(`nvidia ${last}`);
+}
+
+async function askWorkersAI(env, models, messages) {
+  if (!env.AI) throw new Error('workers-ai missing binding AI');
+  let last = 'no model';
+  for (const model of models) {
+    try {
+      const out = await env.AI.run(model, { messages, max_tokens: MAX_TOKENS, temperature: 0.7 });
+      return { text: typeof out.response === 'string' ? out.response : out.response && out.response.text, model };
+    } catch (e) {
+      last = `${model} ${String(e.message || e).slice(0, 60)}`;
+    }
+  }
+  throw new Error(`workers-ai ${last}`);
+}
+
+function askModel(env, messages) {
+  const provider = env.PROVIDER || (env.NVIDIA_API_KEY ? 'nvidia' : 'workers-ai');
+  const models = env.MODEL ? env.MODEL.split(',').map((s) => s.trim()).filter(Boolean) : DEFAULT_MODELS[provider];
+  return provider === 'nvidia' ? askNvidia(env, models, messages) : askWorkersAI(env, models, messages);
 }
 
 export default {
@@ -145,7 +178,8 @@ export default {
       if (!reply) return json({ error: 'empty reply' }, 502, cors);
       return json({ reply, model }, 200, cors);
     } catch (e) {
-      return json({ error: 'model unavailable' }, 502, cors);
+      // detail: tên mô hình và mã lỗi của nhà cung cấp (không chứa khoá), để chẩn đoán nhanh
+      return json({ error: 'model unavailable', detail: String(e.message || e).slice(0, 120) }, 502, cors);
     }
   },
 };

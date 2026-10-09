@@ -1,5 +1,5 @@
 {
   "description": "Chế độ Trò chuyện tự do: du khách trả lời bằng AI qua máy chủ trung gian (ai-proxy/worker.js trên Cloudflare). Để trống endpoint thì nút Trò chuyện tự do không hiện. max_turns: số câu học sinh nói trong một lần trò chuyện.",
-  "endpoint": "",
+  "endpoint": "https://immersion-chat.anhthunt2905.workers.dev/",
   "max_turns": 8
 }

@@ -66,6 +66,7 @@
   let LEX_MATCH = [];
   let DATA = null;
   let BOOKLETS = [];
+  let AI_CHAT = { endpoint: '', max_turns: 8 }; // data/ai-chat.json
   let BANK = null;
   let engine = null;
   let quest = null;
@@ -485,6 +486,7 @@
       quest.resume && !waitDusk ? el('p', { class: 'notice' }, L(`📌 Bạn đang làm dở ở lượt ${quest.resume.step + 1}/${q.turns.length}.`, `📌 You stopped at turn ${quest.resume.step + 1}/${q.turns.length}.`)) : null,
       el('div', { class: 'action-bar' },
         el('button', { class: 'btn-action', type: 'button', onclick: closeQuest }, L('Để sau', 'Later')),
+        quest.replay && AI_CHAT.endpoint && charOf(q.npc) ? el('button', { class: 'btn-action', type: 'button', onclick: () => openFreeChat(q) }, L(`💬 Trò chuyện với ${tx(charOf(q.npc), 'name')}`, `💬 Chat with ${tx(charOf(q.npc), 'name')}`)) : null,
         waitDusk
           ? el('button', { class: 'btn-action btn-primary', type: 'button', onclick: () => waitUntilSunset(q) }, L('🌇 Chờ tới hoàng hôn ➔', '🌇 Wait until sunset ➔'))
           : quest.resume
@@ -886,6 +888,160 @@
       modeBox);
   }
 
+  /* ---------- Trò chuyện tự do với du khách (AI qua máy chủ trung gian ai-proxy/worker.js) ---------- */
+
+  // Câu mở đầu của du khách, và câu dự phòng khi không gọi được AI (mất mạng, hết hạn mức)
+  const CHAT_OPENERS = {
+    mark: 'Thanks again for helping me charge my scooter! What else should I see around Hoi An today?',
+    sarah: 'Thank you so much for helping me with my ao dai! Which colour do you think suits me best?',
+    emma: 'My lantern looks amazing, thanks to you! What souvenir should I buy for my family in Germany?',
+    david: 'What a beautiful night on the river! Do Vietnamese families release lanterns at home too?',
+  };
+  const CHAT_FALLBACK = [
+    'Sorry, my phone lost the signal for a moment! Anyway, what is your favourite place in Hoi An?',
+    'Oops, the connection is slow here. Can you tell me a good local dish I should try?',
+    'My internet is not working well right now! What do you like to do at the weekend?',
+  ];
+
+  async function askAI(npcId, history, vocab) {
+    if (!AI_CHAT.endpoint) return null;
+    try {
+      const res = await fetch(AI_CHAT.endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ npc: npcId, vocab, messages: history.slice(-10) }),
+        signal: AbortSignal.timeout ? AbortSignal.timeout(20000) : undefined,
+      });
+      if (!res.ok) return null;
+      const data = await res.json();
+      return typeof data.reply === 'string' && data.reply.trim() ? data.reply.trim() : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function openFreeChat(q) {
+    C.stopListening();
+    C.stopAudio();
+    const npc = charOf(q.npc);
+    const vocab = (q.target_vocabulary || []).filter((id) => LEX[id]);
+    const words = vocab.map((id) => LEX[id].word);
+    const maxTurns = AI_CHAT.max_turns || 8;
+    const opener = CHAT_OPENERS[q.npc] || 'Thanks for your help today! What should I do next in Hoi An?';
+    const history = [{ role: 'assistant', content: opener }];
+    const used = new Set();
+    let turns = 0;
+    let busy = false;
+    let fallbackIdx = 0;
+    if (quest) quest.chat = true;
+
+    const log = el('div', { class: 'chat-log', 'aria-live': 'polite' });
+    const counter = el('span', { class: 'chat-count' });
+    const usedLine = el('p', { class: 'muted chat-used' });
+    const area = answerBox(L('Nói hoặc gõ câu tiếng Anh của bạn…', 'Say or type your English sentence…'));
+    const sendBtn = el('button', { class: 'btn-action btn-primary', type: 'button', disabled: true }, L('Gửi ➔', 'Send ➔'));
+    const mic = C.canListen ? el('button', { class: 'mic small', type: 'button' }, L('🎙️ Nói', '🎙️ Speak')) : null;
+    const status = el('p', { class: 'muted chat-status' });
+
+    const paint = () => {
+      counter.textContent = L(` · lượt ${turns}/${maxTurns}`, ` · turn ${turns}/${maxTurns}`);
+      usedLine.textContent = vocab.length ? L(`Từ của nhiệm vụ bạn đã dùng: ${used.size}/${vocab.length}`, `Mission words you have used: ${used.size}/${vocab.length}`) : '';
+    };
+    const bubble = (who, text, tag) => {
+      const b = el('div', { class: `chat-msg ${who}` }, el('p', {}, ...(who === 'npc' ? tokenize(text) : [text])), tag ? el('small', {}, tag) : null);
+      log.append(b);
+      log.scrollTop = log.scrollHeight;
+      return b;
+    };
+    const finish = () => {
+      area.disabled = true;
+      sendBtn.disabled = true;
+      if (mic) mic.disabled = true;
+      status.textContent = L(`Bạn đã trò chuyện ${maxTurns} lượt với ${tx(npc, 'name')}. Hay lắm! Nhấn "Trò chuyện lại" để bắt đầu cuộc mới.`,
+        `You had ${maxTurns} turns with ${tx(npc, 'name')}. Well done! Tap "Chat again" to start a new conversation.`);
+    };
+
+    async function send(raw) {
+      const text = String(raw || '').replace(/\s+/g, ' ').trim().slice(0, 300);
+      if (!text || busy || turns >= maxTurns) return;
+      busy = true;
+      sendBtn.disabled = true;
+      area.value = '';
+      C.stopAudio();
+      bubble('me', text);
+      history.push({ role: 'user', content: text });
+      C.scoreKeywords(text, words).hits.forEach((hit, i) => { if (hit) used.add(vocab[i]); });
+      turns += 1;
+      d().stats.freeChat = (d().stats.freeChat || 0) + 1;
+      save();
+      paint();
+      const typing = bubble('npc typing', '…');
+      let reply = await askAI(q.npc, history, words);
+      typing.remove();
+      let tag = null;
+      if (!reply) {
+        reply = CHAT_FALLBACK[fallbackIdx++ % CHAT_FALLBACK.length];
+        tag = L('(câu soạn sẵn: chưa gọi được AI)', '(prepared line: AI unavailable)');
+      }
+      history.push({ role: 'assistant', content: reply });
+      bubble('npc', reply, tag);
+      if (d().soundOn) C.speak(reply, voiceOf(npc));
+      busy = false;
+      if (turns >= maxTurns) finish();
+      else area.focus();
+    }
+
+    area.addEventListener('input', () => { sendBtn.disabled = busy || !area.value.trim(); });
+    area.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        send(area.value);
+      }
+    });
+    sendBtn.addEventListener('click', () => send(area.value));
+    if (mic) {
+      const setListening = (on) => {
+        mic.classList.toggle('listening', on);
+        mic.textContent = on ? L('⏹ Đang nghe…', '⏹ Listening…') : L('🎙️ Nói', '🎙️ Speak');
+      };
+      mic.addEventListener('click', () => {
+        if (busy) return;
+        if (C.isListening()) {
+          C.stopRecognizer();
+          return;
+        }
+        status.textContent = '';
+        C.startListening({
+          onState: setListening,
+          onText: (text) => { area.value = text; },
+          onResult: (alts) => send(alts[0]),
+          onFail: (code) => {
+            status.textContent = code === 'no-speech'
+              ? L('Chưa nghe thấy giọng nói. Nhấn 🎙️ rồi nói lại, hoặc gõ câu.', 'No speech heard. Tap 🎙️ and try again, or type.')
+              : (MIC_ERRORS[code] ? L(...MIC_ERRORS[code]) : L(`Nhận dạng giọng nói gặp lỗi (${code}). Bạn hãy gõ câu.`, `Speech recognition error (${code}). Please type.`));
+          },
+        });
+      });
+    }
+
+    dialog(portraitOf(q.npc), tx(npc, 'name'), tx(npc, 'role'),
+      el('h3', { class: 'dlg-title' }, `💬 ${L('Trò chuyện tự do', 'Free chat')}`, el('small', {}, ` · ${questTitle(q)}`), el('small', {}, counter)),
+      el('p', { class: 'notice chat-note' }, L('🤖 Du khách trả lời bằng AI. Câu bạn nói được gửi tới AI để trả lời, nên đừng nói tên thật, số điện thoại hay tên trường của bạn.',
+        '🤖 The visitor replies with AI. What you say is sent to the AI, so do not share your real name, phone number or school.')),
+      log,
+      vocab.length ? el('div', { class: 'chips' }, vocab.map((id) => wordButton(id, LEX[id].word))) : null,
+      usedLine,
+      area,
+      status,
+      el('div', { class: 'action-bar' },
+        el('button', { class: 'btn-action', type: 'button', onclick: closeQuest }, L('Xong', 'Done')),
+        el('button', { class: 'btn-action', type: 'button', onclick: () => openFreeChat(q) }, L('↺ Trò chuyện lại', '↺ Chat again')),
+        mic, sendBtn));
+    bubble('npc', opener);
+    paint();
+    if (d().soundOn) C.speak(opener, voiceOf(npc));
+  }
+
   /* Kết thúc nhiệm vụ */
   function unlockOutfit(id) {
     if (!id || d().outfits.includes(id)) return null;
@@ -959,6 +1115,7 @@
       next ? el('p', { class: 'muted' }, `${L('Nhiệm vụ tiếp theo', 'Next mission')}: ${next.icon} ${questTitle(next)} (${zoneLabel(next.zone)})`) : null,
       el('div', { class: 'action-bar' },
         outfit ? el('button', { class: 'btn-action', type: 'button', onclick: () => { wear(outfit.id); toast(`${L('👘 Đang mặc', '👘 Wearing')}: ${outfitName(outfit)}`); closeQuest(); } }, `${L('Mặc', 'Wear')} ${outfitName(outfit)}`) : null,
+        AI_CHAT.endpoint && !isSide(q) && charOf(q.npc) ? el('button', { class: 'btn-action', type: 'button', onclick: () => openFreeChat(q) }, L(`💬 Trò chuyện với ${tx(charOf(q.npc), 'name')}`, `💬 Chat with ${tx(charOf(q.npc), 'name')}`)) : null,
         el('button', { class: 'btn-action btn-primary', type: 'button', onclick: () => { closeQuest(); if (allDone) guideToCeremony(); } }, allDone ? L('🌙 Lên Đêm hội ➔', '🌙 Go to the Heritage Night ➔') : L('Đóng', 'Close'))));
   }
 
@@ -1601,6 +1758,7 @@
         stat(L('ly trà đá đã nhặt', 'iced teas found'), `${s.teas}/${teaTotal}`),
         stat(L('đúng ngay lần đầu', 'right on the first try'), turns ? `${Math.round((s.firstTry / turns) * 100)}%` : '–'),
         stat(L('lượt nói / gõ thay', 'spoken / typed turns'), `${s.voice} / ${s.typed}`),
+        s.freeChat ? stat(L('câu trò chuyện tự do', 'free-chat lines'), s.freeChat) : null,
         stat(L('câu Boss đúng / sai', 'Boss answers right / wrong'), `${s.bossRight} / ${s.bossWrong}`)),
       el('h4', {}, L('🧭 Phong cách học của bạn', '🧭 Your learning style')),
       a.traits.length ? el('ul', { class: 'traits' }, a.traits.map(([icon, name, desc]) => el('li', {}, el('b', {}, `${icon} ${name}: `), desc))) : null,
@@ -1846,6 +2004,7 @@ ${table([L('Từ', 'Word'), L('Nghĩa', 'Meaning'), L('Lần gắn Unknown', 'Ta
 <li>${L('Câu đã dịch bằng Trà Đá', 'Lines translated with Trà Đá')}: ${s.translations}/${s.linesSeen}</li>
 <li>${L('Đúng ngay lần đầu', 'Right on the first try')}: ${turns ? `${Math.round((s.firstTry / turns) * 100)}% (${s.firstTry}/${turns})` : '–'}</li>
 <li>${L('Lượt nói / gõ thay', 'Spoken / typed turns')}: ${s.voice} / ${s.typed}</li>
+<li>${L('Câu trò chuyện tự do với du khách (AI)', 'Free-chat lines with visitors (AI)')}: ${s.freeChat || 0}</li>
 <li>${L('Câu Boss đúng / sai', 'Boss answers right / wrong')}: ${s.bossRight} / ${s.bossWrong}</li>
 <li>${L('Lượt ôn từ', 'Word reviews')}: ${s.reviews}</li>
 </ul>
@@ -1946,7 +2105,7 @@ ${table([L('Từ', 'Word'), L('Nghĩa', 'Meaning'), L('Lần gắn Unknown', 'Ta
     updateChip();
     if (!$('#title-screen').hidden) showTitle();
     if (!$('#sheet').hidden && reopenSheet) reopenSheet();
-    if (quest && quest.step < 0 && !$('#dialog').hidden) renderBrief();
+    if (quest && quest.step < 0 && !quest.chat && !$('#dialog').hidden) renderBrief();
   }
 
   /* ---------- Khởi động ---------- */
@@ -2093,7 +2252,12 @@ ${table([L('Từ', 'Word'), L('Nghĩa', 'Meaning'), L('Lần gắn Unknown', 'Ta
   async function init() {
     applyStatic();
     try {
-      const [lex, dlg, bk] = await Promise.all([loadJson('data/lexicon.json'), loadJson('data/npc-dialogues-v4.json'), loadJson('data/booklets.json')]);
+      const [lex, dlg, bk, ai] = await Promise.all([loadJson('data/lexicon.json'), loadJson('data/npc-dialogues-v4.json'), loadJson('data/booklets.json'),
+        loadJson('data/ai-chat.json').catch(() => ({}))]);
+      AI_CHAT = { ...AI_CHAT, ...ai };
+      if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) {
+        try { AI_CHAT.endpoint = localStorage.getItem('immersionTown.aiEndpoint') || AI_CHAT.endpoint; } catch (e) { /* bỏ qua */ }
+      }
       LEX_LIST = lex.words;
       LEX = Object.fromEntries(LEX_LIST.map((w) => [w.id, w]));
       LEX_MATCH = LEX_LIST.flatMap((w) => [w.word, ...(w.forms || [])].map((f) => ({ id: w.id, stems: C.tokensOf(f) })))

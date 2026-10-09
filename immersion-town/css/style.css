@@ -1111,6 +1111,78 @@ button:disabled {
   50% { box-shadow: 3px 3px 0 var(--ink-black), 0 0 0 10px rgba(200, 50, 40, 0); }
 }
 
+/* Trò chuyện tự do với du khách (AI) */
+.chat-log {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 170px;
+  overflow-y: auto;
+  margin: 8px 0;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.45);
+  border: 2px dashed var(--stone-grey);
+  border-radius: 8px;
+}
+
+.chat-msg {
+  max-width: 85%;
+  padding: 7px 11px;
+  border: 2px solid var(--ink-black);
+  border-radius: 10px;
+  box-shadow: 2px 2px 0 var(--ink-black);
+}
+
+.chat-msg p {
+  margin: 0;
+  line-height: 1.45;
+}
+
+.chat-msg small {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.chat-msg.npc {
+  align-self: flex-start;
+  background: var(--do-paper-bg);
+}
+
+.chat-msg.me {
+  align-self: flex-end;
+  background: var(--warn-bg);
+}
+
+.chat-msg.typing p {
+  letter-spacing: 3px;
+  animation: chat-blink 1s ease-in-out infinite;
+}
+
+@keyframes chat-blink {
+  50% { opacity: 0.35; }
+}
+
+.chat-note,
+.chat-used,
+.chat-status {
+  font-size: 0.85rem;
+}
+
+.chat-used,
+.chat-status {
+  margin: 4px 0;
+}
+
+.mic.small {
+  width: auto;
+  min-height: 0;
+  margin-top: 0;
+  padding: 6px 14px;
+  font-size: 0.95rem;
+}
+
 .transcript {
   min-height: 1.4em;
   margin: 8px 0 2px;

@@ -35,7 +35,7 @@
       clock: 0,        // giờ trong ngày (0 sáng … 4 tối); tự tăng theo số nhiệm vụ đã xong
       stallUsed: 0,    // số ly đã đổi ở quầy Trà Đá (mỗi nhiệm vụ chính xong được 1 ly)
       stallWait: 0,    // trả lời sai ở quầy thì chờ tới thời điểm này
-      stats: { pokes: 0, translations: 0, linesSeen: 0, firstTry: 0, retries: 0, voice: 0, typed: 0, bossRight: 0, bossWrong: 0, reviews: 0, teas: 0 },
+      stats: { pokes: 0, translations: 0, linesSeen: 0, firstTry: 0, retries: 0, voice: 0, typed: 0, bossRight: 0, bossWrong: 0, reviews: 0, teas: 0, freeChat: 0 },
     };
   }
 

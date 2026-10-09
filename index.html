@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/characters/sticker_art_painting.png">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/rice-widget.css">
 </head>
 
 <body>
@@ -64,55 +65,102 @@
 
         <!-- Bố cục 2 cột: panel Extra Materials bên trái, lộ trình chính bên phải -->
         <div class="home-layout">
-            <!-- Panel trái: Extra Materials (V-ACT, Exam Idioms, Immersion Town) -->
-            <aside class="side-panel" aria-labelledby="extra-title">
-                <h2 class="section-title" id="extra-title">Extra Materials</h2>
-                <div class="extra-grid">
-                    <!-- 1. V-ACT TEST -->
-                    <article class="card" style="background: linear-gradient(135deg, #1e1b3a 0%, #2d1f4e 100%); border-color: #4338ca; color: #e8eaed;">
-                        <div class="card-top">
-                            <div class="card-tags">
-                                <span class="tag" style="background: #6366f1; color: #fff;">Aptitude Test Practice</span>
-                                <span class="tag" style="background: rgba(245,158,11,0.2); color: #f59e0b;">Grade 12</span>
-                            </div>
-                            <div class="card-character char-bg-dark">
-                                <img src="assets/characters/sticker_laptop_digital.png" alt="V-ACT Digital Student">
-                            </div>
+            <!-- Cột trái: widget trồng lúa + panel Extra Materials -->
+            <div class="side-col">
+                <!-- Widget trồng lúa 10 giai đoạn (css/rice-widget.css, js/rice-widget.js) -->
+                <section class="portal-rice-card" id="portalRiceWidget" aria-labelledby="rice-title">
+                    <div class="rice-card-header">
+                        <h2 id="rice-title"><span aria-hidden="true">🌾</span> Knowledge Rice Field</h2>
+                        <span class="water-status-badge" title="Water drops">
+                            <img src="assets/garden/water_drops.png" alt="">
+                            <span id="homeWaterCount">0</span><span class="visually-hidden"> water drops</span>
+                        </span>
+                    </div>
+                    <div class="rice-display-area">
+                        <div class="rice-stage-frame">
+                            <img id="homeRiceImg" src="assets/rice/rice_stage_1_swelling.svg" alt="Rice growth stage 1: Seed Swelling">
                         </div>
-                        <h3 style="color: #e8eaed; margin: 6px 0 12px;">V-ACT TEST</h3>
-                        <a class="btn btn-primary" href="V-ACT_TEST/index.html" style="background: #6366f1;">Start V-ACT Test</a>
-                    </article>
+                        <div class="rice-stage-info">
+                            <div class="stage-step-tag" id="homeRiceStepTag">STAGE 1 / 10</div>
+                            <h3 id="homeRiceStageTitle">Seed Swelling</h3>
+                            <p id="homeRiceDesc">Soaked rice seeds swell up in the soft soil.</p>
+                        </div>
+                    </div>
+                    <div class="rice-progress-container">
+                        <div class="rice-progress-bar" id="homeRiceProgress" role="progressbar" aria-label="Growth stage" aria-valuemin="1" aria-valuemax="10" aria-valuenow="1">
+                            <div class="rice-progress-fill" id="homeRiceProgressFill"></div>
+                        </div>
+                        <div class="rice-stage-dots" id="homeRiceDots" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="rice-card-actions">
+                        <button type="button" class="water-rice-btn" id="waterRiceBtn">
+                            <img src="assets/garden/watering_can.png" alt=""> Water (+10 💧)
+                        </button>
+                        <span class="total-harvest-count" id="totalHarvestCount">🌾 Harvests: 0</span>
+                    </div>
+                </section>
 
-                    <!-- 2. Exam Idioms Mastery -->
-                    <article class="card" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); border-color: #10b981; color: #e8eaed; box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);">
-                        <div class="card-top">
-                            <div class="card-tags">
-                                <span class="tag" style="background: #10b981; color: #fff;">🎯 Exam Practice</span>
-                                <span class="tag" style="background: rgba(139, 92, 246, 0.25); color: #c084fc;">Grade 12</span>
+                <!-- Panel Extra Materials (V-ACT, Exam Idioms, Immersion Town) -->
+                <aside class="side-panel" aria-labelledby="extra-title">
+                    <h2 class="section-title" id="extra-title">Extra Materials</h2>
+                    <div class="extra-grid">
+                        <!-- 1. V-ACT TEST -->
+                        <article class="card" style="background: linear-gradient(135deg, #1e1b3a 0%, #2d1f4e 100%); border-color: #4338ca; color: #e8eaed;">
+                            <div class="card-top">
+                                <div class="card-tags">
+                                    <span class="tag" style="background: #6366f1; color: #fff;">Aptitude Test Practice</span>
+                                    <span class="tag" style="background: rgba(245,158,11,0.2); color: #f59e0b;">Grade 12</span>
+                                </div>
+                                <div class="card-character char-bg-dark">
+                                    <img src="assets/characters/sticker_laptop_digital.png" alt="V-ACT Digital Student">
+                                </div>
                             </div>
-                            <div class="card-character char-bg-dark">
-                                <img src="assets/characters/sticker_idiom_idea.png" alt="Exam Idioms Genius">
-                            </div>
-                        </div>
-                        <h3 style="color: #fff; margin: 6px 0 12px;">Exam Idioms Mastery</h3>
-                        <a class="btn btn-primary" href="Exam_Idioms_Game.html" style="background: linear-gradient(135deg, #10b981 0%, #8b5cf6 100%); border: none;">Start Exam Idioms</a>
-                    </article>
+                            <h3 style="color: #e8eaed;">V-ACT TEST</h3>
+                            <a class="btn btn-primary" href="V-ACT_TEST/index.html" style="background: #6366f1;">Start V-ACT Test</a>
+                        </article>
 
-                    <!-- 3. Immersion Town (trò chơi nhập vai giao tiếp) -->
-                    <article class="card" style="background: linear-gradient(135deg, #fffdf5 0%, #ffe9c7 100%); border-color: #FBC02D; box-shadow: 0 0 18px rgba(255, 111, 0, 0.16);">
-                        <div class="card-top">
-                            <div class="card-tags">
-                                <span class="tag" style="background: #FF6F00; color: #fff;">🏮 Role-play Game</span>
+                        <!-- 2. Exam Idioms Mastery -->
+                        <article class="card" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); border-color: #10b981; color: #e8eaed; box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);">
+                            <div class="card-top">
+                                <div class="card-tags">
+                                    <span class="tag" style="background: #10b981; color: #fff;">🎯 Exam Practice</span>
+                                    <span class="tag" style="background: rgba(139, 92, 246, 0.25); color: #c084fc;">Grade 12</span>
+                                </div>
+                                <div class="card-character char-bg-dark">
+                                    <img src="assets/characters/sticker_idiom_idea.png" alt="Exam Idioms Genius">
+                                </div>
                             </div>
-                            <div class="card-character char-bg-amber">
-                                <img src="assets/characters/sticker_immersion_globe.png" alt="Immersion Town World Explorer">
+                            <h3 style="color: #fff;">Exam Idioms Mastery</h3>
+                            <a class="btn btn-primary" href="Exam_Idioms_Game.html" style="background: linear-gradient(135deg, #10b981 0%, #8b5cf6 100%); border: none;">Start Exam Idioms</a>
+                        </article>
+
+                        <!-- 3. Immersion Town (trò chơi nhập vai giao tiếp) -->
+                        <article class="card" style="background: linear-gradient(135deg, #fffdf5 0%, #ffe9c7 100%); border-color: #FBC02D; box-shadow: 0 0 18px rgba(255, 111, 0, 0.16);">
+                            <div class="card-top">
+                                <div class="card-tags">
+                                    <span class="tag" style="background: #FF6F00; color: #fff;">🏮 Role-play Game</span>
+                                </div>
+                                <div class="card-character char-bg-amber">
+                                    <img src="assets/characters/sticker_immersion_globe.png" alt="Immersion Town World Explorer">
+                                </div>
                             </div>
-                        </div>
-                        <h3 style="margin: 6px 0 12px;">Immersion Town</h3>
-                        <a class="btn btn-primary" href="immersion-town/index.html" style="background: linear-gradient(135deg, #FF6F00 0%, #E91E63 100%); border: none;">Enter Immersion Town</a>
-                    </article>
-                </div>
-            </aside>
+                            <h3>Immersion Town</h3>
+                            <a class="btn btn-primary" href="immersion-town/index.html" style="background: linear-gradient(135deg, #FF6F00 0%, #E91E63 100%); border: none;">Enter Immersion Town</a>
+                        </article>
+                    </div>
+                </aside>
+            </div>
 
             <!-- 4 thẻ trọng tâm theo lộ trình: Vocabulary Mastery → English Quiz → Text Completion → HSG 12 -->
             <div class="main-col">
@@ -129,7 +177,7 @@
                                 <img src="assets/characters/sticker_vocab_book.png" alt="Vocabulary Mastery Student">
                             </div>
                         </div>
-                        <h3 style="color: #fff; margin: 10px 0 18px;">Vocabulary Mastery</h3>
+                        <h3 style="color: #fff;">Vocabulary Mastery</h3>
                         <a class="btn btn-primary" href="Vocabulary_Game.html" style="background: linear-gradient(135deg, #8e24aa 0%, #e040fb 100%); border: none;">Start Vocabulary Game</a>
                     </article>
 
@@ -144,7 +192,7 @@
                                 <img src="assets/characters/sticker_quiz_thinking.png" alt="English Quiz Student">
                             </div>
                         </div>
-                        <h3 style="margin: 10px 0 18px;">English Quiz</h3>
+                        <h3>English Quiz</h3>
                         <a class="btn btn-primary" href="EngQuiz.html">Start EngQuiz</a>
                     </article>
 
@@ -159,7 +207,7 @@
                                 <img src="assets/characters/sticker_text_writing.png" alt="Text Completion Scholar">
                             </div>
                         </div>
-                        <h3 style="margin: 10px 0 18px;">Text Completion Quiz</h3>
+                        <h3>Text Completion Quiz</h3>
                         <a class="btn btn-primary" href="TextCompletion.html" style="background: #0284c7;">Start Text Completion</a>
                     </article>
 
@@ -244,6 +292,27 @@
             Good luck with your English learning and get excellent grades!
         </footer>
     </main>
+
+    <!-- Modal mùa vàng bội thu (hiện khi lúa đạt giai đoạn 10) -->
+    <div class="rice-harvest-modal-overlay" id="riceHarvestModal" hidden>
+        <div class="rice-harvest-card" role="dialog" aria-modal="true" aria-labelledby="harvestTitle">
+            <div class="modal-badge-top">🌾 BUMPER HARVEST 🌾</div>
+            <div class="harvest-image-frame">
+                <div class="sun-burst-bg"></div>
+                <img src="assets/rice/rice_stage_10_golden_harvest.svg" alt="Golden rice ready to harvest">
+            </div>
+            <h2 id="harvestTitle">A Golden Harvest of Knowledge!</h2>
+            <p>You cared for your rice through all 10 growth stages. Your knowledge field is full of golden grain.</p>
+            <div class="harvest-rewards-row">
+                <div class="h-reward-item">🌟 +100 XP</div>
+                <div class="h-reward-item">🏆 Knowledge Farmer Badge</div>
+                <div class="h-reward-item">📜 New Lessons Unlocked</div>
+            </div>
+            <button type="button" class="start-new-crop-btn" id="startNewCropBtn">🌾 Start a New Crop</button>
+        </div>
+    </div>
+
+    <script src="js/rice-widget.js"></script>
 </body>
 
 </html>

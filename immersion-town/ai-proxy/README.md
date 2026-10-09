@@ -31,7 +31,7 @@ Tuỳ chọn (cũng ở *Variables and Secrets*, kiểu *Text*):
 
 | Biến | Mặc định | Ý nghĩa |
 |---|---|---|
-| `MODEL` | `mistralai/mistral-large-2-instruct`, rồi `google/gemma-4-31b-it`, `nvidia/llama-3.1-nemotron-70b-instruct` | Mô hình; ghi nhiều tên cách nhau dấu phẩy để thử lần lượt. Mô hình bị ngừng thì Worker tự chuyển sang tên kế tiếp. Danh sách mô hình đang chạy: https://integrate.api.nvidia.com/v1/models |
+| `MODEL` | `google/gemma-4-31b-it`, rồi `google/gemma-3-12b-it`, `nvidia/llama-3.1-nemotron-70b-instruct`, `mistralai/mistral-large-2-instruct` | Mô hình; ghi nhiều tên cách nhau dấu phẩy để thử lần lượt. Mô hình bị ngừng, báo lỗi hoặc chờ quá 8 giây thì Worker tự chuyển sang tên kế tiếp (tổng tối đa khoảng 25 giây). Danh sách mô hình đang chạy: https://integrate.api.nvidia.com/v1/models |
 | `ALLOWED_ORIGINS` | `https://lexiphoria.github.io` | Các trang được gọi Worker, cách nhau dấu phẩy |
 
 ### 3. Bật trong game

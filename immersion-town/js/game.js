@@ -910,7 +910,7 @@
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ npc: npcId, vocab, messages: history.slice(-10) }),
-        signal: AbortSignal.timeout ? AbortSignal.timeout(20000) : undefined,
+        signal: AbortSignal.timeout ? AbortSignal.timeout(30000) : undefined,
       });
       if (!res.ok) return null;
       const data = await res.json();

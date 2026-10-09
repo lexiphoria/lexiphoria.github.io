@@ -11,10 +11,11 @@
      ALLOWED_ORIGINS  các trang được gọi, cách nhau dấu phẩy; mặc định https://lexiphoria.github.io
    Với 'workers-ai' cần thêm binding Workers AI tên AI (Settings → Bindings). Hướng dẫn: ai-proxy/README.md */
 
-// Thử lần lượt: mô hình bị nhà cung cấp ngừng hoặc báo lỗi thì chuyển sang mô hình kế tiếp
-// (meta/llama-3.3-70b-instruct trên NVIDIA đã ngừng từ 26/08/2026)
+// Thử lần lượt: mô hình bị ngừng, báo lỗi hoặc quá thời gian chờ thì chuyển sang mô hình kế tiếp.
+// Mô hình nhỏ, nhanh đặt trước (meta/llama-3.3-70b-instruct trên NVIDIA đã ngừng từ 26/08/2026;
+// mistral-large-2 trên gói dùng thử thường phải chờ lâu)
 const DEFAULT_MODELS = {
-  nvidia: ['mistralai/mistral-large-2-instruct', 'google/gemma-4-31b-it', 'nvidia/llama-3.1-nemotron-70b-instruct'],
+  nvidia: ['google/gemma-4-31b-it', 'google/gemma-3-12b-it', 'nvidia/llama-3.1-nemotron-70b-instruct', 'mistralai/mistral-large-2-instruct'],
   'workers-ai': ['@cf/meta/llama-4-scout-17b-16e-instruct', '@cf/google/gemma-3-12b-it'],
 };
 const NVIDIA_URL = 'https://integrate.api.nvidia.com/v1/chat/completions';
@@ -22,6 +23,8 @@ const MAX_MESSAGES = 10;      // chỉ gửi 10 lượt gần nhất
 const MAX_CHARS = 400;        // mỗi lượt tối đa 400 ký tự
 const MAX_TOKENS = 90;        // câu trả lời ngắn: 1–2 câu
 const PER_MINUTE = 15;        // mỗi địa chỉ mạng tối đa 15 lượt/phút (ước lượng trong từng máy chủ của Cloudflare)
+const TIMEOUT_MS = 8000;      // mỗi mô hình chờ tối đa 8 giây (biến TIMEOUT_MS để đổi)
+const BUDGET_MS = 25000;      // tổng thời gian thử các mô hình cho một câu
 
 const PERSONAS = {
   mark: 'You are Mark, a friendly American eco-backpacker in your twenties visiting Hoi An, Vietnam. Earlier today a Vietnamese '
@@ -109,26 +112,36 @@ function mergeSystem(messages) {
 }
 
 async function askNvidia(env, models, messages) {
+  const timeout = Number(env.TIMEOUT_MS) || TIMEOUT_MS;
+  const start = Date.now();
   const call = (model, msgs) => fetch(NVIDIA_URL, {
     method: 'POST',
     headers: { Authorization: `Bearer ${env.NVIDIA_API_KEY}`, 'Content-Type': 'application/json', Accept: 'application/json' },
     body: JSON.stringify({ model, messages: msgs, max_tokens: MAX_TOKENS, temperature: 0.7, top_p: 0.9, stream: false }),
-    signal: AbortSignal.timeout(15000),
+    signal: AbortSignal.timeout(Math.max(1000, Math.min(timeout, BUDGET_MS - (Date.now() - start)))),
   });
-  let last = 'no model';
+  const tried = [];
   for (const model of models) {
-    let res = await call(model, messages);
-    if (res.status === 400) res = await call(model, mergeSystem(messages));
+    if (Date.now() - start > BUDGET_MS - 1000) break;
+    let res;
+    try {
+      res = await call(model, messages);
+      if (res.status === 400) res = await call(model, mergeSystem(messages));
+    } catch (e) {
+      // quá thời gian chờ hoặc lỗi mạng: thử mô hình kế tiếp
+      tried.push(`${model} ${e.name === 'TimeoutError' || e.name === 'AbortError' ? 'timeout' : 'network'}`);
+      continue;
+    }
     if (res.ok) {
       const data = await res.json();
       const msg = data.choices && data.choices[0] && data.choices[0].message;
       return { text: msg && msg.content, model };
     }
-    last = `${model} ${res.status}`;
-    // Mô hình bị ngừng / không hỗ trợ thì thử mô hình kế tiếp; sai khoá, hết lượt, lỗi máy chủ thì dừng
-    if (![400, 404, 410, 422].includes(res.status)) break;
+    tried.push(`${model} ${res.status}`);
+    // Sai khoá (401, 403) thì dừng; mô hình bị ngừng, không hỗ trợ, quá tải hay lỗi máy chủ thì thử mô hình kế tiếp
+    if (res.status === 401 || res.status === 403) break;
   }
-  throw new Error(`nvidia ${last}`);
+  throw new Error(`nvidia ${tried.join(', ') || 'no model'}`);
 }
 
 async function askWorkersAI(env, models, messages) {
@@ -145,10 +158,12 @@ async function askWorkersAI(env, models, messages) {
   throw new Error(`workers-ai ${last}`);
 }
 
-function askModel(env, messages) {
+// prefer: mô hình muốn thử trước khi kiểm thử tốc độ; chỉ nhận tên có trong danh sách cho phép
+function askModel(env, messages, prefer) {
   const provider = env.PROVIDER || (env.NVIDIA_API_KEY ? 'nvidia' : 'workers-ai');
   const models = env.MODEL ? env.MODEL.split(',').map((s) => s.trim()).filter(Boolean) : DEFAULT_MODELS[provider];
-  return provider === 'nvidia' ? askNvidia(env, models, messages) : askWorkersAI(env, models, messages);
+  const order = models.includes(prefer) ? [prefer] : models;
+  return provider === 'nvidia' ? askNvidia(env, order, messages) : askWorkersAI(env, order, messages);
 }
 
 export default {
@@ -173,13 +188,13 @@ export default {
     if (!req) return json({ error: 'bad request' }, 400, cors);
 
     try {
-      const { text, model } = await askModel(env, [{ role: 'system', content: systemPrompt(req.npc, req.vocab) }, ...req.messages]);
+      const { text, model } = await askModel(env, [{ role: 'system', content: systemPrompt(req.npc, req.vocab) }, ...req.messages], body.model);
       const reply = tidy(text);
       if (!reply) return json({ error: 'empty reply' }, 502, cors);
       return json({ reply, model }, 200, cors);
     } catch (e) {
       // detail: tên mô hình và mã lỗi của nhà cung cấp (không chứa khoá), để chẩn đoán nhanh
-      return json({ error: 'model unavailable', detail: String(e.message || e).slice(0, 120) }, 502, cors);
+      return json({ error: 'model unavailable', detail: String(e.message || e).slice(0, 240) }, 502, cors);
     }
   },
 };

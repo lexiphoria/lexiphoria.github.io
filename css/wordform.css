@@ -164,21 +164,3 @@ h1 {
 #next-btn { display: none; background-color: var(--accent-color); color: var(--panel-color); border: none; padding: 15px 40px; font-size: 1.2rem; font-weight: 800; border-radius: 50px; cursor: pointer; margin: 30px auto 0; transition: all 0.2s; }
 #next-btn:hover { transform: scale(1.1); }
 
-/* Original Music Widget Style */
-#music-widget { display: flex; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background-color: #1b162d; border: 1px solid rgba(255,255,255,0.1); border-radius: 40px; padding: 10px 20px; align-items: center; gap: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); z-index: 100; font-family: 'Space Mono', monospace; }
-.player-icon { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #e3c1af, #7983d6); box-shadow: inset 0 0 10px rgba(0,0,0,0.5); }
-.play-btn { width: 40px; height: 40px; border-radius: 50%; background-color: #2b2342; border: none; color: #d8c8a1; display: flex; justify-content: center; align-items: center; cursor: pointer; font-size: 1rem; }
-.track-info { display: flex; flex-direction: column; justify-content: center; line-height: 1.2; }
-.track-title { color: #d8c8a1; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
-.track-name { color: #e2e2e2; font-size: 1rem; }
-.volume-control { display: flex; align-items: center; gap: 10px; margin-left: 10px; }
-.vol-label { color: #a097bb; font-size: 0.7rem; letter-spacing: 1px; }
-input[type=range] { -webkit-appearance: none; width: 80px; background: transparent; }
-input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 4px; background: #3b315b; border-radius: 2px; }
-input[type=range]::-webkit-slider-thumb { height: 14px; width: 14px; border-radius: 50%; background: #8b7df0; -webkit-appearance: none; margin-top: -5px; }
-.track-badge { background-color: #2b2342; color: #e2e2e2; padding: 5px 12px; border-radius: 15px; font-size: 0.8rem; }
-
-@media (max-width: 600px) {
-    #music-widget { width: 90%; bottom: 10px; gap: 10px; }
-    .volume-control, .track-title, .track-badge { display: none; }
-}

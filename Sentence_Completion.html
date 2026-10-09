@@ -98,35 +98,10 @@
         }
         #next-btn:hover { background: #e6b800; transform: scale(1.05); }
 
-        /* === MUSIC PLAYER === */
-        .music-player {
-            margin: 0 auto 25px auto; max-width: 600px;
-            background: rgba(0, 0, 0, 0.45); border: 1px solid rgba(251, 197, 49, 0.35);
-            border-radius: 16px; padding: 12px 20px; display: flex; align-items: center; gap: 14px;
-            box-shadow: 0 4px 18px rgba(0,0,0,0.4);
-        }
-        .music-icon { font-size: 1.5rem; animation: spin-note 3s linear infinite; display: inline-block; flex-shrink: 0; }
-        @keyframes spin-note { 0% { transform: rotate(0deg); } 25% { transform: rotate(10deg); } 75% { transform: rotate(-10deg); } 100% { transform: rotate(0deg); } }
-        .music-info { flex: 1; min-width: 0; text-align: left;}
-        .music-title { font-size: 0.85rem; color: var(--accent-color); font-weight: 700; letter-spacing: 0.04em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 6px; }
-        .music-progress-wrap { display: flex; align-items: center; gap: 8px; }
-        .music-time { font-size: 0.72rem; color: rgba(255,255,255,0.55); flex-shrink: 0; width: 38px; text-align: right; }
-        #music-progress { flex: 1; height: 4px; -webkit-appearance: none; appearance: none; background: rgba(255,255,255,0.2); border-radius: 4px; cursor: pointer; outline: none; }
-        #music-progress::-webkit-slider-thumb { -webkit-appearance: none; width: 12px; height: 12px; border-radius: 50%; background: var(--accent-color); cursor: pointer; }
-        .music-controls { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
-        .music-btn { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.25); color: #fff; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; font-size: 1rem; display: flex; align-items: center; justify-content: center; transition: background 0.2s, transform 0.15s; flex-shrink: 0; }
-        .music-btn:hover { background: rgba(251,197,49,0.25); transform: scale(1.1); }
-        .music-btn.play-btn { width: 42px; height: 42px; background: var(--accent-color); color: #000; font-size: 1.1rem; border: none; }
-        .music-btn.play-btn:hover { background: #e6b800; }
-        .volume-wrap { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
-        .vol-icon { font-size: 0.9rem; color: rgba(255,255,255,0.6); }
-        #music-volume { width: 64px; height: 4px; -webkit-appearance: none; appearance: none; background: rgba(255,255,255,0.2); border-radius: 4px; cursor: pointer; outline: none; }
-        #music-volume::-webkit-slider-thumb { -webkit-appearance: none; width: 11px; height: 11px; border-radius: 50%; background: rgba(255,255,255,0.7); cursor: pointer; }
         
         @media (max-width: 850px) { 
             .layout-wrapper { flex-direction: column; } 
             .sidebar { flex: none; width: 100%; order: unset; } 
-            .volume-wrap { display: none; } 
             .quiz-header { flex-direction: column; gap: 15px; }
         }
     </style>
@@ -135,27 +110,6 @@
     <div class="container">
         <h1 id="main-title">English Quiz: Ultimate Collection</h1>
 
-        <div class="music-player">
-            <span class="music-icon" id="music-note">🎵</span>
-            <div class="music-info">
-                <div class="music-title" id="music-title">Playlist_6.mp3</div>
-                <div class="music-progress-wrap">
-                    <span class="music-time" id="music-cur">0:00</span>
-                    <input type="range" id="music-progress" value="0" min="0" step="0.1">
-                    <span class="music-time" id="music-dur" style="text-align:left">0:00</span>
-                </div>
-            </div>
-            <div class="music-controls">
-                <button class="music-btn play-btn" id="play-btn" onclick="togglePlay()" title="Play / Pause">▶</button>
-                <button class="music-btn" onclick="restartTrack()" title="Restart">⟳</button>
-            </div>
-            <div class="volume-wrap">
-                <span class="vol-icon">🔈</span>
-                <input type="range" id="music-volume" min="0" max="1" step="0.01" value="0.6" oninput="setVolume(this.value)">
-                <span class="vol-icon">🔊</span>
-            </div>
-        </div>
-        <audio id="bg-audio" src="assets/Playlist_6.mp3" preload="auto"></audio>
         
         <div id="test-selector-screen">
             <button class="back-btn" onclick="window.location.href='index.html'" style="margin-bottom: 20px;">🏠 Về Trang Chủ</button>
@@ -984,51 +938,6 @@
                 }
             }
         }
-
-        // === MUSIC PLAYER LOGIC ===
-        const audio = document.getElementById('bg-audio');
-        const playBtn = document.getElementById('play-btn');
-        const progressBar = document.getElementById('music-progress');
-        const curTime = document.getElementById('music-cur');
-        const durTime = document.getElementById('music-dur');
-        const noteIcon = document.getElementById('music-note');
-
-        function fmtTime(s) {
-            if (isNaN(s)) return "0:00";
-            const m = Math.floor(s / 60);
-            const sec = Math.floor(s % 60);
-            return m + ':' + (sec < 10 ? '0' : '') + sec;
-        }
-
-        audio.addEventListener('loadedmetadata', () => {
-            progressBar.max = audio.duration;
-            durTime.textContent = fmtTime(audio.duration);
-        });
-
-        audio.addEventListener('timeupdate', () => {
-            progressBar.value = audio.currentTime;
-            curTime.textContent = fmtTime(audio.currentTime);
-        });
-
-        audio.addEventListener('play',  () => { playBtn.textContent = '⏸'; noteIcon.style.animationPlayState = 'running'; });
-        audio.addEventListener('pause', () => { playBtn.textContent = '▶'; noteIcon.style.animationPlayState = 'paused'; });
-        audio.addEventListener('ended', () => { playBtn.textContent = '▶'; noteIcon.style.animationPlayState = 'paused'; });
-
-        progressBar.addEventListener('input', () => { audio.currentTime = progressBar.value; });
-
-        function togglePlay() {
-            if (audio.paused) { audio.play(); } else { audio.pause(); }
-        }
-        function restartTrack() {
-            audio.currentTime = 0;
-            audio.play();
-        }
-        function setVolume(v) {
-            audio.volume = v;
-        }
-
-        audio.volume = 0.6;
-        noteIcon.style.animationPlayState = 'paused';
 
         // Khởi động khi load trang
         window.onload = init;

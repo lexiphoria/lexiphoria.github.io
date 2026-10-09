@@ -12,11 +12,6 @@
 </head>
 <body>
 
-    <!-- Background Music Audio -->
-    <audio id="bg-audio" loop preload="auto">
-        <source src="assets/Tong_hop.mp3" type="audio/mpeg">
-    </audio>
-
     <div class="container">
         <!-- Landing / Stage Selection Screen -->
         <div id="menu-screen" class="glass-panel">
@@ -121,21 +116,6 @@
         </div>
     </div>
 
-    <!-- Background Music Widget -->
-    <div id="music-widget">
-        <div class="player-icon"></div>
-        <button class="play-btn" id="play-pause-btn">▶</button>
-        <div class="track-info">
-            <span class="track-title">Playlist</span>
-            <span class="track-name">Tổng Hợp MP3</span>
-        </div>
-        <div class="volume-control">
-            <span class="vol-label">VOL</span>
-            <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
-        </div>
-        <div class="track-badge">🎵 Click to Play</div>
-    </div>
-
     <!-- Question Data JS -->
     <script src="js/preposition_collocation.js"></script>
 
@@ -153,57 +133,6 @@
         if (!savedData.answered.easy) savedData.answered.easy = {};
         if (!savedData.answered.medium) savedData.answered.medium = {};
         if (!savedData.answered.hard) savedData.answered.hard = {};
-
-        // Audio Elements
-        const bgAudio = document.getElementById('bg-audio');
-        const playPauseBtn = document.getElementById('play-pause-btn');
-        const volumeSlider = document.getElementById('volume-slider');
-        const trackBadge = document.querySelector('.track-badge');
-        let musicStarted = false;
-
-        bgAudio.volume = 0.3;
-        volumeSlider.value = 0.3;
-
-        bgAudio.addEventListener('play', () => {
-            playPauseBtn.innerHTML = '⏸';
-            trackBadge.innerHTML = '🎵 Playing...';
-            trackBadge.style.color = '#34d399';
-        });
-
-        bgAudio.addEventListener('pause', () => {
-            playPauseBtn.innerHTML = '▶';
-            trackBadge.innerHTML = '🎵 Paused';
-            trackBadge.style.color = '#9ca3af';
-        });
-
-        bgAudio.addEventListener('error', () => {
-            trackBadge.innerHTML = '❌ Lỗi File MP3';
-            trackBadge.style.color = '#ef4444';
-        });
-
-        function toggleMusic() {
-            if (bgAudio.paused) {
-                bgAudio.play().then(() => {
-                    musicStarted = true;
-                }).catch(e => {
-                    trackBadge.innerHTML = '🔇 Cần click';
-                });
-            } else {
-                bgAudio.pause();
-            }
-        }
-
-        playPauseBtn.addEventListener('click', toggleMusic);
-        volumeSlider.addEventListener('input', (e) => { bgAudio.volume = e.target.value; });
-
-        // Autoplay triggered by user action
-        window.addEventListener('click', () => {
-            if (!musicStarted) {
-                bgAudio.play().then(() => {
-                    musicStarted = true;
-                }).catch(() => {});
-            }
-        }, { once: true });
 
         // Initialize Menu
         function initMenu() {

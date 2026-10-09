@@ -13,10 +13,6 @@
 </head>
 <body>
 
-    <audio id="bg-audio" loop preload="auto">
-        <source src="assets/Tong_hop.mp3" type="audio/mpeg">
-    </audio>
-
     <div id="menu-screen">
         <a href="index.html" class="home-link">🏠 Home</a>
         <h1>Word Form Quiz 🎮</h1>
@@ -45,20 +41,6 @@
         <button id="next-btn" onclick="nextQuestion()">TIẾP TỤC ➡️</button>
     </div>
 
-    <div id="music-widget">
-        <div class="player-icon"></div>
-        <button class="play-btn" id="play-pause-btn">▶</button>
-        <div class="track-info">
-            <span class="track-title">Playlist</span>
-            <span class="track-name">Tổng Hợp MP3</span>
-        </div>
-        <div class="volume-control">
-            <span class="vol-label">VOL</span>
-            <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
-        </div>
-        <div class="track-badge">🎵 Playing...</div>
-    </div>
-
     <!-- Load Questions from External File -->
     <script src="js/wordform.js"></script>
 
@@ -67,55 +49,6 @@
         let currentQuestionIndex = 0;
         let hasAnswered = false;
         
-        const bgAudio = document.getElementById('bg-audio');
-        const playPauseBtn = document.getElementById('play-pause-btn');
-        const volumeSlider = document.getElementById('volume-slider');
-        const trackBadge = document.querySelector('.track-badge');
-        let musicStarted = false;
-
-        bgAudio.volume = 0.5;
-        volumeSlider.value = 0.5;
-
-        bgAudio.addEventListener('play', () => {
-            playPauseBtn.innerHTML = '⏸';
-            trackBadge.innerHTML = '🎵 Playing...';
-            trackBadge.style.color = '#e2e2e2';
-        });
-        
-        bgAudio.addEventListener('pause', () => {
-            playPauseBtn.innerHTML = '▶';
-            trackBadge.innerHTML = '🎵 Paused';
-        });
-
-        bgAudio.addEventListener('error', () => {
-            trackBadge.innerHTML = '❌ Lỗi File MP3';
-            trackBadge.style.color = '#ef4444';
-        });
-
-        function toggleMusic() {
-            if (bgAudio.paused) {
-                bgAudio.play().then(() => {
-                    musicStarted = true;
-                }).catch(e => {
-                    trackBadge.innerHTML = '🔇 Cần click';
-                });
-            } else {
-                bgAudio.pause();
-            }
-        }
-
-        playPauseBtn.addEventListener('click', toggleMusic);
-        volumeSlider.addEventListener('input', (e) => { bgAudio.volume = e.target.value; });
-
-        // Khởi tạo nhạc khi người dùng click bất kỳ đâu (giống file gốc)
-        window.addEventListener('click', () => {
-            if (!musicStarted) {
-                bgAudio.play().then(() => {
-                    musicStarted = true;
-                }).catch(() => {});
-            }
-        }, { once: true });
-
         function getCalculatedScore() {
             return Object.values(savedData.answered).filter(a => a.isCorrect).length;
         }

@@ -628,12 +628,12 @@ const texts = [
         feedback: "'Classes are held' uses the passive voice to describe a recurring scheduled event. Present simple passive ('are held') is standard for timetables and programs. 'Being held' implies a temporary or specific event."
       },
       {
-        type: "Part of Speech",
+        type: "Preposition / Verb Collocation",
         blank: 5,
         text: "Each session ___5___ a market visit, hands-on cooking, and a delicious meal...",
         options: ["A. consist", "B. consists of", "C. is consisting", "D. consisting"],
         answer: 1,
-        feedback: "'Consists of' is the correct verb phrase. 'Consist of' (never progressive) means to be made up of. It's a stative verb so present simple is used. 'Consist' without 'of' is incomplete."
+        feedback: "'Consists of' is the correct verb phrase meaning 'is made up of'. Unlike transitive verbs such as 'includes', 'consist' is an intransitive stative verb that requires the preposition 'of' before its object and is not used in the continuous aspect."
       },
       {
         type: "Pronoun / Emphatic",
@@ -761,7 +761,7 @@ const texts = [
     title: "Job Offer Letter",
     type: "Letter",
     icon: "📄",
-    passage: `Dear Ms. Nguyen,\n\nWe are delighted to offer you the position of Marketing Executive at GreenLife Solutions, ___1___ from June 1st, 2026.\n\nYour annual salary will be $48,000, ___2___ in monthly installments on the last working day of each month. You will also be ___3___ to a range of benefits, including health insurance, annual leave of 18 days, and professional development allowances.\n\nKindly ___4___ this offer by signing and returning the enclosed contract by May 15th. Should you ___5___ any questions regarding the terms and conditions, please do not hesitate to contact our HR department.\n\nWe look forward ___6___ you to our team.`,
+    passage: `Dear Ms. Nguyen,\n\nWe are delighted to offer you the position of Marketing Executive at GreenLife Solutions, ___1___ from June 1st, 2026.\n\nYour annual salary will be $48,000, ___2___ in monthly installments on the last working day of each month. You will also be ___3___ to a range of benefits, including health insurance, annual leave of 18 days, and professional development allowances.\n\nKindly ___4___ this offer by signing and returning the enclosed contract by May 15th. Should you ___5___ any questions regarding the terms and conditions, please do not hesitate to contact our HR department.\n\nWe look forward to ___6___ you to our team.`,
     questions: [
       {
         type: "Part of Speech",
@@ -806,10 +806,10 @@ const texts = [
       {
         type: "Collocation / Preposition",
         blank: 6,
-        text: "We look forward ___6___ you to our team.",
-        options: ["A. to welcome", "B. to welcoming", "C. welcoming", "D. for welcoming"],
+        text: "We look forward to ___6___ you to our team.",
+        options: ["A. welcome", "B. welcoming", "C. to welcome", "D. welcomed"],
         answer: 1,
-        feedback: "'Look forward to + gerund' — 'to' here is a preposition (not part of an infinitive), so the -ing form follows. 'Look forward to welcoming' is the fixed structure. 'Look forward to + verb-ing' is always correct."
+        feedback: "Cấu trúc 'look forward to + V-ing'. 'To' ở đây là giới từ (preposition) theo sau bởi danh động từ (gerund: 'welcoming'). Thí sinh dễ nhầm lẫn với to-infinitive nên chọn nhầm động từ nguyên mẫu 'welcome'."
       }
     ]
   },
@@ -1265,7 +1265,7 @@ const texts = [
     title: "Hanoi — Encounter Multiple Civilizations",
     type: "Travel Article",
     icon: "🏯",
-    passage: `Ô Quan Chưởng Gate is the only gate ___1___ of the wall that once protected the area surrounding Thang Long Citadel. The gate ___2___ you see today was re-constructed in 1817, although originally it was built in 1749. It is named for the rank of a Vietnamese soldier who showed great courage in ___3___ the gate and citadel against a French attack in 1873. Today, it's an important marker and symbol of Vietnamese spirit.\n\nWhile you explore the historic centre, keep a lookout for the many pagodas built by ancient traders. The Old Quarter was partially settled by Chinese immigrants who also chose it as a location to do business. To get a glimpse into the lives of these Chinese merchant families in the past, visit Mã Mây House, ___4___ UNESCO-protected heritage home.\n\nFor a little moment of peace amid the noise, duck ___5___ the alley off Nhà Thờ for a breather in the quiet courtyard of Bà Đá Pagoda. Here you'll find an elaborate Phật Phật statue, ___6___ as one of Hanoi's four treasures.`,
+    passage: `Ô Quan Chưởng Gate is the only gate ___1___ of the wall that once protected the area surrounding Thang Long Citadel. The gate ___2___ you see today was re-constructed in 1817, although originally it was built in 1749. It is named for the rank of a Vietnamese soldier who showed great courage in ___3___ the gate and citadel against a French attack in 1873. Today, it's an important marker and symbol of Vietnamese spirit.\n\nWhile you explore the historic centre, keep a lookout for the many pagodas built by ancient traders. The Old Quarter was partially settled by Chinese immigrants who also chose it as a location to do business. To get a glimpse into the lives of these Chinese merchant families in the past, visit Mã Mây House, ___4___ UNESCO-protected heritage home.\n\nFor a little moment of peace amid the noise, duck ___5___ the alley off Nhà Thờ for a breather in the quiet courtyard of Bà Đá Pagoda. Here you'll find an elaborate Buddha statue, ___6___ as one of Hanoi's four treasures.`,
     questions: [
       {
         type: "Part of Speech",
@@ -1310,7 +1310,7 @@ const texts = [
       {
         type: "Verb Form / Passive",
         blank: 6,
-        text: "...an elaborate Phật Phật statue, ___6___ as one of Hanoi's four treasures.",
+        text: "...an elaborate Buddha statue, ___6___ as one of Hanoi's four treasures.",
         options: ["A. regard", "B. regarding", "C. regarded", "D. to regard"],
         answer: 2,
         feedback: "'Regarded as' is a past participial phrase in the passive voice, functioning as a post-modifier: 'which is regarded as'. 'Regarded as' is the fixed passive collocation meaning 'considered to be'. 'Regarding' would be a preposition, not applicable here."
@@ -2049,7 +2049,7 @@ const texts = [
     title: "Vietnam Airlines — Data Breach Notice",
     type: "Formal Notice",
     icon: "✉️",
-    passage: `Dear Valued Customer,\n\nVietnam Airlines would like to inform you of a recent data breach ___1___ a third-party customer service platform operated by a global technology partner. According to the service provider, Vietnam Airlines is among several global companies using its services that have been ___2___ by this incident. A portion of customer data managed on this platform was accessed without authorization.\n\nUpon being alerted, we took appropriate actions to coordinate with relevant authorities, cybersecurity experts, and the third-party partner to investigate the breach, assess potential impact and ___3___ further unauthorized access to its system.\n\nTo help protect your personal data, we recommend changing the passwords of your Lotusmiles and ___4___ email accounts, staying alert to potential phishing attempts, suspicious emails or phone calls impersonating Vietnam Airlines, and avoid sharing information, one-time passcodes (OTPs), or login credentials with unverified sources.\n\nVietnam Airlines sincerely regrets any concern this incident may have caused. We are committed to ___5___ potentially affected customers informed with relevant updates as the investigation continues.\n\nFor any questions or assistance, customers are kindly requested to contact Vietnam Airlines Data Protection Office at dpo@vietnamairlines.com, ___6___ via 24/7 hotlines: 1900 1100\n\nYour sincerely,\nVietnam Airlines`,
+    passage: `Dear Valued Customer,\n\nVietnam Airlines would like to inform you of a recent data breach ___1___ a third-party customer service platform operated by a global technology partner. According to the service provider, Vietnam Airlines is among several global companies using its services that have been ___2___ by this incident. A portion of customer data managed on this platform was accessed without authorization.\n\nUpon being alerted, we took appropriate actions to coordinate with relevant authorities, cybersecurity experts, and the third-party partner to investigate the breach, assess potential impact and ___3___ further unauthorized access to its system.\n\nTo help protect your personal data, we recommend changing the passwords of your Lotusmiles and ___4___ email accounts, staying alert to potential phishing attempts, suspicious emails or phone calls impersonating Vietnam Airlines, and avoid sharing information, one-time passcodes (OTPs), or login credentials with unverified sources.\n\nVietnam Airlines sincerely regrets any concern this incident may have caused. We are committed to ___5___ potentially affected customers informed with relevant updates as the investigation continues.\n\nFor any questions or assistance, customers are kindly requested to contact Vietnam Airlines Data Protection Office at dpo@vietnamairlines.com, ___6___ via 24/7 hotlines: 1900 1100\n\nYours sincerely,\nVietnam Airlines`,
     questions: [
       {
         type: "Part of Speech / Participle",
@@ -2217,7 +2217,7 @@ const texts = [
     title: "The LotusDay Spring Program",
     type: "Promotional Email",
     icon: "🌸",
-    passage: `Dear Ms NGUYEN TRAN ANH THU,\n\nUnlike the chilly weather of northern Vietnam, the early days of the year in the south are ___1___ in warm sunlight.\n\nFollowing the sediment-rich rivers, the journey through the southern Tet leads you to unique festivals that connect the traditions of the past and present. From the Ky Yen Festival honoring the pioneers who cultivated the land, the mystical Lantern Festival, to the simple ___2___ heartwarming Buffalo Festival and Boat Festival.\n\nIf you're looking for a unique destination for this year's spring journey, southern Vietnam is ready to welcome you. Let Heritage Guide be your trusted ___3___ in this heartful trip.\n\nPlan your Spring trips with The LotusDay program, ___4___ offers up to a 20% discount on miles when redeeming reward tickets or ___5___ tickets with Cash and Miles on Vietnam Airlines' domestic and international flights.\n\nTo learn more about these special offers and start planning your next getaway, please click the link below to ___6___ our free travel guide.`,
+    passage: `Dear Ms NGUYEN TRAN ANH THU,\n\nUnlike the chilly weather of northern Vietnam, the early days of the year in the south are ___1___ in warm sunlight.\n\nFollowing the sediment-rich rivers, the journey through the southern Tet leads you to unique festivals that connect the traditions of the past and present. From the Ky Yen Festival honoring the pioneers who cultivated the land, the mystical Lantern Festival, to the simple ___2___ heartwarming Buffalo Festival and Boat Festival.\n\nIf you're looking for a unique destination for this year's spring journey, southern Vietnam is ready to welcome you. Let Heritage Guide be your trusted ___3___ in this heartfelt trip.\n\nPlan your Spring trips with The LotusDay program, ___4___ offers up to a 20% discount on miles when redeeming reward tickets or ___5___ tickets with Cash and Miles on Vietnam Airlines' domestic and international flights.\n\nTo learn more about these special offers and start planning your next getaway, please click the link below to ___6___ our free travel guide.`,
     questions: [
       {
         type: "Collocation",
@@ -2238,7 +2238,7 @@ const texts = [
       {
         type: "Vocabulary",
         blank: 3,
-        text: "Let Heritage Guide be your trusted ___3___ in this heartful trip.",
+        text: "Let Heritage Guide be your trusted ___3___ in this heartfelt trip.",
         options: ["A. company", "B. companion", "C. partnership", "D. accompaniment"],
         answer: 1,
         feedback: "A 'companion' is a person or entity that accompanies you on a journey. 'Trusted companion' is a frequent collocation in travel marketing."
@@ -4668,12 +4668,12 @@ const texts = [
         feedback: "'What' acts as a nominal relative pronoun meaning 'the thing that'."
       },
       {
-        type: "Collocation",
+        type: "Subjunctive / Collocation",
         blank: 6,
         text: "...that all stakeholders ___6___ an active role...",
         options: ["A. take", "B. make", "C. do", "D. put"],
         answer: 0,
-        feedback: "'Take an active role' is a standard collocation."
+        feedback: "'Take an active role' là cụm kết hợp từ cố định (collocation). Đồng thời, câu áp dụng thức giả định (subjunctive mood) sau cấu trúc 'It is imperative that + S + (should) V-bare' (động từ giữ nguyên mẫu không 'to': 'take', không chia theo thì hay số ít/nhiều)."
       }
     ]
   },

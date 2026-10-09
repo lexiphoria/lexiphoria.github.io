@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Preview: Lớp Học Xanh — Hồn Việt</title>
+    <!-- Google Fonts: Baloo 2 (Headings), Be Vietnam Pro (Body), Dancing Script (Slogan) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/characters/sticker_art_painting.png">
+    <link rel="stylesheet" href="css/index.css?v=3">
+    <style>
+        .preview-badge-bar {
+            background-color: var(--green-soft);
+            border: 2px solid var(--ink);
+            border-radius: var(--radius-btn);
+            padding: 12px 20px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            box-shadow: var(--shadow-sticker);
+        }
+        .preview-badge-bar h2 {
+            margin: 0;
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--ink);
+        }
+        .preview-tokens-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+        .token-chip {
+            border: 2px solid var(--ink);
+            border-radius: 10px;
+            padding: 8px;
+            font-size: 0.75rem;
+            font-family: var(--font-body);
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            box-shadow: 2px 2px 0 rgba(35, 48, 31, 0.12);
+        }
+        .token-swatch {
+            height: 24px;
+            border-radius: 6px;
+            border: 1px solid var(--ink);
+        }
+        .btn-showcase {
+            display: flex;
+            gap: 16px;
+            margin: 20px 0 30px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <!-- Thanh trạng thái duyệt Theme -->
+        <header class="preview-badge-bar">
+            <div>
+                <h2>🌿 BẢN PREVIEW GIAO DIỆN: "LỚP HỌC XANH — HỒN VIỆT"</h2>
+                <small style="color: var(--clay); font-weight: 500;">Bước 2 / 3: Duyệt Banner + Card Sáng + Card Tối + Button & Khung Sticker Minh Họa</small>
+            </div>
+            <span class="tag tag-gold">Giai đoạn duyệt mẫu</span>
+        </header>
+
+        <!-- Bảng Design Tokens Swatches kiểm tra -->
+        <section class="preview-tokens-grid" aria-label="Design Tokens">
+            <div class="token-chip" style="background: var(--bg-paper);">
+                <div class="token-swatch" style="background: #F7F1E3;"></div>
+                <span>--bg-page</span>
+                <code>#F7F1E3</code>
+            </div>
+            <div class="token-chip" style="background: var(--bg-paper);">
+                <div class="token-swatch" style="background: #FFFDF5;"></div>
+                <span>--bg-paper</span>
+                <code>#FFFDF5</code>
+            </div>
+            <div class="token-chip" style="background: var(--bg-paper);">
+                <div class="token-swatch" style="background: #23301F;"></div>
+                <span>--ink</span>
+                <code>#23301F</code>
+            </div>
+            <div class="token-chip" style="background: var(--bg-paper);">
+                <div class="token-swatch" style="background: #3E6B48;"></div>
+                <span>--green-primary</span>
+                <code>#3E6B48</code>
+            </div>
+            <div class="token-chip" style="background: var(--bg-paper);">
+                <div class="token-swatch" style="background: #DCE8D5;"></div>
+                <span>--green-soft</span>
+                <code>#DCE8D5</code>
+            </div>
+            <div class="token-chip" style="background: var(--bg-paper);">
+                <div class="token-swatch" style="background: #33475B;"></div>
+                <span>--indigo</span>
+                <code>#33475B</code>
+            </div>
+            <div class="token-chip" style="background: var(--bg-paper);">
+                <div class="token-swatch" style="background: #22332A;"></div>
+                <span>--dark-card</span>
+                <code>#22332A</code>
+            </div>
+            <div class="token-chip" style="background: var(--bg-paper);">
+                <div class="token-swatch" style="background: #A63A2B;"></div>
+                <span>--terracotta</span>
+                <code>#A63A2B</code>
+            </div>
+            <div class="token-chip" style="background: var(--bg-paper);">
+                <div class="token-swatch" style="background: #D9A441;"></div>
+                <span>--gold</span>
+                <code>#D9A441</code>
+            </div>
+            <div class="token-chip" style="background: var(--bg-paper);">
+                <div class="token-swatch" style="background: #8C6A4F;"></div>
+                <span>--clay</span>
+                <code>#8C6A4F</code>
+            </div>
+        </section>
+
+        <!-- 1. BANNER HERO: Lớp Học Xanh - Hồn Việt -->
+        <header class="pixel-banner" role="banner">
+            <!-- Pattern SVG lá tre / cánh diều mờ 5.5% -->
+            <div class="banner-grid-bg" aria-hidden="true"></div>
+
+            <div class="banner-inner">
+                <!-- Cột trái: Badge, Heading Baloo 2 & Bong bóng thoại -->
+                <div class="banner-left">
+                    <div class="banner-tag">
+                        <span class="pixel-star">★</span>
+                        <span>DAILY ENGLISH PORTAL</span>
+                        <span class="pixel-star">★</span>
+                    </div>
+                    <h1 class="banner-title">Daily English Practice</h1>
+                    <div class="pixel-bubble">
+                        <p>Choose suitable exercises to practice vocabulary, grammar, and reading skills.</p>
+                        <span class="bubble-tail"></span>
+                    </div>
+                </div>
+
+                <!-- Cột phải: 3 Nhân vật lớn (BẢO VỆ 100%, KHÔNG BỌC KHUNG, KHÔNG XOAY, KHÔNG FILTER) -->
+                <div class="banner-right">
+                    <!-- Bong bóng Let's study! vàng rơm xoay -3deg viền ink -->
+                    <div class="floating-speech">
+                        <span>Let's study! ✏️</span>
+                    </div>
+
+                    <!-- Bóng đèn gợi ý mộc mạc -->
+                    <div class="floating-bulb" aria-hidden="true">💡</div>
+
+                    <!-- Nhóm 3 nhân vật áo dài nguyên bản -->
+                    <div class="character-trio">
+                        <div class="char-wrap char-mascot">
+                            <img src="assets/characters/sticker_cheer_flag.png" alt="Cheering Student Mascot" title="Welcome to Daily English Practice!">
+                        </div>
+                        <div class="char-wrap char-scholar">
+                            <img src="assets/characters/sticker_cheer_happy.png" alt="Joyful Scholar Mascot" title="Reading &amp; Grammar Mastery">
+                        </div>
+                        <div class="char-wrap char-panda">
+                            <img src="assets/characters/sticker_reading_sit.png" alt="Studious Reading Mascot" title="Learn Words Everyday">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Họa tiết điểm xuyết mộc mạc -->
+            <div class="pixel-sparkle s1" aria-hidden="true">✦</div>
+            <div class="pixel-sparkle s2" aria-hidden="true">✦</div>
+            <div class="pixel-sparkle s3" aria-hidden="true">✖</div>
+        </header>
+
+        <!-- 2. SECTION TITLE: Icon lá phía trước + gạch chân vẽ tay nhấp nhô -->
+        <h2 class="section-title">Core Learning Roadmap</h2>
+
+        <!-- 3. PREVIEW CARDS: 1 CARD TỐI + 1 CARD SÁNG (kèm khung sticker minh họa) -->
+        <section class="core-grid" aria-label="Preview cards">
+            <!-- [PREVIEW 1]: CARD TỐI (Xanh rừng đêm #22332A, pattern lá mờ 5%, text #F3EEDF, Khung sticker icon) -->
+            <article class="card card-dark">
+                <div class="card-top">
+                    <div class="card-tags">
+                        <span class="tag tag-gold">Interactive Cards</span>
+                        <span class="tag tag-green">Step 1 • All Levels</span>
+                    </div>
+                    <!-- KHUNG STICKER DÁN GIẤY (Chỉ style container bên ngoài, KHÔNG đụng ảnh) -->
+                    <div class="card-character">
+                        <img src="assets/characters/sticker_vocab_book.png" alt="Vocabulary Mastery Student">
+                    </div>
+                </div>
+                <h3>Vocabulary Mastery</h3>
+                <p>
+                    Học từ vựng theo chủ đề qua thẻ 3D lật động, trò chơi trắc nghiệm nghĩa, luyện viết chính tả và ghép từ nhanh.
+                </p>
+                <a class="btn btn-primary" href="Vocabulary_Game.html">Start Vocabulary Game</a>
+            </article>
+
+            <!-- [PREVIEW 2]: CARD SÁNG (Nền giấy #FFFDF5, viền 2px ink, shadow 5px 5px, Khung sticker icon) -->
+            <article class="card card-light">
+                <div class="card-top">
+                    <div class="card-tags">
+                        <span class="tag tag-green">Multiple Choice</span>
+                        <span class="tag tag-paper">Step 2 • Grammar &amp; MCQ</span>
+                    </div>
+                    <!-- KHUNG STICKER DÁN GIẤY (Chỉ style container bên ngoài, KHÔNG đụng ảnh) -->
+                    <div class="card-character">
+                        <img src="assets/characters/sticker_quiz_thinking.png" alt="English Quiz Student">
+                    </div>
+                </div>
+                <h3>English Quiz</h3>
+                <p>
+                    A comprehensive quiz with English questions at basic and advanced levels, suitable for quickly
+                    checking your knowledge.
+                </p>
+                <a class="btn btn-primary" href="EngQuiz.html">Start EngQuiz</a>
+            </article>
+        </section>
+
+        <!-- 4. BUTTONS SHOWCASE (Primary & Secondary) -->
+        <h2 class="section-title" style="margin-top: 36px;">Button Styles Showcase</h2>
+        <div class="btn-showcase">
+            <a class="btn btn-primary" href="#">Primary Button (--green-primary)</a>
+            <a class="btn btn-secondary" href="#">Secondary Button (--bg-paper + --indigo)</a>
+            <span style="font-size: 0.88rem; color: var(--clay);">← Thử hover và click để kiểm tra độ nảy shadow phẳng</span>
+        </div>
+
+        <!-- 5. TIP BAR: Nền xanh mềm, viền nét đứt nâu đất, icon mầm cây -->
+        <div class="tip">
+            Mẹo học tập: Đặt mục tiêu hàng ngày 15-20 phút. Lặp lại bài tập sau 2-3 ngày để khắc sâu kiến thức.
+        </div>
+
+        <!-- 6. FOOTER: Dải hoa văn trống đồng Đông Sơn -->
+        <footer>
+            Chúc các bạn học tập thật tốt và đạt kết quả xuất sắc!
+        </footer>
+    </main>
+</body>
+</html>

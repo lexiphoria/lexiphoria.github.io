@@ -501,8 +501,8 @@
   <canvas id="confetti-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1000; display: none;"></canvas>
 
   <!-- Script data file -->
-  <script src="js/vocabulary_data.js?v=1.0.8"></script>
-  <script src="js/vocabulary_extras.js?v=1.0.3"></script>
+  <script src="js/vocabulary_data.js?v=1.0.9"></script>
+  <script src="js/vocabulary_extras.js?v=1.0.4"></script>
 
   <!-- Main Game logic script -->
   <script>
@@ -1289,6 +1289,111 @@
     }
 
     // --- Mode 3: Sentence Completion Quiz logic ---
+    // --- Câu điền từ tạo từ câu ví dụ (bộ từ chủ đề không có blankSentence riêng) ---
+    // Tìm đúng dạng của từ trong câu (achievement → achievements, overcome → overcame), đáp án là dạng đó;
+    // phương án nhiễu lấy từ cùng từ loại trong bộ và chia cùng dạng. Không tìm thấy từ trong câu thì trả về null.
+    const IRREGULAR_VERBS = {
+      arise: ['arose', 'arisen'], become: ['became', 'become'], begin: ['began', 'begun'], break: ['broke', 'broken'],
+      bring: ['brought', 'brought'], build: ['built', 'built'], buy: ['bought', 'bought'], catch: ['caught', 'caught'],
+      choose: ['chose', 'chosen'], come: ['came', 'come'], cut: ['cut', 'cut'], do: ['did', 'done'], draw: ['drew', 'drawn'],
+      drive: ['drove', 'driven'], eat: ['ate', 'eaten'], fall: ['fell', 'fallen'], feel: ['felt', 'felt'], find: ['found', 'found'],
+      forget: ['forgot', 'forgotten'], get: ['got', 'got'], give: ['gave', 'given'], go: ['went', 'gone'], grow: ['grew', 'grown'],
+      hang: ['hung', 'hung'], have: ['had', 'had'], hear: ['heard', 'heard'], hold: ['held', 'held'], keep: ['kept', 'kept'], know: ['knew', 'known'],
+      lead: ['led', 'led'], leave: ['left', 'left'], lose: ['lost', 'lost'], make: ['made', 'made'], mean: ['meant', 'meant'],
+      meet: ['met', 'met'], overcome: ['overcame', 'overcome'], pay: ['paid', 'paid'], put: ['put', 'put'], rise: ['rose', 'risen'],
+      run: ['ran', 'run'], say: ['said', 'said'], see: ['saw', 'seen'], seek: ['sought', 'sought'], sell: ['sold', 'sold'],
+      send: ['sent', 'sent'], set: ['set', 'set'], show: ['showed', 'shown'], speak: ['spoke', 'spoken'], spend: ['spent', 'spent'],
+      stand: ['stood', 'stood'], take: ['took', 'taken'], teach: ['taught', 'taught'], tell: ['told', 'told'], think: ['thought', 'thought'],
+      tread: ['trod', 'trodden'], undergo: ['underwent', 'undergone'], understand: ['understood', 'understood'], wear: ['wore', 'worn'], win: ['won', 'won'],
+      withdraw: ['withdrew', 'withdrawn'], write: ['wrote', 'written']
+    };
+
+    // rule: base | s (số nhiều, ngôi 3) | ed (quá khứ) | en (quá khứ phân từ) | ing. null = không chắc cách chia (stop → stopped?)
+    function inflectWord(w, rule) {
+      if (rule === 'base') return w;
+      if (!/^[a-z-]+$/.test(w)) return null;
+      const irr = IRREGULAR_VERBS[w];
+      if (rule === 's') {
+        if (/(s|x|z|ch|sh)$/.test(w)) return w + 'es';
+        if (/[^aeiou]y$/.test(w)) return w.slice(0, -1) + 'ies';
+        return w + 's';
+      }
+      if (rule === 'ing') {
+        if (/ie$/.test(w)) return w.slice(0, -2) + 'ying';
+        if (/[^aeiou]e$/.test(w)) return w.slice(0, -1) + 'ing';
+        if (/[^aeiou][aeiou][^aeiouwxy]$/.test(w)) return null;
+        return w + 'ing';
+      }
+      if (irr) return irr[rule === 'ed' ? 0 : 1];
+      if (/e$/.test(w)) return w + 'd';
+      if (/[^aeiou]y$/.test(w)) return w.slice(0, -1) + 'ied';
+      if (/[^aeiou][aeiou][^aeiouwxy]$/.test(w)) return null;
+      return w + 'ed';
+    }
+
+    // Chia cụm từ: danh từ chia từ cuối (learning experience → learning experiences), còn lại chia từ đầu (grow up → grew up)
+    function inflectPhrase(entry, rule) {
+      const parts = String(entry.word || '').replace(/\(.*?\)/g, '').trim().split(/\s+/);
+      const idx = /^n/.test(entry.type || '') ? parts.length - 1 : 0;
+      const word = parts[idx] || '';
+      const f = word === word.toLowerCase() ? inflectWord(word, rule) : (rule === 'base' ? word : null);
+      return f ? parts.map((p, i) => (i === idx ? f : p)).join(' ') : null;
+    }
+
+    function exampleCloze(qWord, pool) {
+      const raw = String(qWord.word || '');
+      const example = String(qWord.example || '');
+      if (!example || /[\/=]/.test(raw)) return null;
+      let hit = null;
+      for (const rule of ['base', 's', 'ed', 'en', 'ing']) {
+        const phrase = inflectPhrase(qWord, rule);
+        const m = phrase && example.match(new RegExp(`\\b${escapeRegExp(phrase)}\\b`, 'i'));
+        if (m) {
+          hit = { rule, text: m[0], index: m.index };
+          break;
+        }
+      }
+      if (!hit) return null;
+      // Quá khứ và quá khứ phân từ giống nhau (made, kept): sau has/have/had/be… là phân từ
+      if (hit.rule === 'ed' && inflectPhrase(qWord, 'ed') === inflectPhrase(qWord, 'en')
+        && /\b(has|have|had|be|been|being|is|are|was|were|get|got)\s+$/i.test(example.slice(0, hit.index))) hit.rule = 'en';
+
+      // Phương án nhiễu: cùng từ loại trước. Khi phải chia (s/ed/ing), ưu tiên từ mà câu ví dụ của chính nó đã dùng dạng
+      // đó (dạng chia có kiểm chứng, tránh 'childhoods', 'offed the beaten track'); bỏ cụm có be/sth/sb hoặc mở đầu bằng giới từ
+      const typeKey = t => String(t || '').split(/[\s\/.]/)[0];
+      const has = (text, s) => new RegExp(`\\b${escapeRegExp(text)}\\b`, 'i').test(String(s || ''));
+      const shaky = w => /\b(be|sth|sb|something|somebody|someone|one's)\b/i.test(w.word)
+        || /^(a|an|the|off|on|in|out|up|down|at|by|for|from|of|to|with|as|under|over|around|about|into|well|more|most|very|so|self)\b/i.test(w.word.trim())
+        || (/^n/.test(w.type || '') && /(s|ing|ism|ness)$/i.test(w.word.trim()));
+      const usable = pool.filter(w => w !== qWord && w.word && !/[\/=]/.test(w.word));
+      const shuffled = list => [...list].sort(() => 0.5 - Math.random());
+      const same = shuffled(usable.filter(w => typeKey(w.type) === typeKey(qWord.type)));
+      const other = shuffled(usable.filter(w => typeKey(w.type) !== typeKey(qWord.type)));
+      const plain = w => !/\b(sth|sb|something|somebody|someone|one's)\b/i.test(w.word);
+      let ordered = [...same.filter(plain), ...other.filter(plain), ...same];
+      if (hit.rule !== 'base') {
+        const proven = w => { const f = inflectPhrase(w, hit.rule); return Boolean(f) && has(f, w.example); };
+        ordered = [...same.filter(proven), ...other.filter(proven), ...same.filter(w => !proven(w) && !shaky(w))];
+      }
+      const lower = raw.trim()[0] === raw.trim()[0].toLowerCase();
+      const correct = lower ? hit.text.toLowerCase() : hit.text;
+      const seen = new Set([correct.toLowerCase()]);
+      const distractors = [];
+      for (const w of ordered) {
+        const text = inflectPhrase(w, hit.rule);
+        if (!text || seen.has(text.toLowerCase()) || has(text, example)) continue;
+        seen.add(text.toLowerCase());
+        distractors.push(text);
+        if (distractors.length === 3) break;
+      }
+      if (distractors.length < 3) return null;
+      return {
+        text: example.replace(new RegExp(`\\b${escapeRegExp(hit.text)}\\b`, 'gi'), '_________'),
+        correct,
+        options: [correct, ...distractors].sort(() => 0.5 - Math.random())
+      };
+    }
+
     function setupSentenceCompletionMode() {
       const fullList = (typeof vocabularyData !== 'undefined' && vocabularyData[currentTopic]) ? vocabularyData[currentTopic] : [];
       
@@ -1333,6 +1438,7 @@
       let questionText = "";
       let options = [];
       let correctOptionText = "";
+      let cloze = null;
 
       if ((currentTopic === 'phrasalVerbs' || currentTopic === 'collocations') && qWord.blankSentence && qWord.options && qWord.answer) {
         questionText = `Question ${currentQuestionIndex + 1}: ${qWord.blankSentence}`;
@@ -1344,36 +1450,12 @@
         options = [...qWord.options];
         const ansIndex = qWord.answer.charCodeAt(0) - 65;
         correctOptionText = qWord.options[ansIndex];
-      } else if (qWord.example && typeof qWord.example === 'string') {
-        const rawWord = qWord.word || '';
-        const cleanWord = rawWord.replace(/\(.*?\)/g, '').split('/')[0].trim();
-        const wordToHide = cleanWord || rawWord.split('/')[0].trim();
-        const regex = new RegExp(`\\b${escapeRegExp(wordToHide)}\\b`, 'gi');
-        let blanked = qWord.example.replace(regex, `_________`);
-        
-        if (blanked === qWord.example) {
-          const firstWord = wordToHide.split(' ')[0];
-          const firstWordSegment = firstWord.substring(0, Math.max(3, firstWord.length - 2));
-          const partialRegex = new RegExp(`\\b${escapeRegExp(firstWordSegment)}[a-zA-Z]*\\b`, 'gi');
-          blanked = qWord.example.replace(partialRegex, `_________`);
-        }
-
-        if (blanked === qWord.example) {
-          blanked = `${qWord.example} [Missing word: _________]`;
-        }
-        
-        questionText = `Question ${currentQuestionIndex + 1}: ${blanked}`;
-        correctOptionText = qWord.word;
-
-        const distractors = (vocabularyData[currentTopic] || [])
-          .filter(w => w.word !== qWord.word)
-          .map(w => w.word);
-        
-        const shuffledDistractors = distractors.sort(() => 0.5 - Math.random());
-        const selectedDistractors = shuffledDistractors.slice(0, Math.min(3, shuffledDistractors.length));
-        
-        options = [qWord.word, ...selectedDistractors].sort(() => 0.5 - Math.random());
+      } else if ((cloze = exampleCloze(qWord, vocabularyData[currentTopic] || []))) {
+        questionText = `Question ${currentQuestionIndex + 1}: ${cloze.text}`;
+        correctOptionText = cloze.correct;
+        options = cloze.options;
       } else {
+        // Không tìm thấy từ trong câu ví dụ (cụm có sb/sth, dạng chia bất quy tắc lạ…): hỏi nghĩa thay vì để câu thiếu chỗ trống
         questionText = `Question ${currentQuestionIndex + 1}: What is the meaning of "${qWord.word}"?`;
         correctOptionText = qWord.meaning;
         const distractors = (vocabularyData[currentTopic] || [])
@@ -1431,6 +1513,9 @@
       // Display Explanation
       const expContent = document.getElementById('sentence-explanation-content');
       let explanationHtml = `<strong>Correct answer:</strong> ${correctOption}<br>`;
+      if (qWord.word && correctOption.trim().toLowerCase() !== qWord.word.trim().toLowerCase()) {
+        explanationHtml += `<strong>Word:</strong> ${qWord.word}<br>`;
+      }
       if (qWord.meaning) {
         explanationHtml += `<strong>Meaning:</strong> ${qWord.meaning}<br>`;
       }

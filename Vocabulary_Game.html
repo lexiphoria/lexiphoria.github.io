@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/vocabulary_game.css?v=1.0.6">
+  <link rel="stylesheet" href="css/vocabulary_game.css?v=1.0.7">
   <link rel="stylesheet" href="css/boss_battle.css?v=1.0.0">
 </head>
 <body>
@@ -45,99 +45,106 @@
         </div>
       </div>
 
-      <h2 style="font-size: 1.3rem; margin-bottom: 20px; font-weight: 700; color: #fff;">Choose a Topic</h2>
-      <div class="topics-grid topics-grid-core">
-        <!-- Topic 1: OUR LIFE (Active) -->
-        <div class="topic-card" data-topic="ourLife" onclick="selectTopic('ourLife')">
-          <span class="topic-icon">🧬</span>
-          <h3 class="topic-title">OUR LIFE</h3>
-          <p class="topic-meta">182 Từ vựng hoạt động thường ngày, lối sống, giáo dục và bản thân.</p>
-          <div class="topic-progress-container">
-            <div id="life-progress-fill" class="topic-progress-fill"></div>
-          </div>
-          <span id="life-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
-        </div>
+      <!-- Bố cục 2 cột: Extra Materials ở panel bên trái, 4 chủ đề chính bên phải -->
+      <div class="topics-layout">
+        <!-- Extra Materials: Phrasal Verbs, Collocations, Demographic Terms, Exam Idioms -->
+        <aside class="topics-side" aria-labelledby="extra-topics-title">
+          <h2 class="topics-heading" id="extra-topics-title">Extra Materials</h2>
+          <div class="topics-grid topics-grid-extra">
+            <!-- Extra 1: PHRASAL VERBS (Active) -->
+            <div class="topic-card" data-topic="phrasalVerbs" onclick="selectTopic('phrasalVerbs')">
+              <span class="topic-icon">📚</span>
+              <h3 class="topic-title">PHRASAL VERBS</h3>
+              <p class="topic-meta">100 Câu Phrasal Verbs trọng tâm ôn luyện thi.</p>
+              <div class="topic-progress-container">
+                <div id="phrasalVerbs-progress-fill" class="topic-progress-fill"></div>
+              </div>
+              <span id="phrasalVerbs-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
+            </div>
 
-        <!-- Topic 2: OUR SOCIETY (Active) -->
-        <div class="topic-card" data-topic="ourSociety" onclick="selectTopic('ourSociety')">
-          <span class="topic-icon">👥</span>
-          <h3 class="topic-title">OUR SOCIETY</h3>
-          <p class="topic-meta">116 Từ vựng về cộng đồng, kinh tế, đô thị và xã hội.</p>
-          <div class="topic-progress-container">
-            <div id="society-progress-fill" class="topic-progress-fill"></div>
-          </div>
-          <span id="society-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
-        </div>
+            <!-- Extra 2: COLLOCATIONS (Active) -->
+            <div class="topic-card" data-topic="collocations" onclick="selectTopic('collocations')">
+              <span class="topic-icon">🧩</span>
+              <h3 class="topic-title">COLLOCATIONS</h3>
+              <p class="topic-meta">100 Câu Collocations trọng tâm ôn luyện thi.</p>
+              <div class="topic-progress-container">
+                <div id="collocations-progress-fill" class="topic-progress-fill"></div>
+              </div>
+              <span id="collocations-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
+            </div>
 
-        <!-- Topic 3: OUR ENVIRONMENT (Active) -->
-        <div class="topic-card" data-topic="ourEnvironment" onclick="selectTopic('ourEnvironment')">
-          <span class="topic-icon">🌳</span>
-          <h3 class="topic-title">OUR ENVIRONMENT</h3>
-          <p class="topic-meta">148 Từ vựng về môi trường, sinh thái và bảo tồn thiên nhiên.</p>
-          <div class="topic-progress-container">
-            <div id="environment-progress-fill" class="topic-progress-fill"></div>
-          </div>
-          <span id="environment-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
-        </div>
+            <!-- Extra 3: DEMOGRAPHIC TERMS (Active) -->
+            <div class="topic-card" data-topic="demographicTerms" onclick="selectTopic('demographicTerms')">
+              <span class="topic-icon">📊</span>
+              <h3 class="topic-title">DEMOGRAPHIC TERMS</h3>
+              <p class="topic-meta">117 Thuật ngữ nhân khẩu học & dân số học (Glossary of Demographic Terms).</p>
+              <div class="topic-progress-container">
+                <div id="demographicTerms-progress-fill" class="topic-progress-fill"></div>
+              </div>
+              <span id="demographicTerms-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
+            </div>
 
-        <!-- Topic 4: OUR FUTURE (Active) -->
-        <div class="topic-card" data-topic="ourFuture" onclick="selectTopic('ourFuture')">
-          <span class="topic-icon">🚀</span>
-          <h3 class="topic-title">OUR FUTURE</h3>
-          <p class="topic-meta">91 Từ vựng về khoa học, công nghệ và tương lai số.</p>
-          <div class="topic-progress-container">
-            <div id="future-progress-fill" class="topic-progress-fill"></div>
+            <!-- Extra 4: EXAM IDIOMS (dữ liệu js/exam_idioms_data.js, nối vào qua js/exam_idioms_vocab.js) -->
+            <div class="topic-card" data-topic="examIdioms" onclick="selectTopic('examIdioms')">
+              <span class="topic-icon">🎯</span>
+              <h3 class="topic-title">EXAM IDIOMS</h3>
+              <p class="topic-meta">230 Idioms, Phrasal Verbs, Collocations &amp; Fixed Phrases trích từ đề thi thử TN THPT 2026.</p>
+              <div class="topic-progress-container">
+                <div id="examIdioms-progress-fill" class="topic-progress-fill"></div>
+              </div>
+              <span id="examIdioms-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
+            </div>
           </div>
-          <span id="future-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
-        </div>
-      </div>
+        </aside>
 
-      <!-- Extra Materials: Phrasal Verbs, Collocations, Demographic Terms, Exam Idioms -->
-      <h2 style="font-size: 1.3rem; margin-bottom: 20px; font-weight: 700; color: #fff;">Extra Materials</h2>
-      <div class="topics-grid">
-        <!-- Extra 1: PHRASAL VERBS (Active) -->
-        <div class="topic-card" data-topic="phrasalVerbs" onclick="selectTopic('phrasalVerbs')">
-          <span class="topic-icon">📚</span>
-          <h3 class="topic-title">PHRASAL VERBS</h3>
-          <p class="topic-meta">100 Câu Phrasal Verbs trọng tâm ôn luyện thi.</p>
-          <div class="topic-progress-container">
-            <div id="phrasalVerbs-progress-fill" class="topic-progress-fill"></div>
-          </div>
-          <span id="phrasalVerbs-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
-        </div>
+        <section class="topics-main" aria-labelledby="core-topics-title">
+          <h2 class="topics-heading" id="core-topics-title">Choose a Topic</h2>
+          <div class="topics-grid topics-grid-core">
+            <!-- Topic 1: OUR LIFE (Active) -->
+            <div class="topic-card" data-topic="ourLife" onclick="selectTopic('ourLife')">
+              <span class="topic-icon">🧬</span>
+              <h3 class="topic-title">OUR LIFE</h3>
+              <p class="topic-meta">182 Từ vựng hoạt động thường ngày, lối sống, giáo dục và bản thân.</p>
+              <div class="topic-progress-container">
+                <div id="life-progress-fill" class="topic-progress-fill"></div>
+              </div>
+              <span id="life-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
+            </div>
 
-        <!-- Extra 2: COLLOCATIONS (Active) -->
-        <div class="topic-card" data-topic="collocations" onclick="selectTopic('collocations')">
-          <span class="topic-icon">🧩</span>
-          <h3 class="topic-title">COLLOCATIONS</h3>
-          <p class="topic-meta">100 Câu Collocations trọng tâm ôn luyện thi.</p>
-          <div class="topic-progress-container">
-            <div id="collocations-progress-fill" class="topic-progress-fill"></div>
-          </div>
-          <span id="collocations-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
-        </div>
+            <!-- Topic 2: OUR SOCIETY (Active) -->
+            <div class="topic-card" data-topic="ourSociety" onclick="selectTopic('ourSociety')">
+              <span class="topic-icon">👥</span>
+              <h3 class="topic-title">OUR SOCIETY</h3>
+              <p class="topic-meta">116 Từ vựng về cộng đồng, kinh tế, đô thị và xã hội.</p>
+              <div class="topic-progress-container">
+                <div id="society-progress-fill" class="topic-progress-fill"></div>
+              </div>
+              <span id="society-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
+            </div>
 
-        <!-- Extra 3: DEMOGRAPHIC TERMS (Active) -->
-        <div class="topic-card" data-topic="demographicTerms" onclick="selectTopic('demographicTerms')">
-          <span class="topic-icon">📊</span>
-          <h3 class="topic-title">DEMOGRAPHIC TERMS</h3>
-          <p class="topic-meta">117 Thuật ngữ nhân khẩu học & dân số học (Glossary of Demographic Terms).</p>
-          <div class="topic-progress-container">
-            <div id="demographicTerms-progress-fill" class="topic-progress-fill"></div>
-          </div>
-          <span id="demographicTerms-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
-        </div>
+            <!-- Topic 3: OUR ENVIRONMENT (Active) -->
+            <div class="topic-card" data-topic="ourEnvironment" onclick="selectTopic('ourEnvironment')">
+              <span class="topic-icon">🌳</span>
+              <h3 class="topic-title">OUR ENVIRONMENT</h3>
+              <p class="topic-meta">148 Từ vựng về môi trường, sinh thái và bảo tồn thiên nhiên.</p>
+              <div class="topic-progress-container">
+                <div id="environment-progress-fill" class="topic-progress-fill"></div>
+              </div>
+              <span id="environment-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
+            </div>
 
-        <!-- Extra 4: EXAM IDIOMS (dữ liệu js/exam_idioms_data.js, nối vào qua js/exam_idioms_vocab.js) -->
-        <div class="topic-card" data-topic="examIdioms" onclick="selectTopic('examIdioms')">
-          <span class="topic-icon">🎯</span>
-          <h3 class="topic-title">EXAM IDIOMS</h3>
-          <p class="topic-meta">230 Idioms, Phrasal Verbs, Collocations &amp; Fixed Phrases trích từ đề thi thử TN THPT 2026.</p>
-          <div class="topic-progress-container">
-            <div id="examIdioms-progress-fill" class="topic-progress-fill"></div>
+            <!-- Topic 4: OUR FUTURE (Active) -->
+            <div class="topic-card" data-topic="ourFuture" onclick="selectTopic('ourFuture')">
+              <span class="topic-icon">🚀</span>
+              <h3 class="topic-title">OUR FUTURE</h3>
+              <p class="topic-meta">91 Từ vựng về khoa học, công nghệ và tương lai số.</p>
+              <div class="topic-progress-container">
+                <div id="future-progress-fill" class="topic-progress-fill"></div>
+              </div>
+              <span id="future-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
+            </div>
           </div>
-          <span id="examIdioms-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
-        </div>
+        </section>
       </div>
 
       <div class="reset-history-wrapper">

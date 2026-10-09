@@ -167,6 +167,134 @@ h1 {
   }
 }
 
+/* ---------- Dashboard: Extra Materials ở panel bên trái, chủ đề chính bên phải ---------- */
+/* Riêng màn hình chọn chủ đề được nới rộng để có chỗ cho panel */
+.container:has(> #dashboard-screen:not([style*="none"])) {
+  width: min(1120px, 95vw);
+}
+
+.topics-layout {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  grid-template-areas: "side main";
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 30px;
+}
+
+.topics-main {
+  grid-area: main;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.topics-side {
+  grid-area: side;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius);
+}
+
+.topics-heading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 20px;
+}
+
+.topics-side .topics-heading {
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+}
+
+.topics-layout .topics-grid {
+  margin-bottom: 0;
+}
+
+/* 4 chủ đề chính giãn đều theo chiều cao panel bên trái */
+.topics-main .topics-grid-core {
+  flex: 1;
+  grid-auto-rows: 1fr;
+}
+
+.topics-grid-extra {
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+/* Thẻ Extra dạng hàng gọn: biểu tượng bên trái, tên / mô tả / tiến độ bên phải */
+.topics-side .topic-card {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  grid-template-areas:
+    "icon title"
+    "icon meta"
+    "bar  bar"
+    "score score";
+  column-gap: 12px;
+  align-items: center;
+  text-align: left;
+  padding: 14px 16px 12px;
+}
+
+.topics-side .topic-icon {
+  grid-area: icon;
+  align-self: start;
+  font-size: 1.9rem;
+  margin: 0;
+}
+
+.topics-side .topic-title {
+  grid-area: title;
+  font-size: 0.98rem;
+  margin: 0 0 2px;
+}
+
+/* Chừa chỗ cho huy hiệu boss (👾 n) ở góc khi thẻ có boss */
+.topics-side .topic-card:has(.topic-boss-badge) .topic-title {
+  padding-right: 44px;
+}
+
+.topics-side .topic-meta {
+  grid-area: meta;
+  font-size: 0.76rem;
+  line-height: 1.4;
+  margin: 0 0 10px;
+}
+
+.topics-side .topic-progress-container {
+  grid-area: bar;
+}
+
+.topics-side .stage-card-score {
+  grid-area: score;
+}
+
+.topics-side .topic-card:hover:not(.locked) {
+  transform: translateX(4px);
+}
+
+.topics-side .topic-boss-badge {
+  top: 10px;
+  right: 10px;
+}
+
+/* Màn hình hẹp: panel chuyển xuống dưới các chủ đề chính */
+@media (max-width: 900px) {
+  .topics-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas: "main" "side";
+  }
+  .topics-main .topics-grid-core {
+    grid-auto-rows: auto;
+  }
+  .topics-grid-extra {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
 .topic-card {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.05);

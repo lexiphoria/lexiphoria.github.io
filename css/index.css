@@ -32,7 +32,7 @@ body {
 }
 
 .container {
-  width: min(1080px, 92vw);
+  width: min(1180px, 92vw);
   margin: 0 auto;
   padding: 28px 0 44px;
 }
@@ -328,32 +328,97 @@ body {
   gap: 18px;
 }
 
-/* Rigid 2x2 layout for the 4 core cards */
+/* Bố cục trang chủ: panel Extra Materials bên trái, lộ trình chính bên phải */
+.home-layout {
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  grid-template-areas: "side main";
+  gap: 24px;
+  align-items: stretch;
+}
+
+.main-col {
+  grid-area: main;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-panel {
+  grid-area: side;
+  background: rgba(255, 253, 245, 0.5);
+  border: 1px solid #dcc79f;
+  border-radius: calc(var(--radius) + 4px);
+  padding: 16px;
+  box-shadow: 0 10px 22px rgba(96, 65, 18, 0.08);
+}
+
+.home-layout .section-title {
+  margin: 0 0 14px;
+}
+
+.side-panel .section-title {
+  font-size: 1.15rem;
+}
+
+/* Rigid 2x2 layout for the 4 core cards, stretched to the panel's height */
 .core-grid {
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
   gap: 20px;
 }
 
-/* 3-column grid for Extra Materials */
+/* Extra Materials: stacked compact cards inside the side panel */
 .extra-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  grid-template-columns: 1fr;
+  gap: 14px;
 }
 
-@media (max-width: 1000px) {
+.side-panel .card {
+  padding: 14px 16px;
+}
+
+.side-panel .card h3 {
+  font-size: 1.1rem;
+}
+
+.side-panel .card-top {
+  gap: 8px;
+}
+
+.side-panel .tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.2px;
+  padding: 3px 9px;
+  white-space: nowrap;
+}
+
+.side-panel .card-character {
+  width: 48px;
+  height: 48px;
+}
+
+/* Narrower screens: panel moves below the roadmap and lays its cards out in a row */
+@media (max-width: 1060px) {
+  .home-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas: "main" "side";
+    gap: 28px;
+  }
+  .core-grid {
+    grid-auto-rows: auto;
+  }
   .extra-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 }
 
 @media (max-width: 768px) {
   .core-grid {
     grid-template-columns: 1fr;
-  }
-  .extra-grid {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
 }
 

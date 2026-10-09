@@ -9,19 +9,29 @@
      NVIDIA_API_KEY   khoá build.nvidia.com (kiểu Secret)
      MODEL            tên mô hình, có thể ghi nhiều tên cách nhau dấu phẩy; mặc định xem DEFAULT_MODELS
      ALLOWED_ORIGINS  các trang được gọi, cách nhau dấu phẩy; mặc định https://lexiphoria.github.io
-   Với 'workers-ai' cần thêm binding Workers AI tên AI (Settings → Bindings). Hướng dẫn: ai-proxy/README.md */
+   Binding Workers AI tên AI (Settings → Bindings): dùng khi PROVIDER = 'workers-ai', và là phương án dự phòng tự động
+   khi NVIDIA chậm hoặc lỗi. Hướng dẫn: ai-proxy/README.md */
 
 // Thử lần lượt: mô hình bị ngừng, báo lỗi, quá thời gian chờ hoặc trả lời rỗng thì chuyển sang mô hình kế tiếp.
-// Danh sách công khai của NVIDIA còn nhiều mô hình đã ngừng chạy trên gói miễn phí (trả 404 với khoá thật),
-// nên để danh sách rộng, mô hình mới đặt trước. Worker nhớ mô hình vừa trả lời được để lần sau thử trước,
-// và bỏ qua mô hình đã báo 404 / 410 trong phiên chạy.
+// Danh sách công khai của NVIDIA còn nhiều mô hình đã ngừng chạy trên gói miễn phí (trả 404 với khoá thật).
+// Đo ngày 09/10/2026 bằng khoá dùng thử: nemotron-3-super trả lời ~3 giây, muse-glimmer ~4,5 giây; các mô hình khác
+// báo 404 hoặc chờ quá 8 giây. Worker nhớ mô hình vừa trả lời được để lần sau thử trước, bỏ qua mô hình đã báo 404 / 410.
 const DEFAULT_MODELS = {
   nvidia: [
-    'nvidia/nemotron-3.5-lightning-30b-a3b', 'google/gemma-4-31b-it', 'z-ai/glm-5.3-flash', 'deepseek-ai/deepseek-v4.1-flash',
-    'nvidia/nemotron-nano-3-30b-a3b', 'openai/gpt-oss-20b', 'meta/muse-glimmer-30b', 'moonshotai/kimi-k2.6',
-    'nvidia/nemotron-3-super-120b-a12b', 'nv-mistralai/mistral-nemo-12b-instruct', 'mistralai/mistral-7b-instruct-v0.3',
+    'nvidia/nemotron-3-super-120b-a12b', 'meta/muse-glimmer-30b', 'nvidia/nemotron-3.5-lightning-30b-a3b', 'google/gemma-4-31b-it',
+    'z-ai/glm-5.3-flash', 'deepseek-ai/deepseek-v4.1-flash', 'openai/gpt-oss-20b',
   ],
   'workers-ai': ['@cf/meta/llama-4-scout-17b-16e-instruct', '@cf/google/gemma-3-12b-it'],
+};
+// Tắt bước suy luận (mô hình suy luận dùng hết token cho phần "suy nghĩ" nên trả lời rỗng).
+// NVIDIA không nhận tham số này thì Worker gửi lại không kèm tham số.
+const NO_THINKING = { chat_template_kwargs: { enable_thinking: false } };
+const MODEL_OPTIONS = {
+  'nvidia/nemotron-3-super-120b-a12b': NO_THINKING,
+  'nvidia/nemotron-3.5-lightning-30b-a3b': NO_THINKING,
+  'z-ai/glm-5.3-flash': NO_THINKING,
+  'deepseek-ai/deepseek-v4.1-flash': NO_THINKING,
+  'openai/gpt-oss-20b': { reasoning_effort: 'low' },
 };
 const NVIDIA_URL = 'https://integrate.api.nvidia.com/v1/chat/completions';
 const MAX_MESSAGES = 10;      // chỉ gửi 10 lượt gần nhất
@@ -30,6 +40,7 @@ const MAX_TOKENS = 300;       // đủ cho mô hình có bước suy luận; câ
 const PER_MINUTE = 15;        // mỗi địa chỉ mạng tối đa 15 lượt/phút (ước lượng trong từng máy chủ của Cloudflare)
 const TIMEOUT_MS = 8000;      // mỗi mô hình chờ tối đa 8 giây (biến TIMEOUT_MS để đổi)
 const BUDGET_MS = 25000;      // tổng thời gian thử các mô hình cho một câu
+const FALLBACK_AFTER_MS = 14000; // có binding Workers AI: thử NVIDIA tối đa 14 giây rồi chuyển sang Workers AI
 
 const PERSONAS = {
   mark: 'You are Mark, a friendly American eco-backpacker in your twenties visiting Hoi An, Vietnam. Earlier today a Vietnamese '
@@ -116,22 +127,24 @@ function mergeSystem(messages) {
   return rest.map((m, j) => (j === i ? { role: 'user', content: `${sys.content}\n\n${m.content}` } : m));
 }
 
-async function askNvidia(env, models, messages) {
+async function askNvidia(env, models, messages, budget = BUDGET_MS) {
   const timeout = Number(env.TIMEOUT_MS) || TIMEOUT_MS;
   const start = Date.now();
-  const call = (model, msgs) => fetch(NVIDIA_URL, {
+  const call = (model, msgs, extra) => fetch(NVIDIA_URL, {
     method: 'POST',
     headers: { Authorization: `Bearer ${env.NVIDIA_API_KEY}`, 'Content-Type': 'application/json', Accept: 'application/json' },
-    body: JSON.stringify({ model, messages: msgs, max_tokens: MAX_TOKENS, temperature: 0.7, top_p: 0.9, stream: false }),
-    signal: AbortSignal.timeout(Math.max(1000, Math.min(timeout, BUDGET_MS - (Date.now() - start)))),
+    body: JSON.stringify({ model, messages: msgs, max_tokens: MAX_TOKENS, temperature: 0.7, top_p: 0.9, stream: false, ...extra }),
+    signal: AbortSignal.timeout(Math.max(1000, Math.min(timeout, budget - (Date.now() - start)))),
   });
   const tried = [];
   for (const model of models) {
-    if (Date.now() - start > BUDGET_MS - 1000) break;
+    if (Date.now() - start > budget - 1000) break;
+    const extra = MODEL_OPTIONS[model];
     let res;
     try {
-      res = await call(model, messages);
-      if (res.status === 400) res = await call(model, mergeSystem(messages));
+      res = await call(model, messages, extra);
+      if (res.status === 400 && extra) res = await call(model, messages);      // không nhận tham số tắt suy luận
+      if (res.status === 400) res = await call(model, mergeSystem(messages));  // không nhận vai trò system
     } catch (e) {
       // quá thời gian chờ hoặc lỗi mạng: thử mô hình kế tiếp
       tried.push(`${model} ${e.name === 'TimeoutError' || e.name === 'AbortError' ? 'timeout' : 'network'}`);
@@ -170,24 +183,42 @@ function ordered(models) {
 
 async function askWorkersAI(env, models, messages) {
   if (!env.AI) throw new Error('workers-ai missing binding AI');
-  let last = 'no model';
+  const tried = [];
   for (const model of models) {
     try {
       const out = await env.AI.run(model, { messages, max_tokens: MAX_TOKENS, temperature: 0.7 });
-      return { text: typeof out.response === 'string' ? out.response : out.response && out.response.text, model };
+      const msg = out && out.choices && out.choices[0] && out.choices[0].message;
+      const text = tidy(typeof out.response === 'string' ? out.response : (msg && msg.content) || (out.response && out.response.text));
+      if (text) return { text, model };
+      tried.push(`${model} empty`);
     } catch (e) {
-      last = `${model} ${String(e.message || e).slice(0, 60)}`;
+      tried.push(`${model} ${String(e.message || e).slice(0, 60)}`);
     }
   }
-  throw new Error(`workers-ai ${last}`);
+  throw new Error(`workers-ai ${tried.join(', ') || 'no model'}`);
 }
 
-// prefer: mô hình muốn thử trước khi kiểm thử tốc độ; chỉ nhận tên có trong danh sách cho phép
-function askModel(env, messages, prefer) {
+const list = (s) => s.split(',').map((x) => x.trim()).filter(Boolean);
+
+// prefer: mô hình muốn thử khi đo tốc độ; chỉ nhận tên có trong danh sách cho phép, và không chuyển sang dự phòng
+async function askModel(env, messages, prefer) {
   const provider = env.PROVIDER || (env.NVIDIA_API_KEY ? 'nvidia' : 'workers-ai');
-  const models = env.MODEL ? env.MODEL.split(',').map((s) => s.trim()).filter(Boolean) : DEFAULT_MODELS[provider];
-  const order = models.includes(prefer) ? [prefer] : ordered(models);
-  return provider === 'nvidia' ? askNvidia(env, order, messages) : askWorkersAI(env, order, messages);
+  const nvidia = provider === 'nvidia' && env.MODEL ? list(env.MODEL) : DEFAULT_MODELS.nvidia;
+  const workersAI = provider === 'workers-ai' && env.MODEL ? list(env.MODEL) : DEFAULT_MODELS['workers-ai'];
+  if (workersAI.includes(prefer)) return askWorkersAI(env, [prefer], messages);
+  if (provider !== 'nvidia') return askWorkersAI(env, workersAI, messages);
+  if (nvidia.includes(prefer)) return askNvidia(env, [prefer], messages);
+  try {
+    // Có binding Workers AI thì chừa thời gian cho phương án dự phòng
+    return await askNvidia(env, ordered(nvidia), messages, env.AI ? FALLBACK_AFTER_MS : BUDGET_MS);
+  } catch (e) {
+    if (!env.AI) throw e;
+    try {
+      return await askWorkersAI(env, workersAI, messages);
+    } catch (e2) {
+      throw new Error(`${e.message}; ${e2.message}`);
+    }
+  }
 }
 
 export default {

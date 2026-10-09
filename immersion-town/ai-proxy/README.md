@@ -27,11 +27,15 @@ Game (lexiphoria.github.io) ──câu học sinh──► Cloudflare Worker (gi
 2. *Type*: **Secret**, *Variable name*: `NVIDIA_API_KEY`, *Value*: khoá lấy ở https://build.nvidia.com/settings/api-keys (bắt đầu bằng `nvapi-`) → **Deploy**.
 3. Không dán khoá vào game, tệp trong repo hay tin nhắn. Khoá chỉ nằm trong Cloudflare.
 
+### 2b. Bật Workers AI làm dự phòng (nên làm)
+Worker → **Settings → Bindings → Add binding → Workers AI**, *Variable name* `AI` → **Deploy**.
+NVIDIA chậm hoặc lỗi quá 14 giây thì Worker tự hỏi Workers AI (miễn phí 10.000 neuron/ngày), học sinh vẫn nhận câu trả lời thật.
+
 Tuỳ chọn (cũng ở *Variables and Secrets*, kiểu *Text*):
 
 | Biến | Mặc định | Ý nghĩa |
 |---|---|---|
-| `MODEL` | danh sách rộng trong `DEFAULT_MODELS` (Nemotron 3.5 Lightning, Gemma 4 31B, GLM 5.3 Flash, DeepSeek V4.1 Flash…) | Mô hình; ghi nhiều tên cách nhau dấu phẩy để thử lần lượt. Mô hình báo 404 / 410, báo lỗi, chờ quá 8 giây hoặc trả lời rỗng thì Worker chuyển sang tên kế tiếp (tổng tối đa khoảng 25 giây); Worker nhớ mô hình vừa trả lời được để lần sau thử trước. Lưu ý: danh sách công khai https://integrate.api.nvidia.com/v1/models còn nhiều mô hình đã ngừng chạy trên gói miễn phí (báo 404 với khoá thật). |
+| `MODEL` | danh sách trong `DEFAULT_MODELS`: Nemotron 3 Super, Muse Glimmer, rồi các mô hình mới khác | Mô hình; ghi nhiều tên cách nhau dấu phẩy để thử lần lượt. Mô hình báo 404 / 410, báo lỗi, chờ quá 8 giây hoặc trả lời rỗng thì Worker chuyển sang tên kế tiếp; Worker nhớ mô hình vừa trả lời được để lần sau thử trước. Mô hình suy luận được gửi kèm tham số tắt suy luận (`MODEL_OPTIONS`). Lưu ý: danh sách công khai https://integrate.api.nvidia.com/v1/models còn nhiều mô hình đã ngừng chạy trên gói miễn phí (báo 404 với khoá thật). |
 | `ALLOWED_ORIGINS` | `https://lexiphoria.github.io` | Các trang được gọi Worker, cách nhau dấu phẩy |
 
 ### 3. Bật trong game

@@ -3364,6 +3364,7 @@ let done = Array(5).fill(false);
 let corr = Array(5).fill(false);
 let cntC = 0, cntW = 0;
 let currentExamId = '';
+let resultRecorded = false;   // mỗi lượt làm bài chỉ báo kết quả một lần
 
 function initApp() {
   const selectScreen = document.getElementById('select-screen');
@@ -3513,6 +3514,7 @@ function resetAll() {
   done = Array(totalQ).fill(false);
   corr = Array(totalQ).fill(false);
   cntC = 0; cntW = 0;
+  resultRecorded = false;
   const sectionTitle = document.getElementById('q-section-title');
   if (sectionTitle) sectionTitle.textContent = `Questions 1–${totalQ}`;
   document.getElementById('result-panel').style.display = 'none';
@@ -3539,6 +3541,11 @@ function updateBar() {
 function showResult() {
   const totalQ = (Array.isArray(QS) && QS.length > 0) ? QS.length : 5;
   const n = corr.filter(Boolean).length;
+  // Báo kết quả cho cánh đồng lúa trên trang chủ (js/study-tracker.js)
+  if (!resultRecorded && window.PortalStudy) {
+    resultRecorded = true;
+    PortalStudy.recordQuiz(n, totalQ);
+  }
   const panel = document.getElementById('result-panel');
   panel.style.display = 'block';
   document.getElementById('result-grade').textContent = n + '/' + totalQ;

@@ -5773,6 +5773,9 @@ function finishText() {
   saveScores();
   clearDraft();
 
+  // Báo kết quả cho cánh đồng lúa trên trang chủ (js/study-tracker.js)
+  if (window.PortalStudy) PortalStudy.recordQuiz(correct, 6);
+
   const emojis = ['😔', '😐', '🙂', '😊', '😄', '🌟', '🏆'];
   const emojiIdx = Math.floor(correct / 6 * 6);
   const titles = ['Keep Practicing!', 'Getting There!', 'Good Effort!', 'Well Done!', 'Excellent!', 'Outstanding!', 'Perfect Score!'];

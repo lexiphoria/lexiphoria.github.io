@@ -186,6 +186,7 @@
   let answered = 0;
   let correctCount = 0;
   let wrongCount = 0;
+  let studyRecorded = false;   // chỉ báo kết quả cho cánh đồng lúa một lần mỗi bài
   let startTime = Date.now();
   let timerInterval = null;
   const totalQ = TEST_DATA ? TEST_DATA.totalQuestions : 30;
@@ -355,6 +356,12 @@
     const m = Math.floor(elapsed / 60);
     const s = elapsed % 60;
     const pct = totalQ > 0 ? Math.round((correctCount / totalQ) * 100) : 0;
+
+    // Báo kết quả cho cánh đồng lúa trên trang chủ (js/study-tracker.js)
+    if (!studyRecorded && window.PortalStudy) {
+      studyRecorded = true;
+      window.PortalStudy.recordQuiz(correctCount, totalQ);
+    }
 
     let emoji = "🎉";
     let msg = "Excellent!";

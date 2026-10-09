@@ -1060,6 +1060,7 @@
   };
 
   function submitQuiz() {
+    const alreadySubmitted = isSubmitted;
     isSubmitted = true;
     clearInterval(timerInterval);
 
@@ -1093,6 +1094,11 @@
     const history = JSON.parse(localStorage.getItem('hsg12_exam_history') || '[]');
     history.push(record);
     localStorage.setItem('hsg12_exam_history', JSON.stringify(history));
+
+    // Báo kết quả cho cánh đồng lúa trên trang chủ (js/study-tracker.js)
+    if (!alreadySubmitted && window.PortalStudy) {
+      PortalStudy.recordQuiz(correctCount, currentTest.questions.length);
+    }
 
     // Show result modal
     showResultModal(scoreOutOf10, correctCount, sectionStats);

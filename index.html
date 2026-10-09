@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/characters/sticker_art_painting.png">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/rice-widget.css">
+    <link rel="stylesheet" href="css/rice-widget.css?v=2">
 </head>
 
 <body>
@@ -71,7 +71,8 @@
                 <section class="portal-rice-card" id="portalRiceWidget" aria-labelledby="rice-title">
                     <div class="rice-card-header">
                         <h2 id="rice-title"><span aria-hidden="true">🌾</span> Knowledge Rice Field</h2>
-                        <span class="water-status-badge" title="Water drops">
+                        <span class="water-status-badge" title="Water drops earned by studying">
+                            <span class="water-gain" id="homeWaterGain" aria-hidden="true"></span>
                             <img src="assets/rice/cozy_oriental_water_item_2.png" alt="">
                             <span id="homeWaterCount">0</span><span class="visually-hidden"> water drops</span>
                         </span>
@@ -104,11 +105,20 @@
                         </div>
                     </div>
                     <div class="rice-card-actions">
-                        <button type="button" class="water-rice-btn" id="waterRiceBtn">
-                            <img src="assets/rice/cozy_oriental_water_item_1.png" alt=""> Water (+10 💧)
-                        </button>
-                        <span class="total-harvest-count" id="totalHarvestCount">🌾 Harvests: 0</span>
+                        <span class="rice-today" title="Study days in a row">🔥 <b id="riceStreak">0</b></span>
+                        <span class="rice-today" id="riceTodayChip" title="Today's study time (goal: 30 minutes)">⏱ <b id="riceTodayMinutes">0</b>/30 min</span>
+                        <span class="rice-today" title="Perfect quizzes today (up to 3 earn water)">🎯 <b id="ricePerfectCount">0</b>/3</span>
+                        <button type="button" class="rice-harvest-btn" id="riceHarvestBtn" hidden>🏅 Harvest!</button>
                     </div>
+                    <details class="rice-rules">
+                        <summary><img src="assets/rice/cozy_oriental_water_item_1.png" alt=""> How to earn water</summary>
+                        <ul>
+                            <li><b>+10</b> each day you study</li>
+                            <li><b>+10</b> for 30 minutes of study in a day</li>
+                            <li><b>+10</b> for every 100% quiz (up to 3 a day)</li>
+                            <li><b>+20</b> Lotus Nutrient jar at every 7-day streak</li>
+                        </ul>
+                    </details>
                 </section>
 
                 <!-- Panel Extra Materials (Immersion Town, V-ACT); Exam Idioms nằm trong Vocabulary Mastery -->
@@ -291,26 +301,24 @@
         </footer>
     </main>
 
-    <!-- Modal mùa vàng bội thu (hiện khi lúa đạt giai đoạn 10) -->
-    <div class="rice-harvest-modal-overlay" id="riceHarvestModal" hidden>
-        <div class="rice-harvest-card" role="dialog" aria-modal="true" aria-labelledby="harvestTitle">
-            <div class="modal-badge-top">🌾 BUMPER HARVEST 🌾</div>
-            <div class="harvest-image-frame">
-                <div class="sun-burst-bg"></div>
-                <img src="assets/rice/cozy_oriental_rice_stage_10_golden_harvest.png" alt="Golden rice ready to harvest">
+    <!-- Thẻ chứng nhận Mùa Vàng Bội Thu: vẽ bằng canvas nên bản tải về giống hệt trên màn hình -->
+    <div class="harvest-cert-overlay" id="harvestCertModal" hidden>
+        <div class="harvest-cert-card" role="dialog" aria-modal="true" aria-labelledby="certTitle">
+            <button type="button" class="cert-x" id="certCloseBtn" aria-label="Close">✕</button>
+            <h2 class="visually-hidden" id="certTitle">Golden Harvest certificate</h2>
+            <canvas id="certCanvas" width="1200" height="846" role="img" aria-label="Golden Harvest certificate with your name, study time, accuracy and harvest date"></canvas>
+            <label class="cert-name-field">Name on certificate
+                <input id="certNameInput" type="text" maxlength="40" placeholder="Your name" autocomplete="off">
+            </label>
+            <div class="cert-actions-row">
+                <button type="button" class="cert-download-btn" id="certDownloadBtn">⬇ Download certificate (PNG)</button>
+                <button type="button" class="cert-close-btn" id="certNewCropBtn">🌾 Start a New Crop</button>
             </div>
-            <h2 id="harvestTitle">A Golden Harvest of Knowledge!</h2>
-            <p>You cared for your rice through all 10 growth stages. Your knowledge field is full of golden grain.</p>
-            <div class="harvest-rewards-row">
-                <div class="h-reward-item">🌟 +100 XP</div>
-                <div class="h-reward-item">🏆 Knowledge Farmer Badge</div>
-                <div class="h-reward-item">📜 New Lessons Unlocked</div>
-            </div>
-            <button type="button" class="start-new-crop-btn" id="startNewCropBtn">🌾 Start a New Crop</button>
         </div>
     </div>
 
-    <script src="js/rice-widget.js"></script>
+    <script src="js/study-tracker.js?v=1"></script>
+    <script src="js/rice-widget.js?v=2"></script>
 </body>
 
 </html>

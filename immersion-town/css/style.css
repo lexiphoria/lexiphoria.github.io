@@ -1138,9 +1138,8 @@ button:disabled {
   line-height: 1.45;
 }
 
-/* Từ vựng tô sáng trong câu trả lời: giữ cả cụm trên một dòng, không căn giữa như nút */
+/* Từ vựng tô sáng trong câu trả lời: xuống dòng như chữ thường, căn trái (không căn giữa như nút) */
 .chat-msg .term {
-  white-space: nowrap;
   text-align: left;
   vertical-align: baseline;
 }

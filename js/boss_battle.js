@@ -109,6 +109,10 @@ function bossNormalize(text) {
     .trim();
 }
 
+function bossCleanWord(text) {
+  return bossNormalize(String(text || '').replace(/\(.*?\)/g, '').trim());
+}
+
 // --- Hard-word tracking (called from Quiz / Sentence Completion) ---
 function recordHardWord(topic, word) {
   const store = getBossStore();
@@ -372,13 +376,18 @@ function buildBossQuestion(entry) {
   const sentenceAnswer = (w.blankSentence && Array.isArray(w.options) && w.answer)
     ? w.options[w.answer.charCodeAt(0) - 65]
     : null;
-  const typeable = !/[()]/.test(w.word) && w.word.length <= 30;
+  const cleanWord = bossCleanWord(w.word);
+  const typeable = cleanWord.length > 0 && cleanWord.length <= 30;
 
-  let type = ['meaning', 'reverse', 'spell'][entry.stage];
+  let stage = Math.max(0, Math.min(entry.stage || 0, BOSS_SEAL_HITS - 1));
+  let type = ['meaning', 'reverse', 'spell'][stage] || 'meaning';
   if (type === 'meaning' && sentenceAnswer) type = 'sentence';
-  if (type === 'spell' && !sentenceAnswer && !typeable) type = 'reverse';
+  if (type === 'spell' && !sentenceAnswer && !typeable) {
+    type = 'reverse';
+    stage = 1;
+  }
 
-  const q = { type, tier: entry.stage, word: w, hintLevel: 0, hintUsed: false };
+  const q = { type, tier: stage, word: w, hintLevel: 0, hintUsed: false };
   if (type === 'meaning') {
     q.answer = w.meaning;
     q.options = bossPickOptions(w.meaning, pool.map(x => x.meaning));
@@ -390,8 +399,9 @@ function buildBossQuestion(entry) {
     q.options = bossPickOptions(w.word, pool.map(x => x.word));
   } else {
     q.useSentence = !!sentenceAnswer;
-    q.accepted = sentenceAnswer ? [sentenceAnswer] : w.word.split('/');
-    q.display = (sentenceAnswer || w.word.split('/')[0]).trim();
+    const wordAccepted = [w.word, cleanWord, ...w.word.split('/')].filter(Boolean);
+    q.accepted = sentenceAnswer ? [sentenceAnswer] : wordAccepted;
+    q.display = (sentenceAnswer || cleanWord || w.word.split('/')[0]).trim();
   }
   return q;
 }
@@ -534,12 +544,19 @@ function submitBossSpell() {
   const b = bossBattle;
   if (!b || b.answered) return;
   const input = bossEl('boss-spell-input');
+  if (!input) return;
   const value = input.value.trim();
   if (!value) {
     input.focus();
     return;
   }
-  const isCorrect = b.q.accepted.some(ans => bossNormalize(ans) === bossNormalize(value));
+  const normVal = bossNormalize(value);
+  const cleanVal = bossCleanWord(value);
+  const isCorrect = b.q.accepted.some(ans => {
+    const normAns = bossNormalize(ans);
+    const cleanAns = bossCleanWord(ans);
+    return normAns === normVal || cleanAns === cleanVal || cleanAns === normVal || normAns === cleanVal;
+  });
   input.disabled = true;
   input.classList.add(isCorrect ? 'correct' : 'wrong');
   bossEl('boss-hint-btn').disabled = true;
@@ -601,7 +618,7 @@ function resolveBossAnswer(isCorrect) {
     if (entry.boss) {
       const boss = entry.boss;
       boss.wrong += 1;
-      if (boss.hits.length) {
+      if (bossLastHit(boss) === today) {
         boss.hits.pop();
         healed = true;
         log.status = 'healed';

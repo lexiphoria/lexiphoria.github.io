@@ -373,10 +373,10 @@ body {
   gap: 20px;
 }
 
-/* 4-column grid for Extra Materials */
+/* 3-column grid for Extra Materials */
 .extra-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
 

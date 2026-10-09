@@ -50,7 +50,7 @@
     wAnna: 'assets/chars/walk_anna.webp',
     wLiwei: 'assets/chars/walk_liwei.webp',
     wCyclo: 'assets/chars/walk_cyclo.webp',
-    wBuggy: 'assets/chars/walk_buggy.webp',
+    wBuggy: 'assets/chars/walk_buggy.webp?v=20261009b',
   };
 
   // Khách tham quan đi lại (đối tượng 'walker' trong bản đồ): dải khung tools/cut_frontal.py tạo ra,

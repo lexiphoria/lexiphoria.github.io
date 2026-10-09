@@ -143,6 +143,34 @@ WALK_OPTS = {'guide': {'bg_tol': 0.1, 'pockets': False, 'ground': 0.93}, 'buggy'
 WALK_COLOR = {'guide': (200, 96, 132)}
 
 
+def add_driver(strip, cyclo, nl, nr, x0=103, top=30, scale=0.85):
+    """Xe buggy trong tranh không có người lái: lấy thân trên bác đạp xích lô (khung đi sang phải của walk_cyclo:
+    nón, đầu, áo, hai tay, quần; bỏ chân đạp, hành khách, ghế đỏ), đặt ngồi ghế trước, tay chạm vô-lăng. Vẽ lại vô-lăng
+    và đệm ghế của xe lên trên để người ngồi lọt vào xe. Khung đi sang trái gần đối xứng khung sang phải nên lật ngang,
+    ghép cùng vị trí rồi lật lại. Toạ độ tính trong một ô của dải khung (cao WALK_H)."""
+    cc = cyclo.width // 3
+    src = np.asarray(cyclo.crop((2 * cc, 0, 3 * cc, cyclo.height))).copy()
+    yy, xx = np.mgrid[:src.shape[0], :src.shape[1]]
+    keep = (xx >= 12) & (((yy < 82) & (xx < 81)) | ((yy >= 82) & (yy < 96) & (xx < 77)) | ((yy >= 96) & (yy < 120) & (xx < 70)))
+    r, g, b = (src[..., k].astype(int) for k in range(3))
+    keep &= ~((xx > 66) & (r > 1.8 * g) & (r > 1.8 * b) & (r < 170))   # mép ghế đỏ của xích lô cạnh bàn tay
+    src[..., 3] = np.where(keep, src[..., 3], 0)
+    driver = Image.fromarray(src).crop((12, 0, 81, 120))
+    driver = driver.resize((round(driver.width * scale), round(driver.height * scale)), Image.LANCZOS)
+    cw = strip.width // (1 + nl + nr)
+    out = strip.copy()
+    for i in range(1, 1 + nl + nr):
+        left = i <= nl
+        cell = strip.crop((i * cw, 0, (i + 1) * cw, strip.height))
+        cell = ImageOps.mirror(cell) if left else cell
+        done = cell.copy()
+        done.alpha_composite(driver, (x0, top))
+        for box in ((158, 84, 204, 126), (96, 128, 170, 150)):   # vô-lăng, đệm ghế trước
+            done.alpha_composite(cell.crop(box), box[:2])
+        out.paste(ImageOps.mirror(done) if left else done, (i * cw, 0))
+    return out
+
+
 def walk_strip(sheet, kind, front, left, right, color=None, **opts):
     cut = lambda box: cutlib.cutout(sheet, box, kind, keep_largest=True, **opts)  # noqa: E731
     f = cut(front)
@@ -175,6 +203,8 @@ if __name__ == '__main__':
     walk = []
     for who, (prefix, kind, front, left, right) in WALK.items():
         strip, nl, nr = walk_strip(source(prefix), kind, front, left, right, WALK_COLOR.get(who), **WALK_OPTS.get(who, {}))
+        if who == 'buggy':
+            strip = add_driver(strip, dict(walk)['cyclo'], nl, nr)
         cutlib.save_webp(strip, CHARS / f'walk_{who}.webp')
         walk.append((who, strip))
         print(f'walk_{who}: {strip.size}, 1 ô nhìn thẳng, {nl} ô sang trái, {nr} ô sang phải')

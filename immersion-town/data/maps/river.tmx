@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="16" tilewidth="64" tileheight="64" infinite="0" nextlayerid="3" nextobjectid="42">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="16" tilewidth="64" tileheight="64" infinite="0" nextlayerid="3" nextobjectid="52">
  <properties>
   <property name="zone" value="river"/>
   <property name="name" value="Bến sông Hoài"/>
@@ -93,14 +93,14 @@
     <property name="solid" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="6" name="" type="prop" x="486" y="666" width="166" height="51">
+  <object id="6" name="" type="prop" x="490" y="669" width="159" height="19">
    <properties>
     <property name="kind" value="prop"/>
-    <property name="img" value="boat"/>
-    <property name="ph" type="float" value="92"/>
-    <property name="word" value="wooden-boat"/>
-    <property name="solid" type="bool" value="false"/>
-    <property name="glow" value="0.14,0.3"/>
+    <property name="img" value="flower_boat"/>
+    <property name="ph" type="float" value="112"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="lantern-boat"/>
+    <property name="glow" value="0.22,0.22;0.5,0.12;0.78,0.22"/>
    </properties>
   </object>
   <object id="7" name="" type="prop" x="340" y="586" width="108" height="19">
@@ -131,7 +131,7 @@
     <property name="word" value="pier"/>
    </properties>
   </object>
-  <object id="10" name="" type="prop" x="338" y="432" width="35" height="16">
+  <object id="10" name="" type="prop" x="379" y="432" width="35" height="16">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="pot_flower_red"/>
@@ -250,7 +250,7 @@
     <property name="glow" value="0.2,0.4;0.68,0.25"/>
    </properties>
   </object>
-  <object id="22" name="" type="prop" x="525" y="426" width="19" height="16">
+  <object id="22" name="" type="prop" x="342" y="426" width="19" height="16">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="tq_lamp"/>
@@ -260,7 +260,7 @@
     <property name="glow" value="0.2,0.4;0.68,0.25"/>
    </properties>
   </object>
-  <object id="23" name="" type="prop" x="1184" y="426" width="19" height="16">
+  <object id="23" name="" type="prop" x="1210" y="426" width="19" height="16">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="tq_lamp"/>
@@ -270,7 +270,7 @@
     <property name="glow" value="0.2,0.4;0.68,0.25"/>
    </properties>
   </object>
-  <object id="24" name="" type="prop" x="1382" y="426" width="19" height="16">
+  <object id="24" name="" type="prop" x="1392" y="426" width="19" height="16">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="tq_lamp"/>
@@ -289,22 +289,34 @@
     <property name="word" value="wooden-boat"/>
    </properties>
   </object>
-  <object id="26" name="" type="tree" x="96" y="115" width="38" height="22">
+  <object id="26" name="" type="prop" x="99" y="118" width="32" height="19">
    <properties>
-    <property name="kind" value="tree"/>
-    <property name="variant" value="areca"/>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tree_cau"/>
+    <property name="ph" type="float" value="136"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="areca-palm"/>
+    <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="27" name="" type="tree" x="435" y="115" width="38" height="22">
+  <object id="27" name="" type="prop" x="438" y="118" width="32" height="19">
    <properties>
-    <property name="kind" value="tree"/>
-    <property name="variant" value="areca"/>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tree_cau"/>
+    <property name="ph" type="float" value="136"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="areca-palm"/>
+    <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="28" name="" type="tree" x="1126" y="115" width="38" height="22">
+  <object id="28" name="" type="prop" x="1130" y="118" width="32" height="19">
    <properties>
-    <property name="kind" value="tree"/>
-    <property name="variant" value="areca"/>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tree_cau"/>
+    <property name="ph" type="float" value="136"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="areca-palm"/>
+    <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
   <object id="29" name="" type="prop" x="1335" y="122" width="158" height="22">
@@ -327,7 +339,67 @@
     <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="31" name="" type="prop" x="256" y="426" width="77" height="22">
+  <object id="31" name="" type="prop" x="48" y="477" width="64" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tree_coconut"/>
+    <property name="ph" type="float" value="190"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="coconut-tree"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="32" name="" type="prop" x="230" y="477" width="51" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tree_muong"/>
+    <property name="ph" type="float" value="172"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="golden-shower-tree"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="33" name="" type="prop" x="419" y="477" width="64" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tree_coconut"/>
+    <property name="ph" type="float" value="190"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="coconut-tree"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="34" name="" type="prop" x="576" y="477" width="51" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tree_muong"/>
+    <property name="ph" type="float" value="172"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="golden-shower-tree"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="35" name="" type="prop" x="1098" y="477" width="64" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tree_coconut"/>
+    <property name="ph" type="float" value="190"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="coconut-tree"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="36" name="" type="prop" x="1280" y="477" width="51" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tree_muong"/>
+    <property name="ph" type="float" value="172"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="golden-shower-tree"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="37" name="" type="prop" x="442" y="426" width="77" height="22">
    <properties>
     <property name="kind" value="prop"/>
     <property name="draw" value="bench"/>
@@ -335,7 +407,45 @@
     <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="32" name="" type="walker" x="64" y="326" width="640" height="6">
+  <object id="38" name="" type="prop" x="1408" y="621" width="76" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="lotus_plant"/>
+    <property name="ph" type="float" value="74"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="lotus"/>
+   </properties>
+  </object>
+  <object id="39" name="" type="prop" x="1779" y="621" width="64" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="lotus_plant"/>
+    <property name="ph" type="float" value="62"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="lotus"/>
+    <property name="flip" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="40" name="" type="prop" x="285" y="874" width="58" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="water_lily"/>
+    <property name="ph" type="float" value="50"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="water-lily"/>
+   </properties>
+  </object>
+  <object id="41" name="" type="prop" x="678" y="749" width="51" height="19">
+   <properties>
+    <property name="kind" value="prop"/>
+    <property name="img" value="water_lily"/>
+    <property name="ph" type="float" value="44"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="water-lily"/>
+    <property name="flip" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="42" name="" type="walker" x="64" y="326" width="640" height="6">
    <properties>
     <property name="kind" value="walker"/>
     <property name="who" value="takashi"/>
@@ -345,7 +455,7 @@
     <property name="dir" value="right"/>
    </properties>
   </object>
-  <object id="33" name="" type="walker" x="1056" y="275" width="416" height="6">
+  <object id="43" name="" type="walker" x="1056" y="275" width="416" height="6">
    <properties>
     <property name="kind" value="walker"/>
     <property name="who" value="sophia"/>
@@ -355,50 +465,50 @@
     <property name="dir" value="left"/>
    </properties>
   </object>
-  <object id="34" name="" type="spot" x="0" y="512" width="768" height="64">
+  <object id="44" name="" type="spot" x="0" y="512" width="768" height="64">
    <properties>
     <property name="kind" value="spot"/>
     <property name="word" value="riverbank"/>
    </properties>
   </object>
-  <object id="35" name="" type="spot" x="1088" y="806" width="192" height="102">
+  <object id="45" name="" type="spot" x="1088" y="806" width="192" height="102">
    <properties>
     <property name="kind" value="spot"/>
     <property name="word" value="reflection"/>
    </properties>
   </object>
-  <object id="36" name="david" type="npc" x="870" y="602" width="64" height="64">
+  <object id="46" name="david" type="npc" x="870" y="602" width="64" height="64">
    <properties>
     <property name="kind" value="npc"/>
     <property name="facing" value="up"/>
     <property name="until" value="all"/>
    </properties>
   </object>
-  <object id="37" name="q_cruise" type="finale" x="896" y="851" width="320" height="83">
+  <object id="47" name="q_cruise" type="finale" x="896" y="851" width="320" height="83">
    <properties>
     <property name="kind" value="finale"/>
     <property name="act" value="release"/>
    </properties>
   </object>
-  <object id="38" name="tu" type="npc" x="960" y="486" width="64" height="64">
+  <object id="48" name="tu" type="npc" x="960" y="486" width="64" height="64">
    <properties>
     <property name="kind" value="npc"/>
     <property name="facing" value="down"/>
    </properties>
   </object>
-  <object id="39" name="tea_5" type="collectible" x="96" y="269" width="64" height="64">
+  <object id="49" name="tea_5" type="collectible" x="96" y="269" width="64" height="64">
    <properties>
     <property name="kind" value="collectible"/>
     <property name="type" value="tea"/>
    </properties>
   </object>
-  <object id="40" name="tea_6" type="collectible" x="1760" y="320" width="64" height="64">
+  <object id="50" name="tea_6" type="collectible" x="1760" y="320" width="64" height="64">
    <properties>
     <property name="kind" value="collectible"/>
     <property name="type" value="tea"/>
    </properties>
   </object>
-  <object id="41" name="bk_relative" type="collectible" x="672" y="320" width="64" height="64">
+  <object id="51" name="bk_relative" type="collectible" x="672" y="320" width="64" height="64">
    <properties>
     <property name="kind" value="collectible"/>
     <property name="type" value="booklet"/>

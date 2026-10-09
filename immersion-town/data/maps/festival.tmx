@@ -265,8 +265,6 @@
     <property name="word" value="iced-tea"/>
     <property name="action" value="refill"/>
     <property name="solid" type="bool" value="true"/>
-    <property name="label" value="TRÀ ĐÁ · ICED TEA"/>
-    <property name="labelAt" value="0.5,0.3"/>
     <property name="glow" value="0.5,0.4"/>
    </properties>
   </object>

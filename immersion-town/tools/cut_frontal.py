@@ -86,6 +86,24 @@ SHEETS = [
         'tourists_aodai': ((897, 786, 1390, 1017), {'keep': 0.15}),
     }),
     ('NPC nu', 'paper', {'tour_guide': ((256, 36, 454, 335), {'keep_largest': True, 'bg_tol': 0.1, 'pockets': False})}),
+    # Ô tô điện và xe buggy điện vẽ hoa văn (XE dien 2.png: mỗi xe 6 góc nhìn); ô tô đỗ ở trụ sạc nhìn từ phía sau
+    ('XE dien 2.png', 'alpha', {'ev_car': ((323, 196, 521, 483), {'keep_largest': True, 'dehalo_light': True})}),
+    # Cây dừa, cây cau, muồng hoàng yến; ô tô và buggy góc chéo làm hình thẻ từ
+    # (cây lộc vừng ở ô (55, 598, 481, 1008) của tranh này chưa dùng)
+    ('hoian_trees_vehicles_dongho.png', 'alpha', {
+        'tree_coconut': ((67, 39, 487, 522), {'keep_largest': True, 'dehalo_light': True}),
+        'tree_cau': ((573, 33, 873, 525), {'keep': 0.02, 'dehalo_light': True}),
+        'tree_muong': ((940, 43, 1393, 525), {'keep': 0.02, 'dehalo_light': True}),
+        'car_34': ((530, 643, 919, 1011), {'keep_largest': True, 'dehalo_light': True}),
+        'buggy_34': ((987, 639, 1393, 1011), {'keep_largest': True, 'dehalo_light': True}),
+    }),
+    # Thuyền hoa, hoa sen, hoa súng; ruộng lúa làm hình thẻ từ (ô nền lúa và cỏ dựng trong build_tileset.py)
+    ('chi tiet khac.png', 'alpha', {
+        'flower_boat': ((669, 50, 1244, 457), {'keep': 0.02, 'dehalo_light': True}),
+        'lotus_plant': ((492, 545, 828, 891), {'keep': 0.02, 'dehalo_light': True}),
+        'water_lily': ((891, 580, 1253, 884), {'keep': 0.02, 'dehalo_light': True, 'erase': ((0.68, 0.72, 1.0, 1.0),)}),
+        'rice_patch': ((36, 54, 598, 463), {'keep': 0.02, 'dehalo_light': True}),
+    }),
 ]
 
 # Khách đi lại: (tờ, kiểu nền, khung nhìn thẳng, các khung đi sang trái, các khung đi sang phải)
@@ -100,6 +118,7 @@ WALK = {
     'anna': ('NPC du khach', 'white', (102, 809, 215, 986), [(365, 810, 467, 986)], 'mirror'),
     'liwei': ('NPC du khach', 'white', (498, 809, 596, 991), 'mirror', [(498, 809, 596, 991), (733, 810, 836, 991)]),
     'cyclo': ('NPC xich lo', 'white', (749, 581, 1121, 965), 'mirror', [(749, 581, 1121, 965)]),
+    'buggy': ('XE dien 2.png', 'alpha', (40, 708, 234, 979), [(474, 707, 805, 977)], [(842, 706, 1154, 976)]),
 }
 WALK_H = 210  # chiều cao lưu (px); game vẽ cao khoảng 120 px
 WATER = (28, 79, 63)  # màu ô nước sông trong bộ ô 64×64 (id 16)
@@ -119,19 +138,9 @@ def fill_under_bridge(im, top=0.58):
 
 
 # Tờ hướng dẫn viên: màu da gần màu giấy, chỉ coi là nền các điểm thật sát màu giấy ở mép khung
-WALK_OPTS = {'guide': {'bg_tol': 0.1, 'pockets': False, 'ground': 0.93}}
+WALK_OPTS = {'guide': {'bg_tol': 0.1, 'pockets': False, 'ground': 0.93}, 'buggy': {'dehalo_light': True}}
 # Hướng dẫn viên NPC mặc áo dài hồng, để không trùng áo dài tím của Local Host nữ (nhân vật học sinh điều khiển)
 WALK_COLOR = {'guide': (200, 96, 132)}
-
-
-def blank_plate(im, box):
-    """Xoá chữ trên biển số (không gắn nhãn địa danh, năm lên xe): tô lòng biển bằng màu xanh của chính biển."""
-    a = np.asarray(im).copy()
-    x0, y0, x1, y1 = box
-    region = a[y0:y1, x0:x1, :3].astype(int)
-    dark = region.sum(axis=2) < 330            # điểm nền xanh của biển (chữ màu kem sáng hơn)
-    a[y0:y1, x0:x1, :3] = np.median(region[dark], axis=0).astype(np.uint8)
-    return Image.fromarray(a, 'RGBA')
 
 
 def walk_strip(sheet, kind, front, left, right, color=None, **opts):
@@ -162,12 +171,6 @@ if __name__ == '__main__':
                 im = fill_under_bridge(im)
             cutlib.save_webp(im, DECO / f'{name}.webp')
             made.append((name, im))
-    # Ô tô điện trắng đang cắm sạc ở trạm sạc (tranh poster "Phố cổ Hội An 2026"): nền là tranh cảnh nên dùng GrabCut
-    car = cutlib.grabcut(source('Thiết kế chưa có tên (8).png'), (455, 700, 800, 884), bg_below=852,
-                         fg_rects=[(520, 740, 760, 840), (700, 765, 785, 838), (466, 800, 502, 855), (584, 822, 624, 880), (734, 852, 774, 875)])
-    car = blank_plate(car, (248, 112, 294, 125))
-    cutlib.save_webp(car, DECO / 'ev_car.webp')
-    made.append(('ev_car', car))
     cutlib.contact_sheet(made, S / 'frontal_contact.jpg', cols=7)
     walk = []
     for who, (prefix, kind, front, left, right) in WALK.items():

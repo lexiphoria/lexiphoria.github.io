@@ -42,10 +42,10 @@
 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,45,47,46,45,
 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,46,45,47,46,
 49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,49,
-35,35,36,35,35,36,35,35,36,35,35,36,35,37,51,50,51,50,51,50,51,50,34,34,34,34,
-35,36,35,35,36,35,35,36,35,35,36,35,35,37,50,51,50,51,50,51,50,51,34,34,34,34,
-36,35,35,36,35,35,36,35,35,36,35,35,36,37,51,50,51,50,51,50,51,50,34,34,34,34,
-35,35,36,35,35,36,35,35,36,35,35,36,35,37,50,51,50,51,50,51,50,51,34,34,34,34
+35,35,35,35,35,35,35,35,35,35,35,35,35,37,51,50,51,50,51,50,51,50,34,34,34,34,
+35,35,35,35,35,35,35,35,35,35,35,35,35,37,50,51,50,51,50,51,50,51,34,34,34,34,
+36,36,36,36,36,36,36,36,36,36,36,36,36,37,51,50,51,50,51,50,51,50,34,34,34,34,
+35,35,35,35,35,35,35,35,35,35,35,35,35,37,50,51,50,51,50,51,50,51,34,34,34,34
 </data>
  </layer>
  <objectgroup id="2" name="Objects">
@@ -203,8 +203,6 @@
     <property name="ph" type="float" value="212"/>
     <property name="word" value="lotus-tea"/>
     <property name="solid" type="bool" value="true"/>
-    <property name="label" value="CAFE ĐỒNG LÚA · OCOP"/>
-    <property name="labelAt" value="0.3,0.6"/>
     <property name="glow" value="0.3,0.55"/>
    </properties>
   </object>
@@ -226,28 +224,44 @@
     <property name="on" value="[{&quot;img&quot;: &quot;solarOutlet&quot;, &quot;h&quot;: 50, &quot;dx&quot;: 0, &quot;word&quot;: &quot;solar-powered-outlet&quot;}]"/>
    </properties>
   </object>
-  <object id="21" name="" type="tree" x="576" y="38" width="38" height="22">
+  <object id="21" name="" type="prop" x="566" y="42" width="58" height="19">
    <properties>
-    <property name="kind" value="tree"/>
-    <property name="variant" value="bamboo"/>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tq_bamboo"/>
+    <property name="ph" type="float" value="130"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="bamboo"/>
+    <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="22" name="" type="tree" x="768" y="38" width="38" height="22">
+  <object id="22" name="" type="prop" x="758" y="42" width="58" height="19">
    <properties>
-    <property name="kind" value="tree"/>
-    <property name="variant" value="bamboo"/>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tq_bamboo"/>
+    <property name="ph" type="float" value="130"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="bamboo"/>
+    <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="23" name="" type="tree" x="960" y="38" width="38" height="22">
+  <object id="23" name="" type="prop" x="950" y="42" width="58" height="19">
    <properties>
-    <property name="kind" value="tree"/>
-    <property name="variant" value="bamboo"/>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tq_bamboo"/>
+    <property name="ph" type="float" value="130"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="bamboo"/>
+    <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="24" name="" type="tree" x="1197" y="38" width="38" height="22">
+  <object id="24" name="" type="prop" x="1187" y="42" width="58" height="19">
    <properties>
-    <property name="kind" value="tree"/>
-    <property name="variant" value="bamboo"/>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tq_bamboo"/>
+    <property name="ph" type="float" value="130"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="bamboo"/>
+    <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
   <object id="25" name="" type="prop" x="1401" y="166" width="180" height="22">
@@ -260,10 +274,14 @@
     <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="26" name="" type="tree" x="1357" y="685" width="38" height="22">
+  <object id="26" name="" type="prop" x="1360" y="688" width="32" height="19">
    <properties>
-    <property name="kind" value="tree"/>
-    <property name="variant" value="areca"/>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tree_cau"/>
+    <property name="ph" type="float" value="170"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="areca-palm"/>
+    <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
   <object id="27" name="" type="prop" x="1514" y="790" width="109" height="19">
@@ -276,16 +294,24 @@
     <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="28" name="" type="tree" x="294" y="602" width="38" height="22">
+  <object id="28" name="" type="prop" x="298" y="605" width="32" height="19">
    <properties>
-    <property name="kind" value="tree"/>
-    <property name="variant" value="areca"/>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tree_cau"/>
+    <property name="ph" type="float" value="170"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="areca-palm"/>
+    <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="29" name="" type="tree" x="666" y="602" width="38" height="22">
+  <object id="29" name="" type="prop" x="669" y="605" width="32" height="19">
    <properties>
-    <property name="kind" value="tree"/>
-    <property name="variant" value="areca"/>
+    <property name="kind" value="prop"/>
+    <property name="img" value="tree_cau"/>
+    <property name="ph" type="float" value="170"/>
+    <property name="quiet" type="bool" value="true"/>
+    <property name="word" value="areca-palm"/>
+    <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
   <object id="30" name="" type="walker" x="64" y="560" width="410" height="6">
@@ -448,24 +474,24 @@
     <property name="word" value="water-buffalo"/>
    </properties>
   </object>
-  <object id="47" name="" type="prop" x="399" y="413" width="73" height="19">
-   <properties>
-    <property name="kind" value="prop"/>
-    <property name="img" value="tq_cart"/>
-    <property name="ph" type="float" value="76"/>
-    <property name="quiet" type="bool" value="true"/>
-    <property name="word" value="electric-shuttle"/>
-    <property name="solid" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="48" name="" type="prop" x="584" y="301" width="175" height="35">
+  <object id="47" name="" type="prop" x="632" y="304" width="80" height="35">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="ev_car"/>
-    <property name="ph" type="float" value="88"/>
+    <property name="ph" type="float" value="116"/>
     <property name="quiet" type="bool" value="true"/>
     <property name="word" value="electric-car"/>
     <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="48" name="" type="walker" x="410" y="490" width="896" height="6">
+   <properties>
+    <property name="kind" value="walker"/>
+    <property name="who" value="buggy"/>
+    <property name="speed" type="float" value="70"/>
+    <property name="start" type="float" value="0.0"/>
+    <property name="rest" type="float" value="3.5"/>
+    <property name="dir" value="right"/>
    </properties>
   </object>
   <object id="49" name="" type="spot" x="0" y="0" width="512" height="320">

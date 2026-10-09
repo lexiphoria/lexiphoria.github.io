@@ -37,24 +37,9 @@ OUTFITS = {'white': None, 'indigo': (36, 54, 104), 'gold': (226, 176, 44), 'red'
 
 
 def clean(frame):
-    """Quầng giấy sáng quanh nhân vật (sau lưng, quanh lá cờ, giữa tay và thân) là các điểm sáng bán trong suốt nối
-    liền ra nền: xoá chúng, không đụng vào điểm đục nên nón lá, mặt, quần trắng giữ nguyên. Điểm bán trong suốt nằm
-    bên trong nhân vật (lỗ công cụ tách nền làm thủng trên má, mũi) thì lấp lại cho đục."""
-    a = np.asarray(frame).astype(float) / 255
-    rgb, al = a[..., :3], a[..., 3].copy()
-    hue, s, v = cutlib.hsv(rgb)
-    light = (v > 0.72) & (s < 0.45)
-    clear = al < 0.5
-    halo = ndimage.binary_propagation(clear, mask=clear | (light & (al < 0.97))) & ~clear
-    al = np.where(halo, 0, al)
-    holes = (al > 0.05) & (al < 0.97) & ~ndimage.binary_dilation(al < 0.05, iterations=2)
-    al = np.where(holes, 1.0, al)
-    lab, n = ndimage.label(al > 0.3)
-    if n > 1:
-        sizes = ndimage.sum(np.ones_like(lab), lab, index=np.arange(1, n + 1))
-        al = np.where(np.isin(lab, np.arange(1, n + 1)[sizes >= sizes.max() * 0.02]), al, 0)
-    out = Image.fromarray(np.dstack([rgb * 255, al * 255]).round().astype(np.uint8), 'RGBA')
-    return out.crop(out.getbbox())
+    """Bỏ quầng giấy sáng quanh nhân vật và lấp lỗ thủng trên má, mũi (cutlib.dehalo), cắt sát nhân vật."""
+    im = cutlib.dehalo(frame)
+    return im.crop(im.getbbox())
 
 
 def build():

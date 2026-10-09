@@ -19,7 +19,8 @@
       lang: 'en',      // ngôn ngữ chỉ dẫn: 'en' (mặc định) hoặc 'vi'
       zonesSeen: {},
       soundOn: true,
-      labels: true,
+      labels: false,   // nhãn từ nổi trên vật đã khám phá (nút Nhãn từ để bật)
+      labelsV: 2,
       words: {},       // id → { seen, pokes, unk, miss, streak, status: 'unknown' | 'known' | undefined }
       poked: {},       // khoá điểm chạm đã khám phá
       met: {},         // người địa phương / Đại sứ đã trò chuyện
@@ -44,6 +45,8 @@
       const saved = JSON.parse(localStorage.getItem(STORE_KEY) || 'null');
       if (saved && typeof saved === 'object') {
         const base = defaults();
+        // 09/10/2026: nhãn từ chuyển sang mặc định tắt; tắt một lần cho bản lưu cũ, sau đó giữ lựa chọn của người chơi
+        if (!saved.labelsV) Object.assign(saved, { labels: false, labelsV: 2 });
         return Object.assign(base, saved, { stats: Object.assign(base.stats, saved.stats || {}) });
       }
     } catch (e) { /* bộ nhớ trình duyệt bị chặn: vẫn chơi được, chỉ không lưu */ }
@@ -57,7 +60,7 @@
       try { localStorage.setItem(STORE_KEY, JSON.stringify(this.data)); } catch (e) { /* bỏ qua */ }
     },
     reset() {
-      const keep = { soundOn: this.data.soundOn, labels: this.data.labels, name: this.data.name, avatar: this.data.avatar, lang: this.data.lang };
+      const keep = { soundOn: this.data.soundOn, labels: this.data.labels, labelsV: this.data.labelsV, name: this.data.name, avatar: this.data.avatar, lang: this.data.lang };
       this.data = Object.assign(defaults(), keep);
       this.save();
     },

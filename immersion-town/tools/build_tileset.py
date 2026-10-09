@@ -8,6 +8,7 @@ Thứ tự ô (id):
   0 đá xám lát đường · 1 nền nhựa bãi xe · 2 nền nhựa có vạch đỗ · 3–7 đá xám biến thể
   8 gạch đất nung · 9–15 biến thể · 16 nước sông Hoài · 17 nước có lá sen · 18 kè đá bờ sông · 19–23 nước biến thể
   24 tường vàng di sản · 25–31 biến thể · 32 cỏ rêu · 33 cỏ có hoa · 34 ruộng lúa xanh · 35 ruộng lúa chín
+    (32–35 lấy hoạ tiết từ tranh 'Thảm cỏ' và 'Cánh đồng lúa' trong Game Asset/chi tiet khac.png, đổi sang bảng màu game)
   36 đường đất · 37 sàn gỗ bến thuyền · 38 sàn gỗ biến thể · 39 cát
   40–42 lòng đường nhựa xám ấm · 43 lòng đường có bóng bó vỉa ở mép trên
   44–46 vỉa hè đá phiến · 47 vỉa hè có bó vỉa ở mép dưới · 48 vỉa hè có bó vỉa ở mép trên · 49–50 đá lát quảng trường
@@ -17,7 +18,11 @@ Chạy lại:  python immersion-town/tools/build_tileset.py
 import random
 from pathlib import Path
 
+import numpy as np
 from PIL import Image, ImageDraw
+from scipy import ndimage
+
+import cutlib
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'assets' / 'tiles'
@@ -27,6 +32,9 @@ INK = (26, 26, 26)
 GROUT = (77, 73, 67)          # #4D4943
 STONES = [(129, 123, 114), (104, 99, 92), (154, 148, 138), (138, 131, 121), (118, 112, 104)]  # #817B72, #68635C, #9A948A …
 PAPER = (245, 230, 200)
+ART = Path(r'C:\Users\Esther\Documents\NK 26-27\SÁNG TẠO AI\Game Asset') / 'chi tiet khac.png'
+GRASS_BOX = (216, 728, 336, 840)   # giữa tấm 'Thảm cỏ'
+RICE_BOX = (236, 200, 416, 360)    # giữa tấm 'Cánh đồng lúa'
 
 
 def jitter(c, rnd, amt=8):
@@ -209,37 +217,45 @@ def wall_tile(seed):
     return im
 
 
+def ramp(img, stops, gold, flat=0):
+    """Tô lại hoạ tiết theo độ sáng: stops = [(độ sáng 0..1, (r, g, b)), ...]; nét vàng tô theo gold (tối, giữa, sáng).
+    flat: làm phẳng độ sáng mảng lớn (bán kính, px) để ô lặp không lộ sọc ở mép."""
+    a = np.asarray(img).astype(float) / 255
+    lum = a @ [0.3, 0.59, 0.11]
+    if flat:
+        lum = (lum - ndimage.gaussian_filter(lum, flat, mode='wrap') + lum.mean()).clip(0, 1)
+    xs = [x for x, _ in stops]
+    out = np.stack([np.interp(lum, xs, [c[i] for _, c in stops]) for i in range(3)], -1)
+    mx, mn = a.max(-1), a.min(-1)
+    yellow = (a[..., 0] > a[..., 2] + 0.12) & ((mx - mn) / np.maximum(mx, 1e-6) > 0.3)
+    g = np.stack([np.interp(lum, [0, 0.5, 1], [gold[0][i], gold[1][i], gold[2][i]]) for i in range(3)], -1)
+    out[yellow] = g[yellow]
+    return Image.fromarray(out.clip(0, 255).astype(np.uint8))
+
+
 def grass_tile(seed, flowers=False):
-    rnd = random.Random(seed)
-    im = Image.new('RGB', (T, T), (110, 139, 61))   # xanh rêu
-    d = ImageDraw.Draw(im)
-    for _ in range(7):
-        x, y = rnd.randint(4, 56), rnd.randint(6, 58)
-        d.line([x, y, x - 3, y - 6], fill=(58, 86, 34), width=2)
-        d.line([x, y, x + 3, y - 6], fill=(58, 86, 34), width=2)
-    speckle(d, rnd, (0, 0, T, T), (132, 160, 80), 25)
+    art = Image.open(ART).convert('RGB')
+    im = ramp(cutlib.seamless_tile(art.crop(GRASS_BOX), T, 0.3),
+              [(0, (34, 52, 24)), (0.18, (70, 98, 40)), (0.3, (106, 136, 58)), (0.45, (126, 156, 72)), (1, (190, 210, 120))],
+              ((80, 90, 30), (170, 176, 70), (220, 214, 120)))
     if flowers:
+        rnd = random.Random(seed)
+        d = ImageDraw.Draw(im)
         for _ in range(3):
-            x, y = rnd.randint(6, 54), rnd.randint(6, 54)
+            x, y = rnd.randint(6, 50), rnd.randint(6, 50)
             d.ellipse([x, y, x + 7, y + 7], fill=(233, 30, 99), outline=INK, width=1)
             d.ellipse([x + 2, y + 2, x + 5, y + 5], fill=(230, 180, 34))
     return im
 
 
 def paddy_tile(seed, ripe=False):
-    rnd = random.Random(seed)
-    base = (196, 160, 58) if ripe else (96, 128, 60)
-    stalk = (230, 196, 70) if ripe else (150, 190, 82)
-    im = Image.new('RGB', (T, T), base)
-    d = ImageDraw.Draw(im)
-    for r in range(4):
-        for c in range(4):
-            x = c * 16 + 8 + rnd.randint(-2, 2)
-            y = r * 16 + 12
-            for dx in (-4, 0, 4):
-                d.line([x, y, x + dx, y - 9], fill=INK, width=3)
-                d.line([x, y, x + dx, y - 9], fill=stalk, width=1)
-    return im
+    art = Image.open(ART).convert('RGB')
+    base = cutlib.seamless_tile(art.crop(RICE_BOX), T, 0.45)
+    if ripe:
+        return ramp(base, [(0, (60, 44, 16)), (0.2, (150, 116, 40)), (0.32, (190, 152, 56)), (0.5, (214, 178, 70)), (1, (240, 214, 120))],
+                    ((120, 84, 20), (224, 180, 60), (246, 220, 130)), flat=6)
+    return ramp(base, [(0, (30, 46, 20)), (0.2, (78, 112, 46)), (0.32, (110, 150, 64)), (0.5, (150, 186, 86)), (1, (200, 220, 130))],
+                ((90, 100, 34), (170, 190, 72), (226, 226, 130)), flat=6)
 
 
 def dirt_tile(seed):

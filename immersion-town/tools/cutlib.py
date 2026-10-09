@@ -61,7 +61,7 @@ def dist(a, ref):
 
 
 def cutout(sheet, box, kind='paper', pockets=True, pocket_min=30, pocket_tol=0.09, ground=None, ground_tol=0.2,
-           water=None, keep=0.06, keep_largest=False, defringe=True, erase=(), despill=False, bg_tol=None):
+           water=None, keep=0.06, keep_largest=False, defringe=True, erase=(), despill=False, bg_tol=None, dehalo_light=False):
     """Cắt box (x0, y0, x1, y1) từ sheet (ảnh PIL) → ảnh RGBA đã tách nền, cắt sát vật.
 
     ground: tỉ lệ chiều cao (0–1) – từ đó trở xuống, xoá các điểm có màu gần màu nền/đất (mảng đất vẽ sẵn).
@@ -157,8 +157,47 @@ def cutout(sheet, box, kind='paper', pockets=True, pocket_min=30, pocket_tol=0.0
         alpha = np.clip((soft - 0.2) / 0.6, 0, 1) * (ndimage.binary_dilation(fg))
     out = np.dstack([rgb, alpha])
     img = Image.fromarray((out * 255).round().astype(np.uint8), 'RGBA')
-    bbox = Image.fromarray(((alpha > 0.04) * 255).astype(np.uint8)).getbbox()
+    if dehalo_light:
+        img = dehalo(img)
+    bbox = Image.fromarray(((np.asarray(img)[..., 3] > 10) * 255).astype(np.uint8)).getbbox()
     return img.crop(bbox) if bbox else img
+
+
+def dehalo(img):
+    """Ảnh đã tách nền bằng công cụ khác (Canva, Gemini) hay còn quầng giấy sáng bán trong suốt quanh vật, và đôi khi
+    thủng lỗ bán trong suốt bên trong (má, mũi, kính xe). Xoá điểm sáng bán trong suốt nối liền ra nền; không đụng điểm
+    đục; lỗ bán trong suốt nằm bên trong vật thì lấp lại cho đục."""
+    a = np.asarray(img.convert('RGBA')).astype(float) / 255
+    rgb, al = a[..., :3], a[..., 3].copy()
+    _, s, v = hsv(rgb)
+    light = (v > 0.72) & (s < 0.45)
+    clear = al < 0.5
+    halo = ndimage.binary_propagation(clear, mask=clear | (light & (al < 0.97))) & ~clear
+    al = np.where(halo, 0, al)
+    holes = (al > 0.05) & (al < 0.97) & ~ndimage.binary_dilation(al < 0.05, iterations=2)
+    al = np.where(holes, 1.0, al)
+    lab, n = ndimage.label(al > 0.3)
+    if n > 1:
+        sizes = ndimage.sum(np.ones_like(lab), lab, index=np.arange(1, n + 1))
+        al = np.where(np.isin(lab, np.arange(1, n + 1)[sizes >= sizes.max() * 0.02]), al, 0)
+    return Image.fromarray(np.dstack([rgb * 255, al * 255]).round().astype(np.uint8), 'RGBA')
+
+
+def seamless_tile(img, size=64, blend=0.25):
+    """Ô nền lặp liền mạch từ một mảng hoạ tiết vuông: trộn dần mép phải vào mép trái, mép dưới vào mép trên
+    (đoạn trộn chiếm blend kích thước), rồi thu nhỏ về size×size."""
+    a = np.asarray(img.convert('RGB')).astype(float)
+    n = min(a.shape[0], a.shape[1])
+    m = int(n * blend)
+    core = n - m
+    a = a[:n, :n]
+    w = np.linspace(0, 1, m)[None, :, None]
+    a[:, :m] = a[:, core:core + m] * (1 - w) + a[:, :m] * w
+    a = a[:, :core]
+    w = np.linspace(0, 1, m)[:, None, None]
+    a[:m] = a[core:core + m] * (1 - w) + a[:m] * w
+    a = a[:core]
+    return Image.fromarray(a.round().astype(np.uint8), 'RGB').resize((size, size), Image.LANCZOS)
 
 
 def save_webp(img, path):
@@ -178,35 +217,6 @@ def contact_sheet(images, path, cols=6, cw=260, ch=260, bg=(36, 70, 60)):
         sheet.paste(t, (x, y), t)
         d.text((x, y + ch - 22), name, fill=(255, 255, 255))
     sheet.save(path, quality=88)
-
-
-def grabcut(sheet, rect, fg_rects=(), bg_below=None):
-    """Tách vật khỏi tranh cảnh (nền không phẳng) bằng GrabCut của OpenCV.
-    rect: khung chứa vật; fg_rects: các khung chắc chắn là vật (bánh xe, đuôi xe) để GrabCut không cắt hụt;
-    bg_below: từ hàng y này trở xuống, điểm có màu gạch lát (bão hoà vừa, không quá tối) coi là nền."""
-    import cv2
-    rgb = np.asarray(sheet.convert('RGB'))
-    bgr = cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR)
-    mask = np.full(rgb.shape[:2], cv2.GC_BGD, np.uint8)
-    x0, y0, x1, y1 = rect
-    mask[y0:y1, x0:x1] = cv2.GC_PR_FGD
-    if bg_below is not None:
-        hsv_ = cv2.cvtColor(bgr, cv2.COLOR_BGR2HSV)
-        pave = (np.arange(rgb.shape[0])[:, None] > bg_below) & (hsv_[..., 1] > 30) & (hsv_[..., 2] > 70) & (hsv_[..., 2] < 200)
-        mask[pave & (mask == cv2.GC_PR_FGD)] = cv2.GC_BGD
-    for fx0, fy0, fx1, fy1 in fg_rects:
-        mask[fy0:fy1, fx0:fx1] = cv2.GC_FGD
-    bgd, fgd = np.zeros((1, 65), np.float64), np.zeros((1, 65), np.float64)
-    cv2.grabCut(bgr, mask, None, bgd, fgd, 8, cv2.GC_INIT_WITH_MASK)
-    fg = (mask == cv2.GC_FGD) | (mask == cv2.GC_PR_FGD)
-    lab, n = ndimage.label(fg)
-    if n > 1:
-        sizes = ndimage.sum(np.ones_like(lab), lab, index=np.arange(1, n + 1))
-        fg = lab == (np.argmax(sizes) + 1)
-    fg = ndimage.binary_opening(fg, np.ones((3, 3)))
-    alpha = np.clip(ndimage.gaussian_filter(fg.astype(float), 0.7), 0, 1)
-    img = Image.fromarray(np.dstack([rgb, (alpha * 255).astype(np.uint8)]), 'RGBA')
-    return img.crop(img.getbbox())
 
 
 def recolor(frame, target):

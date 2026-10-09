@@ -46,15 +46,18 @@ OPTS.update({
     'tq_ebike': {'ground': 0.8, 'keep': 0.5}, 'tq_cart': {'ground': 0.8, 'keep': 0.5},
     'tq_baichoi': {'ground': 0.84}, 'tq_lion': {'ground': 0.88}, 'tq_drum': {'ground': 0.88},
     'tq_festival_people': {'ground': 0.9}, 'tq_tourists': {'ground': 0.9}, 'tq_artisan': {'ground': 0.9},
-    'tq_lanterns': {}, 'tq_bamboo': {'ground': 0.86}, 'tq_flame_tree': {'ground': 0.86},
+    'tq_lanterns': {}, 'tq_bamboo': {'ground': 0.74, 'ground_tol': 0.35, 'pocket_min': 6, 'pocket_tol': 0.14,
+                                    'erase': ((0.68, 0.68, 1.0, 0.95),)}, 'tq_flame_tree': {'ground': 0.86},
 })
+
+USED = {'tq_bamboo'}  # tre tranh thay tre vẽ bằng mã (09/10/2026)
 
 if __name__ == '__main__':
     sheet = Image.open(GA / 'hoian_traque_asset_sheet_2026.png').convert('RGB')
     made = []
     for name, (x0, y0, x1, y1) in BOXES.items():
         im = cutlib.cutout(sheet, (round(x0 * K), round(y0 * K), round(x1 * K), round(y1 * K)), 'paper', **OPTS[name])
-        if (OUT / f'{name}.webp').exists():  # chỉ ghi đè ảnh game đang dùng; ảnh khác chỉ xem trước
+        if (OUT / f'{name}.webp').exists() or name in USED:  # ảnh game dùng; ảnh khác chỉ xem trước
             cutlib.save_webp(im, OUT / f'{name}.webp')
         im.save(S / 'deco' / f'{name}.png')
         made.append((name, im))

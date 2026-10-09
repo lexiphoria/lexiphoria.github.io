@@ -18,7 +18,7 @@
   const CHAR_H = 124;    // chiều cao vẽ nhân vật chính
 
   const IMAGES = {
-    tiles: 'assets/tiles/hoian_dongho_grid_tileset_64x64.png?v=20261008b',
+    tiles: 'assets/tiles/hoian_dongho_grid_tileset_64x64.png?v=20261009',
     fTailor: 'assets/facades/tailor.webp',
     fWorkshop: 'assets/facades/workshop.webp',
     fHall: 'assets/facades/hoi_an_quan.webp',
@@ -50,6 +50,7 @@
     wAnna: 'assets/chars/walk_anna.webp',
     wLiwei: 'assets/chars/walk_liwei.webp',
     wCyclo: 'assets/chars/walk_cyclo.webp',
+    wBuggy: 'assets/chars/walk_buggy.webp',
   };
 
   // Khách tham quan đi lại (đối tượng 'walker' trong bản đồ): dải khung tools/cut_frontal.py tạo ra,
@@ -62,6 +63,7 @@
     anna: { img: 'wAnna', nl: 1, nr: 1, h: 110 },
     liwei: { img: 'wLiwei', nl: 2, nr: 2, h: 114 },
     cyclo: { img: 'wCyclo', nl: 1, nr: 1, h: 120, wheel: true },
+    buggy: { img: 'wBuggy', nl: 1, nr: 1, h: 118, wheel: true },
   };
 
   // Ảnh và chiều cao vẽ của từng NPC (theo id nhân vật trong data/npc-dialogues-v4.json)
@@ -1312,7 +1314,7 @@
         if (w.x <= w.x0 || w.x >= w.x1) {
           w.x = Math.min(w.x1, Math.max(w.x0, w.x));
           w.dir = -w.dir;
-          w.pause = w.art.wheel ? 0.6 : w.rest; // đầu đường: đứng ngắm phố (nhìn thẳng) rồi quay lại
+          w.pause = w.rest; // đầu đường: khách đứng ngắm phố (nhìn thẳng), xe quay đầu chờ khách rồi chạy lại
         }
       });
     }

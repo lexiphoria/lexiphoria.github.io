@@ -1,5 +1,6 @@
 :root {
-  --bg: #f5f2ea;
+  --bg: #F5E6C8;        /* Giấy điệp (kem ngà vỏ sò) */
+  --bg-fiber: #E8D5B0;  /* Xơ giấy điệp */
   --panel: #fffefb;
   --ink: #1f2d3d;
   --muted: #5d6a77;
@@ -19,10 +20,13 @@ body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--ink);
-  background:
-    radial-gradient(circle at 15% 10%, #fcdab6 0%, transparent 32%),
-    radial-gradient(circle at 92% 18%, #d5f5f1 0%, transparent 38%),
-    var(--bg);
+  /* Vân xơ giấy điệp (cùng lớp nhiễu với Immersion Town) trên nền kem ngà */
+  background-color: var(--bg);
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paperNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0  0 0.9 0 0 0  0 0 0.7 0 0  0 0 0 0.28 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paperNoise)'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse at 50% 35%, transparent 45%, var(--bg-fiber) 100%);
+  background-size: 180px 180px, 100% 100%;
+  background-blend-mode: multiply, normal;
   min-height: 100vh;
   line-height: 1.6;
 }
@@ -120,48 +124,6 @@ body {
   text-shadow: 
     2px 2px 0 #818cf8,
     3px 3px 0 #312e81;
-}
-
-/* Pixel Speech Bubble */
-.pixel-bubble {
-  position: relative;
-  background: #ffffff;
-  border: 2px solid #1e1b4b;
-  border-radius: 12px;
-  padding: 8px 14px;
-  box-shadow: 3px 3px 0 rgba(30, 27, 75, 0.15);
-  max-width: 490px;
-}
-
-.pixel-bubble p {
-  margin: 0;
-  font-size: clamp(0.76rem, 1.1vw, 0.9rem);
-  color: #334155;
-  line-height: 1.4;
-  font-weight: 600;
-}
-
-.bubble-tail {
-  position: absolute;
-  top: -8px;
-  left: 28px;
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 8px solid #1e1b4b;
-}
-
-.bubble-tail::after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: -5px;
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 7px solid #ffffff;
 }
 
 /* Right Scene */
@@ -524,18 +486,9 @@ body {
   border: 1px solid rgba(245, 158, 11, 0.28);
 }
 
-.tip {
-  margin-top: 26px;
-  background: #ffffffcc;
-  border: 1px dashed #d7c7ac;
-  border-radius: 14px;
-  padding: 14px 16px;
-  color: #604112;
-}
-
 footer {
   margin-top: 30px;
-  color: #6b7785;
+  color: var(--muted);
   font-size: 0.95rem;
   text-align: center;
 }

@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/vocabulary_game.css?v=1.0.5">
+  <link rel="stylesheet" href="css/vocabulary_game.css?v=1.0.6">
   <link rel="stylesheet" href="css/boss_battle.css?v=1.0.0">
 </head>
 <body>
@@ -92,7 +92,7 @@
         </div>
       </div>
 
-      <!-- Extra Materials: Phrasal Verbs, Collocations, Demographic Terms -->
+      <!-- Extra Materials: Phrasal Verbs, Collocations, Demographic Terms, Exam Idioms -->
       <h2 style="font-size: 1.3rem; margin-bottom: 20px; font-weight: 700; color: #fff;">Extra Materials</h2>
       <div class="topics-grid">
         <!-- Extra 1: PHRASAL VERBS (Active) -->
@@ -126,6 +126,17 @@
             <div id="demographicTerms-progress-fill" class="topic-progress-fill"></div>
           </div>
           <span id="demographicTerms-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
+        </div>
+
+        <!-- Extra 4: EXAM IDIOMS (dữ liệu js/exam_idioms_data.js, nối vào qua js/exam_idioms_vocab.js) -->
+        <div class="topic-card" data-topic="examIdioms" onclick="selectTopic('examIdioms')">
+          <span class="topic-icon">🎯</span>
+          <h3 class="topic-title">EXAM IDIOMS</h3>
+          <p class="topic-meta">230 Idioms, Phrasal Verbs, Collocations &amp; Fixed Phrases trích từ đề thi thử TN THPT 2026.</p>
+          <div class="topic-progress-container">
+            <div id="examIdioms-progress-fill" class="topic-progress-fill"></div>
+          </div>
+          <span id="examIdioms-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
         </div>
       </div>
 
@@ -503,6 +514,8 @@
   <!-- Script data file -->
   <script src="js/vocabulary_data.js?v=1.0.9"></script>
   <script src="js/vocabulary_extras.js?v=1.0.4"></script>
+  <script src="js/exam_idioms_data.js?v=6.0.0"></script>
+  <script src="js/exam_idioms_vocab.js?v=1.0.0"></script>
 
   <!-- Main Game logic script -->
   <script>
@@ -666,6 +679,7 @@
         { id: 'demographicTerms', progressFillId: 'demographicTerms-progress-fill', progressTextId: 'demographicTerms-progress-text' },
         { id: 'phrasalVerbs', progressFillId: 'phrasalVerbs-progress-fill', progressTextId: 'phrasalVerbs-progress-text' },
         { id: 'collocations', progressFillId: 'collocations-progress-fill', progressTextId: 'collocations-progress-text' },
+        { id: 'examIdioms', progressFillId: 'examIdioms-progress-fill', progressTextId: 'examIdioms-progress-text' },
         { id: 'ourEnvironment', progressFillId: 'environment-progress-fill', progressTextId: 'environment-progress-text' },
         { id: 'ourFuture', progressFillId: 'future-progress-fill', progressTextId: 'future-progress-text' }
       ];
@@ -770,6 +784,7 @@
         demographicTerms: 'DEMOGRAPHIC TERMS',
         phrasalVerbs: 'PHRASAL VERBS',
         collocations: 'COLLOCATIONS',
+        examIdioms: 'EXAM IDIOMS',
         ourEnvironment: 'OUR ENVIRONMENT',
         ourFuture: 'OUR FUTURE'
       };
@@ -825,6 +840,7 @@
         ourSociety: '#3b82f6',
         phrasalVerbs: '#f59e0b',
         collocations: '#10b981',
+        examIdioms: '#f43f5e',
         ourEnvironment: '#14b8a6',
         ourFuture: '#ec4899'
       };
@@ -860,6 +876,11 @@
       'adj': { label: 'adjective', icon: '🎨' },
       'adv': { label: 'adverb', icon: '⏱️' },
       'phrase': { label: 'phrase', icon: '💬' },
+      'phrasal_verb': { label: 'phrasal verb', icon: '🔗' },
+      'idiom': { label: 'idiom', icon: '💡' },
+      'collocation': { label: 'collocation', icon: '🧩' },
+      'fixed_phrase': { label: 'fixed phrase', icon: '📌' },
+      'prepositional_phrase': { label: 'prepositional phrase', icon: '🧭' },
       'np': { label: 'noun phrase', icon: '🧩' },
       'n.phr': { label: 'noun phrase', icon: '🧩' }
     };
@@ -1519,7 +1540,11 @@
       if (qWord.meaning) {
         explanationHtml += `<strong>Meaning:</strong> ${qWord.meaning}<br>`;
       }
-      explanationHtml += `<strong>Translation:</strong> ${qWord.exampleTranslation}`;
+      if (qWord.explanation) {
+        explanationHtml += `<strong>Explanation:</strong> ${qWord.explanation}`;
+      } else {
+        explanationHtml += `<strong>Translation:</strong> ${qWord.exampleTranslation}`;
+      }
       
       expContent.innerHTML = explanationHtml;
       document.getElementById('sentence-explanation-box').style.display = 'block';
@@ -1636,6 +1661,6 @@
   </script>
 
   <!-- Boss Battle mode (Đánh Boss Từ Khó) -->
-  <script src="js/boss_battle.js?v=1.0.2"></script>
+  <script src="js/boss_battle.js?v=1.0.3"></script>
 </body>
 </html>

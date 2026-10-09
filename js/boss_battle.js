@@ -23,6 +23,7 @@ const BOSS_PROFILES = {
   demographicTerms: { name: 'Tangle Beast', img: 'boss_blue' },
   phrasalVerbs: { name: 'Mix-up Devil', img: 'boss_red' },
   collocations: { name: 'Repeat-o-saurus', img: 'boss_dino' },
+  examIdioms: { name: 'Idiom Phantom', img: 'boss_purple' },
   ourEnvironment: { name: 'Smog Titan', img: 'boss_green' },
   ourFuture: { name: 'Cyber Overlord', img: 'boss_blue' }
 };

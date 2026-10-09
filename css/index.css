@@ -1,6 +1,8 @@
 :root {
   --bg: #F5E6C8;        /* Giấy điệp (kem ngà vỏ sò) */
   --bg-fiber: #E8D5B0;  /* Xơ giấy điệp */
+  --paper-grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paperNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0  0 0.9 0 0 0  0 0 0.7 0 0  0 0 0 0.28 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paperNoise)'/%3E%3C/svg%3E");
+  --ink-black: #1A1A1A; /* Mực tàu */
   --panel: #fffefb;
   --ink: #1f2d3d;
   --muted: #5d6a77;
@@ -23,7 +25,7 @@ body {
   /* Vân xơ giấy điệp (cùng lớp nhiễu với Immersion Town) trên nền kem ngà */
   background-color: var(--bg);
   background-image:
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paperNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0  0 0.9 0 0 0  0 0 0.7 0 0  0 0 0 0.28 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paperNoise)'/%3E%3C/svg%3E"),
+    var(--paper-grain),
     radial-gradient(ellipse at 50% 35%, transparent 45%, var(--bg-fiber) 100%);
   background-size: 180px 180px, 100% 100%;
   background-blend-mode: multiply, normal;
@@ -386,6 +388,10 @@ body {
 
 /* Compact rows in the side panel: sticker on the left, title / tags / button on the right */
 .side-panel .card {
+  --perf: 5px;
+}
+
+.side-panel .stamp-inner {
   display: grid;
   grid-template-columns: 48px 1fr;
   grid-template-areas:
@@ -395,7 +401,7 @@ body {
   column-gap: 12px;
   row-gap: 6px;
   align-items: start;
-  padding: 12px 14px;
+  padding: 10px 12px 12px;
 }
 
 .side-panel .card-top {
@@ -433,9 +439,8 @@ body {
   grid-area: btn;
   justify-self: start;
   margin-top: 2px;
-  padding: 6px 14px;
-  font-size: 0.82rem;
-  border-radius: 9px;
+  padding: 5px 14px;
+  font-size: 0.8rem;
 }
 
 /* Narrower screens: panel moves below the roadmap and lays its cards out in a row */
@@ -459,20 +464,113 @@ body {
   }
 }
 
+/* ---------- Thẻ dạng tem thư: tranh Đông Hồ cách tân đương đại ----------
+   Giấy tem có răng cưa (lỗ đục) bao quanh một ô tranh màu phẳng, viền mực tàu,
+   vân giấy điệp và một vầng tròn lớn làm hoạ tiết. */
 .card {
-  background: var(--panel);
-  border-radius: var(--radius);
-  padding: 22px;
-  box-shadow: 0 10px 22px rgba(30, 44, 58, 0.08);
-  border: 1px solid #ece7df;
+  --perf: 6px;                       /* bán kính lỗ răng cưa */
+  --stamp-paper: #FFFBF0;
+  --stamp-bg: #C83228;
+  --stamp-ink: #FFF6E3;              /* màu chữ trên ô tranh */
+  --stamp-motif: rgba(255, 246, 227, 0.13);
   display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: calc(2 * var(--perf));
+  background:
+    radial-gradient(var(--perf), #0000 98%, var(--stamp-paper)) round
+      calc(-1.5 * var(--perf)) calc(-1.5 * var(--perf)) / calc(3 * var(--perf)) calc(3 * var(--perf)),
+    linear-gradient(var(--stamp-paper) 0 0) no-repeat
+      50% / calc(100% - 3 * var(--perf)) calc(100% - 3 * var(--perf));
+  filter: drop-shadow(0 6px 8px rgba(96, 65, 18, 0.2));
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 26px rgba(30, 44, 58, 0.15);
+  transform: translateY(-4px) rotate(-0.8deg);
+  filter: drop-shadow(0 12px 14px rgba(96, 65, 18, 0.26));
+}
+
+.stamp-inner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 18px 18px;
+  background: var(--stamp-bg);
+  color: var(--stamp-ink);
+  border: 2px solid var(--ink-black);
+  border-radius: 3px;
+}
+
+/* Vầng tròn hoạ tiết (mặt trời / trăng trong tranh Đông Hồ) */
+.stamp-inner::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -30%;
+  right: -22%;
+  width: 78%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--stamp-motif);
+}
+
+/* Vân giấy điệp in chồng lên màu */
+.stamp-inner::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: var(--paper-grain);
+  background-size: 180px 180px;
+  mix-blend-mode: multiply;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+/* Bảng màu tranh Đông Hồ: đỏ son, xanh chàm, xanh lam, đen than, vàng hoè, hồng sen, nâu đất */
+.stamp--vermilion  { --stamp-bg: #C83228; }
+.stamp--indigo     { --stamp-bg: #1B4D3E; }
+.stamp--blue       { --stamp-bg: #2E4A7D; }
+.stamp--ink        { --stamp-bg: #1F1D24; --stamp-ink: #F2D27C; }
+.stamp--terracotta { --stamp-bg: #A84B26; }
+.stamp--yellow     { --stamp-bg: #E6B422; --stamp-ink: #1A1A1A; --stamp-motif: rgba(255, 246, 227, 0.4); }
+.stamp--pink       { --stamp-bg: #E79AA4; --stamp-ink: #1A1A1A; --stamp-motif: rgba(255, 246, 227, 0.4); }
+
+.stamp .tag {
+  background: transparent;
+  color: inherit;
+  border: 1.5px solid currentColor;
+}
+
+.stamp h3 {
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: inherit;
+}
+
+.stamp .btn {
+  background: #FFF6E3;
+  color: var(--ink-black);
+  border: 2px solid var(--ink-black);
+  border-radius: 999px;
+  box-shadow: 0 3px 0 var(--ink-black);
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+  font-weight: 800;
+}
+
+.stamp .btn:hover {
+  background: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 0 var(--ink-black);
+}
+
+.stamp .btn:focus-visible {
+  outline: 3px solid var(--stamp-ink);
+  outline-offset: 3px;
 }
 
 .tag {
@@ -506,9 +604,8 @@ body {
   .core-grid .card-character {
     align-self: center;
     width: 128px;
-    height: 128px;
-    border-radius: 24px;
-    padding: 8px;
+    height: 136px;
+    padding: 10px 8px 6px;
   }
   .core-grid .card h3 {
     margin-top: auto;
@@ -577,8 +674,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 16px;
-  padding: 4px;
+  padding: 6px 4px 3px;
+  background: #FFF6E3;
+  border: 2px solid var(--ink-black);
+  border-radius: 999px 999px 12px 12px;
+  box-shadow: 3px 3px 0 var(--ink-black);
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -590,28 +690,7 @@ body {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.22));
-}
-
-.char-bg-light {
-  background: rgba(15, 118, 110, 0.08);
-  border: 1px solid rgba(15, 118, 110, 0.15);
-}
-
-.char-bg-blue {
-  background: rgba(2, 132, 199, 0.08);
-  border: 1px solid rgba(2, 132, 199, 0.15);
-}
-
-.char-bg-dark {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.04);
-}
-
-.char-bg-amber {
-  background: rgba(245, 158, 11, 0.14);
-  border: 1px solid rgba(245, 158, 11, 0.28);
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.18));
 }
 
 footer {
@@ -626,8 +705,8 @@ footer {
     border-radius: var(--radius);
   }
 
-  .card {
-    padding: 18px;
+  .stamp-inner {
+    padding: 14px;
   }
 }
 

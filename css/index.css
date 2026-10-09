@@ -411,7 +411,8 @@ body {
 .side-panel .card-character {
   grid-area: char;
   width: 48px;
-  height: 48px;
+  height: 58px;
+  padding: 3px;
 }
 
 .side-panel .card-tags {
@@ -603,14 +604,14 @@ body {
   }
   .core-grid .card-character {
     align-self: center;
-    width: 128px;
-    height: 136px;
-    padding: 10px 8px 6px;
+    width: 120px;
+    height: 140px;
+    padding: 8px;
   }
   .core-grid .card h3 {
     margin-top: auto;
   }
-  .core-grid .btn {
+  .core-grid h3 + .btn {
     margin-top: 0;
   }
 }
@@ -668,16 +669,16 @@ body {
 }
 
 .card-character {
-  width: 68px;
-  height: 68px;
+  width: 64px;
+  height: 76px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6px 4px 3px;
+  padding: 4px;
   background: #FFF6E3;
   border: 2px solid var(--ink-black);
-  border-radius: 999px 999px 12px 12px;
+  border-radius: 2px;
   box-shadow: 3px 3px 0 var(--ink-black);
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }

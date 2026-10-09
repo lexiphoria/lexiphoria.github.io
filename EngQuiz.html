@@ -22,7 +22,7 @@
         <div class="logo-word">ReadMind</div>
         <div class="logo-sub">University Entrance · V-ACT English</div>
       </div>
-      <p class="home-desc">Master Reading Cloze texts for the University Entrance Exam and V-ACT. 40 authentic passages
+      <p class="home-desc">Master Reading Cloze texts for the University Entrance Exam and V-ACT. <span id="home-desc-count">95</span> authentic passages
         covering every grammar and vocabulary skill you need.</p>
       <div class="badge-row">
         <span class="badge">PART OF SPEECH</span>
@@ -63,7 +63,7 @@
           <a class="home-link" href="index.html">🏠 Home</a>
         </div>
         <div class="select-title">Choose a Passage</div>
-        <div class="select-sub">95 reading cloze texts · 6 questions each</div>
+        <div class="select-sub"><span id="select-sub-count">95</span> reading cloze texts · 6 questions each</div>
         <div class="texts-grid" id="texts-grid"></div>
       </div>
     </div>
@@ -71,8 +71,10 @@
     <!-- GAME -->
     <div class="screen" id="game">
       <div class="game-header">
-        <button class="back-btn" onclick="confirmBack()">←</button>
-        <a class="home-link" href="index.html">🏠</a>
+        <div class="header-nav-group">
+          <button class="back-btn" onclick="confirmBack()" title="Back to passages list" aria-label="Back to passages list">←</button>
+          <a class="home-link" href="index.html" title="Back to Home" aria-label="Back to Home">🏠 Home</a>
+        </div>
         <div class="header-meta">
           <div class="text-label" id="hdr-label">TEXT 01</div>
           <div class="text-title" id="hdr-title">Loading...</div>
@@ -80,7 +82,7 @@
         <div class="header-right">
           <div class="score-chip" id="score-chip">0 / 6</div>
           <div class="progress-ring-wrap">
-            <svg class="progress-ring" width="44" height="44">
+            <svg class="progress-ring" width="44" height="44" role="progressbar" aria-label="Passage completion progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
               <circle class="ring-bg" cx="22" cy="22" r="18" />
               <circle class="ring-fg" id="ring-fg" cx="22" cy="22" r="18" stroke-dasharray="113"
                 stroke-dashoffset="113" />
@@ -89,7 +91,7 @@
           </div>
         </div>
       </div>
-      <div class="text-progress-bar">
+      <div class="text-progress-bar" role="progressbar" aria-label="Passage progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
         <div class="text-progress-fill" id="progress-fill" style="width:0%"></div>
       </div>
       <div class="game-body">

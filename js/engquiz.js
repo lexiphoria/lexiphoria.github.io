@@ -5546,15 +5546,25 @@ function showScreen(id) {
 
 function updateHomeStats() {
   const completedCount = Object.keys(scores).length;
-  document.getElementById('stat-texts').textContent = texts.length;
-  document.getElementById('stat-qs').textContent = texts.length * 6;
-  document.getElementById('stat-done').textContent = completedCount;
+  const statTexts = document.getElementById('stat-texts');
+  if (statTexts) statTexts.textContent = texts.length;
+  const homeDescCount = document.getElementById('home-desc-count');
+  if (homeDescCount) homeDescCount.textContent = texts.length;
+  const selectSubCount = document.getElementById('select-sub-count');
+  if (selectSubCount) selectSubCount.textContent = texts.length;
+  const statQs = document.getElementById('stat-qs');
+  if (statQs) statQs.textContent = texts.length * 6;
+  const statDone = document.getElementById('stat-done');
+  if (statDone) statDone.textContent = completedCount;
   const allScores = Object.values(scores);
-  if (allScores.length > 0) {
-    const best = Math.max(...allScores);
-    document.getElementById('stat-score').textContent = `${best}/6`;
-  } else {
-    document.getElementById('stat-score').textContent = '—';
+  const statScore = document.getElementById('stat-score');
+  if (statScore) {
+    if (allScores.length > 0) {
+      const best = Math.max(...allScores);
+      statScore.textContent = `${best}/6`;
+    } else {
+      statScore.textContent = '—';
+    }
   }
 }
 
@@ -5719,10 +5729,26 @@ function updateProgress() {
   const circumference = 113;
   const offset = circumference - (pct / 100) * circumference;
 
-  document.getElementById('score-chip').textContent = `${correct} / ${answered}`;
-  document.getElementById('ring-fg').style.strokeDashoffset = offset;
-  document.getElementById('ring-label').textContent = pct + '%';
-  document.getElementById('progress-fill').style.width = pct + '%';
+  const scoreChip = document.getElementById('score-chip');
+  if (scoreChip) scoreChip.textContent = `${correct} / ${answered}`;
+  const ringFg = document.getElementById('ring-fg');
+  if (ringFg) ringFg.style.strokeDashoffset = offset;
+  const ringLabel = document.getElementById('ring-label');
+  if (ringLabel) ringLabel.textContent = pct + '%';
+  const progressFill = document.getElementById('progress-fill');
+  if (progressFill) progressFill.style.width = pct + '%';
+
+  // Accessibility (a11y) updates
+  const progressRing = document.querySelector('.progress-ring');
+  if (progressRing) {
+    progressRing.setAttribute('aria-valuenow', pct);
+    progressRing.setAttribute('aria-valuetext', `${answered} of 6 questions answered (${pct}%)`);
+  }
+  const textProgressBar = document.querySelector('.text-progress-bar');
+  if (textProgressBar) {
+    textProgressBar.setAttribute('aria-valuenow', pct);
+    textProgressBar.setAttribute('aria-valuetext', `${answered} of 6 questions answered (${pct}%)`);
+  }
 }
 
 function confirmBack() {

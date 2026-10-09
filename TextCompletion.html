@@ -35,7 +35,7 @@
         <div class="lbl">Correct</div>
       </div>
       <div class="progress-wrap">
-        <div class="progress-track">
+        <div class="progress-track" role="progressbar" aria-label="Exam question completion progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
           <div class="progress-fill" id="progress-fill"></div>
         </div>
         <div class="progress-lbl" id="progress-lbl">0 / 5 questions</div>
@@ -59,7 +59,7 @@
       
       <!-- Cột phải: Questions -->
       <div class="right-col">
-        <div class="section-title">Questions 1–5</div>
+        <div class="section-title" id="q-section-title">Questions 1–5</div>
         <p class="instruction">Mark the letter A, B, C, or D to indicate the option that best fits each numbered blank.</p>
 
         <div class="questions-wrap" id="qlist"></div>
@@ -83,19 +83,20 @@
 
 
 <!-- Local Audio Player -->
-<audio id="bg-audio" src="assets/Playlist_5.mp3" loop preload="auto"></audio>
+<audio id="bg-audio" src="assets/Playlist_5.mp3" loop preload="none"></audio>
 
 <!-- Audio bar -->
 <div id="audio-bar">
   <div class="vinyl-spin" id="vinyl"></div>
-  <button id="play-btn" onclick="toggleAudio()" title="Play / Pause">▶</button>
+  <button id="play-btn" onclick="toggleAudio()" title="Play / Pause" aria-label="Play or pause background study music">▶</button>
   <div style="display:flex;flex-direction:column;gap:2px;min-width:90px;">
     <div class="audio-label">STUDY MUSIC</div>
     <div class="audio-info" id="track-name">Playlist 5</div>
   </div>
   <div style="display:flex;flex-direction:column;gap:4px;align-items:center;">
-    <label style="font-size:9px;color:var(--muted);font-family:'JetBrains Mono',monospace;letter-spacing:1px;">VOL</label>
+    <label for="vol-slider" style="font-size:9px;color:var(--muted);font-family:'JetBrains Mono',monospace;letter-spacing:1px;">VOL</label>
     <input type="range" id="vol-slider" min="0" max="1" step="0.01" value="1"
+      aria-label="Background music volume"
       oninput="setVolume(this.value)"
       style="width:80px;height:3px;accent-color:var(--accent2);cursor:pointer;">
   </div>

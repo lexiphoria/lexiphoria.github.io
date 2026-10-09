@@ -3509,31 +3509,51 @@ function revealAll() {
 }
 
 function resetAll() {
-  done = Array(5).fill(false);
-  corr = Array(5).fill(false);
+  const totalQ = (Array.isArray(QS) && QS.length > 0) ? QS.length : 5;
+  done = Array(totalQ).fill(false);
+  corr = Array(totalQ).fill(false);
   cntC = 0; cntW = 0;
+  const sectionTitle = document.getElementById('q-section-title');
+  if (sectionTitle) sectionTitle.textContent = `Questions 1–${totalQ}`;
   document.getElementById('result-panel').style.display = 'none';
   build();
 }
 
 function updateBar() {
+  const totalQ = (Array.isArray(QS) && QS.length > 0) ? QS.length : 5;
   const answered = done.filter(Boolean).length;
-  const pct = (answered / 5) * 100;
-  document.getElementById('progress-fill').style.width = pct + '%';
-  document.getElementById('progress-lbl').textContent = answered + ' / 5 questions';
+  const pct = totalQ > 0 ? (answered / totalQ) * 100 : 0;
+  const progressFill = document.getElementById('progress-fill');
+  if (progressFill) progressFill.style.width = pct + '%';
+  const progressTrack = document.querySelector('.progress-track');
+  if (progressTrack) {
+    progressTrack.setAttribute('aria-valuenow', Math.round(pct));
+    progressTrack.setAttribute('aria-valuetext', `${answered} of ${totalQ} questions answered (${Math.round(pct)}%)`);
+  }
+  const progressLbl = document.getElementById('progress-lbl');
+  if (progressLbl) progressLbl.textContent = answered + ' / ' + totalQ + ' questions';
   document.getElementById('val-correct').textContent = cntC;
   document.getElementById('val-wrong').textContent = cntW;
 }
 
 function showResult() {
+  const totalQ = (Array.isArray(QS) && QS.length > 0) ? QS.length : 5;
   const n = corr.filter(Boolean).length;
   const panel = document.getElementById('result-panel');
   panel.style.display = 'block';
-  document.getElementById('result-grade').textContent = n + '/5';
-  const msgs = ['Need more practice!', 'Good job — keep going!', 'Well done!', 'Excellent!', 'Perfect!'];
-  document.getElementById('result-msg').textContent = msgs[n] || 'Completed!';
+  document.getElementById('result-grade').textContent = n + '/' + totalQ;
+  const ratio = totalQ > 0 ? n / totalQ : 0;
+  let msg = 'Completed!';
+  if (ratio >= 1) msg = 'Perfect!';
+  else if (ratio >= 0.8) msg = 'Excellent!';
+  else if (ratio >= 0.6) msg = 'Well done!';
+  else if (ratio >= 0.4) msg = 'Good job — keep going!';
+  else msg = 'Need more practice!';
+  document.getElementById('result-msg').textContent = msg;
+
+  const score10 = totalQ > 0 ? Math.round((n / totalQ) * 10 * 10) / 10 : 0;
   document.getElementById('result-stats').innerHTML =
-    '<div>Correct <span>' + n + ' questions</span></div><div>Incorrect <span>' + (5 - n) + ' questions</span></div><div>Score <span>' + (n * 2) + '/10</span></div>';
+    '<div>Correct <span>' + n + ' questions</span></div><div>Incorrect <span>' + (totalQ - n) + ' questions</span></div><div>Score <span>' + score10 + '/10</span></div>';
   
   const nextBtn = document.getElementById('next-btn');
   const currentIndex = ALL_EXAMS.findIndex(e => e.id === currentExamId);
@@ -3560,7 +3580,7 @@ function toggleAudio() {
       musicStarted = true;
       updateAudioUI(true);
     }).catch(() => {
-      alert("?? Click anywhere to play music");
+      alert("Click anywhere on the page to start background music");
     });
   } else {
     bgAudio.pause();
@@ -3573,13 +3593,19 @@ function updateAudioUI(playing) {
   const vinyl = document.getElementById("vinyl");
   const playBtn = document.getElementById("play-btn");
   if (playing) {
-    playBtn.textContent = "?";
-    vinyl.classList.add("playing");
-    bar.classList.add("playing-glow");
+    if (playBtn) {
+      playBtn.textContent = "⏸";
+      playBtn.setAttribute("aria-label", "Pause background study music");
+    }
+    if (vinyl) vinyl.classList.add("playing");
+    if (bar) bar.classList.add("playing-glow");
   } else {
-    playBtn.textContent = "?";
-    vinyl.classList.remove("playing");
-    bar.classList.remove("playing-glow");
+    if (playBtn) {
+      playBtn.textContent = "▶";
+      playBtn.setAttribute("aria-label", "Play background study music");
+    }
+    if (vinyl) vinyl.classList.remove("playing");
+    if (bar) bar.classList.remove("playing-glow");
   }
 }
 

@@ -35,7 +35,7 @@
         </div>
         <div class="stat-item">
           <span class="stat-icon">🎓</span>
-          <span id="global-learned-count" class="stat-val">0/37</span>
+          <span id="global-learned-count" class="stat-val">0/1123</span>
           <span class="stat-label">Words mastered</span>
         </div>
         <div class="stat-item">
@@ -137,7 +137,7 @@
     <!-- 2. MODE SELECTION SCREEN -->
     <div id="mode-screen" class="glass-panel" style="display: none;">
       <div class="mode-header">
-        <button class="btn-back" onclick="goToDashboard()">← Topics</button>
+        <button class="btn-back" onclick="goToDashboard()">← Back to Topics</button>
         <span class="current-topic-badge badge-ourLife" id="mode-topic-badge">OUR LIFE</span>
       </div>
       
@@ -189,7 +189,7 @@
       <div class="game-play-header">
         <button class="btn-back" onclick="exitToModes()">← Modes</button>
         <span class="game-title-text">3D Flashcards</span>
-        <div class="card-progress-text"><span id="flash-current-index">1</span>/<span id="flash-total-count">37</span></div>
+        <div class="card-progress-text"><span id="flash-current-index">1</span>/<span id="flash-total-count">182</span></div>
       </div>
 
       <!-- Filters for Flashcards -->
@@ -607,11 +607,25 @@
       }
     }
 
+    // --- Date & Timezone Helpers (Aligned with boss_battle.js local UTC+7) ---
+    function getLocalDateString(d = new Date()) {
+      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    }
+
+    function getCalendarDayDiff(dateStr1, dateStr2) {
+      if (!dateStr1 || !dateStr2) return 0;
+      const [y1, m1, d1] = dateStr1.split('-').map(Number);
+      const [y2, m2, d2] = dateStr2.split('-').map(Number);
+      const dt1 = new Date(y1, m1 - 1, d1);
+      const dt2 = new Date(y2, m2 - 1, d2);
+      return Math.round((dt2 - dt1) / (1000 * 60 * 60 * 24));
+    }
+
     // --- Core initialization ---
     window.addEventListener('load', () => {
       loadProgress();
-      updateDashboardStats();
       checkStreak();
+      updateDashboardStats();
       
       // Prefetch synthesis voices
       if ('speechSynthesis' in window) {
@@ -657,7 +671,7 @@
       ];
       
       topics.forEach(topic => {
-        const words = vocabularyData[topic.id] || [];
+        const words = (typeof vocabularyData !== 'undefined' && vocabularyData[topic.id]) ? vocabularyData[topic.id] : [];
         const count = words.length;
         
         if (count > 0) {
@@ -684,24 +698,30 @@
       });
       
       // If we don't have any words yet (shouldn't happen for ourLife)
-      if (totalWords === 0) totalWords = vocabularyData.ourLife.length;
+      if (totalWords === 0 && typeof vocabularyData !== 'undefined' && vocabularyData.ourLife) {
+        totalWords = vocabularyData.ourLife.length;
+      }
       
-      document.getElementById('global-learned-count').innerText = `${totalLearnedCount}/${totalWords}`;
-      document.getElementById('global-streak').innerText = `${progress.streak}`;
-      refreshBossBadges();
+      const learnedCountEl = document.getElementById('global-learned-count');
+      if (learnedCountEl) {
+        learnedCountEl.innerText = `${totalLearnedCount}/${totalWords || 854}`;
+      }
+      const streakEl = document.getElementById('global-streak');
+      if (streakEl) {
+        streakEl.innerText = `${progress.streak || 1}`;
+      }
+      if (typeof refreshBossBadges === 'function') {
+        refreshBossBadges();
+      }
     }
 
     function checkStreak() {
-      const today = new Date().toISOString().split('T')[0];
+      const today = getLocalDateString();
       if (progress.lastStudyDate) {
-        const lastDate = new Date(progress.lastStudyDate);
-        const todayDate = new Date(today);
-        const diffTime = Math.abs(todayDate - lastDate);
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        
+        const diffDays = getCalendarDayDiff(progress.lastStudyDate, today);
         if (diffDays === 1) {
           // Study consecutive day
-          progress.streak += 1;
+          progress.streak = (progress.streak || 0) + 1;
           progress.lastStudyDate = today;
           saveProgress();
         } else if (diffDays > 1) {
@@ -709,9 +729,12 @@
           progress.streak = 1;
           progress.lastStudyDate = today;
           saveProgress();
+        } else if (diffDays === 0) {
+          if (!progress.streak) progress.streak = 1;
         }
       } else {
         progress.lastStudyDate = today;
+        progress.streak = 1;
         saveProgress();
       }
     }
@@ -722,7 +745,7 @@
           xp: 0,
           learned: {},
           streak: 1,
-          lastStudyDate: new Date().toISOString().split('T')[0]
+          lastStudyDate: getLocalDateString()
         };
         saveProgress();
         playSound('click');
@@ -976,7 +999,7 @@
 
     // --- Mode 1: Flashcards logic ---
     function setupFlashcardMode() {
-      const fullList = vocabularyData[currentTopic];
+      const fullList = (typeof vocabularyData !== 'undefined' && vocabularyData[currentTopic]) ? vocabularyData[currentTopic] : [];
       const review = getReviewStore();
       const isReview = w => !!review[cardKey(w)];
       const isMastered = w => !!progress.learned[cardKey(w)];
@@ -1267,10 +1290,23 @@
 
     // --- Mode 3: Sentence Completion Quiz logic ---
     function setupSentenceCompletionMode() {
-      const fullList = vocabularyData[currentTopic];
+      const fullList = (typeof vocabularyData !== 'undefined' && vocabularyData[currentTopic]) ? vocabularyData[currentTopic] : [];
       
-      // Shuffle all actual words in the topic
-      const shuffled = [...fullList].sort(() => 0.5 - Math.random());
+      // Filter words that can be used for sentence completion:
+      // Either has dedicated blankSentence, options & answer, OR has a valid example sentence
+      const validList = fullList.filter(w => 
+        (w.blankSentence && Array.isArray(w.options) && w.answer) || 
+        (w.example && typeof w.example === 'string' && w.example.trim().length > 5)
+      );
+
+      if (validList.length === 0) {
+        alert(`Chủ đề "${currentTopic}" chưa có đủ câu ví dụ / bài tập điền từ để tạo câu hỏi. Hệ thống sẽ tự động chuyển sang chế độ Meaning Quiz!`);
+        startMode('multipleChoice');
+        return;
+      }
+      
+      // Shuffle valid words
+      const shuffled = [...validList].sort(() => 0.5 - Math.random());
       quizQuestionList = shuffled;
       
       currentQuestionIndex = 0;
@@ -1284,12 +1320,16 @@
       document.getElementById('btn-sentence-next').style.display = 'none';
 
       const qTotal = quizQuestionList.length;
+      if (qTotal === 0 || currentQuestionIndex >= qTotal) {
+        showModeResults();
+        return;
+      }
+
       document.getElementById('sentence-progress-text').innerText = `Question ${currentQuestionIndex + 1}/${qTotal}`;
       document.getElementById('sentence-progress-fill').style.width = `${((currentQuestionIndex + 1) / qTotal) * 100}%`;
 
       const qWord = quizQuestionList[currentQuestionIndex];
       
-      // If it's the phrasalVerbs topic, it has pre-defined options and blankSentence
       let questionText = "";
       let options = [];
       let correctOptionText = "";
@@ -1297,30 +1337,35 @@
       if ((currentTopic === 'phrasalVerbs' || currentTopic === 'collocations') && qWord.blankSentence && qWord.options && qWord.answer) {
         questionText = `Question ${currentQuestionIndex + 1}: ${qWord.blankSentence}`;
         options = [...qWord.options];
-        
-        // Find which option corresponds to the answer letter (A, B, C, or D)
-        const ansIndex = qWord.answer.charCodeAt(0) - 65; // 'A' -> 0, 'B' -> 1...
+        const ansIndex = qWord.answer.charCodeAt(0) - 65;
         correctOptionText = qWord.options[ansIndex];
-      } else {
-        // Fallback for other topics (ourLife, ourSociety, etc.) where options are generated dynamically
-        // Hide the word in the example sentence with blanks
-        const wordToHide = qWord.word.split('/')[0].trim();
-        const blanks = "_".repeat(Math.max(6, wordToHide.length));
-        const regex = new RegExp(`\\b${wordToHide}\\b`, 'gi');
+      } else if (qWord.blankSentence && qWord.options && qWord.answer) {
+        questionText = `Question ${currentQuestionIndex + 1}: ${qWord.blankSentence}`;
+        options = [...qWord.options];
+        const ansIndex = qWord.answer.charCodeAt(0) - 65;
+        correctOptionText = qWord.options[ansIndex];
+      } else if (qWord.example && typeof qWord.example === 'string') {
+        const rawWord = qWord.word || '';
+        const cleanWord = rawWord.replace(/\(.*?\)/g, '').split('/')[0].trim();
+        const wordToHide = cleanWord || rawWord.split('/')[0].trim();
+        const regex = new RegExp(`\\b${escapeRegExp(wordToHide)}\\b`, 'gi');
         let blanked = qWord.example.replace(regex, `_________`);
         
         if (blanked === qWord.example) {
-          // Fallback regex for conjugation
-          const firstWordSegment = wordToHide.substring(0, Math.min(4, wordToHide.length - 1));
-          const partialRegex = new RegExp(`\\b${firstWordSegment}[a-zA-Z]*\\b`, 'gi');
+          const firstWord = wordToHide.split(' ')[0];
+          const firstWordSegment = firstWord.substring(0, Math.max(3, firstWord.length - 2));
+          const partialRegex = new RegExp(`\\b${escapeRegExp(firstWordSegment)}[a-zA-Z]*\\b`, 'gi');
           blanked = qWord.example.replace(partialRegex, `_________`);
+        }
+
+        if (blanked === qWord.example) {
+          blanked = `${qWord.example} [Missing word: _________]`;
         }
         
         questionText = `Question ${currentQuestionIndex + 1}: ${blanked}`;
         correctOptionText = qWord.word;
 
-        // distractor words
-        const distractors = vocabularyData[currentTopic]
+        const distractors = (vocabularyData[currentTopic] || [])
           .filter(w => w.word !== qWord.word)
           .map(w => w.word);
         
@@ -1328,6 +1373,15 @@
         const selectedDistractors = shuffledDistractors.slice(0, Math.min(3, shuffledDistractors.length));
         
         options = [qWord.word, ...selectedDistractors].sort(() => 0.5 - Math.random());
+      } else {
+        questionText = `Question ${currentQuestionIndex + 1}: What is the meaning of "${qWord.word}"?`;
+        correctOptionText = qWord.meaning;
+        const distractors = (vocabularyData[currentTopic] || [])
+          .filter(w => w.word !== qWord.word)
+          .map(w => w.meaning);
+        const shuffledDistractors = distractors.sort(() => 0.5 - Math.random());
+        const selectedDistractors = shuffledDistractors.slice(0, Math.min(3, shuffledDistractors.length));
+        options = [qWord.meaning, ...selectedDistractors].sort(() => 0.5 - Math.random());
       }
 
       document.getElementById('sentence-question-text').innerText = questionText;
@@ -1335,14 +1389,12 @@
       const optionsGrid = document.getElementById('sentence-options');
       optionsGrid.innerHTML = '';
 
-      // Label mappings for options: A. B. C. D.
       const labels = ['A', 'B', 'C', 'D'];
-
       options.forEach((optText, index) => {
         const btn = document.createElement('button');
         btn.className = 'quiz-option-btn';
         btn.dataset.value = optText;
-        btn.innerHTML = `<span class="option-label" style="font-weight: 800; color: #fbbf24; margin-right: 10px;">${labels[index]}.</span>${optText}`;
+        btn.innerHTML = `<span class="option-label" style="font-weight: 800; color: #fbbf24; margin-right: 10px;">${labels[index] || ''}.</span>${escapeHtmlText(optText)}`;
         btn.onclick = () => checkSentenceAnswer(optText, correctOptionText, btn);
         optionsGrid.appendChild(btn);
       });

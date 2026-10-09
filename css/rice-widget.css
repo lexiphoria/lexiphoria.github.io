@@ -1,10 +1,7 @@
 /* Widget trồng lúa trang chủ ("Knowledge Rice Field") – phong cách Cozy Oriental / Đông Hồ */
+/* Không khung, không viền: widget đặt thẳng trên nền giấy điệp */
 .portal-rice-card {
-  background: #FFFDF7;
-  border: 3px solid #E6B422; /* Vàng lúa chín */
-  border-radius: 18px;
-  padding: 14px 16px 16px;
-  box-shadow: 0 5px 0 #1A1A1A, inset 0 0 12px #F5E6C8;
+  padding: 4px 2px 0;
   user-select: none;
 }
 

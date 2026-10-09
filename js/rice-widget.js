@@ -5,16 +5,16 @@
   const IMG_DIR = 'assets/rice/';
 
   const STAGES = [
-    { title: 'Seed Swelling', img: 'rice_stage_1_swelling.svg', desc: 'Soaked rice seeds swell up in the soft soil.' },
-    { title: 'Germination', img: 'rice_stage_2_germination.svg', desc: 'The first green shoot pokes out of the soil.' },
-    { title: 'Tillering', img: 'rice_stage_3_tillering.svg', desc: 'The young plant sends out many leafy side shoots.' },
-    { title: 'Stem Elongation', img: 'rice_stage_4_stem_elongation.svg', desc: 'The stems grow tall and strong, joint by joint.' },
-    { title: 'Panicle Initiation', img: 'rice_stage_5_panicle_initiation.svg', desc: 'A tiny rice head starts forming inside the leaf sheath.' },
-    { title: 'Heading', img: 'rice_stage_6_heading.svg', desc: 'Green rice heads push out of the flag leaf.' },
-    { title: 'Flowering', img: 'rice_stage_7_flowering.svg', desc: 'Tiny rice flowers open and pollinate.' },
-    { title: 'Milky Ripe', img: 'rice_stage_8_milky_ripe.svg', desc: 'Grains fill with milky liquid and the heads begin to bend.' },
-    { title: 'Dough Ripe', img: 'rice_stage_9_dough_ripe.svg', desc: 'Grains turn soft and doughy as the husks go yellow.' },
-    { title: 'Golden Harvest', img: 'rice_stage_10_golden_harvest.svg', desc: 'Heavy golden heads are ready to harvest!' }
+    { title: 'Seed Swelling', img: 'cozy_oriental_rice_stage_1_swelling.png', desc: 'Soaked rice seeds swell up in the soft soil.' },
+    { title: 'Germination', img: 'cozy_oriental_rice_stage_2_germination.png', desc: 'The first green shoot pokes out of the soil.' },
+    { title: 'Tillering', img: 'cozy_oriental_rice_stage_3_tillering.png', desc: 'The young plant sends out many leafy side shoots.' },
+    { title: 'Stem Elongation', img: 'cozy_oriental_rice_stage_4_stem_elongation.png', desc: 'The stems grow tall and strong, joint by joint.' },
+    { title: 'Booting', img: 'cozy_oriental_rice_stage_5_panicle_initiation.png', desc: 'The young rice head swells inside the leaf sheath.' },
+    { title: 'Heading', img: 'cozy_oriental_rice_stage_6_heading.png', desc: 'Green rice heads push out of the flag leaf.' },
+    { title: 'Flowering', img: 'cozy_oriental_rice_stage_7_flowering.png', desc: 'Tiny rice flowers open and pollinate.' },
+    { title: 'Milky Ripe', img: 'cozy_oriental_rice_stage_8_milky_ripe.png', desc: 'Grains fill with milky liquid and the heads begin to bend.' },
+    { title: 'Dough Ripe', img: 'cozy_oriental_rice_stage_9_dough_ripe.png', desc: 'Grains turn soft and doughy as the husks go yellow.' },
+    { title: 'Fully Ripe', img: 'cozy_oriental_rice_stage_10_golden_harvest.png', desc: 'Heavy golden heads are ready to harvest!' }
   ];
   const LAST = STAGES.length - 1;
 

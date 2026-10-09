@@ -1,62 +1,142 @@
-// ── LOCAL AUDIO PLAYER ──────────────────────────────────────────────────
-const bgAudio = document.getElementById('bg-audio');
-let isPlaying = false;
-let musicStarted = false;
+// ── FLOWER GARDEN WIDGET ───────────────────────────────────────────────────
+// Finishing a passage with ≥50% waters the plant (+10 💧) and grows it one stage.
+// Reaching full bloom opens the celebration modal; replanting starts a new pot.
+const GARDEN_KEY = 'user_garden_data';
+const GARDEN_IMG_DIR = 'assets/garden/';
 
-// Initialize track info
-document.getElementById('track-name').textContent = 'Playlist 4';
+const RANUNCULUS_BOTANICAL_STAGES = [
+  { name: '🌱 Ươm Củ', img: 'oriental_ranunculus_flower_stage_1_seed.png', progress: 10, text: 'Hạt củ ươm trong chậu gốm mộc' },
+  { name: '🌿 Nẩy Mầm', img: 'oriental_ranunculus_flower_stage_2_sprout.png', progress: 35, text: 'Mầm xanh vươn lá tươi trẻ' },
+  { name: '🍃 Cây Con', img: 'oriental_ranunculus_flower_stage_3_budding.png', progress: 65, text: 'Cây kết nụ hoa Mao Lương tròn trịa' },
+  { name: '🌸 Chớm Nở', img: 'oriental_ranunculus_flower_stage_4_blooming.png', progress: 85, text: 'Cánh hoa Mao Lương hé nở nhiều lớp!' },
+  { name: '🌺 Hoàn Thành', img: 'oriental_ranunculus_flower_stage_5_potted.png', progress: 100, text: 'Nở xum xuê! Bấm để gieo mầm mới' }
+];
 
-function toggleAudio() {
-  if (!bgAudio) return;
+const CONGRATS_MESSAGES = [
+  'Chúc mừng bạn! Cành hoa di sản đã đơm hoa kết trái từ nỗ lực làm bài Quiz của bạn.',
+  'Bông hoa tri thức nở rực rỡ! Bạn đã tích lũy thêm nhiều từ vựng và kiến thức mới.',
+  'Tuyệt vời! Hương thơm điền viên lan tỏa, đánh dấu thêm một cột mốc học tập xuất sắc.'
+];
 
-  if (bgAudio.paused) {
-    bgAudio.play().then(() => {
-      musicStarted = true;
-      updateAudioUI(true);
-    }).catch(e => {
-      showToast('🎵 Click anywhere to play music');
-    });
-  } else {
-    bgAudio.pause();
-    updateAudioUI(false);
-  }
+const PETAL_COLORS = ['#F43F5E', '#F4A6A0', '#E8836F', '#F7C8C2', '#C9D8A8'];
+
+let gardenData = loadGarden();
+let wateringTimer = null;
+
+function loadGarden() {
+  const fresh = { waterDrops: 0, stageIndex: 0, flowersBloomed: 0, xp: 0 };
+  try {
+    const saved = JSON.parse(localStorage.getItem(GARDEN_KEY));
+    if (saved && typeof saved === 'object') {
+      const data = Object.assign(fresh, saved);
+      data.stageIndex = Math.min(Math.max(data.stageIndex | 0, 0), RANUNCULUS_BOTANICAL_STAGES.length - 1);
+      return data;
+    }
+  } catch (e) { }
+  return fresh;
 }
 
-function updateAudioUI(playing) {
-  const bar = document.getElementById('audio-bar');
-  const vinyl = document.getElementById('vinyl');
-  const playBtn = document.getElementById('play-btn');
-
-  isPlaying = playing;
-  if (playing) {
-    playBtn.textContent = '⏸';
-    vinyl.classList.add('playing');
-    bar.classList.add('playing-glow');
-  } else {
-    playBtn.textContent = '▶';
-    vinyl.classList.remove('playing');
-    bar.classList.remove('playing-glow');
-  }
+function saveGarden() {
+  try { localStorage.setItem(GARDEN_KEY, JSON.stringify(gardenData)); } catch (e) { }
 }
 
-function setVolume(val) {
-  if (bgAudio) bgAudio.volume = parseFloat(val);
+function isFullBloom() {
+  return gardenData.stageIndex === RANUNCULUS_BOTANICAL_STAGES.length - 1;
 }
 
-// Auto-play on first click (browser policy)
-window.addEventListener('click', () => {
-  if (!musicStarted && bgAudio) {
-    bgAudio.play().then(() => {
-      musicStarted = true;
-      updateAudioUI(true);
-    }).catch(() => { });
-  }
-}, { once: true });
+function renderMiniGarden() {
+  const current = RANUNCULUS_BOTANICAL_STAGES[gardenData.stageIndex];
+  const isNewGarden = gardenData.stageIndex === 0 && gardenData.waterDrops === 0;
+  const widget = document.getElementById('miniFlowerWidget');
 
-// Listen for audio events to keep UI in sync
-if (bgAudio) {
-  bgAudio.addEventListener('play', () => updateAudioUI(true));
-  bgAudio.addEventListener('pause', () => updateAudioUI(false));
+  document.getElementById('miniPlantImg').src = GARDEN_IMG_DIR + current.img;
+  document.getElementById('miniPlantTitle').textContent = current.name;
+  document.getElementById('miniWaterCount').textContent = `💧 ${gardenData.waterDrops}`;
+  document.getElementById('miniGrowthProgress').style.width = `${current.progress}%`;
+  document.getElementById('miniStatusText').textContent = isNewGarden ? 'Làm đúng ≥50% Quiz để tưới nước' : current.text;
+
+  widget.classList.toggle('ready', isFullBloom());
+  widget.title = `Làm đúng ≥50% mỗi bài để tưới nước cho cây\n🌸 Đã nở: ${gardenData.flowersBloomed} chậu · ✨ ${gardenData.xp} XP`;
+}
+
+/**
+ * Call when a passage is finished.
+ * @param {number} scorePercent - percentage of correct answers (e.g. 50, 83, 100)
+ */
+function triggerFlowerGrowth(scorePercent) {
+  if (scorePercent < 50) {
+    showToast('🌱 Làm đúng ≥50% để tưới nước cho cây nhé!');
+    return;
+  }
+
+  const wasFullBloom = isFullBloom();
+  gardenData.waterDrops += 10;
+  if (!wasFullBloom) {
+    gardenData.stageIndex += 1;
+    // Bloom rewards listed on the celebration modal
+    if (isFullBloom()) {
+      gardenData.waterDrops += 20;
+      gardenData.xp += 50;
+    }
+  }
+  saveGarden();
+  showToast(wasFullBloom ? '💧 +10 giọt nước' : '💧 +10 giọt nước — cây đã lớn thêm!');
+
+  playWateringAnimation(() => {
+    renderMiniGarden();
+    if (isFullBloom()) setTimeout(showCelebrationModal, 700);
+  });
+}
+
+function playWateringAnimation(onGrow) {
+  const widget = document.getElementById('miniFlowerWidget');
+  const img = document.getElementById('miniPlantImg');
+
+  clearTimeout(wateringTimer);
+  widget.classList.remove('watering');
+  void widget.offsetWidth; // restart the CSS animation
+  widget.classList.add('watering');
+
+  wateringTimer = setTimeout(() => {
+    onGrow();
+    img.classList.add('bounce');
+    setTimeout(() => img.classList.remove('bounce'), 400);
+    wateringTimer = setTimeout(() => widget.classList.remove('watering'), 600);
+  }, 1000);
+}
+
+function onMiniGardenClick() {
+  if (isFullBloom()) showCelebrationModal();
+}
+
+function showCelebrationModal() {
+  const randomMsg = CONGRATS_MESSAGES[Math.floor(Math.random() * CONGRATS_MESSAGES.length)];
+  document.getElementById('modalSubtitle').textContent = randomMsg;
+  document.getElementById('celebrationModal').style.display = 'flex';
+  document.getElementById('plantNextBtn').focus();
+  createPetalParticles();
+}
+
+function startNewFlowerSeed() {
+  gardenData.flowersBloomed += 1;
+  gardenData.stageIndex = 0;
+  saveGarden();
+  document.getElementById('celebrationModal').style.display = 'none';
+  renderMiniGarden();
+}
+
+function createPetalParticles() {
+  const container = document.getElementById('petalContainer');
+  container.innerHTML = '';
+  for (let i = 0; i < 16; i++) {
+    const petal = document.createElement('div');
+    petal.className = 'petal-particle';
+    petal.style.left = Math.random() * 100 + '%';
+    petal.style.background = PETAL_COLORS[i % PETAL_COLORS.length];
+    petal.style.animationDelay = Math.random() * 1.5 + 's';
+    petal.style.animationDuration = (2.2 + Math.random() * 1.8) + 's';
+    container.appendChild(petal);
+  }
 }
 
 // ── GAME DATA ──────────────────────────────────────────────────────────────
@@ -5423,8 +5503,11 @@ function resetAllProgress() {
   try {
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem(DRAFT_KEY);
+    localStorage.removeItem(GARDEN_KEY);
   } catch (e) { }
   scores = {};
+  gardenData = loadGarden();
+  renderMiniGarden();
   updateHomeStats();
   showToast('Đã xoá tiến trình!');
 }
@@ -5676,6 +5759,7 @@ function finishText() {
   document.getElementById('r-pct').textContent = pct + '%';
 
   showScreen('results');
+  triggerFlowerGrowth(pct);
 }
 
 function nextText() {
@@ -5686,3 +5770,4 @@ function nextText() {
 // Init
 updateHomeStats();
 renderTextGrid();
+renderMiniGarden();

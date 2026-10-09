@@ -8,7 +8,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/engquiz.css">
+  <link rel="stylesheet" href="css/engquiz.css?v=20261009">
 </head>
 
 <body>
@@ -127,26 +127,55 @@
 
   </div>
 
-  <!-- Local Audio Player -->
-  <audio id="bg-audio" src="assets/Playlist_4.mp3" loop preload="auto"></audio>
-
-  <!-- Audio bar -->
-  <div id="audio-bar">
-    <div class="vinyl-spin" id="vinyl"></div>
-    <button id="play-btn" onclick="toggleAudio()" title="Play / Pause">▶</button>
-    <div style="display:flex;flex-direction:column;gap:2px;min-width:90px;">
-      <div class="audio-label">STUDY MUSIC</div>
-      <div class="audio-info" id="track-name">Lo-Fi Chill</div>
+  <!-- Mini widget: flower garden (grows when a passage is finished with ≥50%) -->
+  <div class="mini-flower-widget" id="miniFlowerWidget" onclick="onMiniGardenClick()">
+    <img class="mini-watering-can" src="assets/garden/watering_can.png" alt="" aria-hidden="true">
+    <div class="mini-flower-frame">
+      <span class="mini-drop"></span><span class="mini-drop"></span><span class="mini-drop"></span>
+      <img id="miniPlantImg" src="assets/garden/oriental_ranunculus_flower_stage_1_seed.png" alt="Flower Stage">
     </div>
-    <div style="display:flex;flex-direction:column;gap:4px;align-items:center;">
-      <label
-        style="font-size:9px;color:var(--muted);font-family:'JetBrains Mono',monospace;letter-spacing:1px;">VOL</label>
-      <input type="range" id="vol-slider" min="0" max="1" step="0.01" value="1" oninput="setVolume(this.value)"
-        style="width:80px;height:3px;accent-color:var(--accent2);cursor:pointer;">
+    <div class="mini-flower-info">
+      <div class="mini-flower-header">
+        <span class="mini-flower-title" id="miniPlantTitle">🌱 Ươm Củ</span>
+        <span class="mini-water-badge" id="miniWaterCount">💧 0</span>
+      </div>
+      <div class="mini-growth-bar">
+        <div class="mini-growth-fill" id="miniGrowthProgress" style="width: 10%;"></div>
+      </div>
+      <span class="mini-status-text" id="miniStatusText" aria-live="polite">Làm đúng ≥50% Quiz để tưới nước</span>
     </div>
   </div>
 
-  <script src="js/engquiz.js"></script>
+  <!-- Celebration modal: shown when the flower reaches full bloom -->
+  <div class="oriental-celebration-overlay" id="celebrationModal" style="display: none;" role="dialog"
+    aria-modal="true" aria-labelledby="modalFlowerTitle">
+    <div class="oriental-modal-card">
+      <div class="petal-particles" id="petalContainer"></div>
+      <div class="modal-header-badge">🌸 VƯỜN HOA DI SẢN 🌸</div>
+
+      <div class="modal-flower-display">
+        <div class="flower-glow-ring"></div>
+        <img id="modalFlowerImg" src="assets/garden/oriental_ranunculus_flower_stage_5_potted.png"
+          alt="Full Bloom Flower">
+      </div>
+
+      <h2 class="modal-title" id="modalFlowerTitle">Hoa Mao Lương Nở Rực Rỡ!</h2>
+      <p class="modal-subtitle" id="modalSubtitle">Chúc mừng bạn đã tích lũy điểm Quiz và nuôi dưỡng thành công chậu
+        hoa di sản.</p>
+
+      <div class="reward-badges-row">
+        <div class="reward-badge"><img src="assets/garden/knowledge_book.png" alt="">+50 XP Tri Thức</div>
+        <div class="reward-badge"><img src="assets/garden/water_drops.png" alt="">+20 Giọt Nước</div>
+        <div class="reward-badge"><img src="assets/garden/trowel.png" alt="">Thần Đồng Điền Viên</div>
+      </div>
+
+      <button class="plant-next-btn" id="plantNextBtn" onclick="startNewFlowerSeed()">
+        <img src="assets/garden/seed_packet.png" alt="">Ươm Củ &amp; Gieo Mầm Mới
+      </button>
+    </div>
+  </div>
+
+  <script src="js/engquiz.js?v=20261009"></script>
 </body>
 
 </html>

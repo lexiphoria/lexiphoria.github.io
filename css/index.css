@@ -34,7 +34,7 @@ body {
 }
 
 .container {
-  width: min(1180px, 92vw);
+  width: min(1280px, 94vw);
   margin: 0 auto;
   padding: 28px 0 44px;
 }
@@ -370,12 +370,11 @@ body {
   font-size: 1.15rem;
 }
 
-/* Rigid 2x2 layout for the 4 core cards, stretched to the panel's height */
+/* 2x2 grid of 16:9 roadmap stamps */
 .core-grid {
-  flex: 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 1fr;
+  align-content: start;
   gap: 20px;
 }
 
@@ -450,9 +449,6 @@ body {
     grid-template-columns: 1fr;
     grid-template-areas: "main" "side";
     gap: 28px;
-  }
-  .core-grid {
-    grid-auto-rows: auto;
   }
   .extra-grid {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -591,39 +587,117 @@ body {
   font-size: 1.25rem;
 }
 
-.core-grid .card h3 {
-  margin: 10px 0 18px;
+/* ---------- 4 tem lộ trình chính: phiếu tem 16:9 có tranh vẽ ----------
+   Tranh nền assets/stamps/core-*.svg (tự vẽ bằng SVG: nền màu Đông Hồ, hoa văn sóng
+   nước / trống đồng, đôi chim hạc, phượng, chim Lạc hoặc cá chép, mây cuộn).
+   Học sinh, nhãn, tên và nút nằm chồng lên trên; cỡ chữ theo bề rộng tem (cqw). */
+.core-grid .stamp-inner {
+  display: block;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  container-type: inline-size;
 }
 
-/* Wide screens: roadmap cards are as tall as the left column, so show the sticker large
-   in the middle and keep the title + button together at the bottom */
-@media (min-width: 1061px) {
-  .core-grid .card-top {
-    flex: 1;
-    flex-direction: column;
-    align-items: stretch;
+.core-grid .stamp-inner::before {
+  display: none;
+}
+
+.core-grid .stamp-inner::after {
+  opacity: 0.3;
+}
+
+.stamp-art {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.core-grid .card-top {
+  display: contents;
+}
+
+/* Hai nhãn ở hai góc trên, tránh đầu nhân vật ở giữa */
+.core-grid .card-tags {
+  position: absolute;
+  top: 5.5%;
+  left: 3.5%;
+  right: 3.5%;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2cqw;
+}
+
+.core-grid .tag {
+  font-size: clamp(0.6rem, 2.4cqw, 0.86rem);
+  padding: 0.5cqw 2cqw;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Tem hẹp (điện thoại): nhãn dài xuống hai dòng để không che nhân vật ở giữa */
+@container (max-width: 400px) {
+  .core-grid .tag {
+    max-width: 30cqw;
+    border-radius: 10px;
+    line-height: 1.25;
+    text-align: center;
   }
-  /* Khung tranh lớn dần theo chiều cao tem (cột trái dài thì tem cao) */
-  .core-grid .card-character {
-    flex: 1 1 0;
-    align-self: center;
-    width: auto;
-    height: auto;
-    min-height: 140px;
-    max-height: 250px;
-    aspect-ratio: 6 / 7;
-    padding: 8px;
-  }
-  .core-grid .card-character img {
-    height: 100%;
-    width: 100%;
-  }
-  .core-grid .card h3 {
-    margin-top: auto;
-  }
-  .core-grid h3 + .btn {
-    margin-top: 0;
-  }
+}
+
+.core-grid .card-character {
+  position: absolute;
+  left: 50%;
+  top: 6%;
+  width: auto;
+  height: 53%;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  transform: translateX(-50%);
+}
+
+.core-grid .card:hover .card-character {
+  transform: translateX(-50%) translateY(-4px) scale(1.04);
+}
+
+.core-grid .card-character img {
+  width: auto;
+  height: 100%;
+  max-width: none;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.35));
+}
+
+.core-grid .card h3 {
+  position: absolute;
+  top: 61%;
+  left: 4%;
+  right: 4%;
+  margin: 0;
+  text-align: center;
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  font-size: 6.4cqw;
+  line-height: 1.1;
+  letter-spacing: 0;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4), 0 0 14px rgba(0, 0, 0, 0.55);
+}
+
+.core-grid .btn {
+  position: absolute;
+  left: 50%;
+  bottom: 7%;
+  margin: 0;
+  padding: 1.1cqw 6cqw;
+  font-size: clamp(0.72rem, 3cqw, 1rem);
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+.core-grid .btn:hover {
+  transform: translateX(-50%) translateY(-1px);
 }
 
 .card p {

@@ -646,12 +646,13 @@ body {
   }
 }
 
+/* Nhân vật bắt đầu ngay dưới hàng nhãn để không chạm nhãn */
 .core-grid .card-character {
   position: absolute;
   left: 50%;
-  top: 6%;
+  top: 15%;
   width: auto;
-  height: 53%;
+  height: 46%;
   padding: 0;
   background: none;
   border: none;
@@ -672,7 +673,7 @@ body {
 
 .core-grid .card h3 {
   position: absolute;
-  top: 61%;
+  top: 62%;
   left: 4%;
   right: 4%;
   margin: 0;

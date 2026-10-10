@@ -194,25 +194,40 @@
   });
 
   // ---- Tính giờ học trên trang bài tập ----
+  // Đồng hồ chỉ chạy khi tab đang hiện: ẩn tab thì dừng hẳn, quay lại thì đếm tiếp từ lúc đó (không cộng
+  // thời gian tab bị ẩn). Mỗi nhịp chỉ cộng khi cửa sổ đang được chọn và có thao tác trong 90 giây gần nhất.
   function trackTime() {
     let lastInput = Date.now();
     const poke = () => { lastInput = Date.now(); };
     ['pointerdown', 'pointermove', 'keydown', 'wheel', 'touchstart', 'scroll'].forEach((ev) =>
       window.addEventListener(ev, poke, { passive: true, capture: true }));
     let last = Date.now();
-    setInterval(() => {
+    let timer = null;
+    const tick = () => {
       const now = Date.now();
       const step = Math.min(now - last, TICK_MS * 2) / 1000;
       last = now;
-      const active = document.visibilityState === 'visible' && document.hasFocus() && now - lastInput < IDLE_MS;
-      if (!active) return;
+      if (document.hidden || !document.hasFocus() || now - lastInput >= IDLE_MS) return;
       update((d) => {
         d.day.seconds += step;
         d.totalStudySeconds += step;
         d.cropSeconds += step;
         checkDay(d);
       });
-    }, TICK_MS);
+    };
+    const start = () => {
+      if (timer) return;            // không tạo thêm đồng hồ thứ hai
+      last = Date.now();
+      timer = setInterval(tick, TICK_MS);
+    };
+    const stop = () => {
+      if (!timer) return;
+      clearInterval(timer);
+      timer = null;
+    };
+    document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
+    window.addEventListener('focus', () => { last = Date.now(); });   // chọn lại cửa sổ: không tính lúc đang ở cửa sổ khác
+    if (!document.hidden) start();
   }
 
   window.PortalStudy = {

@@ -465,12 +465,27 @@
       eiUpdateStats();
     }
 
+    // Ngày theo giờ máy (YYYY-MM-DD). toISOString() cho ngày UTC, ở Việt Nam đổi ngày lúc 7 giờ sáng.
+    function eiDateKey(d = new Date()) {
+      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    }
+
+    // Số ngày lịch giữa hai khoá YYYY-MM-DD, quy về mốc UTC nên đúng cả khi sang tháng, sang năm (31/10 → 01/11 = 1)
+    function eiDayGap(fromKey, toKey) {
+      const [a, b] = [fromKey, toKey].map(k => {
+        const [y, m, d] = String(k).split('-').map(Number);
+        return Date.UTC(y, m - 1, d);
+      });
+      return Math.round((b - a) / 86400000);
+    }
+
     function eiCheckStreak() {
-      const today = new Date().toISOString().split('T')[0];
+      const today = eiDateKey();
       if (eiProgress.lastStudyDate) {
-        const diff = Math.ceil(Math.abs(new Date(today) - new Date(eiProgress.lastStudyDate)) / 86400000);
+        const diff = eiDayGap(eiProgress.lastStudyDate, today);
         if (diff === 1) { eiProgress.streak += 1; eiProgress.lastStudyDate = today; eiSaveProgress(); }
-        else if (diff > 1) { eiProgress.streak = 1; eiProgress.lastStudyDate = today; eiSaveProgress(); }
+        else if (diff > 1 || Number.isNaN(diff)) { eiProgress.streak = 1; eiProgress.lastStudyDate = today; eiSaveProgress(); }
+        // diff 0: hôm nay đã tính; diff < 0: đồng hồ máy bị lùi, giữ nguyên chuỗi
       } else { eiProgress.lastStudyDate = today; eiSaveProgress(); }
     }
 
@@ -912,7 +927,7 @@
     // =========================================================
     function eiResetAllProgress() {
       if (confirm('Bạn có chắc chắn muốn xóa toàn bộ lịch sử học tập?')) {
-        eiProgress = { xp: 0, learned: {}, streak: 1, lastStudyDate: new Date().toISOString().split('T')[0] };
+        eiProgress = { xp: 0, learned: {}, streak: 1, lastStudyDate: eiDateKey() };
         eiSaveProgress();
         eiSound('click');
         alert('Đã xóa toàn bộ lịch sử.');

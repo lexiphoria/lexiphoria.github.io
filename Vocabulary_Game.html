@@ -519,7 +519,7 @@
   <canvas id="confetti-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1000; display: none;"></canvas>
 
   <!-- Script data file -->
-  <script src="js/study-tracker.js?v=1" data-track-time></script>
+  <script src="js/study-tracker.js?v=2" data-track-time></script>
   <script src="js/vocabulary_data.js?v=1.0.9"></script>
   <script src="js/vocabulary_extras.js?v=1.0.4"></script>
   <script src="js/exam_idioms_data.js?v=6.0.0"></script>
@@ -633,13 +633,12 @@
       return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
     }
 
+    // Số ngày lịch giữa hai khoá YYYY-MM-DD, quy về mốc UTC (không lệch giờ, đúng cả khi sang tháng: 31/10 → 01/11 = 1)
     function getCalendarDayDiff(dateStr1, dateStr2) {
       if (!dateStr1 || !dateStr2) return 0;
       const [y1, m1, d1] = dateStr1.split('-').map(Number);
       const [y2, m2, d2] = dateStr2.split('-').map(Number);
-      const dt1 = new Date(y1, m1 - 1, d1);
-      const dt2 = new Date(y2, m2 - 1, d2);
-      return Math.round((dt2 - dt1) / (1000 * 60 * 60 * 24));
+      return Math.round((Date.UTC(y2, m2 - 1, d2) - Date.UTC(y1, m1 - 1, d1)) / 86400000);
     }
 
     // --- Core initialization ---

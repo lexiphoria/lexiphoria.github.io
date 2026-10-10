@@ -181,20 +181,20 @@
     <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="16" name="" type="prop" x="1428" y="643" width="115" height="19">
+  <object id="16" name="" type="prop" x="1482" y="643" width="115" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="tq_festival_people"/>
-    <property name="ph" type="float" value="80"/>
+    <property name="ph" type="float" value="131"/>
     <property name="quiet" type="bool" value="true"/>
     <property name="after" value="all"/>
    </properties>
   </object>
-  <object id="17" name="" type="prop" x="410" y="586" width="102" height="19">
+  <object id="17" name="" type="prop" x="362" y="586" width="102" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="tq_tourists"/>
-    <property name="ph" type="float" value="76"/>
+    <property name="ph" type="float" value="130"/>
     <property name="quiet" type="bool" value="true"/>
     <property name="after" value="all"/>
    </properties>
@@ -350,7 +350,7 @@
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="tourists_family"/>
-    <property name="ph" type="float" value="100"/>
+    <property name="ph" type="float" value="135"/>
     <property name="quiet" type="bool" value="true"/>
     <property name="word" value="tour-group"/>
    </properties>

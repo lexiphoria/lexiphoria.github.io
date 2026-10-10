@@ -55,21 +55,22 @@
 
   // Khách tham quan đi lại (đối tượng 'walker' trong bản đồ): dải khung tools/cut_frontal.py tạo ra,
   // ô 0 nhìn thẳng, rồi nl ô đi sang trái, rồi nr ô đi sang phải; h = chiều cao vẽ (px)
+  // Cùng một thước đo người: người lớn cao ~125 px, học sinh ~121 px (CHAR_H), người già / thiếu niên thấp hơn chút
   const WALKERS = {
-    guide: { img: 'wGuide', nl: 4, nr: 4, h: 122 },
-    takashi: { img: 'wTakashi', nl: 1, nr: 1, h: 116 },
-    sophia: { img: 'wSophia', nl: 2, nr: 2, h: 118 },
-    john: { img: 'wJohn', nl: 1, nr: 1, h: 116 },
-    anna: { img: 'wAnna', nl: 1, nr: 1, h: 110 },
-    liwei: { img: 'wLiwei', nl: 2, nr: 2, h: 114 },
-    cyclo: { img: 'wCyclo', nl: 1, nr: 1, h: 120, wheel: true },
+    guide: { img: 'wGuide', nl: 4, nr: 4, h: 125 },
+    takashi: { img: 'wTakashi', nl: 1, nr: 1, h: 125 },
+    sophia: { img: 'wSophia', nl: 2, nr: 2, h: 123 },
+    john: { img: 'wJohn', nl: 1, nr: 1, h: 125 },
+    anna: { img: 'wAnna', nl: 1, nr: 1, h: 117 },
+    liwei: { img: 'wLiwei', nl: 2, nr: 2, h: 119 },
+    cyclo: { img: 'wCyclo', nl: 1, nr: 1, h: 124, wheel: true },
     buggy: { img: 'wBuggy', nl: 1, nr: 1, h: 118, wheel: true },
   };
 
   // Ảnh và chiều cao vẽ của từng NPC (theo id nhân vật trong data/npc-dialogues-v4.json)
   const NPC_ART = {
-    mark: ['mark', 128], sarah: ['sarah', 128], emma: ['emma', 128], david: ['david', 130],
-    minh: ['cTailor', 128], tu: ['cLantern', 128], hoa: ['cOcop', 128], vendor: ['cVendor', 128],
+    mark: ['mark', 126], sarah: ['sarah', 126], emma: ['emma', 126], david: ['david', 126],
+    minh: ['cTailor', 125], tu: ['cLantern', 125], hoa: ['cOcop', 125], vendor: ['cVendor', 125],
   };
 
   // Điểm chạm trên mặt tiền nhà (toạ độ trong ảnh gốc)

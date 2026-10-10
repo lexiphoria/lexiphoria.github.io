@@ -473,7 +473,7 @@
     <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="48" name="" type="prop" x="2218" y="803" width="32" height="19">
+  <object id="48" name="" type="prop" x="1584" y="803" width="32" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="tree_cau"/>
@@ -623,11 +623,11 @@
     <property name="glow" value="0.1,0.3;0.9,0.3"/>
    </properties>
   </object>
-  <object id="63" name="" type="prop" x="819" y="733" width="90" height="19">
+  <object id="63" name="" type="prop" x="979" y="733" width="90" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="cyclo_red"/>
-    <property name="ph" type="float" value="98"/>
+    <property name="ph" type="float" value="124"/>
     <property name="quiet" type="bool" value="true"/>
     <property name="word" value="cyclo"/>
     <property name="solid" type="bool" value="true"/>
@@ -689,16 +689,16 @@
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="tourists_aodai"/>
-    <property name="ph" type="float" value="96"/>
+    <property name="ph" type="float" value="129"/>
     <property name="quiet" type="bool" value="true"/>
     <property name="word" value="tour-group"/>
    </properties>
   </object>
-  <object id="71" name="" type="prop" x="2120" y="736" width="227" height="19">
+  <object id="71" name="" type="prop" x="2132" y="736" width="227" height="19">
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="tour_group"/>
-    <property name="ph" type="float" value="100"/>
+    <property name="ph" type="float" value="142"/>
     <property name="quiet" type="bool" value="true"/>
     <property name="word" value="tour-group"/>
    </properties>
@@ -707,7 +707,7 @@
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="tourists_friends"/>
-    <property name="ph" type="float" value="104"/>
+    <property name="ph" type="float" value="128"/>
     <property name="quiet" type="bool" value="true"/>
     <property name="word" value="tour-group"/>
    </properties>
@@ -716,7 +716,7 @@
    <properties>
     <property name="kind" value="prop"/>
     <property name="img" value="tourists_family"/>
-    <property name="ph" type="float" value="100"/>
+    <property name="ph" type="float" value="135"/>
     <property name="quiet" type="bool" value="true"/>
     <property name="word" value="tour-group"/>
    </properties>

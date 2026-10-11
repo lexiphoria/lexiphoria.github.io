@@ -84,11 +84,18 @@
       transition: color 0.2s;
     }
     .back-link:hover { color: var(--text); }
+    /* Thanh trên cùng: về trang chủ (trái) và Sổ câu sai (phải) */
+    .top-links { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+    .top-links .back-link { margin-bottom: 0; }
+    .top-links .review-link b { color: #e11d48; }
   </style>
 </head>
 <body>
   <div class="menu-container">
-    <a href="../index.html" class="back-link">← Back to Home</a>
+    <div class="top-links">
+      <a href="../index.html" class="back-link">← Back to Home</a>
+      <a href="../review.html?deck=vact" class="back-link review-link" data-review-link="vact">📕 Mistakes <b data-review-count>0</b></a>
+    </div>
     <div class="menu-header">
       <div class="logo">🎯</div>
       <h1>V-ACT TEST</h1>
@@ -373,7 +380,19 @@
 
       var s25 = localStorage.getItem('vact_score_V-ACT English Test 25');
       if (s25) document.getElementById('score-test25').textContent = 'Điểm: ' + s25;
+
+      // Đề đang làm dở (phương án đã lưu bởi js/engine.js, chưa nộp bài)
+      for (var n = 1; n <= 25; n++) {
+        try {
+          var saved = JSON.parse(localStorage.getItem('vact_test_' + n + '_answers'));
+          var count = saved && saved.answers ? Object.keys(saved.answers).length : 0;
+          if (count && !saved.submitted) {
+            document.getElementById('score-test' + n).textContent = 'Đang làm: ' + count + '/30';
+          }
+        } catch (e) { }
+      }
     });
   </script>
+  <script src="../js/review-log.js?v=1"></script>
 </body>
 </html>

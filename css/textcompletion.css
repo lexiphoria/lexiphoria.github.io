@@ -123,6 +123,19 @@
     border-color: var(--accent1);
     transform: translateY(-1px);
   }
+  /* Nút Sổ câu sai: góc phải đầu trang, cùng kiểu nút Home */
+  .review-btn {
+    left: auto;
+    right: 0;
+  }
+  .review-btn b { color: var(--wrong); }
+  .result-review {
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+    text-decoration: none;
+  }
+  .result-review b { color: var(--wrong); }
   @media (max-width: 600px) {
     .home-btn {
       position: static;
@@ -604,6 +617,14 @@
     font-size: 0.85rem;
     color: var(--muted);
   }
+  /* Tiến độ đã lưu của từng đề trên màn chọn đề */
+  .eo-status {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent1);
+  }
+  .eo-status.done { color: var(--correct); }
   .eo-btn {
     background: var(--grad1);
     color: white;

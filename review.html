@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mistake Notebook</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/characters/sticker_art_painting.png">
+    <link rel="stylesheet" href="css/review.css?v=1">
+</head>
+
+<body>
+    <!-- Sổ câu sai: xem lại và làm lại những câu đã trả lời sai ở các deck (dữ liệu từ js/review-log.js) -->
+    <main class="rv-wrap">
+        <header class="rv-head">
+            <a class="rv-home" href="index.html">← Home</a>
+            <h1>Mistake Notebook</h1>
+        </header>
+
+        <nav class="rv-decks" id="deckTabs" aria-label="Decks"></nav>
+
+        <section class="rv-summary" id="summary" aria-live="polite"></section>
+
+        <div class="rv-toolbar">
+            <div class="rv-seg" role="group" aria-label="Show">
+                <button type="button" data-view="open" aria-pressed="true">To review <b id="countOpen">0</b></button>
+                <button type="button" data-view="fixed" aria-pressed="false">Fixed <b id="countFixed">0</b></button>
+            </div>
+            <div class="rv-seg" role="group" aria-label="Mode">
+                <button type="button" data-mode="review" aria-pressed="true">📖 Answers</button>
+                <button type="button" data-mode="retry" aria-pressed="false">✏️ Try again</button>
+            </div>
+            <button type="button" class="rv-clear" id="clearFixed" hidden>Clear fixed</button>
+        </div>
+
+        <section class="rv-list" id="list"></section>
+        <button type="button" class="rv-more" id="showMore" hidden>Show more</button>
+    </main>
+
+    <script src="js/study-tracker.js?v=2" data-track-time></script>
+    <script src="js/review-log.js?v=1"></script>
+    <script src="js/review.js?v=1"></script>
+</body>
+</html>

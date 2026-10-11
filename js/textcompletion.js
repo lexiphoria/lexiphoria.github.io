@@ -3365,20 +3365,83 @@ let corr = Array(5).fill(false);
 let cntC = 0, cntW = 0;
 let currentExamId = '';
 let resultRecorded = false;   // mỗi lượt làm bài chỉ báo kết quả một lần
+let restoring = false;        // đang dựng lại bài đã làm từ bộ nhớ: không ghi kết quả lần nữa
+
+// ---- Lưu tiến độ từng đề: phương án đã chọn được giữ khi thoát ra hay tải lại trang ----
+// localStorage 'textcompletion_progress' = { <id đề>: { picks: [chỉ số phương án | -1 = xem đáp án | null], at } }
+const TC_PROGRESS_KEY = 'textcompletion_progress';
+
+function loadTCProgress() {
+  try { return JSON.parse(localStorage.getItem(TC_PROGRESS_KEY)) || {}; } catch (e) { return {}; }
+}
+
+function saveTCProgress(all) {
+  try { localStorage.setItem(TC_PROGRESS_KEY, JSON.stringify(all)); } catch (e) { }
+}
+
+function savePick(qi, oi) {
+  const all = loadTCProgress();
+  const rec = all[currentExamId] || { picks: QS.map(() => null) };
+  rec.picks[qi] = oi;
+  rec.at = Date.now();
+  all[currentExamId] = rec;
+  saveTCProgress(all);
+}
+
+// Bài đọc dạng chữ thường, chỗ trống thành "(n) _____", để lưu kèm câu sai
+function passageText(exam) {
+  const html = exam.html.replace(/<span class="blank-tag">\s*(\d+)\s*<\/span>/g, '($1) _____');
+  return window.PortalReview ? PortalReview.tidy(html) : '';
+}
+
+// Ghi câu vừa trả lời vào Sổ câu sai (js/review-log.js) để xem lại / làm lại ở review.html
+function logAnswer(qi, oi) {
+  if (!window.PortalReview) return;
+  const idx = ALL_EXAMS.findIndex(e => e.id === currentExamId);
+  const exam = ALL_EXAMS[idx];
+  const q = QS[qi];
+  const text = passageText(exam);
+  const gap = new RegExp('\\(' + q.num + '\\) _____');
+  PortalReview.record('textcompletion', {
+    id: `tc:${exam.id}:${q.num}`,
+    src: `Test ${idx + 1} · ${exam.title}`,
+    tag: q.type,
+    question: PortalReview.around(text, gap).replace(gap, m => `<b>${m}</b>`) || `Question ${q.num}`,
+    options: q.opts,
+    answer: q.ans,
+    explain: `<b>${q.grammar}</b> ${q.tip}`,
+    context: { title: exam.title, text }
+  }, oi);
+}
 
 function initApp() {
   const selectScreen = document.getElementById('select-screen');
   selectScreen.innerHTML = '';
 
+  const progress = loadTCProgress();
   ALL_EXAMS.forEach((exam, idx) => {
+    const picks = (progress[exam.id] && progress[exam.id].picks) || [];
+    const total = exam.questions.length;
+    const answered = picks.filter(p => p !== null && p !== undefined).length;
+    const correct = picks.filter((p, i) => exam.questions[i] && p === exam.questions[i].ans).length;
+    let status = '';
+    let action = 'Start Test';
+    if (answered >= total) {
+      status = `<div class="eo-status done">✓ Score ${correct}/${total}</div>`;
+      action = 'Review';
+    } else if (answered) {
+      status = `<div class="eo-status">In progress · ${answered}/${total} answered</div>`;
+      action = 'Continue';
+    }
     const div = document.createElement('div');
     div.className = 'exam-option';
     div.innerHTML = `
       <div>
         <div class="eo-title">Test ${idx + 1}: ${exam.title}</div>
         <div class="eo-meta">${exam.meta}</div>
+        ${status}
       </div>
-      <button class="eo-btn">Start Test</button>
+      <button class="eo-btn">${action}</button>
     `;
     div.onclick = () => startExam(exam.id);
     selectScreen.appendChild(div);
@@ -3386,6 +3449,7 @@ function initApp() {
 }
 
 function showSelectScreen() {
+  initApp();   // vẽ lại trạng thái đã lưu của các đề
   document.getElementById('exam-container').style.display = 'none';
   document.getElementById('select-screen').style.display = 'flex';
   document.getElementById('main-subtitle').textContent = 'Text Completion · Reading Comprehension';
@@ -3405,6 +3469,25 @@ function startExam(id) {
 
   QS = exam.questions;
   currentExamId = id;
+  resetAll();
+
+  const saved = loadTCProgress()[id];
+  if (saved && Array.isArray(saved.picks)) {
+    restoring = true;
+    saved.picks.forEach((oi, qi) => {
+      if (qi >= QS.length || oi === null || oi === undefined || done[qi]) return;
+      if (oi === -1) revealOne(qi); else pick(qi, oi);
+    });
+    if (done.every(Boolean)) showResult();
+    restoring = false;
+  }
+}
+
+// Nút Reset: xoá bài đã lưu của đề này rồi làm lại từ đầu
+function resetExam() {
+  const all = loadTCProgress();
+  delete all[currentExamId];
+  saveTCProgress(all);
   resetAll();
 }
 
@@ -3479,34 +3562,46 @@ function pick(qi, oi) {
     </div>
   `;
 
+  if (!restoring) {
+    savePick(qi, oi);
+    logAnswer(qi, oi);
+  }
+
   updateBar();
-  if (done.every(Boolean)) showResult();
+  if (done.every(Boolean) && !restoring) showResult();
 }
 
 function revealAll() {
   QS.forEach((q, qi) => {
-    if (done[qi]) return;
-    done[qi] = true;
-    for (let i = 0; i < 4; i++) {
-      const el = document.getElementById(`op${qi}_${i}`);
-      el.classList.add('locked');
-      if (i === q.ans) el.classList.add('correct');
-      else el.classList.add('dimmed');
-    }
-    const fb = document.getElementById(`fb-${qi}`);
-    fb.className = 'feedback show ok';
-    fb.innerHTML = `
-      <div class="fb-row">
-        <span class="fb-icon">&#8594;</span>
-        <div><div class="fb-title">Answer: ${L[q.ans]} &mdash; ${q.opts[q.ans]}</div></div>
-      </div>
-      <div class="fb-explain">
-        <span class="fb-grammar">${q.grammar}</span>&nbsp;&nbsp;${q.tip}
-      </div>
-    `;
+    if (!done[qi]) revealOne(qi);
   });
   updateBar();
   showResult();
+}
+
+// Hiện đáp án một câu chưa làm (Show all answers); lưu là -1 để mở lại vẫn thấy
+function revealOne(qi) {
+  const q = QS[qi];
+  done[qi] = true;
+  if (!restoring) savePick(qi, -1);
+  for (let i = 0; i < 4; i++) {
+    const el = document.getElementById(`op${qi}_${i}`);
+    el.classList.add('locked');
+    if (i === q.ans) el.classList.add('correct');
+    else el.classList.add('dimmed');
+  }
+  const fb = document.getElementById(`fb-${qi}`);
+  fb.className = 'feedback show ok';
+  fb.innerHTML = `
+    <div class="fb-row">
+      <span class="fb-icon">&#8594;</span>
+      <div><div class="fb-title">Answer: ${L[q.ans]} &mdash; ${q.opts[q.ans]}</div></div>
+    </div>
+    <div class="fb-explain">
+      <span class="fb-grammar">${q.grammar}</span>&nbsp;&nbsp;${q.tip}
+    </div>
+  `;
+  updateBar();
 }
 
 function resetAll() {
@@ -3542,7 +3637,7 @@ function showResult() {
   const totalQ = (Array.isArray(QS) && QS.length > 0) ? QS.length : 5;
   const n = corr.filter(Boolean).length;
   // Báo kết quả cho cánh đồng lúa trên trang chủ (js/study-tracker.js)
-  if (!resultRecorded && window.PortalStudy) {
+  if (!resultRecorded && !restoring && window.PortalStudy) {
     resultRecorded = true;
     PortalStudy.recordQuiz(n, totalQ);
   }
@@ -3570,7 +3665,8 @@ function showResult() {
     nextBtn.textContent = 'Next Test';
   }
 
-  panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  if (!restoring) panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  if (window.PortalReview) PortalReview.refreshLinks();
 }
 
 // Khởi tạo app

@@ -192,11 +192,98 @@
   const totalQ = TEST_DATA ? TEST_DATA.totalQuestions : 30;
   const answeredSet = new Set();
 
+  // ─── Lưu tiến độ: phương án đã chọn, thời gian đã làm và trạng thái nộp bài, giữ khi tải lại trang ───
+  const answersKey = `vact_test_${testNum}_answers`;
+  let picks = {};              // id câu → chỉ số phương án đã chọn
+  let submitted = false;
+  let restoring = false;       // đang dựng lại bài đã lưu: không ghi lại kết quả lần nữa
+
+  function loadSaved() {
+    try {
+      return JSON.parse(localStorage.getItem(answersKey));
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function saveProgress() {
+    try {
+      localStorage.setItem(answersKey, JSON.stringify({
+        answers: picks,
+        elapsed: Math.floor((Date.now() - startTime) / 1000),
+        submitted
+      }));
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  window.addEventListener("pagehide", () => {
+    if (answeredSet.size && !submitted) saveProgress();
+  });
+
+  // Ghi câu vừa trả lời vào Sổ câu sai (js/review-log.js) để xem lại / làm lại ở review.html
+  function logAnswer(qData, idx) {
+    if (!window.PortalReview) return;
+    const part = TEST_DATA.parts.find((p) => p.questions.indexOf(qData) !== -1);
+    const reading = part && part.type === "reading" && Array.isArray(part.passage);
+    window.PortalReview.record("vact", {
+      src: "Test " + testNum + (part ? " · " + part.name : ""),
+      question: qData.text,
+      options: qData.options,
+      answer: qData.correct,
+      explain: qData.explain,
+      context: reading ? {
+        title: "Reading passage",
+        text: part.passage.map((p, i) => "[" + (i + 1) + "] " + p).join("\n\n")
+      } : null
+    }, idx);
+  }
+
+  // Hiện đáp án các câu chưa làm (sau khi nộp bài)
+  function revealUnanswered() {
+    TEST_DATA.parts.forEach((part) => {
+      if (Array.isArray(part.questions)) {
+        part.questions.forEach((q) => {
+          if (q && !answeredSet.has(q.id)) {
+            const card = document.getElementById("q-" + q.id);
+            if (card) {
+              const btns = card.querySelectorAll(".option-btn");
+              btns.forEach((btn, i) => {
+                btn.classList.add("disabled");
+                if (i === q.correct) btn.classList.add("correct");
+              });
+              const expEl = document.getElementById("exp-" + q.id);
+              if (expEl) expEl.classList.add("show");
+            }
+          }
+        });
+      }
+    });
+  }
+
+  // Dựng lại bài đã lưu: chọn lại các phương án, chạy tiếp đồng hồ từ thời gian đã làm
+  function restoreProgress() {
+    const saved = loadSaved();
+    if (!saved || !saved.answers) return;
+    restoring = true;
+    Object.keys(saved.answers).forEach((qid) => window.__selectOption(Number(qid), saved.answers[qid]));
+    restoring = false;
+    startTime = Date.now() - (saved.elapsed || 0) * 1000;
+    if (saved.submitted) {
+      submitted = true;
+      studyRecorded = true;
+      revealUnanswered();
+    }
+  }
+
   // ─── Init ───
   function init() {
     if (TEST_DATA) {
       renderTest();
-      startTimer();
+      restoreProgress();
+      if (submitted) showElapsed();
+      else startTimer();
       updateStats();
     } else {
       const container = document.getElementById("test-body");
@@ -213,6 +300,13 @@
   }
 
   // ─── Timer ───
+  function showElapsed() {
+    const el = document.getElementById("timer");
+    if (!el) return;
+    const elapsed = Math.floor((Date.now() - startTime) / 1000);
+    el.textContent = String(Math.floor(elapsed / 60)).padStart(2, "0") + ":" + String(elapsed % 60).padStart(2, "0");
+  }
+
   function startTimer() {
     const el = document.getElementById("timer");
     if (!el) return;
@@ -292,6 +386,11 @@
     answered++;
     if (isCorrect) correctCount++;
     else wrongCount++;
+    picks[qid] = idx;
+    if (!restoring) {
+      saveProgress();
+      logAnswer(qData, idx);
+    }
 
     // Style buttons
     btns.forEach((btn, i) => {
@@ -329,6 +428,10 @@
   window.__submitTest = function () {
     if (!TEST_DATA) return;
     clearInterval(timerInterval);
+    if (!submitted) {
+      submitted = true;
+      saveProgress();
+    }
     const elapsed = Math.floor((Date.now() - startTime) / 1000);
     const m = Math.floor(elapsed / 60);
     const s = elapsed % 60;
@@ -372,24 +475,8 @@
     }
 
     // Also reveal all unanswered
-    TEST_DATA.parts.forEach((part) => {
-      if (Array.isArray(part.questions)) {
-        part.questions.forEach((q) => {
-          if (q && !answeredSet.has(q.id)) {
-            const card = document.getElementById("q-" + q.id);
-            if (card) {
-              const btns = card.querySelectorAll(".option-btn");
-              btns.forEach((btn, i) => {
-                btn.classList.add("disabled");
-                if (i === q.correct) btn.classList.add("correct");
-              });
-              const expEl = document.getElementById("exp-" + q.id);
-              if (expEl) expEl.classList.add("show");
-            }
-          }
-        });
-      }
-    });
+    revealUnanswered();
+    if (window.PortalReview) window.PortalReview.refreshLinks();
   };
 
   // ─── Reset ───
@@ -397,6 +484,7 @@
     // Clear active test cache to force a new shuffle
     try {
       localStorage.removeItem(localStorageKey);
+      localStorage.removeItem(answersKey);
     } catch (e) {
       console.error(e);
     }
@@ -415,6 +503,9 @@
     wrongCount = 0;
     startTime = Date.now();
     answeredSet.clear();
+    picks = {};
+    submitted = false;
+    studyRecorded = false;
     const elOverlay = document.getElementById("result-overlay");
     if (elOverlay) elOverlay.classList.remove("show");
     renderTest();

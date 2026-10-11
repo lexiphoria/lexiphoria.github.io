@@ -182,6 +182,9 @@
         <button class="btn btn-primary" onclick="window.restartTest()">
           🔄 Làm Lại Đề Này
         </button>
+        <a class="btn btn-secondary" data-review-link="examprep" href="../review.html?deck=examprep" style="grid-column:1 / -1; justify-content:center; text-decoration:none;">
+          📕 Xem lại câu sai (Mistake Notebook) <b data-review-count style="color:#e11d48;">0</b>
+        </a>
       </div>
     </div>
   </div>
@@ -205,6 +208,7 @@
   <!-- Scripts -->
   <script src="js/data.js"></script>
   <script src="../js/study-tracker.js?v=2" data-track-time></script>
-  <script src="js/app.js?v=2"></script>
+  <script src="../js/review-log.js?v=1"></script>
+  <script src="js/app.js?v=3"></script>
 </body>
 </html>

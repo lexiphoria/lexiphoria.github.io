@@ -121,6 +121,15 @@
                     </details>
                 </section>
 
+                <!-- Tiến độ từng deck + Sổ câu sai (js/review-log.js, js/progress-panel.js, review.html) -->
+                <section class="progress-card" aria-labelledby="progress-title">
+                    <div class="progress-head">
+                        <h2 id="progress-title"><span aria-hidden="true">📕</span> My Progress</h2>
+                        <a class="progress-all" data-review-link="all" href="review.html">Mistakes <b data-review-count>0</b></a>
+                    </div>
+                    <ul class="progress-list" id="progressList"></ul>
+                </section>
+
                 <!-- Panel Extra Materials (Immersion Town, V-ACT); Exam Idioms nằm trong Vocabulary Mastery -->
                 <aside class="side-panel" aria-labelledby="extra-title">
                     <h2 class="section-title" id="extra-title">Extra Materials</h2>
@@ -326,6 +335,8 @@
 
     <script src="js/study-tracker.js?v=1"></script>
     <script src="js/rice-widget.js?v=2"></script>
+    <script src="js/review-log.js?v=1"></script>
+    <script src="js/progress-panel.js?v=1"></script>
 </body>
 
 </html>

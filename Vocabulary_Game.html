@@ -509,6 +509,9 @@
           <button class="btn-res btn-res-secondary" onclick="goToDashboard()">
             🏠 Back to Topics
           </button>
+          <a class="btn-res btn-res-secondary" data-review-link="vocabulary" href="review.html?deck=vocabulary" style="text-decoration:none;">
+            📕 Mistakes <b data-review-count>0</b>
+          </a>
         </div>
       </div>
     </div>
@@ -520,6 +523,7 @@
 
   <!-- Script data file -->
   <script src="js/study-tracker.js?v=2" data-track-time></script>
+  <script src="js/review-log.js?v=1"></script>
   <script src="js/vocabulary_data.js?v=1.0.9"></script>
   <script src="js/vocabulary_extras.js?v=1.0.4"></script>
   <script src="js/exam_idioms_data.js?v=6.0.0"></script>
@@ -1269,6 +1273,22 @@
       });
     }
 
+    // Ghi câu vừa trả lời vào Sổ câu sai (js/review-log.js) để xem lại / làm lại ở review.html
+    function logVocabAnswer(kind, qWord, question, options, correctText, selectedText, explain) {
+      if (!window.PortalReview) return;
+      const topicName = document.getElementById('mode-topic-badge').innerText.toLowerCase()
+        .replace(/\b\w/g, c => c.toUpperCase());
+      PortalReview.record('vocabulary', {
+        id: `vocab:${currentTopic}:${qWord.word}:${kind}`,
+        src: `${topicName} · ${kind === 'meaning' ? 'Meaning Quiz' : 'Sentence Completion'}`,
+        tag: describeWordType(qWord.type).label,
+        question,
+        options,
+        answer: options.indexOf(correctText),
+        explain
+      }, options.indexOf(selectedText));
+    }
+
     function checkQuizAnswer(selectedOption, selectedBtn) {
       if (selectedBtn.classList.contains('locked')) return; // already answered
       const qWord = quizQuestionList[currentQuestionIndex];
@@ -1301,6 +1321,9 @@
       // Display Explanation
       const expContent = document.getElementById('quiz-explanation-content');
       expContent.innerHTML = `<strong>Example:</strong> ${qWord.example}<br><em>Translation: ${qWord.exampleTranslation}</em>`;
+      logVocabAnswer('meaning', qWord,
+        `What does <b>${escapeHtmlText(qWord.word)}</b>${qWord.ipa ? ' ' + escapeHtmlText(qWord.ipa) : ''} mean?`,
+        Array.from(buttons, btn => btn.innerText), qWord.meaning, selectedOption, expContent.innerHTML);
       document.getElementById('quiz-explanation-box').style.display = 'block';
 
       document.getElementById('btn-quiz-next').style.display = 'inline-flex';
@@ -1555,6 +1578,9 @@
       
       expContent.innerHTML = explanationHtml;
       document.getElementById('sentence-explanation-box').style.display = 'block';
+      logVocabAnswer('sentence', qWord,
+        escapeHtmlText(document.getElementById('sentence-question-text').innerText.replace(/^Question \d+:\s*/, '')),
+        Array.from(buttons, btn => btn.dataset.value), correctOption, selectedOption, explanationHtml);
       document.getElementById('btn-sentence-next').style.display = 'inline-flex';
     }
 

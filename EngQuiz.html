@@ -51,8 +51,12 @@
           <div class="stat-lbl">Best Score</div>
         </div>
       </div>
-      <button class="btn-secondary" style="margin-top:20px;font-size:12px;padding:8px 20px;"
-        onclick="resetAllProgress()">🗑 Reset Progress</button>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:20px;">
+        <a class="btn-secondary" data-review-link="engquiz" href="review.html?deck=engquiz"
+          style="display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:8px 20px;text-decoration:none;">📕 Mistakes <b data-review-count>0</b></a>
+        <button class="btn-secondary" style="font-size:12px;padding:8px 20px;"
+          onclick="resetAllProgress()">🗑 Reset Progress</button>
+      </div>
     </div>
 
     <!-- TEXT SELECT -->
@@ -123,6 +127,8 @@
         <a class="btn-secondary" href="index.html"
           style="display:inline-flex;align-items:center;text-decoration:none;">🏠 Home</a>
         <button class="btn-secondary" onclick="showScreen('select-screen')">← All Texts</button>
+        <a class="btn-secondary" data-review-link="engquiz" href="review.html?deck=engquiz"
+          style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;">📕 Mistakes <b data-review-count>0</b></a>
         <button class="btn-primary" onclick="nextText()">Next Text →</button>
       </div>
     </div>
@@ -178,7 +184,8 @@
   </div>
 
   <script src="js/study-tracker.js?v=2" data-track-time></script>
-  <script src="js/engquiz.js?v=20261010"></script>
+  <script src="js/review-log.js?v=1"></script>
+  <script src="js/engquiz.js?v=20261011"></script>
 </body>
 
 </html>

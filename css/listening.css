@@ -11,6 +11,7 @@
   --indigo: #1B4D3E;
   --blue: #2E4A7D;
   --ink: #1F1D24;
+  --teal: #1A535C;      /* Xanh cổ vịt */
   --terracotta: #A84B26;
   --yellow: #E6B422;
   --right: #1B6B3A;
@@ -122,7 +123,7 @@ body {
 
 .level-a2 { --tab-bg: var(--yellow); --tab-ink: var(--ink-black); }
 .level-b1 { --tab-bg: var(--terracotta); --tab-ink: var(--cream); }
-.level-b2 { --tab-bg: var(--ink); --tab-ink: #F2D27C; }
+.level-b2 { --tab-bg: var(--teal); --tab-ink: var(--cream); }
 
 .level-code {
   grid-area: code;
@@ -170,6 +171,37 @@ body {
 .stamp:hover {
   transform: translateY(-4px) rotate(-0.6deg);
   filter: drop-shadow(0 12px 14px rgba(96, 65, 18, 0.26));
+}
+
+/* Màu tem đồng bộ theo Level */
+.stamp--a2 {
+  --stamp-bg: var(--yellow);
+  --stamp-ink: var(--ink-black);
+}
+.stamp--a2 .tag:not(.tag-best) {
+  background: rgba(255, 255, 255, 0.45);
+  border-color: var(--ink-black);
+  color: var(--ink-black);
+}
+
+.stamp--b1 {
+  --stamp-bg: var(--terracotta);
+  --stamp-ink: var(--cream);
+}
+.stamp--b1 .tag:not(.tag-best) {
+  background: rgba(0, 0, 0, 0.25);
+  border-color: rgba(255, 246, 227, 0.85);
+  color: var(--cream);
+}
+
+.stamp--b2 {
+  --stamp-bg: var(--teal);
+  --stamp-ink: var(--cream);
+}
+.stamp--b2 .tag:not(.tag-best) {
+  background: rgba(0, 0, 0, 0.22);
+  border-color: rgba(255, 246, 227, 0.85);
+  color: var(--cream);
 }
 
 .stamp--bbc { --stamp-bg: var(--blue); }

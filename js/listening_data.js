@@ -390,35 +390,35 @@ window.LISTENING_LESSONS = [
     ]
   },
   {
-    id: 'b2-climate-limits',
+    id: 'b2-tourism-quang-ninh',
     level: 'B2',
-    source: 'bbc',
-    series: 'Learning English from the News',
-    title: 'Earth pushed beyond its limits',
-    videoId: 'wXG6yV_oJ-M',
+    source: 'vtv',
+    series: 'Vietnam Today',
+    title: 'Experiential tourism in Quang Ninh',
+    videoId: '46QQuQurTx8',
     start: 0,
-    end: 390,
+    end: 180,
     parts: [
       {
         type: 'gap',
         limit: 'ONE WORD AND/OR A NUMBER',
-        heading: 'Climate warnings & global indicators',
+        heading: 'Tourism transformation & new visitor experiences',
         items: [
-          { q: 'The UN report warns that planetary indicators are currently flashing ___.', answer: ['red'], at: 35 },
-          { q: 'Scientists observed unprecedented levels of ocean ___.', answer: ['warming', 'heat'], at: 68 },
-          { q: 'An energy ___ occurs when Earth absorbs more heat than it radiates into space.', answer: ['imbalance'], at: 115 },
-          { q: 'The expression ‘pushed beyond the limit’ means safe environmental ___ have been exceeded.', answer: ['boundaries', 'limits', 'boundary'], at: 162 },
-          { q: 'Greenhouse gas concentrations reached a record ___ in the atmosphere.', answer: ['high'], at: 215 },
-          { q: 'The report urges global leaders to accelerate the transition to ___ energy.', answer: ['renewable', 'clean'], at: 285 }
+          { q: 'Quang Ninh is best known globally for the UNESCO World Heritage site of ___ Bay.', answer: ['ha long', 'halong'], at: 15 },
+          { q: 'The province is shifting from standard sightseeing to ___ travel.', answer: ['experiential'], at: 35 },
+          { q: 'Visitors can enjoy live musical performances staged inside natural ___.', answer: ['caves', 'cave'], at: 68 },
+          { q: 'New products combine local cuisine, relaxation and ___ activities.', answer: ['wellness'], at: 95 },
+          { q: 'The strategy prioritises sustainable development and ___ tourism models.', answer: ['green'], at: 130 },
+          { q: 'Local authorities aim to increase the average length of ___ for travelers.', answer: ['stay'], at: 155 }
         ]
       },
       {
         type: 'mcq',
         items: [
-          { q: 'What does the metaphor ‘flashing red’ signify in the report?', options: ['An urgent warning of extreme danger', 'A minor seasonal temperature fluctuation', 'A malfunction in meteorological sensors'], answer: 0, at: 48 },
-          { q: 'Why is ocean warming particularly concerning according to scientists?', options: ['Oceans absorb and store the vast majority of excess planetary heat.', 'It halts cargo ships from navigating safely.', 'It rapidly alters freshwater salinity in estuaries.'], answer: 0, at: 82 },
-          { q: 'What does the term ‘energy imbalance’ describe?', options: ['The planet takes in more solar heat than it radiates back out.', 'Power grids are failing across developing nations.', 'Renewable energy production outpaces fossil fuel usage.'], answer: 0, at: 125 },
-          { q: 'What key imperative does the United Nations emphasize?', options: ['Drastically reducing carbon emissions without delay', 'Building artificial barriers along all coastlines', 'Waiting for future carbon capture technology'], answer: 0, at: 320 }
+          { q: 'What is the primary objective of Quang Ninh’s new tourism policy?', options: ['To diversify offerings and encourage higher visitor spending', 'To completely shut down traditional boat tours in the bay', 'To build international airports on isolated islands'], answer: 0, at: 42 },
+          { q: 'What unique experience is offered to tourists inside the caves?', options: ['Live musical and cultural performances with ambient lighting', 'Extreme sports and rock climbing competitions', 'Fine dining cooking classes with international chefs'], answer: 0, at: 75 },
+          { q: 'Which emerging travel trend is being actively promoted?', options: ['Wellness and eco-friendly retreat tourism', 'Budget backpacking without local guides', 'Virtual reality tours replacing physical visits'], answer: 0, at: 102 },
+          { q: 'How are local businesses adapting to international expectations?', options: ['By upgrading service quality and preserving cultural identity', 'By lowering all prices to attract mass budget travelers', 'By serving exclusively Western fast food'], answer: 0, at: 145 }
         ]
       }
     ]

@@ -106,7 +106,7 @@
       const best = scores[l.id];
       const total = questionCount(l);
       const src = SOURCES[l.source] || { name: l.source };
-      return `<article class="lesson-card stamp stamp--${l.source}">
+      return `<article class="lesson-card stamp stamp--${l.level.toLowerCase()} stamp--source-${l.source}">
         <div class="stamp-inner">
           <div class="lesson-thumb">
             <img src="https://i.ytimg.com/vi/${esc(l.videoId)}/mqdefault.jpg" alt="" loading="lazy">

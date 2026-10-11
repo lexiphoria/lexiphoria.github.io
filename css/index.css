@@ -701,6 +701,27 @@ body {
   transform: translateX(-50%) translateY(-1px);
 }
 
+/* Tem có hai nút (Cloze Text): hàng nút căn giữa ở đáy tem */
+.core-grid .btn-row {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  bottom: 7%;
+  display: flex;
+  justify-content: center;
+  gap: 3cqw;
+}
+
+.core-grid .btn-row .btn {
+  position: static;
+  padding: 1.1cqw 4.5cqw;
+  transform: none;
+}
+
+.core-grid .btn-row .btn:hover {
+  transform: translateY(-1px);
+}
+
 .card p {
   margin: 0 0 18px;
   color: var(--muted);

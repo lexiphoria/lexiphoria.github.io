@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listening Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/characters/sticker_art_painting.png">
+    <link rel="stylesheet" href="css/listening.css?v=1">
+</head>
+
+<body>
+    <main class="container">
+        <header class="lab-header">
+            <a class="home-link" href="index.html">← Home</a>
+            <h1><span aria-hidden="true">🎧</span> Listening Lab</h1>
+        </header>
+
+        <!-- Danh sách bài theo level -->
+        <section id="view-list">
+            <div class="level-tabs" id="level-tabs" role="tablist" aria-label="Level"></div>
+            <div class="lesson-grid" id="lesson-grid"></div>
+        </section>
+
+        <!-- Bài làm: video bên trái, phiếu câu hỏi bên phải -->
+        <section id="view-lesson" hidden>
+            <div class="lesson-bar">
+                <button type="button" class="back-btn" id="back-btn">← Lessons</button>
+                <span class="level-chip" id="lesson-level"></span>
+                <h2 id="lesson-title"></h2>
+            </div>
+            <div class="lesson-layout">
+                <div class="video-col">
+                    <div class="player-frame">
+                        <div class="player-box" id="player-box"></div>
+                    </div>
+                    <p class="lesson-source" id="lesson-source"></p>
+                </div>
+                <div class="sheet-col">
+                    <div class="question-sheet" id="question-sheet"></div>
+                    <div class="score-box" id="score-box" aria-live="polite" hidden></div>
+                    <div class="sheet-actions">
+                        <button type="button" class="btn btn-check" id="check-btn">Check answers</button>
+                        <button type="button" class="btn" id="retry-btn" hidden>↺ Try again</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/study-tracker.js?v=2" data-track-time></script>
+    <script src="js/listening_data.js?v=1"></script>
+    <script src="js/listening.js?v=1"></script>
+</body>
+
+</html>

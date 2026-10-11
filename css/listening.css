@@ -1,0 +1,618 @@
+/* ---------- Listening Lab: cùng phong cách tem Đông Hồ với trang chủ ---------- */
+:root {
+  --bg: #F5E6C8;        /* Giấy điệp */
+  --bg-fiber: #E8D5B0;
+  --paper-grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paperNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0  0 0.9 0 0 0  0 0 0.7 0 0  0 0 0 0.28 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paperNoise)'/%3E%3C/svg%3E");
+  --ink-black: #1A1A1A;
+  --paper: #FFFBF0;
+  --cream: #FFF6E3;
+  --muted: #6B5B45;
+  --vermilion: #C83228;
+  --indigo: #1B4D3E;
+  --blue: #2E4A7D;
+  --ink: #1F1D24;
+  --terracotta: #A84B26;
+  --yellow: #E6B422;
+  --right: #1B6B3A;
+  --wrong: #B3261E;
+  --radius: 18px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', Tahoma, sans-serif;
+  color: var(--ink-black);
+  background-color: var(--bg);
+  background-image:
+    var(--paper-grain),
+    radial-gradient(ellipse at 50% 35%, transparent 45%, var(--bg-fiber) 100%);
+  background-size: 180px 180px, 100% 100%;
+  background-blend-mode: multiply, normal;
+  min-height: 100vh;
+  line-height: 1.55;
+}
+
+[hidden] { display: none !important; }
+
+.container {
+  width: min(1280px, 94vw);
+  margin: 0 auto;
+  padding: 24px 0 48px;
+}
+
+/* ---------- Đầu trang ---------- */
+.lab-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.lab-header h1 {
+  margin: 0;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  line-height: 1.1;
+}
+
+.home-link,
+.back-btn {
+  flex-shrink: 0;
+  display: inline-block;
+  padding: 7px 16px;
+  font: 800 0.9rem 'Plus Jakarta Sans', sans-serif;
+  color: var(--ink-black);
+  text-decoration: none;
+  background: var(--cream);
+  border: 2px solid var(--ink-black);
+  border-radius: 999px;
+  box-shadow: 0 3px 0 var(--ink-black);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.home-link:hover,
+.back-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 0 var(--ink-black);
+}
+
+/* ---------- Thanh chọn level ---------- */
+.level-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.level-tab {
+  --tab-bg: var(--yellow);
+  --tab-ink: var(--ink-black);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "code name" "code count";
+  align-items: center;
+  column-gap: 14px;
+  padding: 12px 18px;
+  text-align: left;
+  font-family: inherit;
+  color: var(--ink-black);
+  background: var(--paper);
+  border: 2px solid var(--ink-black);
+  border-radius: 4px;
+  box-shadow: 4px 4px 0 var(--ink-black);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.level-tab:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--ink-black); }
+
+.level-tab[aria-selected="true"] {
+  background: var(--tab-bg);
+  color: var(--tab-ink);
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--ink-black);
+}
+
+.level-a2 { --tab-bg: var(--yellow); --tab-ink: var(--ink-black); }
+.level-b1 { --tab-bg: var(--terracotta); --tab-ink: var(--cream); }
+.level-b2 { --tab-bg: var(--ink); --tab-ink: #F2D27C; }
+
+.level-code {
+  grid-area: code;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.level-name {
+  grid-area: name;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.level-count {
+  grid-area: count;
+  font-size: 0.78rem;
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+/* ---------- Thẻ bài nghe dạng tem ---------- */
+.lesson-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.stamp {
+  --perf: 6px;
+  --stamp-paper: var(--paper);
+  --stamp-bg: var(--blue);
+  --stamp-ink: var(--cream);
+  display: flex;
+  padding: calc(2 * var(--perf));
+  background:
+    radial-gradient(var(--perf), #0000 98%, var(--stamp-paper)) round
+      calc(-1.5 * var(--perf)) calc(-1.5 * var(--perf)) / calc(3 * var(--perf)) calc(3 * var(--perf)),
+    linear-gradient(var(--stamp-paper) 0 0) no-repeat
+      50% / calc(100% - 3 * var(--perf)) calc(100% - 3 * var(--perf));
+  filter: drop-shadow(0 6px 8px rgba(96, 65, 18, 0.2));
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.stamp:hover {
+  transform: translateY(-4px) rotate(-0.6deg);
+  filter: drop-shadow(0 12px 14px rgba(96, 65, 18, 0.26));
+}
+
+.stamp--bbc { --stamp-bg: var(--blue); }
+.stamp--vtv { --stamp-bg: var(--vermilion); }
+
+.stamp-inner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 12px 14px;
+  background: var(--stamp-bg);
+  color: var(--stamp-ink);
+  border: 2px solid var(--ink-black);
+  border-radius: 3px;
+}
+
+.stamp-inner::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: var(--paper-grain);
+  background-size: 180px 180px;
+  mix-blend-mode: multiply;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.lesson-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: rgba(0, 0, 0, 0.25);
+  border: 2px solid var(--ink-black);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.lesson-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lesson-time {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  padding: 1px 7px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+}
+
+.lesson-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  padding: 2px 9px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  border: 1.5px solid currentColor;
+  border-radius: 999px;
+}
+
+.tag-best {
+  color: var(--ink-black);
+  background: #F2D27C;
+  border-color: var(--ink-black);
+}
+
+.lesson-card h3 {
+  margin: 2px 0 0;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.lesson-meta {
+  margin: 0;
+  font-size: 0.82rem;
+  opacity: 0.85;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 20px;
+  font: 800 0.92rem 'Plus Jakarta Sans', sans-serif;
+  color: var(--ink-black);
+  text-align: center;
+  text-decoration: none;
+  background: var(--cream);
+  border: 2px solid var(--ink-black);
+  border-radius: 999px;
+  box-shadow: 0 3px 0 var(--ink-black);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.btn:hover {
+  background: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 0 var(--ink-black);
+}
+
+.lesson-card .btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* ---------- Bài làm ---------- */
+.lesson-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.lesson-bar h2 {
+  margin: 0;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(1.25rem, 2.4vw, 1.7rem);
+  line-height: 1.15;
+}
+
+.level-chip {
+  padding: 3px 12px;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.05rem;
+  color: var(--tab-ink);
+  background: var(--tab-bg);
+  border: 2px solid var(--ink-black);
+  border-radius: 4px;
+}
+
+.lesson-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 26px;
+  align-items: start;
+}
+
+.video-col {
+  position: sticky;
+  top: 16px;
+}
+
+/* Khung video như ô tranh có viền mực */
+.player-frame {
+  padding: 10px;
+  background: var(--ink);
+  border: 2px solid var(--ink-black);
+  border-radius: 4px;
+  box-shadow: 5px 5px 0 rgba(26, 26, 26, 0.85);
+}
+
+.player-box {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.player-box iframe,
+.player-box > div {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.lesson-source {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  align-items: center;
+  margin: 10px 2px 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.lesson-source a { color: inherit; font-weight: 700; }
+
+.lesson-source .yt-link {
+  margin-left: auto;
+  color: var(--vermilion);
+}
+
+/* Phiếu câu hỏi kiểu đề IELTS */
+.question-sheet {
+  padding: 4px 22px 10px;
+  background: #FFFDF7;
+  border: 2px solid var(--ink-black);
+  border-radius: 4px;
+  box-shadow: 5px 5px 0 rgba(26, 26, 26, 0.85);
+}
+
+.q-part + .q-part {
+  border-top: 2px dashed #CDB98F;
+}
+
+.q-part h3 {
+  margin: 18px 0 2px;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.q-instr {
+  margin: 0 0 10px;
+  font-size: 0.92rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.q-heading {
+  margin: 0 0 8px;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.q-list {
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+}
+
+.q-item {
+  padding: 9px 10px;
+  border-radius: 6px;
+  border-left: 4px solid transparent;
+}
+
+.q-item + .q-item { margin-top: 4px; }
+
+.q-text {
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.9;
+}
+
+.q-num {
+  display: inline-grid;
+  place-items: center;
+  min-width: 26px;
+  height: 26px;
+  margin-right: 9px;
+  padding: 0 4px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  border: 2px solid var(--ink-black);
+  border-radius: 3px;
+  vertical-align: 1px;
+}
+
+.gap-input {
+  width: 9.5em;
+  margin: 0 6px;
+  padding: 2px 8px;
+  font: 700 1rem 'Plus Jakarta Sans', sans-serif;
+  color: var(--blue);
+  background: transparent;
+  border: 0;
+  border-bottom: 2px dotted var(--ink-black);
+  border-radius: 0;
+}
+
+.gap-input:focus {
+  outline: none;
+  background: #FFF3CF;
+  border-bottom-style: solid;
+}
+
+.q-options {
+  display: grid;
+  gap: 4px;
+  margin: 6px 0 0 35px;
+}
+
+.q-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.q-option:hover { background: #FFF3CF; }
+
+.q-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.q-letter {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  border: 2px solid var(--ink-black);
+  border-radius: 50%;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.q-option input:checked + .q-letter {
+  color: var(--cream);
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+.q-option input:focus-visible + .q-letter {
+  outline: 3px solid var(--yellow);
+  outline-offset: 2px;
+}
+
+/* Sau khi chấm */
+.q-item.is-right { background: rgba(27, 107, 58, 0.08); border-left-color: var(--right); }
+.q-item.is-wrong { background: rgba(179, 38, 30, 0.07); border-left-color: var(--wrong); }
+
+.q-item.is-wrong .q-option.is-answer .q-letter,
+.q-item.is-right .q-option.is-answer .q-letter {
+  color: #fff;
+  background: var(--right);
+  border-color: var(--right);
+}
+
+.q-item.is-wrong .q-option input:checked + .q-letter {
+  background: var(--wrong);
+  border-color: var(--wrong);
+}
+
+.q-item.is-right .gap-input { color: var(--right); }
+.q-item.is-wrong .gap-input { color: var(--wrong); text-decoration: line-through; }
+
+.q-option:has(input:disabled) { cursor: default; }
+.q-option:has(input:disabled):hover { background: none; }
+
+.q-feedback:empty { display: none; }
+
+.q-feedback {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin: 6px 0 0 35px;
+  font-size: 0.88rem;
+}
+
+.fb-mark {
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.is-right .fb-mark { color: var(--right); }
+.is-wrong .fb-mark { color: var(--wrong); }
+
+.replay-btn {
+  padding: 2px 10px;
+  font: 800 0.8rem 'Plus Jakarta Sans', sans-serif;
+  color: var(--cream);
+  background: var(--ink);
+  border: 2px solid var(--ink-black);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.replay-btn:hover { background: var(--vermilion); }
+
+.score-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 18px;
+  padding: 12px 18px;
+  background: var(--cream);
+  border: 2px solid var(--ink-black);
+  border-radius: 4px;
+}
+
+.score-box.is-perfect { background: #F2D27C; }
+
+.score-num {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.score-num small { font-size: 1.1rem; opacity: 0.7; }
+
+.score-note { font-weight: 700; }
+
+.sheet-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.btn-check {
+  color: var(--cream);
+  background: var(--vermilion);
+}
+
+.btn-check:hover { background: #A9281F; }
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 3px;
+}
+
+/* ---------- Màn hình hẹp ---------- */
+@media (max-width: 900px) {
+  .lesson-layout { grid-template-columns: 1fr; }
+  .video-col { position: static; }
+}
+
+@media (max-width: 640px) {
+  .container { width: auto; margin: 0 16px; }
+  .level-tabs { gap: 8px; }
+  .level-tab {
+    grid-template-columns: 1fr;
+    grid-template-areas: "code" "name";
+    padding: 10px 8px;
+    text-align: center;
+    row-gap: 4px;
+  }
+  .level-count { display: none; }
+  .level-name { font-size: 0.72rem; }
+  .question-sheet { padding: 2px 12px 8px; }
+  .q-options, .q-feedback { margin-left: 0; }
+  .gap-input { width: 7.5em; }
+}

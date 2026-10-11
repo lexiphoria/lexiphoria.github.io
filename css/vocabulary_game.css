@@ -53,8 +53,8 @@ body {
 }
 
 .container {
-  width: min(900px, 95vw);
-  margin: 20px auto 40px;
+  width: min(960px, 95vw);
+  margin: 16px auto 36px;
   position: relative;
   z-index: 10;
 }
@@ -73,7 +73,7 @@ body {
 
 /* Header & Home Link */
 .game-header {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .home-link {
@@ -84,11 +84,11 @@ body {
   font-size: 13px;
   font-weight: 500;
   gap: 8px;
-  padding: 7px 14px;
+  padding: 6px 14px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   transition: all 0.2s;
 }
 
@@ -100,21 +100,21 @@ body {
 }
 
 h1 {
-  font-size: clamp(2rem, 5.5vw, 2.8rem);
+  font-size: clamp(1.85rem, 4.5vw, 2.5rem);
   font-weight: 800;
   text-align: center;
   background: linear-gradient(135deg, #c084fc 0%, #f472b6 50%, #60a5fa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   letter-spacing: -0.5px;
 }
 
 .subtitle {
   text-align: center;
   color: var(--muted);
-  font-size: 1.05rem;
-  margin-bottom: 30px;
+  font-size: 1.02rem;
+  margin-bottom: 22px;
 }
 
 /* Global Stats Card */
@@ -124,9 +124,9 @@ h1 {
   gap: 15px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 20px;
+  padding: 16px 20px;
   border-radius: 18px;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   text-align: center;
 }
 
@@ -174,18 +174,26 @@ h1 {
 }
 
 /* ---------- Dashboard: Extra Materials ở panel bên trái, chủ đề chính bên phải ---------- */
-/* Riêng màn hình chọn chủ đề được nới rộng để có chỗ cho panel */
+/* Riêng màn hình chọn chủ đề được nới rộng để bung tràn cân đối hai bên */
 .container:has(> #dashboard-screen:not([style*="none"])) {
-  width: min(1120px, 95vw);
+  width: min(1440px, 95vw);
+}
+
+.container:has(> #mode-screen:not([style*="none"])) {
+  width: min(1140px, 95vw);
+}
+
+#dashboard-screen {
+  padding: 28px 32px;
 }
 
 .topics-layout {
   display: grid;
-  grid-template-columns: 290px 1fr;
+  grid-template-columns: 310px 1fr;
   grid-template-areas: "side main";
   gap: 24px;
   align-items: stretch;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .topics-main {
@@ -204,10 +212,10 @@ h1 {
 }
 
 .topics-heading {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #fff;
-  margin: 0 0 20px;
+  margin: 0 0 16px;
 }
 
 .topics-side .topics-heading {

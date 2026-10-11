@@ -39,15 +39,24 @@ body {
   padding: 28px 0 44px;
 }
 
-/* --- 4:1 RETRO PIXEL-ART DYNAMIC BANNER --- */
+/* --- TRANG TRỌNG: BỨC HỌA DÂN GIAN ĐÔNG HỒ BANNER --- */
+.folk-banner,
 .pixel-banner {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 1;
-  background-color: #fcf8ee;
-  border: 3px solid #1e1b4b;
-  border-radius: calc(var(--radius) + 4px);
-  box-shadow: 0 14px 28px rgba(18, 28, 38, 0.12), 0 5px 0 #1e1b4b;
+  aspect-ratio: 4 / 1.05;
+  background-color: #FAF1DB;
+  background-image:
+    radial-gradient(ellipse at 78% 50%, rgba(200, 50, 40, 0.12) 0%, rgba(230, 180, 34, 0.18) 45%, transparent 70%),
+    linear-gradient(135deg, rgba(255, 246, 227, 0.95) 0%, rgba(245, 230, 200, 0.85) 100%),
+    var(--paper-grain);
+  background-size: 100% 100%, 100% 100%, 180px 180px;
+  background-blend-mode: normal, normal, multiply;
+  border: 3px solid var(--ink-black);
+  outline: 2px dashed rgba(180, 45, 37, 0.35);
+  outline-offset: -7px;
+  border-radius: 20px;
+  box-shadow: 0 16px 32px rgba(96, 65, 18, 0.18), 0 5px 0 var(--ink-black);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -55,21 +64,66 @@ body {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.folk-banner:hover,
 .pixel-banner:hover {
   transform: translateY(-2px);
-  box-shadow: 0 18px 34px rgba(18, 28, 38, 0.16), 0 6px 0 #1e1b4b;
+  box-shadow: 0 20px 38px rgba(96, 65, 18, 0.24), 0 6px 0 var(--ink-black);
 }
 
-/* Notebook Graph Paper Grid */
+/* Nền tranh dân gian: vầng nhật nguyệt và mây Đông Hồ */
+.banner-dongho-bg,
 .banner-grid-bg {
   position: absolute;
   inset: 0;
-  background-image: 
-    linear-gradient(to right, rgba(99, 102, 241, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
-  background-size: 28px 28px;
   pointer-events: none;
   z-index: 1;
+}
+
+/* Vầng thái dương đỏ son / vàng hoè ấm áp */
+.folk-sun-halo {
+  position: absolute;
+  top: -20%;
+  right: 6%;
+  width: clamp(260px, 32vw, 380px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200, 50, 40, 0.22) 0%, rgba(230, 180, 34, 0.16) 48%, transparent 72%);
+  border: 1.5px dashed rgba(200, 50, 40, 0.25);
+  animation: pulseSun 8s ease-in-out infinite alternate;
+}
+
+@keyframes pulseSun {
+  0% { transform: scale(0.97) rotate(0deg); opacity: 0.85; }
+  100% { transform: scale(1.04) rotate(6deg); opacity: 1; }
+}
+
+/* Mây cuộn Đông Hồ */
+.folk-cloud-svg {
+  position: absolute;
+  filter: drop-shadow(0 3px 5px rgba(26, 26, 26, 0.08));
+  opacity: 0.85;
+}
+.left-cloud {
+  top: 10px;
+  left: 42%;
+  width: 120px;
+  animation: floatCloudLeft 6s ease-in-out infinite alternate;
+}
+.right-cloud {
+  bottom: 12px;
+  left: 36%;
+  width: 100px;
+  transform: scaleX(-1);
+  animation: floatCloudRight 7s ease-in-out infinite alternate;
+}
+
+@keyframes floatCloudLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(8px); }
+}
+@keyframes floatCloudRight {
+  0% { transform: scaleX(-1) translateX(0); }
+  100% { transform: scaleX(-1) translateX(-8px); }
 }
 
 .banner-inner {
@@ -95,37 +149,33 @@ body {
   gap: 12px;
 }
 
+/* Thẻ triện son Đông Hồ */
+.folk-stamp-tag,
 .banner-tag {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #4f46e5;
-  color: #fff;
-  font-family: 'Silkscreen', monospace;
-  font-size: 0.88rem;
-  letter-spacing: 1.5px;
-  padding: 6px 14px;
-  border-radius: 8px;
+  background: #B42D25;
+  color: #FFF6E3;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 2px solid var(--ink-black);
   width: fit-content;
-  box-shadow: 0 3px 0 #312e81;
+  box-shadow: 0 3px 0 var(--ink-black);
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.pixel-star {
-  color: #fde047;
-  font-size: 1rem;
+.folk-stamp-tag:hover {
+  background: #C83228;
+  transform: translateY(-1px);
 }
 
-.banner-title {
-  margin: 0;
-  font-family: 'Silkscreen', 'Press Start 2P', cursive, sans-serif;
-  font-size: clamp(2rem, 3.6vw, 3.2rem);
-  font-weight: 700;
-  color: #1e1b4b;
-  letter-spacing: 0.8px;
-  line-height: 1.22;
-  text-shadow: 
-    3px 3px 0 #818cf8,
-    5px 5px 0 #312e81;
+.folk-icon {
+  font-size: 0.95rem;
 }
 
 .banner-logo-wrap {
@@ -153,20 +203,22 @@ body {
   filter: drop-shadow(0 5px 12px rgba(30, 27, 75, 0.18));
 }
 
+/* Khẩu hiệu dân gian thanh lịch */
+.folk-subtitle,
 .banner-subtitle {
   margin: 0;
   font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 600;
-  color: #475569;
+  color: #5A4738;
   letter-spacing: 0.2px;
   line-height: 1.35;
   max-width: 480px;
 }
 
-/* Right Scene */
+/* Right Scene: 3 Cô Gái Đông Hồ */
 .banner-right {
-  flex: 0.85;
+  flex: 0.95;
   height: 100%;
   position: relative;
   display: flex;
@@ -233,82 +285,88 @@ body {
   50% { transform: translateY(-6px); }
 }
 
-/* Floating Study Badge */
+/* Dải lụa thư họa */
+.folk-speech,
 .floating-speech {
   position: absolute;
   top: 10px;
-  right: 125px;
-  background: #ffffff;
-  border: 2px solid #1e1b4b;
-  border-radius: 9px;
-  padding: 6px 13px;
-  font-family: 'Silkscreen', monospace;
+  right: 80px;
+  background: #FFF9E6;
+  border: 2px solid var(--ink-black);
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.84rem;
-  font-weight: 700;
-  color: #1e1b4b;
-  box-shadow: 2.5px 2.5px 0 #818cf8;
+  font-weight: 800;
+  color: var(--ink-black);
+  box-shadow: 2px 3px 0 var(--ink-black);
   white-space: nowrap;
-  animation: bounceBadge 2.8s ease-in-out infinite;
+  animation: bounceBadge 3s ease-in-out infinite;
   z-index: 5;
 }
 
 @keyframes bounceBadge {
-  0%, 100% { transform: translateY(0) rotate(-2deg); }
-  50% { transform: translateY(-5px) rotate(1deg); }
+  0%, 100% { transform: translateY(0) rotate(-1.5deg); }
+  50% { transform: translateY(-5px) rotate(1.5deg); }
 }
 
-/* Lightbulb */
-.floating-bulb {
+/* Dải hoa văn đỡ chân 3 cô gái */
+.folk-wave-base {
   position: absolute;
-  top: 6px;
-  right: 24px;
-  font-size: 1.5rem;
-  filter: drop-shadow(0 0 10px rgba(250, 204, 21, 0.7));
-  animation: glowBulb 2s ease-in-out infinite alternate;
-  z-index: 5;
-}
-
-@keyframes glowBulb {
-  0% { transform: scale(0.95); filter: drop-shadow(0 0 4px rgba(250, 204, 21, 0.4)); }
-  100% { transform: scale(1.1); filter: drop-shadow(0 0 14px rgba(250, 204, 21, 0.9)); }
-}
-
-/* Pixel Sparkles */
-.pixel-sparkle {
-  position: absolute;
-  color: #6366f1;
-  font-size: 1rem;
-  opacity: 0.55;
+  bottom: 0;
+  right: -10px;
+  width: 440px;
+  height: 24px;
+  background: 
+    radial-gradient(circle at 20px 24px, transparent 13px, #FAF1DB 13px, #FAF1DB 15px, transparent 15px),
+    radial-gradient(circle at 60px 24px, transparent 13px, #FAF1DB 13px, #FAF1DB 15px, transparent 15px),
+    linear-gradient(to top, rgba(230, 180, 34, 0.4) 0%, transparent 100%);
+  background-size: 40px 24px, 40px 24px, 100% 100%;
+  border-top: 2px dashed rgba(180, 45, 37, 0.35);
+  border-radius: 999px 0 0 0;
   pointer-events: none;
-  animation: pulseSparkle 3s ease-in-out infinite alternate;
   z-index: 2;
 }
 
-.pixel-sparkle.s1 { top: 12px; left: 45%; font-size: 1.2rem; color: #f59e0b; }
-.pixel-sparkle.s2 { bottom: 14px; left: 48%; color: #10b981; }
-.pixel-sparkle.s3 { top: 22px; left: 18px; color: #6366f1; }
+/* Cánh hoa rơi */
+.folk-petal {
+  position: absolute;
+  pointer-events: none;
+  font-size: 1.15rem;
+  opacity: 0.85;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  animation: flutterPetal 5s ease-in-out infinite alternate;
+}
 
-@keyframes pulseSparkle {
-  0% { transform: scale(0.8) rotate(0deg); opacity: 0.3; }
-  100% { transform: scale(1.2) rotate(180deg); opacity: 0.8; }
+.folk-petal.p1 { top: 14px; left: 47%; animation-delay: 0s; }
+.folk-petal.p2 { bottom: 16px; left: 52%; font-size: 1rem; color: #E6B422; animation-delay: 1.5s; }
+.folk-petal.p3 { top: 22px; right: 280px; font-size: 1.05rem; animation-delay: 2.8s; }
+
+@keyframes flutterPetal {
+  0% { transform: translateY(0) rotate(0deg) scale(0.9); }
+  50% { transform: translateY(-8px) rotate(15deg) scale(1.1); }
+  100% { transform: translateY(4px) rotate(-10deg) scale(1); }
 }
 
 /* Responsive adjustments */
 @media (max-width: 860px) {
+  .folk-banner,
   .pixel-banner {
     aspect-ratio: auto;
-    min-height: 220px;
+    min-height: 230px;
   }
   .banner-inner {
-    padding: 14px 18px;
+    padding: 14px 20px;
     gap: 14px;
   }
+  .folk-speech,
   .floating-speech {
-    right: 80px;
+    right: 20px;
   }
 }
 
 @media (max-width: 680px) {
+  .folk-banner,
   .pixel-banner {
     aspect-ratio: auto;
   }
@@ -316,34 +374,50 @@ body {
     flex-direction: column;
     text-align: center;
     gap: 16px;
-    padding: 20px 14px;
+    padding: 24px 16px 14px;
   }
   .banner-left {
     align-items: center;
     max-width: 100%;
   }
   .banner-logo-wrap {
-    max-width: 320px;
+    max-width: 290px;
     margin: 0 auto;
   }
   .banner-right {
     width: 100%;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     height: auto;
+    margin-top: 6px;
   }
+  .folk-speech,
   .floating-speech {
     position: static;
-    margin-bottom: 8px;
+    margin: 0 auto 12px;
+    display: inline-flex;
+    font-size: 0.8rem;
+    padding: 4px 12px;
   }
-  .floating-bulb {
+  .folk-wave-base,
+  .folk-cloud-svg,
+  .folk-petal {
     display: none;
   }
   .character-trio {
     justify-content: center;
-    gap: 8px;
+    gap: 10px;
+    width: 100%;
   }
   .char-mascot img, .char-scholar img, .char-panda img {
-    height: 95px;
+    height: 88px;
+  }
+  .folk-sun-halo {
+    top: -5%;
+    right: 50%;
+    transform: translateX(50%);
+    width: 240px;
   }
 }
 

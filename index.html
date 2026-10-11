@@ -10,43 +10,53 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/characters/sticker_art_painting.png">
-    <link rel="stylesheet" href="css/index.css?v=5">
+    <link rel="stylesheet" href="css/index.css?v=6">
     <link rel="stylesheet" href="css/rice-widget.css?v=2">
 </head>
 
 <body>
     <main class="container">
         <!-- Interactive 4:1 Retro Pixel-Art Dynamic Banner -->
-        <header class="pixel-banner" role="banner">
-            <!-- Grid Background Overlay -->
-            <div class="banner-grid-bg" aria-hidden="true"></div>
+        <!-- Bức Họa Dân Gian Đông Hồ Banner -->
+        <header class="folk-banner pixel-banner" role="banner">
+            <!-- Nền hoa văn vân giấy điệp & họa tiết mây/nhật nguyệt Đông Hồ -->
+            <div class="banner-dongho-bg banner-grid-bg" aria-hidden="true">
+                <div class="folk-sun-halo"></div>
+                <!-- Họa tiết mây cuộn dân gian Đông Hồ bằng SVG -->
+                <svg class="folk-cloud-svg left-cloud" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M20,60 C10,60 0,50 0,40 C0,28 12,20 25,22 C30,10 45,5 60,10 C70,4 88,6 98,16 C108,12 125,18 130,30 C145,30 158,42 155,54 C152,60 140,62 130,60 Z" fill="rgba(244, 233, 207, 0.45)" stroke="#1A1A1A" stroke-width="2.5"/>
+                    <path d="M25,50 Q40,42 55,50 Q75,38 95,48" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <svg class="folk-cloud-svg right-cloud" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M20,60 C10,60 0,50 0,40 C0,28 12,20 25,22 C30,10 45,5 60,10 C70,4 88,6 98,16 C108,12 125,18 130,30 C145,30 158,42 155,54 C152,60 140,62 130,60 Z" fill="rgba(244, 233, 207, 0.5)" stroke="#1A1A1A" stroke-width="2.5"/>
+                    <path d="M25,50 Q40,42 55,50 Q75,38 95,48" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
 
             <div class="banner-inner">
-                <!-- Left: Typography & Logo -->
+                <!-- Left: Logo & Triện Son -->
                 <div class="banner-left">
                     <div class="banner-logo-wrap">
                         <img src="assets/lexiphoria-logo.png" alt="LEXIPHORIA" class="banner-logo-img" width="460" height="256">
                         <h1 class="visually-hidden">Lexiphoria - Daily English Practice</h1>
                     </div>
-                    <div class="banner-tag">
-                        <span class="pixel-star">★</span>
+                    <div class="banner-tag folk-stamp-tag">
+                        <span class="folk-icon">🏮</span>
                         <span>DAILY ENGLISH PORTAL</span>
-                        <span class="pixel-star">★</span>
+                        <span class="folk-icon">🏮</span>
                     </div>
+                    <p class="banner-subtitle folk-subtitle">🌸 Không gian luyện thi &amp; Master từ vựng tương tác mỗi ngày</p>
                 </div>
 
-                <!-- Right: Character Sprites & Dynamic Scene -->
+                <!-- Right: 3 Cô Gái Tranh Dân Gian Đông Hồ -->
                 <div class="banner-right">
-                    <!-- Floating Study Badge -->
-                    <div class="floating-speech">
-                        <span>Let's study! ✏️</span>
+                    <!-- Dải lụa thư họa cổ truyền -->
+                    <div class="floating-speech folk-speech">
+                        <span>🏮 Cùng Học Nhé! • Let's Study! ✏️</span>
                     </div>
 
-                    <!-- Glowing Lightbulb -->
-                    <div class="floating-bulb" aria-hidden="true">💡</div>
-
-                    <!-- Character Sprites Group -->
-                    <div class="character-trio">
+                    <!-- Character Sprites Group trên bệ mây hoa sen -->
+                    <div class="character-trio folk-trio">
                         <div class="char-wrap char-mascot">
                             <img src="assets/characters/sticker_cheer_flag.png" alt="Cheering Student Mascot" title="Welcome to Daily English Practice!">
                         </div>
@@ -57,13 +67,16 @@
                             <img src="assets/characters/sticker_reading_sit.png" alt="Studious Reading Mascot" title="Learn Words Everyday">
                         </div>
                     </div>
+
+                    <!-- Dải hoa văn đỡ chân 3 cô gái -->
+                    <div class="folk-wave-base" aria-hidden="true"></div>
                 </div>
             </div>
 
-            <!-- Floating Pixel Sparkles -->
-            <div class="pixel-sparkle s1" aria-hidden="true">✦</div>
-            <div class="pixel-sparkle s2" aria-hidden="true">✦</div>
-            <div class="pixel-sparkle s3" aria-hidden="true">✖</div>
+            <!-- Cánh hoa rơi điểm xuyết nghệ thuật -->
+            <div class="folk-petal p1" aria-hidden="true">🌸</div>
+            <div class="folk-petal p2" aria-hidden="true">✨</div>
+            <div class="folk-petal p3" aria-hidden="true">🌺</div>
         </header>
 
         <!-- Bố cục 2 cột: panel Extra Materials bên trái, lộ trình chính bên phải -->

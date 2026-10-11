@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/characters/sticker_art_painting.png">
-    <link rel="stylesheet" href="css/index.css?v=6">
+    <link rel="stylesheet" href="css/index.css?v=7">
     <link rel="stylesheet" href="css/rice-widget.css?v=2">
 </head>
 
@@ -137,14 +137,21 @@
                     </details>
                 </section>
 
-                <!-- Tiến độ từng deck + Sổ câu sai (js/review-log.js, js/progress-panel.js, review.html) -->
-                <section class="progress-card" aria-labelledby="progress-title">
-                    <div class="progress-head">
-                        <h2 id="progress-title"><span aria-hidden="true">📕</span> My Progress</h2>
-                        <a class="progress-all" data-review-link="all" href="review.html">Mistakes <b data-review-count>0</b></a>
-                    </div>
+                <!-- Tiến độ + Sổ câu sai gọn trong một dòng (cuốn sổ + thanh tiến độ); bấm để mở chi tiết từng deck
+                     (js/review-log.js, js/progress-panel.js, review.html) -->
+                <details class="progress-card" id="progressCard">
+                    <summary class="progress-sum">
+                        <span class="pp-book" aria-hidden="true">📕<b class="pp-book-badge" id="progressBadge" hidden>0</b></span>
+                        <span class="pp-sum-text">
+                            <span class="pp-sum-title">My Progress</span>
+                            <span class="pp-bar pp-bar-total"><span id="progressTotalBar"></span></span>
+                            <span class="pp-sum-meta" id="progressTotalMeta">Not started</span>
+                        </span>
+                        <span class="pp-chevron" aria-hidden="true">▾</span>
+                    </summary>
                     <ul class="progress-list" id="progressList"></ul>
-                </section>
+                    <a class="progress-all" data-review-link="all" href="review.html">Open Mistake Notebook <b data-review-count>0</b></a>
+                </details>
 
                 <!-- Panel Extra Materials (Immersion Town, V-ACT); Exam Idioms nằm trong Vocabulary Mastery -->
                 <aside class="side-panel" aria-labelledby="extra-title">
@@ -353,7 +360,7 @@
     <script src="js/study-tracker.js?v=1"></script>
     <script src="js/rice-widget.js?v=2"></script>
     <script src="js/review-log.js?v=2"></script>
-    <script src="js/progress-panel.js?v=1"></script>
+    <script src="js/progress-panel.js?v=2"></script>
 </body>
 
 </html>

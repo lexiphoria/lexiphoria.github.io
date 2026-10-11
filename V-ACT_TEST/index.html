@@ -92,14 +92,21 @@
       background: rgba(99, 102, 241, 0.1);
       transform: translateY(-1px);
     }
+    /* Thanh trên cùng: về trang chủ (trái) và Sổ câu sai (phải) */
+    .top-links { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+    .top-links .back-link { margin-bottom: 0; }
+    .top-links .review-link b { color: #e11d48; }
   </style>
 </head>
 <body>
   <div class="menu-container">
-    <a href="../index.html" class="back-link" title="Return to Home" aria-label="Return to Home">
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-      <span>Home</span>
-    </a>
+    <div class="top-links">
+      <a href="../index.html" class="back-link" title="Return to Home" aria-label="Return to Home">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        <span>Home</span>
+      </a>
+      <a href="../review.html?deck=vact" class="back-link review-link" data-review-link="vact" title="Xem lại các câu đã làm sai">📕 Mistakes <b data-review-count>0</b></a>
+    </div>
     <div class="menu-header">
       <div class="logo">🎯</div>
       <h1>V-ACT TEST</h1>
@@ -384,7 +391,19 @@
 
       var s25 = localStorage.getItem('vact_score_V-ACT English Test 25');
       if (s25) document.getElementById('score-test25').textContent = 'Điểm: ' + s25;
+
+      // Đề đang làm dở (phương án đã lưu bởi js/engine.js, chưa nộp bài)
+      for (var n = 1; n <= 25; n++) {
+        try {
+          var saved = JSON.parse(localStorage.getItem('vact_test_' + n + '_answers'));
+          var count = saved && saved.answers ? Object.keys(saved.answers).length : 0;
+          if (count && !saved.submitted) {
+            document.getElementById('score-test' + n).textContent = 'Đang làm: ' + count + '/30';
+          }
+        } catch (e) { }
+      }
     });
   </script>
+  <script src="../js/review-log.js?v=2"></script>
 </body>
 </html>

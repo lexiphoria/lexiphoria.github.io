@@ -8,7 +8,7 @@
     <!-- Google Fonts for Retro Pixel-Art Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/characters/sticker_art_painting.png">
     <link rel="stylesheet" href="css/index.css?v=3">
     <link rel="stylesheet" href="css/rice-widget.css?v=2">
@@ -121,6 +121,15 @@
                     </details>
                 </section>
 
+                <!-- Tiến độ từng deck + Sổ câu sai (js/review-log.js, js/progress-panel.js, review.html) -->
+                <section class="progress-card" aria-labelledby="progress-title">
+                    <div class="progress-head">
+                        <h2 id="progress-title"><span aria-hidden="true">📕</span> My Progress</h2>
+                        <a class="progress-all" data-review-link="all" href="review.html">Mistakes <b data-review-count>0</b></a>
+                    </div>
+                    <ul class="progress-list" id="progressList"></ul>
+                </section>
+
                 <!-- Panel Extra Materials (Immersion Town, V-ACT); Exam Idioms nằm trong Vocabulary Mastery -->
                 <aside class="side-panel" aria-labelledby="extra-title">
                     <h2 class="section-title" id="extra-title">Extra Materials</h2>
@@ -161,13 +170,14 @@
                 </aside>
             </div>
 
-            <!-- 4 thẻ trọng tâm theo lộ trình: Vocabulary Mastery → English Quiz → Text Completion → HSG 12 -->
+            <!-- 4 thẻ trọng tâm theo lộ trình: Vocabulary Mastery → Cloze Text (English Quiz + Text Completion) → Listening Lab → HSG 12 -->
             <div class="main-col">
                 <h2 class="section-title">Core Learning Roadmap</h2>
                 <section class="core-grid" aria-label="Core learning roadmap">
                     <!-- 1. Vocabulary Mastery -->
                     <article class="card stamp stamp--vermilion">
                         <div class="stamp-inner">
+                            <img class="stamp-art" src="assets/stamps/core-vocabulary.svg" alt="">
                             <div class="card-top">
                                 <div class="card-tags">
                                     <span class="tag">Interactive Cards</span>
@@ -182,50 +192,56 @@
                         </div>
                     </article>
 
-                    <!-- 2. English Quiz -->
+                    <!-- 2. Cloze Text: gộp English Quiz (EngQuiz) và Text Completion, mỗi bộ một nút -->
                     <article class="card stamp stamp--indigo">
                         <div class="stamp-inner">
-                            <div class="card-top">
-                                <div class="card-tags">
-                                    <span class="tag">Multiple Choice</span>
-                                    <span class="tag">Step 2 • Grammar &amp; MCQ</span>
-                                </div>
-                                <div class="card-character">
-                                    <img src="assets/characters/sticker_quiz_thinking.png" alt="English Quiz Student">
-                                </div>
-                            </div>
-                            <h3>English Quiz</h3>
-                            <a class="btn" href="EngQuiz.html">Start EngQuiz</a>
-                        </div>
-                    </article>
-
-                    <!-- 3. Text Completion Quiz -->
-                    <article class="card stamp stamp--blue">
-                        <div class="stamp-inner">
+                            <img class="stamp-art" src="assets/stamps/core-quiz.svg" alt="">
                             <div class="card-top">
                                 <div class="card-tags">
                                     <span class="tag">Reading Practice</span>
-                                    <span class="tag">Step 3 • National Exam 2025</span>
+                                    <span class="tag">Step 2 • National Exam 2025</span>
                                 </div>
                                 <div class="card-character">
-                                    <img src="assets/characters/sticker_text_writing.png" alt="Text Completion Scholar">
+                                    <img src="assets/characters/sticker_quiz_thinking.png" alt="Cloze Text Student">
                                 </div>
                             </div>
-                            <h3>Text Completion Quiz</h3>
-                            <a class="btn" href="TextCompletion.html">Start Text Completion</a>
+                            <h3>Cloze Text</h3>
+                            <div class="btn-row">
+                                <a class="btn" href="EngQuiz.html">English Quiz</a>
+                                <a class="btn" href="TextCompletion.html">Text Completion</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 3. Listening Lab: video BBC Learning English / Vietnam Today, câu hỏi dạng IELTS -->
+                    <article class="card stamp stamp--blue">
+                        <div class="stamp-inner">
+                            <img class="stamp-art" src="assets/stamps/core-text.svg" alt="">
+                            <div class="card-top">
+                                <div class="card-tags">
+                                    <span class="tag">🎧 IELTS-style</span>
+                                    <span class="tag">Step 3 • A2 – B2</span>
+                                </div>
+                                <div class="card-character">
+                                    <img src="assets/characters/sticker_study_desk.png" alt="Student taking notes while listening">
+                                </div>
+                            </div>
+                            <h3>Listening Lab</h3>
+                            <a class="btn" href="Listening_Lab.html">Start Listening</a>
                         </div>
                     </article>
 
                     <!-- 4. HSG 12 -->
                     <article class="card stamp stamp--ink">
                         <div class="stamp-inner">
+                            <img class="stamp-art" src="assets/stamps/core-exam.svg" alt="">
                             <div class="card-top">
                                 <div class="card-tags">
                                     <span class="tag">🏆 Advanced Practice</span>
                                     <span class="tag">Step 4 • Grade 12</span>
                                 </div>
                                 <div class="card-character">
-                                    <img src="assets/characters/sticker_hsg_intense.png" alt="HSG 12 Scholar">
+                                    <img src="assets/characters/sticker_idiom_idea.png" alt="Student with a bright idea">
                                 </div>
                             </div>
                             <h3>Exam Prep</h3>
@@ -320,6 +336,8 @@
 
     <script src="js/study-tracker.js?v=1"></script>
     <script src="js/rice-widget.js?v=2"></script>
+    <script src="js/review-log.js?v=2"></script>
+    <script src="js/progress-panel.js?v=1"></script>
 </body>
 
 </html>

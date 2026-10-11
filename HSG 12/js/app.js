@@ -143,6 +143,14 @@
           userAnswers = JSON.parse(cached);
         } catch(e) {}
       }
+    } else {
+      // Thi thử: mở lại bài đang làm dở (đáp án, câu gắn cờ, thời gian còn lại)
+      const draft = loadExamDraft(id);
+      if (draft) {
+        userAnswers = draft.answers || {};
+        (draft.flagged || []).forEach(qid => flagged.add(qid));
+        if (draft.timeRemaining > 0) timeRemaining = draft.timeRemaining;
+      }
     }
 
     renderQuizHeader();
@@ -162,6 +170,76 @@
       const timerElem = document.getElementById('timerBox');
       if (timerElem) timerElem.style.display = 'none';
     }
+  }
+
+  // ---- Lưu bài thi thử đang làm: tải lại trang hay thoát ra vẫn làm tiếp được ----
+  function examDraftKey(id) {
+    return `hsg12_exam_t${id}`;
+  }
+
+  function loadExamDraft(id) {
+    try {
+      return JSON.parse(localStorage.getItem(examDraftKey(id)));
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function saveExamDraft() {
+    if (mode !== 'exam' || isSubmitted || !currentTest || !Object.keys(userAnswers).length) return;
+    try {
+      localStorage.setItem(examDraftKey(currentTest.id), JSON.stringify({
+        answers: userAnswers,
+        flagged: Array.from(flagged),
+        timeRemaining
+      }));
+    } catch (e) {}
+  }
+
+  function clearSavedProgress(id) {
+    try {
+      localStorage.removeItem(examDraftKey(id));
+      if (mode === 'practice') localStorage.removeItem(`hsg12_practice_t${id}`);
+    } catch (e) {}
+  }
+
+  window.addEventListener('pagehide', saveExamDraft);
+
+  // Chữ trong data.js: **đậm**, *nghiêng*, [u]gạch chân[/u], [b]đậm[/b] → thẻ b / i / u cho Sổ câu sai
+  function markup(text) {
+    return String(text || '')
+      .replace(/\[u\]([\s\S]*?)\[\/u\]/g, '<u>$1</u>')
+      .replace(/\[b\]([\s\S]*?)\[\/b\]/g, '<b>$1</b>')
+      .replace(/\*\*([\s\S]+?)\*\*/g, '<b>$1</b>')
+      .replace(/\*([^*\n]+)\*/g, '<i>$1</i>')
+      .trim();
+  }
+
+  // Ghi câu đã trả lời vào Sổ câu sai (js/review-log.js) để xem lại / làm lại ở review.html
+  function logAnswer(qid) {
+    if (!window.PortalReview) return;
+    const q = currentTest.questions.find(item => item.id === qid);
+    if (!q || !userAnswers[qid]) return;
+    const keys = Object.keys(q.options);
+    const passage = q.passage
+      ? reflowPassage(q.passage).filter(b => b.type !== 'instruction').map(b => markup(b.text)).join('\n\n')
+      : '';
+    let question = markup(q.question);
+    if (!question && passage) {
+      // Câu điền vào chỗ trống (n) trong đoạn văn: lấy câu chứa chỗ trống làm đề
+      const gap = new RegExp('\\(\\s?' + q.num + '\\s?\\)\\s*_*');
+      question = PortalReview.around(passage, gap).replace(gap, `<b>(${q.num}) _____</b>`);
+    }
+    PortalReview.record('examprep', {
+      id: q.id,
+      src: `${currentTest.title} · Question ${q.num}`,
+      tag: q.category,
+      question: question || `Question ${q.num}`,
+      options: keys.map(k => markup(q.options[k])),
+      answer: keys.indexOf(q.answer),
+      explain: markup(q.explanation),
+      context: passage ? { title: q.passageTitle || q.section, text: passage } : null
+    }, keys.indexOf(userAnswers[qid]));
   }
 
   // Header Rendering
@@ -210,6 +288,8 @@
       } else {
         timerElem.classList.remove('urgent');
       }
+
+      if (timeRemaining % 15 === 0) saveExamDraft();
 
       if (timeRemaining <= 0) {
         clearInterval(timerInterval);
@@ -911,10 +991,15 @@
   window.selectOption = function(qid, optKey) {
     if (isSubmitted && mode === 'exam') return;
 
+    const firstAnswer = !userAnswers[qid];
     userAnswers[qid] = optKey;
 
     if (mode === 'practice') {
       localStorage.setItem(`hsg12_practice_t${currentTest.id}`, JSON.stringify(userAnswers));
+      // Luyện tập hiện đáp án ngay: ghi lần chọn đầu tiên vào Sổ câu sai
+      if (firstAnswer) logAnswer(qid);
+    } else {
+      saveExamDraft();
     }
 
     // Re-render this question card
@@ -997,6 +1082,7 @@
     if (pbtn) {
       pbtn.classList.toggle('flagged', flagged.has(qid));
     }
+    saveExamDraft();
   };
 
   // Speech TTS question
@@ -1095,6 +1181,13 @@
     history.push(record);
     localStorage.setItem('hsg12_exam_history', JSON.stringify(history));
 
+    // Thi thử chỉ chấm khi nộp bài: lúc này mới ghi các câu đã làm vào Sổ câu sai, và bỏ bản lưu dở
+    if (!alreadySubmitted && mode === 'exam') {
+      currentTest.questions.forEach(q => { if (userAnswers[q.id]) logAnswer(q.id); });
+      try { localStorage.removeItem(examDraftKey(currentTest.id)); } catch (e) {}
+    }
+    if (window.PortalReview) PortalReview.refreshLinks();
+
     // Báo kết quả cho cánh đồng lúa trên trang chủ (js/study-tracker.js)
     if (!alreadySubmitted && window.PortalStudy) {
       PortalStudy.recordQuiz(correctCount, currentTest.questions.length);
@@ -1150,6 +1243,7 @@
 
   window.restartTest = function() {
     if (confirm('Bạn có muốn làm lại đề thi này từ đầu không?')) {
+      clearSavedProgress(currentTest.id);
       userAnswers = {};
       flagged.clear();
       isSubmitted = false;

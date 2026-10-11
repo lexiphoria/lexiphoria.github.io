@@ -5713,10 +5713,27 @@ function goToQuestion(idx) {
   renderQuestions();
 }
 
+// Ghi câu vừa trả lời vào Sổ câu sai (js/review-log.js) để xem lại / làm lại ở review.html
+function logAnswer(qIdx, optIdx) {
+  if (!window.PortalReview) return;
+  const text = texts[currentTextIndex];
+  const q = text.questions[qIdx];
+  PortalReview.record('engquiz', {
+    src: `Text ${String(currentTextIndex + 1).padStart(2, '0')} · ${text.title}`,
+    tag: q.type,
+    question: q.text.replace(`___${q.blank}___`, '<b>_____</b>'),
+    options: q.options.map(o => o.substring(3)),
+    answer: q.answer,
+    explain: q.feedback,
+    context: { title: text.title, text: text.passage.replace(/___(\d+)___/g, '($1) _____') }
+  }, optIdx);
+}
+
 function selectAnswer(qIdx, optIdx) {
   if (answers[qIdx] !== null) return;
   answers[qIdx] = optIdx;
   saveDraft();          // auto-save every answer
+  logAnswer(qIdx, optIdx);
   renderPassage();
   renderQuestions();
   updateProgress();

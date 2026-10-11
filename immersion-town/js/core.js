@@ -309,14 +309,16 @@
   function pickVoice(langs) {
     for (const lang of langs) {
       const matches = voices.filter((v) => v.lang.replace('_', '-').toLowerCase().startsWith(lang.toLowerCase()));
-      if (matches.length) return matches.find((v) => /natural|google|premium|enhanced/i.test(v.name)) || matches[0];
+      if (matches.length) return matches.find((v) => /natural|neural|online|google|premium|enhanced/i.test(v.name)) || matches[0];
     }
     return null;
   }
 
+  // Từ vựng và câu ví dụ đọc giọng Anh-Anh cho khớp phiên âm IPA (Cambridge UK) trong lexicon;
+  // máy không có giọng Anh-Anh thì dùng giọng Anh-Mỹ. NPC truyền giọng riêng qua opts.langs.
   function speak(text, opts = {}) {
     if (!canSpeak || !text) return;
-    const langs = opts.langs || ['en-US', 'en-GB'];
+    const langs = opts.langs || ['en-GB', 'en-US'];
     const voice = pickVoice(langs) || (langs[0].startsWith('en') ? voices.find((v) => /^en/i.test(v.lang)) : null);
     if (!voice && !langs[0].startsWith('en')) return; // không có giọng tiếng Việt thì im lặng
     speechSynthesis.cancel();

@@ -73,6 +73,18 @@
     }).join('');
   }
 
+  // Câu điền từ: xem đáp án, hoặc ô nhập để làm lại
+  function gapHtml(it, reveal) {
+    if (!reveal) {
+      return `<form class="rv-gapform"><input class="rv-input" type="text" autocomplete="off" autocapitalize="off"
+        spellcheck="false" aria-label="Your answer" placeholder="Type your answer"><button type="submit" class="rv-check">Check</button></form>`;
+    }
+    return `<div class="rv-gapans">
+      <div class="rv-opt is-picked"><span class="rv-otext">${esc(it.gap.given || '(blank)')}</span><span class="rv-note">Your answer</span></div>
+      <div class="rv-opt is-correct"><span class="rv-otext">${esc(it.gap.accept.join(' / '))}</span><span class="rv-note">Correct answer</span></div>
+    </div>`;
+  }
+
   function cardHtml(x, data) {
     const it = x.it;
     const info = deckInfo(x.deck);
@@ -89,10 +101,11 @@
       </div>
       ${it.q ? `<div class="rv-q">${R.safe(it.q)}</div>` : ''}
       ${ctx ? `<details class="rv-ctx"><summary>Show passage</summary>${ctx.title ? `<h3>${esc(ctx.title)}</h3>` : ''}<div class="rv-ctx-text">${R.safe(ctx.text)}</div></details>` : ''}
-      <ol class="rv-opts">${optionsHtml(x, reveal)}</ol>
+      ${it.gap ? gapHtml(it, reveal) : `<ol class="rv-opts">${optionsHtml(x, reveal)}</ol>`}
       <div class="rv-why"${reveal && it.why ? '' : ' hidden'}>${R.safe(it.why)}</div>
       <div class="rv-actions">
         <span class="rv-result" aria-live="polite"></span>
+        ${it.link ? `<a class="rv-link" href="${esc(R.ROOT + it.link)}">▶ Listen again</a>` : ''}
         <button type="button" class="rv-remove" title="Remove from notebook">Remove</button>
       </div>
     </article>`;
@@ -115,18 +128,33 @@
     $('showMore').textContent = `Show more (${items.length - shown})`;
   }
 
-  // Làm lại một câu ở chế độ Try again
+  // Làm lại một câu ở chế độ Try again (picked: chỉ số phương án, hoặc chữ đã điền với câu điền từ)
   function retry(card, picked) {
     const d = card.dataset.deck, key = card.dataset.key;
     let ok = false;
     R.update(d, key, (dk, it) => {
-      ok = picked === it.ans;
+      if (it.gap) {
+        const val = R.normAnswer(picked);
+        ok = val !== '' && it.gap.accept.some((a) => R.normAnswer(a) === val);
+      } else ok = picked === it.ans;
       if (ok) it.fixed = Date.now();
-      else { it.wrong++; it.pick = picked; it.at = Date.now(); it.fixed = 0; }
+      else {
+        it.wrong++; it.at = Date.now(); it.fixed = 0;
+        if (it.gap) it.gap.given = String(picked); else it.pick = picked;
+      }
     });
     const it = (R.load().decks[d] || { items: {} }).items[key];
     if (!it) return;
-    card.querySelectorAll('.rv-opt').forEach((b) => {
+    if (it.gap) {
+      const form = card.querySelector('.rv-gapform');
+      if (form) {
+        form.outerHTML = `<div class="rv-gapans">
+          <div class="rv-opt ${ok ? 'is-correct' : 'is-picked'}"><span class="rv-otext">${esc(picked)}</span><span class="rv-note">Your answer</span></div>
+          ${ok ? '' : `<div class="rv-opt is-correct"><span class="rv-otext">${esc(it.gap.accept.join(' / '))}</span><span class="rv-note">Correct answer</span></div>`}
+        </div>`;
+      }
+    }
+    card.querySelectorAll('.rv-opts .rv-opt').forEach((b) => {
       const i = +b.dataset.opt;
       b.disabled = true;
       if (i === it.ans) b.classList.add('is-correct');
@@ -179,6 +207,14 @@
       R.update(card.dataset.deck, card.dataset.key, () => 'delete');
       render();
     }
+  });
+
+  $('list').addEventListener('submit', (e) => {
+    const form = e.target.closest('.rv-gapform');
+    if (!form) return;
+    e.preventDefault();
+    const val = form.querySelector('.rv-input').value;
+    if (val.trim()) retry(form.closest('.rv-card'), val);
   });
 
   $('showMore').addEventListener('click', () => { shown += PAGE; render(); });

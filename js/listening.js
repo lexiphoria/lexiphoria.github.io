@@ -269,6 +269,22 @@
     return { part, it: part.items[ii] };
   }
 
+  // Ghi câu vừa chấm vào Sổ câu sai (js/review-log.js) để xem lại / làm lại ở review.html
+  function logAnswer(part, it, ok, picked, given) {
+    if (!window.PortalReview) return;
+    const mcq = part.type === 'mcq';
+    window.PortalReview.record('listening', {
+      src: `${current.level} · ${current.title}`,
+      tag: mcq ? 'Multiple choice' : `Gap fill · ${part.limit || 'ONE WORD ONLY'}`,
+      question: esc(it.q).replace('___', '<b>_____</b>'),
+      options: mcq ? it.options : [],
+      answer: mcq ? it.answer : -1,
+      gap: mcq ? null : { accept: it.answer, given },
+      ok,
+      link: 'Listening_Lab.html#' + encodeURIComponent(current.id)
+    }, picked);
+  }
+
   function check() {
     if (!current || checked) return;
     let correct = 0;
@@ -281,6 +297,7 @@
       if (part.type === 'mcq') {
         const picked = li.querySelector('input:checked');
         ok = !!picked && Number(picked.value) === it.answer;
+        if (picked) logAnswer(part, it, ok, Number(picked.value));   // câu bỏ trống không ghi vào Sổ câu sai
         rightText = `${LETTERS[it.answer]} – ${it.options[it.answer]}`;
         li.querySelectorAll('.q-option').forEach((lab, oi) => {
           lab.classList.toggle('is-answer', oi === it.answer);
@@ -288,6 +305,8 @@
       } else {
         const val = norm(li.querySelector('.gap-input').value);
         ok = val !== '' && it.answer.some((a) => norm(a) === val);
+        const given = li.querySelector('.gap-input').value.trim();
+        if (given) logAnswer(part, it, ok, -1, given);
         rightText = it.answer[0];
       }
       if (ok) correct += 1;
@@ -316,6 +335,7 @@
       <span class="score-note">${correct === total ? 'Perfect! 🎉' : 'Press ▶ to hear each answer again.'}</span>`;
     $('#check-btn').hidden = true;
     $('#retry-btn').hidden = false;
+    if (window.PortalReview) window.PortalReview.refreshLinks();
     box.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 

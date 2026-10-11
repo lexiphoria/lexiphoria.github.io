@@ -8,6 +8,8 @@
      decks: { <deck>: { answered, correct, last, items: { <key>: câu sai } } },
      ctx:   { <key>: { title, text } } }   đoạn văn dùng chung cho nhiều câu (bài đọc, bài điền từ)
    câu sai: { src, tag, q, opts, ans, pick, why, ctx, wrong, first, at, fixed }
+            câu điền từ (Listening Lab) không có opts mà có gap: { accept: [đáp án chấp nhận], given: chữ đã điền }
+            link: trang bài học để nghe / làm lại (tính từ thư mục gốc)
 
    Liên kết "Mistakes" trên các trang: thẻ có data-review-link="<deck>" (hoặc "all") được gắn href tới
    review.html; phần tử con data-review-count hiện số câu cần xem lại. */
@@ -17,10 +19,12 @@
   const KEY = 'portal_review_log';
   const MAX_ITEMS = 400;   // mỗi deck; vượt thì bỏ câu đã sửa cũ nhất trước, rồi tới câu sai cũ nhất
 
+  // Theo thứ tự lộ trình trên trang chủ; màu lấy từ tem của deck (Cloze Text gồm English Quiz + Text Completion)
   const DECKS = [
     { id: 'vocabulary', name: 'Vocabulary Mastery', href: 'Vocabulary_Game.html', color: '#C83228' },
     { id: 'engquiz', name: 'English Quiz', href: 'EngQuiz.html', color: '#1B4D3E' },
-    { id: 'textcompletion', name: 'Text Completion', href: 'TextCompletion.html', color: '#2E4A7D' },
+    { id: 'textcompletion', name: 'Text Completion', href: 'TextCompletion.html', color: '#3D7A5C' },
+    { id: 'listening', name: 'Listening Lab', href: 'Listening_Lab.html', color: '#2E4A7D' },
     { id: 'examprep', name: 'Exam Prep', href: 'HSG%2012/index.html', color: '#1F1D24' },
     { id: 'vact', name: 'V-ACT Test', href: 'V-ACT_TEST/index.html', color: '#B5525F' },
   ];
@@ -126,11 +130,26 @@
     return out;
   }
 
+  // So khớp câu điền từ: không phân biệt hoa thường, dấu câu, gạch nối, mạo từ đứng đầu (như Listening Lab)
+  function normAnswer(s) {
+    return String(s == null ? '' : s)
+      .toLowerCase()
+      .normalize('NFC')
+      .replace(/[‘’`´]/g, "'")
+      .replace(/(\d)[,.](?=\d{3}\b)/g, '$1')
+      .replace(/[-–—_/]/g, ' ')
+      .replace(/[^\p{L}\p{N}' ]+/gu, '')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .replace(/^(a|an|the) /, '');
+  }
+
   // ---- Ghi nhận một câu trả lời ----
-  // q: { id?, src, tag, question, options: [..], answer: chỉ số đúng, explain, context?: { title, text } }
+  // q: { id?, src, tag, question, options: [..], answer: chỉ số đúng, explain, context?: { title, text }, link? }
+  //    câu điền từ: options [], gap: { accept: [..], given }, ok: đúng / sai
   function record(deck, q, picked) {
     if (!deck || !q || !Array.isArray(q.options)) return;
-    const ok = picked === q.answer;
+    const ok = typeof q.ok === 'boolean' ? q.ok : picked === q.answer;
     const data = load();
     const d = deckOf(data, deck);
     const now = Date.now();
@@ -138,7 +157,8 @@
     if (ok) d.correct++;
     d.last = now;
 
-    const key = q.id ? String(q.id) : hash(plain(q.question) + '|' + plain(q.options[q.answer]));
+    const answerText = q.gap ? q.gap.accept[0] : q.options[q.answer];
+    const key = q.id ? String(q.id) : hash(plain(q.question) + '|' + plain(answerText));
     const it = d.items[key];
     if (!ok) {
       let ctx = null;
@@ -151,6 +171,8 @@
         src: plain(q.src || ''), tag: plain(q.tag || ''), q: tidy(q.question),
         opts: q.options.map(tidy), ans: q.answer, pick: picked,
         why: tidy(q.explain), ctx, at: now, fixed: 0,
+        gap: q.gap ? { accept: q.gap.accept.map(String), given: String(q.gap.given || '') } : undefined,
+        link: q.link || undefined,
       });
       d.items[key].wrong++;
     } else if (it && !it.fixed) {
@@ -238,7 +260,7 @@
   window.addEventListener('storage', (e) => { if (e.key === KEY) refreshLinks(); });
 
   window.PortalReview = {
-    DECKS, ROOT, record, stats, openCount, reviewUrl, refreshLinks, clearFixed,
+    DECKS, ROOT, record, stats, openCount, reviewUrl, refreshLinks, clearFixed, normAnswer,
     load, save, update, hash, safe, tidy, plain, around, escapeHtml,
   };
 })();

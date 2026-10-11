@@ -334,6 +334,57 @@ body {
 .rv-opt.is-picked { border: 2px solid var(--bad); background: var(--bad-bg); color: #7c1d16; }
 .rv-opt.is-dim { opacity: 0.55; }
 
+.rv-gapans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.rv-gapans .rv-note { padding-left: 0; }
+
+.rv-gapform {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.rv-input {
+  flex: 1 1 200px;
+  min-width: 0;
+  padding: 8px 12px;
+  border: 1.5px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.95rem;
+}
+
+.rv-input:focus { outline: 2px solid var(--ink); outline-offset: 1px; }
+
+.rv-check {
+  padding: 8px 18px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--ink);
+  color: #FFF6E3;
+  font: inherit;
+  font-weight: 800;
+  font-size: 0.86rem;
+  cursor: pointer;
+}
+
+.rv-link {
+  color: var(--deck);
+  font-size: 0.84rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.rv-link:hover { text-decoration: underline; }
+
 .rv-why {
   margin-bottom: 8px;
   padding: 9px 13px;

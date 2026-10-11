@@ -73,6 +73,10 @@ body {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
+/* Nút Sổ câu sai ở góc phải đầu trang */
+.review-link { margin-left: auto; }
+.review-link b { color: var(--vermilion); }
+
 .home-link:hover,
 .back-btn:hover {
   transform: translateY(-1px);

@@ -118,6 +118,40 @@ window.LISTENING_LESSONS = [
       }
     ]
   },
+  {
+    id: 'a2-daily-routine',
+    level: 'A2',
+    source: 'bbc',
+    series: 'Easy English Conversations',
+    title: 'Daily routines',
+    videoId: 'bq6GBbh3uhU',
+    start: 0,
+    end: 152,
+    parts: [
+      {
+        type: 'gap',
+        limit: 'ONE WORD ONLY',
+        heading: 'Morning and evening routines',
+        items: [
+          { q: 'In the morning, Sian drinks a cup of ___.', answer: ['coffee'], at: 20 },
+          { q: 'To get to work every day, Sian usually ___.', answer: ['walks'], at: 35 },
+          { q: 'Buli listens to the ___ while driving in his car.', answer: ['radio'], at: 55 },
+          { q: 'In the evening, Buli always has dinner with his ___.', answer: ['family'], at: 72 },
+          { q: 'Tim eats toast and ___ for breakfast.', answer: ['eggs', 'egg'], at: 94 },
+          { q: 'Georgie takes the ___ to travel to work.', answer: ['train'], at: 118 },
+          { q: 'During the train journey, Georgie likes to read a ___.', answer: ['book'], at: 128 }
+        ]
+      },
+      {
+        type: 'mcq',
+        items: [
+          { q: 'How does Sian feel before having her morning coffee?', options: ['She feels tired.', 'She feels energetic.', 'She feels stressed.'], answer: 0, at: 18 },
+          { q: 'What does Buli do after finishing dinner?', options: ['He watches television.', 'He goes for a walk.', 'He reads a book.'], answer: 0, at: 80 },
+          { q: 'What does Tim do after he gets home from work?', options: ['He cooks a meal.', 'He relaxes on the sofa.', 'He goes jogging.'], answer: 1, at: 104 }
+        ]
+      }
+    ]
+  },
 
   /* ============================ B1 ============================ */
   {
@@ -219,6 +253,41 @@ window.LISTENING_LESSONS = [
       }
     ]
   },
+  {
+    id: 'b1-dream-job',
+    level: 'B1',
+    source: 'bbc',
+    series: 'Real Easy English',
+    title: 'What’s your dream job?',
+    videoId: 'qHWtJtRSYjc',
+    start: 0,
+    end: 250,
+    parts: [
+      {
+        type: 'gap',
+        limit: 'ONE WORD ONLY',
+        heading: 'Childhood ambitions & career paths',
+        items: [
+          { q: 'When Georgie was five or six, she wanted to be a ___.', answer: ['princess'], at: 28 },
+          { q: 'Later in her childhood, Georgie dreamed of becoming a ___ star.', answer: ['pop'], at: 46 },
+          { q: 'Neil loved sports and hoped to be a professional ___ or cricketer.', answer: ['footballer'], at: 72 },
+          { q: 'As a teenager learning guitar, Neil wanted to be a ___ star.', answer: ['rock'], at: 95 },
+          { q: 'Neil became an English teacher because he wanted to ___ around the world.', answer: ['travel'], at: 130 },
+          { q: 'Georgie also chose teaching English because she wanted to live ___.', answer: ['abroad'], at: 148 },
+          { q: 'At work, Neil values being part of a supportive and friendly ___.', answer: ['team'], at: 198 }
+        ]
+      },
+      {
+        type: 'mcq',
+        items: [
+          { q: 'Why did Neil not pursue a career as a professional sportsman?', options: ['He was not good enough.', 'His parents did not allow him.', 'He suffered a severe injury.'], answer: 0, at: 78 },
+          { q: 'What did Georgie and her childhood friends enjoy doing together?', options: ['Writing and performing songs', 'Making home movies', 'Playing competitive sports'], answer: 0, at: 52 },
+          { q: 'Why did Neil want to live in foreign countries rather than just visit?', options: ['To experience authentic daily life abroad', 'Because living abroad was cheaper than holidays', 'Because he disliked living in England'], answer: 0, at: 138 },
+          { q: 'What is most rewarding for Georgie in her job?', options: ['Feeling that her work is genuinely helpful to others', 'Earning an exceptionally high salary', 'Having long school holidays'], answer: 0, at: 215 }
+        ]
+      }
+    ]
+  },
 
   /* ============================ B2 ============================ */
   {
@@ -316,6 +385,40 @@ window.LISTENING_LESSONS = [
           { q: 'When a law ‘comes into force’, it…', options: ['starts to happen', 'is cancelled', 'becomes popular'], answer: 0, at: 101 },
           { q: '‘Teething issues’ are…', options: ['problems you have when you are getting used to something new', 'health problems in young children', 'problems that never go away'], answer: 0, at: 319 },
           { q: 'Why are some teenagers bragging?', options: ['They can still use their accounts.', 'They have deleted their accounts.', 'They have found better apps.'], answer: 0, at: 374 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'b2-climate-limits',
+    level: 'B2',
+    source: 'bbc',
+    series: 'Learning English from the News',
+    title: 'Earth pushed beyond its limits',
+    videoId: 'wXG6yV_oJ-M',
+    start: 0,
+    end: 390,
+    parts: [
+      {
+        type: 'gap',
+        limit: 'ONE WORD AND/OR A NUMBER',
+        heading: 'Climate warnings & global indicators',
+        items: [
+          { q: 'The UN report warns that planetary indicators are currently flashing ___.', answer: ['red'], at: 35 },
+          { q: 'Scientists observed unprecedented levels of ocean ___.', answer: ['warming', 'heat'], at: 68 },
+          { q: 'An energy ___ occurs when Earth absorbs more heat than it radiates into space.', answer: ['imbalance'], at: 115 },
+          { q: 'The expression ‘pushed beyond the limit’ means safe environmental ___ have been exceeded.', answer: ['boundaries', 'limits', 'boundary'], at: 162 },
+          { q: 'Greenhouse gas concentrations reached a record ___ in the atmosphere.', answer: ['high'], at: 215 },
+          { q: 'The report urges global leaders to accelerate the transition to ___ energy.', answer: ['renewable', 'clean'], at: 285 }
+        ]
+      },
+      {
+        type: 'mcq',
+        items: [
+          { q: 'What does the metaphor ‘flashing red’ signify in the report?', options: ['An urgent warning of extreme danger', 'A minor seasonal temperature fluctuation', 'A malfunction in meteorological sensors'], answer: 0, at: 48 },
+          { q: 'Why is ocean warming particularly concerning according to scientists?', options: ['Oceans absorb and store the vast majority of excess planetary heat.', 'It halts cargo ships from navigating safely.', 'It rapidly alters freshwater salinity in estuaries.'], answer: 0, at: 82 },
+          { q: 'What does the term ‘energy imbalance’ describe?', options: ['The planet takes in more solar heat than it radiates back out.', 'Power grids are failing across developing nations.', 'Renewable energy production outpaces fossil fuel usage.'], answer: 0, at: 125 },
+          { q: 'What key imperative does the United Nations emphasize?', options: ['Drastically reducing carbon emissions without delay', 'Building artificial barriers along all coastlines', 'Waiting for future carbon capture technology'], answer: 0, at: 320 }
         ]
       }
     ]

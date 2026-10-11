@@ -176,7 +176,7 @@
   }
 
   function ambassadorSprite() {
-    return d().avatar === 'girl' ? 'assets/chars/classmate_boy.webp' : 'assets/chars/classmate_girl.webp';
+    return d().avatar === 'girl' ? 'assets/chars/classmate_boy.webp?v=20261011' : 'assets/chars/classmate_girl.webp?v=20261011';
   }
 
   // Cắt khung nhìn trước của tờ sprite: toàn thân, hoặc chỉ phần đầu làm chân dung

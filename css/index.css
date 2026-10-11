@@ -92,7 +92,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .banner-tag {
@@ -131,7 +131,7 @@ body {
 .banner-logo-wrap {
   position: relative;
   width: 100%;
-  max-width: 420px;
+  max-width: 440px;
   aspect-ratio: 873 / 317;
   overflow: hidden;
   display: block;

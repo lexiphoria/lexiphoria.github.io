@@ -885,12 +885,20 @@
     text-decoration: none;
     color: var(--muted);
     font-size: 13px;
+    font-weight: 500;
     font-family: 'Sora', sans-serif;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 8px 12px;
-    border-radius: 8px;
+    gap: 8px;
+    padding: 7px 14px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
     transition: all 0.2s;
   }
-  .home-link:hover { background: var(--surface2); color: var(--accent2); }
+  .home-link:hover {
+    background: var(--surface2);
+    color: var(--text);
+    border-color: var(--accent2);
+    transform: translateY(-1px);
+  }

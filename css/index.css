@@ -87,45 +87,56 @@ body {
 
 /* Left Typography */
 .banner-left {
-  flex: 1.15;
-  max-width: 580px;
+  flex: 1.25;
+  max-width: 680px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 8px;
+  gap: 14px;
 }
 
 .banner-tag {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   background: #4f46e5;
   color: #fff;
   font-family: 'Silkscreen', monospace;
-  font-size: 0.72rem;
-  letter-spacing: 1px;
-  padding: 3px 10px;
-  border-radius: 6px;
+  font-size: 0.88rem;
+  letter-spacing: 1.5px;
+  padding: 6px 14px;
+  border-radius: 8px;
   width: fit-content;
-  box-shadow: 0 2px 0 #312e81;
+  box-shadow: 0 3px 0 #312e81;
 }
 
 .pixel-star {
   color: #fde047;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .banner-title {
   margin: 0;
   font-family: 'Silkscreen', 'Press Start 2P', cursive, sans-serif;
-  font-size: clamp(1.35rem, 2.5vw, 2.05rem);
+  font-size: clamp(2rem, 3.6vw, 3.2rem);
   font-weight: 700;
   color: #1e1b4b;
-  letter-spacing: 0.5px;
-  line-height: 1.18;
+  letter-spacing: 0.8px;
+  line-height: 1.22;
   text-shadow: 
-    2px 2px 0 #818cf8,
-    3px 3px 0 #312e81;
+    3px 3px 0 #818cf8,
+    5px 5px 0 #312e81;
+}
+
+.banner-subtitle {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #475569;
+  letter-spacing: 0.2px;
+  line-height: 1.4;
+  max-width: 500px;
 }
 
 /* Right Scene */
@@ -204,13 +215,13 @@ body {
   right: 125px;
   background: #ffffff;
   border: 2px solid #1e1b4b;
-  border-radius: 8px;
-  padding: 4px 10px;
+  border-radius: 9px;
+  padding: 6px 13px;
   font-family: 'Silkscreen', monospace;
-  font-size: 0.72rem;
+  font-size: 0.84rem;
   font-weight: 700;
   color: #1e1b4b;
-  box-shadow: 2px 2px 0 #818cf8;
+  box-shadow: 2.5px 2.5px 0 #818cf8;
   white-space: nowrap;
   animation: bounceBadge 2.8s ease-in-out infinite;
   z-index: 5;
@@ -705,10 +716,20 @@ body {
 }
 
 footer {
-  margin-top: 30px;
+  margin-top: 36px;
   color: var(--muted);
   font-size: 0.95rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-disclaimer {
+  font-size: 0.82rem;
+  color: #78716c;
+  line-height: 1.45;
+  margin: 0;
 }
 
 @media (max-width: 640px) {

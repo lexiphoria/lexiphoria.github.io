@@ -51,18 +51,23 @@ body {
 .home-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   color: var(--muted);
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 13px;
   font-weight: 500;
   padding: 7px 14px;
-  border-radius: 20px;
-  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  border: 1px solid var(--border);
   background: var(--surface);
-  transition: var(--transition);
+  transition: all 0.2s;
 }
-.home-btn:hover { background: var(--primary-lt); color: var(--primary); border-color: var(--primary); }
+.home-btn:hover {
+  background: var(--primary-lt);
+  color: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
 
 .header-title {
   font-size: 1.05rem;

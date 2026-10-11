@@ -52,16 +52,27 @@ body {
 }
 
 a.home-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: var(--text-muted);
   text-decoration: none;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 7px 14px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
   margin-bottom: 2rem;
-  transition: color 0.2s;
+  transition: all 0.2s;
+  width: fit-content;
 }
 
 a.home-link:hover {
   color: var(--text-main);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary);
+  transform: translateY(-1px);
 }
 
 /* Start Screen */

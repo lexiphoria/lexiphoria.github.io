@@ -2047,7 +2047,7 @@ ${table([L('Từ', 'Word'), L('Nghĩa', 'Meaning'), L('Lần gắn Unknown', 'Ta
 
   // Chữ cố định trong index.html, gắn bằng data-i18n (nội dung), data-i18n-html, data-i18n-title, data-i18n-aria
   const STATIC = {
-    home: ['← Trang chủ', '← Home'],
+    home: ['Trang chủ', 'Home'],
     hud: ['Tiến độ', 'Progress'],
     teaTip: [
       'Trà Đá Helper: dùng để dịch cả câu và mở gợi ý. Nhặt ly trà đá, làm đúng Booklet, thắng Boss hoặc ghé quầy Trà Đá để nạp lại.',

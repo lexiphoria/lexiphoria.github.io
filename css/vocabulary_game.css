@@ -79,18 +79,24 @@ body {
 .home-link {
   display: inline-flex;
   align-items: center;
-  color: var(--muted);
+  color: var(--text-dim, #94a3b8);
   text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 600;
-  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  gap: 8px;
+  padding: 7px 14px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   margin-bottom: 20px;
-  transition: all 0.25s;
+  transition: all 0.2s;
 }
 
 .home-link:hover {
   color: #fff;
-  transform: translateX(-4px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(192, 132, 252, 0.4);
+  transform: translateY(-1px);
 }
 
 h1 {

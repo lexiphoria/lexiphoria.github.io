@@ -95,15 +95,22 @@ h1 {
   align-items: center;
   color: var(--muted);
   text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 600;
-  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  gap: 8px;
+  padding: 7px 14px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
   margin-bottom: 25px;
-  transition: color 0.2s;
+  transition: all 0.2s;
 }
 
 .home-link:hover {
   color: var(--ink);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent);
+  transform: translateY(-1px);
 }
 
 /* Stats Summary */

@@ -99,6 +99,27 @@
         #next-btn:hover { background: #e6b800; transform: scale(1.05); }
 
         
+        .home-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 7px 14px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.2s;
+            width: fit-content;
+        }
+        .home-btn:hover {
+            background: rgba(255, 255, 255, 0.18);
+            border-color: var(--accent-color);
+            transform: translateY(-1px);
+        }
+
         @media (max-width: 850px) { 
             .layout-wrapper { flex-direction: column; } 
             .sidebar { flex: none; width: 100%; order: unset; } 
@@ -112,7 +133,12 @@
 
         
         <div id="test-selector-screen">
-            <button class="back-btn" onclick="window.location.href='index.html'" style="margin-bottom: 20px;">🏠 Về Trang Chủ</button>
+            <div style="text-align: left; margin-bottom: 15px;">
+                <a href="index.html" class="home-btn" title="Return to Home" aria-label="Return to Home">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span>Home</span>
+                </a>
+            </div>
             <p style="font-size: 1.1rem; opacity: 0.9;">Vui lòng chọn một Test để bắt đầu làm bài. Mỗi Test bao gồm 20 câu hỏi ngẫu nhiên và không lặp lại.</p>
             <div class="test-grid" id="test-grid">
                 </div>
@@ -120,7 +146,13 @@
 
         <div id="quiz-screen" style="display: none;">
             <div class="quiz-header">
-                <button class="back-btn" onclick="goHome()">🔙 Quay lại Chọn Test</button>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <a href="index.html" class="home-btn" title="Return to Home" aria-label="Return to Home">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        <span>Home</span>
+                    </a>
+                    <button class="back-btn" onclick="goHome()">🔙 Quay lại Chọn Test</button>
+                </div>
                 <div class="score-board">Câu: <span id="cur-idx">1</span>/<span id="total-idx">0</span> | Điểm: <span id="score">0</span></div>
             </div>
             

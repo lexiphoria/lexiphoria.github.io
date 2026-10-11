@@ -9,23 +9,27 @@
       .home-nav {
         display: inline-flex;
         align-items: center;
-        gap: 6px;
+        gap: 8px;
         font-size: 13px;
+        font-weight: 500;
         color: #888;
         text-decoration: none;
         border: 1px solid #ddd;
-        border-radius: 20px;
-        padding: 6px 16px;
+        border-radius: 10px;
+        padding: 7px 14px;
         margin-bottom: 16px;
         transition: all 0.2s;
       }
-      .home-nav:hover { border-color: #7c6af5; color: #7c6af5; background: rgba(124,106,245,0.06); }
+      .home-nav:hover { border-color: #7c6af5; color: #7c6af5; background: rgba(124,106,245,0.06); transform: translateY(-1px); }
     </style>
 </head>
 <body>
 
     <div class="container" id="start-screen">
-        <a class="home-nav" href="index.html">🏠 Home</a>
+        <a class="home-nav" href="index.html" title="Return to Home" aria-label="Return to Home">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>Home</span>
+        </a>
         <div class="emoji-deco">📚✨🎯</div>
         <h1>English 8 - Semester 2 Final Exam</h1>
         <p class="subtitle">100 Comprehensive Questions for Your Practice</p>
@@ -35,7 +39,10 @@
 
     <div class="container" id="quiz-screen">
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
-          <a class="home-nav" href="index.html" style="margin-bottom:0;">🏠 Home</a>
+          <a class="home-nav" href="index.html" style="margin-bottom:0;" title="Return to Home" aria-label="Return to Home">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>Home</span>
+          </a>
           <div class="score-board" style="margin:0;">
             <span id="question-counter">Question: 1/100</span>
             <span id="score-tracker">Score: 0</span>
@@ -49,7 +56,10 @@
     </div>
 
     <div class="container" id="end-screen" style="display: none;">
-        <a class="home-nav" href="index.html">🏠 Home</a>
+        <a class="home-nav" href="index.html" title="Return to Home" aria-label="Return to Home">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>Home</span>
+        </a>
         <div class="emoji-deco">🎉🏆🌟</div>
         <h1>Quiz Completed!</h1>
         <p class="question-text" style="text-align: center; background: none; border: none;">Your final score is <strong id="final-score">0</strong> out of <strong id="total-questions">0</strong>.</p>

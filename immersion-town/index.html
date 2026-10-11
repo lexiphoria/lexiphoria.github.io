@@ -15,7 +15,10 @@
 <body>
     <!-- Chữ mặc định là tiếng Anh; js/game.js đổi sang tiếng Việt theo khoá data-i18n* khi bấm nút EN/VI -->
     <header class="topbar">
-        <a class="home-link" href="../index.html" data-i18n="home">← Home</a>
+        <a class="home-link" href="../index.html" title="Return to Home" aria-label="Return to Home">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span data-i18n="home">Home</span>
+        </a>
         <div class="hud" aria-label="Progress" data-i18n-aria="hud">
             <div class="trada-widget dongho-panel" title="Trà Đá Helper: spend cups to translate a whole line or open a hint. Refill by finding iced teas, mastering Booklets, beating Bosses or visiting the iced-tea stall." data-i18n-title="teaTip">
                 <span class="trada-title">☕ Trà Đá Helper:</span>

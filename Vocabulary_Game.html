@@ -79,15 +79,15 @@
               <span id="collocations-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
             </div>
 
-            <!-- Extra 3: DEMOGRAPHIC TERMS (Active) -->
-            <div class="topic-card" data-topic="demographicTerms" onclick="selectTopic('demographicTerms')">
-              <span class="topic-icon">📊</span>
-              <h3 class="topic-title">DEMOGRAPHIC TERMS</h3>
-              <p class="topic-meta">117 Thuật ngữ nhân khẩu học & dân số học (Glossary of Demographic Terms).</p>
+            <!-- Extra 3: TERMINOLOGY (Demographic, Medicine, Economic, Technology) -->
+            <div class="topic-card" id="card-terminology" data-topic="terminology" onclick="openTerminologyHub()">
+              <span class="topic-icon">🏷️</span>
+              <h3 class="topic-title">TERMINOLOGY</h3>
+              <p class="topic-meta">Thuật ngữ chuyên ngành: Demographic, Medicine, Economic &amp; Technology.</p>
               <div class="topic-progress-container">
-                <div id="demographicTerms-progress-fill" class="topic-progress-fill"></div>
+                <div id="terminology-progress-fill" class="topic-progress-fill"></div>
               </div>
-              <span id="demographicTerms-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
+              <span id="terminology-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
             </div>
 
             <!-- Extra 4: EXAM IDIOMS (dữ liệu js/exam_idioms_data.js, nối vào qua js/exam_idioms_vocab.js) -->
@@ -158,10 +158,67 @@
       </div>
     </div>
 
+    <!-- 1.5. TERMINOLOGY HUB SCREEN -->
+    <div id="terminology-screen" class="glass-panel" style="display: none;">
+      <div class="mode-header">
+        <button class="btn-back" onclick="goToDashboard()">← Back to Dashboard</button>
+        <span class="current-topic-badge badge-terminology" id="terminology-hub-badge">🏷️ TERMINOLOGY</span>
+      </div>
+
+      <h2 style="font-size: 1.5rem; color: var(--folk-ink-strong, #1A1412); font-weight: 700; margin-bottom: 8px;">Academic Terminology Hub</h2>
+      <p class="subtitle" style="text-align: left; margin-bottom: 25px;">Chọn phân ngành chuyên môn để bắt đầu rèn luyện Flashcard 3D, Trắc nghiệm nghĩa, Hoàn thành câu và Đánh Boss từ vựng.</p>
+
+      <div class="terminology-grid">
+        <!-- Sub-topic 1: Demographic Terms -->
+        <div class="terminology-card" id="card-term-demographic" onclick="selectTopic('demographicTerms')">
+          <span class="topic-icon">📊</span>
+          <h3 class="topic-title">DEMOGRAPHIC TERMS</h3>
+          <p class="topic-meta">117 Thuật ngữ nhân khẩu học &amp; dân số học (Glossary of Demographic Terms).</p>
+          <div class="topic-progress-container">
+            <div id="demographicTerms-progress-fill" class="topic-progress-fill"></div>
+          </div>
+          <span id="demographicTerms-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
+        </div>
+
+        <!-- Sub-topic 2: Medicine Terms -->
+        <div class="terminology-card" id="card-term-medicine" onclick="selectTopic('medicineTerms')">
+          <span class="topic-icon">💊</span>
+          <h3 class="topic-title">MEDICINE TERMS</h3>
+          <p class="topic-meta">50 Thuật ngữ y khoa, lâm sàng, dược lý, bệnh học &amp; chăm sóc sức khỏe cộng đồng.</p>
+          <div class="topic-progress-container">
+            <div id="medicineTerms-progress-fill" class="topic-progress-fill"></div>
+          </div>
+          <span id="medicineTerms-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
+        </div>
+
+        <!-- Sub-topic 3: Economic Terms -->
+        <div class="terminology-card" id="card-term-economic" onclick="selectTopic('economicTerms')">
+          <span class="topic-icon">📈</span>
+          <h3 class="topic-title">ECONOMIC TERMS</h3>
+          <p class="topic-meta">50 Thuật ngữ kinh tế vĩ mô, vi mô, tài chính tiền tệ, thị trường &amp; thương mại.</p>
+          <div class="topic-progress-container">
+            <div id="economicTerms-progress-fill" class="topic-progress-fill"></div>
+          </div>
+          <span id="economicTerms-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
+        </div>
+
+        <!-- Sub-topic 4: Technology Terms -->
+        <div class="terminology-card" id="card-term-technology" onclick="selectTopic('technologyTerms')">
+          <span class="topic-icon">🤖</span>
+          <h3 class="topic-title">TECHNOLOGY TERMS</h3>
+          <p class="topic-meta">50 Thuật ngữ trí tuệ nhân tạo (AI), an ninh mạng, điện toán đám mây &amp; kỷ nguyên số.</p>
+          <div class="topic-progress-container">
+            <div id="technologyTerms-progress-fill" class="topic-progress-fill"></div>
+          </div>
+          <span id="technologyTerms-progress-text" class="stage-card-score" style="margin-top: 10px; font-size: 0.8rem; color: var(--muted);">Progress: 0%</span>
+        </div>
+      </div>
+    </div>
+
     <!-- 2. MODE SELECTION SCREEN -->
     <div id="mode-screen" class="glass-panel" style="display: none;">
       <div class="mode-header">
-        <button class="btn-back" onclick="goToDashboard()">← Back to Topics</button>
+        <button class="btn-back" onclick="backFromModes()">← Back to Topics</button>
         <span class="current-topic-badge badge-ourLife" id="mode-topic-badge">OUR LIFE</span>
       </div>
       
@@ -535,6 +592,7 @@
   <script src="js/study-tracker.js?v=2" data-track-time></script>
   <script src="js/review-log.js?v=2"></script>
   <script src="js/vocabulary_data.js?v=1.0.9"></script>
+  <script src="js/terminology_data.js?v=1.0.0"></script>
   <script src="js/vocabulary_extras.js?v=1.0.4"></script>
   <script src="js/exam_idioms_data.js?v=6.0.0"></script>
   <script src="js/exam_idioms_vocab.js?v=1.0.0"></script>
@@ -705,6 +763,9 @@
         { id: 'ourLife', progressFillId: 'life-progress-fill', progressTextId: 'life-progress-text' },
         { id: 'ourSociety', progressFillId: 'society-progress-fill', progressTextId: 'society-progress-text' },
         { id: 'demographicTerms', progressFillId: 'demographicTerms-progress-fill', progressTextId: 'demographicTerms-progress-text' },
+        { id: 'medicineTerms', progressFillId: 'medicineTerms-progress-fill', progressTextId: 'medicineTerms-progress-text' },
+        { id: 'economicTerms', progressFillId: 'economicTerms-progress-fill', progressTextId: 'economicTerms-progress-text' },
+        { id: 'technologyTerms', progressFillId: 'technologyTerms-progress-fill', progressTextId: 'technologyTerms-progress-text' },
         { id: 'phrasalVerbs', progressFillId: 'phrasalVerbs-progress-fill', progressTextId: 'phrasalVerbs-progress-text' },
         { id: 'collocations', progressFillId: 'collocations-progress-fill', progressTextId: 'collocations-progress-text' },
         { id: 'examIdioms', progressFillId: 'examIdioms-progress-fill', progressTextId: 'examIdioms-progress-text' },
@@ -738,6 +799,27 @@
           }
         }
       });
+
+      // Consolidated Terminology Progress (demographicTerms, medicineTerms, economicTerms, technologyTerms)
+      const termTopics = ['demographicTerms', 'medicineTerms', 'economicTerms', 'technologyTerms'];
+      let termTotal = 0;
+      let termLearned = 0;
+      termTopics.forEach(tid => {
+        const words = (typeof vocabularyData !== 'undefined' && vocabularyData[tid]) ? vocabularyData[tid] : [];
+        termTotal += words.length;
+        words.forEach(w => {
+          if (progress.learned[`${tid}_${w.word}`]) {
+            termLearned++;
+          }
+        });
+      });
+      const termFillEl = document.getElementById('terminology-progress-fill');
+      const termTextEl = document.getElementById('terminology-progress-text');
+      if (termFillEl && termTextEl && termTotal > 0) {
+        const termPct = Math.round((termLearned / termTotal) * 100);
+        termFillEl.style.width = `${termPct}%`;
+        termTextEl.innerText = `Progress: ${termPct}% (${termLearned}/${termTotal})`;
+      }
       
       // If we don't have any words yet (shouldn't happen for ourLife)
       if (totalWords === 0 && typeof vocabularyData !== 'undefined' && vocabularyData.ourLife) {
@@ -801,6 +883,30 @@
     }
 
     // --- Navigation ---
+    function openTerminologyHub() {
+      playSound('click');
+      document.getElementById('dashboard-screen').style.display = 'none';
+      document.getElementById('mode-screen').style.display = 'none';
+      document.getElementById('results-screen').style.display = 'none';
+      document.getElementById('boss-screen').style.display = 'none';
+      const termScreen = document.getElementById('terminology-screen');
+      if (termScreen) termScreen.style.display = 'block';
+      updateDashboardStats();
+    }
+
+    function backFromModes() {
+      playSound('click');
+      const termTopics = ['demographicTerms', 'medicineTerms', 'economicTerms', 'technologyTerms'];
+      if (termTopics.includes(currentTopic)) {
+        document.getElementById('mode-screen').style.display = 'none';
+        const termScreen = document.getElementById('terminology-screen');
+        if (termScreen) termScreen.style.display = 'block';
+        updateDashboardStats();
+      } else {
+        goToDashboard();
+      }
+    }
+
     function selectTopic(topic) {
       playSound('click');
       currentTopic = topic;
@@ -810,6 +916,9 @@
         ourLife: 'OUR LIFE',
         ourSociety: 'OUR SOCIETY',
         demographicTerms: 'DEMOGRAPHIC TERMS',
+        medicineTerms: 'MEDICINE TERMS',
+        economicTerms: 'ECONOMIC TERMS',
+        technologyTerms: 'TECHNOLOGY TERMS',
         phrasalVerbs: 'PHRASAL VERBS',
         collocations: 'COLLOCATIONS',
         examIdioms: 'EXAM IDIOMS',
@@ -824,11 +933,17 @@
       refreshBossBadges();
 
       document.getElementById('dashboard-screen').style.display = 'none';
+      if (document.getElementById('terminology-screen')) {
+        document.getElementById('terminology-screen').style.display = 'none';
+      }
       document.getElementById('mode-screen').style.display = 'block';
     }
 
     function goToDashboard() {
       playSound('click');
+      if (document.getElementById('terminology-screen')) {
+        document.getElementById('terminology-screen').style.display = 'none';
+      }
       document.getElementById('mode-screen').style.display = 'none';
       document.getElementById('results-screen').style.display = 'none';
       document.getElementById('boss-screen').style.display = 'none';
@@ -866,6 +981,10 @@
       const themeColors = {
         ourLife: '#8b5cf6',
         ourSociety: '#3b82f6',
+        demographicTerms: '#0284c7',
+        medicineTerms: '#e11d48',
+        economicTerms: '#d97706',
+        technologyTerms: '#0d9488',
         phrasalVerbs: '#f59e0b',
         collocations: '#10b981',
         examIdioms: '#f43f5e',

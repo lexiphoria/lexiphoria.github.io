@@ -1,0 +1,247 @@
+/* ============================================================
+ * FOLK ART BACKGROUND — GIẤY DÓ MỘC HOA VĂN IN CHÌM NHÃ NHẶN
+ * Nền giấy Dó ngà thanh lịch, họa tiết hoa sen & sóng nước dân gian in chìm
+ * ============================================================ */
+
+:root {
+  /* Bảng màu Giấy Dó & Mực Nho Nhã Nhặn */
+  --folk-bg: #F7F3E9;
+  --folk-bg-light: #FBF8F1;
+  --folk-bg-warm: #F4EFE4;
+  --folk-bg-deep: #EBE4D5;
+  
+  --folk-panel: rgba(255, 254, 250, 0.94);
+  --folk-panel-border: rgba(42, 36, 33, 0.12);
+  --folk-ink: #2A2421;
+  --folk-muted: #5C544E;
+  
+  --folk-accent-cinnabar: #9E3A33; /* Son trầm điểm xuyết nhẹ */
+  --folk-accent-gold: #C29B38;     /* Vàng hoa hòe thanh nhã */
+
+  /* 1. Họa tiết Dân Gian in chìm (Hoa sen, sóng thủy ba & hồi văn mây cuộn) */
+  --folk-watermark-pattern: url("data:image/svg+xml,%3Csvg width='160' height='160' viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%235A4838' stroke-width='1.15' stroke-linecap='round' stroke-linejoin='round' opacity='0.06'%3E%3Cpath d='M80,38 C68,56 54,70 80,94 C106,70 92,56 80,38 Z'/%3E%3Cpath d='M80,94 C60,82 46,70 58,52 C70,64 76,82 80,94 Z'/%3E%3Cpath d='M80,94 C100,82 114,70 102,52 C90,64 84,82 80,94 Z'/%3E%3Cpath d='M80,94 Q82,112 80,130'/%3E%3Cpath d='M0,150 Q20,134 40,150 Q60,134 80,150 Q100,134 120,150 Q140,134 160,150'/%3E%3Cpath d='M-20,156 Q0,140 20,156 Q40,140 60,156 Q80,140 100,156 Q120,140 140,156 Q160,140 180,156'/%3E%3Cpath d='M10,18 C16,12 24,14 26,20 C28,26 22,30 16,26'/%3E%3Cpath d='M150,18 C144,12 136,14 134,20 C132,26 138,30 144,26'/%3E%3C/g%3E%3C/svg%3E");
+
+  /* 2. Vân xơ giấy Dó tự nhiên mờ mịn */
+  --paper-grain-noise: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0  0 0.96 0 0 0  0 0 0.88 0 0  0 0 0 0.12 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* ============================================================
+ * 1. MÀU NỀN BODY NHÃ NHẶN & HỌA TIẾT IN CHÌM
+ * ============================================================ */
+body {
+  font-family: 'Lexend', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--folk-ink) !important;
+  background-color: var(--folk-bg) !important;
+  background-image: 
+    var(--folk-watermark-pattern),
+    var(--paper-grain-noise),
+    radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.45) 0%, transparent 75%),
+    linear-gradient(180deg, var(--folk-bg-light) 0%, var(--folk-bg-warm) 50%, var(--folk-bg-deep) 100%) !important;
+  background-size: 160px 160px, 200px 200px, 100% 100%, 100% 100% !important;
+  background-repeat: repeat, repeat, no-repeat, no-repeat !important;
+  background-blend-mode: normal, multiply, normal, normal !important;
+  background-attachment: fixed !important;
+  min-height: 100vh;
+}
+
+/* ============================================================
+ * 2. CÁC PANEL & KHUNG CHÍNH (ELEGANT PARCHMENT PANELS)
+ * ============================================================ */
+.glass-panel {
+  background: var(--folk-panel) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1.5px solid var(--folk-panel-border) !important;
+  box-shadow: 0 16px 36px rgba(42, 36, 33, 0.07), 0 3px 0 rgba(42, 36, 33, 0.08) !important;
+  color: var(--folk-ink) !important;
+  border-radius: var(--radius);
+  position: relative;
+}
+
+/* Chỉ viền son/vàng mờ thanh nhã trên đỉnh panel */
+.glass-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(194, 155, 56, 0.4) 50%, 
+    transparent 100%);
+  pointer-events: none;
+}
+
+/* Tiêu đề chính sắc nét, trang nhã */
+.game-header h1 {
+  background: linear-gradient(135deg, #2A2421 0%, #68352F 60%, #9E3A33 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: var(--folk-muted) !important;
+}
+
+/* Khối thống kê tổng quan */
+.global-stats {
+  background: rgba(240, 233, 220, 0.6) !important;
+  border: 1px solid rgba(42, 36, 33, 0.1) !important;
+  border-radius: 16px;
+}
+
+.stat-val {
+  color: var(--folk-ink) !important;
+  text-shadow: none !important;
+}
+
+.stat-label {
+  color: #6E655E !important;
+}
+
+/* Thanh điều hướng Header Actions */
+.game-header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 14px;
+}
+
+.home-link {
+  background: rgba(42, 36, 33, 0.04) !important;
+  border: 1px solid rgba(42, 36, 33, 0.15) !important;
+  color: var(--folk-ink) !important;
+}
+
+.home-link:hover {
+  background: var(--folk-ink) !important;
+  color: #FFF !important;
+}
+
+/* ============================================================
+ * 3. THẺ CHỦ ĐỀ & EXTRA MATERIALS
+ * ============================================================ */
+.topics-heading {
+  color: var(--folk-ink) !important;
+}
+
+.topics-side {
+  background: rgba(244, 238, 226, 0.5) !important;
+  border: 1px solid rgba(42, 36, 33, 0.1) !important;
+}
+
+.topic-card {
+  background: #FFFDF9 !important;
+  border: 1.5px solid rgba(42, 36, 33, 0.12) !important;
+  box-shadow: 0 4px 12px rgba(42, 36, 33, 0.04) !important;
+}
+
+.topic-card:hover:not(.locked) {
+  border-color: rgba(158, 58, 51, 0.4) !important;
+  box-shadow: 0 10px 22px rgba(42, 36, 33, 0.08) !important;
+  background: #FFFAF0 !important;
+}
+
+.topic-title {
+  color: var(--folk-ink) !important;
+}
+
+.topic-meta {
+  color: var(--folk-muted) !important;
+}
+
+/* ============================================================
+ * 4. CHẾ ĐỘ CHƠI (MODE SELECTION) & NÚT QUAY LẠI
+ * ============================================================ */
+.mode-card {
+  background: #FFFDF9 !important;
+  border: 1.5px solid rgba(42, 36, 33, 0.12) !important;
+  box-shadow: 0 4px 12px rgba(42, 36, 33, 0.04) !important;
+}
+
+.mode-card:hover {
+  border-color: rgba(158, 58, 51, 0.4) !important;
+  box-shadow: 0 10px 22px rgba(42, 36, 33, 0.08) !important;
+  background: #FFFAF0 !important;
+}
+
+.mode-card-title {
+  color: var(--folk-ink) !important;
+}
+
+.mode-card-desc {
+  color: var(--folk-muted) !important;
+}
+
+.btn-back,
+.btn-nav-card {
+  background: rgba(42, 36, 33, 0.05) !important;
+  border: 1px solid rgba(42, 36, 33, 0.16) !important;
+  color: var(--folk-ink) !important;
+}
+
+.btn-back:hover,
+.btn-nav-card:hover {
+  background: var(--folk-ink) !important;
+  color: #FFF !important;
+}
+
+/* ============================================================
+ * 5. FLASHCARDS, QUIZ & CÂU HỎI
+ * ============================================================ */
+.card-front,
+.card-back {
+  background: #FFFDF9 !important;
+  border: 1.5px solid rgba(42, 36, 33, 0.16) !important;
+  color: var(--folk-ink) !important;
+  box-shadow: 0 14px 32px rgba(42, 36, 33, 0.08) !important;
+}
+
+.word-term {
+  color: #872E27 !important;
+}
+
+.word-meaning {
+  color: #872E27 !important;
+}
+
+.example-container {
+  background: rgba(244, 238, 226, 0.5) !important;
+  border: 1px solid rgba(42, 36, 33, 0.1) !important;
+}
+
+.example-en {
+  color: var(--folk-ink) !important;
+}
+
+.example-vi {
+  color: var(--folk-muted) !important;
+}
+
+.quiz-option,
+.sc-option-card {
+  background: #FFFDF9 !important;
+  border: 1.5px solid rgba(42, 36, 33, 0.14) !important;
+  color: var(--folk-ink) !important;
+}
+
+.quiz-option:hover,
+.sc-option-card:hover {
+  background: #FFF8EB !important;
+  border-color: rgba(158, 58, 51, 0.45) !important;
+}
+
+.quiz-prompt-text,
+.sc-sentence-box,
+.quiz-question-box {
+  color: var(--folk-ink) !important;
+  background: rgba(244, 238, 226, 0.5) !important;
+  border: 1px solid rgba(42, 36, 33, 0.1) !important;
+}
+
+.score-board,
+.card-progress-text {
+  color: var(--folk-muted) !important;
+}

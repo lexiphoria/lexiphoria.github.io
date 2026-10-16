@@ -1,8 +1,8 @@
 :root {
   --bg-primary: #0a0d18;
   --bg-secondary: #121729;
-  --bg-card: rgba(22, 29, 53, 0.75);
-  --bg-card-hover: rgba(30, 40, 72, 0.85);
+  --bg-card: rgba(18, 24, 44, 0.78);
+  --bg-card-hover: rgba(28, 38, 68, 0.88);
   --border-color: rgba(99, 102, 241, 0.2);
   --border-glow: rgba(99, 102, 241, 0.4);
   --text-primary: #f8fafc;
@@ -31,18 +31,18 @@
 }
 
 [data-theme="light"] {
-  --bg-primary: #f1f5f9;
-  --bg-secondary: #ffffff;
-  --bg-card: rgba(255, 255, 255, 0.9);
+  --bg-primary: #f6f2e8;
+  --bg-secondary: #fdfaf3;
+  --bg-card: rgba(255, 253, 248, 0.88);
   --bg-card-hover: #ffffff;
-  --border-color: rgba(99, 102, 241, 0.25);
-  --border-glow: rgba(99, 102, 241, 0.35);
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #64748b;
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.12);
+  --border-color: rgba(160, 120, 80, 0.2);
+  --border-glow: rgba(190, 135, 75, 0.35);
+  --text-primary: #1e2432;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+  --shadow-sm: 0 2px 8px rgba(60, 45, 30, 0.06);
+  --shadow-md: 0 8px 20px rgba(60, 45, 30, 0.08);
+  --shadow-lg: 0 16px 36px rgba(60, 45, 30, 0.12);
 }
 
 * {
@@ -51,18 +51,63 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: var(--bg-primary);
+  min-height: 100%;
+}
+
 body {
   font-family: var(--font-family);
-  background-color: var(--bg-primary);
+  background-color: transparent;
   color: var(--text-primary);
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: 
-    radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.08) 0%, transparent 40%);
-  background-attachment: fixed;
+  position: relative;
+}
+
+/* Authentic Dong Ho Folk Painting Watermarked / In Chìm Background */
+body::before {
+  content: "";
+  position: fixed;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  z-index: -1;
+  background-image: url('../assets/dongho_bg.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+  /* Dark mode: subtly illuminated lacquer woodblock watermark */
+  opacity: 0.22;
+  filter: blur(2px) brightness(0.8) contrast(1.15) saturate(1.1);
+  transform: translateZ(0);
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+/* Soft Vignette Overlay for Crisp Reading Comfort */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 35%, rgba(10, 13, 24, 0.1) 0%, rgba(10, 13, 24, 0.55) 100%);
+  transition: background 0.3s ease;
+}
+
+[data-theme="light"] body::before {
+  /* Light mode: authentic Giấy Dó / Giấy Điệp watermark, softly pressed into the paper */
+  opacity: 0.26;
+  filter: blur(1.5px) saturate(0.95) contrast(1.05);
+  mix-blend-mode: multiply;
+}
+
+[data-theme="light"] body::after {
+  background: radial-gradient(circle at 50% 35%, rgba(246, 242, 232, 0.1) 0%, rgba(240, 234, 222, 0.35) 100%);
 }
 
 /* Nav Header */
@@ -71,13 +116,13 @@ body {
   top: 0;
   z-index: 100;
   background: rgba(10, 13, 24, 0.85);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-color);
   padding: 0.75rem 1.5rem;
 }
 
 [data-theme="light"] .site-header {
-  background: rgba(241, 245, 249, 0.9);
+  background: rgba(246, 242, 232, 0.88);
 }
 
 .header-container {
@@ -432,12 +477,16 @@ body {
 }
 
 .quiz-topbar {
-  background: var(--bg-secondary);
+  background: rgba(18, 23, 41, 0.78);
   border-bottom: 1px solid var(--border-color);
   padding: 0.6rem 1.25rem;
   position: relative;
   z-index: 90;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(14px);
+}
+
+[data-theme="light"] .quiz-topbar {
+  background: rgba(253, 250, 243, 0.82);
 }
 
 .quiz-topbar-content {

@@ -5461,6 +5461,62 @@ const texts = [
       }
     ]
   },
+  {
+    title: "Cambridge Dictionary: New Slang & Buzzwords",
+    type: "News & Culture",
+    icon: "📖",
+    passage: `CAMBRIDGE DICTIONARY: NEW WORDS & INTERNET SLANG\n\nSkibidi, delulu, and tradwife are among thousands of new words, phrases, and definitions recently ___1___ to the Cambridge Dictionary. This major update underscores the profound impact that viral social media trends and younger generations are having on the evolution of modern English.\n\nRather than dismissing these digital coinages as ephemeral nonsense, Cambridge lexicographers systematically track how such terms circulate in real-world usage. According to Colin McIntosh, Lexical Programme Manager at Cambridge University Press & Assessment, editors only induct terms that have demonstrated genuine staying ___2___ across diverse contexts.\n\nAmong the headline additions, "skibidi" originated from the viral YouTube animation series Skibidi Toilet and can function as a versatile slang term meaning "cool" or "bad," or simply as an intensifier. Meanwhile, "delulu" is a playful shortening of "delusional," frequently ___3___ in lighthearted expressions like "delulu is the solulu" to describe holding unrealistically optimistic expectations. Another notable addition is "tradwife," short for "traditional wife," referring to a married woman who chooses to embrace conventional domestic roles and shares her lifestyle ___4___ social media platforms.\n\nThe update also includes "broligarchy," a portmanteau blending "bro" and "oligarchy" to describe ultra-wealthy, influential men who dominate the technology sector. Lexicographers emphasize that their professional duty is not to pass moral judgment ___5___ emerging vocabulary, but rather to document how English is ___6___ spoken and written around the globe.`,
+    questions: [
+      {
+        type: "Part of Speech",
+        blank: 1,
+        text: "...among thousands of new words, phrases, and definitions recently ___1___ to the Cambridge Dictionary.",
+        options: ["A. adding", "B. added", "C. addition", "D. have added"],
+        answer: 1,
+        feedback: "'Recently added' is a past participle used in a reduced relative clause ('which were recently added to...'). It functions as an adjective modifying 'thousands of new words'."
+      },
+      {
+        type: "Collocation",
+        blank: 2,
+        text: "...editors only induct terms that have demonstrated genuine staying ___2___ across diverse contexts.",
+        options: ["A. power", "B. energy", "C. force", "D. ability"],
+        answer: 0,
+        feedback: "'Staying power' is a standard English collocation meaning the ability to endure, persist, or remain relevant over a sustained period of time."
+      },
+      {
+        type: "Word Meaning",
+        blank: 3,
+        text: "...Meanwhile, 'delulu' is a playful shortening of 'delusional,' frequently ___3___ in lighthearted expressions...",
+        options: ["A. employed", "B. abandoned", "C. omitted", "D. condemned"],
+        answer: 0,
+        feedback: "'Employed' means used or applied in a particular context. The past participle indicates that the term is frequently used in lighthearted expressions."
+      },
+      {
+        type: "Preposition",
+        blank: 4,
+        text: "...conventional domestic roles and shares her lifestyle ___4___ social media platforms.",
+        options: ["A. at", "B. in", "C. on", "D. with"],
+        answer: 2,
+        feedback: "We use the preposition 'on' when referring to digital media, websites, and internet platforms (e.g. 'on social media platforms')."
+      },
+      {
+        type: "Collocation",
+        blank: 5,
+        text: "...duty is not to pass moral judgment ___5___ emerging vocabulary...",
+        options: ["A. to", "B. on", "C. for", "D. with"],
+        answer: 1,
+        feedback: "'Pass judgment on (someone/something)' is a fixed collocation meaning to criticize or deliver a verdict/opinion on something."
+      },
+      {
+        type: "Adverb / Word Form",
+        blank: 6,
+        text: "...but rather to document how English is ___6___ spoken and written around the globe.",
+        options: ["A. actually", "B. actual", "C. actuality", "D. actualize"],
+        answer: 0,
+        feedback: "The adverb 'actually' correctly modifies the passive verb construction 'is spoken and written', meaning 'in fact' or 'in reality'."
+      }
+    ]
+  }
 ];
 
 // ── STORAGE ────────────────────────────────────────────────────────────────
@@ -5634,7 +5690,7 @@ function renderPassage() {
       const chosen = text.questions[i - 1].options[ans].substring(3);
       display = chosen;
     }
-    html = html.replace(`___${i}___`, `<span class="${cls}" id="blank-${i}">${display}</span>`);
+    html = html.replace(new RegExp(`___${i}___|\\(${i}\\)\\s*_{2,}`, 'g'), `<span class="${cls}" id="blank-${i}">${display}</span>`);
   }
 
   document.getElementById('text-panel').innerHTML = `
@@ -5694,7 +5750,7 @@ function renderQuestions() {
     return `<div class="question-card ${isActive ? 'active' : ''}" id="q-card-${i}">
       <div class="q-type-tag">${q.type}</div>
       <div class="q-num">Question ${i + 1} of 6 · Blank (${q.blank})</div>
-      <div class="q-text">${q.text.replace(`___${q.blank}___`, `<span class="q-blank-ref">(${q.blank})</span>`)}</div>
+      <div class="q-text">${q.text.replace(new RegExp(`___${q.blank}___|\\(${q.blank}\\)\\s*_{2,}`), `<span class="q-blank-ref">(${q.blank})</span>`)}</div>
       <div class="options-grid">${optionsHTML}</div>
       ${feedbackHTML}
       ${navHTML}
@@ -5721,11 +5777,11 @@ function logAnswer(qIdx, optIdx) {
   PortalReview.record('engquiz', {
     src: `Text ${String(currentTextIndex + 1).padStart(2, '0')} · ${text.title}`,
     tag: q.type,
-    question: q.text.replace(`___${q.blank}___`, '<b>_____</b>'),
+    question: q.text.replace(new RegExp(`___${q.blank}___|\\(${q.blank}\\)\\s*_{2,}`), '<b>_____</b>'),
     options: q.options.map(o => o.substring(3)),
     answer: q.answer,
     explain: q.feedback,
-    context: { title: text.title, text: text.passage.replace(/___(\d+)___/g, '($1) _____') }
+    context: { title: text.title, text: text.passage.replace(/___(\d+)___|\((\d+)\)\s*_{2,}/g, '($1$2) _____') }
   }, optIdx);
 }
 

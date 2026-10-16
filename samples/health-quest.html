@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Health Quest · Ôn tập Unit 1 · A Long and Healthy Life</title>
+<style>
+  :root { --ink: #1f2d3d; --muted: #5d6a77; --bg: #eef5ec; --panel: #fffefb; --line: #d7e3d2;
+          --ok: #0f766e; --ok-bg: #e3f4f1; --bad: #b8372b; --bad-bg: #fbe9e6; --gold: #f2b705; --path: #e9d8a6; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Segoe UI", Tahoma, Arial, sans-serif; font-size: 18px; line-height: 1.55; color: var(--ink); background: var(--bg); }
+  .wrap { width: min(1100px, 100% - 24px); margin: 0 auto; padding: 14px 0 36px; }
+  header { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  h1 { font-size: 24px; margin: 0; }
+  .sub { margin: 2px 0 0; color: var(--muted); font-size: 15px; }
+  .hud { display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip { background: var(--panel); border: 1.5px solid var(--ink); border-radius: 999px; padding: 6px 14px; font-weight: 700; font-size: 16px; }
+  .btn { font: 600 16px "Segoe UI", sans-serif; padding: 9px 16px; border-radius: 999px; border: 1.5px solid var(--ink); background: var(--panel); color: var(--ink); cursor: pointer; }
+  .btn.primary { background: var(--ok); color: #fff; border-color: var(--ok); }
+  .map { margin-top: 14px; background: var(--panel); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
+  .map svg { display: block; width: 100%; height: auto; }
+  .node { cursor: pointer; }
+  .node.locked { cursor: not-allowed; }
+  .node text { pointer-events: none; }
+  .node:focus { outline: none; }
+  .node:focus-visible circle.ring { stroke: #1d4ed8; stroke-width: 6; }
+  @keyframes pulse { 0%, 100% { opacity: .9; } 50% { opacity: .25; } }
+  .pulse { animation: pulse 1.4s ease-in-out infinite; }
+  .below { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+  .hint-line { color: var(--muted); font-size: 15px; margin: 0; }
+
+  /* question overlay */
+  .overlay { position: fixed; inset: 0; background: rgba(20, 30, 25, .55); display: none; align-items: center; justify-content: center; padding: 12px; z-index: 10; }
+  .overlay.show { display: flex; }
+  .card { background: var(--panel); width: min(760px, 100%); max-height: 94vh; overflow: auto; border-radius: 18px; padding: 18px 20px; box-shadow: 0 18px 40px rgba(0,0,0,.25); }
+  .card .top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .tag { display: inline-block; font-size: 13px; font-weight: 700; color: #1d4ed8; background: #e8eefc; border-radius: 999px; padding: 2px 10px; }
+  .stars { color: var(--gold); font-size: 20px; letter-spacing: 2px; }
+  .stem { font-size: 20px; font-weight: 600; margin: 12px 0; }
+  .opts { display: grid; gap: 8px; }
+  .opts button { font: inherit; text-align: left; padding: 11px 14px; border-radius: 12px; border: 1.5px solid var(--line); background: #fff; cursor: pointer; color: var(--ink); }
+  .opts button:hover:not(:disabled) { border-color: var(--ok); }
+  .opts button b { margin-right: 8px; }
+  .opts button.ok { background: var(--ok-bg); border-color: var(--ok); }
+  .opts button.out { opacity: .45; text-decoration: line-through; }
+  .msg { margin-top: 12px; border-radius: 12px; padding: 10px 12px; font-size: 16px; display: none; }
+  .msg.show { display: block; }
+  .msg.hint { background: #fff6dc; }
+  .msg.ok { background: var(--ok-bg); }
+  .msg ul { margin: 6px 0 0; padding-left: 20px; }
+  .actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 12px; }
+
+  .end { margin-top: 14px; display: none; }
+  .end.show { display: block; }
+  .end ol { padding-left: 22px; }
+  details.teacher { margin-top: 18px; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 10px 16px; font-size: 16px; }
+  details.teacher summary { cursor: pointer; font-weight: 700; }
+  .note { font-size: 14px; color: var(--muted); margin-top: 14px; }
+  @media (max-width: 600px) { h1 { font-size: 20px; } .stem { font-size: 18px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>🗺️ Health Quest</h1>
+      <p class="sub" lang="en">Unit 1 · A Long and Healthy Life · Review game</p>
+    </div>
+    <div class="hud">
+      <span class="chip" id="starChip">⭐ 0 / 30</span>
+      <span class="chip" id="levelChip">🏁 0 / 10</span>
+      <button class="btn" type="button" id="resetBtn">Chơi lại</button>
+    </div>
+  </header>
+  <noscript><p style="background:#fbe9e6;color:#7a231b;padding:12px 14px;border-radius:12px;font-size:16px;margin:12px 0 0">Trang này cần JavaScript để hiện phương án và chấm bài. Hãy mở tệp bằng trình duyệt Chrome, Edge hoặc Cốc Cốc (bấm đúp vào tệp, hoặc chuột phải → Mở bằng).</p></noscript>
+
+
+  <div class="map" id="map"></div>
+
+  <div class="below">
+    <p class="hint-line">Bấm vào trạm đang sáng để chơi. Đúng ngay lần đầu được 3 sao; sai sẽ có gợi ý.</p>
+    <button class="btn primary" type="button" id="playBtn">Chơi trạm tiếp theo ➜</button>
+  </div>
+
+  <div class="end panel" id="end"></div>
+
+  <details class="teacher">
+    <summary>Dành cho giáo viên</summary>
+    <p>Chiếu lên TV và chia đội: mỗi đội lần lượt trả lời một trạm, cả lớp cùng đọc lời giải. Có thể giao về nhà; tiến độ chỉ lưu trên máy của học sinh.</p>
+    <p>Trò chơi này được tạo bằng câu lệnh mẫu “Trò chơi ôn tập · bản đồ nhiều màn” trên Góc giáo viên. Thay danh sách câu hỏi là có trò chơi cho bài khác.</p>
+  </details>
+  <p class="note">Câu hỏi được tạo với sự hỗ trợ của AI; cần giáo viên thẩm định theo hai bảng kiểm trước khi dùng. Trang không thu thập thông tin và chạy được khi không có mạng.</p>
+</div>
+
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="qStem">
+  <div class="card" id="card"></div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var KEYS = ['A', 'B', 'C', 'D'];
+  var LEVELS = [
+    { icon: '🗣️', place: 'Speaking Square', tag: 'Pronunciation',
+      stem: 'In the short answer “Yes, I do.”, how is the auxiliary “do” pronounced?',
+      opts: ['Strong form /duː/', 'Weak form /də/', 'It is silent', 'Contracted form'], ans: 0,
+      hint: 'Trợ động từ đứng ở cuối câu trả lời ngắn có được nhấn giọng không?',
+      why: 'Trợ động từ đứng cuối câu trả lời ngắn được nhấn giọng nên đọc ở <b>dạng mạnh</b> /duː/.',
+      wrong: [null, 'Dạng yếu /də/ chỉ dùng khi trợ động từ không được nhấn, thường ở đầu hoặc giữa câu (Do you…?).',
+              'Trợ động từ ở cuối câu trả lời ngắn không bị lược âm.', '“do” không có dạng rút gọn khi đứng một mình cuối câu.'] },
+    { icon: '🧂', place: 'Healthy Kitchen', tag: 'Phrasal verbs',
+      stem: 'The doctor told him to ______ salt completely because of his heart problem.',
+      opts: ['cut down on', 'cut out', 'take up', 'work out'], ans: 1,
+      hint: 'Để ý từ “completely”.',
+      why: '<b>cut out</b> = loại bỏ hoàn toàn; từ khóa “completely”.',
+      wrong: ['“cut down on” = giảm bớt, mâu thuẫn với “completely”.', null,
+              '“take up” = bắt đầu một thói quen, sở thích.', '“work out” = tập thể dục, không đi với “salt”.'] },
+    { icon: '🥤', place: 'Juice Bar', tag: 'Phrasal verbs',
+      stem: 'You don’t have to stop drinking soft drinks at once. Just try to ______ them: one can fewer each day.',
+      opts: ['give up', 'cut down on', 'take up', 'break down'], ans: 1,
+      hint: '“one can fewer each day” là bỏ hẳn hay giảm dần?',
+      why: '<b>cut down on</b> = giảm dần; từ khóa “one can fewer each day” và “don’t have to stop … at once”.',
+      wrong: ['“give up” = bỏ hẳn, mâu thuẫn với “You don’t have to stop … at once”.', null,
+              '“take up” = bắt đầu làm gì, ngược nghĩa với câu.', '“break down” = hỏng, suy sụp, không hợp nghĩa.'] },
+    { icon: '🏊', place: 'Swimming Pool', tag: 'Phrasal verbs',
+      stem: 'Lan has ______ swimming to stay fit and reduce stress.',
+      opts: ['taken up', 'given up', 'cut out', 'put off'], ans: 0,
+      hint: 'Lan bắt đầu hay bỏ một môn thể thao để khỏe hơn?',
+      why: '<b>take up</b> = bắt đầu một môn thể thao, sở thích; mục đích “to stay fit and reduce stress”.',
+      wrong: [null, '“give up” = từ bỏ, mâu thuẫn với mục đích “to stay fit”.',
+              '“cut out” dùng cho việc bỏ món ăn, thói quen xấu.', '“put off” = hoãn lại, không hợp với mục đích của câu.'] },
+    { icon: '🔬', place: 'Science Lab', tag: 'Science (CLIL)',
+      stem: '______ are tiny living organisms; some of them cause diseases, but antibiotics can kill them.',
+      opts: ['Viruses', 'Bacteria', 'Vitamins', 'Vaccines'], ans: 1,
+      hint: 'Kháng sinh tiêu diệt được loại nào?',
+      why: '<b>Bacteria</b> (vi khuẩn) là sinh vật sống, có loại gây bệnh, và bị kháng sinh tiêu diệt.',
+      wrong: ['Kháng sinh không tiêu diệt được virus.', null,
+              '“Vitamins” là chất dinh dưỡng, không phải sinh vật.', '“Vaccines” là chế phẩm phòng bệnh, không phải sinh vật.'] },
+    { icon: '💊', place: 'Pharmacy', tag: 'Science (CLIL)',
+      stem: 'Antibiotics do not work against the flu because the flu is caused by a ______.',
+      opts: ['bacterium', 'virus', 'vitamin', 'vaccine'], ans: 1,
+      hint: 'Cúm do vi khuẩn hay virus gây ra?',
+      why: 'Cúm do <b>virus</b> gây ra; kháng sinh chỉ có tác dụng với vi khuẩn.',
+      wrong: ['Nếu do vi khuẩn (bacterium) thì kháng sinh lại có tác dụng, trái với câu.', null,
+              'Vitamin không gây bệnh.', 'Vaccine dùng để phòng bệnh, không gây bệnh cúm.'] },
+    { icon: '📈', place: 'Health Office', tag: 'Vocabulary',
+      stem: 'Thanks to better healthcare, life ______ in Viet Nam has increased over the past 30 years.',
+      opts: ['expectation', 'expectancy', 'length', 'period'], ans: 1,
+      hint: 'Cần cụm danh từ chỉ tuổi thọ trung bình.',
+      why: '<b>life expectancy</b> = tuổi thọ trung bình, cụm danh từ cố định.',
+      wrong: ['“expectation” = sự mong đợi, không tạo cụm chỉ tuổi thọ.', null,
+              '“life length” không phải cách diễn đạt chuẩn.', '“life period” không phải cụm từ cố định.'] },
+    { icon: '🥦', place: 'Green Market', tag: 'Word form',
+      stem: 'A ______ diet includes the right amounts of fruit, vegetables, protein and whole grains.',
+      opts: ['balanced', 'balancing', 'balance', 'balancedly'], ans: 0,
+      hint: 'Trước danh từ “diet” cần loại từ nào?',
+      why: 'Trước danh từ “diet” cần tính từ: <b>a balanced diet</b> = chế độ ăn cân bằng.',
+      wrong: [null, '“balancing” không dùng làm tính từ trong cụm này.',
+              '“balance” là danh từ hoặc động từ.', '“balancedly” là trạng từ, không bổ nghĩa cho danh từ.'] },
+    { icon: '🧘', place: 'Yoga Garden', tag: 'Present perfect',
+      stem: 'My grandmother ______ yoga since she retired in 2020.',
+      opts: ['practised', 'has practised', 'practises', 'is practising'], ans: 1,
+      hint: '“since she retired” nối quá khứ với hiện tại.',
+      why: '<b>since + mốc quá khứ</b> → thì hiện tại hoàn thành: has practised (bà vẫn tập đến nay).',
+      wrong: ['Quá khứ đơn chỉ hành động đã kết thúc, không đi với “since” ở mệnh đề chính.', null,
+              'Hiện tại đơn không đi với “since”.', 'Hiện tại tiếp diễn không diễn tả khoảng thời gian kéo dài từ một mốc quá khứ.'] },
+    { icon: '🏰', place: 'Longevity Castle', tag: 'Past simple vs present perfect',
+      stem: 'Nam ______ his first marathon last November, and he ______ three more races since then.',
+      opts: ['ran / has run', 'has run / ran', 'ran / ran', 'has run / has run'], ans: 0,
+      hint: '“last November” và “since then” cần hai thì khác nhau.',
+      why: '“last November” (mốc quá khứ xác định) → <b>ran</b>; “since then” (từ đó đến nay) → <b>has run</b>.',
+      wrong: [null, 'Đảo ngược hai thì: “has run … last November” sai vì mốc thời gian đã kết thúc.',
+              '“ran … since then” sai vì “since then” cần thì hiện tại hoàn thành.',
+              '“has run … last November” sai vì đi với mốc thời gian quá khứ xác định.'] }
+  ];
+  // Station positions on the 1000 x 560 map
+  var POS = [[90, 470], [235, 400], [140, 285], [300, 190], [470, 250], [560, 400], [720, 455], [860, 360], [760, 215], [880, 95]];
+  var KEY = 'health_quest_teacher_v1';
+
+  var state = load();
+  function load() {
+    try {
+      var s = JSON.parse(localStorage.getItem(KEY) || 'null');
+      if (s && Array.isArray(s.stars) && s.stars.length === LEVELS.length) return s;
+    } catch (e) { /* bỏ qua */ }
+    return { stars: LEVELS.map(function () { return 0; }) };
+  }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* bỏ qua */ } }
+  function current() { var i = state.stars.indexOf(0); return i === -1 ? LEVELS.length : i; }
+
+  function starsText(n) { return '★★★'.slice(0, n) + '☆☆☆'.slice(0, 3 - n); }
+
+  function drawMap() {
+    var cur = current();
+    var svg = '<svg viewBox="0 0 1000 560" role="img" aria-label="Bản đồ Health Quest với 10 trạm">';
+    // ground, river, hills, trees, sun
+    svg += '<rect width="1000" height="560" fill="#dff0d8"/>';
+    svg += '<path d="M0 120 C 160 80, 260 150, 420 110 S 700 40, 1000 70 L1000 0 L0 0 Z" fill="#cfe8f6"/>';
+    svg += '<circle cx="80" cy="70" r="34" fill="#ffd95a"/>';
+    svg += '<path d="M600 560 C 640 470, 520 380, 610 300 S 640 140, 560 0" stroke="#9fd0ea" stroke-width="38" fill="none" opacity=".75"/>';
+    [[40, 360], [380, 470], [420, 330], [640, 150], [960, 520], [960, 230], [200, 120], [520, 520]].forEach(function (t) {
+      svg += '<circle cx="' + t[0] + '" cy="' + t[1] + '" r="22" fill="#8cc084"/><rect x="' + (t[0] - 4) + '" y="' + (t[1] + 18) + '" width="8" height="16" fill="#8a6a43"/>';
+    });
+    // path through stations
+    var d = 'M' + POS[0][0] + ' ' + POS[0][1];
+    for (var i = 1; i < POS.length; i++) {
+      var p = POS[i - 1], q = POS[i];
+      var mx = (p[0] + q[0]) / 2, my = (p[1] + q[1]) / 2 - 30;
+      d += ' Q ' + mx + ' ' + my + ' ' + q[0] + ' ' + q[1];
+    }
+    svg += '<path d="' + d + '" stroke="#e9d8a6" stroke-width="22" fill="none" stroke-linecap="round"/>';
+    svg += '<path d="' + d + '" stroke="#c9b27a" stroke-width="3" stroke-dasharray="10 12" fill="none"/>';
+    // stations
+    LEVELS.forEach(function (lv, i) {
+      var x = POS[i][0], y = POS[i][1];
+      var done = state.stars[i] > 0, open = i === cur, locked = i > cur;
+      var fill = done ? '#ffffff' : open ? '#fff6dc' : '#e5e7eb';
+      svg += '<g class="node' + (locked ? ' locked' : '') + '" data-i="' + i + '" tabindex="' + (locked ? -1 : 0) + '" role="button" aria-label="Trạm ' + (i + 1) + ': ' + lv.place + (done ? ', ' + state.stars[i] + ' sao' : locked ? ', chưa mở' : ', đang mở') + '">';
+      if (open) svg += '<circle class="pulse" cx="' + x + '" cy="' + y + '" r="46" fill="none" stroke="#f2b705" stroke-width="6"/>';
+      svg += '<circle class="ring" cx="' + x + '" cy="' + y + '" r="34" fill="' + fill + '" stroke="' + (done ? '#0f766e' : open ? '#f2b705' : '#9ca3af') + '" stroke-width="4"/>';
+      svg += '<text x="' + x + '" y="' + (y + 11) + '" text-anchor="middle" font-size="30">' + (locked ? '🔒' : lv.icon) + '</text>';
+      svg += '<text x="' + x + '" y="' + (y + 56) + '" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2d3d">' + (i + 1) + '. ' + lv.place + '</text>';
+      if (done) svg += '<text x="' + x + '" y="' + (y - 42) + '" text-anchor="middle" font-size="20" fill="#f2b705">' + starsText(state.stars[i]) + '</text>';
+      svg += '</g>';
+    });
+    // player marker
+    var at = Math.min(cur, LEVELS.length - 1);
+    svg += '<text x="' + POS[at][0] + '" y="' + (POS[at][1] - 54) + '" text-anchor="middle" font-size="34">🧑‍🎓</text>';
+    svg += '</svg>';
+    document.getElementById('map').innerHTML = svg;
+    var total = state.stars.reduce(function (a, b) { return a + b; }, 0);
+    document.getElementById('starChip').textContent = '⭐ ' + total + ' / 30';
+    document.getElementById('levelChip').textContent = '🏁 ' + state.stars.filter(function (s) { return s > 0; }).length + ' / 10';
+    document.getElementById('playBtn').style.display = cur >= LEVELS.length ? 'none' : '';
+    showEnd(cur >= LEVELS.length, total);
+  }
+
+  function showEnd(finished, total) {
+    var el = document.getElementById('end');
+    if (!finished) { el.className = 'end'; el.innerHTML = ''; return; }
+    var rows = LEVELS.map(function (lv, i) {
+      return '<li><b>' + lv.place + '</b> · ' + starsText(state.stars[i]) + ' · <span lang="en">' + lv.opts[lv.ans] + '</span> — ' + lv.why + '</li>';
+    }).join('');
+    el.className = 'end show';
+    el.innerHTML = '<div class="card" style="width:100%;max-height:none;box-shadow:none;border:1px solid var(--line)">' +
+      '<h2 style="margin:0 0 4px">🏰 Hoàn thành hành trình: ' + total + ' / 30 sao</h2>' +
+      '<p class="hint-line">Xem lại đáp án và lời giải của từng trạm:</p><ol>' + rows + '</ol></div>';
+  }
+
+  // question flow
+  var overlay = document.getElementById('overlay');
+  var card = document.getElementById('card');
+  var attempt = 0, levelIdx = 0, tried = [];
+
+  function openLevel(i) {
+    if (i !== current()) return;
+    levelIdx = i; attempt = 0; tried = [];
+    renderCard();
+    overlay.className = 'overlay show';
+    var first = card.querySelector('.opts button');
+    if (first) first.focus();
+  }
+  function renderCard(msgHtml, msgCls, solved) {
+    var lv = LEVELS[levelIdx];
+    var potential = Math.max(1, 3 - attempt);
+    var html = '<div class="top"><span class="tag">Trạm ' + (levelIdx + 1) + ' · ' + lv.tag + '</span><span class="stars" aria-label="Số sao còn nhận được">' + starsText(solved ? state.stars[levelIdx] : potential) + '</span></div>';
+    html += '<p class="stem" id="qStem" lang="en">' + lv.stem + '</p><div class="opts">';
+    lv.opts.forEach(function (o, k) {
+      var cls = solved && k === lv.ans ? 'ok' : tried.indexOf(k) !== -1 ? 'out' : '';
+      var dis = solved || tried.indexOf(k) !== -1 ? ' disabled' : '';
+      html += '<button type="button" lang="en" data-k="' + k + '" class="' + cls + '"' + dis + '><b>' + KEYS[k] + '.</b>' + o + '</button>';
+    });
+    html += '</div><div class="msg ' + (msgHtml ? 'show ' + msgCls : '') + '">' + (msgHtml || '') + '</div>';
+    html += '<div class="actions">' + (solved ? '<button class="btn primary" type="button" id="nextBtn">' + (levelIdx === LEVELS.length - 1 ? 'Xem kết quả 🏰' : 'Tiếp tục hành trình ➜') + '</button>'
+                                             : '<button class="btn" type="button" id="closeBtn">Đóng</button>') + '</div>';
+    card.innerHTML = html;
+  }
+  card.addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (!b) return;
+    if (b.id === 'closeBtn') { overlay.className = 'overlay'; return; }
+    if (b.id === 'nextBtn') { overlay.className = 'overlay'; drawMap(); return; }
+    var k = b.getAttribute('data-k');
+    if (k === null) return;
+    k = +k;
+    var lv = LEVELS[levelIdx];
+    if (k === lv.ans) {
+      state.stars[levelIdx] = Math.max(1, 3 - attempt);
+      save();
+      var list = lv.wrong.map(function (w, j) { return w ? '<li><b>' + KEYS[j] + '.</b> ' + w + '</li>' : ''; }).join('');
+      renderCard('<b>✓ Đúng! +' + state.stars[levelIdx] + ' sao.</b> ' + lv.why + '<ul>' + list + '</ul>', 'ok', true);
+      var nb = document.getElementById('nextBtn'); if (nb) nb.focus();
+    } else {
+      attempt++; tried.push(k);
+      renderCard('<b>Chưa đúng.</b> Gợi ý: ' + lv.hint, 'hint', false);
+    }
+  });
+  overlay.addEventListener('click', function (e) { if (e.target === overlay && !card.querySelector('#nextBtn')) overlay.className = 'overlay'; });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && overlay.classList.contains('show') && !card.querySelector('#nextBtn')) overlay.className = 'overlay'; });
+
+  document.getElementById('map').addEventListener('click', function (e) {
+    var g = e.target.closest('.node');
+    if (g) openLevel(+g.getAttribute('data-i'));
+  });
+  document.getElementById('map').addEventListener('keydown', function (e) {
+    var g = e.target.closest && e.target.closest('.node');
+    if (g && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openLevel(+g.getAttribute('data-i')); }
+  });
+  document.getElementById('playBtn').addEventListener('click', function () { openLevel(current()); });
+  document.getElementById('resetBtn').addEventListener('click', function () {
+    state = { stars: LEVELS.map(function () { return 0; }) }; save(); drawMap(); window.scrollTo(0, 0);
+  });
+  drawMap();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bài mẫu · Green Week 2026 · Điền khuyết 6 chỗ trống</title>
+<style>
+  :root { --ink: #1f2d3d; --muted: #5d6a77; --bg: #f7f3ea; --panel: #fffefb; --line: #e2d3b4;
+          --ok: #0f766e; --ok-bg: #e3f4f1; --bad: #b8372b; --bad-bg: #fbe9e6; --blank: #1d4ed8; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Segoe UI", Tahoma, Arial, sans-serif; font-size: 18px; line-height: 1.6;
+         color: var(--ink); background: var(--bg); }
+  .wrap { width: min(1180px, 100% - 24px); margin: 0 auto; padding: 16px 0 40px; }
+  header { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  h1 { font-size: 22px; margin: 0; }
+  .meta { color: var(--muted); font-size: 15px; margin: 4px 0 0; }
+  .score { font-weight: 700; font-size: 18px; background: var(--panel); border: 1.5px solid var(--ink); border-radius: 999px; padding: 6px 16px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 16px; align-items: start; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; }
+  .passage { position: sticky; top: 12px; }
+  .passage h2 { font-size: 20px; margin: 0 0 8px; text-transform: uppercase; letter-spacing: .03em; }
+  .passage ul { padding-left: 22px; margin: 8px 0; }
+  .blank { display: inline-block; min-width: 3.2em; text-align: center; font-weight: 700; color: var(--blank);
+           border-bottom: 2px solid var(--blank); padding: 0 4px; }
+  .blank.ok { color: var(--ok); border-color: var(--ok); }
+  .blank.bad { color: var(--bad); border-color: var(--bad); }
+  .src { color: var(--muted); font-size: 14px; margin-top: 10px; }
+  .q { margin-bottom: 14px; }
+  .q h3 { font-size: 17px; margin: 0 0 4px; }
+  .tag { display: inline-block; font-size: 13px; font-weight: 700; color: var(--blank); background: #e8eefc; border-radius: 999px; padding: 1px 10px; margin-left: 6px; }
+  .q p.stem { margin: 0 0 10px; }
+  .opts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .opts button { font: inherit; text-align: left; padding: 10px 12px; border-radius: 12px; border: 1.5px solid var(--line);
+                 background: #fff; cursor: pointer; color: var(--ink); }
+  .opts button:hover:not(:disabled) { border-color: var(--blank); }
+  .opts button b { margin-right: 6px; }
+  .opts button.ok { background: var(--ok-bg); border-color: var(--ok); }
+  .opts button.bad { background: var(--bad-bg); border-color: var(--bad); }
+  .opts button:disabled { cursor: default; }
+  .fb { display: none; margin-top: 10px; border-radius: 12px; padding: 10px 12px; font-size: 16px; }
+  .fb.show { display: block; }
+  .fb.ok { background: var(--ok-bg); }
+  .fb.bad { background: var(--bad-bg); }
+  .fb ul { margin: 6px 0 0; padding-left: 20px; }
+  .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
+  .btn { font: 600 16px "Segoe UI", sans-serif; padding: 10px 18px; border-radius: 999px; border: 1.5px solid var(--ink);
+         background: var(--panel); cursor: pointer; color: var(--ink); }
+  .note { font-size: 14px; color: var(--muted); margin-top: 18px; }
+  @media (max-width: 860px) {
+    .grid { grid-template-columns: 1fr; }
+    .passage { position: static; }
+    .opts { grid-template-columns: 1fr; }
+  }
+  @media print {
+    .actions, .opts button:not(.ok) { display: none; }
+    .fb { display: block; }
+    .passage { position: static; }
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Bài mẫu · Điền khuyết văn bản thực tế (6 chỗ trống)</h1>
+      <p class="meta">Học sinh lớp 10–11 · mức thông hiểu · tạo bằng câu lệnh mẫu trên Góc giáo viên</p>
+    </div>
+    <div class="score" id="score" aria-live="polite">0 / 6</div>
+  </header>
+  <noscript><p style="background:#fbe9e6;color:#7a231b;padding:12px 14px;border-radius:12px;font-size:16px;margin:12px 0 0">Trang này cần JavaScript để hiện phương án và chấm bài. Hãy mở tệp bằng trình duyệt Chrome, Edge hoặc Cốc Cốc (bấm đúp vào tệp, hoặc chuột phải → Mở bằng).</p></noscript>
+
+
+  <div class="grid">
+    <div class="panel passage" id="passage" lang="en">
+      <h2>Green Week 2026 – Say no to single-use plastic</h2>
+      <p>From 2 to 6 November, Nguyen Khuyen High School invites all students to join Green Week. This year's campaign
+        is <span class="blank" id="b1">(1)</span> to reducing single-use plastic at school.</p>
+      <ul>
+        <li>Bring your own water bottle. There are <span class="blank" id="b2">(2)</span> water refill stations on every floor.</li>
+        <li>Reusable cups are available at the canteen <span class="blank" id="b3">(3)</span> a small deposit of 5,000 VND.</li>
+        <li>Please <span class="blank" id="b4">(4)</span> your rubbish into the three bins: paper, plastic and food waste.</li>
+        <li>Join the clean-up of the Han River bank on Saturday morning. Every volunteer will receive a certificate of
+          <span class="blank" id="b5">(5)</span>.</li>
+      </ul>
+      <p>Small changes can <span class="blank" id="b6">(6)</span> a big difference. Let's keep our school clean and green!</p>
+      <p class="src" lang="vi">Nguồn: văn bản do tác giả soạn làm bài mẫu (không phải ngữ liệu đề thi).</p>
+    </div>
+
+    <div id="questions"></div>
+  </div>
+
+  <div class="actions">
+    <button class="btn" type="button" id="reset">Làm lại</button>
+    <button class="btn" type="button" onclick="window.print()">In bài và lời giải</button>
+  </div>
+  <p class="note">Câu hỏi được tạo với sự hỗ trợ của AI theo câu lệnh mẫu; cần giáo viên thẩm định theo bảng kiểm Tầng 1
+    trước khi dùng với học sinh. Trang này không thu thập thông tin và chạy được khi không có mạng.</p>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var KEYS = ['A', 'B', 'C', 'D'];
+  var Q = [
+    { tag: 'Part of Speech', stem: 'This year\'s campaign is (1) ___ to reducing single-use plastic at school.',
+      opts: ['dedication', 'dedicate', 'dedicated', 'dedicating'], ans: 2,
+      why: 'Sau “is” cần một tính từ (quá khứ phân từ): <b>be dedicated to + V-ing</b> = dành cho, tập trung vào việc gì; từ khóa “to reducing”.',
+      wrong: ['“dedication” là danh từ, không tạo được cấu trúc “is … to reducing”.',
+              '“dedicate” là động từ nguyên mẫu, không đứng ngay sau “is”.',
+              null,
+              '“dedicate” luôn cần tân ngữ (dedicate <i>something</i> to); “is dedicating to reducing” sai ngữ pháp.'] },
+    { tag: 'Quantifiers', stem: 'There are (2) ___ water refill stations on every floor.',
+      opts: ['a few', 'a little', 'much', 'any'], ans: 0,
+      why: '“stations” là danh từ đếm được số nhiều, câu khẳng định với “There are” → <b>a few</b> (một vài).',
+      wrong: [null,
+              '“a little” chỉ đi với danh từ không đếm được.',
+              '“much” chỉ đi với danh từ không đếm được.',
+              '“any” dùng trong câu phủ định hoặc câu hỏi, không dùng trong câu khẳng định “There are … stations”.'] },
+    { tag: 'Prepositions', stem: 'Reusable cups are available at the canteen (3) ___ a small deposit of 5,000 VND.',
+      opts: ['by', 'at', 'on', 'for'], ans: 3,
+      why: '<b>available for + khoản tiền</b> = có sẵn với giá / với khoản đặt cọc; từ khóa “a small deposit of 5,000 VND”.',
+      wrong: ['“by” chỉ cách thức hoặc tác nhân, không đi với khoản tiền phải trả.',
+              '“at” đã dùng cho nơi chốn “at the canteen”; không nói “at a deposit”.',
+              '“on a deposit” không phải cách diễn đạt đúng cho khoản tiền phải trả.',
+              null] },
+    { tag: 'Word Meaning', stem: 'Please (4) ___ your rubbish into the three bins: paper, plastic and food waste.',
+      opts: ['sell', 'sort', 'spend', 'save'], ans: 1,
+      why: '<b>sort something into</b> = phân loại vào; từ khóa “into the three bins: paper, plastic and food waste”.',
+      wrong: ['“sell” (bán) không hợp nghĩa với “rubbish into bins”.',
+              null,
+              '“spend” (tiêu, dành thời gian/tiền) không đi với “rubbish”.',
+              '“save” (tiết kiệm, cứu) không hợp với việc bỏ rác vào thùng.'] },
+    { tag: 'Part of Speech', stem: 'Every volunteer will receive a certificate of (5) ___.',
+      opts: ['appreciate', 'appreciative', 'appreciation', 'appreciatively'], ans: 2,
+      why: 'Sau giới từ “of” cần danh từ: <b>a certificate of appreciation</b> = giấy ghi nhận, giấy khen.',
+      wrong: ['“appreciate” là động từ, không đứng sau giới từ “of”.',
+              '“appreciative” là tính từ, cần danh từ đi sau.',
+              null,
+              '“appreciatively” là trạng từ, không đứng sau giới từ.'] },
+    { tag: 'Collocation', stem: 'Small changes can (6) ___ a big difference.',
+      opts: ['make', 'do', 'take', 'have'], ans: 0,
+      why: 'Cụm cố định <b>make a difference</b> = tạo ra sự khác biệt; từ khóa “a big difference”.',
+      wrong: [null,
+              '“do” đi với công việc, nhiệm vụ (do homework), không đi với “a difference”.',
+              '“take” không kết hợp với “a difference”.',
+              '“have a difference” không mang nghĩa “tạo ra khác biệt”.'] }
+  ];
+
+  var picked = new Array(Q.length).fill(null);
+  var box = document.getElementById('questions');
+
+  function render() {
+    box.innerHTML = '';
+    Q.forEach(function (q, i) {
+      var card = document.createElement('div');
+      card.className = 'panel q';
+      var done = picked[i] !== null;
+      var html = '<h3>Câu ' + (i + 1) + '<span class="tag">' + q.tag + '</span></h3><p class="stem" lang="en">' + q.stem + '</p><div class="opts">';
+      q.opts.forEach(function (o, k) {
+        var cls = '';
+        if (done && k === q.ans) cls = 'ok';
+        else if (done && k === picked[i]) cls = 'bad';
+        html += '<button type="button" lang="en" data-q="' + i + '" data-k="' + k + '" class="' + cls + '"' + (done ? ' disabled' : '') + '><b>' + KEYS[k] + '.</b>' + o + '</button>';
+      });
+      html += '</div>';
+      var ok = done && picked[i] === q.ans;
+      html += '<div class="fb ' + (done ? 'show ' + (ok ? 'ok' : 'bad') : '') + '"><b>' + (ok ? '✓ Đúng.' : '✗ Chưa đúng.') + ' Đáp án ' + KEYS[q.ans] + '.</b> ' + q.why + '<ul>';
+      q.wrong.forEach(function (w, k) { if (w) html += '<li><b>' + KEYS[k] + '.</b> ' + w + '</li>'; });
+      html += '</ul></div>';
+      card.innerHTML = html;
+      box.appendChild(card);
+    });
+    var score = 0;
+    Q.forEach(function (q, i) {
+      var b = document.getElementById('b' + (i + 1));
+      if (picked[i] === null) { b.textContent = '(' + (i + 1) + ')'; b.className = 'blank'; return; }
+      b.textContent = q.opts[picked[i]];
+      b.className = 'blank ' + (picked[i] === q.ans ? 'ok' : 'bad');
+      if (picked[i] === q.ans) score++;
+    });
+    document.getElementById('score').textContent = score + ' / ' + Q.length;
+  }
+
+  box.addEventListener('click', function (e) {
+    var btn = e.target.closest('button[data-q]');
+    if (!btn) return;
+    var i = +btn.getAttribute('data-q');
+    if (picked[i] !== null) return;
+    picked[i] = +btn.getAttribute('data-k');
+    render();
+  });
+  document.getElementById('reset').addEventListener('click', function () {
+    picked = new Array(Q.length).fill(null);
+    render();
+    window.scrollTo(0, 0);
+  });
+  render();
+})();
+</script>
+</body>
+</html>

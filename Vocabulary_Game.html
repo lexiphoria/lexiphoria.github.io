@@ -11,7 +11,7 @@
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/vocabulary_game.css?v=1.0.8">
   <link rel="stylesheet" href="css/boss_battle.css?v=1.0.0">
-  <link rel="stylesheet" href="css/vocabulary_folk_bg.css?v=1.3.0">
+  <link rel="stylesheet" href="css/vocabulary_folk_bg.css?v=1.4.0">
 </head>
 <body>
 
@@ -404,6 +404,7 @@
 
       <!-- 6b. Arena -->
       <div id="boss-arena" style="display: none;">
+       <div class="boss-arena-split">
         <div class="boss-stage" id="boss-stage">
           <div class="boss-hud boss-hud-hero">
             <div class="boss-hud-name"><span>Wizard Cat</span></div>
@@ -420,6 +421,7 @@
           <img class="boss-potion" id="boss-potion" src="assets/boss/item_potion.webp" alt="">
         </div>
 
+        <div class="boss-question-panel">
         <div class="boss-question-head">
           <span class="boss-attack-label tier-0" id="boss-attack-label"></span>
           <span class="boss-seal" id="boss-seal"></span>
@@ -454,6 +456,8 @@
         <div class="game-footer-actions">
           <button class="btn-game-next" id="boss-next-btn" onclick="nextBossStep()" style="display: none;">Next attack ➔</button>
         </div>
+        </div><!-- /.boss-question-panel -->
+       </div><!-- /.boss-arena-split -->
       </div>
 
       <!-- 6c. Result -->

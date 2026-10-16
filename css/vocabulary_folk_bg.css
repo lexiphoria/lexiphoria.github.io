@@ -703,3 +703,44 @@ body {
   background: var(--folk-ink) !important;
   color: #FFF !important;
 }
+
+/* ============================================================
+ * 9. BOSS ARENA SPLIT-SCREEN (cảnh đấu bên trái, câu hỏi bên phải)
+ * ============================================================ */
+@media (min-width: 960px) {
+  .boss-arena-split {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+  }
+
+  .boss-arena-split .boss-stage {
+    position: sticky;
+    top: 16px;
+    aspect-ratio: 4 / 3.4;
+    min-height: 0;
+    max-height: calc(100vh - 140px);
+    margin-bottom: 0;
+  }
+
+  .boss-arena-split .boss-hud-enemy {
+    min-width: 55%;
+    max-width: 66%;
+  }
+
+  .boss-question-panel .quiz-question-box {
+    padding: 22px 20px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .boss-question-panel .quiz-options-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .boss-question-panel .quiz-option-btn {
+    font-size: 1.05rem !important;
+    padding: 14px 18px !important;
+  }
+}

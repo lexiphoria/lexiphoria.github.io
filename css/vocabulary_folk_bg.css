@@ -53,10 +53,27 @@ body {
 }
 
 /* ============================================================
+ * 1.5. BUNG RỘNG MÀN HÌNH ĐỠ TRỐNG (RESPONSIVE WIDESCREEN CONTAINER)
+ * ============================================================ */
+.container,
+.container:has(> #dashboard-screen),
+.container:has(> #mode-screen),
+.container:has(> #quiz-screen),
+.container:has(> #sentence-completion-screen),
+.container:has(> #flashcard-screen),
+.container:has(> #boss-screen),
+.container:has(> #results-screen) {
+  width: min(1380px, 96vw) !important;
+  max-width: 1440px !important;
+  margin: 18px auto 36px !important;
+}
+
+/* ============================================================
  * 2. CÁC PANEL & KHUNG CHÍNH (ELEGANT PARCHMENT PANELS)
  * ============================================================ */
 .glass-panel {
   background: var(--folk-panel) !important;
+  padding: 32px 38px !important;
   backdrop-filter: blur(16px) !important;
   -webkit-backdrop-filter: blur(16px) !important;
   border: 1.5px solid var(--folk-panel-border) !important;
@@ -481,15 +498,185 @@ body {
   color: rgba(42, 36, 33, 0.35) !important;
 }
 
-/* Boss screen */
+/* ============================================================
+ * 8. BOSS BATTLE & PATROL MODE (MỰC NHO ĐẬM NÉT TRÊN NỀN SÁNG)
+ * ============================================================ */
 .boss-header-title {
   color: var(--folk-ink-strong) !important;
+  font-weight: 800 !important;
 }
 
 .btn-boss-icon {
   background: #FFFDF9 !important;
-  border: 1px solid rgba(42, 36, 33, 0.15) !important;
+  border: 1.5px solid rgba(42, 36, 33, 0.16) !important;
   color: var(--folk-ink-strong) !important;
+  box-shadow: 0 2px 6px rgba(42, 36, 33, 0.05) !important;
+}
+
+.btn-boss-icon:hover {
+  background: #FFFAF0 !important;
+  border-color: #872E27 !important;
+}
+
+/* Thanh thông số trận đánh */
+.boss-question-head {
+  color: var(--folk-ink-strong) !important;
+  font-weight: 700 !important;
+}
+
+.boss-seal {
+  color: var(--folk-muted) !important;
+  font-weight: 700 !important;
+}
+
+/* Từ vựng câu hỏi Boss / Đi tuần tra (Word Prompt) */
+.boss-q-main {
+  color: #7A2822 !important; /* Son trầm đậm nổi bật tuyệt đối */
+  font-weight: 850 !important;
+  text-shadow: 0 1px 2px rgba(122, 40, 34, 0.08) !important;
+}
+
+.boss-q-main.is-meaning {
+  color: #7A2822 !important;
+  font-weight: 850 !important;
+}
+
+.boss-q-main.is-sentence {
+  color: var(--folk-ink-strong) !important;
+  font-weight: 600 !important;
+}
+
+.boss-q-sub {
+  color: var(--folk-muted) !important;
+  font-weight: 600 !important;
+}
+
+/* Nhãn chiêu thức Attack Label */
+.boss-attack-label.tier-0 {
+  color: #1E40AF !important;
+  background: rgba(30, 64, 175, 0.1) !important;
+  border-color: rgba(30, 64, 175, 0.35) !important;
+  font-weight: 750 !important;
+}
+
+.boss-attack-label.tier-1 {
+  color: #6B21A8 !important;
+  background: rgba(107, 33, 168, 0.1) !important;
+  border-color: rgba(107, 33, 168, 0.35) !important;
+  font-weight: 750 !important;
+}
+
+.boss-attack-label.tier-2 {
+  color: #92400E !important;
+  background: rgba(146, 64, 14, 0.1) !important;
+  border-color: rgba(146, 64, 14, 0.35) !important;
+  font-weight: 750 !important;
+}
+
+/* Ô nhập phép chính tả trong trận Boss (Spell Input) */
+.boss-spell .spelling-input {
+  background: #FFFDF9 !important;
+  border: 2px solid rgba(42, 36, 33, 0.25) !important;
+  color: var(--folk-ink-strong) !important;
+  box-shadow: 0 4px 12px rgba(42, 36, 33, 0.05) !important;
+}
+
+.boss-spell .spelling-input:focus {
+  border-color: #872E27 !important;
+  box-shadow: 0 0 15px rgba(135, 46, 39, 0.2) !important;
+}
+
+.boss-hint-pattern {
+  color: #872E27 !important;
+  font-weight: 800 !important;
+}
+
+/* Sảnh Boss Lobby (Thống kê & Danh sách Boss) */
+.boss-stat {
+  background: rgba(244, 238, 226, 0.65) !important;
+  border: 1.5px solid rgba(42, 36, 33, 0.12) !important;
+}
+
+.boss-stat-val {
+  color: var(--folk-ink-strong) !important;
+  font-weight: 800 !important;
+}
+
+.boss-stat-label {
+  color: var(--folk-muted) !important;
+  font-weight: 600 !important;
+}
+
+.boss-section-title {
+  color: var(--folk-ink-strong) !important;
+  font-weight: 800 !important;
+}
+
+.boss-rules {
+  background: rgba(244, 238, 226, 0.6) !important;
+  border: 1.5px solid rgba(42, 36, 33, 0.12) !important;
+}
+
+.boss-rules summary {
+  color: var(--folk-ink-strong) !important;
+  font-weight: 750 !important;
+}
+
+.boss-rules li {
+  color: #3D3530 !important;
+  line-height: 1.6 !important;
+}
+
+.boss-word-chip {
+  background: #FFFDF9 !important;
+  border: 1.5px solid rgba(42, 36, 33, 0.15) !important;
+  box-shadow: 0 2px 8px rgba(42, 36, 33, 0.04) !important;
+}
+
+.boss-chip-word {
+  color: var(--folk-ink-strong) !important;
+  font-weight: 800 !important;
+}
+
+.boss-chip-meta {
+  color: var(--folk-muted) !important;
+  font-weight: 600 !important;
+}
+
+.boss-empty {
+  color: var(--folk-muted) !important;
+  border: 1.5px dashed rgba(42, 36, 33, 0.22) !important;
+  background: rgba(244, 238, 226, 0.4) !important;
+}
+
+.btn-boss-patrol {
+  background: #FFFDF9 !important;
+  border: 1.5px solid rgba(42, 36, 33, 0.2) !important;
+  color: var(--folk-ink-strong) !important;
+  font-weight: 750 !important;
+  box-shadow: 0 4px 12px rgba(42, 36, 33, 0.04) !important;
+}
+
+.btn-boss-patrol:hover {
+  background: #FFFAF0 !important;
+  border-color: #872E27 !important;
+  color: #872E27 !important;
+}
+
+/* Kết quả Boss Battle */
+.boss-result-title {
+  color: var(--folk-ink-strong) !important;
+  font-weight: 800 !important;
+}
+
+.boss-result-row {
+  background: #FFFDF9 !important;
+  border: 1.5px solid rgba(42, 36, 33, 0.14) !important;
+}
+
+.boss-result-word {
+  color: var(--folk-ink-strong) !important;
+  font-weight: 750 !important;
 }
 
 /* Results screen */

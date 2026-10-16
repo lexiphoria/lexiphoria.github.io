@@ -567,9 +567,15 @@
     let matchPairsLeftCount = 0;
 
     // Web Audio Synthesizer (for button clicks and score reward alerts)
-    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    let audioCtx = null;
+    try {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    } catch (e) {
+      audioCtx = null; // no Web Audio: play without sound effects
+    }
     
     function playSound(type) {
+      if (!audioCtx) return;
       // Resume audio context if suspended (browser security)
       if (audioCtx.state === 'suspended') {
         audioCtx.resume();
@@ -654,9 +660,10 @@
       checkStreak();
       updateDashboardStats();
       
-      // Prefetch synthesis voices
+      // Prefetch synthesis voices (Chrome fills the list asynchronously)
       if ('speechSynthesis' in window) {
-        window.speechSynthesis.getVoices();
+        loadSpeechVoices();
+        window.speechSynthesis.addEventListener('voiceschanged', loadSpeechVoices);
       }
     });
 
@@ -1206,26 +1213,75 @@
       speakWord(wordData.word, lang);
     }
 
-    function speakWord(text, lang = 'en-US') {
-      if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
+    let speechVoices = [];
+    function loadSpeechVoices() {
+      speechVoices = window.speechSynthesis.getVoices();
+    }
 
-        // Synonyms split if contains "/"
-        const cleanText = text.split('/')[0].trim();
-        const utterance = new SpeechSynthesisUtterance(cleanText);
-        utterance.lang = lang;
-        utterance.rate = 0.85;
+    // Voice for the requested accent (en-US / en-GB), else any English voice; localOnly keeps
+    // voices installed on the device, which still work without Internet
+    function pickVoice(lang, localOnly) {
+      const pool = speechVoices.filter(v => !localOnly || v.localService);
+      const norm = v => v.lang.replace('_', '-').toLowerCase();
+      return pool.find(v => norm(v) === lang.toLowerCase()) || pool.find(v => norm(v).startsWith('en'));
+    }
 
-        // Prefer a voice for the requested accent (en-US / en-GB), else any English voice
-        const voices = window.speechSynthesis.getVoices();
-        const accentVoice = voices.find(v => v.lang.replace('_', '-').toLowerCase() === lang.toLowerCase());
-        const enVoice = accentVoice || voices.find(v => v.lang.startsWith('en'));
-        if (enVoice) {
-          utterance.voice = enVoice;
-        }
-
-        window.speechSynthesis.speak(utterance);
+    function showSpeechHint() {
+      let hint = document.getElementById('speech-hint');
+      if (!hint) {
+        hint = document.createElement('div');
+        hint.id = 'speech-hint';
+        hint.setAttribute('role', 'status');
+        hint.style.cssText = 'position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:9999;'
+          + 'max-width:min(92vw,420px);padding:10px 16px;border-radius:10px;background:#2b2118;color:#fff;'
+          + 'font-size:15px;line-height:1.4;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.25);';
+        hint.textContent = 'No English voice on this device. Open the page in Chrome or Safari, or add an English voice in the phone settings.';
+        document.body.appendChild(hint);
       }
+      hint.hidden = false;
+      clearTimeout(showSpeechHint.timer);
+      showSpeechHint.timer = setTimeout(() => { hint.hidden = true; }, 4000);
+    }
+
+    function speakWord(text, lang = 'en-US') {
+      if (!('speechSynthesis' in window)) { showSpeechHint(); return; }
+      const synth = window.speechSynthesis;
+      if (!speechVoices.length) loadSpeechVoices();
+
+      // Synonyms split if contains "/"
+      const cleanText = text.split('/')[0].trim();
+      const say = (voice, canRetry) => {
+        const utterance = new SpeechSynthesisUtterance(cleanText);
+        utterance.lang = voice ? voice.lang : lang;
+        utterance.rate = 0.85;
+        if (voice) utterance.voice = voice;
+        let started = false;
+        const retry = () => {
+          const local = pickVoice(lang, true);
+          if (canRetry && local && local !== voice) { synth.cancel(); say(local, false); }
+          else if (!started) showSpeechHint();
+        };
+        utterance.onstart = () => { started = true; };
+        utterance.onerror = e => {
+          if (e.error !== 'canceled' && e.error !== 'interrupted') retry();
+        };
+        // A network voice can hang silently when offline; switch to a device voice
+        if (voice && !voice.localService) {
+          setTimeout(() => { if (!started && utterance === speakWord.current) retry(); }, 1500);
+        }
+        speakWord.current = utterance;
+        synth.speak(utterance);
+      };
+
+      const busy = synth.speaking || synth.pending;
+      synth.cancel();
+      if (synth.paused) synth.resume();
+      const voice = pickVoice(lang, false);
+      if (speechVoices.length && !voice) { showSpeechHint(); return; }
+      // Chrome can drop an utterance queued in the same tick as cancel(); speak at once otherwise,
+      // so iOS still treats it as part of the tap
+      if (busy) setTimeout(() => say(voice, true), 80);
+      else say(voice, true);
     }
 
     // --- Mode 2: Multiple Choice Quiz logic ---

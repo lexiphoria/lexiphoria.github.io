@@ -1,22 +1,30 @@
 /* ============================================================
  * FOLK ART BACKGROUND — GIẤY DÓ MỘC HOA VĂN IN CHÌM NHÃ NHẶN
  * Nền giấy Dó ngà thanh lịch, họa tiết hoa sen & sóng nước dân gian in chìm
+ * Kèm hệ thống chữ Mực Nho (Ink) sắc nét, chuẩn tương phản cao trên nền sáng
  * ============================================================ */
 
 :root {
+  /* Ghi đè biến hệ thống sang tone Mực Nho & Nền Giấy Dó */
+  --ink: #2A2421 !important;
+  --muted: #5C544E !important;
+  --panel: rgba(255, 254, 250, 0.94) !important;
+  --panel-border: rgba(42, 36, 33, 0.14) !important;
+
   /* Bảng màu Giấy Dó & Mực Nho Nhã Nhặn */
   --folk-bg: #F7F3E9;
   --folk-bg-light: #FBF8F1;
   --folk-bg-warm: #F4EFE4;
   --folk-bg-deep: #EBE4D5;
   
-  --folk-panel: rgba(255, 254, 250, 0.94);
-  --folk-panel-border: rgba(42, 36, 33, 0.12);
+  --folk-panel: rgba(255, 254, 250, 0.95);
+  --folk-panel-border: rgba(42, 36, 33, 0.14);
   --folk-ink: #2A2421;
+  --folk-ink-strong: #1A1412;
   --folk-muted: #5C544E;
   
-  --folk-accent-cinnabar: #9E3A33; /* Son trầm điểm xuyết nhẹ */
-  --folk-accent-gold: #C29B38;     /* Vàng hoa hòe thanh nhã */
+  --folk-accent-cinnabar: #872E27; /* Son trầm mộc mạc */
+  --folk-accent-gold: #B88928;     /* Vàng hoa hòe thanh nhã */
 
   /* 1. Họa tiết Dân Gian in chìm (Hoa sen, sóng thủy ba & hồi văn mây cuộn) */
   --folk-watermark-pattern: url("data:image/svg+xml,%3Csvg width='160' height='160' viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%235A4838' stroke-width='1.15' stroke-linecap='round' stroke-linejoin='round' opacity='0.06'%3E%3Cpath d='M80,38 C68,56 54,70 80,94 C106,70 92,56 80,38 Z'/%3E%3Cpath d='M80,94 C60,82 46,70 58,52 C70,64 76,82 80,94 Z'/%3E%3Cpath d='M80,94 C100,82 114,70 102,52 C90,64 84,82 80,94 Z'/%3E%3Cpath d='M80,94 Q82,112 80,130'/%3E%3Cpath d='M0,150 Q20,134 40,150 Q60,134 80,150 Q100,134 120,150 Q140,134 160,150'/%3E%3Cpath d='M-20,156 Q0,140 20,156 Q40,140 60,156 Q80,140 100,156 Q120,140 140,156 Q160,140 180,156'/%3E%3Cpath d='M10,18 C16,12 24,14 26,20 C28,26 22,30 16,26'/%3E%3Cpath d='M150,18 C144,12 136,14 134,20 C132,26 138,30 144,26'/%3E%3C/g%3E%3C/svg%3E");
@@ -68,14 +76,14 @@ body {
   height: 2px;
   background: linear-gradient(90deg, 
     transparent 0%, 
-    rgba(194, 155, 56, 0.4) 50%, 
+    rgba(184, 137, 40, 0.4) 50%, 
     transparent 100%);
   pointer-events: none;
 }
 
 /* Tiêu đề chính sắc nét, trang nhã */
 .game-header h1 {
-  background: linear-gradient(135deg, #2A2421 0%, #68352F 60%, #9E3A33 100%) !important;
+  background: linear-gradient(135deg, #1A1412 0%, #68352F 60%, #872E27 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   margin-bottom: 6px;
@@ -87,18 +95,19 @@ body {
 
 /* Khối thống kê tổng quan */
 .global-stats {
-  background: rgba(240, 233, 220, 0.6) !important;
-  border: 1px solid rgba(42, 36, 33, 0.1) !important;
+  background: rgba(240, 233, 220, 0.65) !important;
+  border: 1px solid rgba(42, 36, 33, 0.12) !important;
   border-radius: 16px;
 }
 
 .stat-val {
-  color: var(--folk-ink) !important;
+  color: var(--folk-ink-strong) !important;
   text-shadow: none !important;
+  font-weight: 800 !important;
 }
 
 .stat-label {
-  color: #6E655E !important;
+  color: var(--folk-muted) !important;
 }
 
 /* Thanh điều hướng Header Actions */
@@ -124,12 +133,12 @@ body {
  * 3. THẺ CHỦ ĐỀ & EXTRA MATERIALS
  * ============================================================ */
 .topics-heading {
-  color: var(--folk-ink) !important;
+  color: var(--folk-ink-strong) !important;
 }
 
 .topics-side {
-  background: rgba(244, 238, 226, 0.5) !important;
-  border: 1px solid rgba(42, 36, 33, 0.1) !important;
+  background: rgba(244, 238, 226, 0.55) !important;
+  border: 1px solid rgba(42, 36, 33, 0.12) !important;
 }
 
 .topic-card {
@@ -139,22 +148,31 @@ body {
 }
 
 .topic-card:hover:not(.locked) {
-  border-color: rgba(158, 58, 51, 0.4) !important;
+  border-color: rgba(135, 46, 39, 0.45) !important;
   box-shadow: 0 10px 22px rgba(42, 36, 33, 0.08) !important;
   background: #FFFAF0 !important;
 }
 
 .topic-title {
-  color: var(--folk-ink) !important;
+  color: var(--folk-ink-strong) !important;
+  font-weight: 750 !important;
 }
 
 .topic-meta {
   color: var(--folk-muted) !important;
 }
 
+.stage-card-score {
+  color: var(--folk-muted) !important;
+}
+
 /* ============================================================
  * 4. CHẾ ĐỘ CHƠI (MODE SELECTION) & NÚT QUAY LẠI
  * ============================================================ */
+#mode-screen h2 {
+  color: var(--folk-ink-strong) !important;
+}
+
 .mode-card {
   background: #FFFDF9 !important;
   border: 1.5px solid rgba(42, 36, 33, 0.12) !important;
@@ -162,13 +180,14 @@ body {
 }
 
 .mode-card:hover {
-  border-color: rgba(158, 58, 51, 0.4) !important;
+  border-color: rgba(135, 46, 39, 0.45) !important;
   box-shadow: 0 10px 22px rgba(42, 36, 33, 0.08) !important;
   background: #FFFAF0 !important;
 }
 
 .mode-card-title {
-  color: var(--folk-ink) !important;
+  color: var(--folk-ink-strong) !important;
+  font-weight: 750 !important;
 }
 
 .mode-card-desc {
@@ -178,8 +197,9 @@ body {
 .btn-back,
 .btn-nav-card {
   background: rgba(42, 36, 33, 0.05) !important;
-  border: 1px solid rgba(42, 36, 33, 0.16) !important;
-  color: var(--folk-ink) !important;
+  border: 1px solid rgba(42, 36, 33, 0.18) !important;
+  color: var(--folk-ink-strong) !important;
+  font-weight: 600 !important;
 }
 
 .btn-back:hover,
@@ -189,8 +209,30 @@ body {
 }
 
 /* ============================================================
- * 5. FLASHCARDS, QUIZ & CÂU HỎI
+ * 5. FLASHCARDS SCREEN
  * ============================================================ */
+.game-play-header .game-title-text {
+  color: var(--folk-ink-strong) !important;
+  font-weight: 800 !important;
+}
+
+.card-progress-text {
+  color: var(--folk-muted) !important;
+  font-weight: 600 !important;
+}
+
+.card-filter-btn {
+  background: #FFFDF9 !important;
+  border: 1px solid rgba(42, 36, 33, 0.16) !important;
+  color: var(--folk-muted) !important;
+}
+
+.card-filter-btn:hover:not(:disabled) {
+  background: #FFFAF0 !important;
+  color: var(--folk-ink-strong) !important;
+  border-color: rgba(42, 36, 33, 0.3) !important;
+}
+
 .card-front,
 .card-back {
   background: #FFFDF9 !important;
@@ -201,47 +243,276 @@ body {
 
 .word-term {
   color: #872E27 !important;
+  font-weight: 800 !important;
+}
+
+.word-type {
+  color: var(--folk-muted) !important;
+}
+
+.word-ipa {
+  color: var(--folk-muted) !important;
 }
 
 .word-meaning {
   color: #872E27 !important;
+  font-weight: 800 !important;
 }
 
 .example-container {
-  background: rgba(244, 238, 226, 0.5) !important;
-  border: 1px solid rgba(42, 36, 33, 0.1) !important;
+  background: rgba(244, 238, 226, 0.6) !important;
+  border: 1px solid rgba(42, 36, 33, 0.12) !important;
+}
+
+.example-title {
+  color: #872E27 !important;
+  font-weight: 700 !important;
 }
 
 .example-en {
-  color: var(--folk-ink) !important;
+  color: var(--folk-ink-strong) !important;
 }
 
 .example-vi {
   color: var(--folk-muted) !important;
 }
 
-.quiz-option,
-.sc-option-card {
-  background: #FFFDF9 !important;
-  border: 1.5px solid rgba(42, 36, 33, 0.14) !important;
-  color: var(--folk-ink) !important;
-}
-
-.quiz-option:hover,
-.sc-option-card:hover {
-  background: #FFF8EB !important;
-  border-color: rgba(158, 58, 51, 0.45) !important;
-}
-
-.quiz-prompt-text,
-.sc-sentence-box,
-.quiz-question-box {
-  color: var(--folk-ink) !important;
-  background: rgba(244, 238, 226, 0.5) !important;
-  border: 1px solid rgba(42, 36, 33, 0.1) !important;
-}
-
-.score-board,
-.card-progress-text {
+.card-hint {
   color: var(--folk-muted) !important;
+}
+
+.srs-hint {
+  color: var(--folk-muted) !important;
+}
+
+.btn-speak {
+  background: rgba(42, 36, 33, 0.05) !important;
+  border: 1px solid rgba(42, 36, 33, 0.16) !important;
+  color: var(--folk-ink-strong) !important;
+}
+
+.btn-speak:hover {
+  background: #FFFAF0 !important;
+  border-color: #872E27 !important;
+}
+
+.btn-srs-review {
+  background: #FFF3F0 !important;
+  border: 1.5px solid rgba(135, 46, 39, 0.3) !important;
+  color: #872E27 !important;
+}
+
+.btn-srs-mastered {
+  background: #EDF7EE !important;
+  border: 1.5px solid rgba(19, 115, 51, 0.3) !important;
+  color: #137333 !important;
+}
+
+/* ============================================================
+ * 6. MULTIPLE CHOICE QUIZ & SENTENCE COMPLETION (CỰC KỲ RÕ NÉT)
+ * ============================================================ */
+/* Khung câu hỏi nổi bật */
+.quiz-question-box {
+  background: rgba(244, 238, 226, 0.65) !important;
+  border: 1.5px solid rgba(42, 36, 33, 0.14) !important;
+  box-shadow: 0 4px 14px rgba(42, 36, 33, 0.04) !important;
+  color: var(--folk-ink) !important;
+}
+
+/* Từ vựng câu hỏi nổi bật màu son gốm đậm */
+.quiz-question-word {
+  color: #7A2822 !important;
+  font-weight: 850 !important;
+  text-shadow: 0 1px 2px rgba(122, 40, 34, 0.1) !important;
+}
+
+.quiz-question-ipa {
+  color: var(--folk-muted) !important;
+  font-weight: 600 !important;
+}
+
+.quiz-question-hint {
+  color: #6E655E !important;
+}
+
+/* Các nút lựa chọn đáp án: nền sáng mộc, viền rõ, chữ Mực Nho đậm */
+.quiz-option-btn {
+  background: #FFFDF9 !important;
+  border: 1.5px solid rgba(42, 36, 33, 0.18) !important;
+  color: var(--folk-ink-strong) !important;
+  font-weight: 600 !important;
+  box-shadow: 0 3px 10px rgba(42, 36, 33, 0.04) !important;
+}
+
+.quiz-option-btn:hover:not(.locked) {
+  background: #FFF8EB !important;
+  border-color: #872E27 !important;
+  color: var(--folk-ink-strong) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(42, 36, 33, 0.08) !important;
+}
+
+.quiz-option-btn.correct {
+  background: #E8F5E9 !important;
+  border-color: #1B5E20 !important;
+  color: #1B5E20 !important;
+  font-weight: 750 !important;
+  box-shadow: 0 4px 12px rgba(27, 94, 32, 0.15) !important;
+}
+
+.quiz-option-btn.correct::after {
+  color: #1B5E20 !important;
+}
+
+.quiz-option-btn.wrong {
+  background: #FFEBEE !important;
+  border-color: #B71C1C !important;
+  color: #B71C1C !important;
+  font-weight: 750 !important;
+  box-shadow: 0 4px 12px rgba(183, 28, 28, 0.15) !important;
+}
+
+.quiz-option-btn.wrong::after {
+  color: #B71C1C !important;
+}
+
+/* Giải thích & Dịch nghĩa */
+.game-explanation {
+  background: rgba(244, 238, 226, 0.75) !important;
+  border-left: 4px solid #872E27 !important;
+  border-top: 1px solid rgba(42, 36, 33, 0.1) !important;
+  border-right: 1px solid rgba(42, 36, 33, 0.1) !important;
+  border-bottom: 1px solid rgba(42, 36, 33, 0.1) !important;
+  color: var(--folk-ink) !important;
+}
+
+.game-explanation-title {
+  color: #872E27 !important;
+  font-weight: 800 !important;
+}
+
+.game-explanation-content {
+  color: var(--folk-ink-strong) !important;
+  line-height: 1.6 !important;
+}
+
+/* Nút Next chuyển câu */
+.btn-game-next {
+  background: #872E27 !important;
+  color: #FFF !important;
+  box-shadow: 0 4px 14px rgba(135, 46, 39, 0.3) !important;
+}
+
+.btn-game-next:hover {
+  background: #68231E !important;
+}
+
+/* Sentence Completion */
+.sentence-question-text {
+  color: var(--folk-ink-strong) !important;
+  font-weight: 600 !important;
+  font-size: 1.2rem !important;
+}
+
+.instruction-banner {
+  background: rgba(244, 235, 215, 0.75) !important;
+  border-left: 4px solid #B88928 !important;
+  border: 1px solid rgba(184, 137, 40, 0.25) !important;
+  border-left-width: 4px !important;
+  color: #614611 !important;
+  font-weight: 500 !important;
+}
+
+/* ============================================================
+ * 7. SPELLING, MATCHING & BOSS BATTLE
+ * ============================================================ */
+.spelling-box {
+  background: rgba(244, 238, 226, 0.6) !important;
+  border: 1.5px solid rgba(42, 36, 33, 0.12) !important;
+}
+
+.spelling-meaning {
+  color: #872E27 !important;
+  font-weight: 800 !important;
+}
+
+.spelling-ipa {
+  color: var(--folk-muted) !important;
+}
+
+.spelling-example-fill {
+  background: #FFFDF9 !important;
+  border: 1px dashed rgba(42, 36, 33, 0.2) !important;
+  color: var(--folk-ink-strong) !important;
+}
+
+.spelling-input {
+  background: #FFFDF9 !important;
+  border: 2px solid rgba(42, 36, 33, 0.25) !important;
+  color: var(--folk-ink-strong) !important;
+}
+
+.matching-timer-row {
+  background: rgba(244, 238, 226, 0.65) !important;
+  border: 1px solid rgba(42, 36, 33, 0.12) !important;
+  color: var(--folk-ink-strong) !important;
+}
+
+.matching-card {
+  background: #FFFDF9 !important;
+  border: 1.5px solid rgba(42, 36, 33, 0.15) !important;
+  color: var(--folk-ink-strong) !important;
+}
+
+.matching-card:hover:not(.matched):not(.selected) {
+  background: #FFF8EB !important;
+  border-color: #872E27 !important;
+}
+
+.matching-card.selected {
+  background: #FFF0EB !important;
+  border-color: #872E27 !important;
+  color: #872E27 !important;
+}
+
+.matching-card.matched {
+  background: rgba(42, 36, 33, 0.05) !important;
+  border-color: rgba(42, 36, 33, 0.15) !important;
+  color: rgba(42, 36, 33, 0.35) !important;
+}
+
+/* Boss screen */
+.boss-header-title {
+  color: var(--folk-ink-strong) !important;
+}
+
+.btn-boss-icon {
+  background: #FFFDF9 !important;
+  border: 1px solid rgba(42, 36, 33, 0.15) !important;
+  color: var(--folk-ink-strong) !important;
+}
+
+/* Results screen */
+.res-stat-card {
+  background: rgba(244, 238, 226, 0.65) !important;
+  border: 1.5px solid rgba(42, 36, 33, 0.12) !important;
+}
+
+.res-stat-val {
+  color: var(--folk-ink-strong) !important;
+}
+
+.res-stat-label {
+  color: var(--folk-muted) !important;
+}
+
+.btn-res-secondary {
+  background: #FFFDF9 !important;
+  border: 1.5px solid rgba(42, 36, 33, 0.18) !important;
+  color: var(--folk-ink-strong) !important;
+}
+
+.btn-res-secondary:hover {
+  background: var(--folk-ink) !important;
+  color: #FFF !important;
 }
